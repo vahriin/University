@@ -1,0 +1,3477 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[warn]{mathtext}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding T2A
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Системы координат
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Система координат
+\series default
+ — опорная система для определения положения в пространстве относительно
+ выбранных осей.
+\end_layout
+
+\begin_layout Standard
+1) Одномерные.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) Двумерные:
+\end_layout
+
+\begin_layout Standard
+2.1) Прямоугольные;
+\end_layout
+
+\begin_layout Standard
+2.2) Косоугольные;
+\end_layout
+
+\begin_layout Standard
+2.3) Полярные.
+ Задаются длиной радиус-вектора и угла, образуемого им с осью 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Перевод в обычные:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+x=r\cos\varphi\\
+y=r\sin\varphi
+\end{cases}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3) Пространственные
+\end_layout
+
+\begin_layout Standard
+3.1) Прямоугольные;
+\end_layout
+
+\begin_layout Standard
+3.2) Косоугольные;
+\end_layout
+
+\begin_layout Standard
+3.3) Цилиндрические.
+ Задаются длиной радиус-вектора проекции точки на 
+\begin_inset Formula $xy$
+\end_inset
+
+, углом и высотой от плоскости 
+\begin_inset Formula $xy$
+\end_inset
+
+ до точки.
+\end_layout
+
+\begin_layout Standard
+Перевод в обычные:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+x=r\cos\varphi\\
+y=r\sin\varphi\\
+z=z
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.4) Сферические.
+ Задаются длиной радиус-вектора к точке, углом 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ между радиус-вектором и плоскостью 
+\begin_inset Formula $xy$
+\end_inset
+
+ и углом между проекцией радиус-вектора на плоскость 
+\begin_inset Formula $xy$
+\end_inset
+
+ и осью абсцисс.
+\end_layout
+
+\begin_layout Standard
+Перевод в обычные:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+x=r\cos\varphi\cos\Theta\\
+y=r\sin\varphi\cos\Theta\\
+z=r\sin\Theta
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Преобразование декартовых координат
+\end_layout
+
+\begin_layout Standard
+1) Сдвиг:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M(x,y)=M(\bar{x}+a,\bar{y}+b)$
+\end_inset
+
+, где 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ — координаты начала новой системы координат в старой системе.
+\end_layout
+
+\begin_layout Standard
+2) Отражение:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+x=ч\\
+y=-y
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3) Поворот:
+\end_layout
+
+\begin_layout Standard
+Воспользуемся полярной системой координат:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=r\cos(\bar{\varphi}+\alpha)=r\cos\bar{\varphi}\cos\alpha-r\sin\bar{\varphi}\sin\alpha=\bar{x}\cos\alpha-\bar{y}\sin\alpha$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=r\sin(\bar{\varphi}+\alpha)=r\cos\bar{\varphi}\sin\alpha+r\sin\bar{\varphi}\cos\alpha=\bar{x}\sin\alpha+\bar{y}\cos\alpha$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+Отсюда
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+x=\bar{x}\cos\alpha-\bar{y}\sin\alpha\\
+y=\bar{x}\sin\alpha+\bar{y}\cos\alpha
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Кривые и их уравнения II порядка
+\end_layout
+
+\begin_layout Standard
+Кривая второго порядка:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{11}x^{2}+2a_{12}xy+a_{22}y^{2}+2a_{13}x+2a_{23}y+a_{33}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+При этом 
+\begin_inset Formula $a_{11},a_{12},a_{22}$
+\end_inset
+
+ не могут одновременно обращаться в ноль.
+\end_layout
+
+\begin_layout Standard
+Если уравнение не имеет линейной части, то кривая называется центрально-симметри
+чной.
+\end_layout
+
+\begin_layout Standard
+Кривая второго порядка инвариантна относительно выбранной системы координат.
+ Доказательство: общая форма изменения координат не повышает и не понижает
+ степень, следовательно, КВП остается КВП.
+\end_layout
+
+\begin_layout Standard
+Инварианты:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $I_{1}=a_{11}+a_{22}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $I_{2}=\left|\begin{matrix}a_{11}\ a_{12}\\
+a_{12}\ a_{22}
+\end{matrix}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $I_{3}=\left|\begin{matrix}a_{11}\ a_{12}\ a_{13}\\
+a_{12}\ a_{22}\ a_{23}\\
+a_{13}\ a_{23}\ a_{33}
+\end{matrix}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Избавление от 
+\begin_inset Formula $2a_{12}xy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Отбрасываем линейную часть, рассматриваем только 
+\begin_inset Formula $a_{11}x^{2}+2a_{12}xy+a_{22}y^{2}$
+\end_inset
+
+.
+ 
+\begin_inset Quotes ard
+\end_inset
+
+Поворачиваем
+\begin_inset Quotes ald
+\end_inset
+
+ КВП при помощи уравнений выше.
+ Множители, которые содержат одновременно 
+\begin_inset Formula $x$
+\end_inset
+
+ и 
+\begin_inset Formula $y$
+\end_inset
+
+ выписываем снизу и приравниваем к нулю.
+ Выносим общие множители за скобки, получаем 
+\begin_inset Formula $2xy\cos\alpha\sin\alpha(a_{11}-a_{13})-2\cos2\alpha xya_{12}=0$
+\end_inset
+
+.
+ Т.к.
+ 
+\begin_inset Formula $xy\neq0$
+\end_inset
+
+, то 
+\begin_inset Formula $\sin2\alpha(a_{22}-a_{11})-\cos2\alpha=0$
+\end_inset
+
+, откуда 
+\begin_inset Formula $A\sin2\alpha-B\cos2\alpha=0$
+\end_inset
+
+, откуда 
+\begin_inset Formula $\tg2\alpha=\frac{B}{A}$
+\end_inset
+
+.
+ Подобрать такое 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ возможно, следовательно, можно избавиться от 
+\begin_inset Formula $2a_{12}xy$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Приведение КВП к каноническому виду
+\end_layout
+
+\begin_layout Standard
+Представляем уравнение КВП в виде 
+\begin_inset Formula $a_{11}(x+\frac{a_{13}}{a_{11}})^{2}+a_{22}(y+\frac{a_{23}}{a_{22}})^{2}+a_{33}-(\frac{a_{13}}{a_{11}})^{2}-(\frac{a_{23}}{a_{22}})^{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Затем замена: 
+\begin_inset Formula $x=(x+\frac{a_{13}}{a_{11}})^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $y=(y+\frac{a_{23}}{a_{22}})^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{33}=a_{33}-(\frac{a_{13}}{a_{11}})^{2}-(\frac{a_{23}}{a_{22}})^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассматриваем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{11}x^{2}+a_{22}y^{2}=-a_{33}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1 случай: 
+\begin_inset Formula $a_{11}a_{22}>0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $a_{11}>0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{22}>0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{33}\neq0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{\frac{a_{33}}{a_{11}}}+\frac{y^{2}}{\frac{a_{33}}{a_{22}}}=1\text{--- эллипс}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $a_{11}<0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{22}<0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{33}\neq0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{\frac{a_{33}}{a_{11}}}+\frac{y^{2}}{\frac{a_{33}}{a_{22}}}=-1\text{--- мнимый эллипс}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $a_{33}=0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{\frac{a_{33}}{a_{11}}}+\frac{y^{2}}{\frac{a_{33}}{a_{22}}}=0\text{--- точка}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2 случай: 
+\begin_inset Formula $a_{11}a_{22}<0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $a_{11}>0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{22}<0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{33}\neq0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{\frac{a_{33}}{a_{11}}}-\frac{y^{2}}{\frac{a_{33}}{a_{22}}}=1\text{--- гипербола}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $a_{11}<0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{22}>0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{33}\neq0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{\frac{a_{33}}{a_{11}}}-\frac{y^{2}}{\frac{a_{33}}{a_{22}}}=-1\text{--- мнимая гипербола}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $a_{33}=0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{\frac{a_{33}}{a_{11}}}-\frac{y^{2}}{\frac{a_{33}}{a_{22}}}=0\text{--- точка}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Рассматриваем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{11}=0,a_{13}\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{22}y^{2}+2a_{13}x+2a_{23}y+a_{33}=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2a_{13}x+a_{22}(y+\frac{a_{23}}{a_{22}})^{2}+a_{33}-(\frac{a_{23}}{a_{22}})^{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+После замены:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2a_{13}x+a_{22}y^{2}+a_{33}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Откуда
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y^{2}=2px\text{ --- парабола}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Рассматриваем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{11}=0$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{13}=0$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $y^{2}=-\frac{a_{33}}{a_{22}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если это:
+\end_layout
+
+\begin_layout Standard
+больше нуля: 
+\begin_inset Formula $y^{2}=a^{2}$
+\end_inset
+
+ — пара параллельных прямых
+\end_layout
+
+\begin_layout Standard
+меньше нуля: 
+\begin_inset Formula $y^{2}=-a^{2}$
+\end_inset
+
+ — пара мнимых параллельных прямых
+\end_layout
+
+\begin_layout Standard
+равно нулю: 
+\begin_inset Formula $y^{2}=0$
+\end_inset
+
+ — пара совпадающих прямых
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Таким образом, поменяв систему координат, можно привести уравнение к каноническо
+му виду.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Эллипс
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Эллипс
+\series default
+ — геометрическое место точек, удовлетворяющее уравнению 
+\begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+ (фокальное свойство): 
+\begin_inset Formula $|F_{1}M|+|F_{2}M|=2a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Положим, 
+\begin_inset Formula $c^{2}=a^{2}-b^{2}$
+\end_inset
+
+, где 
+\begin_inset Formula $c=|OF|$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $r_{1}^{2}=(x+c)^{2}+y^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $r_{2}^{2}=(x-c)^{2}+y^{2}$
+\end_inset
+
+.
+ Выводим 
+\begin_inset Formula $y^{2}$
+\end_inset
+
+ из уравнения эллипса, подставляем в эти уравнения, получаем 
+\begin_inset Formula $r_{1}=\frac{c}{a}x+a$
+\end_inset
+
+ и 
+\begin_inset Formula $r_{2}=a-\frac{c}{a}x$
+\end_inset
+
+.
+ Потом их складываем и получаем 
+\begin_inset Formula $2a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказываем в обратную сторону: говорим, что верно 
+\begin_inset Formula $r_{1}+r_{2}=2a$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\sqrt{(x+c)^{2}+y^{2}}+\sqrt{(x-c)^{2}+y^{2}}=2a\Leftrightarrow\sqrt{(x+c)^{2}+y^{2}}=2a-\sqrt{(x-c)^{2}+y^{2}}$
+\end_inset
+
+, дважды возводим в квадрат, выносим 
+\begin_inset Formula $a^{2}$
+\end_inset
+
+, сокращаем.
+ Получается 
+\begin_inset Formula $x^{2}+c^{2}+y^{2}=a^{2}+\frac{x^{2}c^{2}}{a^{2}}\Leftrightarrow x^{2}-\frac{x^{2}c^{2}}{a^{2}}+y^{2}=a^{2}-c^{2}\Leftrightarrow x^{2}(1-\frac{c^{2}}{a^{2}})+y^{2}=a^{2}-c^{2}$
+\end_inset
+
+, раскрываем 
+\begin_inset Formula $c^{2}=a^{2}-b^{2}$
+\end_inset
+
+, получаем 
+\begin_inset Formula $x^{2}(\frac{b^{2}}{a^{2}})+y^{2}=b^{2}$
+\end_inset
+
+, делим все на 
+\begin_inset Formula $b^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Эксцентриситет
+\series default
+ — отношение 
+\begin_inset Formula $\frac{c}{a}$
+\end_inset
+
+, которое отвечает за кривизну эллипса.
+ У окружности эксцентриситет равен нулю, у эллипса - меньше нуля.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Директриса
+\series default
+ — прямые 
+\begin_inset Formula $x=\pm\frac{a}{e}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Эллипс — ГМТ, отношение расстояний которых до фокуса и директрисы есть
+ величина постоянная, равная эксцентриситету.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{r_{1}}{d}=e\Rightarrow r_{1}=ed=e(\frac{a}{e}-x)=a-ex$
+\end_inset
+
+.
+ Аналогично для 
+\begin_inset Formula $\frac{r_{2}}{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Гипербола
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Гипербола
+\series default
+ — геометрическое место точек, удовлетворяющее уравнению 
+\begin_inset Formula $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+ (фокальное свойство): 
+\begin_inset Formula $|F_{1}M|-|F_{2}M|=2a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Положим, 
+\begin_inset Formula $c^{2}=a^{2}+b^{2}$
+\end_inset
+
+, где 
+\begin_inset Formula $c=|OF|$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $r_{1}=(x+c)^{2}+y^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $r_{2}=(x-c)^{2}+y^{2}$
+\end_inset
+
+.
+ Выводим 
+\begin_inset Formula $y^{2}$
+\end_inset
+
+ из уравнения эллипса, подставляем в эти уравнения, получаем 
+\begin_inset Formula $r_{1}=\frac{c}{a}x+a$
+\end_inset
+
+ и 
+\begin_inset Formula $r_{2}=\frac{c}{a}x-a$
+\end_inset
+
+.
+ Потом их вычитаем и получаем 
+\begin_inset Formula $2a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказываем в обратную сторону: говорим, что верно 
+\begin_inset Formula $r_{1}-r_{2}=2a$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\sqrt{(x+c)^{2}+y^{2}}-\sqrt{(x-c)^{2}+y^{2}}=2a\Leftrightarrow\sqrt{(x+c)^{2}+y^{2}}=2a+\sqrt{(x-c)^{2}+y^{2}}$
+\end_inset
+
+, дважды возводим в квадрат, выносим 
+\begin_inset Formula $a^{2}$
+\end_inset
+
+, сокращаем.
+ Получается 
+\begin_inset Formula $x^{2}+c^{2}+y^{2}=a^{2}+\frac{x^{2}c^{2}}{a^{2}}\Leftrightarrow x^{2}-\frac{x^{2}c^{2}}{a^{2}}+y^{2}=a^{2}-c^{2}\Leftrightarrow x^{2}(1-\frac{c^{2}}{a^{2}})+y^{2}=a^{2}-c^{2}$
+\end_inset
+
+, раскрываем 
+\begin_inset Formula $c^{2}=a^{2}+b^{2}$
+\end_inset
+
+, получаем 
+\begin_inset Formula $x^{2}(-\frac{b^{2}}{a^{2}})+y^{2}=-b^{2}$
+\end_inset
+
+, делим все на 
+\begin_inset Formula $b^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Эксцентриситет
+\series default
+ — отношение 
+\begin_inset Formula $\frac{c}{a}$
+\end_inset
+
+, которое отвечает за кривизну гиперболы.
+ У гиперболы эксцентриситет больше нуля.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Директриса
+\series default
+ — прямые 
+\begin_inset Formula $x=\pm\frac{a}{e}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Эллипс — ГМТ, отношение расстояний которых до фокуса и директрисы есть
+ величина постоянная, равная эксцентриситету.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{r_{1}}{d}=e\Rightarrow r_{1}=ed=e(x-\frac{a}{e})=ex-a$
+\end_inset
+
+.
+ Аналогично для 
+\begin_inset Formula $\frac{r_{2}}{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Асимптоты гиперболы
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Асимптотами
+\series default
+ гиперболы называются прямые 
+\begin_inset Formula $y=\pm\frac{b}{a}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Ветви гиперболы неограниченно приближаются к асимптоте.
+\end_layout
+
+\begin_layout Standard
+Доказательство: 
+\begin_inset Formula $y=b\sqrt{\frac{x^{2}}{a^{2}}-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Посчитаем предел: 
+\begin_inset Formula $\lim\limits _{x\to\infty}\frac{b}{a}x_{0}-b\sqrt{\frac{x^{2}}{a^{2}}-1}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+=\lim\limits _{x\to\infty}\frac{\frac{b^{2}}{a^{2}}-b^{2}(\frac{x^{2}}{a^{2}}-1)}{\frac{b}{a}x+b\sqrt{\frac{x^{2}}{a^{2}}-1}}=\lim\limits _{x\to\infty}\frac{\frac{b^{2}}{a^{2}}x^{2}-\frac{b^{2}}{a^{2}}x^{2}+b^{2}}{\frac{b}{a}x+b\sqrt{\frac{x^{2}}{a^{2}}-1}}=\lim\limits _{x\to\infty}\frac{b^{2}}{\frac{b^{2}}{a^{2}}x+b\sqrt{\frac{x^{2}}{a^{2}}-1}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Парабола
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Парабола
+\series default
+ — ГМТ, определяющееся уравнением 
+\begin_inset Formula $y^{2}=2px$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Директриса параболы: 
+\begin_inset Formula $x=-\frac{p}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Парабола — ГМТ, равноудаленных от фокуса и директрисы.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим точку 
+\begin_inset Formula $(x,\sqrt{2px})$
+\end_inset
+
+, которая лежит на параболе.
+ Расстояние от точки до директрисы равно 
+\begin_inset Formula $c=x+\frac{p}{2}$
+\end_inset
+
+, расстояние от точки до фокуса — 
+\begin_inset Formula $x-\frac{p}{2}$
+\end_inset
+
+.
+ Длина 
+\begin_inset Formula $r$
+\end_inset
+
+ определяется как 
+\begin_inset Formula $r=\sqrt{(x-\frac{p}{2})^{2}+y^{2}}$
+\end_inset
+
+, где 
+\begin_inset Formula $y^{2}=2px$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $r=\sqrt{(x+\frac{p}{2})^{2}+2px}$
+\end_inset
+
+.
+ Сравниваем это с 
+\begin_inset Formula $x+\frac{p}{2}$
+\end_inset
+
+, получаем равенство, бинго!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Уравнения КВП в полярных координатах
+\end_layout
+
+\begin_layout Standard
+Возьмем полярные координаты с началом в фокусе кривой, а начальный луч направим
+ перпендикулярно ближайшей директрисе.
+ По свойству директрисы и фокуса 
+\begin_inset Formula $r=ed$
+\end_inset
+
+, где 
+\begin_inset Formula $d$
+\end_inset
+
+ — расстояние от точки до директрисы.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q$
+\end_inset
+
+ — расстояние от фокуса до директрисы, 
+\begin_inset Formula $x$
+\end_inset
+
+ — координата точки.
+ 
+\begin_inset Formula $x=r\cos\varphi$
+\end_inset
+
+, откуда 
+\begin_inset Formula $r=ed=e(q-x)=eq-er\cos\varphi$
+\end_inset
+
+.
+ Преобразовав выражение, получим 
+\begin_inset Formula $r=\frac{eq}{e\cos\varphi+1}$
+\end_inset
+
+, что и является уравнением кривой в полярных координатах.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $eq$
+\end_inset
+
+ — расстояние от фокуса до кривой по перпендикуляру, фокальный параметр,
+ обозначается 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Уравнение кривой примет вид: 
+\begin_inset Formula $r=\frac{p}{e\cos\varphi+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для другой ветви гиперболы 
+\begin_inset Formula $r=\frac{p}{e\cos\varphi-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Однако чаще всего начальный луч направляют в противоположную сторону, отчего
+ уравнение приобретает вид 
+\begin_inset Formula $r=\frac{p}{1-e\cos\varphi}$
+\end_inset
+
+ и 
+\begin_inset Formula $r=\frac{p}{1+e\cos\varphi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Оптические свойства КВП
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Оптическое свойство эллипса
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Фокальные радиусы произвольной точки 
+\begin_inset Formula $M$
+\end_inset
+
+ образуют с касательной в точке 
+\begin_inset Formula $M$
+\end_inset
+
+ равные углы.
+\end_layout
+
+\begin_layout Standard
+Переформулировка: луч, выпущенный из одного фокуса, отразившись от стенки
+ эллипса, пройдет через другой фокус.
+\end_layout
+
+\begin_layout Standard
+Доказательство: от противного.
+ Пусть это не так.
+ Тогда точка 
+\begin_inset Formula $F^{*}$
+\end_inset
+
+ — зеркальное отражение фокуса 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+ относительно касательной.
+ Соединим 
+\begin_inset Formula $F_{2}$
+\end_inset
+
+ и 
+\begin_inset Formula $F^{*}$
+\end_inset
+
+.
+ Так как углы не равны, то точка пересечения касательной и прямой, соединяющей
+ 
+\begin_inset Formula $F_{2}$
+\end_inset
+
+ и 
+\begin_inset Formula $F^{*}$
+\end_inset
+
+ будет 
+\begin_inset Formula $M^{*}$
+\end_inset
+
+, не совпадающая с 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Откуда 
+\begin_inset Formula $|F_{1}M^{*}|+|F_{2}M^{*}|=|F_{2}F^{*}|<|F_{1}M|+|F_{2}M|=2a$
+\end_inset
+
+ (меньше по предположению).
+ Теперь будем перемещать 
+\begin_inset Formula $M^{*}$
+\end_inset
+
+ по касательной от 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Сумма 
+\begin_inset Formula $|F_{1}M^{*}|+|F_{2}M^{*}|$
+\end_inset
+
+ будет расти и в какой-то момент превысит константу 
+\begin_inset Formula $2a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Оптическое свойство гиперболы
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Фокальные радиусы гиперболы составляют равные углы с касательной в точке
+ 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Переформулировка: луч, выпущенный из одного фокуса гиперболы, отражается
+ от неё так, что его продолжение пройдет через другой фокус.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Оптическое свойство параболы
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Фокальные радиусы параболы образуют с касательной такой же угол, какой она
+ образует с осью параболы.
+\end_layout
+
+\begin_layout Standard
+Переформулировка: луч, выпущенный из фокуса параболы, отразившись от неё,
+ будет параллелен оси параболы.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+КВП как конические сечения конуса
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Конус
+\series default
+ — фигура, образуемая прямыми, проходящими через одну точку — вершину конуса.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: невырожденные КВП можно получить сечениями этого конуса.
+\end_layout
+
+\begin_layout Standard
+Получим эллипс:
+\end_layout
+
+\begin_layout Standard
+Имеем конус и секущую его плоскость.
+ Плоскость не проходит через вершину и пересекает только одну плоскость
+ конуса.
+ Впишем в конус по разные стороны этой плоскости яйца Дандалена.
+ Точки касания есть фокусы.
+ Проводим прямую 
+\begin_inset Formula $OM$
+\end_inset
+
+, которая соединяет произвольную точку на эллипсе и вершину конуса.
+ Тогда она будет касаться шаров в точках 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ и 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $|MF_{1}|=|MM_{1}|,\ |MF_{2}|=|MM_{2}|$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $|MF_{1}|+|MF_{2}|=|MM_{1}|+|MM_{2}|=|M_{1}M_{2}|=const$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для гиперболы то же самое, только шары в разных полостях конуса и разность
+ вместо суммы.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Векторное пространство.
+ Примеры
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Вектора
+\series default
+ — класс направленных отрезков.
+\end_layout
+
+\begin_layout Standard
+Определим сложение векторов 
+\begin_inset Formula $V\times V\to V$
+\end_inset
+
+ со свойствами:
+\end_layout
+
+\begin_layout Standard
+*Свойства абелевой группы в векторах*.
+\end_layout
+
+\begin_layout Standard
+Определим операцию умножения на скаляр со свойствами:
+\end_layout
+
+\begin_layout Standard
+*Свойства умножения на скаляр 
+\begin_inset Formula $\mathbb{R}\times V\to V$
+\end_inset
+
+ для векторных пространств*.
+\end_layout
+
+\begin_layout Standard
+Определение: множество векторов с определенными на нем операциями сложения
+ и умножения на скаляр называется векторным пространством.
+\end_layout
+
+\begin_layout Standard
+Примеры:
+\end_layout
+
+\begin_layout Standard
+1) Классы направленных отрезков;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ — 
+\begin_inset Formula $n$
+\end_inset
+
+-мерное арифметическое пространство, где векторы — упорядоченные наборы
+ из 
+\begin_inset Formula $n$
+\end_inset
+
+ вещественных чисел.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $M[a,b]$
+\end_inset
+
+ — множество функций, заданных на отрезке 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $C(a,b)$
+\end_inset
+
+ — непрерывные функции;
+\end_layout
+
+\begin_layout Standard
+5) Пространство многочленов.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Базисы на плоскости и в пространстве
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Базис
+\series default
+ — минимальный набор векторов, такой, что любой вектор из векторного пространств
+а может быть представлен в виде линейной комбинации данных векторов.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Размерность
+\series default
+ пространства — число векторов, составляющих базис.
+ Обозначение: 
+\begin_inset Formula $\dim(V)$
+\end_inset
+
+.
+ Если есть базис, то пространство конечномерно.
+\end_layout
+
+\begin_layout Standard
+Два вектора коллинеарны, если отличаются на конечный множитель.
+\end_layout
+
+\begin_layout Standard
+Три вектора компланарны, если, будучи отложенными от одной точки, лежат
+ в одной плоскости.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Два неколлинеарных вектора на плоскости представляют собой базис.
+\end_layout
+
+\begin_layout Standard
+Доказательство: Раскладываем любой вектор в линейную комбинацию этих векторов,
+ затем предполагаем, что такое представление не единственное, получаем 
+\begin_inset Formula $OA=\frac{\lambda_{2}'-\lambda_{2}}{\lambda_{1}-\lambda_{1}'}OB$
+\end_inset
+
+, противоречие.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Три некомпланарных вектора в пространстве образуют базис.
+\end_layout
+
+\begin_layout Standard
+Доказательство: аналогично предыдущему, только после разложения в линейную
+ комбинацию мы предполагаем, что существует другая линейная комбинация и
+ выражаем один вектор через остальные, получаем противоречие.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Скалярное произведение
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Скалярное произведение
+\series default
+ — бинарная операция 
+\begin_inset Formula $V\times V\to\mathbb{R}$
+\end_inset
+
+, заданная на векторном пространстве.
+\end_layout
+
+\begin_layout Standard
+Свойства:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $a\cdot b=b\cdot a$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $(\lambda a)b=\lambda(ab)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $a(b+c)=ab+ac$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $a\cdot a>0$
+\end_inset
+
+ — положительная определенность.
+ 
+\begin_inset Formula $a\cdot a=0\Leftrightarrow a=0$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Алгебраический смысл:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $a\cdot b=|a|\cdot|b|\cdot\cos\alpha$
+\end_inset
+
+, где 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ — угол между векторами.
+\end_layout
+
+\begin_layout Standard
+2) В 
+\begin_inset Formula $R^{n}:\ (x_{1},...,x_{n})\cdot(y_{1},...,y_{n})=\sum\limits _{i=1}^{n}x_{i}y_{i}$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Векторы называются ортогональными (перпендикулярными), если 
+\begin_inset Formula $a\cdot b=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $V$
+\end_inset
+
+ — конечномерное пространство с определенным на нем скалярным произведением,
+ то существует базис из единичных взаимно перпендикулярных векторов: 
+\begin_inset Formula $\exists a_{1},...,a_{n}\in V$
+\end_inset
+
+, такие, что:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $a_{i}^{2}=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $i\neq j\Rightarrow a_{i}\cdot a_{j}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: Берем два вектора, скалярно перемножаем.
+ В результате линейная комбинация векторов базиса.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Неравенство Коши-Буняковского-Шварца:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(a\cdot b)^{2}\leq a^{2}\cdot b^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: Считаем, что оба вектора не равны нулю:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(a+xb)^{2}=a^{2}+2(ab)x+b^{2}x^{2}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D=4(ab)^{2}-4a^{2}b^{2}\leq0\Rightarrow(ab)^{2}\leq a^{2}b^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Векторное произведение
+\end_layout
+
+\begin_layout Standard
+Под ориентацией векторного пространства понимается разбиение всех его базисов
+ на 2 класса (правые и левые).
+\end_layout
+
+\begin_layout Standard
+Считаем пространство ориентированным.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Векторным произведением
+\series default
+ называется вектор 
+\begin_inset Formula $\bar{a}\times\bar{b}$
+\end_inset
+
+, который удовлетворяет требованиям:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $|a\times b|=|a|\cdot|b|\cdot\sin\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) Векторное произведение всегда перпендикулярно плоскости, в которой лежат
+ перемножаемые вектора.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $a,b$
+\end_inset
+
+ не коллинеарны 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $(a,b,a\times b)$
+\end_inset
+
+ — правая тройка.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Свойства векторного произведения:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $(\alpha a)\times b=\alpha(a\times b)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $(a+b)\times c=a\times c+b\times c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Формула для вычисления векторного произведения в декартовых координатах:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|i|=|j|=|k|=1$
+\end_inset
+
+ — базис, 
+\begin_inset Formula $(i,j,k)$
+\end_inset
+
+ — правая тройка (вспоминаем руль мерседеса).
+\end_layout
+
+\begin_layout Standard
+Пусть есть 2 вектора, раскладываем их в линейную комбинацию, векторно умножаем,
+ пользуясь свойствами того, что 
+\begin_inset Formula $i\times i=0$
+\end_inset
+
+, получаем 
+\begin_inset Formula $(a_{2}b_{3}-a_{3}b_{2})i+(a_{3}b_{1}-a_{1}b_{3})j+(a_{1}b_{2}-a_{2}b_{1})k=\left|\begin{matrix}a_{1}\ a_{2}\ a_{3}\\
+b_{1}\ b_{2}\ b_{3}\\
+i\ \ j\ \ k
+\end{matrix}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Дистрибутивность векторного произведения
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: 
+\begin_inset Formula $a\times b=a\times pr\ b$
+\end_inset
+
+ (
+\begin_inset Formula $pr\ b$
+\end_inset
+
+ — проекция 
+\begin_inset Formula $b$
+\end_inset
+
+ на плоскость, перпендикулярную 
+\begin_inset Formula $a$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Доказательство: показываем на пальцах, ёпта! 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+ лежат в одной плоскости, поэтому вектор их векторного произведения совпадает
+ с вектором векторного произведения проекции и 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ А равны они потому что равны площади параллелограммов, построенных на них,
+ равны.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: 
+\begin_inset Formula $a\times(b+c)=a\times b+a\times c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: пусть 
+\begin_inset Formula $|a|=1$
+\end_inset
+
+.
+ По предыдущей теореме проекция суммы равна сумме проекций: 
+\begin_inset Formula $(b+c)_{pr}=b_{pr}+c_{pr}$
+\end_inset
+
+.
+ Умножим всё на 
+\begin_inset Formula $|a|$
+\end_inset
+
+: 
+\begin_inset Formula $|a|\times(b+c)_{pr}=|a|b_{pr}+|a|c_{pr}$
+\end_inset
+
+.
+ Так как при повороте взаимное расположение векторов не меняется, то сумма
+ переходит в сумму, следовательно, получаем, что лемма верна.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Смешанное произведение
+\end_layout
+
+\begin_layout Standard
+Зададим бинарную операцию: 
+\begin_inset Formula $V\times V\times V\to\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Смешанным произведением векторов 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ называется число 
+\begin_inset Formula $(a,b,c)$
+\end_inset
+
+, которое равно 
+\begin_inset Formula $(a\times b)\cdot c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Свойства:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $(\alpha a,b,c)=(a,\alpha b,c)=(a,b,\alpha c)=\alpha(a,b,c)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $(a_{1}+a_{2},b,c)=(a_{1},b,c)+(a_{2},b,c)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Доказательство: воспользовавшись дистрибутивностью векторного произведения:
+ 
+\begin_inset Formula $(a_{1}+a_{2},b,c)=(a_{1}+a_{2})\times b\cdot c=(a_{1}\times b+a_{2}\times b)\cdot c=(a_{1}\times b)\cdot c+a_{2}\times b\cdot c=(a_{1},b,c)+(a_{2},b,c)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) Кососимметричность:
+\end_layout
+
+\begin_layout Standard
+Если поменять местами все три вектора, то знак сохранится, если поменять
+ только два из трёх, то изменится.
+\end_layout
+
+\begin_layout Standard
+Доказательство: Андрюха, ты умный, придумай что-нибудь :) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Модуль смешанного произведения:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(a,b,c)=(a\times b)\cdot c=|a\times b|\cdot|c|\cdot\cos\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Модуль смешанного произведения правой тройки 
+\begin_inset Formula $(a,b,c)$
+\end_inset
+
+ равен объему параллелепипеда, построенного на векторах 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+, а модуль смешанного произведения левой тройки — минус объему.
+\end_layout
+
+\begin_layout Standard
+Смешанное произведение можно получить, вычислив определитель матрицы 
+\begin_inset Formula $|(a,b,c)|=\left|\begin{matrix}a_{1}\ a_{2}\ a_{3}\\
+b_{1}\ b_{2}\ b_{3}\\
+c_{1}\ c_{2}\ c_{3}
+\end{matrix}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Прямая на плоскости
+\end_layout
+
+\begin_layout Standard
+Прямая на плоскости может быть очевидным образом задана какой-либо точкой
+ 
+\begin_inset Formula $A$
+\end_inset
+
+, лежащей на прямой и вектором нормали к прямой.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Прямая на плоскости представляется линейным уравнением 
+\begin_inset Formula $ax+by+c=0$
+\end_inset
+
+, где 
+\begin_inset Formula $a,b$
+\end_inset
+
+ — координаты вектора нормали, а 
+\begin_inset Formula $c=OA\cdot N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: вводим точку 
+\begin_inset Formula $M(x,y)$
+\end_inset
+
+ на прямой, отличную от 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Тогда вектор 
+\begin_inset Formula $AM\cdot N=0$
+\end_inset
+
+.
+ Так как любая другая точка, не лежащая на прямой, не образует с 
+\begin_inset Formula $A$
+\end_inset
+
+ прямую, ортогональную 
+\begin_inset Formula $N$
+\end_inset
+
+, то формула выше является уравнением прямой.
+ Записываем координаты точки 
+\begin_inset Formula $M$
+\end_inset
+
+ и вектора 
+\begin_inset Formula $N$
+\end_inset
+
+, записываем их радиус-вектора как линейные комбинации элементов базиса.
+ Вычисляем 
+\begin_inset Formula $AM=OM-OA=(xi-yj)-OA$
+\end_inset
+
+, откуда 
+\begin_inset Formula $AM\cdot N=(xi_{y}j)(ai+bj)-OA\cdot N$
+\end_inset
+
+.
+ Получаем 
+\begin_inset Formula $ax+by+OA\cdot N=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Параметрический вид: Имеем две точки на прямой, одну фиксированную 
+\begin_inset Formula $M_{0}(x_{0},y_{0})$
+\end_inset
+
+, другую бегающую 
+\begin_inset Formula $M(x,y)$
+\end_inset
+
+.
+ Имеем направляющий вектор прямой 
+\begin_inset Formula $a(r,s)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ является направляющим вектором тогда и только тогда, когда он коллинеарен
+ с вектором 
+\begin_inset Formula $MM_{0}$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $\begin{cases}
+x-x_{0}=\lambda r\\
+y-y_{0}=\lambda s
+\end{cases}\Leftrightarrow\begin{cases}
+x=\lambda r+x_{0}\\
+y=\lambda s+y_{0}
+\end{cases}$
+\end_inset
+
+, что является параметрическим видом уравнения прямой.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Плоскость в пространстве
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Плоскость в пространстве задаётся уравнением 
+\begin_inset Formula $ax+by+cz+d=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: произвольная точка 
+\begin_inset Formula $M(x,y,z)$
+\end_inset
+
+ лежит в плоскости 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ тогда и только тогда, когда 
+\begin_inset Formula $MM_{0}\cdot N=0$
+\end_inset
+
+, где 
+\begin_inset Formula $M_{0}(x_{0},y_{0},z_{0})$
+\end_inset
+
+ — точка на плоскости, и 
+\begin_inset Formula $N=(a,b,c)$
+\end_inset
+
+ — вектор нормали.
+ Если 
+\begin_inset Formula $r,r_{0}$
+\end_inset
+
+ — радиус-векторы точек 
+\begin_inset Formula $M,M_{0}$
+\end_inset
+
+, то 
+\begin_inset Formula $M_{0}M=r-r_{0}$
+\end_inset
+
+.
+ Отсюда записанное уравнение принимает вид 
+\begin_inset Formula $(r-r_{0})\cdot N=0\Leftrightarrow rN-r_{0}N=0$
+\end_inset
+
+, что можно переписать как 
+\begin_inset Formula $(xi+yj+zk)(ai+bj+ck)-r_{0}N=ax+by+cz-r_{0}N=0$
+\end_inset
+
+, чтд.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Прямая в пространстве
+\end_layout
+
+\begin_layout Standard
+Прямая в пространстве очевидно задается любой лежащей на ней точкой 
+\begin_inset Formula $M(x,y,z)$
+\end_inset
+
+ и направляющим вектором 
+\begin_inset Formula $v(a,b,c)$
+\end_inset
+
+.
+ Отложим от точки 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ на прямой вектор 
+\begin_inset Formula $M_{0}M=\alpha v$
+\end_inset
+
+ и проведем прямую 
+\begin_inset Formula $M_{0}M$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $r=OM,r_{0}=OM_{0}$
+\end_inset
+
+, то 
+\begin_inset Formula $r-r_{0}=M_{0}M$
+\end_inset
+
+, откуда 
+\begin_inset Formula $r=vt+r_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $v=(a,b,c)$
+\end_inset
+
+, то мы можем разложить данное уравнение как 
+\begin_inset Formula $x=at+x_{0},\ y=bt+y_{0},\ z=ct+z_{0}$
+\end_inset
+
+.
+ Так как 
+\begin_inset Formula $t$
+\end_inset
+
+ во всех трех уравнениях одно и то же, то данные уравнения равносильны 
+\begin_inset Formula $\frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}=\frac{z-z_{0}}{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Прямая как пересечение двух плоскостей в пространстве задается системой
+ уравнений 
+\begin_inset Formula $\begin{cases}
+a_{1}x+b_{1}y+c_{1}z+d_{1}=0\\
+a_{2}x+b_{2}y+c_{2}z+d_{2}=0
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Расстояние от точки до прямой в пространстве
+\end_layout
+
+\begin_layout Standard
+Воспользуемся знанием того, что прямая в пространстве задается точкой и
+ направляющим вектором.
+ Тогда проведем радиус-вектора 
+\begin_inset Formula $(r)$
+\end_inset
+
+ к данной точке 
+\begin_inset Formula $M$
+\end_inset
+
+ и 
+\begin_inset Formula $r$
+\end_inset
+
+ к любой точке на прямой 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $M_{0}M=r-r_{0}$
+\end_inset
+
+.
+ Зная координаты и длину (можем найти по координатам) направляющего вектора
+ мы можем вывести формулу 
+\begin_inset Formula $\rho=\frac{(r-r_{0})\times a}{|a|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Расстояние между прямыми в пространстве
+\end_layout
+
+\begin_layout Standard
+Искомая прямая — длина общего перпендикуляра к этим прямым.
+ Пусть 
+\begin_inset Formula $a_{1},a_{2}$
+\end_inset
+
+ — направляющие вектора данных прямых (очевидно, что они неколлинеарны).
+ 
+\begin_inset Formula $v_{1},v_{2}$
+\end_inset
+
+ — радиус-вектора точек на прямых, в которых данные прямые пересекает общий
+ перпендикуляр.
+ 
+\begin_inset Formula $(v_{1}-v_{2},a_{1},a_{2})$
+\end_inset
+
+ — объем параллелепипеда, построенного на данных векторах.
+ 
+\begin_inset Formula $a_{1}\times a_{2}$
+\end_inset
+
+ — площадь основания данного параллелепипеда.
+ Таким образом, формула примет вид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\rho=\frac{((v_{1}-v_{2}),a_{1},a_{2})}{a_{1}\times a_{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Классификация ПВП
+\end_layout
+
+\begin_layout Standard
+Поверхности второго порядка — множество точек, удовлетворяющих уравнению
+ 
+\begin_inset Formula $a_{11}x^{2}+a_{22}y^{2}+a_{33}z^{2}+2a_{12}xy+2a_{23}yz+2a_{13}xz+2a_{1}x+2a_{2}y+2a_{3}z+a_{0}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1) Эллипсоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) Мнимый эллипсоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=-1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3) Точка
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4) Однополостный гиперболоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5) Двуполостный гиперболоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=-1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6) Конус
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7) Эллиптический параболоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-z=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+8) Гиперболический параболоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}-z=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+9) Эллиптический цилиндр
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+10) Мнимый эллиптический цилиндр
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=-1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+11) Прямая
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+12) Гиперболический цилиндр
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+13) Пара пересекающихся плоскостей
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+14) Пара параллельных плоскостей
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x^{2}=a^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+15) Пара мнимых параллельных плоскостей
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x^{2}=-a^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+16) Пара совпадающих плоскостей:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x^{2}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+17) Параболический цилиндр:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y^{2}=2px
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Эллипсоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Эллипсоид
+\series default
+ вписан в параллелепипед, задаваемый неравенством 
+\begin_inset Formula $|x|<a$
+\end_inset
+
+, 
+\begin_inset Formula $|y|<b$
+\end_inset
+
+, 
+\begin_inset Formula $|z|<c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Сечение эллипсоида любой плоскостью представляет собой либо пустое множество,
+ либо точку, либо эллипс.
+ Например, для сечения плоскостью 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{y^{2}}{b^{2}(1-\frac{x_{0}^{2}}{a^{2}})}+\frac{z^{2}}{c^{2}(1-\frac{x_{0}^{2}}{a^{2}})}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $a=b$
+\end_inset
+
+ или 
+\begin_inset Formula $a=c$
+\end_inset
+
+ или 
+\begin_inset Formula $b=c$
+\end_inset
+
+, то такая фигура называется эллипсоидом вращения, имеет фокусы и директрисы-пло
+скости
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Однополостный гиперболоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сечение плоскостью 
+\begin_inset Formula $z=z_{0}$
+\end_inset
+
+ образуют эллипсы:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}(1+\frac{z_{0}^{2}}{c^{2}})}+\frac{y^{2}}{b^{2}(1+\frac{z_{0}^{2}}{c^{2}})}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сечения плоскостью, содержащей в себе ось 
+\begin_inset Formula $z$
+\end_inset
+
+, образуют гиперболы.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $a=b$
+\end_inset
+
+, то гиперболоид вращения.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Двуполостный гиперболоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=-1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сечение плоскостью 
+\begin_inset Formula $z=z_{0}$
+\end_inset
+
+ образуют пустое множество (
+\begin_inset Formula $|z_{0}|<c$
+\end_inset
+
+), точку (
+\begin_inset Formula $|z_{0}|=c$
+\end_inset
+
+) либо эллипс (
+\begin_inset Formula $|z_{0}|>c$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}(\frac{z_{0}^{2}}{c^{2}}-1)}+\frac{y^{2}}{b^{2}(\frac{z_{0}^{2}}{c^{2}}-1)}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $a=b$
+\end_inset
+
+, то гиперболоид вращения.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Эллиптический параболоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=z
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Эллиптический параболоид — поверхность, которую заметает парабола, движущаяся
+ по другой параболе, при этом оси парабол сонаправлены, а плоскости перпендикуля
+рны.
+\end_layout
+
+\begin_layout Standard
+Сечение плоскостью 
+\begin_inset Formula $z=z_{0}$
+\end_inset
+
+ образует либо пустое множество (
+\begin_inset Formula $z_{0}<0$
+\end_inset
+
+), либо точку 
+\begin_inset Formula $z_{0}=0$
+\end_inset
+
+, либо эллипс (
+\begin_inset Formula $z_{0}>0$
+\end_inset
+
+) :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}z_{0}}+\frac{y^{2}}{b^{2}z_{0}}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сечение по оси 
+\begin_inset Formula $z$
+\end_inset
+
+ представляет собой параболу.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $a=b$
+\end_inset
+
+, то параболоид вращения.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Гиперболический параболоид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}-z=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Гиперболический параболоид — поверхность, которую заметает парабола, которая
+ движется по другой параболе, причем их оси направлены противоположно, а
+ плоскости перпендикулярны.
+\end_layout
+
+\begin_layout Standard
+Сечения плоскостями 
+\begin_inset Formula $yx$
+\end_inset
+
+ — парабола, 
+\begin_inset Formula $xz$
+\end_inset
+
+ — парабола, 
+\begin_inset Formula $xy$
+\end_inset
+
+ — гипербола.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Цилиндры
+\end_layout
+
+\begin_layout Standard
+Цилиндр — некоторое множество параллельных прямых.
+ Они называются образующими.
+ Множество точек, каждая из которых взята на образующей и лежащих в плоскости,
+ называется направляющей.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Эллиптический
+\series default
+ цилиндр:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Сечения по оси 
+\begin_inset Formula $z$
+\end_inset
+
+ — параллельные прямые, сечение плоскостью 
+\begin_inset Formula $xy$
+\end_inset
+
+ — эллипс.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Гиперболический
+\series default
+ цилиндр:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Сечение по 
+\begin_inset Formula $yz$
+\end_inset
+
+ — 
+\begin_inset Formula $\varnothing$
+\end_inset
+
+, по 
+\begin_inset Formula $xz$
+\end_inset
+
+ — две параллельные прямые, по плоскости, параллельной 
+\begin_inset Formula $xy$
+\end_inset
+
+ — гипербола.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Параболический
+\series default
+ цилиндр:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y^{2}=2px$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сечение по 
+\begin_inset Formula $xy$
+\end_inset
+
+ — парабола, по 
+\begin_inset Formula $xz$
+\end_inset
+
+ — одна прямая, по 
+\begin_inset Formula $yz$
+\end_inset
+
+ — одна, две прямые или пустое множество.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Конус
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Конус — объединение семейства прямых, проходящих через одну точку и точку
+ на образующей, являющейся эллипсом.
+\end_layout
+
+\begin_layout Standard
+Сечения по 
+\begin_inset Formula $xy$
+\end_inset
+
+ — точка, по параллельной 
+\begin_inset Formula $xy$
+\end_inset
+
+ — эллипс.
+ По 
+\begin_inset Formula $z$
+\end_inset
+
+ — пара пересекающихся прямых.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

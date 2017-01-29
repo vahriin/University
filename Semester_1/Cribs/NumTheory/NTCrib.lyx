@@ -1,0 +1,2953 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[warn]{mathtext}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding T2A
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Внимание: данный документ не поддерживается и поддерживаться не будет! Сообщения
+ об ошибках НЕ рассматриваются, пулл реквесты НЕ принимаются! Если Вы хотите
+ поддерживать этот документ - форкните проект на Github.
+ Благодарю за понимание.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Нормальные подгруппы и идеалы.
+ Свойства гомоморфизма
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Нормальная подгруппа
+\series default
+ – подгруппа, для которой выполняется 
+\begin_inset Formula $\forall g\in G,h\in H$
+\end_inset
+
+ верно 
+\begin_inset Formula $ghg^{-1}\in H$
+\end_inset
+
+ или, аналогично, 
+\begin_inset Formula $gH=Hg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+В абелевой группе все подгруппы нормальные.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Идеал
+\series default
+ — аддитивная подгруппа 
+\begin_inset Formula $I$
+\end_inset
+
+ кольца 
+\begin_inset Formula $R$
+\end_inset
+
+, для которой выполняется 
+\begin_inset Formula $\forall r\in R,i\in I$
+\end_inset
+
+ верно 
+\begin_inset Formula $ri\in I$
+\end_inset
+
+ (левый идеал), 
+\begin_inset Formula $ir\in I$
+\end_inset
+
+ (правый идеал).
+ Идеал выдерживает умножение на элементы кольца.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Гомоморфизм групп
+\series default
+ — отображение группы 
+\begin_inset Formula $(G,*)$
+\end_inset
+
+ в группу 
+\begin_inset Formula $(H,\#)$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $f(g*g')=f(g)\#f(g')$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Гомоморфизм колец
+\series default
+ — гомоморфизм, сохраняющий операции (т.е.
+ переводящий сложение в сложение, умножение в умножение).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Свойства гомоморфизма групп
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f(e_{x})=e_{y}$
+\end_inset
+
+ (рассмотреть перевод произведения двух 
+\begin_inset Formula $f(e_{x})$
+\end_inset
+
+ в одну 
+\begin_inset Formula $f(e_{x})$
+\end_inset
+
+ и домножить на обратный);
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $f(a^{-1})=(f(a))^{-}1$
+\end_inset
+
+ (представить перемножение элемента и обратного, получится 
+\begin_inset Formula $e$
+\end_inset
+
+, дальше понятно);
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Свойства гомоморфизма колец
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f(0)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $f(-a)=-f(a)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $f(a+b)=f(a)+f(b)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $f(ab)=f(a)f(b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Образ гомоморфизма
+\series default
+ — его образ как функции.
+\end_layout
+
+\begin_layout Standard
+Свойства:
+\end_layout
+
+\begin_layout Standard
+Образ гомоморфизма групп всегда является подгруппой.
+ Доказывается на изи, потому что гомоморфизм сохраняет операции, нейтральный
+ и обратный.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ядро гомоморфизма
+\series default
+ — все такие элементы, которые гомоморфизм обращает в нейтральный.
+\end_layout
+
+\begin_layout Standard
+Свойства:
+\end_layout
+
+\begin_layout Standard
+1) Ядро гомоморфизма всегда содержит нейтральный элемент (так как гомоморфизм
+ переводит нейтральный в нейтральный).
+\end_layout
+
+\begin_layout Standard
+2) Ядро гомоморфизма групп/колец является нормальной подгруппой/двусторонним
+ идеалом (гомоморфим 
+\begin_inset Formula $g^{-1}hg$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Существование эпиморфизма групп с данным ядром
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: 
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+, группы по умножению.
+ Тогда существует группа 
+\begin_inset Formula $F$
+\end_inset
+
+ и эпиморфизм 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $\ker\varphi=H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+Задаем 
+\begin_inset Formula $F=\{gH|g\in G\}$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(g)=gH$
+\end_inset
+
+, обратная 
+\begin_inset Formula $\varphi^{-1}=gH=Hg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Проверяем корректность операций (
+\begin_inset Formula $ahbh\in abH$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Доказываем, что 
+\begin_inset Formula $F$
+\end_inset
+
+ — группа (ассоциативность непосредственно, нейтральный 
+\begin_inset Formula $H$
+\end_inset
+
+, так как 
+\begin_inset Formula $gHH=gH$
+\end_inset
+
+, обратный аналогично через нейтральный 
+\begin_inset Formula $eH$
+\end_inset
+
+ и предположение существования 
+\begin_inset Formula $g^{1}H$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Доказываем, что 
+\begin_inset Formula $H$
+\end_inset
+
+ — 
+\begin_inset Formula $\ker\varphi$
+\end_inset
+
+: берем элемент из 
+\begin_inset Formula $H$
+\end_inset
+
+, доказываем, что он лежит в ядре (
+\begin_inset Formula $\varphi(h)=hH=H$
+\end_inset
+
+).
+ Затем берем какой-то элемент 
+\begin_inset Formula $g\in\ker\varphi$
+\end_inset
+
+, гомоморфируем, получаем 
+\begin_inset Formula $gH=H\Rightarrow gh_{1}=h_{2}\Rightarrow g=h_{1}^{-1}h_{2}\Rightarrow g\in H$
+\end_inset
+
+.
+ То есть любой элемент из ядра лежит в 
+\begin_inset Formula $H$
+\end_inset
+
+ следовательно, 
+\begin_inset Formula $H=\ker\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Говорим, что структура 
+\begin_inset Formula $G/H$
+\end_inset
+
+ называется факторгруппой.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Существование эпиморфизма колец с данным ядром
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: 
+\begin_inset Formula $I$
+\end_inset
+
+ — двусторонний идеал, 
+\begin_inset Formula $R$
+\end_inset
+
+ и 
+\begin_inset Formula $A$
+\end_inset
+
+ — кольца.
+ Тогда существует эпиморфизм с ядром 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+Определяем 
+\begin_inset Formula $\varphi(a)=a+I$
+\end_inset
+
+ и 
+\begin_inset Formula $\varphi(b)=b+I$
+\end_inset
+
+.
+ Проверяем корректность при сложении и умножении, при этом не забываем о
+ том, что идеал выдерживает умножение на элементы кольца.
+\end_layout
+
+\begin_layout Standard
+Аналогично группам доказываем, что 
+\begin_inset Formula $I$
+\end_inset
+
+ нейтральный по сложению в 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Также аналогично доказываем, что 
+\begin_inset Formula $I=\ker\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Не забываем сказать, что 
+\begin_inset Formula $R/I$
+\end_inset
+
+ — факторкольцо.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Теорема о гомоморфизме
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: 
+\begin_inset Formula $G,G',G''$
+\end_inset
+
+ — группы.
+ 
+\begin_inset Formula $f:G\to G'$
+\end_inset
+
+ — эпиморфизм, 
+\begin_inset Formula $g:G\to G''$
+\end_inset
+
+ — гомоморфизм.
+ Если 
+\begin_inset Formula $\ker f=\ker g$
+\end_inset
+
+, тогда существует единственный мономорфизм 
+\begin_inset Formula $h:G'\to G''$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $g=h\circ f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $g$
+\end_inset
+
+ — эпиморфизм, то 
+\begin_inset Formula $h$
+\end_inset
+
+ — гомоморфизм.
+\end_layout
+
+\begin_layout Standard
+Доказательство: задаем 
+\begin_inset Formula $x'\in G'$
+\end_inset
+
+, тогда в силу сюръективности существует 
+\begin_inset Formula $x\in G$
+\end_inset
+
+, являющийся его прообразом.
+ Задаем 
+\begin_inset Formula $h(x')=g(x)$
+\end_inset
+
+, проверяем корректность данного определения, взяв 
+\begin_inset Formula $y\in G$
+\end_inset
+
+ такой, что 
+\begin_inset Formula $f(y)=x'$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f(y)=f(x)\Rightarrow y=xt,t\in\ker f\Rightarrow g(y)=g(t)g(x)=g(x)$
+\end_inset
+
+, что показывает корректность определения.
+\end_layout
+
+\begin_layout Standard
+Доказываем, что 
+\begin_inset Formula $h$
+\end_inset
+
+ — гомоморфизм.
+ Берем 
+\begin_inset Formula $x',z'\in G'$
+\end_inset
+
+, тогда есть 
+\begin_inset Formula $x,z\in G$
+\end_inset
+
+.
+ Тогда, в силу гомоморфности 
+\begin_inset Formula $f,g$
+\end_inset
+
+: 
+\begin_inset Formula $f(xz)=f(x)f(z)$
+\end_inset
+
+, 
+\begin_inset Formula $h(xz)=g(xz)=g(x)g(z)=h(x')h(z')$
+\end_inset
+
+, то есть 
+\begin_inset Formula $h$
+\end_inset
+
+ — гомоморфизм.
+ Положим теперь 
+\begin_inset Formula $f(x')=h(z')$
+\end_inset
+
+ и аналогично проверке корректности получаем 
+\begin_inset Formula $x'=f(x)=f(z)f(t)=f(z)=z'$
+\end_inset
+
+, то есть 
+\begin_inset Formula $h$
+\end_inset
+
+ — инъекция.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $g=h\circ f$
+\end_inset
+
+ — сюрьекция, то 
+\begin_inset Formula $h$
+\end_inset
+
+ также сюръекция, а, следовательно, биекция.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема о гомоморфизме
+\series default
+: Гомоморфный образ группы изоморфен факторгруппе по ядру гомоморфизма.
+\end_layout
+
+\begin_layout Standard
+Доказательство: функция 
+\begin_inset Formula $f$
+\end_inset
+
+, задающая образ, сюръективна по определению.
+ Она - эпиморфизм с ядром 
+\begin_inset Formula $\ker f$
+\end_inset
+
+ по теореме о существовании эпиморфизма с данным ядром.
+ Тогда 
+\begin_inset Formula $f$
+\end_inset
+
+ обладает теми же свойствами, что и группы в теореме выше, следовательно,
+ существует изоморфизм 
+\begin_inset Formula $Imf\cong G/\ker f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Смежные по подгруппе, Лагранж
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Смежный класс
+\series default
+ — 
+\begin_inset Formula $gH=\{gh|h\in H\}$
+\end_inset
+
+ для некоторого 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: Смежные классы равномощны подгруппе, по которой образованы.
+\end_layout
+
+\begin_layout Standard
+Доказательство: 
+\begin_inset Formula $f:H\to gH$
+\end_inset
+
+ — биекция.
+ Сюръекция по определению, инъекция, т.к.
+ из 
+\begin_inset Formula $gh_{1}=gh_{2}$
+\end_inset
+
+ следует 
+\begin_inset Formula $h_{1}=h_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: Смежные классы либо не пересекаются, либо совпадают.
+\end_layout
+
+\begin_layout Standard
+Доказательство: Предполагаем, что существует 
+\begin_inset Formula $g\in g_{1}H\cap g_{2}H$
+\end_inset
+
+, тогда 
+\begin_inset Formula $g=g_{1}h_{1}=g_{2}h_{2}\Leftrightarrow g_{1}=g_{2}h_{1}^{-1}h_{2}\Rightarrow g_{1}H\subset g_{2}H$
+\end_inset
+
+, так же в обратную сторону, тогда смежные классы равны.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Порядок подгруппы является делителем порядка группы.
+\end_layout
+
+\begin_layout Standard
+Доказательство: Вводим левые смежные классы по подгруппе, их непересекающееся
+ объединение составляет группу, следовательно, порядок группы равен сумме
+ порядков каждого смежного класса, классы равномощны.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Взаимно простые идеалы, их пересечение и произведение
+\end_layout
+
+\begin_layout Standard
+Идеал 
+\begin_inset Formula $I$
+\end_inset
+
+ — 
+\series bold
+простой
+\series default
+, если из 
+\begin_inset Formula $ab\in I$
+\end_inset
+
+ следует 
+\begin_inset Formula $a\in I$
+\end_inset
+
+ или 
+\begin_inset Formula $b\in I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Идеалы называются взаимно простыми, если 
+\begin_inset Formula $I_{1}+I_{2}=R$
+\end_inset
+
+.
+ При этом, соответственно, найдутся такие 
+\begin_inset Formula $i_{1}\in I_{1},i_{2}\in I_{2}$
+\end_inset
+
+, что 
+\begin_inset Formula $i_{1}+i_{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: Если все идеалы 
+\begin_inset Formula $I_{1},...,I_{n}$
+\end_inset
+
+ — попарно взаимно простые, то 
+\begin_inset Formula $I_{1}\cap...\cap I_{n}=I_{1}\cdot...\cdot I_{n}$
+\end_inset
+
+.
+ Доказывается по индукции, в обе стороны:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+\forall i_{1}\in I_{1}\ \ i_{1}I_{2}\subseteq I_{2} & \forall i_{2}\in I_{2}\ \ i_{2}I_{1}\subseteq I_{1}\end{cases}\Rightarrow\begin{cases}
+I_{1}I_{2}\subseteq I_{2} & I_{2}I_{1}\subseteq I_{1}\end{cases}\Rightarrow I_{1}I_{2}\subseteq I_{1}\cdot I_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Обратно: берем 
+\begin_inset Formula $i_{1}\in I_{1},i_{2}\in I_{2}$
+\end_inset
+
+, для них верно, что 
+\begin_inset Formula $i_{1}+i_{2}=1$
+\end_inset
+
+, берем 
+\begin_inset Formula $x\in I_{1}\cap I_{2}$
+\end_inset
+
+, для него 
+\begin_inset Formula $x=x\cdot1=x(i_{1}+i_{2})=xi_{1}+xi_{2}$
+\end_inset
+
+.
+ Это элементы идеалов, следовательно, 
+\begin_inset Formula $x$
+\end_inset
+
+ лежит в сумме идеалов, а 
+\begin_inset Formula $I_{2}I_{1}+I_{1}I_{2}=I_{1}I_{2}$
+\end_inset
+
+.
+ Значит, любой элемент пересечения лежит в произведении, следовательно,
+ пересечение равно произведению.
+\end_layout
+
+\begin_layout Standard
+Переходим по индукции с использованием
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Леммы
+\series default
+: Если 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+ взаимно прост с 
+\begin_inset Formula $I_{2}...,I_{k}$
+\end_inset
+
+, то он взаимно прост с их произведением.
+\end_layout
+
+\begin_layout Standard
+Доказываем опять по индукции, берем 
+\begin_inset Formula $k=3$
+\end_inset
+
+, расписываем 
+\begin_inset Formula $R=I_{1}+I_{2}$
+\end_inset
+
+ и 
+\begin_inset Formula $=I_{2}+I_{3}$
+\end_inset
+
+, затем 
+\begin_inset Formula $I_{1}+I_{2}=I_{1}+I_{2}R=I_{1}+I_{2}(I_{2}+I_{3})=I_{1}+I_{2}I_{3}=R$
+\end_inset
+
+.
+ Индукция по 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\begin_inset Formula $I_{1}\cdot...\cdot I_{k}=R$
+\end_inset
+
+ и 
+\begin_inset Formula $I_{k+1}+J=R$
+\end_inset
+
+, перемножаем, все классно
+\end_layout
+
+\begin_layout Standard
+Возвращаемся к предыдущей лемме, доказываем для нее ИП.
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Китайская теорема об остатках
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: 
+\begin_inset Formula $R$
+\end_inset
+
+ — коммутативное с 1.
+ Если 
+\begin_inset Formula $I_{1},...,I_{n}$
+\end_inset
+
+ — взаимно простые, то 
+\begin_inset Formula $R/I_{1}\cdot...\cdot I_{n}\cong\oplus_{i=1}^{n}R/I_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство по индукции для 
+\begin_inset Formula $k=2$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R/I_{1}\cdot I_{2}\cong R/I_{1}\oplus R/I_{2}$
+\end_inset
+
+.
+ Строим гомоморфизм 
+\begin_inset Formula $\varphi:R\to R/I_{1}\oplus R/I_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\varphi(r)=(r+I_{1},r+I_{2})$
+\end_inset
+
+.
+ Проверим, что это гомоморфизм.
+ Затем говорим, что, раз идеалы взаимно просты, то 
+\begin_inset Formula $I_{1}+I_{2}=R\Rightarrow i_{1}+i_{2}=1$
+\end_inset
+
+.
+ Тогда прообразом элемента 
+\begin_inset Formula $(x+I_{1},y+I_{2})$
+\end_inset
+
+ будет являться элемент 
+\begin_inset Formula $xi_{1}+yi_{2}$
+\end_inset
+
+.
+ Доказываем это, взяв гомоморфизм (не забываем, что элементы вида 
+\begin_inset Formula $xi_{1}\in I_{1}$
+\end_inset
+
+!!!).
+ Получаем, что это верно.
+ Таким образом, имеем два эпиморфизма, первый мы доказали, второй очевиден
+ по теореме о существовании эпиморфизма с данным ядром.
+ По теореме о гомоморфизме между их образами существует изоморфизм.
+\end_layout
+
+\begin_layout Standard
+Индукция осуществляется аналогично, 
+\begin_inset Formula $R/I_{1}\cdot...\cdot I_{n+1}\cong R/I_{1}\cdot...\cdot I_{n}\oplus R/I_{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Простые и максимальные идеалы
+\end_layout
+
+\begin_layout Standard
+Идеал 
+\begin_inset Formula $I$
+\end_inset
+
+ — 
+\series bold
+простой
+\series default
+, если из 
+\begin_inset Formula $ab\in I$
+\end_inset
+
+ следует, что либо 
+\begin_inset Formula $a\in I$
+\end_inset
+
+, либо 
+\begin_inset Formula $b\in I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Максимальный идеал
+\series default
+ — идеал, который не содержится ни в каком другом идеале.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: Для любого идеала существует максимальный идеал, который его содержит.
+ (без доказательства)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: Любой максимальный идеал является простым.
+\end_layout
+
+\begin_layout Standard
+Доказательство через расписывание определения простого идеала.
+ Для определенности говорим, что 
+\begin_inset Formula $a\notin I$
+\end_inset
+
+, значит, должно выполняться 
+\begin_inset Formula $b\in I$
+\end_inset
+
+.
+ Затем рассматриваем структуру 
+\begin_inset Formula $I+aR=R$
+\end_inset
+
+.
+ Домножаем на 
+\begin_inset Formula $b$
+\end_inset
+
+ с обоих сторон, получаем хренюшку 
+\begin_inset Formula $bR=bI+baR$
+\end_inset
+
+, откуда следует, что 
+\begin_inset Formula $bI\subseteq I;\ ba\in I\Rightarrow baR\subseteq I;b\in bR\Rightarrow b\in bI+baR\subseteq I\Rightarrow b\in I$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+1) Идеал 
+\begin_inset Formula $I$
+\end_inset
+
+ — простой 
+\begin_inset Formula $\Leftrightarrow\ R/I$
+\end_inset
+
+ — область целостности
+\end_layout
+
+\begin_layout Standard
+2) Идеал 
+\begin_inset Formula $I$
+\end_inset
+
+ — простой 
+\begin_inset Formula $\Leftrightarrow\ R/I$
+\end_inset
+
+ — поле.
+\end_layout
+
+\begin_layout Standard
+Доказательство 1 вправо: допускаем, что 
+\begin_inset Formula $R/I$
+\end_inset
+
+ — не область целостности, следовательно, существуют 
+\begin_inset Formula $a,b\neq I,a,b\in R/I$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $ab=eI$
+\end_inset
+
+.
+ Расписываем 
+\begin_inset Formula $ab=I$
+\end_inset
+
+, умножаем, получаем 
+\begin_inset Formula $r_{1}r_{2}+I\in I\Rightarrow r_{1}r_{2}\in I$
+\end_inset
+
+, что по определению простого идеала дает 
+\begin_inset Formula $a\in I$
+\end_inset
+
+ или 
+\begin_inset Formula $b\in I$
+\end_inset
+
+, что противоречит тому, что 
+\begin_inset Formula $R/I$
+\end_inset
+
+ — не область целостности.
+ Ура.
+\end_layout
+
+\begin_layout Standard
+Доказательство 1 влево: говорим, что если 
+\begin_inset Formula $ab=I$
+\end_inset
+
+, то либо 
+\begin_inset Formula $a=I$
+\end_inset
+
+, либо 
+\begin_inset Formula $b=I$
+\end_inset
+
+.
+ Расписываем их, получаем что 
+\begin_inset Formula $r_{1}\in I$
+\end_inset
+
+ или 
+\begin_inset Formula $r_{2}\in I$
+\end_inset
+
+, затем расписываем 
+\begin_inset Formula $ab=I\Rightarrow r_{1}r_{2}\in I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство 2 вправо: расписываем 
+\begin_inset Formula $a,b$
+\end_inset
+
+, получаем 
+\begin_inset Formula $r_{1}r_{2}+I=R$
+\end_inset
+
+, так как 
+\begin_inset Formula $I$
+\end_inset
+
+ — максимальный, 
+\begin_inset Formula $r_{1}r_{2}+i=1$
+\end_inset
+
+, добавим и вычтем с каждой стороны по 
+\begin_inset Formula $I$
+\end_inset
+
+, чтобы избавиться от 
+\begin_inset Formula $i$
+\end_inset
+
+, получим, что 
+\begin_inset Formula $r_{1}r_{2}=1$
+\end_inset
+
+, то есть любой элемент имеет обратный.
+\end_layout
+
+\begin_layout Standard
+Доказательство 2 влево: расписываем 
+\begin_inset Formula $a,b$
+\end_inset
+
+, перемножаем, приравниваем к 1, так как каждый элемент имеет обратный,
+ откуда следует, что 
+\begin_inset Formula $r_{1}r_{2}+I=1$
+\end_inset
+
+, значит, 
+\begin_inset Formula $I$
+\end_inset
+
+ — максимальный.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Неприводимые элементы и простота главного идеала
+\end_layout
+
+\begin_layout Standard
+Элементы 
+\begin_inset Formula $a,b\in R$
+\end_inset
+
+ называются 
+\series bold
+ассоциированными
+\series default
+, если 
+\begin_inset Formula $a\in bR$
+\end_inset
+
+ и 
+\begin_inset Formula $b\in aR$
+\end_inset
+
+, или, иначе говоря, 
+\begin_inset Formula $a$
+\end_inset
+
+ делит 
+\begin_inset Formula $b$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+ делит 
+\begin_inset Formula $a$
+\end_inset
+
+, то есть они отличаются на обратимый элемент.
+\end_layout
+
+\begin_layout Standard
+Элемент 
+\begin_inset Formula $p\in R$
+\end_inset
+
+ называется 
+\series bold
+неприводимым
+\series default
+, если из 
+\begin_inset Formula $p=ab$
+\end_inset
+
+ следует, что либо 
+\begin_inset Formula $a$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $p$
+\end_inset
+
+, либо 
+\begin_inset Formula $b$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Элемент 
+\begin_inset Formula $p$
+\end_inset
+
+ простой, если 
+\begin_inset Formula $pR$
+\end_inset
+
+ — простой идеал.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: если 
+\begin_inset Formula $pR$
+\end_inset
+
+ простой идеал, то 
+\begin_inset Formula $p$
+\end_inset
+
+ неприводим.
+\end_layout
+
+\begin_layout Standard
+Доказательство: 
+\begin_inset Formula $ab=p$
+\end_inset
+
+, либо 
+\begin_inset Formula $a\in pR$
+\end_inset
+
+, либо 
+\begin_inset Formula $b\in pR$
+\end_inset
+
+ по свойству простых идеалов.
+ Пусть 
+\begin_inset Formula $a\in pR$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $a=pr\Leftrightarrow p=ar^{-1}\Rightarrow p\in aR$
+\end_inset
+
+.
+ Значит, 
+\begin_inset Formula $p$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Главный идеал
+\series default
+ — идеал, образованный одним элементом, идеал вида 
+\begin_inset Formula $aR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Кольцо главных идеалов
+\series default
+ — кольцо, в котором любой идеал главный (кольцо целых чисел является кольцом
+ главных идеалов).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: 
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо главных идеалов, область целостности.
+ Если 
+\begin_inset Formula $p$
+\end_inset
+
+ неприводим, то 
+\begin_inset Formula $pR$
+\end_inset
+
+ простой.
+\end_layout
+
+\begin_layout Standard
+Доказательство: если 
+\begin_inset Formula $ab\in pR$
+\end_inset
+
+ и 
+\begin_inset Formula $pR$
+\end_inset
+
+ простой, то 
+\begin_inset Formula $a\in pR$
+\end_inset
+
+ или 
+\begin_inset Formula $b\in pR$
+\end_inset
+
+.
+ Предположим, что это не так, и оба элемента не лежат в 
+\begin_inset Formula $pR$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $aR+pR=a'R$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $p=a'r$
+\end_inset
+
+.
+ Расписываем 
+\begin_inset Formula $p$
+\end_inset
+
+ по условию неприводимости, говорим, что либо 
+\begin_inset Formula $a'$
+\end_inset
+
+, либо 
+\begin_inset Formula $r$
+\end_inset
+
+ обратимы.
+ Если обратим 
+\begin_inset Formula $a'R=R$
+\end_inset
+
+.
+ Если обратим 
+\begin_inset Formula $r$
+\end_inset
+
+, то 
+\begin_inset Formula $a'=pr^{-1}\Rightarrow prr^{-1}=a'r\Rightarrow pR=a'R$
+\end_inset
+
+.
+ То есть 
+\begin_inset Formula $p$
+\end_inset
+
+ ассоциирован с 
+\begin_inset Formula $a'$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $a\in pR$
+\end_inset
+
+, противоречие, значит, верно что 
+\begin_inset Formula $a'R=R$
+\end_inset
+
+.
+ Аналогично с 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R=aR+pR=a(bR+pR)+pR=abR+pR=pR$
+\end_inset
+
+.
+ 
+\begin_inset Formula $pR=R$
+\end_inset
+
+, значит, 
+\begin_inset Formula $p$
+\end_inset
+
+ обратимый, противоречие условию, следовательно, 
+\begin_inset Formula $a\in pR$
+\end_inset
+
+ или 
+\begin_inset Formula $p\in pR$
+\end_inset
+
+.
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Факториальные кольца.
+ Достаточное условие факториальности
+\end_layout
+
+\begin_layout Standard
+Кольцо 
+\begin_inset Formula $R$
+\end_inset
+
+ 
+\series bold
+факториально
+\series default
+, если существуют неприводимые элементы 
+\begin_inset Formula $p_{1},...,p_{m}\in R$
+\end_inset
+
+ и обратимый элемент 
+\begin_inset Formula $\epsilon\in R$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $r=\epsilon p_{1}...p_{m}$
+\end_inset
+
+ и если 
+\begin_inset Formula $\epsilon p_{1}...p_{m}=\delta q_{1}...q_{n}$
+\end_inset
+
+, то 
+\begin_inset Formula $m=n$
+\end_inset
+
+ и существует такая перестановка 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, что 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $q_{\sigma}(i)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: Пусть 
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо, область целостности, в которой каждый элемент порождает простой
+ идеал.
+ Если каждый необратимый раскладывается в произведение неприводимых, то
+ кольцо 
+\begin_inset Formula $R$
+\end_inset
+
+ факториально.
+\end_layout
+
+\begin_layout Standard
+Доказательство: говорим, что 
+\begin_inset Formula $\epsilon p_{1}...p_{m}=\theta q_{1}...q_{n}$
+\end_inset
+
+.
+ Индукцией по 
+\begin_inset Formula $\min(m,n)$
+\end_inset
+
+ докажем, что 
+\begin_inset Formula $m=n$
+\end_inset
+
+ и 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $q_{\sigma(i)}$
+\end_inset
+
+.
+ База индукции 
+\begin_inset Formula $n=0$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon=\theta q_{1}...q_{m}$
+\end_inset
+
+ тоже обратимо, тогда 
+\begin_inset Formula $\epsilon=\theta$
+\end_inset
+
+, значит, 
+\begin_inset Formula $m=n=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ИП: 
+\begin_inset Formula $p_{m}R$
+\end_inset
+
+ — простой, тогда 
+\begin_inset Formula $\exists l$
+\end_inset
+
+, т.ч.
+ 
+\begin_inset Formula $q_{l}=p_{m}R\Rightarrow\exists\delta$
+\end_inset
+
+, т.ч.
+ 
+\begin_inset Formula $q_{l}=\delta p_{m}$
+\end_inset
+
+, причем, т.к.
+ 
+\begin_inset Formula $q_{l}$
+\end_inset
+
+ неприводим, то 
+\begin_inset Formula $\delta$
+\end_inset
+
+ обратим.
+ Подставим это в равенство для 
+\begin_inset Formula $m$
+\end_inset
+
+: 
+\begin_inset Formula $\theta q_{1}...q_{n}=\theta q_{1}...q_{l-1}p_{n}\delta q_{l+1}...q_{m}=\epsilon p_{1}...p_{n}$
+\end_inset
+
+.
+ Сократим на 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+, для этой конструкции будет выполняться условие индукции, значит, 
+\begin_inset Formula $m=n$
+\end_inset
+
+ и искомая перестановка 
+\begin_inset Formula $\sigma(m)=l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Факториальность кольца главных идеалов
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Область главных идеалов является факториальным кольцом
+\end_layout
+
+\begin_layout Standard
+Доказательство: пусть 
+\begin_inset Formula $r\in R$
+\end_inset
+
+ — необратимый.
+ Идеал 
+\begin_inset Formula $rR\subseteq p_{1}R$
+\end_inset
+
+, где 
+\begin_inset Formula $p_{1}R$
+\end_inset
+
+ максимальный, значит, 
+\begin_inset Formula $r=r_{1}p_{1}$
+\end_inset
+
+, при этом 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ неприводим.
+ Будем раскладывать так каждый 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+.
+ Если на одном из этапов 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ обратим, то теорема доказана.
+ Иначе рассмотрим объединение идеалов 
+\begin_inset Formula $I=\cup r_{i}R$
+\end_inset
+
+, он идеал, значит, 
+\begin_inset Formula $I=qR$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $q\in r_{j}R$
+\end_inset
+
+, так как 
+\begin_inset Formula $I$
+\end_inset
+
+ — объединение всех идеалов вида 
+\begin_inset Formula $r_{i}R$
+\end_inset
+
+.
+ То есть 
+\begin_inset Formula $qR\subseteq r_{j}R$
+\end_inset
+
+, но одновременно 
+\begin_inset Formula $r_{j}R\subseteq qR$
+\end_inset
+
+.
+ Значит, 
+\begin_inset Formula $r_{j}$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Еще 
+\begin_inset Formula $r_{j}R\subseteq r_{j+1}R$
+\end_inset
+
+ и 
+\begin_inset Formula $r_{j+1}R\subseteq qR=r_{j}R$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $r_{j+1}R=qR$
+\end_inset
+
+, 
+\begin_inset Formula $r_{j+1}R$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $r_{j}R$
+\end_inset
+
+, тогда они отличаются на обратимый.
+ Мы знаем, что 
+\begin_inset Formula $r_{j}=r_{j+1}p_{j+1}$
+\end_inset
+
+, значит, либо 
+\begin_inset Formula $p_{j+1}$
+\end_inset
+
+ обратим, либо 
+\begin_inset Formula $r_{j+1}$
+\end_inset
+
+ обратим.
+ 
+\begin_inset Formula $p_{j+1}$
+\end_inset
+
+ неприводим, и, значит, необратим, следовательно, 
+\begin_inset Formula $r_{j+1}$
+\end_inset
+
+ обратим.
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Евклидовы кольца и кольца главных идеалов
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R$
+\end_inset
+
+ — область целостности.
+ Если 
+\begin_inset Formula $\exists f:R\to\mathbb{N}\cup\{-\infty\}$
+\end_inset
+
+, обладающая следующими свойствам:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f(0)<f(r)\ \forall r\in R\setminus\{0\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\forall a\neq0$
+\end_inset
+
+ и 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $ab\in R$
+\end_inset
+
+ существуют такие 
+\begin_inset Formula $r,q$
+\end_inset
+
+, что 
+\begin_inset Formula $a=bq+r$
+\end_inset
+
+, причем 
+\begin_inset Formula $f(r)<f(b)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+то такое кольцо называется 
+\series bold
+евклидовым
+\series default
+, а функция - евклидовой нормой.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: Евклидово кольцо является кольцом главных идеалов.
+\end_layout
+
+\begin_layout Standard
+Доказательство: берем нетривиальный идеал, берем из него такое 
+\begin_inset Formula $b$
+\end_inset
+
+, чтобы его евклидова норма была минимальной.
+ Затем берем 
+\begin_inset Formula $a\in I$
+\end_inset
+
+, тогда, по условию евклидового кольца, выполняется 
+\begin_inset Formula $a=bq+r$
+\end_inset
+
+, (такие 
+\begin_inset Formula $q$
+\end_inset
+
+ и 
+\begin_inset Formula $r$
+\end_inset
+
+ существуют), откуда 
+\begin_inset Formula $r=a-bq$
+\end_inset
+
+, оба слагаемых лежат в идеале, значит, 
+\begin_inset Formula $r$
+\end_inset
+
+ лежит в идеале и его евклидова норма 0, т.к.
+ у 
+\begin_inset Formula $b$
+\end_inset
+
+ евклидова норма минимальна.
+ Тогда 
+\begin_inset Formula $a$
+\end_inset
+
+ делит 
+\begin_inset Formula $b$
+\end_inset
+
+ и, следовательно, 
+\begin_inset Formula $I\subseteq bR$
+\end_inset
+
+, но 
+\begin_inset Formula $b\in I\Rightarrow bR\subseteq I\Rightarrow bR=I$
+\end_inset
+
+, значит, любой идеал в 
+\begin_inset Formula $R$
+\end_inset
+
+ — главный.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+НОД и его линейное представление
+\end_layout
+
+\begin_layout Standard
+Элемент 
+\begin_inset Formula $d=\gcd(a,b)$
+\end_inset
+
+, если он делит и 
+\begin_inset Formula $a$
+\end_inset
+
+, и 
+\begin_inset Formula $b$
+\end_inset
+
+ и он делит любой другой общий делитель 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Таким образом, 
+\begin_inset Formula $aR+bR\subseteq dR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+: 
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо главных идеалов.
+ 
+\begin_inset Formula $\forall a,b\in R\ \ \exists x,y\in R$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $ax+by=\gcd(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: на изи.
+ 
+\begin_inset Formula $aR+bR=dR$
+\end_inset
+
+ — главный, следовательно, 
+\begin_inset Formula $\exists x\in R,y\in R$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $d=ax+by$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Функция Эйлера
+\end_layout
+
+\begin_layout Standard
+Функция Эйлера от 
+\begin_inset Formula $n$
+\end_inset
+
+ — количество элементов от 1 до 
+\begin_inset Formula $n$
+\end_inset
+
+, которые взаимно просты с 
+\begin_inset Formula $n$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: 
+\begin_inset Formula $\gcd(a,n)=d$
+\end_inset
+
+, 
+\begin_inset Formula $aZ+n\mathbb{Z}$
+\end_inset
+
+ — максимальный, тогда 
+\begin_inset Formula $a\mathbb{Z}+n\mathbb{Z}=d\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказываем от противного, предполагая, что 
+\begin_inset Formula $a\mathbb{Z}+n\mathbb{Z}=b\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula $b$
+\end_inset
+
+ делится на 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $n$
+\end_inset
+
+, если 
+\begin_inset Formula $a$
+\end_inset
+
+ делится на 
+\begin_inset Formula $c$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+ делится на 
+\begin_inset Formula $c$
+\end_inset
+
+, то 
+\begin_inset Formula $aR$
+\end_inset
+
+ и 
+\begin_inset Formula $bR$
+\end_inset
+
+ подмножества 
+\begin_inset Formula $cR$
+\end_inset
+
+, то есть 
+\begin_inset Formula $bR\subseteq cR$
+\end_inset
+
+, то есть 
+\begin_inset Formula $b$
+\end_inset
+
+ делится на 
+\begin_inset Formula $c$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $b=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Свойства функции Эйлера:
+\end_layout
+
+\begin_layout Standard
+1) Если 
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+, то 
+\begin_inset Formula $\varphi(ab)=\varphi(a)\varphi(b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: 
+\begin_inset Formula $aR+bR=R$
+\end_inset
+
+.
+ Применяем КТО, 
+\begin_inset Formula $R/abR\cong R/aR\oplus R/bR\Rightarrow(R/abR)^{*}\cong(R/aR)^{*}\times(R/bR)^{*}$
+\end_inset
+
+, И тогда получаем, что 
+\begin_inset Formula $\varphi(a,b)=(R/abR)^{*}$
+\end_inset
+
+ (по определению), 
+\begin_inset Formula $\varphi(a)=(R/aR)^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(b)=(R/bR)^{*}$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\varphi(a)\varphi(b)=\varphi(ab)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\varphi(\prod\limits _{i=1}^{m}(p_{i}^{k_{i}}))=\prod\limits _{i=1}^{m}\varphi(p_{i}^{k_{i}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: индукция по количеству сомножителей.
+ Индукционный переход раскрыть по предыдущему свойству как 
+\begin_inset Formula $\varphi(p_{i}^{k_{m}})\cdot\prod\limits _{i=1}^{m-1}\varphi(p_{i}^{k_{i}})=\prod\limits _{i=1}^{m}\varphi(p_{i}^{k_{i}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $\varphi(p^{k})=p^{k}-p^{k-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: 
+\begin_inset Formula $\gcd(m,p^{k})\neq1$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $m$
+\end_inset
+
+ делит 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Таких 
+\begin_inset Formula $m$
+\end_inset
+
+ от 1 до 
+\begin_inset Formula $p^{k}$
+\end_inset
+
+ будет в 
+\begin_inset Formula $p$
+\end_inset
+
+ раз меньше, так как каждое число 
+\begin_inset Formula $m$
+\end_inset
+
+ имеет с 
+\begin_inset Formula $p^{k}$
+\end_inset
+
+ общий делитель.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Порядок элемента группы, теорема Эйлера
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $a\in\mathbb{Z}_{n}^{*};\ \ a^{m}=1(mod\ n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $<a>$
+\end_inset
+
+ — циклическая группа, порожденная элементом 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Порядком элемента 
+\begin_inset Formula $a$
+\end_inset
+
+ называется наименьшая степень, в которую надо возвести 
+\begin_inset Formula $a$
+\end_inset
+
+, чтобы получить 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Если такого числа не существует, то порядок группы равен бесконечности.
+ Обозначается 
+\begin_inset Formula $\ord a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: 
+\begin_inset Formula $\varphi(n)=|(\mathbb{Z}_{n})^{*}|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: пусть 
+\begin_inset Formula $a$
+\end_inset
+
+ из группы.
+ Для него существует такой 
+\begin_inset Formula $a'$
+\end_inset
+
+, что 
+\begin_inset Formula $aa'=1(mod\ n)$
+\end_inset
+
+, значит, существует 
+\begin_inset Formula $x$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $xn=aa'-1\Rightarrow aa'-xn=1$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $\gcd(a,n)=1$
+\end_inset
+
+, по определению функции Эйлера она — количество элементов взаимно простых
+ с 
+\begin_inset Formula $n$
+\end_inset
+
+, а такие в нашей группе все, так как доказанное условие выполняется для
+ любого 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Лемма
+\series default
+: 
+\begin_inset Formula $a^{k}\equiv1\Leftrightarrow k\vdots\ord a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: Если 
+\begin_inset Formula $k$
+\end_inset
+
+ делит 
+\begin_inset Formula $\ord a$
+\end_inset
+
+, то 
+\begin_inset Formula $k\geq\ord a\Rightarrow k=(\ord a)b+r$
+\end_inset
+
+, где 
+\begin_inset Formula $0<r<\ord a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Перепишем как 
+\begin_inset Formula $a^{(\ord a)b+r}=1\Rightarrow(a^{\ord a})^{b}\cdot a^{r}=1\Rightarrow1^{b}a^{r}=1\Rightarrow a^{r}=1\Rightarrow r=0\Rightarrow k\vdots\ord a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+В обратную сторону: 
+\begin_inset Formula $k\vdots\ord a\Rightarrow k=(\ord a)b\Rightarrow(a^{\ord a})^{b}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие
+\series default
+ из теоремы Лагранжа:
+\end_layout
+
+\begin_layout Standard
+Т.к.
+ 
+\begin_inset Formula $\ord a=|<a>|$
+\end_inset
+
+, а 
+\begin_inset Formula $<a>$
+\end_inset
+
+ — подгруппа в 
+\begin_inset Formula $G$
+\end_inset
+
+, то 
+\begin_inset Formula $|G|$
+\end_inset
+
+ делится на 
+\begin_inset Formula $\ord a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+ Эйлера:
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $\gcd(a,n)=1$
+\end_inset
+
+, то 
+\begin_inset Formula $a^{\varphi(n)}\equiv1(mod\ n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: По следствию из теоремы Лагранжа 
+\begin_inset Formula $|(Z_{n})^{*}|\vdots\ord a\Rightarrow\varphi(n)\vdots\ord a\Rightarrow\varphi(n)=(\ord a)b\Rightarrow(a^{\ord a})^{b}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Экспонента группы, теорема Кармайкла
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Экспонента
+\series default
+ группы — наименьшее натуральное число 
+\begin_inset Formula $d$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\forall g\in G$
+\end_inset
+
+ будет верно 
+\begin_inset Formula $g^{d}=e$
+\end_inset
+
+.
+ Экспонента существует для всех конечных групп.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g^{d}=e\Rightarrow d\vdots\ord g\ \forall g\in G\Rightarrow d=\lcm(\ord g_{1},...,g_{m})$
+\end_inset
+
+, где 
+\begin_inset Formula $m=|G|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+ Кармайкла:
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $n=\prod\limits _{i=1}^{m}p_{i}^{k_{i}}$
+\end_inset
+
+, где 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ — взаимно простые множители.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varphi'(n)=\lcm(\varphi(p_{1}^{k_{1}}),...,\varphi(p_{m}^{k_{m}}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $\gcd(a,n)=1$
+\end_inset
+
+, то 
+\begin_inset Formula $\varphi'(n)\equiv1(mod\ n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Доказательство: 
+\begin_inset Formula $\gcd(a,n)=1$
+\end_inset
+
+, то 
+\begin_inset Formula $\gcd(a,p_{i})=1$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $a\equiv x_{i}(mod\ p_{i})$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $a=(x_{1},...,x_{m})\in\times_{i=1}^{m}(Z/p_{i}^{k_{i}}Z)^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varphi'(n)=\lcm(\varphi(p_{1}^{k_{1}}),...,\varphi(p_{m}^{k_{m}}))\Rightarrow\varphi'(n)\vdots\varphi(p_{i}^{k_{i}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varphi(p_{i}^{k_{i}})=|(Z/p_{i}^{k_{i}}Z)^{*}|$
+\end_inset
+
+ по определению функции Эйлера от простого числа.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|(Z/p_{i}^{k_{i}}Z)^{*}|=|(Z_{p_{i}^{k_{i}}})^{*}|\vdots\ord x$
+\end_inset
+
+ по следствию из теоремы Лагранжа.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{\ord x}\equiv1(modp_{i}^{k_{i}})\Rightarrow x^{|}(Z_{p_{i}^{k_{i}}})^{*}|=1(modp_{i}^{k_{i}})\Rightarrow x^{\varphi(p_{i}^{k_{i}})}=1(modp_{i}^{k_{i}})\Rightarrow x^{\varphi'(n)}=1(modp_{i}^{k_{i}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a^{\varphi'(n)}=(x_{1},...,x_{m})^{\varphi'(n)}=(1,...,1)=1(modp_{i}^{k_{i}})$
+\end_inset
+
+.
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Многочлены.
+ Теорема о делении с остатком
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F$
+\end_inset
+
+ — поле.
+ 
+\begin_inset Formula $F[t]$
+\end_inset
+
+ — кольцо многочленов над полем 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F[t]=\{a_{0}+a_{1}t^{1}+...+a_{n}t^{n}|a_{i}\in R;a_{n}\neq0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Многочлены можно представить в виде множества коэффициентов 
+\begin_inset Formula $F[n]=(a_{0},...,a_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Сложение многочленов определено стандартно.
+\end_layout
+
+\begin_layout Standard
+Умножение многочленов: каждый элемент множества коэффициентов представляется
+ в виде суммы 
+\begin_inset Formula $\sum\limits _{i=0}^{n}a_{i}b_{n-i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Полиномиальная функция — значение многочлена в точке 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Теорема
+\series default
+ о делении с остатком:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\deg$
+\end_inset
+
+ является евклидовой нормой на 
+\begin_inset Formula $F[t]$
+\end_inset
+
+, а само кольцо 
+\begin_inset Formula $F[t]$
+\end_inset
+
+ — евклидово.
+\end_layout
+
+\begin_layout Standard
+Доказательство: зададим условия евклидовости:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $\deg0<\deg p\ \forall p\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\exists q,p\in F[t]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $X=\{p-qf|f\in F[t]\}$
+\end_inset
+
+.
+ Берем 
+\begin_inset Formula $r\in X$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\deg(r)\leq\deg(r')\forall r'\in F[t]$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $p=fq+r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Допустим, что 
+\begin_inset Formula $\deg(q)\leq\deg(r)$
+\end_inset
+
+.
+ Распишем их по коэффициентам (коэффициенты большего многочлена задавать
+ как 
+\begin_inset Formula $m+n$
+\end_inset
+
+), 
+\begin_inset Formula $m\geq n$
+\end_inset
+
+, умножим 
+\begin_inset Formula $q$
+\end_inset
+
+ на 
+\begin_inset Formula $t^{m}$
+\end_inset
+
+ и на 
+\begin_inset Formula $\frac{b_{n+m}}{a_{n}}$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $\deg(r-q\cdot t^{m}\cdot\frac{b_{n+m}}{a_{n}})<\deg(r)$
+\end_inset
+
+.
+ Но 
+\begin_inset Formula $r-q\cdot t^{m}\cdot\frac{b_{n+m}}{a_{n}}$
+\end_inset
+
+ лежит в 
+\begin_inset Formula $X\Rightarrow r$
+\end_inset
+
+ не минимальный.
+ Противоречие.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

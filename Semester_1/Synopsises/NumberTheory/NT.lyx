@@ -1,0 +1,13453 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[warn]{mathtext}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding T2A
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Внимание: данный документ не поддерживается и поддерживаться не будет! Сообщения
+ об ошибках НЕ рассматриваются, пулл реквесты НЕ принимаются! Если Вы хотите
+ поддерживать этот документ - форкните проект на Github.
+ Благодарю за понимание.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+В данном документе используются следующие обозначения: 
+\begin_inset Formula $\ast$
+\end_inset
+
+ — бинарная операция на множестве, 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ — бинарная операция умножения на множестве.
+ Данная хрень сделана для облегчения набора текста и понимания исходного
+ кода.
+ Просьба понять, простить и не путатся.
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+Алгебра и теория чисел 
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X\setminus Y=\{x\in X(\text{Элементы множества});x\notin Y\ (\text{условие вхождения})\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+card X - мощность множества.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $|x|$
+\end_inset
+
+ — количество элементов множества.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+"Графиком функции Г из X в Y" (где X и Y - множества) называется подмножество
+ 
+\begin_inset Formula $Г\leq X\times Y$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\forall x\in X\ \exists!\ y\in Y:(x,y)\inГ$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Функция - тройка, состоящая из (X, Y, Г), где (X, Y) - множества, а Г -
+ график.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X\times Y=\{(x,y)|(x\in X,y\in Y)\}$
+\end_inset
+
+ — Декартово произведение.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Вместо f = (X, Y, Г) будем писать: 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+, где f(x) = y для (x, y) 
+\begin_inset Formula $\in$
+\end_inset
+
+ Г.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f:R\rightarrow R_{0}$
+\end_inset
+
+ — общий вид для функций, например, 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Образ функции f: 
+\begin_inset Formula $Imf=\{f(x)|x\in X\}=\{y\in Y|\exists x\in X:f(x)=y\}\leq Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+, где X называется domain, а Y — codomain.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Иногда образ функции обозначают 
+\begin_inset Formula $f'(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $2Z\neq Z+Z$
+\end_inset
+
+ (потому что 
+\begin_inset Formula $2Z$
+\end_inset
+
+ — множество четных чисел, а 
+\begin_inset Formula $Z+Z$
+\end_inset
+
+ — сумма любых двух целых чисел).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Z^{2}=N_{0}^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $N=\{1,2,...\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $N_{0}=\{0,1,2,...\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Z=\pm N_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Q\frac{Z}{N}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $R,C,H$
+\end_inset
+
+ - примеры множеств чисел.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f:X\rightarrow Y,\ x\in X,\ y\in Y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f^{-1}(y)=\{x\in X|f(x)=y\}$
+\end_inset
+
+ — прообраз 
+\begin_inset Formula $y$
+\end_inset
+
+ или слой над 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Y'\subset Y\Rightarrow f^{-1}(y')=\{x\in X|f(x)\in Y'\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X'\subset X\Rightarrow f^{-1}(x')=\{f(x)|x\in X\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f|_{x}':X'\rightarrow Y$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Г_{f}|_{x}'=Г\cap(X'\times Y)$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Y'\subset Y$
+\end_inset
+
+ — любое подмножество.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f$
+\end_inset
+
+ — сюръективна, если 
+\begin_inset Formula $Im\ f=Y\Leftrightarrow\forall y\in Y\exists x\in X:f(x)=y$
+\end_inset
+
+ (если 
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+ имеет хотя бы одно решение).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f:R\rightarrow R_{\geq0}$
+\end_inset
+
+ — 
+\begin_inset Quotes ard
+\end_inset
+
+подмаска
+\begin_inset Quotes ald
+\end_inset
+
+ для 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\forall C\in[f(a);f(b)]\exists c\in[a,b]$
+\end_inset
+
+, тогда 
+\begin_inset Formula $f(c)=C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $2^{\sqrt{2}}=2^{\lim\limits _{n\rightarrow\infty}a_{n}}=?\lim\limits _{n\rightarrow\infty}2^{a_{n}}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f:Z\times Z\rightarrow Z$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f(x,y)=4x+9y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f(-2,1)=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f(-2k,k)=k$
+\end_inset
+
+ — доказательство сюръективности функции 
+\begin_inset Formula $f(x,y)=4x+9y$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f$
+\end_inset
+
+ — инъективна, если 
+\begin_inset Formula $\forall y\in Y\ |f^{-1}(y)|\leq1\Leftrightarrow(f(x_{1})=f(x_{2})\Rightarrow x_{1}=x_{2})\Leftrightarrow\forall y\in Y$
+\end_inset
+
+ уравнение 
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+ имеет меньше или одно решение.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f$
+\end_inset
+
+ — биективна, если сюръективна и инъективна одновременно, т.е.
+ 
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+ имеет ровно 1 решение при любом 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Если 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ — биекция, то 
+\begin_inset Formula $\exists f^{-1}:Y\rightarrow X:$
+\end_inset
+
+ 
+\begin_inset Formula $f^{-1}(f(x))=x$
+\end_inset
+
+ и 
+\begin_inset Formula $f(f^{-1}(y))=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\sin x$
+\end_inset
+
+ — не биекция, ибо:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\arcsin(\sin(x))\neq x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\sin(\arcsin(x))=x$
+\end_inset
+
+; 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Нахождение обратной функции:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f(x)=e^{x^{3}}$
+\end_inset
+
+ решить 
+\begin_inset Formula $e^{x^{3}}=y\Leftrightarrow x^{3}=lny\Leftrightarrow x=\sqrt[3]{ln(y)}\Leftrightarrow g(y)=\sqrt[3]{ln(y)}$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Конец первой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $x=\sqcup_{i\in I}X_{i}$
+\end_inset
+
+ (I — множество индексов).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $x=\cup_{i\in I}X_{i}$
+\end_inset
+
+ и 
+\begin_inset Formula $X_{i}\cap X_{j}=\varnothing\ \forall i\neq j$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $x=\sqcup_{y\in Y}\ f^{-1}(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $n-const;n\in N$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f$
+\end_inset
+
+ — ничего не понятно
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $f(k)=k\%n$
+\end_inset
+
+ (остаток от деления).
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Отношением на множестве Х называется произвольное подмножество 
+\begin_inset Formula $R\leq X\times X$
+\end_inset
+
+ (где 
+\begin_inset Formula $x\in X,\ y\in Y$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Вместо 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ пишут 
+\begin_inset Formula $xRy$
+\end_inset
+
+, где 
+\begin_inset Formula $R$
+\end_inset
+
+ — бинарная операция.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Например, отношение 
+\begin_inset Formula $\geq$
+\end_inset
+
+ на 
+\begin_inset Formula $R$
+\end_inset
+
+ (множество вещественных чисел).
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Свойства отношений:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+1) Рефлексивность: 
+\begin_inset Formula $xRx,\ \forall x\in X$
+\end_inset
+
+.
+ (
+\begin_inset Formula $\geq$
+\end_inset
+
+ - рефлексивно, а 
+\begin_inset Formula $>$
+\end_inset
+
+ — нет (т.е.
+ в этом отношении есть прямая 
+\begin_inset Formula $y=x$
+\end_inset
+
+));
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+2) Симметричность: 
+\begin_inset Formula $xRy\Leftrightarrow yRx\ \forall(x,y)\in X$
+\end_inset
+
+.
+ (Т.е.
+ картинка симметрична относительно прямой 
+\begin_inset Formula $y=x$
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+3) Антисимметричность: 
+\begin_inset Formula $\{xRy,\ yRx\}\Rightarrow x=y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+4) Транзитивность: 
+\begin_inset Formula $\{xRy,yRz\}\Rightarrow xRz$
+\end_inset
+
+; — важнейшее.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Наиболее часто встречающиеся виды отношений:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Отношение эквивалентности — отношение, обладающее свойствами рефлексивности,
+ симметричности и транзитивности.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Отношение частичного порядка — отношение, обладающее свойствами рефлексивности,
+ антисимметичности и транзитивности.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Пример: отношение делимости (вставить символ делимости) на 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ (с оговоркой, что 0 (символ делимость) 0 (ноль делится на ноль)) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+На 
+\begin_inset Formula $Z(n\in N)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $a\sim_{n}b\Leftrightarrow(a-b)\vdots n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\{(a-b)\vdots n,(b-c)\vdots n\}\Rightarrow(a-c)\vdots n$
+\end_inset
+
+ (доказательство транзитивности.) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $a\sim_{n}b$
+\end_inset
+
+ можно записывать как 
+\begin_inset Formula $a\equiv b(mod\ n)$
+\end_inset
+
+.
+ Читается как 
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+ сравнимо с 
+\begin_inset Formula $b$
+\end_inset
+
+ по модулю 
+\begin_inset Formula $n$
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+, где модуль — то, на что мы делим.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset Formula $\sim$
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+ — отношение эквивалентности на множестве X, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\bar{x}={y\in X|y\sim x}$
+\end_inset
+
+ — класс эквивалентности.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size largest
+Теорема
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\bar{x}\cap\bar{z}=\varnothing$
+\end_inset
+
+ или 
+\begin_inset Formula $\bar{x}=\bar{z}$
+\end_inset
+
+ — 
+\shape italic
+Возможно, "не равно"?
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Пусть 
+\begin_inset Formula $y=(\bar{x}\cap\bar{z})$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $(y\sim x,y\sim z)\Rightarrow x\sim z$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\forall t\in\bar{X}:t\sim x\sim z\Rightarrow t\sim z\Rightarrow t\in\bar{Z}$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $\bar{x}\leq\bar{z}$
+\end_inset
+
+.
+ Аналогично 
+\begin_inset Formula $\bar{z}\leq\bar{x}$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X=\sqcup_{x\in X'}\bar{x}$
+\end_inset
+
+, где 
+\begin_inset Formula $X'$
+\end_inset
+
+ — некое подмножество 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X'$
+\end_inset
+
+ — множество представителей классов эквивалентности.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $(a-b)\vdots n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $a=a_{1}n+a_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $b=b_{1}n+b_{2}$
+\end_inset
+
+, где 
+\begin_inset Formula $a_{2},\ b_{2}$
+\end_inset
+
+ — остатки от деления на 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $(a-b)\vdots n\Leftrightarrow(a_{2}-b_{2})\vdots n$
+\end_inset
+
+ (
+\begin_inset Formula $a_{2}=b_{2}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Класс эквивалентности по 
+\begin_inset Formula $mod(n)$
+\end_inset
+
+ (класс сравнения по 
+\begin_inset Formula $mod(n)$
+\end_inset
+
+) — множество всех чисел 
+\begin_inset Formula $k+nZ$
+\end_inset
+
+, где k — остаток от деления 
+\begin_inset Formula $(k=0,...,n-1)$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+n-арная операция на множестве Х – это функция из 
+\begin_inset Formula $\{X\times...\times X\}(n\text{ раз })\rightarrow X$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+У нас будут нулярные, унарные и бинарные операции.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\sum\limits _{n=1}^{0}a_{n}=0$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $\varnothing\times X=\varnothing$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\sqcap_{n=1}^{0}a_{n}=1$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $\{\ast\}\times X=\{(\ast,x)(x\in X)\}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Нулярная операция — функция от одноточечного множества 
+\begin_inset Formula $\{\ast\}\rightarrow X$
+\end_inset
+
+ (Элемент множества X).
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $G$
+\end_inset
+
+ — множество, 
+\begin_inset Formula $\ast$
+\end_inset
+
+ — бинарная операция (абстрактная).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $G,\ast$
+\end_inset
+
+ — группа, если:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+1) 
+\begin_inset Formula $a\ast(b\ast c)=(a\ast b)\ast c\ \forall a,b,c\in G$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+2) 
+\begin_inset Formula $\exists e\text{ нейтральный элемент }\in G$
+\end_inset
+
+, 
+\begin_inset Formula $e\ast a=a\ast e=a\ \forall a\in G$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+3) 
+\begin_inset Formula $\forall a\in G\ \exists a'\in G:a\ast a'=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $(G,\ast)$
+\end_inset
+
+, удовлетворяющее аксиоме (1) называется полугруппой, а 
+\begin_inset Formula $(G,\ast)$
+\end_inset
+
+, удовлетворяющее аксиомам (1) и (2) — моноидом.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+4) 
+\begin_inset Formula $a\ast b=b\ast a\ \forall a,b\in G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Если 
+\begin_inset Formula $(G,\ast)$
+\end_inset
+
+ удовлетворяет аксиомам (1), (2), (3), (4), то группа называется коммутативной
+ (абелевой).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $R$
+\end_inset
+
+ — множество, 
+\begin_inset Quotes ard
+\end_inset
+
++
+\begin_inset Quotes ald
+\end_inset
+
+ 
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset Formula $\cdot$
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+ — бинарные операции на R.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо, если:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+1) 
+\begin_inset Formula $a+(b+c)=(a+b)+c$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+2) 
+\begin_inset Formula $\exists0\in R:a+0=a$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+3) 
+\begin_inset Formula $\forall a\ \exists(-a):a+(-a)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+4) 
+\begin_inset Formula $a+b=b+a$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+5) 
+\begin_inset Formula $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+6) 
+\begin_inset Formula $a\cdot(b+c)=a\cdot b+a\cdot c$
+\end_inset
+
+, 
+\begin_inset Formula $(b+c)\cdot a=b\cdot a+c\cdot a$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+—
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+7) 
+\begin_inset Formula $\exists1\in R:1\cdot a=a\cdot1=a$
+\end_inset
+
+ (кольцо с единицей);
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+8) 
+\begin_inset Formula $a\cdot b=b\cdot a$
+\end_inset
+
+ (коммутативное кольцо);
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+9) 
+\begin_inset Formula $\forall a\neq0\ \exists a^{-1}:a\cdot a^{-1}=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+10) 
+\begin_inset Formula $0\neq1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Множество (
+\begin_inset Formula $(R,+,\cdot)$
+\end_inset
+
+), удовлетворяющее всем 10 аксиомам называется полем.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Конец второй лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Z — кольцо целых чисел.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+F[x] — кольцо многочленов из поля F.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $0\cdot a=0$
+\end_inset
+
+ (
+\begin_inset Formula $\forall$
+\end_inset
+
+ кольца).
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+X — группа или кольцо.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Определение:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Y$
+\end_inset
+
+ называется подгруппой или подкольцом, если оно является группой или кольцом
+ относительно операций, заданных в 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Предположение: 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Y$
+\end_inset
+
+ является подгруппой (подкольцом) 
+\begin_inset Formula $X$
+\end_inset
+
+ тогда и только тогда, когда оно замкнуто относительно операций:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Для группы:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+-Групповая операция и взятие обратного по сложению.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Для кольца:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+-Сложение, умножение и взятие обратного по сложению 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Пример:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X=Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Y=nZ=\{n\cdot k|k\in Z\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $I^{2}=\{r^{2}|r\in I\}=\{\sum r_{i},p_{i}|r_{i},p_{i}\in I\}$
+\end_inset
+
+ — 
+\shape italic
+отвлечение
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $R[x]$
+\end_inset
+
+, 
+\begin_inset Formula $R[x^{2}]$
+\end_inset
+
+ — подкольцо (многочлены от 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $xR[x]$
+\end_inset
+
+ — подкольцо.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Z+xR[x]$
+\end_inset
+
+ — подкольцо с единицей.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Прямое произведение:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — группы (кольца).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X\times Y=\{(x,y)|x\in X,y\in Y\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $(a,b)\ast_{x,y}(a\ast_{x}c,b\ast_{y}d)$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Если 
+\begin_inset Formula $X$
+\end_inset
+
+ и 
+\begin_inset Formula $Y$
+\end_inset
+
+ 
+\begin_inset Quotes ard
+\end_inset
+
+аддитивные
+\begin_inset Quotes ald
+\end_inset
+
+ структуры (то есть их можно складывать), то вместо 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+ пишут 
+\begin_inset Formula $X\oplus Y$
+\end_inset
+
+ (прямая сумма).
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+R — поле вещественных чисел.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $R\oplus R$
+\end_inset
+
+ 
+\begin_inset Formula $(1,0)(0,1)=(0,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Прямая сумма колец — не самая хорошая операция, т.к.
+ вызывает гадости:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Гадость 1: Произведение двух ненулевых элементов равно нулю.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Определение: 
+\begin_inset Formula $a\neq0$
+\end_inset
+
+ — левый делитель нуля, если 
+\begin_inset Formula $\exists b\neq0:ab=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Кольца без делителей нуля — области целостности.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Гадость 2: 
+\begin_inset Formula $(1,0)^{2}=(1,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Определение: если 
+\begin_inset Formula $e=e^{2}$
+\end_inset
+
+, то 
+\begin_inset Formula $e$
+\end_inset
+
+ — идемпотент.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — группы либо кольца.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi:X\rightarrow Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Определение: 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ — гомоморфизм, если 
+\begin_inset Formula $\varphi(a\ast_{x}b)=\varphi(a)\ast_{y}\varphi(b)\ \forall$
+\end_inset
+
+ бинарной операции 
+\begin_inset Formula $\ast$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Предположение:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Группы:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(e_{x})=e_{y}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(a^{-1})=\varphi(a)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Кольца:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(0)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(-a)=-\varphi(a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Для колец с единицей необязательно 
+\begin_inset Formula $\varphi(1)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi,\chi:R\rightarrow R\oplus R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(r)=(r,r)$
+\end_inset
+
+ — группа.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\chi(r)=(r,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(e)=\varphi(e,e)=\varphi(e)\cdot\varphi(e)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(e)\varphi(e^{-1})=\varphi(e)\cdot(\varphi(e)\varphi(e)^{-1}\Rightarrow e_{y}=\varphi(e_{x})$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X=(Z;+)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Y=(R;\cdot)=(R\setminus\{0\},\cdot)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi:X\rightarrow Y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(n)=(-1)^{n}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(m+n)=(-1)^{m+n}$
+\end_inset
+
+ (1)
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(m)\cdot\varphi(n)=(-1)^{m}\cdot(-1)^{n}$
+\end_inset
+
+ (2)
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Если (1) и (2) равны, то это — гомоморфизм.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Мономорфизм — инъективный гомоморфизм;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Эпиморфизм — сюръективный гомоморфизм;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Изоморфизм — биективный гомоморфизм;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Эндоморфизм — гомоморфизм в себя (
+\begin_inset Formula $X\rightarrow X$
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Автоморфизм — изоморфизм в себя.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Образ гомоморфизма = образ функции.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $Im\varphi=\{\varphi(x)|x\in X\}\subseteq Y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi:X\rightarrow Y$
+\end_inset
+
+; 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Ядро (Kernel)
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\ker\varphi=\{x\in X|\varphi(x)=e_{y}\text{ (для группы) },\varphi(x)=0\text{ (для кольца) }\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Для:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\{\varphi:X\rightarrow Y;\varphi(n)=(-1)^{n}\}\Rightarrow\ker\varphi=2Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Решение:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(n)=1\Leftrightarrow(-1)^{n}=1\Leftrightarrow n$
+\end_inset
+
+ —четное.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Ядро всегда содержит нейтральный элемент.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\varphi(e)=x$
+\end_inset
+
+; 
+\begin_inset Formula $x\cdot x=\varphi(e)\cdot\varphi(e)=\varphi(e+e)=\varphi(e)=x$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $x^{2}=x$
+\end_inset
+
+, то, применив умножение на обратный элемент, получим 
+\begin_inset Formula $x^{2}=x\Rightarrow x^{-1}x^{2}=x^{-1}x\Rightarrow x=e$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Определение: Подгруппа H в группе G называется нормальной (инвариантной),
+ если 
+\begin_inset Formula $\forall h\in H$
+\end_inset
+
+ и 
+\begin_inset Formula $g\in G:g^{-1}hg\in H$
+\end_inset
+
+ для коммутативных групп все подгруппы нормальные.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\{1\}$
+\end_inset
+
+ — всегда нормальная группа.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $G$
+\end_inset
+
+ — всегда нормальная группа.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Определение:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $I\subseteq R$
+\end_inset
+
+ называется двусторонним идеалом, если 
+\begin_inset Formula $\forall x,y\in I,\ \forall r\in R:(x+y,-x\in I),(rx\in I,xr\in I)$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Пример:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Если 
+\begin_inset Formula $R$
+\end_inset
+
+ — коммутативное кольцо, 
+\begin_inset Formula $rR$
+\end_inset
+
+ — идеал для кольца 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ идеал 
+\begin_inset Formula $n\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Рассмотрим кольцо 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ и его идеал (ядро) 
+\begin_inset Formula $n\mathbb{Z}$
+\end_inset
+
+, где 
+\begin_inset Formula $n=5$
+\end_inset
+
+.
+ В кольцо у нас входят числа 
+\begin_inset Formula $-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7$
+\end_inset
+
+.
+ В ядро входят числа 
+\begin_inset Formula $-10,-5,0,5,10$
+\end_inset
+
+.
+ Для того, чтобы каждый элемент ядра отображался в нейтральный элемент кольца
+ (
+\begin_inset Formula $0$
+\end_inset
+
+), мы должны взять элемент ядра и умножить его на обратный элемент ядра:
+ 
+\begin_inset Formula $-5\cdot5=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $xF[x]$
+\end_inset
+
+ — идеал в кольце многочленов.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X\subseteq Y$
+\end_inset
+
+ — подмножество.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X\leq Y$
+\end_inset
+
+ —подгруппа, полукольцо.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $X\unlhd Y$
+\end_inset
+
+ — нормальная подгруппа, двусторонний идеал.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Предположение:
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\ker\varphi$
+\end_inset
+
+ — нормальная подгруппа или двусторонний идеал, если 
+\begin_inset Formula $\forall g\in G:gH=Hg\Leftrightarrow H=g^{-1}Hg\Leftrightarrow\forall h\in H:g^{-1}hg\in H$
+\end_inset
+
+.
+ Это означает, что 
+\begin_inset Formula $gh_{1}=h_{2}g$
+\end_inset
+
+ в некоторых группах (Это НЕ КОММУТАТИВНОСТЬ!!!) 
+\shape italic
+(Thank you, Даша)
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $g^{-1}Hg\subseteq H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $gHg^{-1}\subseteq H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $H\subseteq g^{-1}Hg$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+где 
+\begin_inset Formula $g\cdot H=\{gh|h\in H\}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset Formula $\unlhd$
+\end_inset
+
+ — является нормальной подгруппой.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Конец третьей лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+Перестановки 
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $S_{3}$
+\end_inset
+
+ — перестановки на множестве 
+\begin_inset Formula $\{1,2,3\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Запись перестановки в циклическом виде (циклической форме):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sigma$
+\end_inset
+
+ — перестановка, функция из множества (1, 2, 3) в себя
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sigma=(i_{1},...i_{k})$
+\end_inset
+
+ означает, что
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sigma(i_{1})=i_{2},\sigma(i_{2})=i_{3},\sigma(i_{k-1})=i_{k},\sigma(i_{k})=i_{1}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(1\ 2\ 3)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sigma=(1\ 2\ 3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sigma(1)=2,\sigma(2)=3,\sigma(3)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sigma^{2}(1)=\sigma(\sigma(1))=\sigma(2)=3$
+\end_inset
+
+.
+ (единица перешла в тройку)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sigma^{2}=(1\ 3\ 2)$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1 2 3 4 5 6 |
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2 4 5 1 6 3 |= (1 2 4) (3 5 6) — независимый цикл 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Упражнение (на доп.
+ баллы):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sigma=(i_{1},...i_{k}),\tau\in S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Вычислить (записать в циклической форме) 
+\begin_inset Formula $\tau^{-1}\sigma\tau$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пример не нормальной подгруппы:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Возьмем 
+\begin_inset Formula $\sigma=(1\ 2)$
+\end_inset
+
+ — транспозиция,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $H={e,\sigma}<S_{3}$
+\end_inset
+
+ , 
+\begin_inset Formula $e$
+\end_inset
+
+ — нейтральный элемент.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+сопрягаем элемент сигма:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\tau=(1\ 3)=(3\ 1)=\tau^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\tau^{-1}\sigma\tau=(1\ 3)(1\ 2)(1\ 3)=(1)(2\ 3)\notin H$
+\end_inset
+
+ (один осталось на месте, два перешло в один, один перешло в три, значит,
+ два перешло в три)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\tau\sigma\tau$
+\end_inset
+
+ (1) = 
+\begin_inset Formula $\tau\sigma(3)=\tau(3)=1$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\tau H=\{\tau,\tau\sigma\}=\{(1\ 3),(1\ 2\ 3)\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $H\tau=\{\tau,\sigma\tau\}=\{(1\ 3),(1\ 3\ 2)\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Как видно, левый смежный класс не совпадает с правым смежным классом, то
+ есть не является нормальной подгруппой.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\{e,(1\ 2\ 3),(1\ 3\ 2)\}\unlhd S_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Цикл длины 3 в кубе дает единицу.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi:G\rightarrow F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $H=\ker\varphi=\{g\in G|\varphi(g)=e\}=\varphi^{-1}(e)$
+\end_inset
+
+, 
+\begin_inset Formula $e$
+\end_inset
+
+ — нейтральный элемент.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\ker\varphi$
+\end_inset
+
+ — нормальная подгруппа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\forall h_{1},h_{2}\in H:h_{1}\cdot h_{2}\in H,\ h_{1}^{-1}\in H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\forall g\in G:g^{-1}hg\in H$
+\end_inset
+
+ — нужно доказать.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Дано: 
+\begin_inset Formula $\varphi(h_{1})=\varphi(h_{2})=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказать:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(h_{1},h_{2})=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(h_{1}^{-1})=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(g^{-1}h,g)=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Докво:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1)
+\begin_inset Formula $\varphi(h_{1}\cdot h_{2})=\varphi(h_{1})\cdot\varphi(h_{2})=e\cdot e=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2)
+\begin_inset Formula $\varphi(h^{-1})=\varphi(h)^{-1}=\varphi(h)\cdot\varphi(h)^{-1}=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+3) 
+\begin_inset Formula $\varphi(g^{-1}h_{1}\cdot g)=\varphi(g^{-1})\cdot\varphi(h_{1})\cdot\varphi(g)=e$
+\end_inset
+
+ (т.к.
+ 
+\begin_inset Formula $\varphi(g^{-1})$
+\end_inset
+
+ и 
+\begin_inset Formula $\varphi(g)$
+\end_inset
+
+ уничтожаются (их произведение равно 
+\begin_inset Formula $e$
+\end_inset
+
+)).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Это доказательство непосредственной проверки.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+R — кольцо,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $I\subseteq R$
+\end_inset
+
+, то 
+\begin_inset Formula $I$
+\end_inset
+
+ — идеал в R
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Примером идеала в множестве целых чисел является множество чисел, делящихся
+ на фиксированное число.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $I$
+\end_inset
+
+ — идеал в 
+\begin_inset Formula $R$
+\end_inset
+
+, если 
+\begin_inset Formula $I$
+\end_inset
+
+ — аддитивная подгруппа (подгруппа к операции сложения) и 
+\begin_inset Formula $\forall r\in R,s\in I\ rs,sr\in I$
+\end_inset
+
+.
+ (кольцо с идеалом чаще всего коммутативно).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+: 
+\begin_inset Formula $\varphi:R\rightarrow A$
+\end_inset
+
+ — гомоморфизм колец, тогда 
+\begin_inset Formula $\ker\varphi$
+\end_inset
+
+ — двусторонний идеал в 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство — непосредственная проверка.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В случае гомоморфизма колец ядро — прообраз нуля (
+\begin_inset Formula $\ker\varphi=\varphi^{-1}(0)$
+\end_inset
+
+) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Отвлечение (почему идеал)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a+b\sqrt{d},a,b\in Z$
+\end_inset
+
+, где 
+\begin_inset Formula $d$
+\end_inset
+
+ — фиксированное целое.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $xR+yR$
+\end_inset
+
+ — тоже идеал, но не соответствует числу.
+ 
+\begin_inset Formula $x,y$
+\end_inset
+
+ — идеальные числа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+К этому мы вернемся довольно скоро (зловещий смех).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Предложения: 
+\begin_inset Formula $\varphi:G\rightarrow F$
+\end_inset
+
+ — гомоморфизм групп.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(g)=f\in F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+тогда 
+\begin_inset Formula $\varphi^{-1}(f)=g\cdot\ker\varphi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(g\ker\varphi)=\varphi(g)\cdot\varphi(\ker\varphi)=\varphi(g)=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $g_{1}:\varphi(g_{1})=f=\varphi(g)\Rightarrow\varphi(g^{-1}g_{1})=e\Rightarrow g^{-1}g_{1}\in\ker\Rightarrow g_{1}\in g\cdot\ker\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+Теорема Лагранжа.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма:
+\series default
+ 
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+ — группа
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\forall g_{1},g_{2}\in G$
+\end_inset
+
+, 
+\begin_inset Formula $g_{1}H$
+\end_inset
+
+ равномощно 
+\begin_inset Formula $g_{2}H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi:H\rightarrow g_{1}H$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(h)=g_{1}h,h\in H$
+\end_inset
+
+ — биекция.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi^{-1}(x)=g_{1}^{-1}x$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Количество элементов в группе — порядок группы.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+: 
+\begin_inset Formula $H\leq G,g_{1},g_{2}\in G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $g_{1}H\cap g_{2}H=\varnothing$
+\end_inset
+
+ или 
+\begin_inset Formula $g_{1}H=g_{2}H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $g\in g_{1}H\cap g_{2}H$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $g=g_{1}h_{1}=g_{2}h_{2}$
+\end_inset
+
+ для 
+\begin_inset Formula $h_{1},h_{2}\in H$
+\end_inset
+
+, тогда
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $g_{1}=g_{2}h_{2}h_{1}^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\forall h\in H:g_{1}h=g_{2}(h_{2}h_{1}^{-1}h)\in g_{2}H\Rightarrow g_{1}H\subseteq g_{2}H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ Лагранжа:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Порядок подгруппы является делителем порядка группы.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $H\leq G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $|G|=|H|\cdot|G:H|$
+\end_inset
+
+, где 
+\begin_inset Formula $|G:H|$
+\end_inset
+
+ — количество смежных классов.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец четвертой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство т.
+ Лагранжа: 
+\begin_inset Formula $H\leq G$
+\end_inset
+
+, 
+\begin_inset Formula $|G|<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $H_{1}=H,H_{2},...H_{m}$
+\end_inset
+
+ — левые смежные классы по 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $G=\sqcup_{i=1}^{m}H_{i}\Rightarrow|G|=\sum\limits _{i=1}^{m}|H_{i}|=\sum\limits _{i=1}^{m}|H|=m\cdot|H|$
+\end_inset
+
+, а 
+\begin_inset Formula $m=|G:H|=|G/H|=|H\backslash G|$
+\end_inset
+
+ — количество смежных классов.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sqcup$
+\end_inset
+
+ — дизъюнктное (непересекающееся) объединение.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Класс смежности: зафиксировали элемент группы и умножаем его на все элементы
+ подгруппы (Запись: 
+\begin_inset Formula $gH$
+\end_inset
+
+, где 
+\begin_inset Formula $g$
+\end_inset
+
+ — элемент группы, 
+\begin_inset Formula $H$
+\end_inset
+
+ — подгруппа.)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В каждом классе смежности содержится столько же элементов, сколько содержится
+ в подгруппе.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Одна из важнейших конструкций в алгебре:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+: 
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+, 
+\begin_inset Formula $H$
+\end_inset
+
+ — нормальная подгруппа, 
+\begin_inset Formula $G$
+\end_inset
+
+ группа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Тогда существует сюръективный гомоморфизм (эпиморфизм) 
+\begin_inset Formula $\varphi:G\twoheadrightarrow F$
+\end_inset
+
+, такой что 
+\begin_inset Formula $\ker\varphi=H$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $\varphi':G\twoheadrightarrow F$
+\end_inset
+
+ — гомоморфизм с ядром 
+\begin_inset Formula $H$
+\end_inset
+
+, то существует единственный изоморфизм, 
+\begin_inset Formula $\Theta:F\rightarrow F'$
+\end_inset
+
+, такой что 
+\begin_inset Formula $\varphi'=\Theta\circ\varphi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Диаграмма (ориентированный граф, вершины помечены математическими объектами,
+ а стрелки - отображениями этих объектов) называется коммутативной, если
+ для любых вершин 
+\begin_inset Formula $A,B$
+\end_inset
+
+ и любых двух путей из 
+\begin_inset Formula $A$
+\end_inset
+
+ в 
+\begin_inset Formula $B$
+\end_inset
+
+ композиции отображений по каждому из них равны.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+: 
+\begin_inset Formula $\varphi:G\rightarrow F$
+\end_inset
+
+, 
+\begin_inset Formula $H=\ker\varphi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(g)=f$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi^{-1}(f)=gH=Hg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конструкция для доказательства существования:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $F=\{gH|g\in G\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(g)=gH$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $gH\cdot g_{1}H=gg_{1}H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $h_{1}h_{2}\in H:gh\cdot g_{1}h_{1}=gg_{1}g_{1}^{-1}hgh_{1}$
+\end_inset
+
+, здесь 
+\begin_inset Formula $g_{1}^{-1}hg\in H$
+\end_inset
+
+, 
+\begin_inset Formula $gh\cdot g_{1}h_{1}\in gg_{1}H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следовательно,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $gH\cdot g_{1}H=g(Hg_{1})H=g(g_{1}H)H=gg_{1}(H\cdot H)=gg_{1}H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+("Почему он использует магию вне Хогвартса?" (с) Виталя) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $G/H=\{gH|g\in G\}$
+\end_inset
+
+, 
+\begin_inset Formula $G/H=H/G$
+\end_inset
+
+ — так как 
+\begin_inset Formula $H$
+\end_inset
+
+ — нормальная подгруппа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\rho_{H}:G\rightarrow G/H$
+\end_inset
+
+ по 
+\begin_inset Formula $modH$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следствие (теорема о гомоморфизме):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi:G\rightarrow G'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $G\twoheadrightarrow G/H$
+\end_inset
+
+ и 
+\begin_inset Formula $G\twoheadrightarrow Im\varphi$
+\end_inset
+
+, 
+\begin_inset Formula $G/H\sim Im\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Образ 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ изоморфен фактормножеству по 
+\begin_inset Formula $\ker\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $Im\varphi\cong G/\ker\varphi$
+\end_inset
+
+, т.ч.
+ 
+\begin_inset Formula $\varphi'=\Theta\circ\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо, 
+\begin_inset Formula $I$
+\end_inset
+
+ — двусторонний идеал.
+ Теперь все то же самое делаем для колец.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R/I$
+\end_inset
+
+ — факторкольцо, т.е.
+ 
+\begin_inset Formula $R/I=\{r+I|r\in R\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(r+I)(r_{1}+I):=rr_{1}+I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $t,t_{1}\in I:(r+t)(r_{1}+t_{1})=rr_{1}+rt_{1}+tr_{1}+tt_{1},\in rr_{1}+I$
+\end_inset
+
+, где 
+\begin_inset Formula $rt_{1},tr_{1},tt_{1}\in I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi:R\rightarrow A$
+\end_inset
+
+ — гомоморфизм колец.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $Im\varphi\cong R/ker\varphi$
+\end_inset
+
+ — теорема о гомоморфизме колец.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(Вместо слова 
+\begin_inset Quotes ard
+\end_inset
+
+группа
+\begin_inset Quotes ald
+\end_inset
+
+ — 
+\begin_inset Quotes ard
+\end_inset
+
+кольцо
+\begin_inset Quotes ald
+\end_inset
+
+, вместо 
+\begin_inset Quotes ard
+\end_inset
+
+нормальной подгруппы
+\begin_inset Quotes ald
+\end_inset
+
+ — 
+\begin_inset Quotes ard
+\end_inset
+
+двусторонний идеал
+\begin_inset Quotes ald
+\end_inset
+
+.
+ Все остальное та же дичь).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пример:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $Z_{n}=\{0,...,n-1\},\ +modn,\ -modn$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В 
+\begin_inset Formula $Z_{5}$
+\end_inset
+
+ 
+\begin_inset Formula $3+4=2$
+\end_inset
+
+, 
+\begin_inset Formula $3\cdot4=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi:Z\rightarrow Z_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(x)=x\cdot modn$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(x+y)modn=(xmodn+ymodn)modn$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Найдем ядро:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(x)=xmodn=0\Leftrightarrow x\vdots n\Leftrightarrow x\in\ker\varphi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $Z/nZ\cong Z_{n}$
+\end_inset
+
+ — факторкольцо, где 
+\begin_inset Formula $Z/nZ=\{0+nZ,1+nZ,...,n-1+nZ\}$
+\end_inset
+
+, 
+\begin_inset Formula $Z_{n}$
+\end_inset
+
+ — множество элементов, делящихся на 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пример:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $Z/5Z$
+\end_inset
+
+ 
+\begin_inset Formula $\{0,1,2,3,4\}$
+\end_inset
+
+ — множество представителей смежных классов.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $3+4=7\in2+5Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Кольцо многочленов:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R[x]$
+\end_inset
+
+, 
+\begin_inset Formula $I=\{p|p(0)=0\}=xR[x]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R[x]/xR[x]$
+\end_inset
+
+ — факторкольцо.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\alpha_{0}+\alpha_{1}x+...+\alpha_{n}x^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Строим гомоморфизм 
+\begin_inset Formula $\varphi:R[x]\rightarrow R$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(p)=p(0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Получаем, что
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R[x]/xR[x]=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ — тупо стрелка.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+ — сюръекция.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\rightarrowtail$
+\end_inset
+
+ — инъекция.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\tilde{\rightarrow}$
+\end_inset
+
+ — биекция.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\hookrightarrow$
+\end_inset
+
+ — вложение подмножества в множество.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\mapsto$
+\end_inset
+
+ — 
+\begin_inset Quotes ard
+\end_inset
+
+отображается в
+\begin_inset Quotes ald
+\end_inset
+
+ (
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ отображает 
+\begin_inset Formula $x\mapsto f(x)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец пятой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Алгоритм деления с остатком:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+в 
+\begin_inset Formula $\mathbb{Z}:\forall a,b\ \exists c,r:a=bc+r,|r|<|b|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В кольце многочленов, где 
+\begin_inset Formula $F[x]$
+\end_inset
+
+ — поле:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $F[x]:\forall a,b\neq0\ \exists c,r:a=bc+r,\ \deg r<\deg b$
+\end_inset
+
+, 
+\begin_inset Formula $a,b$
+\end_inset
+
+ — многочлены, 
+\begin_inset Formula $\deg$
+\end_inset
+
+ — степень многочлена.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Рассмотрим произвольное Евклидово кольцо:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Будем считать, что у нас задано: пусть кольцо 
+\begin_inset Formula $R$
+\end_inset
+
+ — коммутативная область целостности с единицей.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Область целостности — это кольцо, в котором можно сокращать на элементы.
+ В области целостности 
+\begin_inset Formula $\forall r\neq0$
+\end_inset
+
+ 
+\begin_inset Formula $ra=rb\Leftrightarrow a=b$
+\end_inset
+
+.
+ Доказательство: 
+\begin_inset Formula $r(a-b)=0\Leftrightarrow a-b=0$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Замечание:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Два элемента кольца называются ассоциированными, если 
+\begin_inset Formula $a$
+\end_inset
+
+ делится на 
+\begin_inset Formula $b$
+\end_inset
+
+ и наоборот: 
+\begin_inset Formula $a,b\in R$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $b$
+\end_inset
+
+ если 
+\begin_inset Formula $a\in bR$
+\end_inset
+
+, и 
+\begin_inset Formula $b\in aR$
+\end_inset
+
+ или, что то же самое, 
+\begin_inset Formula $aR=bR$
+\end_inset
+
+ (
+\begin_inset Formula $aR,\ bR$
+\end_inset
+
+ — идеалы).
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $aR=bR$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+ — область целостности (при 
+\begin_inset Formula $a\neq0$
+\end_inset
+
+), то:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a=bx$
+\end_inset
+
+, 
+\begin_inset Formula $b=ay$
+\end_inset
+
+, 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $a=ayx\Leftrightarrow yx=1$
+\end_inset
+
+.
+ (
+\begin_inset Formula $x,y$
+\end_inset
+
+ — обратимые элементы).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+А при 
+\begin_inset Formula $a=0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $bR=\{0\}\Rightarrow b=0\Rightarrow a=b\cdot1$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $f:R\to\mathbb{N}_{0}\cup\{-\infty\}$
+\end_inset
+
+, такая, что:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) 
+\begin_inset Formula $f(0)<f(r)\ \forall r\in R\setminus\{0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) 
+\begin_inset Formula $\forall a,b\in R\ \exists c,r\in R:\ f(r)<f(b)\ и\ a=bc+r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если такая функция существует, то 
+\begin_inset Formula $R$
+\end_inset
+
+ называется евклидовым кольцом, ну а 
+\begin_inset Formula $f$
+\end_inset
+
+ называется евклидовой нормой.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Определение
+\series default
+: Главный идеал кольца — идеал, порожденный одним элементом, то есть идеал
+ вида 
+\begin_inset Formula $aR$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ называется кольцом главных идеалов, если любой идеал является главным.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+: Любое евклидово кольцо является кольцом главных идеалов.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство: 
+\begin_inset Formula $I\unlhd R$
+\end_inset
+
+ (произвольный идеал).
+ Пусть 
+\begin_inset Formula $a$
+\end_inset
+
+ — ненулевой элемент идеала 
+\begin_inset Formula $I$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $f(a)\leq f(b)\ \forall b\in I\setminus\{0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Возьмем произвольный элемент 
+\begin_inset Formula $d\in I\setminus\{0\}$
+\end_inset
+
+.
+ Тогда по условию евк.
+ кольца, 
+\begin_inset Formula $\exists c,r\in R:d=ac+r,\ f(r)<f(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Но 
+\begin_inset Formula $r=d-ac$
+\end_inset
+
+ (
+\begin_inset Formula $a$
+\end_inset
+
+ лежит в идеале, соответственно, 
+\begin_inset Formula $ac$
+\end_inset
+
+ также лежит в идеале, 
+\begin_inset Formula $d$
+\end_inset
+
+ лежит в идеале, ну, значит, 
+\begin_inset Formula $r$
+\end_inset
+
+ тоже лежит в идеале)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $r\neq0$
+\end_inset
+
+, то 
+\begin_inset Formula $f(r)<f(a)\leq f(r)$
+\end_inset
+
+ — противоречие.
+ (
+\begin_inset Formula $r=0$
+\end_inset
+
+, то есть 
+\begin_inset Formula $d=ac\in aR$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Из всего предыдущего мы получили, что:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $I\subseteq aR$
+\end_inset
+
+, 
+\begin_inset Formula $a\in R\Rightarrow aR\subseteq I\Rightarrow I=aR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Основная теорема арифметики.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Определение:
+\series default
+ Элемент 
+\begin_inset Formula $p\in R$
+\end_inset
+
+ называется неприводимым, если 
+\begin_inset Formula $p$
+\end_inset
+
+ необратим и если выполнено следующее условие: 
+\begin_inset Formula $p=ab$
+\end_inset
+
+ влечёт 
+\begin_inset Formula $p$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $a$
+\end_inset
+
+ или с 
+\begin_inset Formula $b$
+\end_inset
+
+ (
+\begin_inset Formula $p=ab$
+\end_inset
+
+ влечёт 
+\begin_inset Formula $a$
+\end_inset
+
+ или 
+\begin_inset Formula $b$
+\end_inset
+
+ — обратимо).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Определение:
+\series default
+ Идеал 
+\begin_inset Formula $I$
+\end_inset
+
+ — простой, если выполнено следующее условие: 
+\begin_inset Formula $ab\in I\Rightarrow a\in I\ или\ b\in I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Идеал 
+\begin_inset Formula $2\cdot3\in6\mathbb{Z}$
+\end_inset
+
+ не является простым, т.к.
+ 
+\begin_inset Formula $2,3\notin6Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\{0\}$
+\end_inset
+
+ — простой идеал любой области целостности.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $17\mathbb{Z}$
+\end_inset
+
+ — простой в 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Определение:
+\series default
+ Элемент кольца 
+\begin_inset Formula $p\in R$
+\end_inset
+
+ называется простым, если идеал 
+\begin_inset Formula $pR$
+\end_inset
+
+ — простой.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Возьмем 
+\begin_inset Formula $R=\mathbb{Z}$
+\end_inset
+
+ (кольцо целых чисел).
+ Идеалы типа 
+\begin_inset Formula $17\mathbb{Z}$
+\end_inset
+
+ будут являться простыми, т.к.
+ 
+\begin_inset Formula $17$
+\end_inset
+
+ делится только на самого себя и единицу, а 
+\begin_inset Formula $17\in17\mathbb{Z}$
+\end_inset
+
+.
+ Следовательно, элементы простого идеала в кольце целых чисел являются простыми
+ числами! 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Плохое кольцо:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\mathbb{Z}(\sqrt{5})=\{a+b\sqrt{5}|a,b\in\mathbb{Z}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(3+\sqrt{5})(3-\sqrt{5})=4=2\cdot2\in2R$
+\end_inset
+
+ (
+\begin_inset Quotes ard
+\end_inset
+
+двойка — неразложимый элемент этого кольца.
+ я верю в это!
+\begin_inset Quotes ald
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Произведение двух элементов, не лежащих в 
+\begin_inset Formula $2R$
+\end_inset
+
+ лежит в 
+\begin_inset Formula $2R$
+\end_inset
+
+, значит, 
+\begin_inset Formula $2R$
+\end_inset
+
+ — не простой идеал.
+ (2 — неприводимый элемент кольца).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(Пояснение: 
+\begin_inset Formula $(3+\sqrt{5})$
+\end_inset
+
+ и 
+\begin_inset Formula $(3-\sqrt{5})$
+\end_inset
+
+ не лежат в 
+\begin_inset Formula $2R$
+\end_inset
+
+, а их произведение 
+\begin_inset Formula $4$
+\end_inset
+
+ лежит в 
+\begin_inset Formula $2R$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $2R$
+\end_inset
+
+ — не простой идеал, т.к.
+ 
+\begin_inset Formula $4$
+\end_inset
+
+ можно разложить как 
+\begin_inset Formula $(3+\sqrt{5})(3-\sqrt{5})$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a+b\sqrt{5}(a-b\sqrt{5})c=(a^{2}-5b^{2})c=2$
+\end_inset
+
+ (
+\begin_inset Quotes ard
+\end_inset
+
+плохой пример.
+ надо было взять 
+\begin_inset Formula $\sqrt{-5}$
+\end_inset
+
+.
+ Но я ничего доказывать не буду
+\begin_inset Quotes ald
+\end_inset
+
+).
+ — неясно, нужно или нет.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма:
+\series default
+ Если 
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо главных идеалов, то любой неприводимый элемент является простым
+ (простой неприводим всегда).
+ Обратное верно всегда.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Надо доказать: если произведение 
+\begin_inset Formula $ab\in xR$
+\end_inset
+
+, то либо 
+\begin_inset Formula $a\in xR$
+\end_inset
+
+, либо 
+\begin_inset Formula $b\in xR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+От противного: пусть 
+\begin_inset Formula $a\notin xR$
+\end_inset
+
+, либо 
+\begin_inset Formula $b\notin xR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Тогда: 
+\begin_inset Formula $aR+xR=a'R$
+\end_inset
+
+, так как 
+\begin_inset Formula $\forall$
+\end_inset
+
+ идеал главный.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x\in a'R$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $x=a'x'$
+\end_inset
+
+.
+ Одно из них должно быть обратимо.
+ Либо обратимо 
+\begin_inset Formula $a'$
+\end_inset
+
+, и тогда 
+\begin_inset Formula $a'R=R$
+\end_inset
+
+.
+ Либо 
+\begin_inset Formula $x'R$
+\end_inset
+
+ обратимо, то 
+\begin_inset Formula $a'R=xR$
+\end_inset
+
+, тогда 
+\begin_inset Formula $a\in a'R=xR$
+\end_inset
+
+ — противоречие.
+ Следовательно, что 
+\begin_inset Formula $aR+xR=a'R=R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Аналогично 
+\begin_inset Formula $bR+xR=R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Кольцо, в котором нельзя разложить число на простые множители (WHAT?)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R=\mathbb{Z}[x_{n}:n\in\mathbb{N}]/(x_{n}-x_{n+1}^{2})_{n\in\mathbb{N}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В новом кольце 
+\begin_inset Formula $R$
+\end_inset
+
+ нет элементов
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\bar{x_{n}}$
+\end_inset
+
+ — смежный класс 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В кольце очевидно выполнено равенство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\bar{x_{1}}=\bar{x_{2}}^{2}=\bar{x_{3}}^{4}=...=\bar{x_{n}}^{2^{n-1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец шестой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ арифметики (основная).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $R$
+\end_inset
+
+ — область главных идеалов, то есть каждый идеал порожден одним элементом.
+ Тогда 
+\begin_inset Formula $\forall r\in R\ \exists$
+\end_inset
+
+ неприводимые элементы 
+\begin_inset Formula $p_{1},...,p_{m}\in R$
+\end_inset
+
+ и 
+\begin_inset Formula $\varepsilon\in R^{*}$
+\end_inset
+
+ : 
+\begin_inset Formula $r=\varepsilon p_{1},...,p_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+При этом: 
+\begin_inset Formula $\varepsilon p_{1},...,p_{m}=\delta q_{1}\cdot...\cdot g_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\varepsilon,\delta\in R^{*}$
+\end_inset
+
+, а 
+\begin_inset Formula $p_{i},q_{i}$
+\end_inset
+
+ неприводимы, то 
+\begin_inset Formula $m=n$
+\end_inset
+
+ и 
+\begin_inset Formula $\exists\sigma\in S_{n}:p_{i}$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $q_{\sigma(i)}\forall i=1,...,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R$
+\end_inset
+
+ — область целостности, 
+\begin_inset Formula $p$
+\end_inset
+
+ и 
+\begin_inset Formula $q$
+\end_inset
+
+ — ассоциированы, 
+\begin_inset Formula $\Leftrightarrow p=qx$
+\end_inset
+
+ для некоторого 
+\begin_inset Formula $x\in R^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p$
+\end_inset
+
+ и 
+\begin_inset Formula $q$
+\end_inset
+
+ ассоциированы, если 
+\begin_inset Formula $p\vdots q$
+\end_inset
+
+ и 
+\begin_inset Formula $q\vdots p$
+\end_inset
+
+, то есть 
+\begin_inset Formula $pR=qR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p=qx,q=py\Rightarrow p=pxy\Leftrightarrow p(1-xy)=0$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $R$
+\end_inset
+
+ — область целостности, 
+\begin_inset Formula $p\neq0\Rightarrow1-xy=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма 1
+\series default
+: 
+\begin_inset Formula $R$
+\end_inset
+
+ — область главных идеалов, тогда 
+\begin_inset Formula $\forall r\in R\ \exists$
+\end_inset
+
+ неприводимые элементы 
+\begin_inset Formula $p_{1},...,p_{m}\in R$
+\end_inset
+
+ и 
+\begin_inset Formula $\varepsilon\in R^{*}$
+\end_inset
+
+ : 
+\begin_inset Formula $r=\varepsilon p_{1},...,p_{m}$
+\end_inset
+
+.
+ (Пример: 
+\begin_inset Formula $4=1\cdot2\cdot2=(-1)\cdot(-2)\cdot2$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Возьмем идеал, порожденный 
+\begin_inset Formula $R$
+\end_inset
+
+ и максимальный идеал.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: идеал 
+\begin_inset Formula $M$
+\end_inset
+
+ называется максимальным, если он максимальный из идеалов 
+\begin_inset Formula $\neq R$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $\forall M'\supsetneqq M:M'=R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма 2
+\series default
+: Любой максимальный идеал является простым идеалом.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство леммы 2: 
+\begin_inset Formula $a,b\in R$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $ab\in M$
+\end_inset
+
+ (
+\begin_inset Formula $M$
+\end_inset
+
+ — максимальный идеал).
+ Предположим, что 
+\begin_inset Formula $a\notin M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Посмотрим на идеал 
+\begin_inset Formula $M\supsetneqq M+aR\Rightarrow$
+\end_inset
+
+т.к.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ — максимальный идеал, то 
+\begin_inset Formula $M+aR=R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $M\supseteq bM+baR=bR\ni b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $n\mathbb{Z}$
+\end_inset
+
+, если 
+\begin_inset Formula $n$
+\end_inset
+
+ необратимо и 
+\begin_inset Formula $n=mk$
+\end_inset
+
+, то 
+\begin_inset Formula $m\mathbb{Z}\geq n\mathbb{Z}$
+\end_inset
+
+.
+ Если идеал порожден простым числом, то он не содержится ни в каком другом
+ идеале.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $p\mathbb{Z}\subseteq q\mathbb{Z}\Rightarrow p=g-k\Rightarrow g=\pm1\Rightarrow g\mathbb{Z}=\mathbb{Z}\ или\ k=\pm1\Rightarrow g\mathbb{Z}=p\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В кольце главных идеалов любой ненулевой простой идеал максимален.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R=\mathbb{R}[x,y]$
+\end_inset
+
+, то идеалом будет 
+\begin_inset Formula $xR\subsetneqq xR+yR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма 3
+\series default
+: 
+\begin_inset Formula $\forall$
+\end_inset
+
+ идеал 
+\begin_inset Formula $I+R$
+\end_inset
+
+ содержится в некотором максимальном идеале.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(Лемма Цорна) Примите без доказательства.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство леммы 1:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Напоминаем: мы хотим разложить кольцо в неприводимых элементов.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $rR\subseteq M$
+\end_inset
+
+, если 
+\begin_inset Formula $r$
+\end_inset
+
+ — собственный 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $r$
+\end_inset
+
+ необратим.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $M$
+\end_inset
+
+ — простой, 
+\begin_inset Formula $M=p_{1}R$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ — простой (неприводимый) элемент.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $r=p_{1}r_{1}$
+\end_inset
+
+; если 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ обратим, то всё доказано (сведется к 
+\begin_inset Formula $r=\varepsilon p_{1}$
+\end_inset
+
+), иначе аналогично: 
+\begin_inset Formula $r_{1}=p_{2}r_{2}$
+\end_inset
+
+, где 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ неприводим.
+ Продолжим процесс.
+ Дойдем до 
+\begin_inset Formula $r_{k}=p_{k+1}r_{k+1}$
+\end_inset
+
+ и так далее.
+ Если процесс оборвется на каком-то шаге 
+\begin_inset Formula $k$
+\end_inset
+
+, то все будет доказано.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Обратим внимание, что 
+\begin_inset Formula $r=p_{1}r_{1}=p_{1}p_{2}r_{2}=...=p_{1}p_{2}...p_{k}r_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $r_{k}\in R^{*}$
+\end_inset
+
+ для некоторых 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, то все доказано.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Сейчас докажем, что такой процесс обязательно прервется.
+ Предположим обратное: ни один 
+\begin_inset Formula $r_{k}\notin R^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $rR\subseteq r_{1}R\subseteq r_{2}R\subseteq...\subseteq r_{k}R\subseteq...$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Возьмем объединение этой цепочки: 
+\begin_inset Formula $I=\cap_{k=1}^{\infty}r_{k}R$
+\end_inset
+
+ — идеал (простое упражнение)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $I=qR\Rightarrow q\in r_{j}R$
+\end_inset
+
+ для некоторого 
+\begin_inset Formula $j\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $qR\subseteq r_{j}R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $r_{j}R\subseteq I=qR$
+\end_inset
+
+, следовательно,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $qR=r_{j}R=r_{j+1}R=r_{j+2}R=...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Получили, что 
+\begin_inset Formula $r_{j}=r_{j+1}p_{j+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Из двух предыдущих равенств следует, что 
+\begin_inset Formula $p_{j+1}\in R^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Противоречие.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $R$
+\end_inset
+
+ — нёторово кольцо, если возрастающая цепочка идеалов обрывается: 
+\begin_inset Formula $I_{1}\subseteq I_{2}\subseteq...\subseteq...I_{k}\subseteq...$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists j:I_{j}=I_{n}\ \forall n>j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+ (упражнение (на бб)): 
+\begin_inset Formula $R$
+\end_inset
+
+ — нёторово, 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\forall$
+\end_inset
+
+ идеала 
+\begin_inset Formula $I$
+\end_inset
+
+ 
+\begin_inset Formula $\exists r_{1},r_{2},...r_{k}\in I$
+\end_inset
+
+, таких что 
+\begin_inset Formula $I=\sum\nolimits _{i=1}^{k}r_{i}R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Вопрос: Верно ли, что в любом нёторовом кольце имеет место быть разложение
+ на неприводимые множители?
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма 4
+\series default
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ — область целостности и 
+\begin_inset Formula $\forall$
+\end_inset
+
+ неприводимый элемент является простым.
+ (В частности, это выполнено, если 
+\begin_inset Formula $R$
+\end_inset
+
+ — область главных идеалов.)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Тогда имеет место единственность разложения на неприводимые: 
+\begin_inset Formula $\varepsilon p_{1}\cdot...\cdot p_{m}=\delta q_{1},...q_{n}$
+\end_inset
+
+, где 
+\begin_inset Formula $\varepsilon,\delta\in R^{*},\ p_{m},q_{n}$
+\end_inset
+
+ — неприводимые, то 
+\begin_inset Formula $\exists\sigma\in\delta_{n}:P_{k}\ ассоциированос\ q_{\sigma(k)}\forall k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство: индукция по 
+\begin_inset Formula $min(m,n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(считаем, что 
+\begin_inset Formula $m<n$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Произведение элементов обратимо, если обратимы все элементы.
+ Если произведение обратимо (
+\begin_inset Formula $ab\cdot c=1$
+\end_inset
+
+, 
+\begin_inset Formula $ab$
+\end_inset
+
+ — обратимо).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $m=0,\ то\ \delta q_{1}\cdot...\cdot q_{n}\in R^{*}\Rightarrow n=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $m>0$
+\end_inset
+
+, тогда 
+\begin_inset Formula $deltaq_{1}\cdot...\cdot q_{n}\in pR$
+\end_inset
+
+ — простой.
+ (собственный идеал не может содержать обратимых элементов).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Таким образом, 
+\begin_inset Formula $q_{k}\in p_{1}R$
+\end_inset
+
+.
+ 
+\begin_inset Formula $q_{k}=p_{1}r\notin R^{*}$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $r\in R^{*}$
+\end_inset
+
+, значит, 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $q$
+\end_inset
+
+, 
+\begin_inset Formula $\varepsilon p_{2}\cdot...\cdot p_{m}=\delta q_{1}\cdot...\cdot q_{k-1}\cdot q_{k+1}\cdot...\cdot q_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+По индукционному предположению 
+\begin_inset Formula $m-1=n-1$
+\end_inset
+
+ и
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\exists\tau:\{2,...,m\}\to\{1,...,k-1,k+1,...n\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+такое что 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ ассоциировано с 
+\begin_inset Formula $q_{\tau(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $m=n$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma(i)=\tau(i)\ при\ всех\ i\neq1$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma(1)=k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+Китайская теорема об остатках 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+: 
+\begin_inset Formula $I_{1},...,I_{k}$
+\end_inset
+
+ — идеалы кольца 
+\begin_inset Formula $R$
+\end_inset
+
+, где 
+\begin_inset Formula $R$
+\end_inset
+
+ (здесь и далее) — коммутативное кольцо с единицей.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Предполагается, что каждая пара идеалов взаимно простая: 
+\begin_inset Formula $I_{j}+I_{l}=R\ \forall j\neq l=1,...,k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Теорема говорит о том, что 
+\begin_inset Formula $R/(I_{1}\cdot...\cdot I_{k})=\oplus_{j=1}^{k}R/I_{j}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\oplus_{j=1}^{k}R/I_{j}$
+\end_inset
+
+ — набор остатков от деления на 
+\begin_inset Formula $r_{1},...,r_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x\equiv1\ \mod3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x\equiv2\ \mod5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x\equiv?\ \mod15$
+\end_inset
+
+, где 
+\begin_inset Formula $15=3\cdot5$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+: Если 
+\begin_inset Formula $I_{1},...,I_{k}$
+\end_inset
+
+ — попарно взаимно простые, то 
+\begin_inset Formula $I_{1}\cdot...\cdot I_{k}=I_{1}\cap...\cap I_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство: Достаточно доказать для 
+\begin_inset Formula $k=2$
+\end_inset
+
+ и дальше применить индукционный переход:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $I_{1}+I_{2}=R$
+\end_inset
+
+.
+ Заметим, что произведение идеалов всегда содержатся в пересечении.
+ 
+\begin_inset Formula $I_{1}\cdot I_{2}\subseteq I_{1}\cap I_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x\in I_{1}\cap I_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists a_{1}\in I_{1},a_{2}\in I_{2}:a_{1}+a_{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x=x\cdot1=x(a_{1}+a_{2})=xa_{1}+xa_{2}$
+\end_inset
+
+, где 
+\begin_inset Formula $x\in I_{2},\ a_{1}\in I_{1},\ x\in I_{1},\ a_{2}\in I_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Далее перейдем по индукции с использованием следующей леммы:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+ Если 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+ взаимно прост с каждым из 
+\begin_inset Formula $I_{2},...,I_{k}$
+\end_inset
+
+, то он взаимно прост с их произведением.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $k=3$
+\end_inset
+
+, 
+\begin_inset Formula $I_{1}+I_{2}=R,\ I_{1}+I_{3}=R$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $R=I_{1}+I_{2}\cdot R=I_{1}+I_{2}\cdot(I_{1}+I_{3})=I_{1}+I_{2}I_{1}+I_{2}I_{3}\subseteq I_{1}+I_{2}\cdot I_{3}\subseteq R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Дальше индукция по k.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Напомним, что мы хотим доказать, что 
+\begin_inset Formula $R/(I_{1}\cdot...\cdot I_{k})\cong\oplus_{j=1}^{k}R/I_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Очевидным образом строим гомоморфизм: 
+\begin_inset Formula $\varphi:R\to\oplus R/I_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(x)=\{r+I_{1},...,r+I_{j}\}$
+\end_inset
+
+, где каждый 
+\begin_inset Formula $r+I_{1}\in R/I_{j}$
+\end_inset
+
+ — гомоморфизм (это легко проверить (использовать, что сумма смежных классов
+ — смежный класс суммы))
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(x)=0\Leftrightarrow r\in I_{j}\ \forall j\ r\in I_{1}\cap...\cap I_{k}=I_{1}\cdot...\cdot I_{k}$
+\end_inset
+
+ по лемме.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+т.е 
+\begin_inset Formula $\ker\varphi=I_{1}\cdot...\cdot I_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть (
+\begin_inset Formula $r_{1}+I_{1},...,r_{k}+I_{k}$
+\end_inset
+
+) 
+\begin_inset Formula $\in\oplus R/I_{j}$
+\end_inset
+
+ где 
+\begin_inset Formula $r_{i}\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $m:I_{m}+\prod\limits _{j\neq m}I_{j}=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $b_{m}+c_{m}=1$
+\end_inset
+
+, где 
+\begin_inset Formula $b_{m}\in I_{m},c_{m}\in\prod\limits _{j\neq m}I_{j}=\cap_{i\neq m}I_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Положим 
+\begin_inset Formula $x=\sum\limits _{m=1}^{k}r_{m}c_{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(x)=\sum\limits _{m=1}^{k}\varphi(r_{m}c_{m})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(r_{m}c_{m})=(...,...,...)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $c_{m}\in I_{j}\forall j\neq m\Rightarrow r_{m}c_{m}\in I_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(r_{m}c_{m})=(0,...,0,r_{m},0,...,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $c_{m}=1-b_{m}\in1+I_{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $c_{m}r_{m}\in r_{m}+I_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Таким образом, 
+\begin_inset Formula $\varphi(x)=(r_{1},...,r_{n},...,r_{k})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+То есть наше отображение сюръективно, поэтому по теореме о гомоморфизме
+ мы получаем, что образ изоморфен факторкольцу.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Повторим:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi:R\twoheadrightarrow A$
+\end_inset
+
+, то 
+\begin_inset Formula $A\cong R/\ker\varphi$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Примерчики:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Для целых чисел.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $R=\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a_{1},...,a_{k}$
+\end_inset
+
+ — попарно взаимно простые числа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+тогда 
+\begin_inset Formula $a_{1}R,...a_{k}R$
+\end_inset
+
+ — попарно взаимно простые.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Почему? Потому что 
+\begin_inset Formula $a_{i}R+a_{j}R=pR$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ взаимно просто с 
+\begin_inset Formula $a_{j}$
+\end_inset
+
+, то 
+\begin_inset Formula $p=1$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\gcd(a_{i},a_{j})=p$
+\end_inset
+
+ — 
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+ –?
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Китайская теорема об остатках говорит нам о том, что (время закончилось)
+ если если известен смежный класс, то это то же самое, что известен остаток
+ от деления.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x\equiv r_{1}\mod a_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+...
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x\equiv r_{k}\mod a_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x=\equiv\sum\limits _{m=1}^{k}r_{m}c_{m}\mod a_{i}\cdot...\cdot a_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a_{m}+a_{1}\cdot...\cdot a_{m-1}\cdot a_{m+1}\cdot...\cdot a_{k}R=R$
+\end_inset
+
+, где 
+\begin_inset Formula $a_{m}\ni b_{m}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{1}\cdot...\cdot a_{m-1}\cdot a_{m+1}\cdot...\cdot a_{k}R\ni c_{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a_{m}y+d_{m}z=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец седьмой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\forall a:\gcd(an)=1\Leftarrow a^{\varphi'(n)}\equiv1\ mod\ n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Поэкспериментируем:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Фактически, мы находим 
+\begin_inset Formula $\mathbb{Z}_{n}\cong\mathbb{Z}/nZ$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $n=3\ \pm1^{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $n=4\ \pm1^{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $n=5\ 2,4,8,16\equiv1,2^{4}\equiv1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $3,4,2,6\equiv1\Rightarrow3^{4}\equiv1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(n)$
+\end_inset
+
+ — количество чисел от (
+\begin_inset Formula $0,...,n-1$
+\end_inset
+
+), взаимно простых с 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Эти числа хороши тем, что обратимы по 
+\begin_inset Formula $mod\ n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $\gcd(a,n)=a$
+\end_inset
+
+, то наименьший идеал, который их содержит: 
+\begin_inset Formula $a\mathbb{Z}+n\mathbb{Z}=b\mathbb{Z}$
+\end_inset
+
+.
+ Предположим, что есть идеал, который 
+\begin_inset Formula $b\mathbb{Z}\subseteq c\mathbb{Z}$
+\end_inset
+
+, то это означает, что
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\begin{cases}
+a\vdots b\\
+n\vdots b
+\end{cases}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall c:$
+\end_inset
+
+ 
+\begin_inset Formula $\begin{cases}
+a\vdots c\\
+n\vdots c
+\end{cases}$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow b\vdots c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+То есть 
+\begin_inset Formula $b=\gcd(a,n)$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $a,b\in R$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+ — коммутативное с единицей, 
+\begin_inset Formula $\gcd(a,b)$
+\end_inset
+
+ — это такой общий делитель 
+\begin_inset Formula $a,b$
+\end_inset
+
+, который делится на все остальные общие делители.
+ Другими словами, если 
+\begin_inset Formula $a\in cR,\ b\in cR\Rightarrow\gcd(a,b)\in cR$
+\end_inset
+
+, кроме того, 
+\begin_inset Formula $a,b\in\gcd(a,b)R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Предупреждение: 
+\begin_inset Formula $\gcd$
+\end_inset
+
+ существует не в любом кольце.
+ В кольце главных идеалов наибольший общий делитель существует всегда.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+НОД соответствует наименьшему главному идеалу (чем больше делитель, тем
+ меньше идеал).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Еще раз то же самое, но опять другими словами: 
+\begin_inset Formula $d=\gcd(a,b)\Leftrightarrow dR$
+\end_inset
+
+ — наименьший главный идеал, содержащий 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+НОД — не число! НОД — идеал.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема:
+\series default
+ Если 
+\begin_inset Formula $R$
+\end_inset
+
+ —кольцо главных идеалов, то 
+\begin_inset Formula $\forall a,b\in R\ \exists x,y\in R:\ ax+by=\gcd(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $aR+bR=\{au+bv|u,v\in R\}$
+\end_inset
+
+ — наименьший идеал, содержащий 
+\begin_inset Formula $a,b$
+\end_inset
+
+.
+ А, так как 
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо главных идеалов, то этот идеал — главный: 
+\begin_inset Formula $\exists d:aR+bR=dR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $dR$
+\end_inset
+
+ — наименьший главный идеал, содержащий 
+\begin_inset Formula $a,b$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $d=\gcd(a,b)$
+\end_inset
+
+.
+ Т.к.
+ 
+\begin_inset Formula $d\in aR+bR$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists x,y\in R:d=ax+by$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Посмотрим на кольцо 
+\begin_inset Formula $\mathbb{Z}/n\mathbb{Z}$
+\end_inset
+
+.
+ Что означает обратимость элемента в этом кольце?
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Договоримся про обозначения в этом кольце.
+ 
+\begin_inset Formula $\mathbb{Z}/n\mathbb{Z}\cong\mathbb{Z}_{n}=\{0,1,...,n-1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В 
+\begin_inset Formula $\mathbb{Z}_{7}:3\cdot4=5$
+\end_inset
+
+, что аналогично 
+\begin_inset Formula $(3+7\mathbb{Z})(4+7\mathbb{Z})=12+7\mathbb{Z}=5+7\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В кольце 
+\begin_inset Formula $R$
+\end_inset
+
+ с 1:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $1,1+1,1+1+1,...$
+\end_inset
+
+ может оказаться, что 
+\begin_inset Formula $1+1+1=0$
+\end_inset
+
+, т.е.
+ это кольцо по модулю 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Поэтому пишем 
+\begin_inset Quotes ard
+\end_inset
+
+Работаем в 
+\begin_inset Formula $R$
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+: после этого целые числа обозначают элементы кольца 
+\begin_inset Formula $R$
+\end_inset
+
+: 
+\begin_inset Formula $n$
+\end_inset
+
+ — это 
+\begin_inset Formula $\underbrace{1+...+1}\limits _{n\ раз}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a\in(\mathbb{Z}/n\mathbb{Z})$
+\end_inset
+
+.
+ Мы хотим понять, обратимо ли оно.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\exists a':a\cdot a'=1$
+\end_inset
+
+ в 
+\begin_inset Formula $\mathbb{Z}/n\mathbb{Z}$
+\end_inset
+
+ (
+\begin_inset Formula $aa'\equiv1\mod\ n$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\exists x:a\cdot a'=1+nx$
+\end_inset
+
+ в целых числах.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $aa'-nx=1$
+\end_inset
+
+ имеет решение тогда и только тогда, когда 
+\begin_inset Formula $\gcd(a,n)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Тогда 
+\begin_inset Formula $(\mathbb{Z}/n\mathbb{Z})^{*}\cong(\mathbb{Z}_{n})^{*}=\{a|\gcd(a,n)=1\}$
+\end_inset
+
+, где 
+\begin_inset Formula $0\leq a\leq n-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Поэтому функция эйлера есть ни что иное, как порядок группы: 
+\begin_inset Formula $\varphi=|\mathbb{Z}_{n}^{*}|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $<a>=\{1,a,a^{2},...a^{m-1}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ — группа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $ord\ a=|<a>|$
+\end_inset
+
+ (количество элементов в 
+\begin_inset Formula $\{1,a,a^{2},...a^{m-1}\}$
+\end_inset
+
+) = наименьшее 
+\begin_inset Formula $m$
+\end_inset
+
+, т.к.
+ 
+\begin_inset Formula $a^{m}=1$
+\end_inset
+
+ (порядок элемента)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма:
+\series default
+ 
+\begin_inset Formula $a^{k}=1\Leftrightarrow k\vdots ord\ a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство: 
+\begin_inset Formula $k=ord\ a\cdot l\Rightarrow a^{k}=(a^{ord\ a})^{l}=1^{l}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В обратную сторону: пусть 
+\begin_inset Formula $k=ord\ a\cdot l+r,\ 0\leq r<ord\ a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a^{k}=a^{(}{ord\ a})^{l}\cdot a^{r}=a^{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $r\neq0$
+\end_inset
+
+, то 
+\begin_inset Formula $a^{r}=1$
+\end_inset
+
+ противоречит минимальности 
+\begin_inset Formula $ord\ a$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula $r=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\{1,a,a^{2},...a^{m-1}\}\cong\mathbb{Z}_{n}\cong\mathbb{Z}/n\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следствие теоремы Лагранжа:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $G$
+\end_inset
+
+ — конечная группа, 
+\begin_inset Formula $a\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $|G|\vdots ord\ a$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следствие (
+\series bold
+Теорема
+\series default
+ Эйлера):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a^{\varphi(n)}\equiv1\mod n$
+\end_inset
+
+.
+ (Если 
+\begin_inset Formula $\gcd(a,n)=1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $|\mathbb{Z}_{n}^{*}|=\varphi(x)\vdots ord\ a$
+\end_inset
+
+.
+ Отсюда, по лемме, 
+\begin_inset Formula $a^{\varphi(n)}=1$
+\end_inset
+
+ в 
+\begin_inset Formula $\mathbb{Z_{n}^{*}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Вычислим, чему равно 
+\begin_inset Formula $\varphi(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $n=\{q_{1},...,q_{m}\}$
+\end_inset
+
+, то 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ попарно взаимно просты.
+ Значит, и идеалы, порожденные ими, попарно взаимно просты.
+ А значит,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\mathbb{Z}/q_{1}\mathbb{Z}\cdot...\cdot q_{m}\mathbb{Z}\cong\oplus_{i=1}^{m}\mathbb{Z}/q_{i}\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(a_{1},...,a_{m})(a'_{1},...,a'_{n})=(1,...,1)\Leftrightarrow a_{i}\in\mathbb{Z}/q_{1}\mathbb{Z}\ \forall i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следовательно, 
+\begin_inset Formula $(\mathbb{Z}/q_{1}\cdot...q_{m}\mathbb{Z})^{*}=\times_{i=1}^{m}(\mathbb{Z}/q_{1}\mathbb{Z})^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(q_{1},...,q_{m})=\varphi(q_{1})\cdot...\cdot\varphi(q_{m})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $q_{i}=p_{i}^{k_{i}},p_{i}$
+\end_inset
+
+ — различные простые.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец восьмой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема:
+\series default
+ 
+\begin_inset Formula $a^{\varphi(n)}\equiv1\mod n\ \forall a,n$
+\end_inset
+
+, таких, что 
+\begin_inset Formula $\gcd(a,n)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) 
+\begin_inset Formula $\varphi(ab)=\varphi(a)\varphi(b)$
+\end_inset
+
+, если 
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) 
+\begin_inset Formula $n=\prod\limits _{i=1}^{m}p_{i}^{k_{i}}$
+\end_inset
+
+, где 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ — различные простые, то
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(n)=\prod\limits _{i=1}^{m}\varphi(p_{i}^{k_{1}})$
+\end_inset
+
+ — по нему работаем при индукционном переходе.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+3) 
+\begin_inset Formula $\varphi(p^{k})=p^{k}-p^{k-1}$
+\end_inset
+
+ (
+\begin_inset Formula $p$
+\end_inset
+
+ — простые)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) Пусть 
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $aR+bR=R$
+\end_inset
+
+, и тогда по китайской теореме об остатках 
+\begin_inset Formula $R/abR\cong R/aR\oplus R/bR$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $(R/abR)^{*}\cong(R/aR)^{*}\times(R/bR)$
+\end_inset
+
+ (в случае мультипликативных групп используется значок прямого произведения).
+ Следовательно 
+\begin_inset Formula $\varphi(ab)=\varphi(a)\cdot\varphi(b)$
+\end_inset
+
+, где 
+\begin_inset Formula $\varphi(ab)=|(R/abR)^{*}|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) Индукция по 
+\begin_inset Formula $m$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $m=1$
+\end_inset
+
+ — левая и правая часть совпадают.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $m>0$
+\end_inset
+
+: 
+\begin_inset Formula $a=\prod\limits _{i=1}^{m-1}p_{i}^{k_{i}},b=p_{m}^{k_{m}},n=ab$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+, По пункту 1: 
+\begin_inset Formula $\varphi(n)=\varphi(a)\cdot\varphi(b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+По индукционному предположению 
+\begin_inset Formula $\varphi(a)=\prod\limits _{i=1}^{m-1}\varphi(p_{i}^{k_{i}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+3) 
+\begin_inset Formula $\gcd(m,p^{k})\neq1\Leftrightarrow m\vdots p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Таких чисел от 1 до 
+\begin_inset Formula $p^{k}$
+\end_inset
+
+ в 
+\begin_inset Formula $p$
+\end_inset
+
+ раз меньше, чем 
+\begin_inset Formula $p^{k}$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $p^{k-1}$
+\end_inset
+
+.
+ Это числа не взаимно просты.
+ Тогда взаимно простых чисел 
+\begin_inset Formula $p^{k}-p^{k-1}$
+\end_inset
+
+, т.е.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(p^{k})(взаимно\ простые\ с\ p^{k})=p^{k}(всего)-p^{k-1}(не\ взаимно\ простые)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Например, 
+\begin_inset Formula $\varphi(60)=\varphi(2^{2}\cdot3\cdot5)=\varphi(2^{2})\varphi(3)\varphi(5)=(2^{2}-2)\cdot(3-1)\cdot(5-1)=2\cdot2\cdot4=16$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следование: 
+\begin_inset Formula $\varphi(n)=n\cdot\prod\limits _{i=1}^{m}\frac{p_{i}-1}{p_{i}}$
+\end_inset
+
+, где 
+\begin_inset Formula $p_{1},...p_{m}$
+\end_inset
+
+ — все простые делители 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(72)=72\cdot\frac{1}{2}\cdot\frac{2}{3}=24$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Сравнимость по модулю 
+\begin_inset Formula $n$
+\end_inset
+
+ — это равенство в 
+\begin_inset Formula $\mathbb{Z}/n\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a+I$
+\end_inset
+
+ — смежный класс по 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ Или класс вычетов по модулю 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ Иногда, если 
+\begin_inset Formula $I$
+\end_inset
+
+ — простой идеал, то говорят по модулю элемента, которым данный идеал образован.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство следующей за этим теоремы:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\mathbb{Z}/n\mathbb{Z}\cong\oplus_{i=1}^{m}\mathbb{Z}/p_{i}^{k_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $n=\prod\limits _{i=1}^{m}p_{i}^{k_{i}}p_{i}$
+\end_inset
+
+ — различные простые.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Примарное число — степень простого числа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(\mathbb{Z})^{*}=\times_{i=1}^{m}(\mathbb{Z}/p_{i}^{k_{i}}\mathbb{Z})^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Усиленная теорема Лагранжа:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\times_{i=1}^{m}G_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ — произвольная группа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(x_{1},...,x_{m})\in\times_{i=1}^{m}G_{i},x_{i}\in G_{i}$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $d_{i}=ordx_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(x_{1},...,x_{m})^{l}=(x_{1}^{l},...,x_{m}^{l})=(e_{G_{1}},...,e_{G_{m}})\Rightarrow x_{i}^{l}=e_{G_{i}}\forall i\Rightarrow l\vdots d_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Таким образом, 
+\begin_inset Formula $ord(x_{1},...,x_{m})=lcm(d_{1},...,d_{m})$
+\end_inset
+
+ (
+\begin_inset Formula $lcm$
+\end_inset
+
+ — наименьшее общее кратное).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Таким образом: если 
+\begin_inset Formula $(x_{1},...,x_{m})\in\times_{i=1}^{m}(\mathbb{Z}/p_{i}^{k_{i}}\mathbb{Z})^{*}$
+\end_inset
+
+, то
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(x_{1},...,x_{m})^{l}=(1,...,1)$
+\end_inset
+
+ при 
+\begin_inset Formula $l=lcm(\varphi(p_{1}^{k_{1}}),...,\varphi(p_{m}^{k_{m}}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Обозначим: 
+\begin_inset Formula $\varphi'(p_{1}^{k_{1}},...p_{m}^{k_{m}})=lcm(\varphi(p_{1}^{k_{1}}),...,\varphi(p_{m}^{k_{m}}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ (Теорема Кармайкла): 
+\begin_inset Formula $a^{\varphi'(n)}\equiv1\mod n$
+\end_inset
+
+, если 
+\begin_inset Formula $(a,n)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(60)=16$
+\end_inset
+
+ (выше)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi'(60)=lcm(\varphi(2^{2})\varphi(3),\varphi(5))=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $7^{4}=(49)^{2}\equiv(-11)^{2}=121\equiv1\mod60$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: Экспонента (показатель) группы 
+\begin_inset Formula $G$
+\end_inset
+
+ — наименьшее натуральное число 
+\begin_inset Formula $l$
+\end_inset
+
+, такое что 
+\begin_inset Formula $g^{l}=e\ \forall g\in G$
+\end_inset
+
+.
+ (если не существует, то экспонента равна бесконечности) (НОК всех порядков
+ группы).
+ Другими словами, 
+\begin_inset Formula $l$
+\end_inset
+
+ — НОК порядка 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: Функция Кармайкла — экспонента группы 
+\begin_inset Formula $(\mathbb{Z}/n\mathbb{Z}^{*})$
+\end_inset
+
+.
+ (обозначается 
+\begin_inset Formula $\lambda(n)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ Кармайкла (без доказательства):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\lambda(n)=\varphi'(n)$
+\end_inset
+
+, если 
+\begin_inset Formula $n\not\vdots\ 8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\lambda(n)=\frac{1}{2}\varphi'(n)$
+\end_inset
+
+, если 
+\begin_inset Formula $n\vdots8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство — упражнение.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(\mathbb{Z}/2^{k}\mathbb{Z})^{*}\cong C_{2}\times C_{2^{k-2}}\ \forall k\geq3$
+\end_inset
+
+, где 
+\begin_inset Formula $C$
+\end_inset
+
+ — циклическая группа.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $F$
+\end_inset
+
+ — поле.
+ 
+\begin_inset Formula $F[t]$
+\end_inset
+
+ — кольцо многочленов над полем 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(
+\begin_inset Formula $F[t]=\{a_{0}+...+a_{n}t^{n}|a_{i}\in F,a_{n}\neq0$
+\end_inset
+
+ при 
+\begin_inset Formula $n\neq0\}$
+\end_inset
+
+ (где 
+\begin_inset Formula $t$
+\end_inset
+
+ — просто символ, не переменная!)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(a_{1},...,a_{n})\cdot(b_{0},...,b_{n})=(c_{0},...,c_{n+m}),C_{k}=\sum\limits _{i=0}^{k}a_{i}b_{k-i}$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+С многочленом 
+\begin_inset Formula $p(t)=a_{0}+...+a_{n}t^{n}$
+\end_inset
+
+ связана полиномиальная функция 
+\begin_inset Formula $f_{p}:F\to F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $f_{p}(x)=a_{0}+...+a_{n}x^{n}\ \forall x\in F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $F=F_{2}=\mathbb{Z}/2\mathbb{Z}$
+\end_inset
+
+, то многочлены 
+\begin_inset Formula $t$
+\end_inset
+
+ и 
+\begin_inset Formula $t^{2}$
+\end_inset
+
+ не равны, но соответствующие полиномиальные функции равны.
+ (
+\begin_inset Formula $F_{2}$
+\end_inset
+
+ — поле из двух элементов).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\deg(a_{0}+...+a_{n}t^{n}):=n$
+\end_inset
+
+ при этом 
+\begin_inset Formula $a_{n}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\deg(0)=-\infty$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\deg(pq)=\deg p+\deg q$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\deg(p+q)\leq\deg p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Теорема (о делении с остатком):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\deg$
+\end_inset
+
+ является евклидовой нормой на 
+\begin_inset Formula $F[x]$
+\end_inset
+
+, а само 
+\begin_inset Formula $F[x]$
+\end_inset
+
+ — евклидово кольцо.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) 
+\begin_inset Formula $\deg0<\deg p\ \forall p\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) 
+\begin_inset Formula $p,q\neq0\in F[t]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $X=\{p-qf||f\in F[t]\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $p-qf$
+\end_inset
+
+ — многочлен наименьшей возможной степени из 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $r>\deg q:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $q=a_{m}t^{m}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $r=b_{m+k}t^{m+k}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $r-qt^{k}\frac{b_{m+k}}{a_{m}}<\deg r$
+\end_inset
+
+, но 
+\begin_inset Formula $r-qt^{k}\frac{bm+k}{a_{m}}\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Противоречие показывает, что 
+\begin_inset Formula $\deg r<\deg q\Rightarrow p=qf+r,\ \deg r<\deg q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(мы доказали, что 
+\begin_inset Formula $F[x]$
+\end_inset
+
+ является евклидовым кольцом)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец девятой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ Безу:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p\in F[t],\alpha\in F$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ — корень(?).
+ Тогда остаток от деления 
+\begin_inset Formula $p(t)$
+\end_inset
+
+ на 
+\begin_inset Formula $t-\alpha$
+\end_inset
+
+ равен 
+\begin_inset Formula $p(\alpha)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следствие: 
+\begin_inset Formula $p(t)\vdots(t-\alpha)\Leftrightarrow p(\alpha)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p(t)=(t-\alpha)q(t)+r(t)$
+\end_inset
+
+, где 
+\begin_inset Formula $\deg r<1$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $r\in F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p(\alpha)=(\alpha-\alpha)q(\alpha)+r=r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следствие: Ненулевой многочлен не может иметь больше корней, чем степень
+ (количество корней многочлена не превосходит его степени).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство: Пусть 
+\begin_inset Formula $\deg p=d$
+\end_inset
+
+.
+ Индукция по 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+При 
+\begin_inset Formula $d=0$
+\end_inset
+
+ многочлен является ненулевой константой и корней не имеет.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+При 
+\begin_inset Formula $d>0$
+\end_inset
+
+ по теореме Безу: 
+\begin_inset Formula $p(t)=(t-\alpha)q(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\beta$
+\end_inset
+
+ — корень, если 
+\begin_inset Formula $p\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\beta=\alpha$
+\end_inset
+
+ или 
+\begin_inset Formula $q(\beta)=0$
+\end_inset
+
+.
+ При этом 
+\begin_inset Formula $\deg q=d-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Количество корней 
+\begin_inset Formula $p\leq$
+\end_inset
+
+ (количество корней 
+\begin_inset Formula $q$
+\end_inset
+
+)
+\begin_inset Formula $+1\leq(d-1)+1=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Интерполяционная формула Лагранжа:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Задача: найти многочлен 
+\begin_inset Formula $p\in F[t]$
+\end_inset
+
+ наименьшей степени, такой, что 
+\begin_inset Formula $p(t_{0})=y_{0},...,p(t_{n})=y_{n}$
+\end_inset
+
+, где 
+\begin_inset Formula $t_{i},y_{i}\in F,\ t_{i}\neq t_{j}$
+\end_inset
+
+ при 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p(t_{i})=y_{i}$
+\end_inset
+
+, по теореме Безу 
+\begin_inset Formula $\Leftrightarrow p(t)\equiv y_{i}\mod(t-t_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Отсюда очевидно, что 
+\begin_inset Formula $(t-t_{i})$
+\end_inset
+
+ и 
+\begin_inset Formula $(t-t_{j})$
+\end_inset
+
+ взаимно простые при 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+По КТО 
+\begin_inset Formula $F[t]/(\prod\limits _{i=0}^{n}(t-t_{j}))\cong\oplus_{i=0}^{n}F[t]/(t-t_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Посмотрим, что такое 
+\begin_inset Formula $F[t]/(t-t_{i})$
+\end_inset
+
+.
+ Это само поле 
+\begin_inset Formula $F$
+\end_inset
+
+, (число (хотя не факт, может, это крокодил)).
+ 
+\begin_inset Formula $F[t]/(t-t_{i})\cong F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Докажем: 
+\begin_inset Formula $\varphi:F[t]\to F$
+\end_inset
+
+ — эпиморфизм (
+\begin_inset Formula $\forall\alpha\in F\ \varphi(\alpha)=\alpha$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi(p)=p(t_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\ker\varphi=\{p|\varphi(p)=0\}=\{p|p(t_{i})=0\}=\{p|p\vdots(t-t_{i})\}=(t-t_{i})F[t]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $F[t]/(\prod\limits _{i=0}^{n}(t-t_{j}))\cong\oplus_{i=0}^{n}F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p+\prod\limits _{i=0}^{n}(t-t_{i})F[t]\mapsto(p(t_{0}),...,p(t_{n}))$
+\end_inset
+
+ (так как это биекция, то в любой элемент 
+\begin_inset Formula $(y_{0},...,y_{n})$
+\end_inset
+
+ соответствует чему-либо из кольца 
+\begin_inset Formula $F[t]/(\prod\limits _{i=0}^{n})$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+: 
+\begin_inset Formula $\forall y_{0},...,y_{n}\in F$
+\end_inset
+
+, 
+\begin_inset Formula $\underbrace{t_{0},...,t_{n}}_{различных}\in F$
+\end_inset
+
+ 
+\begin_inset Formula $\exists!$
+\end_inset
+
+ многочлен 
+\begin_inset Formula $p$
+\end_inset
+
+ степени 
+\begin_inset Formula $\leq n$
+\end_inset
+
+ : 
+\begin_inset Formula $p(t_{i})=y_{i}\ \forall i=0,...,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+При этом 
+\begin_inset Formula $p(t)=\sum\limits _{i=0}^{n}y_{i}\frac{w_{i}(t)}{w_{i}(t_{i})}$
+\end_inset
+
+, где 
+\begin_inset Formula $w_{i}(t)=\prod\limits _{j\neq i}(t-t_{j})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $w_{i}(t_{k})=0\ \forall i\neq k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p(t_{k})=y_{i}\frac{w_{k}(t_{k})}{w_{k}(t_{k})}=y_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Алгебраические расширения полей
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p\in F[t],\ p$
+\end_inset
+
+ — неприводим, тогда идеал 
+\begin_inset Formula $pF[t]$
+\end_inset
+
+ является простым идеалом, а в кольце главных идеалов любой ненулевой простой
+ идеал максимальный, следовательно, 
+\begin_inset Formula $pF[t]$
+\end_inset
+
+ — максимальный.
+ Факторкольцо по идеалу, порожденному 
+\begin_inset Formula $p$
+\end_inset
+
+: 
+\begin_inset Formula $F\subseteq F[t]/(p)$
+\end_inset
+
+ — поле.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Упражнение (на бб): Пусть 
+\begin_inset Formula $L=F[t]/(p)$
+\end_inset
+
+ (
+\begin_inset Formula $p$
+\end_inset
+
+ неприводим) 
+\begin_inset Formula $\supseteq F$
+\end_inset
+
+.
+ 1) Доказать, что 
+\begin_inset Formula $p$
+\end_inset
+
+ имеет корень в поле 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ 2) 
+\begin_inset Formula $\forall$
+\end_inset
+
+ поля 
+\begin_inset Formula $k\supseteq F$
+\end_inset
+
+, в котором многочлен имеет корень, 
+\begin_inset Formula $\exists$
+\end_inset
+
+ мономорфизм, 
+\begin_inset Formula $L\to K$
+\end_inset
+
+ тождественный на 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Кратность корня и производная многочлена.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\alpha\in F,\ p$
+\end_inset
+
+ — многочлен.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ имеет разность 
+\begin_inset Formula $k$
+\end_inset
+
+ в ненулевом многочлене 
+\begin_inset Formula $p$
+\end_inset
+
+, если 
+\begin_inset Formula $p(t)=(t-\alpha)^{k}g(t)$
+\end_inset
+
+, где 
+\begin_inset Formula $g(\alpha)\neq0$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: если 
+\begin_inset Formula $p=a_{n}t^{n}+...+a_{1}t+a_{0}$
+\end_inset
+
+, то его производная 
+\begin_inset Formula $p'=a_{n}nt^{n-1}+...+a_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пример:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\mathbb{Z}/2\mathbb{Z}$
+\end_inset
+
+: 
+\begin_inset Formula $(t^{2}+1)'=2t=0$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Свойства производной:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) Линейность: 
+\begin_inset Formula $(p+q)'=p'+q';\ (\alpha p)'=\alpha\cdot p'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) 
+\begin_inset Formula $(pq)'=p'q+pq'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+3) Производная сложной функции: 
+\begin_inset Formula $(p\circ q)'=(p'\circ q)\cdot q'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(без доказательства).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ Пусть 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ — корень многочлена 
+\begin_inset Formula $p$
+\end_inset
+
+ кратности 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ (Если кратность равна нулю, то 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ не корень, 
+\begin_inset Formula $k=1$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ — простой корень, 
+\begin_inset Formula $k>1$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ — кратный корень (экстремум либо перегиб).
+ Кратный корень означает, что производная в этой точке равна нулю).
+ Тогда кратность
+\begin_inset Formula $\alpha$
+\end_inset
+
+ в многочлене 
+\begin_inset Formula $p'$
+\end_inset
+
+ не меньше, чем 
+\begin_inset Formula $k-1$
+\end_inset
+
+.
+ А если 
+\begin_inset Formula $k\neq0$
+\end_inset
+
+ в поле 
+\begin_inset Formula $F$
+\end_inset
+
+, то кратность равна ровно 
+\begin_inset Formula $k-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $p=(t-\alpha)^{k}g(t)$
+\end_inset
+
+.
+ Дифференцируем это используя правила 2 и 3: 
+\begin_inset Formula $p'(t)=k(t-\alpha)^{k-1}g(t)+(t-\alpha)^{k}g'(t)=(t-\alpha)^{k-1}(kg(t)+(t-\alpha)g'(t))$
+\end_inset
+
+.
+ Подсчитаем значение 
+\begin_inset Formula $(kg(t)+(t-\alpha)g'(t)$
+\end_inset
+
+ в точке 
+\begin_inset Formula $\alpha$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $kg(\alpha)+(\alpha-\alpha)g'(\alpha)=kg(\alpha)\neq0$
+\end_inset
+
+ при 
+\begin_inset Formula $k\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец десятой лекции
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ о рациональных корнях многочлена (без доказательства):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если у нас есть многочлен 
+\begin_inset Formula $p(x)=a_{n}x^{n}+...+a_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{k}\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $\frac{c}{d}$
+\end_inset
+
+ — корень 
+\begin_inset Formula $p\ (c,d\in\mathbb{Z},\gcd(c,d)=1)$
+\end_inset
+
+, то 
+\begin_inset Formula $a_{0}\vdots c,a_{n}\vdots d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+Комплексные числа 
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Посмотрим на кольцо многочленов 
+\begin_inset Formula $\mathbb{R}[x]$
+\end_inset
+
+.
+ Возьмем многочлен 
+\begin_inset Formula $x^{2}+1$
+\end_inset
+
+.
+ Этот многочлен неприводим.
+ Мы хотим взять факторкольцо.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Определение:
+\series default
+ Поле 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ по 
+\begin_inset Formula $\mathbb{R}[x]/(x^{2}+1)$
+\end_inset
+
+ называется полем комплексных чисел.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ Основная теорема алгебры (пока без доказательства):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Любой многочлен из 
+\begin_inset Formula $\mathbb{C}[t]$
+\end_inset
+
+, степени 
+\begin_inset Formula $\geq1$
+\end_inset
+
+ (ненулевой) имеет хотя бы один комплексный корень.
+ (будет доказано как следствие теоремы Лиувилля).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%(это мы увидим прямо...
+ в следующий раз)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $\rho:\mathbb{R}[x]\to\mathbb{R}/(x^{2}+1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $i=\rho(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $i^{2}+1=\rho(x)^{2}+1=\rho(x^{2}+1)=0+(x^{2}+1)\mathbb{R}[x]=0$
+\end_inset
+
+ (0 факторкольца).
+ Отсюда 
+\begin_inset Formula $i^{2}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $f+(x^{2}+1)\mathbb{R}[x]=(ax+b)+(x^{2}+1)\mathbb{R}[x]=b+ai$
+\end_inset
+
+, где 
+\begin_inset Formula $(ax+b)$
+\end_inset
+
+ — остаток от деления 
+\begin_inset Formula $f$
+\end_inset
+
+ на 
+\begin_inset Formula $x^{2}+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Таким образом, 
+\begin_inset Formula $\mathbb{C}=\{a+bi|a,b\in\mathbb{R}\}$
+\end_inset
+
+, при этом
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) 
+\begin_inset Formula $a+bi+(c+di)=(a+c)+(b+d)i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) 
+\begin_inset Formula $(a+bi)(c+di)=ac+adi+bci+bdi^{2}=(ac-bd)+(ad+bc)i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Найдем обратный элемент:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{a+bi}=\frac{a-bi}{(a+bi)(a-bi)}=\frac{a}{a^{2}+b^{2}}+\frac{-b}{a^{2}+b^{2}}i
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $z=x+iy$
+\end_inset
+
+, то 
+\begin_inset Formula $x$
+\end_inset
+
+ — вещественная часть (
+\begin_inset Formula $Re\ z$
+\end_inset
+
+), 
+\begin_inset Formula $y$
+\end_inset
+
+ — мнимая часть (
+\begin_inset Formula $Im\ z$
+\end_inset
+
+) (мнимой частью называется ВЕЩЕСТВЕННОЕ ЧИСЛО 
+\begin_inset Formula $y$
+\end_inset
+
+, но ни в коем случае не 
+\begin_inset Formula $iy$
+\end_inset
+
+!!!), 
+\begin_inset Formula $x-iy=\bar{z}$
+\end_inset
+
+ — комплексно сопряженное к 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $|a+bi|=\sqrt{a^{2}+b^{2}}$
+\end_inset
+
+ или 
+\begin_inset Formula $|z|=\sqrt{z\cdot\bar{z}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi\in\mathbb{R}/2\pi\mathbb{Z}$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\varphi=\{\varphi_{0}+2\pi k|k\in\mathbb{Z}\}=\varphi_{0}+2\pi\mathbb{Z}\in\mathbb{R}/2\pi\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\begin{cases}
+a=r\cos\varphi\\
+b=r\sin\varphi
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Значит, наше число можно записать в виде 
+\begin_inset Formula $w=\underbrace{a+bi}\limits _{алгебраическая\ форма}=r\cos\varphi+ir\sin\varphi=\underbrace{r(\cos\varphi+i\sin\varphi)}\limits _{тригонометрическая\ форма}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi$
+\end_inset
+
+ — 
+\begin_inset Formula $Arg\ w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\varphi=\begin{cases}
+\arctan\frac{b}{a},a>0\\
+\pi+\arctan\frac{b}{a},a<0\\
+\pm\frac{\pi}{2},a=0
+\end{cases}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Сложение и умножение в тригонометрической форме:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $w=|w|(\cos\varphi+i\sin\varphi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $z=|z|(\cos\alpha+i\sin\alpha)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $wz=|w|\cdot|z|(\cos\varphi\cos\alpha-\sin\varphi\sin\alpha+i(\cos\varphi\sin\alpha+\sin\varphi\cos\alpha))=|w||z|=(\cos(\alpha+\varphi)+i\sin(\alpha+\varphi))$
+\end_inset
+
+ — формула Муавра.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Возведение в степень:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $w^{w}=|w|^{w}(\cos n\varphi+i\sin n\varphi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $|wz|=|w|\cdot|z|\Rightarrow(a^{2}+b^{2})(c^{2}+d^{2})=(ac-bd)^{2}+(ad+bc)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\mathbb{R}_{>0}^{*}\times\mathbb{R}/2\pi\mathbb{Z}\cong\mathbb{C}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(r,\varphi)\mapsto r(\cos\varphi+i\sin\varphi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $z\mapsto(|z|,Arg\ z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\ln:\mathbb{R}_{>0}^{*}\rightarrow\mathbb{R}(+)$
+\end_inset
+
+ — изомоморфизм.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема:
+\series default
+ 
+\begin_inset Formula $\mathbb{C}^{*}\cong\mathbb{R}\times\mathbb{R}/2\pi\mathbb{Z}\cong\mathbb{R}\times\mathbb{R}/\mathbb{Z}\cong\mathbb{C}/2\pi i\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Определение:
+\series default
+ Если 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, то 
+\begin_inset Formula $e^{i}x=\cos x+i\sin x$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Ряд Тейлора для экспоненты:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $e^{t}=\sum\limits _{k=0}^{\infty}\frac{t^{k}}{k!}=1+t+\frac{t^{2}}{2}+\frac{t^{3}}{6}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Общая форма: 
+\begin_inset Formula $f(t)=\sum\limits _{k=0}^{\infty}\frac{f'^{k}(0)}{k!}t^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\cos t=\sum\limits _{m=0}^{\infty}(-1)^{m}\frac{t^{2m}}{(2m)!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sin t=\sum\limits _{m=0}^{\infty}(-1)^{j}\frac{t^{2j+1}}{(2j+1)!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Подставить в ряд Тейлора для экспоненты 
+\begin_inset Formula $e^{ix}$
+\end_inset
+
+ и убедиться, что слагаемые будут косинусами и синусами.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец одиннадцатой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\mathbb{C}^{*}\cong\mathbb{R}\times\mathbb{R}/2\pi\mathbb{Z}\cong\mathbb{C}/2\pi i\mathbb{Z}$
+\end_inset
+
+ — Данный изоморфизм называется Логарифм (с большой буквы): 
+\begin_inset Formula $Ln:\mathbb{C}^{*}\to\mathbb{C}/2\pi i\mathbb{Z}$
+\end_inset
+
+.
+ Ну а 
+\begin_inset Formula $Ln(z)=\ln|z|+iArgz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(a,b+2\pi\mathbb{Z})\leftrightarrow a+\underbrace{bi+2\pi i\mathbb{Z}}\limits _{i(b+2\pi\mathbb{Z})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство (предыдущей теоремы):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $z=|z|e^{iArgz}=|z|\cos(Argz)+i\sin(Argz)$
+\end_inset
+
+ (Экспонента на мнимой оси периодична).
+ Отсюда
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $z=|z|e^{iArgz}\mapsto^{f}(\ln|z|,Argz)$
+\end_inset
+
+.
+ Обратное отображение:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(r,\varphi+2\pi\mathbb{Z})\mapsto e^{r}e^{i\varphi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Посмотрим на функцию 
+\begin_inset Formula $f$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $f(zw)=(\ln|z\cdot w|,Arg(z\cdot w))=(\ln|z|+\ln|w|,Arg\ z+Argw)=(\ln|z|,Arg\ z)+(\ln|w|,Arg\ w)=f(z)+f(w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Логарифм от комплексных:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\ln z=\ln|z|+i\ arg\ z$
+\end_inset
+
+, где 
+\begin_inset Formula $arg\ z\in(-\pi,pi]\cap Arg\ z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пример: 
+\begin_inset Formula $\ln(-1)=i\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+"Одно удовольствие" решать уравнения 
+\begin_inset Formula $z^{n}=w$
+\end_inset
+
+ (уравнения круга).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Для того, чтобы решать это уравнение, нужно записать числа 
+\begin_inset Formula $z$
+\end_inset
+
+ и 
+\begin_inset Formula $w$
+\end_inset
+
+ в показательной форме: 
+\begin_inset Formula $z=re^{i\varphi},\ w=\rho e^{i\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $r^{n}e^{in\varphi}=\rho e^{i\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Приводим к системе: 
+\begin_inset Formula $\begin{cases}
+r^{n}=\rho\\
+n\varphi=\alpha+r\pi k,k\in\mathbb{Z}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Отсюда:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $z=\sqrt[n]{\rho}e^{i\frac{\alpha+2\pi k}{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $k'=k+mn$
+\end_inset
+
+ в 
+\begin_inset Formula $2\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $e^{i\frac{\alpha+2\pi k'}{n}}=e^{i\frac{\alpha+2\pi k}{n}+2\pi m}=e^{i\frac{\alpha+2\pi k}{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+На картинке корни располагаются в вершинах вписанного в окружность радиусом
+ 
+\begin_inset Formula $\sqrt[n]{\rho}$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-угольника.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Решения этого уравнения называются корнями 
+\begin_inset Formula $n$
+\end_inset
+
+-ной степени из 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ При этом пишут, что 
+\begin_inset Formula $\sqrt[n]{w}=\{z|z^{n}=w\}$
+\end_inset
+
+ (это множество всех таких корней).
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+К примеру, 
+\begin_inset Formula $\sqrt[n]{1}=\{z|z^{n}=1\}=\{e^{i\frac{\alpha+2\pi k}{n}}|k=0,...,n-1\}=\{\varepsilon^{k}|k=0,...,n-1,\ \varepsilon=e^{i\frac{2\pi}{n}}\}$
+\end_inset
+
+ — циклическая подгруппа в 
+\begin_inset Formula $\mathbb{C}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Определение
+\series default
+: 
+\begin_inset Formula $\omega$
+\end_inset
+
+ называется первообразным корнем 
+\begin_inset Formula $n$
+\end_inset
+
+-ой степени из единицы, если 
+\begin_inset Formula $ord\ \omega=n$
+\end_inset
+
+ в группе 
+\begin_inset Formula $\mathbb{C}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В комплексных числах все корни выглядят как 
+\begin_inset Formula $\varepsilon^{k}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\varepsilon^{k}$
+\end_inset
+
+ — первообразный корень степени 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow\gcd(n,k)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ (основная теорема алгебры)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Любой многочлен из 
+\begin_inset Formula $\mathbb{C}[t]$
+\end_inset
+
+, степени 
+\begin_inset Formula $\geq1$
+\end_inset
+
+ (ненулевой) имеет хотя бы один комплексный корень.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: Поле 
+\begin_inset Formula $F$
+\end_inset
+
+ называется алгебраически замкнутым, если любой многочлен из 
+\begin_inset Formula $F[x]$
+\end_inset
+
+ ненулевой степени имеет корень в 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ Любое поле вкладывается в алгебраически замкнутое: 
+\begin_inset Formula $\forall\ поля\ K\existsалгебраически\ замкнутое\ поле\ \bar{K}\ и\ мономорфизм\ K\rightarrowtail\bar{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+ Комплексное сопряжение - автоморфизм 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство: 
+\begin_inset Formula $\mathbb{C}\to\mathbb{C}$
+\end_inset
+
+ — биекция (
+\begin_inset Formula $\bar{\bar{z}}=z$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{a+bc}=a-bc$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $z\mapsto\bar{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(z+w)=\bar{z}+\bar{w}$
+\end_inset
+
+ — тривиально.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(a+bi)(c+di)=(ac-bd)+(ad+bc)i$
+\end_inset
+
+.
+ А теперь перемножение сопряженных: 
+\begin_inset Formula $(a-bi)(c-di)=(ac-bd)-(ad+bc)i$
+\end_inset
+
+, следовательно, операции сохраняются.
+ И биекция.
+ Какие-то вопросы?
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следствие:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1)
+\begin_inset Formula $w+\bar{w},w\cdot\bar{w}\in\mathbb{R}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2)
+\begin_inset Formula $w\in\mathbb{R}\Rightarrow w=\bar{w}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+3) Если 
+\begin_inset Formula $w\notin\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $(w+z)$
+\end_inset
+
+ и 
+\begin_inset Formula $(wz)\in\mathbb{R}$
+\end_inset
+
+, то 
+\begin_inset Formula $z=\bar{w}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+4) 
+\begin_inset Formula $p\in\mathbb{R}[t],\ w\in\mathbb{C}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\bar{p(x)}=p(\bar{w})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+5) Если 
+\begin_inset Formula $p\in\mathbb{R}[t]$
+\end_inset
+
+, 
+\begin_inset Formula $p(w)=0$
+\end_inset
+
+, то 
+\begin_inset Formula $p(\bar{w})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+6) Если 
+\begin_inset Formula $w\in\mathbb{C}$
+\end_inset
+
+ — корень многочлена 
+\begin_inset Formula $p\in\mathbb{R}[t]$
+\end_inset
+
+, то 
+\begin_inset Formula $p\vdots(t-w)(t-\bar{w})=t^{2}-(w+\bar{w})t+w\bar{w}\in\mathbb{R}[t]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ Любой многочлен из 
+\begin_inset Formula $\mathbb{R}[t]$
+\end_inset
+
+ степени большей двух приводим в 
+\begin_inset Formula $\mathbb{R}[t]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство: Пусть 
+\begin_inset Formula $p\in\mathbb{R}[t]\subset\mathbb{C}[t],\ \deg p\geq3$
+\end_inset
+
+.
+ Применим основную теорему алгебры и скажем, что: по основной теореме алгебры
+ существует 
+\begin_inset Formula $w\in\mathbb{C}$
+\end_inset
+
+ комплексный корень 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $w\in\mathbb{R}$
+\end_inset
+
+, то по теореме Безу 
+\begin_inset Formula $p\vdots t-w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если нет, то 
+\begin_inset Formula $p\vdots t^{2}-(w+\bar{w}t+w\bar{w})$
+\end_inset
+
+.
+ В любом случае, 
+\begin_inset Formula $p=f\cdot g$
+\end_inset
+
+, 
+\begin_inset Formula $\deg g\geq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказано.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следствие: любой многочлен в 
+\begin_inset Formula $\mathbb{R}[t]$
+\end_inset
+
+ раскладывается на множители, степени не выше двух.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец двенадцатой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+Линейная алгебра.
+ Векторные пространства 
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $F$
+\end_inset
+
+ — поле, 
+\begin_inset Formula $(V,+)$
+\end_inset
+
+ — абелева группа.
+ 
+\begin_inset Formula $V$
+\end_inset
+
+ называется векторным пространством над полем 
+\begin_inset Formula $F$
+\end_inset
+
+, если задана (внешняя) операция умножения 
+\begin_inset Formula $F\times V\to V$
+\end_inset
+
+, удовлетворяющая свойствам:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(Не забываем аксиомы абелевой группы)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) 
+\begin_inset Formula $\forall\alpha,\beta\in F,u,v\in V:\ \ (\alpha\beta)\cdot v=\alpha(\beta\cdot v)$
+\end_inset
+
+ — ассоциативность.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) 
+\begin_inset Formula $(\alpha+\beta)v=v(\alpha)+v(\beta)$
+\end_inset
+
+ и 
+\begin_inset Formula $\alpha(u+v)=\alpha u+\alpha v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+3) 
+\begin_inset Formula $1\cdot v=v$
+\end_inset
+
+.
+ (ненулевой элемент поля, умноженный на элемент пространства не дает нуля).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Плохой пример:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $F$
+\end_inset
+
+ — поле, 
+\begin_inset Formula $V\neq\{0\}$
+\end_inset
+
+ — абелева группа.
+ Положим, 
+\begin_inset Formula $\alpha v=0\ \forall\alpha\in F,v\in V$
+\end_inset
+
+.
+ Но эту штуку мы не хотим называть векторным пространством.
+ Именно для этого предназначена аксиоме №3.
+ Это удовлетворяет аксиомам 1, 2, но не является векторным пространством.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Терминология:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Элементы поля 
+\begin_inset Formula $F$
+\end_inset
+
+ будут обычно называться числами, вне зависимости от того, бегемоты они
+ или крокодилы, и обозначаться будут греческими буквами.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Элементы абелевой группы 
+\begin_inset Formula $V$
+\end_inset
+
+ называются векторами, хотя могут и не иметь отношения к векторам, и обозначаютс
+я маленькими латинскими буквами.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Примеры векторных пространств:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+0) 
+\begin_inset Formula $\{0\}=V$
+\end_inset
+
+, умножение задается 
+\begin_inset Formula $\alpha\cdot0=0$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\alpha\in F$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) 
+\begin_inset Formula $V=F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+n) 
+\begin_inset Formula $F^{n}=\left\lbrace \left(\begin{matrix}\alpha_{1}\\
+...\\
+\alpha_{n}
+\end{matrix}\right)|\alpha_{i}\in F\right\rbrace $
+\end_inset
+
+, 
+\begin_inset Formula $\left(\begin{matrix}\alpha_{1}\\
+...\\
+\alpha_{n}
+\end{matrix}\right)+\left(\begin{matrix}\beta_{1}\\
+...\\
+\beta_{n}
+\end{matrix}\right)=\left(\begin{matrix}\alpha_{1}+\beta_{1}\\
+...\\
+\alpha_{n}+\beta_{n}
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\gamma\cdot\left(\begin{matrix}\beta_{1}\\
+...\\
+\beta_{n}
+\end{matrix}\right)=\left(\begin{matrix}\gamma\beta_{1}\\
+...\\
+\gamma\beta_{n}
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+F) 
+\begin_inset Formula $X$
+\end_inset
+
+ — множество, 
+\begin_inset Formula $V$
+\end_inset
+
+ — векторное пространство.
+ 
+\begin_inset Formula $Func(X,V)$
+\end_inset
+
+ — множество всех функций из 
+\begin_inset Formula $X$
+\end_inset
+
+ в 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Это множество также является векторным пространством.
+ Если у нас есть функции 
+\begin_inset Formula $f,g:X\to V$
+\end_inset
+
+, то 
+\begin_inset Formula $(f+g)x=f(x)+g(x)$
+\end_inset
+
+ и 
+\begin_inset Formula $(\alpha f)(x)=\alpha f(x)\ \ \alpha\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+П (поле)) 
+\begin_inset Formula $F\subseteq K$
+\end_inset
+
+ (поля).
+ Тогда 
+\begin_inset Formula $K$
+\end_inset
+
+ можно рассматривать как векторное пространство над 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+В) Множество векторов на плоскости или в n-мерном пространстве является
+ векторным пространством над полем вещественных чисел.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+G) 
+\begin_inset Formula $(G,+)$
+\end_inset
+
+ — абелева группа, предположим, что для некоторого простого 
+\begin_inset Formula $p$
+\end_inset
+
+ сумма 
+\begin_inset Formula $p$
+\end_inset
+
+ штук элементов группы равна нулю: 
+\begin_inset Formula $p\cdot g=0,\ \forall g\in G$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $G$
+\end_inset
+
+ — векторное пространство над 
+\begin_inset Formula $\mathbb{Z}/p\mathbb{Z}$
+\end_inset
+
+ с операцией 
+\begin_inset Formula $n\cdot v=\underbrace{v+v+v+v}\limits _{n}\ \forall n\in\mathbb{Z}/p\mathbb{Z},\ \forall v\in G$
+\end_inset
+
+, (так как 
+\begin_inset Formula $pv=0$
+\end_inset
+
+, то это определение не зависит от выбора представителя класса 
+\begin_inset Formula $n+p\mathbb{Z}$
+\end_inset
+
+) (берем простое, чтобы эта штука была полем).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+М) 
+\begin_inset Formula $F[t]$
+\end_inset
+
+ — векторное пространство над 
+\begin_inset Formula $F$
+\end_inset
+
+ относительно обычных операций.
+ 
+\begin_inset Formula $F\subseteq R$
+\end_inset
+
+, где 
+\begin_inset Formula $F$
+\end_inset
+
+ — поле, 
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо.
+ Тогда еще и 
+\begin_inset Formula $R$
+\end_inset
+
+ — векторное пространство над 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Свойства (
+\begin_inset Formula $V$
+\end_inset
+
+ — векторное пространство над 
+\begin_inset Formula $F$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) 
+\begin_inset Formula $0\cdot v=0_{v}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) 
+\begin_inset Formula $\alpha\cdot0_{v}=0_{v}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+3) 
+\begin_inset Formula $(-1)\cdot v=-v$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+4) 
+\begin_inset Formula $(-\alpha)v=\alpha\cdot(-v)=-(\alpha v)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+И еще дофига
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ называется подпространством в 
+\begin_inset Formula $V$
+\end_inset
+
+, если оно само по себе является пространством относительно операций, заданных
+ в 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Обозначение 
+\begin_inset Formula $U\leq V$
+\end_inset
+
+ означает 
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset Formula $U$
+\end_inset
+
+ является подпространством 
+\begin_inset Formula $V$
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма:
+\series default
+ 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ подпространство, если 
+\begin_inset Formula $\forall\alpha\in F,u_{1},u_{2}\in U$
+\end_inset
+
+, то 
+\begin_inset Formula $u_{1}+u_{2}\in U$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha u_{1}\in U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказать самостоятельно
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: если 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+.
+ Подпространство, порожденное 
+\begin_inset Formula $S$
+\end_inset
+
+ — это наименьшее подпространство, содержащее 
+\begin_inset Formula $S$
+\end_inset
+
+ (обозначение 
+\begin_inset Formula $<S>_{F}$
+\end_inset
+
+ — подпространство, порожденное 
+\begin_inset Formula $S$
+\end_inset
+
+ (также называется линейной оболочкой) (буква 
+\begin_inset Formula $F$
+\end_inset
+
+ обычно не ставится)).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+ (следствие из предыдущей леммы):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) Пересечение подпространств является подпространством.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) Сумма подпространств является подпространством: 
+\begin_inset Formula $U,W$
+\end_inset
+
+ — подпространства в 
+\begin_inset Formula $V$
+\end_inset
+
+, тогда 
+\begin_inset Formula $U+W=\{u+w|u\in U,w\in W\}\leq V$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма:
+\series default
+ 
+\begin_inset Formula $<S>=\{\alpha_{1}s_{1}+...+\alpha_{n}s_{n}|n\in\mathbb{N},\alpha_{i}\in F,s_{i}\in S\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство: 
+\begin_inset Formula $s_{i}\in S\subseteq<S>\Rightarrow\alpha_{i}s_{i}\in<S>\Rightarrow\sum\limits _{i=1}^{n}\alpha_{i}s_{i}\in<S>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Обратно: достаточно доказать, что правая часть является подпространством:
+ сложить или умножить два таких выражения и получить такое же выражение.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: Выражение 
+\begin_inset Formula $\alpha_{1}s_{1}+...+\alpha_{n}s_{n}$
+\end_inset
+
+ называется линейной комбинацией элементов 
+\begin_inset Formula $s_{1},...,s_{n}\in V$
+\end_inset
+
+ с коэффициентами 
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}\in F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Запись может быть сокращена как 
+\begin_inset Formula $\sum\limits _{i=1}^{n}\alpha_{i}s_{i}$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Обозначения: 
+\begin_inset Formula $\alpha\in F,v\in V$
+\end_inset
+
+, положим по определению 
+\begin_inset Formula $v\alpha=\alpha v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Обозначим 
+\begin_inset Formula $u=(u_{1},...,u_{n})$
+\end_inset
+
+, где 
+\begin_inset Formula $u_{1},...,u_{n}\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $a=\left(\begin{matrix}a_{1}\\
+...\\
+a_{n}
+\end{matrix}\right)$
+\end_inset
+
+, где 
+\begin_inset Formula $a_{1},...,a_{n}\in F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Тогда 
+\begin_inset Formula $u\cdot a=\sum\limits _{i=1}^{n}u_{i}a_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $u=(u_{1},...,u_{n})$
+\end_inset
+
+ — кортеж векторов.
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ — линейно независимый, если 
+\begin_inset Formula $\forall a\in F^{n}\setminus\{0\}$
+\end_inset
+
+ (столбец нулей) 
+\begin_inset Formula $ua\neq0$
+\end_inset
+
+, и линейно зависимый.
+ Если 
+\begin_inset Formula $\exists a\in F^{n}\setminus\{0\}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $ua=0$
+\end_inset
+
+, то 
+\begin_inset Formula $u$
+\end_inset
+
+ зависимое, а равенство 
+\begin_inset Formula $ua=0$
+\end_inset
+
+ называется линейной зависимостью между 
+\begin_inset Formula $u_{1},...,u_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Множество 
+\begin_inset Formula $\{u_{1},...,u_{n}\}$
+\end_inset
+
+ линейно независимое, (здесь 
+\begin_inset Formula $u_{i}\neq u_{j}$
+\end_inset
+
+ при 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+) если 
+\begin_inset Formula $(u_{1},...,u_{n})$
+\end_inset
+
+ линейно независимы.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема:
+\series default
+ Множество называется линейно независимым, если его любое конечное подмножество
+ линейно независимо.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $S$
+\end_inset
+
+ — линейно независимо, если любое конечное подмножество линейно независимо.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $S$
+\end_inset
+
+ — система образующих (пространства 
+\begin_inset Formula $V$
+\end_inset
+
+) если 
+\begin_inset Formula $<S>=V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец тринадцатой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: Базис — это линейно независимая система образующих.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ — векторное пространство, 
+\begin_inset Formula $\sum\limits _{s\in S}\alpha_{s}\cdot s$
+\end_inset
+
+, где 
+\begin_inset Formula $\alpha_{s}=0$
+\end_inset
+
+ кроме конечного числа.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ (несколько эквивалентных определений базиса).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $V$
+\end_inset
+
+ — векторное пространство, 
+\begin_inset Formula $s\subseteq V$
+\end_inset
+
+, драма разворачивается над полем 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ Следующие условия эквивалентны:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+1) 
+\begin_inset Formula $S$
+\end_inset
+
+ — базис по определению.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+2) 
+\begin_inset Formula $S$
+\end_inset
+
+ — максимальная (по включению) линейно независимая система.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+3) 
+\begin_inset Formula $S$
+\end_inset
+
+ — минимальная (по включению) система образующих.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+4) 
+\begin_inset Formula $\forall v\in V\ \exists\alpha_{s}\in F$
+\end_inset
+
+ (по 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, все 
+\begin_inset Formula $\alpha_{s}=0$
+\end_inset
+
+ кроме конечного числа).
+ 
+\begin_inset Formula $v=\sum\limits _{s\in S}\alpha_{s}s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(1) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (2)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $v\in V$
+\end_inset
+
+.
+ По определению базиса, 
+\begin_inset Formula $S$
+\end_inset
+
+ — система образующих.
+ Поэтому элемент 
+\begin_inset Formula $v=\sum\limits _{i=1}^{n}\alpha_{i}s_{i}$
+\end_inset
+
+ при некотором 
+\begin_inset Formula $\alpha_{i}\in F$
+\end_inset
+
+, 
+\begin_inset Formula $s_{i}\in S$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $v-\sum\limits _{i=1}^{n}\alpha_{i}s_{i}=0$
+\end_inset
+
+ — нетривиальная линейная комбинация элементов 
+\begin_inset Formula $S\cup\{v\}$
+\end_inset
+
+ равна нулю 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $S\cup\{v\}$
+\end_inset
+
+ линейно зависимая, 
+\begin_inset Formula $\Rightarrow S$
+\end_inset
+
+ — максимальная линейно независимая.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(2) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (1)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $v\in V\setminus S$
+\end_inset
+
+.
+ Так как 
+\begin_inset Formula $S$
+\end_inset
+
+ — максимальная, то 
+\begin_inset Formula $S\cup\{v\}$
+\end_inset
+
+ линейно зависимая, следовательно, 
+\begin_inset Formula $\exists\alpha v+\sum\limits _{i=1}^{n}\alpha_{i}s_{i}=0$
+\end_inset
+
+ при 
+\begin_inset Formula $\alpha_{j},\alpha_{i}\in F,\ s\in S$
+\end_inset
+
+, (при этом 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ не все нули).
+ Получается, что 
+\begin_inset Formula $\alpha_{i}=0$
+\end_inset
+
+, противоречие.
+ Если же 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+, то 
+\begin_inset Formula $v=\sum\limits _{i=1}^{n}\frac{\alpha_{i}}{\alpha}s_{i}\in<S>$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Остальное доказать самостоятельно.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+: В любом векторном пространстве существует базис.
+ Точнее, пусть 
+\begin_inset Formula $X\subseteq Y\subseteq V$
+\end_inset
+
+, где 
+\begin_inset Formula $V$
+\end_inset
+
+ — векторное пространство, 
+\begin_inset Formula $X$
+\end_inset
+
+ — линейно независимый, а 
+\begin_inset Formula $Y$
+\end_inset
+
+ — система образующих.
+ Тогда 
+\begin_inset Formula $\exists$
+\end_inset
+
+ базис 
+\begin_inset Formula $B$
+\end_inset
+
+: 
+\begin_inset Formula $X\subseteq B\subseteq Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Без доказательства.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Данное утверждение очевидно для конечномерных пространств, но не очевидно
+ для бесконечномерных пространств.
+ Невозможно выбрать несчетный базис.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Возьмем вектор.
+ Он линейно независим.
+ Если это не все пространство, возьмем вектор, не лежащий в его линейной
+ оболочке, образуем множество этими векторами.
+ Получим плоскость.
+ Если это не все пространство, возьмем еще один вектор, не лежащий в данной
+ плоскости и так далее.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: Пространство называется конечномерным, если в нем существует
+ конечный базис.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Соглашение: Если 
+\begin_inset Formula $V$
+\end_inset
+
+ — конечномерное, то базисом будет называться упорядоченный набор векторов,
+ обладающий свойствами базиса.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Два неколлинеарных вектора на плоскости образуют базис.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: Если 
+\begin_inset Formula $f=(f_{1},...,f_{n})$
+\end_inset
+
+ — базис, а 
+\begin_inset Formula $v\in V$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $v=\sum\limits _{i=1}^{n}f_{i}\alpha_{i}$
+\end_inset
+
+, то 
+\begin_inset Formula $v_{f}=\left(\begin{matrix}\alpha_{1},\\
+...\\
+\alpha_{n}
+\end{matrix}\right)$
+\end_inset
+
+ называется столбцом координат 
+\begin_inset Formula $v$
+\end_inset
+
+ в базисе 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение столбца координат: 
+\begin_inset Formula $v=fv_{f},u=fu_{f},v+u=f(v_{f}+u_{f})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\alpha v=v\alpha=(fv_{f})\alpha=f(v_{f}\alpha)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Следовательно, 
+\begin_inset Formula $(v+u)_{f}=v_{f}+u_{f}$
+\end_inset
+
+, 
+\begin_inset Formula $(\alpha v)_{f}=v_{f}\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Любое конечномерное пространство не отличимо от пространства столбцов.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Матрицы.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $U,V$
+\end_inset
+
+ — векторные пространства, 
+\begin_inset Formula $L:U\to V$
+\end_inset
+
+ — линейное отображение, если 
+\begin_inset Formula $\forall u_{1},u_{2}\in U,\alpha\in F$
+\end_inset
+
+, 
+\begin_inset Formula $L(u_{1}+u_{2})=L(u_{1})+L(u_{2})$
+\end_inset
+
+, 
+\begin_inset Formula $L(\alpha u_{1})=\alpha L(u_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Биективное линейное отображение называется изоморфизмом.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+: Если 
+\begin_inset Formula $L$
+\end_inset
+
+ — изоморфизм, то обратная к ней 
+\begin_inset Formula $L^{-1}$
+\end_inset
+
+ — тоже изоморфизм.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $L:U\to V$
+\end_inset
+
+ — линейное отображение, 
+\begin_inset Formula $f=(f_{1},...,f_{n})$
+\end_inset
+
+ — базис пространства 
+\begin_inset Formula $U$
+\end_inset
+
+, 
+\begin_inset Formula $g=(g_{1},...,g_{m})$
+\end_inset
+
+ — базис пространства 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Возьмем 
+\begin_inset Formula $u\in U$
+\end_inset
+
+: 
+\begin_inset Formula $u=\sum\limits _{i=1}^{n}f_{i}\alpha_{i},\left(\begin{matrix}\alpha_{1}\\
+...\\
+\alpha_{n}
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Предложение 
+\begin_inset Formula $L(u)=L(\sum\limits _{i=1}^{n}f_{i},\alpha_{i})=\sum\limits _{i=1}^{n}L(f_{i}\alpha_{i})=\sum\limits _{i=1}^{n}L(f_{i})\alpha_{i}$
+\end_inset
+
+.
+ Положим, 
+\begin_inset Formula $L(f_{i})=\sum\limits _{j=1}^{m}g_{i}\gamma_{ji}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Получили прямоугольную табличку, которая называется матрицей:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L_{f,g}=\left(\begin{matrix}\gamma_{11} & ... & \gamma_{1n}\\
+...\\
+\gamma_{m1} & ... & \gamma_{mn}
+\end{matrix}\right)$
+\end_inset
+
+ — матрица отображения 
+\begin_inset Formula $L$
+\end_inset
+
+ в базисах 
+\begin_inset Formula $f,g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L(u)\in V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L(u)_{g}=\sum\limits _{i=1}^{n}L(f_{i})_{g}\alpha$
+\end_inset
+
+, что запишем как 
+\begin_inset Formula $L_{f,g}u_{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\left(\begin{matrix}L(f_{1})_{g} & ... & L(f_{n})_{g}\end{matrix}\right)$
+\end_inset
+
+ что эквивалентно ранее записанной матрице.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+И эту штуку мы умножаем на вектор:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\left(\begin{matrix}L(f_{1})_{g} & ... & L(f_{n})_{g}\end{matrix}\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\left(\begin{matrix}\alpha_{1}\\
+...\\
+\alpha_{n}
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L_{f,g}=\left(\begin{matrix}\gamma_{11} & ... & \gamma_{1n}\\
+...\\
+\gamma_{m1} & ... & \gamma_{mn}
+\end{matrix}\right)\left(\begin{matrix}\alpha_{1}\\
+...\\
+\alpha_{n}
+\end{matrix}\right)=\left(\begin{matrix}\sum\limits _{i=1}^{n}\gamma_{1i}\alpha_{i}\\
+...\\
+\sum\limits _{i=1}^{n}\gamma_{mi}\alpha_{i}
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L:U\to V$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U$
+\end_inset
+
+, 
+\begin_inset Formula $g$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L_{f,g}=(L(f_{1})_{g},...,L(f_{n})_{g})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Вытекает из предложения ранее: 
+\begin_inset Formula $L(u)_{g}=L_{f,g}(u_{f})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Конец четырнадцатой лекции.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L:U\to V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $N:V\to W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(f_{1},...,f_{k})=f$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(g_{1},...,g_{n})=g$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(h_{1},...,h_{n})=h$
+\end_inset
+
+ — базис 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Берем композицию 
+\begin_inset Formula $N\circ L$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+У нас есть
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L_{f,g}=n\times k$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $N_{g,h}=m\times n$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(L\circ N)_{f,h}=N_{g,h}\cdot L_{f,g}=m\times k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $A$
+\end_inset
+
+ — матрица 
+\begin_inset Formula $m\times n$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ — матрица 
+\begin_inset Formula $n\times k$
+\end_inset
+
+, тогда произведением матриц 
+\begin_inset Formula $A$
+\end_inset
+
+ и 
+\begin_inset Formula $B$
+\end_inset
+
+ называется матрица 
+\begin_inset Formula $C=A\cdot B$
+\end_inset
+
+ размера ...
+ с элементами 
+\begin_inset Formula $c_{i,j}=\sum\limits _{l=1}^{n}a_{i,l}\cdot b_{l,j}=a_{i*}b_{*j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+ 
+\begin_inset Formula $(N\circ L)_{f,h}=N_{g,h}\cdot L_{f,g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(N\circ L)(x)_{h}=N(L(x))_{h}=N_{g,h}\cdot L(x)_{g}=N_{g,h}\cdot(L_{f,g}\cdot x_{f})=(N_{g,h}\cdot L_{f,g})(x_{f})$
+\end_inset
+
+ — мы хотим доказать последнее равенство.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $N_{g,h}=A=(a_{ij})_{1\leq j,j\leq n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $L_{f,g}=B=(b_{ij})_{i,j=1}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $x_{f}=\left(\begin{matrix}\alpha_{1}\\
+...\\
+\alpha_{k}
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Левая часть:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $A\cdot(Bx_{f})=A\cdot y,\ y_{j}=b_{j*}x_{f}=\sum\limits _{r=1}^{k}b_{jr}\alpha_{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $y$
+\end_inset
+
+ — столбец той же высоты, сколько строчек в матрице 
+\begin_inset Formula $N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $(Ay)_{p}=a_{p*}y=\sum\limits _{s=q}^{n}a_{ps}y_{s}=\sum\limits _{s=1}^{n}\sum\limits _{r=1}^{k}a_{ps}b_{sr}\alpha_{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Правая часть:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $((AB)x_{f})_{p}=(Cx_{f})_{p}=C_{p*}x_{f}=\sum\limits _{r=1}^{k}c_{pr}\alpha_{r}=\sum\limits _{r=1}^{k}\sum\limits _{l=1}^{n}a_{pl}b_{lr}\alpha_{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+(буква 
+\begin_inset Formula $p$
+\end_inset
+
+ взялась потому, что считаем 
+\begin_inset Formula $p$
+\end_inset
+
+-ый элемент).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Единственность матричного оператора.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\forall x\in U:L(x)_{g}=L_{f,g}x_{f}=Dx_{f}$
+\end_inset
+
+; если 
+\begin_inset Formula $x=f\cdot a$
+\end_inset
+
+, то 
+\begin_inset Formula $x_{f}=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $x_{f}=\left(\begin{matrix}0\\
+0\\
+...\\
+0\\
+1\\
+0\\
+...\\
+0
+\end{matrix}\right)$
+\end_inset
+
+, где единица стоит на 
+\begin_inset Formula $i$
+\end_inset
+
+ месте.
+ Тогда 
+\begin_inset Formula $Dx_{f}=d_{xi}=\left(\begin{matrix}d_{1i}\\
+...\\
+d_{ni}%sche
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Таким образом, 
+\begin_inset Formula $i$
+\end_inset
+
+-тый столбец 
+\begin_inset Formula $L_{f,g}$
+\end_inset
+
+ совпадает с 
+\begin_inset Formula $i$
+\end_inset
+
+-тым столбцом 
+\begin_inset Formula $D$
+\end_inset
+
+ 
+\begin_inset Formula $\forall i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Лемма
+\series default
+ о замене:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $S$
+\end_inset
+
+ — базис векторного пространства 
+\begin_inset Formula $V$
+\end_inset
+
+ (все комментарии даны для трехмерного школьного пространства)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $u\in S$
+\end_inset
+
+, 
+\begin_inset Formula $v\in V$
+\end_inset
+
+, 
+\begin_inset Formula $v\notin<S\setminus\{u\}>$
+\end_inset
+
+.
+ (выкидываем один из трех некомпланарных векторов)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Тогда 
+\begin_inset Formula $S\setminus\{u\}\cup\{v\}$
+\end_inset
+
+ — базис.
+ (заменяем этот вектор на другой, не равный ему)
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Так как 
+\begin_inset Formula $S$
+\end_inset
+
+ — базис, то
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $v=\sum\limits _{s\in S}\alpha_{s}s=\alpha_{u}u+\sum\limits _{s\in S\setminus\{u\}}\alpha_{s}\cdot s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Так как 
+\begin_inset Formula $v\notin<S\setminus\{u\}>$
+\end_inset
+
+, то 
+\begin_inset Formula $\alpha_{u}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $u=\frac{1}{\alpha_{u}}v+\sum\limits _{s\in S\setminus\{u\}}(-\frac{\alpha_{s}}{\alpha_{u}})s\ni<T>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Обозначим 
+\begin_inset Formula $T=S\setminus\{u\}\cup\{v\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $S\subseteq<T>\Rightarrow\underbrace{<S>\subseteq<T>}\limits _{=V}\subseteq V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Отсюда 
+\begin_inset Formula $T$
+\end_inset
+
+ — система образующих.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sum\limits _{t\in T}\beta_{t}t=0$
+\end_inset
+
+ (почти все 
+\begin_inset Formula $\beta_{t}=0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $\sum\limits _{t\in T}\beta_{t}t=\beta_{v}v+\sum\limits _{t\in S\setminus\{u\}}\beta_{t}t=\beta_{v}\alpha_{u}u+\beta_{v}\sum\limits _{t\in S\setminus\{u\}}\alpha_{s}s+\sum\limits _{t\in S\setminus\{u\}}\beta_{t}t$
+\end_inset
+
+ — линейная комбинация векторов.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Так как 
+\begin_inset Formula $S$
+\end_inset
+
+ линейно независима, то все коэффициенты равны нулю, в частности, 
+\begin_inset Formula $\beta_{v}\alpha_{u}=0\Rightarrow\beta_{v}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow\sum\limits _{t\in S\setminus\{u\}}\beta_{t}t=0\Rightarrow\beta_{t}=0\ \forall t\in T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Таким образом, 
+\begin_inset Formula $T$
+\end_inset
+
+ линейно независима 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ — базис.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+Теорема
+\series default
+: Любые 2 базиса данного пространства равномощны.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Доказательство (только для конечномерных пространств):
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Formula $V$
+\end_inset
+
+ — векторное пространство, 
+\begin_inset Formula $f=(f_{1},...,f_{n})$
+\end_inset
+
+ — базис.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Пусть 
+\begin_inset Formula $s$
+\end_inset
+
+ — базис (необязательно конечный).
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+По индукции:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Рассмотрим пространство 
+\begin_inset Formula $<f_{2},...,f_{n}>$
+\end_inset
+
+ (выкинули 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+).
+ Если бы это пространство было равно всему пространству, то это означало
+ бы, что 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ принадлежало бы линейной оболочке: 
+\begin_inset Formula $f_{1}\in<f_{2},...,f_{n}>$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow f_{1}=\sum\limits _{i=2}^{n}f_{i}\alpha_{i}$
+\end_inset
+
+, что противоречит линейной независимости.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Если бы 
+\begin_inset Formula $S\subseteq<f_{2},...,s_{n}>$
+\end_inset
+
+, то 
+\begin_inset Formula $V=<S>\subseteq<f_{2},...,f_{n}>$
+\end_inset
+
+, а это не так по только что доказанному.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Значит, 
+\begin_inset Formula $\exists s_{1}\in S:s_{1}\notin<f_{2},...,f_{n}>$
+\end_inset
+
+, тогда по лемме о замене мы можем сказать, что 
+\begin_inset Formula $(s_{1},f_{2},...,f_{n})$
+\end_inset
+
+ — базис.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Аналогично, 
+\begin_inset Formula $<s_{1},f_{3},...,f_{n}>\neq V$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow\exists s_{2}\in S:\ s_{2}\notin<s_{1},f_{3},...,f_{n}>$
+\end_inset
+
+, по лемме 
+\begin_inset Formula $(s_{1},s_{2},f_{3},...,f_{n})$
+\end_inset
+
+.
+ Продолжая процесс, найдём 
+\begin_inset Formula $s_{1},...,s_{n}\in S$
+\end_inset
+
+, такие, что они образуют базис (заместив все элементы из 
+\begin_inset Formula $f$
+\end_inset
+
+).
+ Значит, 
+\begin_inset Formula $(s_{1},...,s_{n})=s$
+\end_inset
+
+ — линейно независимый набор, 
+\begin_inset Formula $S\supseteq\{s_{1},...,s_{n}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\{s_{1},...,s_{n}\}$
+\end_inset
+
+ — максимальный линейно независимый набор, следовательно, 
+\begin_inset Formula $S=\{s_{1},...,s_{n}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Определение: 
+\begin_inset Formula $\dim V$
+\end_inset
+
+ — размерность пространства 
+\begin_inset Formula $V$
+\end_inset
+
+ — мощность базиса.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,10154 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[warn]{mathtext}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding T2A
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер Автор не несет ответственности за любой ущерб, причиненный Вам
+ при использовании данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ 
+\end_layout
+
+\begin_layout Standard
+Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточн
+ости:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Внимание: данный документ не поддерживается и поддерживаться не будет! Сообщения
+ об ошибках НЕ рассматриваются, пулл реквесты НЕ принимаются! Если Вы хотите
+ поддерживать этот документ - форкните проект на Github.
+ Спасибо за понимание
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема об отсутствии рационального числа, квадрат которого равен двум.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+: не существует рационального числа, квадрат которого равен 2
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{equation}
+1^{2}+1^{2}={\left(\frac{m}{n}\right)}^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Допустим, что есть
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{equation}
+{\left(\frac{m}{n}\right)}^{2}=2\Leftrightarrow\frac{m^{2}}{n^{2}}=2;
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $m$
+\end_inset
+
+ и 
+\begin_inset Formula $n$
+\end_inset
+
+ общих делителей не имеют, иначе, на них можно было бы сократить, значит,
+ 
+\begin_inset Formula $(m,n)=1$
+\end_inset
+
+ — взаимно простые.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Выразим 
+\begin_inset Formula $m^{2}$
+\end_inset
+
+ как 
+\begin_inset Formula $m^{2}=2n^{2}$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $m^{2}$
+\end_inset
+
+ — четное, тогда и 
+\begin_inset Formula $m$
+\end_inset
+
+ — четное.
+ Представим 
+\begin_inset Formula $m=2k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $(2k)^{2}=4k^{2}\Leftrightarrow n^{2}=2k^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Значит, 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ — четное, а значит, m и n имеют общий делитель.
+ Приходим к противоречию.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Аксиома Архимеда.
+ Теорема о плотности рациональных чисел.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Аксиома
+\series default
+ Архимеда (3 век до н.
+ э.): 
+\begin_inset Formula 
+\begin{equation}
+x,y>0\Rightarrow\exists n\in\mathbb{N}:y<nx<(n+1)x
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Quotes ard
+\end_inset
+
+Если даны 
+\begin_inset Formula $x$
+\end_inset
+
+ и 
+\begin_inset Formula $y$
+\end_inset
+
+ и одно из них больше другого, то отложив достаточное (
+\begin_inset Formula $n$
+\end_inset
+
+) количество раз меньшее число, можно покрыть большее
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о плотности рациональных чисел:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для любых рациональных 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+ найдется рациональное 
+\begin_inset Formula $r$
+\end_inset
+
+, которое лежит между ними.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $a,b,\in\mathbb{Q},a<b$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists r\in\mathbb{Q}:a<r<b$
+\end_inset
+
+ — Это называется плотностью рациональных чисел.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Т.е.
+ множество рациональных чисел плотно на вещественной прямой.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $a>0$
+\end_inset
+
+ и 
+\begin_inset Formula $b>a$
+\end_inset
+
+, то 
+\begin_inset Formula $c=b-a$
+\end_inset
+
+, где 
+\begin_inset Formula $c>0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists n$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $1<nc$
+\end_inset
+
+ (по аксиоме Архимеда).
+ Отсюда 
+\begin_inset Formula $\frac{1}{n}<c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ наибольшее из тех, что 
+\begin_inset Formula $\frac{m}{n}\leq a$
+\end_inset
+
+.
+ Значит, следующее 
+\begin_inset Formula $\frac{m+1}{n}$
+\end_inset
+
+ будет 
+\begin_inset Formula $>a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $r=\frac{m+1}{n}$
+\end_inset
+
+, где 
+\begin_inset Formula $r<b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теперь докажем, что 
+\begin_inset Formula $r\in(a,b)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $b-r=b-\frac{m}{n}-\frac{1}{n}\geq b-a-\frac{1}{n}=c-\frac{1}{n}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теорема доказана для положительных а.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $a=0$
+\end_inset
+
+, 
+\begin_inset Formula $0<b$
+\end_inset
+
+, то 
+\begin_inset Formula $c=b-a=b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $0<\frac{1}{n}<b$
+\end_inset
+
+ (т.к.
+ 
+\begin_inset Formula $b=c$
+\end_inset
+
+) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $a<0<b,$
+\end_inset
+
+ то мы можем взять 
+\begin_inset Formula $r=0$
+\end_inset
+
+; 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $a<b<0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Рассмотрим 
+\begin_inset Formula $b'=-b$
+\end_inset
+
+ и 
+\begin_inset Formula $a'=-a$
+\end_inset
+
+: 
+\begin_inset Formula $b'<a'<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $c'=b'-a'$
+\end_inset
+
+, 
+\begin_inset Formula $c<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists n>0:nc<-1\Rightarrow c<-\frac{1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists\frac{m'}{n}\geq a'$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\frac{m'}{n}$
+\end_inset
+
+ — наименьшее из тех, что 
+\begin_inset Formula $\frac{m'}{n}\geq a'$
+\end_inset
+
+.
+ Следовательно:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\frac{m'-1}{n}<a$
+\end_inset
+
+.
+ 
+\begin_inset Formula $r'=\frac{m'-1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $b'-r'=b'-\frac{m'}{n}+\frac{1}{n}\leq b'-a'+\frac{1}{n}=c'+\frac{1}{n}<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Аксиома полноты.
+ Существование корня квадратного из положительного числа.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X,Y\subset\mathbb{R}$
+\end_inset
+
+, где 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ не пусты
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение: 
+\begin_inset Formula $X$
+\end_inset
+
+ левее 
+\begin_inset Formula $Y$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall x\in X,\forall y\in Y:x\leq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Аксиома:
+\series default
+ Если 
+\begin_inset Formula $Х$
+\end_inset
+
+ левее 
+\begin_inset Formula $Y$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists\ с\in\mathbb{R}$
+\end_inset
+
+ для которого:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall x\in X,y\in Y$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $x\leq c\leq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Докажем, что всякое положительное число имеет квадратный корень:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $a>0$
+\end_inset
+
+ то 
+\begin_inset Formula $\exists c>0$
+\end_inset
+
+, 
+\begin_inset Formula $c^{2}=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X=\{x\in\mathbb{R}|x>0\ и\ x^{2}<a\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $Y=\{y\in\mathbb{R}|y>0\ и\ y^{2}>a\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Рассмотрим 
+\begin_inset Formula $a>1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+(Если 
+\begin_inset Formula $a<1$
+\end_inset
+
+ то найдется 
+\begin_inset Formula $\frac{1}{a}=b^{2}\Leftrightarrow\frac{1}{b^{2}}=a$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\frac{1}{b}$
+\end_inset
+
+ — искомое число).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $1\in X\Rightarrow1^{2}<a\Leftrightarrow a<a^{2}\Rightarrow a\in Y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x^{2}<a<y^{2}\Rightarrow x^{2}<y^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $0<y^{2}-x^{2}=(y-x)(x+y)$
+\end_inset
+
+, т.к.
+ 
+\begin_inset Formula $(x+y)$
+\end_inset
+
+ — всяко положительное (сумма положительных чисел), то 
+\begin_inset Formula $0<(y-x)$
+\end_inset
+
+ т.е.
+ 
+\begin_inset Formula $x<y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists c:\forall x\in X,\forall y\in Y\ x\leq c\leq y$
+\end_inset
+
+ по аксиоме Дедекинда.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+(Докажем единственность 
+\begin_inset Formula $c$
+\end_inset
+
+: Предположим, существует 
+\begin_inset Formula $c'\neq c$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $c'^{2}=a$
+\end_inset
+
+.
+ Тогда, по вышесказанному, 
+\begin_inset Formula $x\leq c'\leq y\ \forall x\in X,y\in Y$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $c'=c$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Докажем, что 
+\begin_inset Formula $c^{2}=a$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство от противного:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Допустим, что
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $c^{2}<a$
+\end_inset
+
+.
+ Значит, существует 
+\begin_inset Formula $(c+\frac{1}{n})^{2}\geq a$
+\end_inset
+
+, 
+\begin_inset Formula $\forall n\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a\leq(c+\frac{1}{n})^{2}=c^{2}+\frac{2c}{n}+\frac{1}{n^{2}}\leq c^{2}+\frac{2c+1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a-c^{2}\leq\frac{2c+1}{n}\ \forall n$
+\end_inset
+
+.
+ Приходим к противоречию, т.к.
+ по аксиоме Архимеда не существует бесконечно малых отрезков.
+ Следовательно, 
+\begin_inset Formula $c^{2}\geq a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Допустим, что
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $c^{2}>a$
+\end_inset
+
+.
+ Значит, существует 
+\begin_inset Formula $(c-\frac{1}{n})^{2}\leq a$
+\end_inset
+
+, 
+\begin_inset Formula $\forall n\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a\geq(c-\frac{1}{n})^{2}=c^{2}-\frac{2c}{n}+\frac{1}{n^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a-c^{2}\geq-\frac{2c}{n}+\frac{1}{n^{2}}\Leftrightarrow a-c^{2}\geq-\frac{2c}{n}-\frac{1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $c^{2}-a\leq\frac{2c-1}{n}\ \forall n$
+\end_inset
+
+.
+ Приходим к аналогичному противоречию.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, 
+\begin_inset Formula $c^{2}=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Границы числовых множеств.
+ Существование точной верхней и точной нижней границы.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Рассматриваем 
+\begin_inset Formula $x\subset\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $c$
+\end_inset
+
+ — верхняя граница 
+\begin_inset Formula $X$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall x\in X\ x\leq c$
+\end_inset
+
+.
+ 
+\begin_inset Formula $c$
+\end_inset
+
+ — нижняя граница 
+\begin_inset Formula $X$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall x\in X\ x\geq c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Множество называется ограниченным сверху, если существует верхняя граница.
+ Или ограниченным снизу, если существует нижняя граница.
+ Если существуют и верхняя, и нижняя границы, то множество называется ограниченн
+ым.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+.
+ Предположим, что 
+\begin_inset Formula $Х$
+\end_inset
+
+ ограничено сверху.
+ Тогда точная верхняя граница (верхняя грань) 
+\begin_inset Formula $Х$
+\end_inset
+
+ есть наименьшая из верхних границ.
+ (supremum).
+ Обозначение: 
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset Formula $\sup X$
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Аналогично определяется точная нижняя граница - наибольшая из нижних границ
+ (нижняя грань) (infinum).
+ Обозначение: 
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset Formula $\inf X$
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+: Если множество ограничено сверху, то супремум всегда существует.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $X\neq\varnothing$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ - ограничено сверху.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $Y$
+\end_inset
+
+ — множество верхних границ для 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall x\in X,\forall y\in Yx\leq y$
+\end_inset
+
+ и 
+\begin_inset Formula $y$
+\end_inset
+
+ — верхняя граница.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Значит, 
+\begin_inset Formula $X$
+\end_inset
+
+ левее 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ И мы попадаем в условие аксиомы полноты.
+ Значит, 
+\begin_inset Formula $\existsс:\forall x\in X\ x\leqс$
+\end_inset
+
+; по определению 
+\begin_inset Formula $с$
+\end_inset
+
+ — верхняя граница.
+ 
+\begin_inset Formula $\forall y\in Y\ с\leq y$
+\end_inset
+
+ — 
+\begin_inset Formula $с$
+\end_inset
+
+ наименьшее.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, 
+\begin_inset Formula $с$
+\end_inset
+
+ — 
+\begin_inset Formula $\sup X$
+\end_inset
+
+, ч.т.д.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для инфимума:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+: Если множество ограничено снизу, то инфимум всегда существует.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $X\neq\varnothing$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ - ограничено снизу.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $Y$
+\end_inset
+
+ — множество нижних границ для 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall x\in X,\forall y\in Yx\geq y$
+\end_inset
+
+ и 
+\begin_inset Formula $y$
+\end_inset
+
+ — нижняя граница.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Значит, 
+\begin_inset Formula $Y$
+\end_inset
+
+ левее 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ И мы попадаем в условие аксиомы полноты.
+ Значит, 
+\begin_inset Formula $\existsс:\forall x\in X\ x\geqс$
+\end_inset
+
+; по определению 
+\begin_inset Formula $с$
+\end_inset
+
+ — нижняя граница.
+ 
+\begin_inset Formula $\forall y\in Y\ с\geq y$
+\end_inset
+
+ — 
+\begin_inset Formula $с$
+\end_inset
+
+ наибольшее.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, 
+\begin_inset Formula $с$
+\end_inset
+
+ — 
+\begin_inset Formula $\inf X$
+\end_inset
+
+, ч.т.д.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Лемма о вложенных промежутках 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Лемма
+\series default
+ о вложенных промежутках:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Рассмотрим промежуток 
+\begin_inset Formula $[a_{n},b_{n}]$
+\end_inset
+
+, где 
+\begin_inset Formula $a_{n}<b_{n}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $[a_{n},b_{n}]\supset[a_{n+1},b_{n+1}]\ \forall n\in\mathbb{N}$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists c\in\mathbb{R}\ c\in[a_{n},b_{n}]\forall n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+т.е.
+ 
+\begin_inset Formula $c$
+\end_inset
+
+ принадлежит всем промежуткам.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Требуется доказать, что 
+\begin_inset Formula $\forall a\in A,b\in B$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $a_{n}\leq b_{n}$
+\end_inset
+
+, тогда по аксиоме полноты 
+\begin_inset Formula $\exists c:a_{n}\leq c\leq b_{n}$
+\end_inset
+
+.
+ Для этого докажем, что 
+\begin_inset Formula $a_{n}<b_{k}\ \forall n,k\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $A=\{a_{n}|n=1,2,...\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $B=\{b_{n}|n=1,2,...\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall n,\forall k$
+\end_inset
+
+; 
+\begin_inset Formula $a_{n}\leq b_{k}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Промежутки вложенные, значит, 
+\begin_inset Formula $a_{n}\leq a_{n+1}$
+\end_inset
+
+, а 
+\begin_inset Formula $b_{n}\geq b_{n+1}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Ведь если: 
+\begin_inset Formula $x\in[a_{n},b_{n}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size large
+Левые концы промежутков возрастают, а правые - убывают.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $n<k$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Тогда 
+\begin_inset Formula $a_{n}\leq a_{n+1}\leq a_{k}<b_{k}$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $a_{n}<b_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $n>k$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Тогда 
+\begin_inset Formula $a_{n}\leq b_{n}\leq b_{k}$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $a_{n}<b_{k}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, 
+\begin_inset Formula $a_{n}<b_{n}\ \forall n\in\mathbb{N}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Уточнение для стягивающихся промежутков
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если длина отрезков стремится к 0:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\lim\limits _{n\to\infty}(b_{n}-a_{n})=0$
+\end_inset
+
+, то 
+\begin_inset Formula $c$
+\end_inset
+
+ — единственная точка всех отрезков.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\{[a_{n};b_{n}]\}_{n=1}^{\infty}$
+\end_inset
+
+ — стягивающаяся.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0\ \exists N_{\varepsilon}\in\mathbb{N}:\forall n\in N_{\varepsilon},n\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Уточнение: 
+\begin_inset Formula $|b_{n}-a_{n}|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists!c:a_{n}\leq c\leq b_{n}\ \forall n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $\exists c_{1},c_{2}:c_{1}<c_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X=\{a_{n}|n\in\mathbb{N}\},Y=\{b_{n}|n\in\mathbb{N}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a_{n}\leq c_{1}<c_{2}\leq b_{n}\Rightarrow b_{n}-a_{n}>c_{2}-c_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Противоречие, т.к.
+ 
+\begin_inset Formula $\forall\varepsilon>0,\ b_{n}-a_{n}<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Неравенство Бернулли.
+ Монотонность последовательности.
+ Определение числа 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Неравенство Бернулли.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Лемма:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+При 
+\begin_inset Formula $x\geq-1$
+\end_inset
+
+ выполняется неравенство 
+\begin_inset Formula $\forall n\in N\ (1+x)^{n}\geq1+nx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство производится с помощью индукционного перехода:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $(1+x)^{n+1}=(1+x)^{n}(1+x))\geq(1+nx)(1+x)=1+nx+x+x^{2}+nx^{2}=1+(n+1)x+nx^{2}>1+(n+1)x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отсюда: 
+\begin_inset Formula $(1+x)^{n+1}>1+(n+1)x$
+\end_inset
+
+.
+ Ч.т.д.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Даны последовательности: 
+\begin_inset Formula $x_{n}=(1+\frac{1}{n})^{n};\ y_{n}=(1+\frac{1}{n})^{n+1};\ n=1,2,3...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предположим, что 
+\begin_inset Formula $x_{n}<x_{n+1},\ y_{n}>y_{n+1},2<x_{n}<3,\ n>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Последовательность 
+\begin_inset Formula $x_{n}=(1+\frac{1}{n})^{n}$
+\end_inset
+
+ монотонна, если 
+\begin_inset Formula $x_{n}<x_{n+1}$
+\end_inset
+
+ или 
+\begin_inset Formula $x_{n}>x_{n+1}$
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow\frac{x_{n+1}}{x_{n}}>1$
+\end_inset
+
+ или 
+\begin_inset Formula $\frac{x_{n+1}}{x_{n}}<1$
+\end_inset
+
+.
+ Проверим последовательность на монотонность:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{eqnarray}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+frac{(1+
+\backslash
+frac{1}{n+1})^{n+1}}{({1+
+\backslash
+frac{1}{n}})^n} = 
+\backslash
+Bigr(1+
+\backslash
+frac{1}{n+1}
+\backslash
+Bigl)
+\backslash
+Bigr(
+\backslash
+frac{1+
+\backslash
+frac{1}{n+1}}{1+
+\backslash
+frac{1}{n}}
+\backslash
+Bigl)^n = 
+\backslash
+frac{n+2}{n+1}
+\backslash
+Bigr(
+\backslash
+frac{1+
+\backslash
+frac{1}{n+1}}{1+
+\backslash
+frac{1}{n}}
+\backslash
+Bigl)^n =  
+\backslash
+nonumber 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%= 
+\backslash
+frac{n+2}{n+1}
+\backslash
+Bigr(
+\backslash
+frac{n(n+2)}{(n+1)^2}
+\backslash
+Bigl)^n = 
+\backslash
+frac{n+2}{n+1}
+\backslash
+Bigr(
+\backslash
+frac{n^2+2n+1-1}{(n+1)^2}
+\backslash
+Bigl)^n
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%= 
+\backslash
+frac{n+2}{n+1}
+\backslash
+Bigr(1-
+\backslash
+frac{1}{(n+1)^2}
+\backslash
+Bigl)^n 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{multline}
+\frac{(1+\frac{1}{n+1})^{n+1}}{({1+\frac{1}{n}})^{n}}=\Bigr(1+\frac{1}{n+1}\Bigl)\Bigr(\frac{1+\frac{1}{n+1}}{1+\frac{1}{n}}\Bigl)^{n}=\frac{n+2}{n+1}\Bigr(\frac{1+\frac{1}{n+1}}{1+\frac{1}{n}}\Bigl)^{n}=\\
+=\frac{n+2}{n+1}\Bigr(\frac{n(n+2)}{(n+1)^{2}}\Bigl)^{n}=\frac{n+2}{n+1}\Bigr(\frac{n^{2}+2n+1-1}{(n+1)^{2}}\Bigl)^{n}=\frac{n+2}{n+1}\Bigr(1-\frac{1}{(n+1)^{2}}\Bigl)^{n}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Применим к последнему неравенство Бернулли:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{multline}
+\frac{n+2}{n+1}\Bigr(1-\frac{1}{(n+1)^{2}}\Bigl)^{n}>\frac{n+2}{n+1}\Bigr(1+\frac{-n}{(n+1)^{2}}\Bigl)=\frac{n+1+1}{n+1}\Bigr(1-\frac{n}{(n+1)^{2}}\Bigl)=\\
+=\Bigr(1+\frac{1}{n+1}\Bigl)\Bigr(1-\frac{n}{(n+1)^{2}}\Bigl)=1-\frac{n}{(n+1)^{2}}+\frac{1}{n+1}-\frac{n}{(n+1)^{3}}=\\
+=1+\frac{-n+n+1}{(n+1)^{2}}-\frac{n}{(n+1)^{3}}=1+\frac{1}{(n+1)^{2}}-\frac{1}{(n+1)^{3}}\\
+=1+\frac{n+1}{(n+1)^{3}}-\frac{n}{(n+1)^{3}}=1+\frac{1}{(n+1)^{3}}>1.
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, последовательность 
+\begin_inset Formula $x_{n}=(1+\frac{1}{n})^{n}$
+\end_inset
+
+ монотонна.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Последовательность 
+\begin_inset Formula $y_{n}=(1+\frac{1}{n})^{n+1}$
+\end_inset
+
+ монотонна, если 
+\begin_inset Formula $y_{n}<y_{n+1}$
+\end_inset
+
+ или 
+\begin_inset Formula $y_{n}>y_{n+1}$
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow\frac{y_{n+1}}{y_{n}}>1$
+\end_inset
+
+ или 
+\begin_inset Formula $\frac{y_{n+1}}{y_{n}}<1$
+\end_inset
+
+.
+ Проверим последовательность на монотонность:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{multline}
+\frac{(1+\frac{1}{n})^{n+1}}{(1+\frac{1}{n+1})^{n+2}}=\frac{n+1}{n+2}\Bigl(\frac{\frac{n+1}{n}}{\frac{n+2}{n+1}}\Bigr)^{n+1}=\frac{n+1}{n+2}\Bigl(\frac{(n+1)^{2}}{n(n+2)}\Bigr)=\frac{n+1}{n+2}\Bigl(\frac{n^{2}+2n+1}{n^{2}+2n}\Bigr)^{n+1}=\\
+=\frac{n+1}{n+2}\Bigl(1+\frac{1}{n(n+2)}\Bigr)^{n+1}\geq\frac{n+1}{n+2}\Bigl(1+\frac{n+1}{n(n+2)}\Bigr)=\Big(1-\frac{1}{n+2}\Big)\Big(1+\frac{n}{n(n+2)}+\frac{1}{n(n+2)}\Big)=\\
+=\Big(1-\frac{1}{n+2}\Big)\Big(1+\frac{1}{n+2}+\frac{1}{n(n+2)}\Big)=1+\frac{1}{n+2}+\frac{1}{n(n+2)}-\frac{1}{n+2}-\frac{1}{(n+2)^{2}}-\frac{1}{n(n+2)^{2}}=\\
+=1+\frac{n+2-1}{n(n+2)^{2}}-\frac{1}{(n+2)^{2}}=1+\frac{n+1-n}{n(n+2)^{2}}=1+\frac{1}{n(n+2)^{2}}>1
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, последовательность 
+\begin_inset Formula $y_{n}=(1+\frac{1}{n})^{n+1}$
+\end_inset
+
+ монотонна.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $y_{1}=4,\ 2<x_{n}<y_{n}<4,\ y_{5}<3\Rightarrow2<x_{n}<y_{n}<3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $e=\sup x=\inf y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Отображения и основные понятия 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отображение — математическое понятие, отражающее однозначную парную связь
+ элементов одного множества с элементами другого множества.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ сопоставляется по правилу Т, то точка 
+\begin_inset Formula $y=T(x)$
+\end_inset
+
+, при этом каждому x сопоставляется только одна, единственная точка 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+(X, T, Y), где: X — область определения (задания), Y — множество прибытия
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для отображения 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)$
+\end_inset
+
+ называется образом точки 
+\begin_inset Formula $x$
+\end_inset
+
+ на множестве 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f^{-1}(y)$
+\end_inset
+
+ называется прообразом точки 
+\begin_inset Formula $y$
+\end_inset
+
+ на множестве 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отображение 
+\begin_inset Formula $g:M\subset X\to Y$
+\end_inset
+
+, принимающее на 
+\begin_inset Formula $M$
+\end_inset
+
+ те же значения, что и 
+\begin_inset Formula $f$
+\end_inset
+
+ называется сужением отображения 
+\begin_inset Formula $f$
+\end_inset
+
+ на множество 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Композиция отображения - конструкция, которая по двум отображениям позволяет
+ построить новое отображение.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $T:X\rightarrow Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $S:Y\rightarrow Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $R(x)=S(T(x))$
+\end_inset
+
+ где 
+\begin_inset Formula $T(x)\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+обозначение: 
+\begin_inset Formula $R=S\circ T=ST$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $R=S\circ T$
+\end_inset
+
+ и 
+\begin_inset Formula $R=T\circ S$
+\end_inset
+
+ не обязательно равны! 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Естественная область определения:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Рассмотрим 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ и 
+\begin_inset Formula $g:Y'\to X$
+\end_inset
+
+.
+ Для того, чтобы была возможной композиция 
+\begin_inset Formula $h=f\circ g$
+\end_inset
+
+, требуется, чтобы точка принадлежала множеству 
+\begin_inset Formula $Y\cap Y'$
+\end_inset
+
+, следовательно, естественная область определения — 
+\begin_inset Formula $X=\{x|f(x)\in Y'\cap Y\}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Арифметические действия:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f$
+\end_inset
+
+, 
+\begin_inset Formula $g$
+\end_inset
+
+ определены на 
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Formula $(f+g)(x)=f(x)+g(x)$
+\end_inset
+
+, 
+\begin_inset Formula $(f\cdot g)(x)=f(x)\cdot g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $g(x)\neq0\ \forall x$
+\end_inset
+
+ : 
+\begin_inset Formula $\frac{f}{g}(x)=\frac{f(x)}{g(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $f$
+\end_inset
+
+ определено на 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $g$
+\end_inset
+
+ определено на 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, то 
+\begin_inset Formula $x_{0}=\{x\in X_{1}\cap X_{2}|g(x)\neq0\}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Декартово произведение:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для множеств 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ можно рассмотреть множество пар точек 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+, где 
+\begin_inset Formula $x\in X,y\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ и 
+\begin_inset Formula $(y,x)$
+\end_inset
+
+ - различны.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\{1,2\}\rightarrow^{\varphi}X\cup Y$
+\end_inset
+
+ : 
+\begin_inset Formula $\varphi(1)\in X,\varphi(2)\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Упорядоченная пара: 
+\begin_inset Formula $(\varphi(1),\varphi(2))$
+\end_inset
+
+ — пара точек, из которой выделена одна точка, которая названа первой.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Множество всех упорядоченных пар точек называется Декартовым произведением
+ множества 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ и обозначается 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Графиком функции называется 
+\begin_inset Formula $Г_{T}=\{(x,y)\in X\times Y|x\in DOM\ T,y=T(x)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Определения и свойства обратного отображения 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $T:X\rightarrow Y$
+\end_inset
+
+, 
+\begin_inset Formula $Y=ImT$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение: 
+\begin_inset Formula $S:Y\rightarrow X$
+\end_inset
+
+ называется обратным к T, если 
+\begin_inset Formula $S(T(x))=x\ \forall x\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Взаимно однозначные отображения и отображения "НА"
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $T(X)=Y$
+\end_inset
+
+, то T - 
+\begin_inset Quotes ard
+\end_inset
+
+Отображение НA
+\begin_inset Quotes ald
+\end_inset
+
+ (сюръекция)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отображение Т называется взаимно однозначным, если оно разные точки переводит
+ в разные.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall x\in X\ (x\neq x')\Rightarrow(T(x)\neq T(x'))$
+\end_inset
+
+ — инъекция.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $T:X\rightarrow Y$
+\end_inset
+
+ взаимно однозначно и является отображением НА (т.е.
+ является инъекцией и сюръекцией), то оно является биекцией (взаимно однозначным
+ соответствием).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ об условии существования обратного отображения:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $T:X\rightarrow Y$
+\end_inset
+
+.
+ Т - обратимо тогда и только тогда, когда Т взаимно однозначно.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Допустим, что отображение Т две точки переводит в одну.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $\exists S=T^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists x_{0},x'_{0}\in X$
+\end_inset
+
+ т.ч.
+ 
+\begin_inset Formula $T(x_{0})=T(x'_{0})=y_{0}$
+\end_inset
+
+, при этом 
+\begin_inset Formula $x_{0}\neq x'_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $S(y_{0})=S(T(x_{0}))=x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $S(y_{0})=S(T(x'_{0}))=x'_{0}\neq x_{0}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $T:X\rightarrow Y>Y_{0}=T(x)$
+\end_inset
+
+ — взаимно однозначное.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $y_{0}\in Y_{0}$
+\end_inset
+
+ 
+\begin_inset Formula $\exists x_{0}\in X:T(x_{0})=y_{0}$
+\end_inset
+
+.
+ Такая точка — единственная.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение обратного отображения 
+\begin_inset Formula $S:Y_{0}\rightarrow X$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall y\in Y_{0}\ S(y)$
+\end_inset
+
+ — та единственная точка, для которой 
+\begin_inset Formula $x\in X:y=T(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $S(T(x))=x$
+\end_inset
+
+, значит, 
+\begin_inset Formula $S(y)$
+\end_inset
+
+ — действительно обратная.
+ Теорема доказана.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Биекция.
+ Теорема об условиях биективности отображения 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о характеристике биекции:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $T:X\rightarrow Y$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ - биекция, 
+\begin_inset Formula $\Leftrightarrow\ \exists S:Y\rightarrow X$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $S(T(x))=x,\forall x\in X$
+\end_inset
+
+; 
+\begin_inset Formula $S^{-1}=T$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $T(S(y))=y,\forall y\in Y$
+\end_inset
+
+; 
+\begin_inset Formula $Y_{0}=T(x)=Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+При этом 
+\begin_inset Formula $S=T^{-1}$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предположим, что выполняются условия 1 и 2 выше.
+ Убедимся, что 
+\begin_inset Formula $T$
+\end_inset
+
+ — отображение НА.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $T(x)=Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $y\in Y,\ x=S(y)$
+\end_inset
+
+, тогда в силу условия (2) получаем:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $T(x)=T(S(y))=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Монотонные функции.
+ Теорема о существовании и характере монотонной обратной функции 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение: 
+\begin_inset Formula $f$
+\end_inset
+
+ возрастает, если 
+\begin_inset Formula $x,x'\in<a,b>,x<x'\Rightarrow f(x)\leq f(x')$
+\end_inset
+
+ и строго возрастает, если 
+\begin_inset Formula $f(x)<f(x')$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $f:<a,b>\rightarrow\mathbb{R}$
+\end_inset
+
+ строго монотонна, то существует обратная функция, которая так же строго
+ монотонна (при этом характер монотонности при переходе к обратной функции
+ не меняется (обратная к строго убывающей функции функция так же будет строго
+ убывающей))
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Докажем это:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $f$
+\end_inset
+
+ — возрастающая.
+ 
+\begin_inset Formula $y,y'\in Y=f(<a,b>),y<y'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f^{-1}(y)<f^{-1}(y')$
+\end_inset
+
+ — доказать.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Докажем от противного:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предположим, что 
+\begin_inset Formula $x=f^{-1}(y)\geq x'=f^{-1}(y')$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, 
+\begin_inset Formula $f(x)\geq f(x')$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=f(f^{-1}(y))=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x')=f(f^{-1}(y'))=y'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $y\geq y'$
+\end_inset
+
+ — противоречие.
+ Теорема доказана.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Окрестности и проколотые окрестности.
+ Определение точки сгущения числового множества 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение: 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+.
+ Окрестностью точки 
+\begin_inset Formula $a$
+\end_inset
+
+ называется любой интервал 
+\begin_inset Formula $(p,q)$
+\end_inset
+
+, которому принадлежит точка 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ (
+\begin_inset Formula $V(a),U(a)$
+\end_inset
+
+ — обозначение)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Допустим, мы можем сказать, что 
+\begin_inset Formula $a\in(0,+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Свойства окрестности:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Отделимость: если 
+\begin_inset Formula $a\neq b$
+\end_inset
+
+, то тогда у них есть окрестности, которые не пересекаются.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Пересечение двух окрестностей одной точки — снова окрестность.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Симметричная окрестность — 
+\begin_inset Formula $(a-\delta,a+\delta)$
+\end_inset
+
+, где 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V_{\delta}(a)$
+\end_inset
+
+ — дельта-окрестность.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) 
+\begin_inset Formula $x\in V_{\delta}(a)\Leftrightarrow|x-a|<\delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+5) Всякая окрестность точки 
+\begin_inset Formula $a$
+\end_inset
+
+ содержит в себе дельта-окрестность.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $U(a)$
+\end_inset
+
+ — окрестность точки 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $U(a)\setminus\{a\}=\dot{U}(a)$
+\end_inset
+
+ — проколотая окрестность.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x\in\dot{U}_{\delta}(a)\Leftrightarrow0<|x-a|<\delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предельные точки или точки сгущения.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение: 
+\begin_inset Formula $a$
+\end_inset
+
+ — предельная точка множества Х или точка сгущения, если справедливо следующее:
+ 
+\begin_inset Formula $\forall V(a)\ \exists x\in\mathbb{R}$
+\end_inset
+
+ со свойствами:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $x\in V$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $x\neq a$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $x\in X\Leftrightarrow X\cap\dot{V}(a)\neq\varnothing$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Определение предела функции.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R},$
+\end_inset
+
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $f:X\to\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение (на языке неравенств):
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L$
+\end_inset
+
+ — предел функции 
+\begin_inset Formula $f$
+\end_inset
+
+ в точку 
+\begin_inset Formula $a$
+\end_inset
+
+, если
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0,\exists\delta>0:\forall x\in X$
+\end_inset
+
+ из условия 
+\begin_inset Formula $0<|x-a|<\delta$
+\end_inset
+
+ вытекает неравенство 
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+, т.е.:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $0<|x-a|<\delta\Rightarrow|f(x)-L|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Обозначение: 
+\begin_inset Formula $\lim\limits _{x\rightarrow a}f(x)$
+\end_inset
+
+ или 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}L$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Переформулировка на языке окрестностей:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon<f(x)<L+\varepsilon$
+\end_inset
+
+, значит, 
+\begin_inset Formula $f(x)\in(L-\varepsilon,L+\varepsilon)=V_{\varepsilon}(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0\ \exists\delta>0:\ \forall x\in\dot{V}_{\delta}(a)\cap X\Rightarrow f(x)\in V_{\varepsilon}(L)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon$
+\end_inset
+
+ — окрестности точки L 
+\begin_inset Formula $\exists\delta$
+\end_inset
+
+ — окрестность точки 
+\begin_inset Formula $a$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x\in\dot{V}_{\delta}(a)\cap X\Rightarrow f(x)\in V_{\varepsilon}(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Поэтому можно сказать, что:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall U(L)$
+\end_inset
+
+ — дельта-окрестность, 
+\begin_inset Formula $\exists\delta>0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in\dot{V}_{\delta}(a)\cap X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\in U(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Окончательная формулировка:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall$
+\end_inset
+
+ окрестности 
+\begin_inset Formula $L\ U(L)$
+\end_inset
+
+ 
+\begin_inset Formula $\exists$
+\end_inset
+
+ окрестность 
+\begin_inset Formula $V(a)$
+\end_inset
+
+ в точке 
+\begin_inset Formula $a$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in\dot{V}(a)\cup X\Rightarrow f(x)\in U(L)$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предел сужения:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X_{0}\subset X,a$
+\end_inset
+
+ — точка сгущения 
+\begin_inset Formula $X_{0}$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $f_{0}=f|_{x_{0}}$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}C$
+\end_inset
+
+, то 
+\begin_inset Formula $f_{0}(x)\rightarrow_{x\rightarrow a}C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о стабилизации знака.
+ Локальная ограниченность функции 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о стабилизации знаков: 
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения, 
+\begin_inset Formula $f:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Если 
+\begin_inset Formula $\forall A,\ A<L$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists\delta>0$
+\end_inset
+
+: 
+\begin_inset Formula $\forall x\in\dot{V}_{\delta}(a)\cap X\Rightarrow f(x)>A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Если 
+\begin_inset Formula $\forall A,\ A>L$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists\delta>0$
+\end_inset
+
+: 
+\begin_inset Formula $\forall x\in\dot{V}_{\delta}(a)\cap X\Rightarrow f(x)<A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\varepsilon=L-A>0$
+\end_inset
+
+.
+ Тогда по определению предела 
+\begin_inset Formula $\exists\delta>0\ \forall x\in\dot{V}_{\delta}(a)\cap X$
+\end_inset
+
+, 
+\begin_inset Formula $|f(x)-L|<\varepsilon\Leftrightarrow L-\varepsilon<f(x)<L+\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $\varepsilon=L-A$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $L-\varepsilon<f(x)\Rightarrow L-\varepsilon=L-(L-A)=A<f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $\varepsilon=A-L$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f(x)<L+\varepsilon\Rightarrow L+\varepsilon=L+(A-L)=A>f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следствие (стабилизация знака):
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L>0\Rightarrow\exists V(a):\ \forall x\in\dot{V}(a)\cap X:f(x)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $L<0$
+\end_inset
+
+, 
+\begin_inset Formula $\exists U(a):\ \forall x\in\dot{U}(a)\cap X:f(x)<0$
+\end_inset
+
+ (существует окрестность точки 
+\begin_inset Formula $a$
+\end_inset
+
+, где значения функции имеют тот же знак, что и предел).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следствие (локальная ограниченность):
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+ (предел по Коши).
+ Возьмем 
+\begin_inset Formula $\varepsilon=1$
+\end_inset
+
+.
+ Перепишем как 
+\begin_inset Formula $-1<f(x)-L<1\Leftrightarrow L-1<f(x)<L+1$
+\end_inset
+
+.
+ Легко увидеть, что это и есть ограниченность.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о единственности предела 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о единственности предела:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ —точка сгущения, 
+\begin_inset Formula $f:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}L_{1}$
+\end_inset
+
+ и 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}L_{2}$
+\end_inset
+
+, то 
+\begin_inset Formula $L_{1}=L_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $L_{1}\neq L_{2}$
+\end_inset
+
+; не умаляя общности 
+\begin_inset Formula $L_{1}<L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L_{1}<A<L_{2}$
+\end_inset
+
+, A — число.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Воспользуемся второй частью теоремы о стабилизации знаков:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L_{1}<A\ \exists\delta_{1}>0\ \forall x\in\dot{V}_{\delta(a)_{1}}\cap X$
+\end_inset
+
+ : 
+\begin_inset Formula $f(x)<A$
+\end_inset
+
+; (a)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L_{2}>A\ \exists\delta_{2}>0\ \forall x\in\dot{V}_{\delta(a)_{2}}\cap X$
+\end_inset
+
+ : 
+\begin_inset Formula $f(x)>A$
+\end_inset
+
+; (b)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Не умаляя общности 
+\begin_inset Formula $\delta_{1}<\delta_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x\in V_{\delta_{1}}\Rightarrow x\in V_{\delta_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x\in\dot{V}_{\delta_{1}}(a)\Rightarrow x\in\dot{V}_{\delta_{2}}(a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $W=\dot{V}_{\delta_{1}}(a)\cap\dot{V}_{\delta_{2}}(a)\cap X\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Тогда для любого 
+\begin_inset Formula $x\in W$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $A<f(x)<A$
+\end_inset
+
+ — противоречие.
+ Теорема доказана.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о предельном переходе в неравенстве 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ (о предельном переходе в неравенстве):
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ —точка сгущения, 
+\begin_inset Formula $f,g:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}A$
+\end_inset
+
+ и 
+\begin_inset Formula $g(x)\rightarrow_{x\rightarrow a}B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $f(x)\leq g(x)\ \forall x\in X$
+\end_inset
+
+, то 
+\begin_inset Formula $A\leq B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $A>B$
+\end_inset
+
+, тогда существует 
+\begin_inset Formula $C:\ A>C>B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\rightarrow A>C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists V_{\delta_{1}}(a)\ \forall x\in\dot{V}_{\delta_{1}}(a)$
+\end_inset
+
+ : 
+\begin_inset Formula $f(x)>C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $g(x)\rightarrow B<C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists V_{\delta_{2}}(a)\ \forall x\in\dot{V}_{\delta_{2}}(a)$
+\end_inset
+
+ : 
+\begin_inset Formula $g(x)<C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Возьмем 
+\begin_inset Formula $x_{0}\in V_{\delta_{1}}\cap V_{\delta_{2}}\cap X,x_{0}\neq a$
+\end_inset
+
+ (одна из этих окрестностей содержится в другой)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x_{0})>C>g(x_{0})\Rightarrow f(x_{0})>g(x_{0})$
+\end_inset
+
+ — противоречие.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о сжатой переменной 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о сжатой переменной (теорема о двух милиционерах):
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f,g,h:X\rightarrow\mathbb{R}$
+\end_inset
+
+ 
+\begin_inset Formula $(X\subset\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $f(x)\leq g(x)\leq h(x)\\forall x\in X$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}L,h(x)\rightarrow_{x\rightarrow a}L$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+то 
+\begin_inset Formula $g(x)\rightarrow_{x\rightarrow a}L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Убедимся, что существует предел.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Т.к.
+ 
+\begin_inset Formula $f\rightarrow L$
+\end_inset
+
+, то существует окрестность 
+\begin_inset Formula $a$
+\end_inset
+
+ : 
+\begin_inset Formula $V_{1}(a)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x\in\dot{V}_{1}\cap X$
+\end_inset
+
+ 
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon<f(x)<L+\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon<f(x)$
+\end_inset
+
+ (*) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists V_{2}(a):\forall x\in\dot{V}_{2}\cap X$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $|h(x)-L|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon<h(x)<L+\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $h(x)<L+\varepsilon$
+\end_inset
+
+ (**)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon<f(x)\leq g(x)\leq h(x)<L+\varepsilon$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Положим 
+\begin_inset Formula $V=V_{1}(a)\cap V_{2}(a)$
+\end_inset
+
+, и возьмем 
+\begin_inset Formula $x\in\dot{V}\cap X\subset(\dot{V}_{1}\cap X,\dot{V}_{2}\cap X)$
+\end_inset
+
+ — для такого неравенства выполняются оба неравенства (*) и (**)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon<f(x)\leq g(x)\leq h(x)<L+\varepsilon$
+\end_inset
+
+ — выбросим 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ и 
+\begin_inset Formula $h(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon<g(x)<L+\varepsilon\Leftrightarrow|g(x)-L|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теорема доказана.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о характеристике предела с помощью бесконечно малых.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения, 
+\begin_inset Formula $f:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение: 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ называется бесконечно малой величиной при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+ (в точку 
+\begin_inset Formula $a$
+\end_inset
+
+) если 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}0$
+\end_inset
+
+.
+ То есть предел в точке 
+\begin_inset Formula $a$
+\end_inset
+
+ равен 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Фактически, если 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ — бесконечно малое, то 
+\begin_inset Formula $f(x)\equiv0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения, 
+\begin_inset Formula $f:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}L\Leftrightarrow\alpha(x)=f(x)-L\rightarrow_{x\rightarrow a}0$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\Leftrightarrow f(x)=L+\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Необходимость:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предположим, что L — предел.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0\ \exists V(a):\forall x\in\dot{V}\cap X$
+\end_inset
+
+ выполняется:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|f(x)-L|<\varepsilon\Leftrightarrow|\alpha(x)|<\varepsilon\Leftrightarrow|\alpha(x)-0|<\varepsilon$
+\end_inset
+
+, значит, 
+\begin_inset Formula $0$
+\end_inset
+
+ — предел 
+\begin_inset Formula $\alpha(x)$
+\end_inset
+
+ при 
+\begin_inset Formula $x\to a$
+\end_inset
+
+ (
+\begin_inset Formula $\alpha(x)\to_{x\to\alpha}0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Достаточность:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon\ \exists V(a):\forall x\in\dot{V}(a)\cap X:|\alpha(x)|<\varepsilon\Rightarrow|f(x)-L|<\varepsilon\Rightarrow L$
+\end_inset
+
+ — предел 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ при 
+\begin_inset Formula $x\to a$
+\end_inset
+
+ (
+\begin_inset Formula $f(x)\to_{x\to a}L$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Свойства бесконечно малых:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $\alpha,-\alpha,|\alpha|$
+\end_inset
+
+ — бесконечно малые одновременно.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\varphi$
+\end_inset
+
+ —любая из этих величин.
+ 
+\begin_inset Formula $\varphi\rightarrow_{x\rightarrow a}0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0\ \exists V(a),\forall x\in\dot{V}(a)\cap X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|\varphi(x)|<\varepsilon$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $\alpha,\beta,|\beta(x)|\leq|\alpha(x)|\ \forall x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $-|\alpha(x)|\leq\beta(x)\leq|\alpha(x)|$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $\alpha(x),\beta(x)$
+\end_inset
+
+ — бесконечно малые при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Тогда 
+\begin_inset Formula $\alpha(x)\pm\beta(x)$
+\end_inset
+
+ — бесконечно малое при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\delta(x)=\alpha(x)+\beta(x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists V_{1}(a)\ \forall x\in\dot{V}_{1}(a)\cap X:|\alpha(x)|<\varepsilon$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists V_{2}(a)\ \forall x\in\dot{V}_{2}(a)\cap X:|\beta(x)|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Возьмем 
+\begin_inset Formula $V=V_{1}\cap V_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $x\in\dot{V}\cap X$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|\delta(x)|=|\alpha(x)+\beta(x)|\leq|\alpha(x)|+|\beta(x)|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|\delta(x)|=|\alpha(x)+\beta(x)|<\varepsilon+\varepsilon=2\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|\delta(x)|<2\varepsilon$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) 
+\begin_inset Formula $\alpha(x)$
+\end_inset
+
+ — бесконечно малое при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+, 
+\begin_inset Formula $\beta(x)$
+\end_inset
+
+ — локально ограничена в т.
+ 
+\begin_inset Formula $a$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\alpha\cdot\beta=\delta$
+\end_inset
+
+ — бесконечно малое при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Свойства:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+a) 
+\begin_inset Formula $\beta(x)\equiv Const$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $C\cdot\alpha(x)$
+\end_inset
+
+ = бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+b) 
+\begin_inset Formula $\beta$
+\end_inset
+
+ — ограничено на X.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\alpha(x)\cdot$
+\end_inset
+
+ любое число = бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+c) 
+\begin_inset Formula $f\rightarrow_{x\rightarrow a}L,\alpha(x)$
+\end_inset
+
+ — бесконечно малое, то 
+\begin_inset Formula $\alpha(x)f(x)$
+\end_inset
+
+ = бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+c
+\begin_inset Formula $'$
+\end_inset
+
+) Произведение бесконечно малых бесконечно мало.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+—
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists U(a),\exists C:|\beta(x)|\leq C$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in U\cap X$
+\end_inset
+
+ (1)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\varepsilon'=\frac{\varepsilon}{C}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists V(a)\ \forall x\in\dot{V}\cap X,|\alpha|<\varepsilon'=\frac{\varepsilon}{C}$
+\end_inset
+
+ (2)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $W=U\cap V,\ \forall x\in\dot{W}\cap X$
+\end_inset
+
+ выполняются одновременно неравенства (1) и (2)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall x\in\dot{W}\cap X$
+\end_inset
+
+, 
+\begin_inset Formula $|\alpha(x)\cdot\beta(x)|=|\alpha(x)|\cdot|\beta(x)|<\frac{\varepsilon}{C}\cdot C=\varepsilon$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Локальная ограниченность функции:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Лемма:
+\series default
+ 
+\begin_inset Formula $f\rightarrow_{x\rightarrow a}L$
+\end_inset
+
+, тогда 
+\begin_inset Formula $f$
+\end_inset
+
+ — локально ограничена в точке 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство: 
+\begin_inset Formula $|f(x)|\rightarrow_{x\rightarrow a}|L|<|L|+1$
+\end_inset
+
+.
+ По теореме о стабилизации знака 
+\begin_inset Formula $\exists V(a)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x\in\dot{V}(a)\cap X$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $|f(x)|<|L|+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о пределе суммы и произведения 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о пределе суммы:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения, 
+\begin_inset Formula $f,g:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f\rightarrow_{x\rightarrow a}A$
+\end_inset
+
+, 
+\begin_inset Formula $g\rightarrow_{x\rightarrow a}B$
+\end_inset
+
+, тогда
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $f(x)+g(x)\rightarrow_{x\rightarrow a}A+B$
+\end_inset
+
+, что равносильно 
+\begin_inset Formula $\lim\limits _{x\rightarrow a}(f(x)+g(x))=\lim\limits _{x\rightarrow a}f(x)+\lim\limits _{x\rightarrow a}g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $f(x)\cdot g(x)\rightarrow_{x\rightarrow a}AB$
+\end_inset
+
+, что равносильно 
+\begin_inset Formula $\lim\limits _{x\rightarrow a}(f(x)\cdot g(x))=\lim\limits _{x\rightarrow a}f(x)\cdot\lim\limits _{x\rightarrow a}g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+По свойствам бесконечно малых,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=A+\alpha(x),\alpha(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $g(x)=B+\beta(x),\beta(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)+g(x)=\underbrace{A+B}\limits _{L(предел)}+\underbrace{(\alpha(x)+\beta(x))}\limits _{бесконечно\ малые}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $L=A+B$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\cdot g(x)=\underbrace{AB}\limits _{L(предел)}+\underbrace{B\alpha(x)+A\beta(x))+\alpha(x)\beta(x)}\limits _{бесконечно\ малые}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $L=AB$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о пределе частного 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о пределе частного.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения, 
+\begin_inset Formula $g:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x_{0}=\{x\in X|g(x)\neq0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $h(x)=\frac{f(x)}{g(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a}A$
+\end_inset
+
+, 
+\begin_inset Formula $g(x)\rightarrow_{x\rightarrow a}B$
+\end_inset
+
+, то 
+\begin_inset Formula $h(x)\rightarrow_{x\rightarrow a}\frac{A}{B}$
+\end_inset
+
+ иными словами 
+\begin_inset Formula $\lim\limits _{x\rightarrow a}\frac{f(x)}{g(x)}=\frac{A}{B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=A+\alpha(x),\alpha(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $g(x)=B+\beta(x),\beta(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{equation}
+\frac{f(x)}{g(x)}-\frac{A}{B}=\frac{A+\alpha(x)}{B+\beta(x)}-\frac{A}{B}=\frac{B\alpha(x)-A\beta(x)}{B\cdot g(x)}=\frac{1}{B}\cdot\frac{1}{g(x)}\underbrace{(B\cdot\alpha(x)-A\cdot\beta(x))}\limits _{бесконечно\ малые}\rightarrow_{x\rightarrow a}0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\frac{1}{g(x)}$
+\end_inset
+
+ локально ограничено по свойству.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\frac{1}{B}$
+\end_inset
+
+ — Константа.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{B}\cdot\frac{1}{g(x)}(B\cdot\alpha(x)-A\cdot\beta(x)\rightarrow_{x\rightarrow a}0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теперь воспользуемся свойством: если разность значения функции и константы
+ бесконечно мала, то соответствующая константа есть предел.
+ Следовательно, 
+\begin_inset Formula $\frac{A}{B}$
+\end_inset
+
+ — предел.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Предел сужения.
+ Односторонние пределы 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X,a$
+\end_inset
+
+ — точка сгущения для 
+\begin_inset Formula $X_{a}^{+},\ f:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+(
+\begin_inset Formula $X_{a}^{+}=(a,+\infty),X_{a}^{-}=(-\infty,a)$
+\end_inset
+
+.
+ По определению точки сгущения, 
+\begin_inset Formula $a$
+\end_inset
+
+ является точкой сгущения хотя бы для одного из множеств 
+\begin_inset Formula $X_{a}^{+},X_{a}^{-}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если существует предел сужения 
+\begin_inset Formula $f$
+\end_inset
+
+ на 
+\begin_inset Formula $X_{a}^{+}$
+\end_inset
+
+ при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+, то он называется пределом справа функции 
+\begin_inset Formula $f$
+\end_inset
+
+ в точку 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ (Предел справа — движение по функции СПРАВА НАЛЕВО).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Обозначается 
+\begin_inset Formula $\lim\limits _{x\rightarrow a+}f(x)$
+\end_inset
+
+ или 
+\begin_inset Formula $\lim\limits _{x\rightarrow a+0}f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+По определению:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0\ \exists\delta>0:\ \forall x\in X_{a}^{+}$
+\end_inset
+
+, найдется 
+\begin_inset Formula $0<|x-a|<\delta$
+\end_inset
+
+ при 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a+0}L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $0<|x-a|<\delta$
+\end_inset
+
+ можно заменить 
+\begin_inset Formula $x>a$
+\end_inset
+
+, так как 
+\begin_inset Formula $a<x<a+\delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Окончательная переформулировка:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0\ \exists\delta>0\ \forall x\in X,a<x<a+\delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предел слева аналогично (
+\begin_inset Formula $a-\delta<x<a$
+\end_inset
+
+) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о связи односторонних и двусторонних пределов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R},a$
+\end_inset
+
+ —точка сгущения для 
+\begin_inset Formula $X_{a}^{+}$
+\end_inset
+
+ и 
+\begin_inset Formula $X_{a}^{-}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предел (двусторонний) в точке 
+\begin_inset Formula $a$
+\end_inset
+
+ существует тогда и только тогда, когда существуют оба односторонних предела
+ и они равны.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предположим, что в точке 
+\begin_inset Formula $a$
+\end_inset
+
+ существует двусторонний предел 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\exists\ \dot{V}(a)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x\in\dot{V}_{\delta}(a)\cap X\cap X_{a}^{+}$
+\end_inset
+
+ справедливо 
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $L$
+\end_inset
+
+ — предел 
+\begin_inset Formula $f(x)|_{X_{a}^{+}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Аналогично для 
+\begin_inset Formula $\dot{V}_{\delta}(a)\cap X\cap X_{a}^{-}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, существуют пределы 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a+0}L$
+\end_inset
+
+ и 
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow a+0}L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Нам нужно доказать, что существует двусторонний предел.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Проверка:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists\delta_{+}>0:\forall x\in X,\ a<x<a+\delta_{+}$
+\end_inset
+
+ (1).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для этого же 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists\delta_{-}>0:\forall x\in X,\ a-\delta_{-}<x<a$
+\end_inset
+
+ (2).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отсюда 
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+.
+ (3)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Положим, 
+\begin_inset Formula $\delta=min(\delta_{+},\delta_{-})>0$
+\end_inset
+
+, следовательно, для 
+\begin_inset Formula $x\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $0<|x-a|<\delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В любом случае выполняется либо условие (1), либо условие (2), а они оба
+ влекут (3).
+ Следовательно, 
+\begin_inset Formula $L$
+\end_inset
+
+ — предел функции в 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теорема доказана.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Расширенная числовая прямая.
+ Определение конечного предела при 
+\begin_inset Formula $x\to\pm\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $\forall r\in\mathbb{R}\ r>\omega,\ \omega\in\hat{\mathbb{R}}$
+\end_inset
+
+, то 
+\begin_inset Formula $\omega=-\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $\forall r\in\mathbb{R}\ r<\omega',\ \omega'\in\hat{\mathbb{R}}$
+\end_inset
+
+, то 
+\begin_inset Formula $\omega'=+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\hat{\mathbb{R}}=\mathbb{R}\cup\{-\infty,+\infty\},-\infty<x<+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $(C,+\infty]=\{x\in\mathbb{R}|x>C\}\cup\{+\infty\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Аналогично 
+\begin_inset Formula $[-\infty,C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $(C,+\infty)=\{x\in\mathbb{R}|x>C\}$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall V(a)$
+\end_inset
+
+ 
+\begin_inset Formula $\dot{V}(a)\cap X\neq\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+ 
+\begin_inset Formula $(+\infty)$
+\end_inset
+
+ — точка сгущения 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall V(+\infty):\dot{V}(+\infty)\cap X\neq\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+то, что 
+\begin_inset Formula $+\infty$
+\end_inset
+
+ — точка сгущения 
+\begin_inset Formula $X$
+\end_inset
+
+ означает, что 
+\begin_inset Formula $X$
+\end_inset
+
+ не ограничено сверху.
+ Аналогично для не ограничено снизу.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение предела:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $L\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f:X\rightarrow\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0\ \exists C>0:\ \forall x\in X$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $x>C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+или переформулировка:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists V(+\infty)\ \forall x\in X\cap\dot{V}(+\infty)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+13-19 для случаев 
+\begin_inset Formula $x\to+\infty,x\to-\infty$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Бесконечные пределы.
+ Общее определение предела 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Это когда у какой-то точки 
+\begin_inset Formula $a$
+\end_inset
+
+ предел поднимается бесконечно вверх (ну или вниз.
+ Да-да, поднимается вниз, бейте меня, граммар-наци)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения.
+ 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f:X\rightarrow\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Как определить, что 
+\begin_inset Formula $f$
+\end_inset
+
+ имеет в точке 
+\begin_inset Formula $a$
+\end_inset
+
+ предел 
+\begin_inset Formula $+\infty$
+\end_inset
+
+? Поблизости от 
+\begin_inset Formula $a$
+\end_inset
+
+ значения функции будут больше, чем C.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+ — это мы требовали раньше.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+А теперь мы скажем так: 
+\begin_inset Formula $\forall C>0\ \exists\delta>0$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\forall x\in\dot{V}_{\delta}(a)\cap X$
+\end_inset
+
+ : 
+\begin_inset Formula $f(x)>C$
+\end_inset
+
+ или 
+\begin_inset Formula $f(x)<-C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall V(L)\ \exists V(a)\ \forall x\in\dot{V}(x)\cap X$
+\end_inset
+
+ : 
+\begin_inset Formula $f(x)\in V(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Можно переформулировать:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall V(+\infty)\ \exists V(a)\ \forall x\in\dot{V}(a)\cap X:f(x)\in V(+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Из этого немедленно следует, что 
+\begin_inset Formula $f(x)\rightarrow+\infty\Rightarrow-f(x)\rightarrow-\infty$
+\end_inset
+
+ и обратно: 
+\begin_inset Formula $f(x)>C$
+\end_inset
+
+ или 
+\begin_inset Formula $f(x)<-C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\rightarrow_{x\rightarrow-\infty}+\infty$
+\end_inset
+
+ для этого:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall V(+\infty)\ \exists V(-\infty)\ \forall x\in X\cap\dot{V}(-\infty)$
+\end_inset
+
+ : 
+\begin_inset Formula $f(x)\in V(+\infty)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Переформулируем на языке неравенств:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall C>0\ \exists C'>0\ \forall x\in X\cap(-\infty,-C')$
+\end_inset
+
+ : 
+\begin_inset Formula $f(x)>C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Бесконечно большие величины.
+ Связь между бесконечно большими и бесконечно малыми величинами 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Лемма:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a\in\hat{\mathbb{R}}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ —точка сгущения для 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f:X\rightarrow R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $f$
+\end_inset
+
+ — бесконечно большая 
+\begin_inset Formula $\Rightarrow\frac{1}{f}$
+\end_inset
+
+ — бесконечно малая при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $f$
+\end_inset
+
+ — бесконечно малая при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+, 
+\begin_inset Formula $f\neq0$
+\end_inset
+
+ на 
+\begin_inset Formula $X$
+\end_inset
+
+, то 
+\begin_inset Formula $\frac{1}{f}$
+\end_inset
+
+ —бесконечно большая.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $f$
+\end_inset
+
+ — бесконечно большая при 
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+, 
+\begin_inset Formula $g:X\rightarrow R$
+\end_inset
+
+, локально ограничена в точке 
+\begin_inset Formula $a$
+\end_inset
+
+, то 
+\begin_inset Formula $f+g$
+\end_inset
+
+ — бесконечно большая.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство 1 пункта:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|f(x)|\rightarrow+\infty>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists U(a)\ \forall x\in\dot{U}(a)\cap X:\ |f(x)|>1,\ f(x)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Положим 
+\begin_inset Formula $C=\frac{1}{\varepsilon}$
+\end_inset
+
+; тогда 
+\begin_inset Formula $\exists V(a):\forall x\in\dot{V}(a)\cap X,\ |f(x)|>C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Положим 
+\begin_inset Formula $W=U\cap V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Тогда 
+\begin_inset Formula $\forall x\in\dot{W}\cap X\ |f(x)|>\frac{1}{\varepsilon}\Leftrightarrow|\frac{1}{f(x)}|<\varepsilon$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство 2 пункта:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\to0<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists U(a)\ \forall x\in\dot{U}(a)\cap X:\ |f(x)|<1,f(x)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Положим 
+\begin_inset Formula $C=\frac{1}{\varepsilon}$
+\end_inset
+
+; тогда 
+\begin_inset Formula $\exists V(a):\forall x\in\dot{U}(a)\cap X,\ |f(x)|<C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Положим 
+\begin_inset Formula $W=V\cap U$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Тогда 
+\begin_inset Formula $\forall x\in\dot{W}\cap X\ |f(x)|<\frac{1}{\varepsilon}\Leftrightarrow|\frac{1}{f(x)}|>\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство 3 пункта:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists U(a)\ \exists M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall x\in\dot{U}\cap X:|g(x)|\leq M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $h=f+g$
+\end_inset
+
+.
+ Зафиксируем 
+\begin_inset Formula $C>0,C'=C+M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists V(a)\ \forall x\in\dot{V}\cap X:|f(x)|>C'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $W=U\cap V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall x\in\dot{W}\cap X$
+\end_inset
+
+ справедливы оба неравенства:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|g(x)|\leq M$
+\end_inset
+
+, 
+\begin_inset Formula $|f(x)|>C+M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|h(x)|=|f(x)+g(x)|\geq|f(x)|-|g(x)|>C+M-|g(x)|\geq(C+M)-M=C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следоветельно, 
+\begin_inset Formula $|h(x)|>C$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $|h|$
+\end_inset
+
+ стремится к бесконечности.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Определение арифметических действий в 
+\begin_inset Formula $\hat{\mathbb{R}}$
+\end_inset
+
+.
+ Общая теорема об арифметических действиях с пределами.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ об арифметических действиях в пределах.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теорема: 
+\begin_inset Formula $f,g:X\rightarrow\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a\in\hat{\mathbb{R}}$
+\end_inset
+
+ — точка сгущения 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists\lim\limits _{x\rightarrow a}f(x),\ \lim\limits _{x\rightarrow a}g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $\lim\limits _{x\rightarrow a}[f(x)+g(x)]=\lim\limits _{x\rightarrow a}f(x)+\lim\limits _{x\rightarrow a}g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $\lim\limits _{x\rightarrow a}f(x)g(x)=\lim\limits _{x\rightarrow a}f(x)\cdot\lim\limits _{x\rightarrow a}g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $\lim\limits _{x\rightarrow a}\frac{f(x)}{g(x)}=\frac{\lim\limits _{x\rightarrow a}f(x)}{\lim\limits _{x\rightarrow a}g(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+ВО ВСЕХ СЛУЧАЯХ, КОГДА ПРАВАЯ ЧАСТЬ ИМЕЕТ СМЫСЛ!!!
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1-е не имеет смысла при 
+\begin_inset Formula $\lim\limits _{x\to a}f(x)=\pm\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\lim\limits _{x\to a}g(x)=\mp\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+По свойствам бесконечно малых,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=A+\alpha(x),\alpha(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $g(x)=B+\beta(x),\beta(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)+g(x)=\underbrace{A+B}\limits _{L(предел)}+\underbrace{(\alpha(x)+\beta(x))}\limits _{бесконечно\ малые}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $L=A+B$
+\end_inset
+
+) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2-е не имеет смысла при 
+\begin_inset Formula $\lim\limits _{x\to a}f(x)=0,\lim\limits _{x\to a}g(x)=\infty$
+\end_inset
+
+ и наоборот.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+По свойствам бесконечно малых,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=A+\alpha(x),\alpha(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $g(x)=B+\beta(x),\beta(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\cdot g(x)=\underbrace{AB}\limits _{L(предел)}+\underbrace{B\alpha(x)+A\beta(x))+\alpha(x)\beta(x)}\limits _{бесконечно\ малые}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $L=AB$
+\end_inset
+
+) 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3-е не имеет смысла при 
+\begin_inset Formula $\frac{infty}{infty}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=A+\alpha(x),\alpha(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $g(x)=B+\beta(x),\beta(x)$
+\end_inset
+
+ — бесконечно малое.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{equation}
+\frac{f(x)}{g(x)}-\frac{A}{B}=\frac{A+\alpha(x)}{B+\beta(x)}-\frac{A}{B}=\frac{B\alpha(x)-A\beta(x)}{B\cdot g(x)}=\frac{1}{B}\cdot\frac{1}{g(x)}\underbrace{(B\cdot\alpha(x)-A\cdot\beta(x))}\limits _{бесконечно\ малые}\rightarrow_{x\rightarrow a}0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\frac{1}{g(x)}$
+\end_inset
+
+ локально ограничено по свойству.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\frac{1}{B}$
+\end_inset
+
+ — Константа.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно,
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{B}\cdot\frac{1}{g(x)}(B\cdot\alpha(x)-A\cdot\beta(x)\rightarrow_{x\rightarrow a}0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теперь воспользуемся свойством: если разность значения функции и константы
+ бесконечно мала, то соответствующая константа есть предел.
+ Следовательно, 
+\begin_inset Formula $\frac{A}{B}$
+\end_inset
+
+ — предел.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Арифметические действия в 
+\begin_inset Formula $\mathbb{\hat{R}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $(+\infty)+(+\infty)=(+\infty)-(-\infty)=(+\infty)+x=x+(+\infty)=+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $(-\infty)+(-\infty)=(-\infty)-(+\infty)=(-\infty)+x=x+(-\infty)=-\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $x>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x(\pm\infty)=(\pm\infty)x=(\pm\infty)(+\infty)=(+\infty)(\pm\infty)=\pm\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) 
+\begin_inset Formula $x<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x(\pm\infty)=(\pm\infty)x=(\pm\infty)(-\infty)=(-\infty)(\pm\infty)=(\mp\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+5) 
+\begin_inset Formula $\frac{x}{\pm\infty}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Сравнение бесконечно больших и бесконечно малых 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f,g:X\to\mathbb{R}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f,g$
+\end_inset
+
+ — бесконечно малые/бесконечно большие при 
+\begin_inset Formula $x\to a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\sim g(x)$
+\end_inset
+
+, если 
+\begin_inset Formula $\exists h(x):\ f(x)=h(x)g(x)$
+\end_inset
+
+, при этом 
+\begin_inset Formula $h(x)\to_{x\to a}1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=o(g(x))$
+\end_inset
+
+ если при 
+\begin_inset Formula $x\to a\ \exists h(x)$
+\end_inset
+
+ — бесконечно малая, такая, что 
+\begin_inset Formula $f(x)=g(x)\cdot h(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=O(g(x))$
+\end_inset
+
+ в точке 
+\begin_inset Formula $a$
+\end_inset
+
+, если 
+\begin_inset Formula $\exists M>0,\ \exists\delta>0:\ \ |\frac{f(x)}{g(x)}|<M$
+\end_inset
+
+ при 
+\begin_inset Formula $x\in(a-\delta;a+\delta)$
+\end_inset
+
+ (т.е.
+ функция локально ограничена в окрестности точки 
+\begin_inset Formula $a$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема:
+\series default
+ Пусть 
+\begin_inset Formula $f\sim f^{*}$
+\end_inset
+
+ и 
+\begin_inset Formula $g\sim g^{*}$
+\end_inset
+
+ при 
+\begin_inset Formula $x\to a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Если 
+\begin_inset Formula $\frac{f^{*}(x)}{g^{*}(x)}\to_{x\to a}L$
+\end_inset
+
+, то и 
+\begin_inset Formula $\frac{f(x)}{g(x)}\to_{x\to a}L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $f^{*}(x)g^{*}(x)\sim f(x)g(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Если 
+\begin_inset Formula $h(x)\to_{x\to a}L\neq0,\ L\in\mathbb{R}$
+\end_inset
+
+, то 
+\begin_inset Formula $h(x)f(x)\sim L\cdot f^{*}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $\varphi(x)\to_{x\to a}1,\ \psi(x)\to_{x\to a}1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\frac{f(x)}{g(x)}=\frac{\varphi(x)}{\psi(x)}\cdot\frac{f^{*}(x)}{g^{*}(x)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $\frac{f^{*}(x)}{g^{*}(x)}\to_{x\to a}L$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\frac{f(x)}{g(x)}\to_{x\to a}L$
+\end_inset
+
+, так как 
+\begin_inset Formula $\frac{\varphi(x)}{\psi(x)}\to1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $f^{*}(x)g^{*}(x)=\varphi(x)f(x)\cdot\psi(x)g(x)=\varphi(x)\psi(x)f(x)g(x)=f(x)g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $h(x)f(x)=h(x)\varphi(x)f^{*}(x)=h(x)f^{*}(x)$
+\end_inset
+
+ (По пункту 2).
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f,g$
+\end_inset
+
+ — бесконечно малое (большое), при 
+\begin_inset Formula $x\to a$
+\end_inset
+
+ Эквивалентность:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $f\sim g$
+\end_inset
+
+ при 
+\begin_inset Formula $x\to a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $f-g=o(g)$
+\end_inset
+
+ при 
+\begin_inset Formula $x\to a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $f-g=o(f)$
+\end_inset
+
+ при 
+\begin_inset Formula $x\to a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Докажем, что 
+\begin_inset Formula $1)\Leftrightarrow2)$
+\end_inset
+
+, 
+\begin_inset Formula $1)\Leftrightarrow3)$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Докажем, что 
+\begin_inset Formula $1)\Rightarrow2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=\varphi(x)g(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\varphi(x)\to_{x\to a}1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)-g(x)=(\varphi(x)-1)g(x)=o(g(x))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Докажем, что 
+\begin_inset Formula $2)\Rightarrow1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)-g(x)=\alpha(x)g(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\alpha\to_{x\to a}0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)=(1+\alpha(x))g(x)=\varphi(x)g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Докажем, что 
+\begin_inset Formula $1)\Rightarrow3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $g(x)=\varphi(x)f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)-g(x)=f(x)-\varphi(x)f(x)=f(x)(1-\varphi(x))=o(f(x))$
+\end_inset
+
+.
+ (так как 
+\begin_inset Formula $1\varphi(x)\to0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Вычисление предела 
+\begin_inset Formula $\lim\limits _{x\to+\infty}\frac{x^{n}}{a^{x}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема:
+\series default
+ 
+\begin_inset Formula $a>1,n\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula 
+\begin{equation}
+\lim\limits _{x\to+\infty}\frac{x^{n}}{a^{x}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство через неравенство Бернулли (
+\begin_inset Formula $(1+c)^{n}>1+nc$
+\end_inset
+
+) :
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пусть 
+\begin_inset Formula $m=1+c,c>0$
+\end_inset
+
+, 
+\begin_inset Formula $t>0,m^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Оценим снизу 
+\begin_inset Formula $m^{t}$
+\end_inset
+
+ : 
+\begin_inset Formula $n=[t]\leq t<[t]+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $t-1<[t]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+тогда 
+\begin_inset Formula $m^{t}\geq\underbrace{m^{[t]}>1+c[t]>c(t-1)}\limits _{смотри\ строчку\ выше}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Это во всяком случае верно, когда 
+\begin_inset Formula $t>1$
+\end_inset
+
+, да и в обратном случае тоже.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теперь оценим 
+\begin_inset Formula $a^{x}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a^{x}=a^{\frac{x}{2}}\cdot a^{\frac{x}{2}}=(a^{\frac{x}{2}})^{2}>(c(\frac{x}{2}-1))^{2}$
+\end_inset
+
+ при 
+\begin_inset Formula $x>2$
+\end_inset
+
+ (по выведенной выше формуле).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\frac{x}{a^{x}}<\frac{x}{(c(\frac{x}{2}-1))^{2}}\to_{x\to+\infty}0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Мы доказали нашу теорему при 
+\begin_inset Formula $t>1$
+\end_inset
+
+.
+ А теперь общий случай:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Положим 
+\begin_inset Formula $b=a^{\frac{1}{n}}>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\frac{x^{n}}{a^{x}}<(\frac{x}{a^{\frac{x}{n}}})^{n}=(\frac{x}{b^{x}})^{n}\to_{x\to+\infty}0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Точная верхняя и точная нижняя границы функции.
+ Теорема о пределе монотонной функции 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+ —верхняя граница, если 
+\begin_inset Formula $\forall x\in X:x\leq C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $L=\sup f(X)$
+\end_inset
+
+, если выполняется:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $\forall x\in X:f(x)\leq L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $\forall C\in\mathbb{R}<L$
+\end_inset
+
+, 
+\begin_inset Formula $\exists x_{0}\in X:f(x_{0})>C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Аналогично для бесконечности:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\sup f(x)=+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall C\in\mathbb{R}\ \exists x_{0}\in X:f(x_{0})>C$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R},f:X\to R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f$
+\end_inset
+
+ — возрастающая на 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall x,x'\in X$
+\end_inset
+
+ : 
+\begin_inset Formula $x<x'\Rightarrow f(x)\leq f(x')$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Аналогично для убывающей функции.
+ А возрастающая и убывающая функции определяются термином 
+\begin_inset Quotes ard
+\end_inset
+
+монотонные
+\begin_inset Quotes ald
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о пределе возрастающей функции.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R},f:X\to\mathbb{R},f$
+\end_inset
+
+ — возрастающая.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a=\inf X,b=\sup X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $b$
+\end_inset
+
+ — точка сгущения 
+\begin_inset Formula $X$
+\end_inset
+
+, при этом 
+\begin_inset Formula $b\in\hat{\mathbb{R}}$
+\end_inset
+
+, 
+\begin_inset Formula $L=\sup\limits _{x<b,x\in X}f(x)$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)\in\hat{\mathbb{R}}$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists\lim\limits _{x\to b}f(x)=L$
+\end_inset
+
+.
+ Заметим, что 
+\begin_inset Formula $L$
+\end_inset
+
+ может быть как конечным, так и бесконечным.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения 
+\begin_inset Formula $X$
+\end_inset
+
+, при этом 
+\begin_inset Formula $a\in\hat{\mathbb{R}}$
+\end_inset
+
+, 
+\begin_inset Formula $L=\inf\limits _{x>a,x\in X}f(x)$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)\in\hat{\mathbb{R}}$
+\end_inset
+
+ то 
+\begin_inset Formula $\exists\lim\limits _{x\to a}f(x)=L$
+\end_inset
+
+.
+ Заметим, что 
+\begin_inset Formula $L$
+\end_inset
+
+ может быть как конечным, так и бесконечным.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Будем предполагать, что 
+\begin_inset Formula $b\in\mathbb{R}$
+\end_inset
+
+ — конечно.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Придется исходить из определения:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)<L+\varepsilon$
+\end_inset
+
+ автоматически.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon$
+\end_inset
+
+ — не верхняя граница на множестве 
+\begin_inset Formula $X\setminus\{b\}$
+\end_inset
+
+, значит, 
+\begin_inset Formula $\exists x_{0}\in X:L-\varepsilon<f(x_{0})$
+\end_inset
+
+, при этом 
+\begin_inset Formula $x_{0}<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Рассмотрим 
+\begin_inset Formula $\delta=b-x_{0}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $V_{\delta}(b)=(b-\delta,b+\delta)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $0<|x-b|<\delta$
+\end_inset
+
+, что равнозначно 
+\begin_inset Formula $x\in X\cap\dot{V}_{\delta}(b)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Тогда 
+\begin_inset Formula $x_{0}=b-\delta<x<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L-\varepsilon<f(x_{0})\leq f(x)\leq L<L+\varepsilon$
+\end_inset
+
+, что можно переписать как 
+\begin_inset Formula $L-\varepsilon<f(x)<L+\varepsilon\Leftrightarrow|f(x)-L|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, 
+\begin_inset Formula $L$
+\end_inset
+
+ — предел.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+При условии, что 
+\begin_inset Formula $f(x)\to_{x\to b}\infty$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Фиксируем 
+\begin_inset Formula $C>0$
+\end_inset
+
+: 
+\begin_inset Formula $\exists x_{0}\in X,x<b:f(x)>C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\delta=b-x_{0}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists V_{\delta}(b),x\in\dot{V}_{\delta}(b)\cap X$
+\end_inset
+
+; так как правее 
+\begin_inset Formula $b$
+\end_inset
+
+ ничего нет, то 
+\begin_inset Formula $x_{0}=b-\delta<x<\delta\Rightarrow f(x)\geq f(x_{0})>C$
+\end_inset
+
+, то есть 
+\begin_inset Formula $f(x)\to_{x\to b}\infty$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предел конечен, если функция ограничена.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если функция убывает, то 
+\begin_inset Formula $\sup$
+\end_inset
+
+ и 
+\begin_inset Formula $\inf$
+\end_inset
+
+ меняются местами:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $b$
+\end_inset
+
+ — точка сгущения для 
+\begin_inset Formula $X$
+\end_inset
+
+; 
+\begin_inset Formula $L=\inf f(x)\in\mathbb{R};\ b\in\mathbb{R}\ \exists\lim\limits _{x\to b},$
+\end_inset
+
+ и он равен 0.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения.
+ 
+\begin_inset Formula $\exists\lim\in\mathbb{R}$
+\end_inset
+
+ и он равен 
+\begin_inset Formula $\sup f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Предел числовой последовательности 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определение предела последовательности:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\ окрестности\ U(L)\ \exists V(+\infty):n\in\mathbb{N},n\in V(+\infty)\Rightarrow x_{n}\in U(L)$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Последовательности, которые имеют конечный предел, называются сходящимися,
+ а последовательности, предела не имеющие или имеющие предел бесконечный,
+ называются расходящимися.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+: Сходящаяся последовательность ограничена.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ ограничена, следовательно, 
+\begin_inset Formula $\exists C$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $|x_{n}|\leq C\ \forall n$
+\end_inset
+
+ — это требуется доказать.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x_{n}\to L$
+\end_inset
+
+ конечно.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Зафиксируем 
+\begin_inset Formula $\varepsilon=1.\ \exists N:\ \forall n>N\ |x_{n}-L|<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|x_{n}|=|x_{n}-L+L|\leq|x_{n}-L|+|L|<1+|L|=C'$
+\end_inset
+
+.
+ 
+\begin_inset Formula $C'$
+\end_inset
+
+ — некая константа
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $C''=\max{|x_{1}|,|x_{2}|,...,|x_{N}|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Положим 
+\begin_inset Formula $C=C'+C''$
+\end_inset
+
+, тогда 
+\begin_inset Formula $|x_{n}|\leq C\ \forall n$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о пределе монотонной последовательности: Предел монотонной последовательности
+ конечен тогда и только тогда, когда последовательность ограничена.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists C\ |x_{n}|\leq C\Leftrightarrow-C\leq x_{n}\leq C$
+\end_inset
+
+.
+ Следовательно, у конечной последовательности пределы тоже конечны.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о пределе подпоследовательности 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ о пределе подпоследовательности:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x_{n}\to_{n\to\infty}L\in\hat{\mathbb{R}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\{y_{k}\}$
+\end_inset
+
+ — подпоследовательность 
+\begin_inset Formula $\{x_{n}\}\Rightarrow y_{k}\to_{k\to\infty}L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Заметим, что последовательность номеров 
+\begin_inset Formula $n_{k}$
+\end_inset
+
+ строго возрастает.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $1\leq n_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $2\leq n_{2}$
+\end_inset
+
+, по индукции легко докажем, что 
+\begin_inset Formula $k\leq n_{k}\ \forall k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Рассмотрим 
+\begin_inset Formula $U(L)$
+\end_inset
+
+ — окрестность.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Тогда 
+\begin_inset Formula $\exists N$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\forall n>N\ x_{n}\in U(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Предположим, что 
+\begin_inset Formula $k>N$
+\end_inset
+
+, тогда 
+\begin_inset Formula $n_{k}\geq k>N$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $x_{n_{k}}\in U(L)$
+\end_inset
+
+.
+ А 
+\begin_inset Formula $y_{k}=x_{n_{k}}$
+\end_inset
+
+, значит, 
+\begin_inset Formula $y_{k}\in U(L)$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $y_{k}\to L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Принцип Больцано-Вейерштрасса 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема
+\series default
+ (принцип выбора) Больцано-Вейерштрасса.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Формулировка: У всякой ограниченной последовательности есть сходящаяся подпослед
+овательность.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+ — ограниченная последовательность.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists[a,b]$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $\forall n\ x_{n}\in[a,b]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство будет проходить методом деления промежутка пополам.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Разделим промежуток пополам точкой 
+\begin_inset Formula $c$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $[a,c]\ [c,b]$
+\end_inset
+
+ — хоть один из этих двух промежутков содержит точки 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ со сколь угодно большими номерами.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Возьмем этот промежуток и назовем 
+\begin_inset Formula $[a_{1},b_{1}]$
+\end_inset
+
+.
+ То есть 
+\begin_inset Formula $[a_{1},b_{1}]\subset[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теперь берем 
+\begin_inset Formula $[a_{1},b_{1}]$
+\end_inset
+
+ и делим его пополам точкой 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+И так далее.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+На шаге 
+\begin_inset Formula $k$
+\end_inset
+
+ получим промежуток 
+\begin_inset Formula $[a_{k},b_{k}]\subset[a_{k-1},b_{k-1}]$
+\end_inset
+
+, который содержит точки 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ со сколь угодно большими номерами.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В итоге получается последовательность промежутков 
+\begin_inset Formula $[a_{k},b_{k}]$
+\end_inset
+
+ со следующими свойствами:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $[a_{k},b_{k}]\supset[a_{k+1},b_{k+1}]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Длина 
+\begin_inset Formula $[a_{k},b_{k}]$
+\end_inset
+
+ равна 
+\begin_inset Formula $b_{k}-a_{k}\to_{n\to\infty}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $\forall k\ [a_{k},b_{k}]$
+\end_inset
+
+ содержит точки 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ со сколь угодно большими номерами.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Строим последовательность:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Берем произвольно номер 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+, для которого 
+\begin_inset Formula $x_{n_{1}}\in[a_{1},b_{1}]\supset[a_{2},b_{2}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Берем 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $x_{n_{2}}\in[a_{2},b_{2}]$
+\end_inset
+
+ и 
+\begin_inset Formula $n_{2}>n_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $n_{1}<n_{2}<...<n_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Выбираем из промежутка 
+\begin_inset Formula $[a_{k},b_{k}]$
+\end_inset
+
+ точку 
+\begin_inset Formula $x_{n_{k}}$
+\end_inset
+
+, 
+\begin_inset Formula $n_{k}>n_{k-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Так возникает подпоследовательность 
+\begin_inset Formula $y_{k}=x_{n_{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall k\ a_{k}\leq x_{n_{k}}\leq b_{k}$
+\end_inset
+
+.
+ Т.к.
+ промежутки вложенные, 
+\begin_inset Formula $\exists C\in[a_{k},b_{k}]\ \forall k$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $a_{k}\to C$
+\end_inset
+
+ и 
+\begin_inset Formula $b_{k}\to C$
+\end_inset
+
+.
+ Следовательно, по теореме о двух милиционерах 
+\begin_inset Formula $x_{n_{k}}\to C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Фундаментальные последовательности 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ называется сходящейся в себе (фундаментальной или последовательностью Коши),
+ если обладает следующим свойством: 
+\begin_inset Formula $\forall\varepsilon>0\ \exists N$
+\end_inset
+
+ такое, что 
+\begin_inset Formula $\forall n,m>N$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $|x_{n}-x_{m}|<\varepsilon$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\series bold
+Лемма:
+\series default
+ сходящаяся последовательность фундаментальна.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x_{n}\to L\in R$
+\end_inset
+
+.
+ Зафиксируем произвольное 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\exists N\ \forall n>N$
+\end_inset
+
+ 
+\begin_inset Formula $|x_{n}-L|<\frac{\varepsilon}{2}$
+\end_inset
+
+ (*).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Возьмем 2 числа: 
+\begin_inset Formula $m,n>N$
+\end_inset
+
+.
+ Для 
+\begin_inset Formula $|x_{n}-L|<\frac{\varepsilon}{2}$
+\end_inset
+
+ и для 
+\begin_inset Formula $|x_{m}-L|<\frac{\varepsilon}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|x_{n}-x_{m}|=|(x_{n}-L)-(x_{m}-L)|\geq|(x_{n}-L)|+|(x_{m}-L)|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\series bold
+Лемма:
+\series default
+ фундаментальная последовательность ограничена.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\varepsilon=1$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\exists N\ \forall n,m>N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $m_{0}>N$
+\end_inset
+
+ 
+\begin_inset Formula $|x_{n}-x_{m}|<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $n>N$
+\end_inset
+
+ 
+\begin_inset Formula $|x_{n}|=|x_{m_{0}}+(x_{n}-x_{m_{0}})|\geq|x_{m_{0}}|+|x_{n}-x_{m_{0}}|<|x_{m_{0}}|+1=C'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отсюда 
+\begin_inset Formula $|x_{n}|\geq C'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $C''=\max|x_{k}|$
+\end_inset
+
+ при 
+\begin_inset Formula $1\geq k\geq N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $C=C'+C''$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Теорема о плотности множества 
+\begin_inset Formula $\hat{\mathbb{R}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Последовательность сходится тогда и только тогда, когда она фундаментальна.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ фундаментальна, следовательно, она ограничена, следовательно, 
+\begin_inset Formula $\exists x_{n_{k}}$
+\end_inset
+
+ сходится.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $x_{n_{k}}\to L\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Зафиксировали 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists N:\forall m,n>N$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $|x_{n}-x_{m}|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|x_{n}-x_{n_{k}}|<\varepsilon\ \forall n>N,\ \forall k>N\ (n_{k}>k)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|x_{n}-L|<\varepsilon<2\varepsilon$
+\end_inset
+
+.
+ (Функция 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ переходит к пределу от 
+\begin_inset Formula $k$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Значит, 
+\begin_inset Formula $\forall\varepsilon>0\ \exists N$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\forall n>N$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $|x_{n}-L|<2\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Характеристика точки сгущения на языке последовательностей 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Лемма:
+\series default
+ 
+\begin_inset Formula $X\subset\mathbb{R},\ a\in\hat{\mathbb{R}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения множества 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow\exists\{x_{n}\}$
+\end_inset
+
+ со свойствами:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $x_{n}\in X\ \forall n$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $x_{n}\to a$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $x_{n}\neq a\ \forall n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Необходимости:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $a\in\mathbb{R}\ \forall V(a)\ \dot{V}(a)\cap X\neq\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\delta>0\ \dot{V}(a)\cap X\neq\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Если 
+\begin_inset Formula $a=+\infty$
+\end_inset
+
+: (
+\begin_inset Formula $a-\delta,a+\delta$
+\end_inset
+
+), 
+\begin_inset Formula $(C,+\infty]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\delta=\frac{1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall n\ \dot{V}_{\frac{1}{n}}(a)\cap X\neq\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists x_{n}\in\dot{V}_{\frac{1}{n}}(a)\cap X:x_{n}\in X,0<|x_{n}-a|<\frac{1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $|x_{n}-a|<\frac{1}{n}\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Достаточность:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $V(a)$
+\end_inset
+
+.
+ Т.к.
+ 
+\begin_inset Formula $x_{n}\to a$
+\end_inset
+
+, то начиная с некоторого места 
+\begin_inset Formula $x_{n}\in V(a)$
+\end_inset
+
+, точнее, ввиду условий (3) и (1) 
+\begin_inset Formula $x_{n}\in\dot{V}(a)\cap X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Получилось, что для любой окрестности точки 
+\begin_inset Formula $a$
+\end_inset
+
+ пересечение окрестности с 
+\begin_inset Formula $X$
+\end_inset
+
+ не пусто, следовательно, 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Лемма доказана.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о характеристике предела функции на языке последовательностей (необходим
+ость) 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Теорема:
+\series default
+ 
+\begin_inset Formula $X\subset\mathbb{R},a\in\hat{\mathbb{R}},a$
+\end_inset
+
+ — точка сгущения.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f:X\to\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\to_{x\to a}L,\ (L\in\hat{\mathbb{R}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall$
+\end_inset
+
+ последовательности 
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+ со свойствами:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $x_{n}\in X\forall n$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\begin_inset Formula $x_{n}\to a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\begin_inset Formula $x_{n}\neq0\ \forall n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $f(x)\to L$
+\end_inset
+
+ (**)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Требуется доказать, что: 
+\begin_inset Formula $\lim\limits _{x\to a}f(x)=L$
+\end_inset
+
+, 
+\begin_inset Formula $y_{n}=f(x_{n})\to_{n\to\infty}L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказываем:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ со свойствами выше.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Возьмем 
+\begin_inset Formula $V(L)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Лемма гарантирует, что 
+\begin_inset Formula $\exists U(a)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x\in\dot{U}(a)\cap X$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $f(x)\in V(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Вспомним, что 
+\begin_inset Formula $x_{n}\to a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists N\ \forall n>N\ x_{n}\in U(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+По свойству (1) и (3): 
+\begin_inset Formula $x_{n}\in\dot{U}(a)$
+\end_inset
+
+ и, так как 
+\begin_inset Formula $x_{n}\in X$
+\end_inset
+
+ 
+\begin_inset Formula $\dot{U}(a)\cap X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следовательно, 
+\begin_inset Formula $f(x_{n})\in V(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Получилось, что для любой окрестности 
+\begin_inset Formula $V(L)$
+\end_inset
+
+ мы нашли такой номер 
+\begin_inset Formula $N$
+\end_inset
+
+, что как только 
+\begin_inset Formula $n>N$
+\end_inset
+
+ 
+\begin_inset Formula $f(x_{n})\in V(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size large
+различные варианты — ?
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Теорема о характеристике предела функции на языке последовательностей (достаточн
+ость) 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $X\subset\mathbb{R},a\in\hat{\mathbb{R}},a$
+\end_inset
+
+ — точка сгущения.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $L=\lim\limits _{x\to a}f(x)\Leftrightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\{x_{n}\}$
+\end_inset
+
+ со свойствами:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+(*) 1) 
+\begin_inset Formula $x_{n}\in X\ \forall n$
+\end_inset
+
+, 2) 
+\begin_inset Formula $x_{n}\to_{n\to\infty}a$
+\end_inset
+
+, 3) 
+\begin_inset Formula $x_{n}\neq a\forall n$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f(x_{n})\to L,\ L\in\hat{\mathbb{R}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Переходим к доказательству достаточности:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+На языке неравенств нужно доказать, что 
+\begin_inset Formula $\forall\varepsilon\ \exists\delta>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Откуда возьмется 
+\begin_inset Formula $\delta$
+\end_inset
+
+? Разобъем множество 
+\begin_inset Formula $X$
+\end_inset
+
+ на 2 части, в первой выполняется условие, а во второй - нет.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\begin_inset Formula $L\in\mathbb{R},\varepsilon>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $A=\{x\in X||f(x)-L|<\varepsilon\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $B=\{x\in X||f(x)-L|\geq\varepsilon\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $A\cap B=\varnothing$
+\end_inset
+
+, 
+\begin_inset Formula $A\cup B=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Сначала берем те точки 
+\begin_inset Formula $X$
+\end_inset
+
+, где точки графика принадлежат полосе 
+\begin_inset Formula $|f(x_{n})-L|<\varepsilon$
+\end_inset
+
+ — это 
+\begin_inset Formula $A$
+\end_inset
+
+, а точки, которые не входят в полосу — 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Точки, где график 
+\begin_inset Quotes ard
+\end_inset
+
+высовывается
+\begin_inset Quotes ald
+\end_inset
+
+ за полосу (т.е.
+ множество 
+\begin_inset Formula $B$
+\end_inset
+
+), лежат достаточно далеко от 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Мы и докажем, что 
+\begin_inset Formula $a$
+\end_inset
+
+ — НЕ точка сгущения для 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ От противного.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Доказательство:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Допустим, что 
+\begin_inset Formula $a$
+\end_inset
+
+ — точка сгущения.
+ Тогда по лемме о характеристике точек сгущения, найдется последовательность
+ точек 
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ которая удовлетворяет свойствам 1), 2), 3) где вместо 
+\begin_inset Formula $X$
+\end_inset
+
+ стоит 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Так как 
+\begin_inset Formula $B\in X$
+\end_inset
+
+, то 
+\begin_inset Formula $0<\varepsilon\leq|f(x_{n})-L|\to0$
+\end_inset
+
+.
+ Противоречие.
+ Теорема доказана.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Таким образом, установлено, что 
+\begin_inset Formula $a$
+\end_inset
+
+ — НЕ точка сгущения для 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ На языке окрестностей:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\exists U(a):\dot{U}(A)\cap B=\varnothing$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Попытаемся понять, что мы доказали.
+ Рассмотрим 
+\begin_inset Formula $\dot{U}(a)\cap X$
+\end_inset
+
+.
+ Данное пересечение состоит из точек множества 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $(\dot{U}(a)\cap X)\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\forall\varepsilon>0\ \exists U(a):\ \forall x\in\dot{U}(a)\cap X\Rightarrow x\in A$
+\end_inset
+
+.
+ А в 
+\begin_inset Formula $A$
+\end_inset
+
+ попадают точки, которые лежат в 
+\begin_inset Formula $|f(x)-L|<\varepsilon$
+\end_inset
+
+.
+ Значит, 
+\begin_inset Formula $\forall\varepsilon>0\ \exists U(a):\ \forall x\in\dot{U}(a)\cap X\Rightarrow x\in A\Rightarrow|f(x)-L|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отсюда, по определению, 
+\begin_inset Formula $L$
+\end_inset
+
+ — предел 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Ну а если 
+\begin_inset Formula $L=+\infty$
+\end_inset
+
+, то нужно доказать 
+\begin_inset Formula $f(x)>C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Зафиксируем 
+\begin_inset Formula $C$
+\end_inset
+
+ и возьмем
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $A=\{x\in X|f(x)>C\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $B=\{x\in X|f(x)\leq C\}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,6826 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[warn]{mathtext}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding T2A
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+ИНФОРМАТИКА 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Содержание 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Базовые конструкции программирования: синтаксис и семантика языков высокого
+ уровня; переменные, типы, выражения и присваивания; простейший ввод/вывод.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В теории программирования доказано, что программу для решения задачи любой
+ сложности можно составить только из трех структур, называемых следованием,
+ ветвлением и циклом.
+ Этот результат установлен Боймом и Якопини путем преобразования любой программы
+ в эквивалентную, состоящую только из комбинаций данных структур.
+ Следование, ветвление и цикл — базовые конструкции структурного программировани
+я.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Оператор
+\series default
+ — фраза алгоритмического языка, определяющая законченный этап обработки
+ данных.
+ В состав операторов входят ключевые слова, данные, выражения и др.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Следование
+\series default
+ (или последовательность выполнения) — способ упорядочения инструкций программы
+ в процессе её выполнения.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+    a = 1, b = 2, a+b;
+\end_layout
+
+\begin_layout Verbatim
+    или
+\end_layout
+
+\begin_layout Verbatim
+    a = 1;
+\end_layout
+
+\begin_layout Verbatim
+    b = 2;
+\end_layout
+
+\begin_layout Verbatim
+    a+b;
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Ветвление
+\series default
+ задает выполнение либо одного, либо другого оператора в зависимости от
+ выполнения какого-либо условия.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+    if (a < b)
+\end_layout
+
+\begin_layout Verbatim
+    {
+\end_layout
+
+\begin_layout Verbatim
+        a = 12;
+\end_layout
+
+\begin_layout Verbatim
+    }
+\end_layout
+
+\begin_layout Verbatim
+    else
+\end_layout
+
+\begin_layout Verbatim
+    {
+\end_layout
+
+\begin_layout Verbatim
+        b = 6;
+\end_layout
+
+\begin_layout Verbatim
+    }
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Цикл
+\series default
+ задает многократное выполнение оператора, пока выполняется условие.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+    while (i > 0)
+\end_layout
+
+\begin_layout Verbatim
+    {
+\end_layout
+
+\begin_layout Verbatim
+        cout << "vsya fignya";
+\end_layout
+
+\begin_layout Verbatim
+        i-- // декремент для выхода из цикла
+\end_layout
+
+\begin_layout Verbatim
+    }
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Особенностью данных конструкций является только один вход и выход, что позволяет
+ произвольно вкладывать их друг в друга.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В большинстве языков существует несколько реализаций базовых конструкций.
+ Например, в C++ существует 3 вида циклов и 2 вида ветвлений.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Синтаксис языка программирования — правила построения сообщений в системе.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Семантика в программировании — система правил определения поведения отдельных
+ языковых конструкций.
+ Семантика определяет смысловое значение предложений алгоритмического языка.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Синтаксис проверяется на ранних этапах трансляции.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Переменная — поименованная либо адресуемая иным способом область памяти,
+ адрес которой можно использовать для осуществления доступа к данным.
+ Данные, находящиеся в переменной (по данному адресу памяти) называются
+ значением данной переменной.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Типы данных:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Типы данных в C:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+char — символьный тип;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+int — целочисленный тип;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+float — вещественный тип;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+double — вещественный двойной точности;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+void — не имеющий значения.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Модификаторы типа:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+unsigned — беззнаковый тип (не имеет отрицательной части).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+short — "короткий" тип (двухбайтовый).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+long — "длинный" тип (4-10 байтовый).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Выражения
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Выражение - конструкция на языке программирования, предназначенная для выполнени
+я вычислений.
+ Выражение состоит из операндов, объединенных знаками операций.
+ Различают арифметические, логические и символьные выражения.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Первичные выражения — элементы, из которых строятся более сложные выражения.
+ К таковым относятся литералы (основные константные выражения (100, 'c')),
+ имена (названия переменных, функций), уточняемые имена (std::cout, где
+ std — область (namespace, пространство имен), а ::cout — глобальная функция).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Операторы или логические операторы — операции сравнения, позволяющие строить
+ логические выражения (==, <, >, >=, <=, !=)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Сложные логические выражения — простые логические выражения, объединенные
+ 
+\shape italic
+операциями
+\shape default
+ (|| — 
+\begin_inset Quotes ard
+\end_inset
+
+or
+\begin_inset Quotes ald
+\end_inset
+
+, && — 
+\begin_inset Quotes ard
+\end_inset
+
+and
+\begin_inset Quotes ald
+\end_inset
+
+, ! — 
+\begin_inset Quotes ard
+\end_inset
+
+not
+\begin_inset Quotes ald
+\end_inset
+
+).
+ Результатом данных операций также будут являться логические значения (true,
+ false).
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size large
+Не уверен в полноте этого блока.
+ В интернете информации немного, если кто-нибудь что-то добавит — буду очень
+ рад
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Присваивания
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Присваивание — механизм, позволяющий динамически изменять связи объектов
+ данных (переменных) с их значениями.
+ На физическом уровне результат проведения операции состоит в проведении
+ записи или перезаписи ячеек памяти или регистров процессора.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Является одной из центральных конструкций в императивных языках программирования.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+double a = 10.34; long int b = 2016; 
+\end_layout
+
+\begin_layout Verbatim
+int arr[10] = {0}; string say = "Hello, world!";    
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Некоторые языки допускают множественность целевых объектов (С++ в т.ч.):
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+int a, b, c;
+\end_layout
+
+\begin_layout Verbatim
+a = b = c = 10;
+\end_layout
+
+\begin_layout Verbatim
+//при этом компилятор видит это так:
+\end_layout
+
+\begin_layout Verbatim
+a = (b = (c = 10));
+\end_layout
+
+\begin_layout Verbatim
+//в С++ оператор присваивания возвращает присваиваемое значение.
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Некоторые языки допускают параллельное присваивание (Python, Ruby, но не
+ C++!):
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+a, b = 10, 20 #эта информация дана для ознакомления.
+ Можно будет 
+\end_layout
+
+\begin_layout Verbatim
+блеснуть знаниями перед Тереховым :D
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Также большинством языков поддерживаются составные операции присваивания
+ (+=, -=, *=, /=, %=)
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Ввод и вывод
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Так как С++ является наследником языка C, то поддерживает два типа простейшего
+ ввода и вывода: традиционный (в стиле C) и ввод-вывод с помощью потоков
+ STL.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Традиционный ввод-вывод реализуется при помощи заголовочного файла stdio.h
+ в C или cstdio в C++.
+ Он предоставляет необходимый набор функций для ввода-вывода при помощи
+ scanf() и printf().
+\end_layout
+
+\begin_layout Standard
+
+\size large
+При запуске консольного приложения неявно открываются три потока: stdin
+ — для ввода с клавиатуры, stdout — для буферизованного вывода на монитор
+ и stderr — для небуферизованного вывода на монитор сообщений об ошибках.
+ Эти три потока определены посредством <cstdio>.
+\end_layout
+
+\begin_layout Verbatim
+//code on "pure C"
+\end_layout
+
+\begin_layout Verbatim
+#include <stdio.h> //cstdio для C++
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+int main()
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    int i; float a;
+\end_layout
+
+\begin_layout Verbatim
+    printf("Введите i и a
+\backslash
+n"); /* вывод приглашения к вводу */
+\end_layout
+
+\begin_layout Verbatim
+    scanf("%d%f", &i, &a); /* непосредственно ввод */
+\end_layout
+
+\begin_layout Verbatim
+    return 0;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Файловый ввод-вывод в традиционном стиле реализуется при помощи того же
+ заголовочного файла и fprintf() и fscanf().
+ Синтаксис примерно тот же, за исключением того, что в качестве аргумента
+ обязательно должен быть передан объект, связанный с файлом из которого
+ производится чтение (или в который производится запись).
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+#include <cstdio>
+\end_layout
+
+\begin_layout Verbatim
+using namespace std;
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+int main()
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    FILE * fin = fopen("filein.txt", "r");
+\end_layout
+
+\begin_layout Verbatim
+    FILE * fout = fopen("fileout.txt", "w");
+\end_layout
+
+\begin_layout Verbatim
+    
+\end_layout
+
+\begin_layout Verbatim
+    int data;
+\end_layout
+
+\begin_layout Verbatim
+    fscanf(fin, "%d", &data);
+\end_layout
+
+\begin_layout Verbatim
+    // в переменную data ушло десятичное целое
+\end_layout
+
+\begin_layout Verbatim
+    fprintf(fout, "%d
+\backslash
+n", data*data);
+\end_layout
+
+\begin_layout Verbatim
+    // а теперь мы пишем её квадрат в файл fileout.txt
+\end_layout
+
+\begin_layout Verbatim
+    
+\end_layout
+
+\begin_layout Verbatim
+    return 0;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Ввод-вывод через потоки STL реализуется при помощи заголовочного файла iostream.
+ Он предоставляет необходимый набор функций для ввода-вывода посредством
+ cin и cout.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+При запуске консольного приложения неявно открываются четыре потока: сin
+ — для ввода с клавиатуры, сout — для буферизованного вывода на монитор,
+ сerr — для небуферизованного вывода на монитор сообщений об ошибках и clog
+ — буферизованный аналог cerr.
+ Эти четыре потока определены посредством <iostream>.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+#include <iostream>
+\end_layout
+
+\begin_layout Verbatim
+using namespace std;
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+int main()
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    cout << "Hello, world!";
+\end_layout
+
+\begin_layout Verbatim
+    int a;
+\end_layout
+
+\begin_layout Verbatim
+    cin >> a;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Файловый ввод-вывод реализуется при помощи заголовочного файла fstream.
+ Не забываем определить объекты ввода и вывода.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+#include <fstream>
+\end_layout
+
+\begin_layout Verbatim
+using namespace std;
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+int main()
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    ifstream fin("filein.txt");
+\end_layout
+
+\begin_layout Verbatim
+    ofstream fout("fileout.txt");
+\end_layout
+
+\begin_layout Verbatim
+    int data;
+\end_layout
+
+\begin_layout Verbatim
+    fin >> data;
+\end_layout
+
+\begin_layout Verbatim
+    // в переменную data ушло десятичное целое
+\end_layout
+
+\begin_layout Verbatim
+    fout << data*data;
+\end_layout
+
+\begin_layout Verbatim
+    // а теперь мы пишем её квадрат в файл fileout.txt
+\end_layout
+
+\begin_layout Verbatim
+    
+\end_layout
+
+\begin_layout Verbatim
+    return 0;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Условные предложения и итеративные конструкции
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Условные предложения
+\series default
+ или 
+\series bold
+ветвления
+\series default
+ задают выполнение либо одного, либо другого оператора в зависимости от
+ выполнения какого-либо условия.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В языке С++ имеется 2 вида ветвлений:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Конструкция if-else: 
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+if (a > b)
+\end_layout
+
+\begin_layout Verbatim
+{ //Терехов пользуется подобным оформлением скобок
+\end_layout
+
+\begin_layout Verbatim
+    a = a/2;
+\end_layout
+
+\begin_layout Verbatim
+    b = b*2;
+\end_layout
+
+\begin_layout Verbatim
+} //Не рискуйте: будьте как Терехов :)
+\end_layout
+
+\begin_layout Verbatim
+else if (a < b)
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    a = a*2;
+\end_layout
+
+\begin_layout Verbatim
+    b = b/2;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+else
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    a = b;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Просьба понимать, что в данном коде оператор else if не является отдельной
+ командой.
+ Это всего лишь комбинация else и нового if.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Конструкция switch-case: 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Является вариантом множественного выбора.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+int number;
+\end_layout
+
+\begin_layout Verbatim
+cin >> number;
+\end_layout
+
+\begin_layout Verbatim
+switch (number)
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    case 1:
+\end_layout
+
+\begin_layout Verbatim
+        cout << "Hello, world!";
+\end_layout
+
+\begin_layout Verbatim
+        break;
+\end_layout
+
+\begin_layout Verbatim
+    case 2:
+\end_layout
+
+\begin_layout Verbatim
+        cout << "Goodbye, world!";
+\end_layout
+
+\begin_layout Verbatim
+        break;
+\end_layout
+
+\begin_layout Verbatim
+    case 3:
+\end_layout
+
+\begin_layout Verbatim
+        cout << "Мне уже лень, придумайте сами";
+\end_layout
+
+\begin_layout Verbatim
+        break;
+\end_layout
+
+\begin_layout Verbatim
+    default :
+\end_layout
+
+\begin_layout Verbatim
+        cout << "Терехов лучший! :)";
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Стоит помнить, что переменная, созданная внутри условного оператора, в нем
+ и умрет.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Break в switch нужно ставить для предотвращения 
+\begin_inset Quotes ard
+\end_inset
+
+провалов управления
+\begin_inset Quotes ald
+\end_inset
+
+ — ситуации, когда выполнится не только команды в 
+\begin_inset Quotes ard
+\end_inset
+
+нужном
+\begin_inset Quotes ald
+\end_inset
+
+ case, но и во всех последующих.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Итеративная конструкция
+\series default
+ или 
+\series bold
+цикл
+\series default
+ задает многократное выполнение оператора, пока выполняется условие.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Конструкция for.
+ 
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+for (int i = 0; i < 10; i++)
+\end_layout
+
+\begin_layout Verbatim
+    cout << "Итерация номер" << i << endl;
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Поток выполнения данного оператора:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) При первом вхождении объявляется переменная i, которой присваивается
+ значение.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Проверяется соответствие условию i < 10.
+ Если true, то происходит выполнение команд, входящих в тело цикла.
+ Если false, то выход из цикла.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Затем выполняется инкремент i++ (или любое другое выражение, записанное
+ на этом месте).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Передача управления в точку 2).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Кстати, программист волен по своему усмотрению пропускать записи в скобках
+ после for().
+ К примеру, for( ; ; ) является бесконечным циклом.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Конструкция while.
+ 
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+while (true)
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    cout << "Come on, Java! Это Java!";
+\end_layout
+
+\begin_layout Verbatim
+} 
+\end_layout
+
+\begin_layout Verbatim
+//на самом деле, это C++, а кто понял пасхалку, тот молодец.
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Поток выполнения:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Проверка условия в скобках.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) true — выполнить тело цикла, false — не выполнять.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Конструкция do ...
+ while.
+ 
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+do
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    i = 1;
+\end_layout
+
+\begin_layout Verbatim
+    cout << "Это выполнится хотя бы " << i << "раз";
+\end_layout
+
+\begin_layout Verbatim
+    i++;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+while (i < 2);
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Поток выполнения:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Выполнить тело цикла.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Проверить условие в скобках.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Если true, то передать управление в точку 1).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Операторы break и continue:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+break работает в любых типах цикла и операторе switch, досрочно прекращая
+ выполнение цикла и передавая управление за его пределы.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+continue досрочно начинает следующую итерацию цикла.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Функции и передача параметров; структурная декомпозиция
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Функция
+\series default
+ — это фрагмент кода или алгоритм, реализованный на языке программирования,
+ с целью выполнения определённой последовательности операций.
+ Функции позволяют сделать программу модульной, то есть разделить программу
+ на несколько маленьких подпрограмм (функций), которые в совокупности выполняют
+ поставленную задачу.
+ Еще один огромнейший плюс функций в том, что их можно многократно использовать.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Функции в С++ могут быть определены не только в тексте программы, но и в
+ заголовочных файлах.
+ К примеру, функции pow() и sqrt() определены в заголовочном файле <cmath>.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Определяемые в тексте программы функции подразделяются, в свою очередь,
+ на функции, возвращающие значения, и функции, значения не возвращающие.
+ Функция, не возвращающая значения, называется 
+\series bold
+процедурой
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Общий синтаксис:
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+тип_возвращ_значения имя_функции(параметры)
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    тело_функции;
+\end_layout
+
+\begin_layout Verbatim
+    return возвращаемое_значение;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Возвращаемые значения функций могут быть любыми, за исключением массивов.
+ Однако вы всегда можете вернуть массив, 
+\begin_inset Quotes ard
+\end_inset
+
+обернув
+\begin_inset Quotes ald
+\end_inset
+
+ его в структуру.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пример процедуры:
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+void procedure(int parametr)
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    parametr++;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Понятно, что практического смысла такая функция не несет.
+ Процедуры стоит использовать для взаимодействия с внешними объектами: вывода
+ (но ни в коем случае не ввода!) на экран или файл с предварительной обработкой,
+ изменения массивов или переменных, передаваемых по ссылке.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пример функции, возвращающей значение:
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+double summator(double value1, double value2)
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    return value1+value2;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Вызов функции:
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+a = summator(b, c);
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+При этом управление будет передано функции, созданы локальные (т.е.
+ не видимые за пределами функции (инкапсуляция, аднака)) копии переменных
+ b и c, их значения присвоены переменным value1 и value2 (которые, как вы
+ уже догадались, и являются этими локальными копиями).
+ Будет выполнены все операторы внутри функции, оператор return передаст
+ управление обратно в 
+\begin_inset Quotes ard
+\end_inset
+
+родительскую
+\begin_inset Quotes ald
+\end_inset
+
+ функцию, инициализировав присвоение возвращаемого значения переменной a.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В качестве параметров функции может быть передано что угодно, в том числе
+ массивы (будут переданы по ссылке), структуры и даже сами функции!
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Функции в C++ можно объявлять в самом файле программы (до или после функции
+ main), или же во внешних файлах *.cpp, которые затем будут связаны.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Все функции в одном файле.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Функции перед main():
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В этом случае не требуется прототипирования функций, поскольку они обрабатываютс
+я до их вызова из функции main(), т.е.
+ во время компиляции main() компилятор уже знает о всех составляющих программу
+ функциях.
+ Такой способ имеет свои минусы: сама функция всегда должна следовать перед
+ своим вызовом, да и объявить взаимно рекурсивные функции (функции, вызывающие
+ друг друга) не получится.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Функции после main():
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Хорошему стилю программирования соответствует способ объявления функций
+ после main().
+ Однако в таком случае требуется прототипирование функций.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+#include <iostream>
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+void say_hello(int n); //прототип
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+int main()
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    std::cout << "Сколько раз сказать?";
+\end_layout
+
+\begin_layout Verbatim
+    int count;
+\end_layout
+
+\begin_layout Verbatim
+    std::cin >> count;
+\end_layout
+
+\begin_layout Verbatim
+    say_hello(count); //теперь компилятор знает
+\end_layout
+
+\begin_layout Verbatim
+    // о существовании этой функции
+\end_layout
+
+\begin_layout Verbatim
+    return 0; 
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+void say_hello(n)
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    for (int i = 0; i < n; i++)
+\end_layout
+
+\begin_layout Verbatim
+        std::cout << "Hello, world!
+\backslash
+n";
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Вообще прототип требует лишь объявления типов переменных и имен функций,
+ так что прототип в предыдущем примере можно переписать так:
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+void say_hello(int); 
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Такой фокус (как оказалось) прокатит и с массивами, и с указателями:
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+int many_money(double [], int, int);
+\end_layout
+
+\begin_layout Verbatim
+int many_money(int *, char [], short int);
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Функции в разных файлах.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size large
+Внимание! В этом разделе информация дана для ознакомления и на случай 
+\begin_inset Quotes ard
+\end_inset
+
+вдруг спросит
+\begin_inset Quotes ald
+\end_inset
+
+.
+ Рассказывайте это на экзамене только в том случае, если вы понимаете, что
+ говорите
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Понятно, что большие проекты не пишутся в один файл.
+ Здесь будет разобран простой пример программы, в которой функция вынесена
+ в отдельный файл.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Структура такой программы следующая: в директории с программой создаются
+ 3 (или больше) файлов:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Файл с функцией main().
+ Назовем его main.cpp.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Файл с прототипами используемых функций с расширением *.h.
+ Назовем его hello.h.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Файл(ы) c функцией(ями).
+ Их может быть сколь угодно большое количество, главное, чтобы все функции
+ были прототипированы в hello.h.
+ В нашей программе такой файл один и мы назовем его hello.cpp.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Содержимое файлов:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+hello.h
+\series default
+ 
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+#ifndef hello //не забываем стража
+\end_layout
+
+\begin_layout Verbatim
+#define hello
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+void say_hello();
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+#endif
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+hello.cpp
+\series default
+ 
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+#include <iostream>
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+void say_hello()
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    std::cout << "Hello, world!
+\backslash
+n";
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+main.cpp
+\series default
+ 
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+#include "hello.h" //не забываем эту строчку
+\end_layout
+
+\begin_layout Verbatim
+//она указывает препроцессору, в какой файл смотреть
+\end_layout
+
+\begin_layout Verbatim
+//для объявления функций
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+int main()
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    say_hello();
+\end_layout
+
+\begin_layout Verbatim
+    return 0;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В процесс компиляции такой программы добавляется еще один шаг: 
+\series bold
+линковка
+\series default
+ — сборка исполняемого модуля из нескольких объектных.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Как все это происходит.
+ Этапы:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Препроцессинг.
+ Препроцессор обрабатывает файл main.cpp, 
+\begin_inset Quotes ard
+\end_inset
+
+натыкается
+\begin_inset Quotes ald
+\end_inset
+
+ на #include "hello.h" и включает его содержимое в код основного файла.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Компиляция.
+ Компилятор компилирует файлы main.cpp и hello.cpp.
+ В большинстве IDE это должно происходить автоматически, но если вы пользуетесь
+ консольным компилятором, вам придется указать это прямо.
+ На выходе компилятор выдает 2 
+\series bold
+объектных файла
+\series default
+.
+ Объектные файлы можно назвать программами в полном смысле этого слова (это
+ уже бинарные коды), если не учитывать то, что по отдельности они бесполезны:
+ один из них содержит вызов функции say_hello(), определенной в другом файле,
+ а второй вообще не запустится, ибо в нем нет функции main().
+ Короче — эти файлы были бы мусором, если бы не
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%gcc -c main.cpp -o main.o
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Линковка.
+ Линковщик получает на вход два объектных файла и делает из них один, полноценны
+й.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%gcc main.o hello.o -o hello
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Обычно всю эту работу берет на себя IDE, но знать подробности не помешает.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Структурная декомпозиция
+\series default
+ — разделение целого на части.
+ В программировании этот термин означает разделение сложного проекта (программы)
+ на более мелкие части.
+ Структурная декомпозиция является основой принципа 
+\begin_inset Quotes ard
+\end_inset
+
+разделяй и властвуй
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Разделение программы на множество мелких частей, каждая из которых способна
+ независимо выполнять свой этап общей работы — первый способ декомпозиции.
+ Основой этого принципа является проектирование 
+\begin_inset Quotes ard
+\end_inset
+
+сверху вниз
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Второй способ декомпозиции — разделение системы по признаку принадлежности
+ её элементов различным абстракциям данной проблемной области.
+ В таком случае 
+\begin_inset Quotes ard
+\end_inset
+
+мир
+\begin_inset Quotes ald
+\end_inset
+
+ программы будет представлять собой совокупность взаимодействующих объектов.
+ Такой подход называется объектно-ориентированным.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Структурная декомпозиция в основном представляется в виде графа, где задача
+ разбивается на несколько подзадач, каждая из которых в свою очередь подразделяе
+тся еще на несколько подзадач и так далее.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Немного о принципе 
+\begin_inset Quotes ard
+\end_inset
+
+Разделяй и властвуй
+\begin_inset Quotes ald
+\end_inset
+
+.
+ Данный принцип заключается в рекурсивном разбиении решаемой задачи на две
+ и более подзадач такого же типа, но меньшего размера, и комбинирования
+ их решений для получения ответа к исходной задаче.
+ Если говорить более приземленно, то мы должны разбивать задачу на подзадачи
+ до тех пор, пока все подзадачи не станут элементарными, а затем решить
+ их и 
+\begin_inset Quotes ard
+\end_inset
+
+соединить
+\begin_inset Quotes ald
+\end_inset
+
+ ответы для получения ответа к исходной задаче.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Типичными примерами являются двоичный поиск и сортировка слиянием или QuickSort.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Основой для принципа 
+\begin_inset Quotes ard
+\end_inset
+
+Разделяй и властвуй
+\begin_inset Quotes ald
+\end_inset
+
+ служат функции.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Результирующая последовательность действий по решению задачи называется
+ 
+\series bold
+алгоритмом
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Алгоритмы и решение задач: стратегии решения задач, роль алгоритмов в решении
+ задач, стратегии реализации алгоритмов, стратегии отладки, понятие алгоритма,
+ свойства алгоритмов
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Алгоритм — набор инструкций, описывающий порядок действий исполнителя для
+ достижения результата решения задачи за конечное число действий, при любом
+ наборе исходных данных.
+ Понятие алгоритма относится к базисным понятиям математики.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Слово «алгоритм» происходит от имени индийского ученого Абу-Абдуллаха аль-Хорезм
+и, который в VIII веке впервые описал десятичную систему счисления и ввел
+ понятие нуля как значения пропущенных разрядов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Современное формальное понятие алгоритма было дано в 30-50-х годах XX века
+ в трудах Тьюринга, Поста, Чёрча, Маркова и других.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Первым программистом считается баронесса Ада Лавлейс, впервые описавшая
+ алгоритм вычисления чисел Бернулли на аналитической машине Чарльза Беббиджа.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Решение задач — мыслительный процесс направленный на достижение цели, заданной
+ в рамках проблемной ситуации (задачи).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Процесс решения задачи:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Нахождение проблемы;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Постановка задачи;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Решение задачи; 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Стратегии решения задач:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Решение задач «из начала в конец».
+ Применяется, когда решение задачи с начала более обосновано.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) «Из конца в начало».
+ Данная стратегия применяется в случае, если из конечной точки ведет меньше
+ путей решения, нежели из изначальной.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Индуктивный метод.
+ Рассуждение от частного к общему.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Дедуктивный метод.
+ Рассуждение от общего к частному.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В общем случае стратегия решения задачи может быть представлена как алгоритм.
+ Цель такого алгоритма — поиск окончательного или конкретного решения.
+ В зависимости от сложности задачи алгоритмы могут отличаться по сложности,
+ однако известно одно: стратегию решения любой задачи можно представить
+ в качестве алгоритма, выполнив который, исполнитель получит верный ответ.
+ Чем больше вы знаете об алгоритмах, тем больше у вас шансов найти хорошее
+ решение проблемы.
+ Во многих случаях новая задача легко сводится к старой, но для этого нужно
+ иметь фундаментальное понимание старых задач.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Полученный алгоритм (программа) должен обладать следующим набором свойств:
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+дискретность (алгоритм разбит на отдельные шаги - команды);
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+однозначность (каждая команда определяет единственно возможное действие
+ исполнителя);
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+понятность (все команды алгоритма входят в систему команд исполнителя);
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+результативность (исполнитель должен решить задачу за конечное число шагов).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Большая часть алгоритмов обладает также свойством массовости (с помощью
+ одного и того же алгоритма можно решать множество однотипных задач).
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Отладка
+\series default
+ — этап в разработке программы, состоящий в выявлении и устранении программных
+ ошибок, факт существования которых уже установлен.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отладка бывает двух видов:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Синтаксическая отладка.
+ Синтаксические ошибки выявляет компилятор, поэтому исправлять их достаточно
+ легко.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Семантическая (смысловая) отладка.
+ Ее время наступает тогда, когда синтаксических ошибок не осталось, но результат
+ы программа выдает неверные.
+ Здесь компилятор сам ничего выявить не сможет.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Стратегии отладки
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Принципы локализации ошибок:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Большинство ошибок обнаруживается вообще без запуска программы - просто
+ внимательным просматриванием текста.
+ Чрезвычайно удобные вспомогательные средства - это отладочные механизмы
+ среды разработки: трассировка (процесс пошагового выполнения программы),
+ промежуточный контроль значений.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Принципы исправления ошибок еще больше похожи на законы Мерфи: 
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Там, где найдена одна ошибка, возможно, есть и другие.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Вероятность, что ошибка найдена правильно, никогда не равна ста процентам.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Наша задача - найти саму ошибку, а не ее симптом.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Стратегии отладки:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Метод индукции - анализ программы от частного к общему.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size large
+Просматриваем симптомы ошибки и определяем данные, которые имеют к ней хоть
+ какое-то отношение.
+ Затем, используя тесты, исключаем маловероятные гипотезы, пока не остается
+ одна, которую мы пытаемся уточнить и доказать.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size large
+Метод дедукции - от общего к частному.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size large
+Выдвигаем гипотезу, которая может объяснить ошибку, пусть и не полностью.
+ Затем при помощи тестов эта гипотеза проверяется и доказывается.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size large
+Обратное движение по алгоритму.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size large
+Отладка начинается там, где впервые встретился неправильный результат.
+ Затем работа программы прослеживается (мысленно или при помощи тестов)
+ в обратном порядке, пока не будет обнаружено место возможной ошибки.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Базовые структуры данных: примитивные типы; массивы; структуры
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Примитивный тип — тип данных, предоставляемый языком программирования как
+ базовая встроенная единица языка.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Примитивные типы в C++:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+boolean.
+ Размер 1 байт, принимаемые значения true-false.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+char.
+ Размер 1 байт, принимаемые значения -128-127.
+ Используется для представления символьных данных.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+wchar_t.
+ Размер 2-4 байта.
+ Расширенный char-тип.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+int.
+ Размер 4 байта.
+ Целочисленный тип.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+short int.
+ Размер 2 байта.
+ 
+\begin_inset Quotes ard
+\end_inset
+
+Ужатый
+\begin_inset Quotes ald
+\end_inset
+
+ целочисленный тип.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+long int.
+ Размер 8 байт.
+ 
+\begin_inset Quotes ard
+\end_inset
+
+Расширенный
+\begin_inset Quotes ald
+\end_inset
+
+ целочисленный тип.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+float.
+ Размер 4 байта.
+ Вещественный тип данных.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+double.
+ Размер 8 байт.
+ 
+\begin_inset Quotes ard
+\end_inset
+
+Расширенный
+\begin_inset Quotes ald
+\end_inset
+
+ вещественный тип данных.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+long double.
+ Размер 10 байт.
+ 
+\begin_inset Quotes ard
+\end_inset
+
+Сильно расширенный
+\begin_inset Quotes ald
+\end_inset
+
+ вещественный тип данных.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Массив
+\series default
+ — тип или структура данных в виде набора компонентов (элементов массива)
+ одного типа, расположенных в памяти непосредственно друг за другом.
+ При этом доступ к отдельным элементам осуществляется с помощью индексации,
+ то есть ссылки на массив с указанием индекса нужного элемента.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Массивы подразделяются на статические и динамические.
+ Статические массивы занимают определенное количество памяти в зависимости
+ от числа выделенных элементов на всем протяжении выполнения программы,
+ а динамические способны изменять свой размер во время выполнения программы.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Кроме того, C++ дополнительно содержит шаблонные классы vector и array,
+ которые являются высокоуровневыми реализациями динамических и статических
+ массивов соответственно.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+//объявление статического массива
+\end_layout
+
+\begin_layout Verbatim
+int qwerty[5] = {0, 1, 2, 3, 4};
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+//объявление динамического массива
+\end_layout
+
+\begin_layout Verbatim
+int *qwerty = new int[10];
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+//объявление вектора
+\end_layout
+
+\begin_layout Verbatim
+#include <vector>
+\end_layout
+
+\begin_layout Verbatim
+std::vector<int> qwerty(10);
+\end_layout
+
+\begin_layout Verbatim
+//при этом значения вектора будут инициализированы нулями
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+//объявление аррэя
+\end_layout
+
+\begin_layout Verbatim
+#include <array>
+\end_layout
+
+\begin_layout Verbatim
+std::array<int, 3> a2 = {1, 2, 3};
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Плюсы vector'a и array'я в том, что они позволяют использовать некоторые
+ фишки, недоступные со стандартными массивами, например, копирование массива
+ при объявлении, сравнивание массивов и т.п.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Массивы используются для хранения и итерационной обработки данных.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Структура
+\series default
+ (в C/C++) — совокупность переменных, объединенных одним именем, предоставляющая
+ общепринятый способ хранения информации.
+ При объявлении структуры создается шаблон, используемый для создания объектов
+ структуры.Переменные, образующие структуру, называются полями структуры.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Структура — первый шаг к ООП, поскольку они позволяют создавать собственные
+ шаблоны и работать с ними.
+ Структуры, помимо примитивных, могут содержать и составные типы: массивы,
+ структуры.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+struct mark //структура оценок
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    int math; //за математику
+\end_layout
+
+\begin_layout Verbatim
+    int physic; //за физику
+\end_layout
+
+\begin_layout Verbatim
+    int geography; //за георграфию
+\end_layout
+
+\begin_layout Verbatim
+};
+\end_layout
+
+\begin_layout Verbatim
+ 
+\end_layout
+
+\begin_layout Verbatim
+struct student //создаем структуру
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    char *name; //имя студента
+\end_layout
+
+\begin_layout Verbatim
+    int age; //возраст
+\end_layout
+
+\begin_layout Verbatim
+    int group; //класс
+\end_layout
+
+\begin_layout Verbatim
+    mark winter; //оценки за зимнюю контрольную
+\end_layout
+
+\begin_layout Verbatim
+};
+\end_layout
+
+\begin_layout Verbatim
+ 
+\end_layout
+
+\begin_layout Verbatim
+int main() //работаем с нашими структурами
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    student Stark;
+\end_layout
+
+\begin_layout Verbatim
+    Stark.name = "Арья"; //обращение к полю
+\end_layout
+
+\begin_layout Verbatim
+    Stark.age = 16; //осуществляется через точку
+\end_layout
+
+\begin_layout Verbatim
+    Stark.group = 10;
+\end_layout
+
+\begin_layout Verbatim
+    Stark.winter.math = 5; //структура в структуре
+\end_layout
+
+\begin_layout Verbatim
+    Stark.winter.physic = 4; //why not?
+\end_layout
+
+\begin_layout Verbatim
+    Stark.winter.geography = 5;
+\end_layout
+
+\begin_layout Verbatim
+    return 0;
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Базовые структуры данных: строки и операции над строками
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Строки состоят из символов.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Символ
+\series default
+ — элементарная единица, некий набор которых несет определенный смысл.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В С++ существует специальный символьный тип — char.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Строки в С++ представляются в виде массивов символов, завершающихся знаком
+ конца строки 
+\begin_inset Formula $\backslash0$
+\end_inset
+
+ — нуль-терминатором.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Символьные строки состоят из набора символьных констант, заключенных в кавычки.
+ При объявлении строкового массива требуется учитывать наличие в конце строки
+ нуль-терминатора.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+char string[16] = "Мы сдали матан!"
+\end_layout
+
+\begin_layout Verbatim
+std::cout << string;
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Разберем подробнее, что происходит при выполнении данного участка кода:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Создается массив char длиною 16 элементов.
+ Кстати, если добавить еще один символ в строку, компилятор выкинет ошибку,
+ пожаловавшись на 
+\begin_inset Quotes ard
+\end_inset
+
+слишком длинный массив
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Элементам массива соответственно присваиваются значения символов строки.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Указатель на первый элемент массива 
+\begin_inset Quotes ard
+\end_inset
+
+скармливается
+\begin_inset Quotes ald
+\end_inset
+
+ cout'у.
+ Cout понимает, что перед ним массив char'ов и пускается в последовательный
+ вывод элементов этого массива до тех пор, пока не наткнется на нуль-терминатор.
+ Наткнувшись на него, cout понимает, что массив закончился, и прекращает
+ вывод.
+ Кстати, подобное ограничение работает даже в том случае, когда после нуль-терми
+натора имеются еще ячейки массива.
+ Таким образом, вывод кода
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+char string[16] = "Мы сдали матан!"
+\end_layout
+
+\begin_layout Verbatim
+string[7] = '
+\backslash
+0';
+\end_layout
+
+\begin_layout Verbatim
+std::cout << string;
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+будет таким: 
+\begin_inset Quotes ard
+\end_inset
+
+Мы сда
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+При инициализации строки не обязательно указывать её размер — компилятор
+ сделает это автоматически.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Считывание строк с клавиатуры можно осуществить несколькими способами:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) С помощью функции gets(string) — считает в переменную string все символы,
+ введенные до нажатия клавиши Enter.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) С помощью std::cin.
+ Учитывайте, что cin читает только первое слово и считает его за первую
+ строку.
+ Остальные слова остаются во входной очереди.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) С помощью функции cin.get(string, 16).
+ Учитывайте, что она оставляет символ конца строки во входной очереди.
+ Чтобы считать его, используйте cin.get() без параметров.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) С помощью функции cin.getline(string, 16).
+ Её поведение аналогично предыдущей за исключением того, что она считывает
+ в том числе и символ конца строки.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Функций для работы со строками много.
+ Перечислим лишь основные:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+strlen(имя_строки) — определяет длину указанной строки, без учёта нуль-символа.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+strcpy(s1,s2) — выполняет побайтное копирование символов из строки s2 в
+ строку s1.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+strcat(s1,s2) объединяет строку s2 со строкой s1.
+ Результат сохраняется в s1.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+strcmp(s1,s2) сравнивает строку s1 со строкой s2 и возвращает результат
+ типа int: 0 –если строки эквивалентны, >0 – если s1>s2, <0 — если s1<s2.
+ Регистр учитывается.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+stricmp(s1,s2) сравнивает строку s1 со строкой s2 и возвращает результат
+ типа int: 0 –если строки эквивалентны, >0 – если s1>s2, <0 — если s1<s2.
+ Регистр не учитывается.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Шаблонный класс string.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Реализует строки как классы.
+ Описан в заголовочном файле <string>.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Данный класс здорово облегчает жизнь программисту:
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+#include <iostream>
+\end_layout
+
+\begin_layout Verbatim
+#include <string>
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+int main()
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    std::string str1 = "Darth Vader";
+\end_layout
+
+\begin_layout Verbatim
+    std::string str2;
+\end_layout
+
+\begin_layout Verbatim
+    
+\end_layout
+
+\begin_layout Verbatim
+    str2 = str1; //копируем значение str1 в str2
+\end_layout
+
+\begin_layout Verbatim
+    
+\end_layout
+
+\begin_layout Verbatim
+    if (str1 == str2) //сравниваем строки
+\end_layout
+
+\begin_layout Verbatim
+        std::cout << "Строки равны";
+\end_layout
+
+\begin_layout Verbatim
+    
+\end_layout
+
+\begin_layout Verbatim
+    std::string str3 = str1 + " " + srt2; //конкатенация.
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+И так далее.
+ Таким образом, класс string является мощным инструментом и здорово облегчает
+ жизнь программисту.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Представление данных в памяти компьютера: биты, байты, слова; представление
+ символьных данных
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Любые данные в памяти компьютера представляются в виде последовательности
+ нулей и единиц.
+ Такая последовательность называется 
+\series bold
+кодом
+\series default
+.
+ Последовательность именно нулей и единиц была выбрана потому, что её реализация
+ максимально проста: есть сигнал — нет сигнала.
+ Но, кстати, это не самое производительное решение.
+ Наибольшей плотностью записи информации обладает система с основанием 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ Таким образом, из целочисленных систем наибольшей плотностью записи информации
+ обладает троичная система.
+ Теоретически доказано, что троичный компьютер быстрее двоичного примерно
+ в полтора раза (неожиданно, не правда ли?).
+ Однако реализация такой системы очень сложна.
+ В мире был создан всего один такой компьютер — Сетунь-70, разработанный
+ научным сотрудником МГУ Брусенцовым Н.П.
+ на основе троичных ферритодиодных ячеек собственной разработки.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Бит
+\series default
+ — двоичное число, принимающее значение 0 или 1.
+ Наименьшая ячейка памяти компьютера.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Машинное слово
+\series default
+ — это упорядоченное множество двоичных разрядов, используемое для хранения
+ команд программы и обрабатываемых данных.
+ Машинное слово имеет тот же размер, что и разрядность процессора.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Байт
+\series default
+ — машинное слово минимальной размерности, адресуемое в процессе обработки
+ данных.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Размеры байтов и машинных слов были введены корпорацией IBM в 1970-х годах:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Байт — 8 бит.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+H (полуслово) — 16 бит, последний бит всегда 0.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+W (слово) — 32 бита, последние два бита 00.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+DW (двойное слово) — 64 бита, последние три бита 000.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Все современные процессоры являются 64-х битными.
+ Данную архитектуру впервые реализовала в своих процессорах компания AMD
+ в 2003 году, поэтому её чаще всего называют amd64 или x86-64, подразумевая
+ обратную совместимость с 32-хбитной архитектурой x86, которую впервые реализова
+ла Intel в процессорах 80?86 серии.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Представление текстовой информации:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Представление и обработка текстовой информации основана в C++ на базовом
+ типе char, байт которого может хранить либо сам символ текста, либо его
+ двоичное представление.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для подобного представления придуманы 
+\series bold
+кодировки
+\series default
+, в которых каждый символ кодируется определенной последовательностью битов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Международным стандартом в этом смысле стала кодировка ASCII.
+ Сначала она была семибитовой и кодировала 128 символов, часть которых составляю
+т буквы латинского алфавита, знаки препинания и спецсимволы.
+ Однако затем она была расширена до 8 бит (256 символов); первые 128 символов
+ кодируются так же, как и в семибитовой ASCII, а оставшиеся 128 символов
+ могут быть использованы для регионального компонента кодировки.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Понятно, что 256 символами невозможно охватить все языки.
+ Поэтому были разработаны другие кодировки, которые (конечно же!) несовместимы
+ друг с другом.
+ Однако сейчас развивается кодировка UTF-8 (Unicode Transformation Format,)
+ (и её 
+\begin_inset Quotes ard
+\end_inset
+
+дочки
+\begin_inset Quotes ald
+\end_inset
+
+ UTF-16, UTF-32).
+ Суть данной кодировки в том, что она охватывает все символы всех языков
+ мира, символы вымерших языков, математические и музыкальные символы, смайлы
+ и даже клинопись и алфавит Брайля! 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%а вот эльфийского нет.
+ совсем нет.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Алгоритм кодирования в UTF-8 стандартизован и состоит из 3-х пунктов:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Определить количество байт, требуемых для кодирования данного символа.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Подготовить старшие биты первого байта.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Заполнить оставшиеся биты всех последующих байтов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Суть кодирования в том, что первые n бит содержат информацию о региональной
+ кодировке и числе байтов, которым кодируется один символ.
+ К примеру, если первый бит равен нулю, то кодировка полностью аналогична
+ ASCII.
+ Если же он равен единице, то подключается еще один байт, содержащий региональны
+е коды.
+ Аналогично со следующий битом.
+ Завершающим битом первого байта должен быть бит-терминатор, означающий
+ конец кода размера.
+ Затем идут значащие биты, при этом каждый новый байт начинается с префикса
+ 10, означающего продолжение.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пример кодировки одного символа, где 
+\begin_inset Quotes ard
+\end_inset
+
+x
+\begin_inset Quotes ald
+\end_inset
+
+ — значащий бит.
+ 
+\end_layout
+
+\begin_layout Verbatim
+(1 байт)  0aaa aaaa 
+\end_layout
+
+\begin_layout Verbatim
+(2 байта) 110x xxxx 10xx xxxx
+\end_layout
+
+\begin_layout Verbatim
+(3 байта) 1110 xxxx 10xx xxxx 10xx xxxx
+\end_layout
+
+\begin_layout Verbatim
+(4 байта) 1111 0xxx 10xx xxxx 10xx xxxx 10xx xxxx
+\end_layout
+
+\begin_layout Verbatim
+(5 байт)  1111 10xx 10xx xxxx 10xx xxxx 10xx xxxx 10xx xxxx
+\end_layout
+
+\begin_layout Verbatim
+(6 байт)  1111 110x 10xx xxxx 10xx xxxx 10xx xxxx 10xx xxxx 10xx xxxx
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Сейчас UTF-8 признана международным форматом кодировки, на который перешли
+ все современные системы.
+ В операционных системах семейств Linux и BSD, Mac OS, Android, и так далее
+ Unicode используется по умолчанию.
+ Единственным 
+\begin_inset Quotes ard
+\end_inset
+
+динозавром
+\begin_inset Quotes ald
+\end_inset
+
+, по прежнему использующий кодировку собственного производства CP-1251 остаётся
+ Windows, но, к счастью, и она начинает помаленьку переезжать на UTF-8.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Представление числовых данных и системы счисления
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Кодирование числовой информации:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Числа в памяти компьютера хранятся в двоичной системе счисления.
+ При этом отрицательные числа хранятся при помощи 
+\series bold
+дополнительного кода
+\series default
+ — такого представления двоичного числа, при котором выполняются следующие
+ операции:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) добавим слева еще одну цифру — знак числа, принимающую всего два значения:
+ 0 — плюс, 1 — минус;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) положительные числа представляются обычным образом;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) каждая цифра отрицательного числа заменяется на дополнение ее до n-1,
+ где n - основание системы счисления (для десятичной системы - это дополнение
+ до 9, то есть цифра, которая в сумме с исходной дает 9);
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) к полученному числу добавляется 1.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Таким образом, в двоичном двухбайтном целом (short int) положительные числа
+ занимают диапазон [0x0000, 0x7FFF] ([0, 32767]), а отрицательные — [0x8001-0xFF
+FF] ([-32767, -1]).
+ При этом число 0x8000 не определено (-0).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Такой финт позволяет нам складывать числа в дополнительном коде по правилам
+ сложения чисел без знака и получать корректный результат, выраженный двоичным
+ кодом.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для представления чисел с плавающей точкой используется следующая запись:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Нулевой бит — знак.
+ С 1 по 8 — порядок.
+ С 9 по 31 — мантисса.
+ (для 32-хбитного числа).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Нулевой бит — знак.
+ 1, 2, 3 биты фиксированы.
+ С 4 по 9 — порядок.
+ Все остальное — мантисса.
+ (для 64-хбитного числа).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Различают следующие типы чисел:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Нормализованное число: 
+\begin_inset Formula $\pm exp>0$
+\end_inset
+
+ и затем любой набор битов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Ненормализованное число: 
+\begin_inset Formula $\pm0$
+\end_inset
+
+ и затем любые символы не равные 0.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Ноль: 
+\begin_inset Formula $\pm0$
+\end_inset
+
+ и нули.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Formula $\infty$
+\end_inset
+
+: 
+\begin_inset Formula $\pm1111...$
+\end_inset
+
+ и затем нули.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+NaN (Not a Number): 
+\begin_inset Formula $\pm111...1$
+\end_inset
+
+ и затем ненулевые символы.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Системы счисления:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для человека самой понятной системой счисления навсегда останется 10-чная,
+ так как именно она имеет основание, равное числу пальцев на руке человека.
+ Компьютерам, по понятным причинам, понятнее двоичная система счисления.
+ В качестве компромисса между компьютером и человеком используется 16-теричная
+ система счисления, которая объединяет в себе легкость перевода в двоичную
+ и достаточную легкость для чтения и понимания человеком.
+ Кроме того, в шестнадцатеричной системе счисления легко представлять данные
+ в машинном виде: 1 байт = 2 цифрам.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Обзор операционных систем: роль и задачи операционных систем; простое управление
+ файлами
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Операционная система
+\series default
+ — комплекс взаимосвязанных программ, предназначенных для управления ресурсами
+ вычислительного устройства и организации взаимодействия с пользователем.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Функции операционных систем:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Исполнение запросов программ (ввод и вывод данных, запуск и остановка
+ других программ, выделение и освобождение дополнительной памяти и др.).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Загрузка программ в оперативную память и их выполнение.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Стандартизованный доступ к периферийным устройствам (устройства ввода-вывода).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Управление оперативной памятью (распределение между процессами, организация
+ виртуальной памяти).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+5) Управление доступом к данным на энергонезависимых носителях (таких как
+ жёсткий диск, оптические диски и др.), организованным в той или иной файловой
+ системе.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+6) Обеспечение пользовательского интерфейса (управление вводом-выводом).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+7) Сохранение информации об ошибках системы.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Дополнительные функции:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Параллельное или псевдопараллельное выполнение задач (многозадачность).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Эффективное распределение ресурсов вычислительной системы между процессами.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Разграничение доступа различных процессов к ресурсам.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Организация надёжных вычислений (невозможности одного вычислительного
+ процесса намеренно или по ошибке повлиять на вычисления в другом процессе),
+ основана на разграничении доступа к ресурсам.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+5) Взаимодействие между процессами: обмен данными, взаимная синхронизация.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+6) Защита самой системы, а также пользовательских данных и программ от действий
+ пользователей (злонамеренных или по незнанию) или приложений.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+7) Многопользовательский режим работы и разграничение прав доступа.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Роль операционных систем:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Универсальный механизм сохранения данных.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Распределение полномочий.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Управление процессами выполнения отдельных программ.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Первой действительно полноценной операционной системой была UNIX, разработанная
+ в 1969 году Кеном Томпсоном, Деннисом Ритчи и Брайаном Керниганом.
+ Существовавшие до этого момента решения были либо плохо масштабируемы (затрудне
+на функция переноса системы), либо сложны, и, конечно же, полностью несовместимы
+ между собой.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Одним из преимуществ новой ОС была принципиально новая и простая метафорика:
+ всего два ключевых понятия: вычислительный процесс и файл.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Одной из важнейших функций операционной системы является управление файлами.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Файл
+\series default
+ — именованная область данных на носителе информации.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для упорядоченной работы с файлами используются 
+\series bold
+файловые системы
+\series default
+ — порядки, определяющие способ организации, хранения и именования данных
+ на носителях информации.
+ Также она связывает носитель и API для доступа к файлам.
+ Файловая система не является частью ОС, она 
+\begin_inset Quotes ard
+\end_inset
+
+лежит
+\begin_inset Quotes ald
+\end_inset
+
+ на диске и требует драйверов для обращения к себе.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Свойства файла:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Имя файла;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Расширение файла;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Основные атрибуты (владельцы Windows могут вспомнить галочку 
+\begin_inset Quotes ard
+\end_inset
+
+скрытый
+\begin_inset Quotes ald
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Время (создания, изменения, последнего обращения);
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Владелец и группа;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Права доступа (rwxr-xr- -).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Особенности реализации: в UNIX-подобных операционных системах процессы и
+ устройства также представляются в виде файлов.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Буферизация
+\series default
+ — метод организации обмена, который подразумевает использование буфера
+ для временного хранения данных.
+ Бывает прозрачная, когда устройства не подозревают о существовании буфера
+ между ними (например, операция кэширования перед записью на диск) и непрозрачна
+я, когда сторонам для обмена требуются знания о буфере.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Введение в распределенные вычисления: предпосылки возникновения и история
+ сетей и Интернета
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Распределенное вычисление
+\series default
+ — вычисление какой-либо сложной программы посредством её разбиения на несколько
+ малых кусков и их вычисление на нескольких разных машинах.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Особенностью распределенных многопроцессорных вычислительных систем является
+ легкая масштабируемость, в отличии от локальных компьютеров.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Распределенная ОС, динамически и автоматически распределяя работы по различным
+ машинам системы, заставляет набор сетевых машин обрабатывать информацию
+ параллельно.
+ При этом каждый компьютер в сети обладает собственной операционной системой,
+ самостоятельно управляющей процессами и памятью на данной машине, однако
+ они все объединены коммуникационными протоколами для организации взаимодействия
+ процессов, выполняющихся на разных компьютерах сети.
+ В таком случае каждая ОС каждого компьютера называется сетевой ОС.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Необходимость в сетях возникла еще в 50-х годах прошлого века, однако связано
+ оно было не с распределенными вычислениями и не с вычислениями вообще.
+ В 1958 году министерство обороны США приняло решение создать систему раннего
+ оповещения о ракетной атаке со стороны СССР.
+ Так как наблюдательные пункты были разбросаны по всей стране, возникла
+ необходимость в сети, способной быстро передавать информацию.
+ В 1962 году Джордж Ликлайдер из Массачусетского университета выступил с
+ серией заметок о социальном взаимодействии при помощи компьютерных сетей.
+ В этом же году его пригласили на должность первого руководителя исследовательск
+ого компьютерного проекта при Министерстве обороны США.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Так в конце 1969 года увидела свет первая компьютерная сеть APRANet, состоящая
+ всего из 4-х компьютеров.
+ В основе данной сети лежала идея 
+\series bold
+пакетной коммутации
+\series default
+, предложенная еще Полом Бэреном в середине 50-х годов.
+ В течении следующих пяти лет к APRANet были подключены еще несколько сотен
+ компьютеров.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Параллельно развивались и другие проекты сетей, однако препятствием между
+ их совместной работой было то, что все они работали по-разному.
+ Был необходим единый протокол, который бы позволил общаться разным компьютерам
+ и сетям совместно.
+ И в 1983 году был разработан подобный протокол, получивший название TCP/IP.
+ Машины APRANet были переведены на него в том же году.
+ Так был выработан стандарт, в соответствии с которым до сих пор развивается
+ сеть Интернет.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+К возникшей сети затем подключалось все больше и больше компьютеров и в
+ результате мы имеем то, что имеем — сеть Интернет.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Человеко-машинное взаимодействие: введение в вопросы проектирования
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Интерфейс
+\series default
+ (чаще всего понимается пользовательский интерфейс) — совокупность средств
+ и методов, с помощью которых пользователь взаимодействует с компьютером.
+ Интерфейс может быть однонаправленным — вывод информации или двунаправленным
+ — возможно обратное взаимодействие.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Юзабилити
+\series default
+ — субъективная оценка эффективности и удобства использования какого-либо
+ интерфейса.
+ Важными характеристиками, повышающими юзабилити, являются понятность, удобство
+ и дружественность к пользователю.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Интерфейс предполагает использование различных систем ввода и вывода для
+ взаимодействия с ним.
+ Пробежимся кратко по истории интерфейса:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Ламповые пульты и перфоленты для вывода и перфокарты для ввода — самый
+ старый и самый неудобный интерфейс.
+ Но он выполнял свое главное призвание — обеспечивал человеко-машинное взаимодей
+ствие.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Дисплеи и устройства печати — с появлением этих устройств стало возможным
+ выводить на экран образы (а, как известно, большая часть людей лучше воспринима
+ет образы, а не текст).
+ Оттуда же пошло правило 
+\begin_inset Quotes ard
+\end_inset
+
+машина для человека
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Следует различать 2 понятия: UX (User Experience Design), который представляет
+ собою дизайн 
+\begin_inset Quotes ard
+\end_inset
+
+чтобы было удобно
+\begin_inset Quotes ald
+\end_inset
+
+ и UI (User Interface Design) — более узкое понятие, включающее в себя дизайн
+ элементов управления, кнопок и т.п.
+ Грубо говоря, UX — это расположение некрасивых элементов интерфейса таким
+ образом, чтобы пользователю было удобно его использовать и UI — приведение
+ данных элементов интерфейса в красивый вид, как то: раскраска, наложение
+ теней, выравнивание.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Основные правила создания интерфейса:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Организованность элементов интерфейса.
+ Это означает, что они должны быть логически структурированы и взаимосвязаны.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Группировка элементов интерфейса.
+ Подразумевает объединение в группы логически связанных элементов (меню,
+ формы).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Выравнивание элементов интерфейса.
+ Сложно представить, что плохо выровненный интерфейс может быть для кого-то
+ удобным!
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Единый стиль элементов интерфейса.
+ Стилевое оформление играет не последнюю роль, ведь именно оно сохраняется
+ в памяти пользователя.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+5) Наличие свободного пространства.
+ Это позволяет разграничивать информационные блоки, сосредотачивая внимание
+ на чем-то одном.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Нужно осознавать, что 99% успешности программы — это интерфейс, так как
+ пользователь не видит 
+\begin_inset Quotes ard
+\end_inset
+
+потрохов
+\begin_inset Quotes ald
+\end_inset
+
+ программы и собирается взаимодействовать с вашей программой, а не копаться
+ в её внутренностях.
+ Поэтому дизайну также нужно уделить немало времени.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Хочется дополнительно отметить, что существует такой вид интерфейса, как
+ 
+\series bold
+командная строка
+\series default
+ или 
+\series bold
+терминал
+\series default
+.
+ Данный интерфейс имеет не очень высокое юзабилити, интуитивно не понятен
+ и не удобен в использовании для новичков.
+ Однако, разобравшись в нем, можно признать, что он гораздо удобнее графического
+, поскольку все настройки и функции лежат на поверхности.
+ Кроме того, он имеет гораздо больший потенциал для совершения неких специальных
+ действий, например, множественного копирования или переименования.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Методология разработки программного обеспечения: основные понятия и принципы
+ проектирования; структурная декомпозиция; стратегии тестирования и отладки;
+ разработка сценариев тестирования (test cases)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Методология
+\series default
+ — это система принципов, а также совокупность идей, понятий, методов, способов
+ и средств, определяющих стиль разработки программного обеспечения.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Методология — это реализация стандарта.
+ Сами стандарты лишь говорят о том, что должно быть, оставляя свободу выбора
+ и адаптации.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Конкретные вещи реализуется через выбранную методологию.
+ Именно она определяет, как будет выполняться разработка.
+ Существует много успешных методологий создания программного обеспечения.
+ Выбор конкретной методологии зависит от размера команды, от специфики и
+ сложности проекта, от стабильности и зрелости процессов в компании и от
+ личных качеств сотрудников.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Методологии представляют собой ядро теории управления разработкой программного
+ обеспечения.
+ К существующей классификации в зависимости от используемой в ней модели
+ жизненного цикла (водопадные и итерационные методологии) добавилась более
+ общая классификация на прогнозируемые и адаптивные методологии.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Модель водопада
+\series default
+ — модель процесса разработки программного обеспечения, в которой процесс
+ разработки выглядит как поток, последовательно проходящий фазы анализа
+ требований, проектирования, реализации, тестирования, интеграции и поддержки.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Итеративная разработка
+\series default
+ — выполнение работ параллельно с непрерывным анализом полученных результатов
+ и корректировкой предыдущих этапов работы.
+ Проект при этом подходе в каждой фазе развития проходит повторяющийся цикл:
+ Планирование - Реализация - Проверка - Оценка.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Прогнозируемые
+\series default
+ методологии фокусируются на детальном планировании будущего.
+ Известны запланированные задачи и ресурсы на весь срок проекта.
+ Команда с трудом реагирует на возможные изменения.
+ План оптимизирован исходя из состава работ и существующих требований.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Адаптивные
+\series default
+ методологии нацелены на преодоление ожидаемой неполноты требований и их
+ постоянного изменения.
+ Когда меняются требования, команда разработчиков тоже меняется.
+ Команда, участвующая в адаптивной разработке, с трудом может предсказать
+ будущее проекта.
+ Существует точный план лишь на ближайшее время.
+ Более удаленные во времени планы существуют лишь как декларации о целях
+ проекта, ожидаемых затратах и результатах.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В основе любой методологии лежит 
+\series bold
+структурное программирование
+\series default
+ — постепенная декомпозиция задачи и реализация её решения с использованием
+ заранее ограниченного числа конструкций (while, if, разделение на функции
+ и так далее).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Главный принцип любой методологии — принцип 
+\begin_inset Quotes ard
+\end_inset
+
+разделяй и властвуй
+\begin_inset Quotes ald
+\end_inset
+
+, то есть принцип 
+\series bold
+структурной декомпозиции
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Этапы разработки любой сложной системы:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Декомпозиция, то есть разделение задачи на подзадачи.
+ Оценка возможности упрощения тех или иных подзадач.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Проверка поддержки данной декомпозиции используемыми технологиями.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Оценка сложности каждой подсистемы.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Сообщение заказчику о результатах декомпозиции, при этом планируемое
+ время разработки умножаем на два (а цену на три, хе-хе).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+5) Если заказчик дает добро, принимаемся за разработку.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Таки да, исполнение всех этих пунктов не бесплатное! Это называется системный
+ анализ и такое стоит немалых денег.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Язык UML — язык графического описания для объектного моделирования в области
+ разработки программного обеспечения, моделирования бизнес-процессов, системного
+ проектирования и отображения организационных структур.
+ Он был создан для определения, визуализации, проектирования и документирования,
+ в основном, программных систем.
+ UML не является языком программирования, но на основании UML-моделей возможна
+ генерация кода.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Стратегия тестирования
+\series default
+ — это план проведения работ по тестированию системы или её модуля, учитывающий
+ специфику функциональности и зависимости с другими компонентами системы
+ и платформы.
+ Стратегия определяет типы тестов, которые нужно выполнять для данного функциона
+ла системы, включает описание необходимых подходов с точки зрения целей
+ тестирования и может задавать описания или требования к необходимым для
+ проведения тестирования инструментам и инфраструктуре.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Несколько правил тестирования:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Знаем, что должна выдать на программа на данном тесте до запуска теста;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Хороший тест — тест, который сломал программу.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Каждый цикл проверять минимум 3 раза: без захода в цикл, с единичным
+ заходом, с множественным заходом.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Лучший способ отладки — чтение программы.
+ Еще более лучший способ отладки — описание действия программы 
+\begin_inset Quotes ard
+\end_inset
+
+на бумажке
+\begin_inset Quotes ald
+\end_inset
+
+ или объяснение её кому-то постороннему.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отсюда вытекают 
+\series bold
+аксиомы программирования
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) В каждой программе есть ошибка.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Если в программе нет ошибок, то ошибка в алгоритме.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Если нет ошибок ни в программе, ни в алгоритме, то такая программа никому
+ нафиг не нужна!
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Итоги:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Тесты нужно писать до программы (test first)!
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) При написании программы нужно использовать принципы структурного программиров
+ания (и никаких goto!).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Нужно заранее готовиться к отладочной работе (расставить контрольные
+ точки и понять, что будет делать программа при этом и только после этого
+ нажимать кнопку 
+\begin_inset Quotes ard
+\end_inset
+
+Пуск
+\begin_inset Quotes ald
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Среды разработки; инструменты тестирования и отладки
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+IDE
+\series default
+ (интегрированная среда разработки) — комплекс программных средств, используемых
+ программистами для разработки программного обеспечения.
+ Включают в себя (минимум):
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Текстовый редактор;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Компилятор/интерпретатор;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Средства автоматизации сборки;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Отладчик (дебаггер).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Однако поистине хорошая среда разработки обязана включать в себя (или быть
+ расширяемой до):
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Систему управления контролем версий;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Средства облегчения использования объектно-ориентированного программирования
+ (браузер классов, инспектор объектов, диаграмму иерархии классов);
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Средства разработки графических интерфейсов;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Возможность написания собственных плагинов.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Отладка
+\series default
+ — этап в разработке программы, состоящий в выявлении и устранении программных
+ ошибок, факт наличия которых уже установлен.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Тестирование
+\series default
+ — процесс выполнения данной программы на некоем наборе тестов, для которых
+ заранее известен результат выполнения.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Отладку можно представить в виде многократного повторения трех процессов:
+ тестирования, поиска ошибки и редактирования кода программы для её исправления.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Главным инструментом для тестирования и отладки программы является дебаггер.
+ Он позволяет выполнять части кода, расставлять точки останова, менять значения
+ переменных в процессе выполнения программы и так далее.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Точка останова
+\series default
+ (Break point) — некая точка, расположенная в коде программы.
+ При достижении данной точки выполнение программы будет прервано и управление
+ передано отладчику.
+ А это значит, что теперь мы можем посмотреть все значения локальных переменных
+ и понять, где ошибка.
+ И, конечно же, изменить их.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Трассировка
+\series default
+ — построчное выполнение кода, при котором брэкпоинты как бы устанавливаются
+ на каждой строчке.
+ При этом доступен функционал вхождения/игнорирования if'ов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Таким образом, отладчик позволяет находить ошибки достаточно быстро.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Социальный контекст компьютинга: история компьютинга и компьютеров; эволюция
+ идей и компьютеров; социальный эффект компьютеров и Интернета; профессионализм,
+ кодекс этики и ответственное поведение; авторские права, интеллектуальная
+ собственность и компьютерное пиратство
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Краткий курс истории компьютеров:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В 1812 году английский математик и экономист 
+\series bold
+Чарльз Бэббидж
+\series default
+ начал работу над созданием так называемой 
+\begin_inset Quotes ard
+\end_inset
+
+разностной машины
+\begin_inset Quotes ald
+\end_inset
+
+, которая, по его задумке, могла не только производить арифметические действия,
+ но и выполнять их по определенному алгоритму.
+ К сожалению, данная машина так и не была закончена.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Однако 1842 году была опубликована рукопись 
+\begin_inset Quotes ard
+\end_inset
+
+Очерк об аналитической машине Чарльза Бэббиджа
+\begin_inset Quotes ald
+\end_inset
+
+, переведенная ученицей и последовательницей Беббиджа — Адой Лавлейс.
+ Она в том числе составила несколько программ для этой аналитической машины.
+ Поэтому леди Лавлейс считается первым программистом мира.
+ Язык Ада, кстати, был назван в её честь.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+После Бэббиджа значительный вклад внес американский изобретатель Г.
+ Холлерит, впервые построивший ручной перфоратор и табулятор — машину для
+ сортировки перфокарт.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Большим толчком к развитию электронно-вычислительной техники послужило создание
+ в 1917 году катодного реле (триггера) М.А.
+ Бонч-Бруевичем.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Первым создателем автоматической вычислительной машины считается немецкий
+ учёный К.
+ Цузе, построивший релейные машины Z1, Z2, Z3, Z4, Z5, однако наиболее известна
+ Z3, так как именно на нее была впервые опубликована документация.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Независимо от Цузе в 1943 году Г.
+ Эйкен и Т.
+ Уотсон собрали собственную релейную машину Mark-I.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Первой ЭВМ считается ENIAC, которая выполняла операции сложения и умножения
+ на три порядка быстрее, чем это делали релейные машины.
+ Она была представлена в 1946 году.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Революцию совершили идеи американского математика фон Неймана.
+ До него вычислительные машины основывались на гарвардской архитектуре,
+ которая подразумевала разделенную командную память и память физических
+ данных.
+ Фон Нейманом же была предложена архитектура, в которой командная память
+ и память данных были собраны в одном устройстве.
+ Данная архитектура называется фон-Неймановской и все современные компьютеры
+ построены на ней.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Развитие ламповых ЭВМ началось с постройки серии ЭВМ UNIAC, которые работали
+ с частотой 2.5 МГц и содержали до 5000 ламп.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Первой советской вычислительной машиной считается БЭСМ, которая была построена
+ в Институте точной математики и вычислительной техники под руководством
+ С.А.
+ Лебедева.
+ Это произошло в 1952 году.
+ С 1956 года начался серийный выпуск БЭСМ-2.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В 1955 году в США было объявлено о создании транзисторного компьютера.
+ В течении 10 лет были созданы десятки ЭВМ на транзисторах.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В 1964 году IBM создает шесть машин модели IBM-360, которые были построены
+ на интегральных схемах.
+ Это ознаменовало начало эпохи компьютеров третьего поколения.
+ Таких машин было выпущено уже более 33 тысяч только корпорацией IBM.
+ По всему миру строятся машины, подобные данной.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Примерно в это же время появляются визуальные устройства ввода-вывода —
+ графические дисплеи.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Четвертое поколение ЭВМ связано с развитием микропроцессорной техники.
+ В 1971 году Intel выпускает микросхему Intel-4004, родоначальницу современного
+ семейства x86 процессоров.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В 1972 году появился первый восьмибитный процессор Intel-8008, разрядность
+ которого позволяла кодировать не только цифры, но и буквы алфавита и специальны
+е символы.
+ Таким образом, мировая индустрия стояла на пороге создания персональных
+ компьютеров.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Первые такие ПК базировались на процессорах Intel-8080 и выпускались во
+ второй половине 70-х годов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Однако первым ПК считается компьютер Apple-I, собранный Стивом Джобсом и
+ Стивом Возняком в 1976 году.
+ Он не имел ни клавиатуры, ни корпуса, однако мог считаться полноценным
+ компьютером.
+ Затем появился Apple-II, который принес компании Apple мировую известность
+ и более двух миллиардов долларов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+К 1980 году становится очевидным успех идеи ПК.
+ Появляется множество машин, самыми известными из которых стали IBM-PC (завоевал
+ наибольшую популярность), Apple Macintosh, Amiga (нет, не Amigo), ZX Spectrum
+ и так далее.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+К тому моменту началось постоянное наращивание производственных мощностей,
+ частот и размеров памяти, что привело повсеместному распространению ПК.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+О социальном эффекте даже писать не буду.
+ Все знают, каков он и с чем его едят.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Трудно оценить профессионализм программиста, как и результат его работы,
+ поскольку алгоритмов решения задачи может быть несколько и каждый будет
+ иметь плюсы и минусы.
+ Например, результат работы программиста можно оценить по метрике сложности
+ программы.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Метрика сложности программы содержит:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Количество строк кода;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Число функций;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Число баз данных и таблиц;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Число окошек;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+5) Число ветвлений;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Но, конечно, всё в этом мире субъективно.
+ Однако есть так называемый кодекс этики программистов, который подразумевает
+ следующие признаки профессионального программиста:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Профессионал смотрит в будущее своей программы, оценивает возможности
+ развития, поддержки.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Работа профессионала кому-то нужна, кроме него самого.
+ Профессиональный программист — не студент, который пишет программки для
+ души, он нацеливает свой продукт на какую-то определенную аудиторию.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Профессионал охотно делится своими знаниями с соседями.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Профессионал состоит в какой либо профессиональной организации (к примеру,
+ IEEE).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+5) Профессионал всегда в ответе за свою программу.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В современном мире проблема авторского права стоит довольно остро.
+ С появлением интернета и торрент-сетей развернулась настоящая баталия между
+ сторонниками копирайта — соблюдения авторского права и сторонниками копилефта,
+ которые призывают отказаться от авторского права.
+ Первые напирают на то, что работа автора должна быть оплачена; вторые —
+ на то, что в цифровую эпоху копирование не стоит ничего.
+ Данная война длится уже второй десяток лет и пока перевеса нет ни на одной
+ стороне.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Причем здесь программист? А притом, что его напрямую касается эта война,
+ ведь компьютерная программа считается интеллектуальной собственностью и
+ точно так же легко распространяема.
+ В связи с этим программисту требуется знать несколько правил:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Написанная вами 
+\begin_inset Quotes ard
+\end_inset
+
+для себя
+\begin_inset Quotes ald
+\end_inset
+
+ программа принадлежит вам и вы можете распоряжаться ею, как душе угодно
+ (но только если она не нарушает прав и свобод других людей).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Авторские права на программу, написанную по заказу кого-либо принадлежат,
+ чаще всего, не вам, а этому кому-то, однако у вас есть право быть упомянутым
+ как разработчик этой программы.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Лицензии для частного и коммерческого использования отличаются друг от
+ друга.
+ Программа, бесплатная для частного пользователя, скорее всего будет платной
+ для компании (сразу же вспоминаем Skype).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+4) Существует множество различных лицензий, под которыми вы можете выпускать
+ свою интеллектуальную собственность.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Разберем подробнее последний пункт.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Все программное обеспечение можно разделить по признаку свободы на 2 больших
+ группы: проприетарное и открытое.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Проприетарное программное обеспечение
+\series default
+ — программное обеспечение, являющееся частной собственностью правообладателя,
+ который сохраняет за собой полную монополию на данное ПО.
+ Напрямую с понятием коммерческого ПО данное понятие не связано, однако
+ они близки по смыслу.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В чем его суть? Вы — автор, царь и бог данного ПО.
+ Вы можете продавать его по бешеным ценам или сделать бесплатным.
+ Вы можете выпустить обновление, не советуясь ни с кем.
+ Вы можете прекратить поддержку данного ПО.
+ Вы можете запретить распространять его кому-либо, кроме вас самих (что
+ чаще всего и делают).
+ Вы можете делать с ним 
+\shape italic
+все, что угодно
+\shape default
+, и пользователи вашего ПО будут вынуждены либо пользоваться им, либо искать
+ аналоги.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Такой подход позволяет вам зарабатывать деньги, причем большие деньги.
+ Билл Гейтс сделал свои миллиарды, просто продавая каждую копию операционной
+ системы Windows.
+ Такая копия стоит ровно столько, сколько требуется копьютеру энергии для
+ записи ПО на диск плюс сам диск.
+ С другой стороны, на разработку Windows было потрачено много сил и средств,
+ и понятно, что они должны окупаться.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В противовес закрытому программному обеспечению существует 
+\series bold
+открытое программное обеспечение
+\series default
+.
+ Главным признаком такого ПО является открытый исходный код и свобода копировани
+я.
+ То есть любой может изменить код вашей программы так, как хочется ему,
+ или использовать вашу программу не переводя ни цента на ваш счет.
+ Однако, накладываются и ограничения: вы не имеете права продавать программы
+ с открытым исходным кодом (хотя некоторые лицензии позволяют продавать
+ ПО, созданное при помощи открытого) и выпускать его в виде проприетарного.
+ Также некоторые лицензии обязуют вас указывать автора программы (поскольку
+ авторские права могут быть наложены на open-source код).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+С одной стороны, open source позволяет вам использовать программы, не платя
+ разработчикам, с другой — проект, выпущенный под свободной лицензией рискует
+ не окупиться, ведь никто не может заставить пользователей платить за использова
+ние открытого проекта.
+ Все весьма неоднозначно, сторонники и хорошие аргументы имеются и у той,
+ и у другой стороны.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Однако есть еще один класс людей, которые реализуют главную доктрину свободного
+ программного обеспечения: 
+\begin_inset Quotes ard
+\end_inset
+
+копия не стоит ничего
+\begin_inset Quotes ald
+\end_inset
+
+ на проприетарном ПО и не только ПО.
+ Сеть peer-to-peer и протокол BitTorrent позволяют им неограниченно обмениваться
+ информацией друг с другом, плодя множественные копии.
+ Отсутствие единого центра в сетях подобного ранга затрудняет борьбу с данным
+ видом распространения ПО, которое получило название 
+\begin_inset Quotes ard
+\end_inset
+
+компьютерное пиратство
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Однако даже у компьютерных пиратов есть аргументы за свое поведение.
+ К ним можно отнести возможность покупки некачественного ПО (не реализующего
+ необходимых функций, забагованного или же неудобного к использованию),
+ отсутствие денег на приобретение дорогостоящего ПО у некоторых классов
+ общества (50% аудитории торрентов — люди младше 25 лет) и так далее.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+В этих вопросах все упирается в человеческую мораль, а, так как она неоднозначна
+, то неоднозначно и отношение людей к данному вопросу.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Объектно-ориентированное программирование: объектно-ориентированное проектирован
+ие, инкапсуляция и скрытие информации; разделение интерфейса и реализации;
+ классы, наследники и наследование; полиморфизм; иерархии классов
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Объектно-ориентированное программирование
+\series default
+ — метод программирования, при использовании которого главными элементами
+ программ являются объекты.
+ В языках программирования понятие объекта реализовано как совокупность
+ свойств (структур данных, характерных для данного объекта), методов их
+ обработки (подпрограмм изменения их свойств) и событий, на которые данный
+ объект может реагировать и которые приводят, как правило, к изменению свойств
+ объекта.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Три слона ООП:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) 
+\series bold
+Инкапсуляция
+\series default
+ — объединение данных и свойственных им процедур обработки в одном объекте;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) 
+\series bold
+Наследование
+\series default
+ — свойство, предусматривающее создание новых классов на базе существующих
+ таким образом, чтобы класс-потомок имел все свойства класса-родителя.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) 
+\series bold
+Полиморфизм
+\series default
+ — свойство, позволяющее задать общие действия для класса.
+ В более общем смысле полиморфизм можно интерпретировать как 
+\begin_inset Quotes ard
+\end_inset
+
+один интерфейс, множество действий
+\begin_inset Quotes ald
+\end_inset
+
+, что означает возможность создания общего интерфейса для близких по смыслу
+ действий.
+ Классический пример — перегрузка функций.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Эти три слона стоят на черепахе 
+\series bold
+Абстракции
+\series default
+ — способе выделить набор общих характеристик объектов, исключая из рассмотрения
+ те, которые общими не являются.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Фундаментальным понятием ООП является 
+\series bold
+Класс
+\series default
+ — шаблон, на основе которого может быть создан конкретный программный объект,
+ он описывает свойства и методы, определяющие поведение объектов данного
+ класса.
+ Каждый конкретный объект, имеющий структуру этого класса, называется экземпляро
+м класса.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Наследник
+\series default
+ — класс, наследуемый от класса-предка, с сохранением свойств класса-предка
+ и приобретением новых, 
+\begin_inset Quotes ard
+\end_inset
+
+личных
+\begin_inset Quotes ald
+\end_inset
+
+ свойств.
+\end_layout
+
+\begin_layout Verbatim
+//code
+\end_layout
+
+\begin_layout Verbatim
+смотри main1.txt в этой же папке
+\end_layout
+
+\begin_layout Verbatim
+//end of code
+\end_layout
+
+\begin_layout Standard
+
+\size large
+public-часть кода называется 
+\series bold
+интерфейсом
+\series default
+ и данные в ней видны за пределами класса.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+private-часть кода называется 
+\series bold
+реализацией
+\series default
+ и за пределами класса не видна.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+protected-часть кода никак не называется и видна только лишь наследникам.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Такое разделение создано, во-первых, для инкапсуляции, а во-вторых, для
+ того, чтобы никто не мог чего-нибудь начудачить в private-данных.
+ В области public не принято записывать данные.
+ Место данных — в private.
+ А в public пишутся лишь операции доступа.
+ В таком случае, если создателем программы будут изменены какие-то данные,
+ пользователи ничего не заметят.
+ Это снижает ошибаемость.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Иерархии классов — классификация объектных типов, при которой объекты рассматрив
+аются как реализации классов.
+ Различные классы связываются отношениями типа 
+\begin_inset Quotes ard
+\end_inset
+
+наследует
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+расширяет
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+является абстракцией
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+описание интерфейса
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Основные вычислительные алгоритмы: алгоритмы поиска и сортировки (линейный
+ и дихотомический поиск, сортировка вставкой и выбором наименьшего элемента)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Поиск
+\series default
+ — обработка некоего множества данных с целью выявления подмножества данных,
+ соответствующих критериям поиска.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Все алгоритмы поиска делятся на поиск в упорядоченном множестве данных и
+ поиск в неупорядоченном множестве данных.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Линейный поиск может осуществляться на любом множестве данных.
+ Представляет собою простой перебор (брутфорс) значений множества и их сравниван
+ие с искомым значением.
+ Имеет сложность алгоритма 
+\begin_inset Formula $O(n)$
+\end_inset
+
+, поэтому применяется лишь для небольших массивов данных.
+ Однако плюсами данного поиска являются отсутствие требований дополнительной
+ памяти и простейшая реализация.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Дихотомический, он же бинарный, поиск — поиск методом деления отрезка поиска
+ пополам и проверки, в какую из половин входит искомое значение.
+ Имеет сложность алгоритма 
+\begin_inset Formula $\log n+1$
+\end_inset
+
+, но относительно сложную реализацию (известна история, когда автор бинарного
+ поиска в своей книге о бинарном поиске допустил ошибку в реализации алгоритма),
+ требует дополнительной памяти (в рекурсивной реализации) и сортированного
+ массива данных, в котором поиск будет осуществляться.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Существуют также интерполяционный поиск и поиск с помощью хеш-таблиц.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Сортировка
+\series default
+ — последовательное расположение или разбиение на группы данных в зависимости
+ от выбранного критерия.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Свойства сортировок:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Устойчивость — устойчивая сортировка не меняет положения одинаковых элементов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Естественность поведения — эффективность метода при обработке частично
+ отсортированного массива.
+ Алгоритм ведет себя естественно, если учитывает это и работает быстрее.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Сложность (использование операции сравнения).
+ Для сортировок, основанных на сравнениях, сложность алгоритма составляет
+ минимум 
+\begin_inset Formula $n\log n$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Виды сортировок можно прочитать в википедии.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Сортировка выбором наименьшего элемента
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Шаги алгоритма:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+1) Находим номер минимального значения в текущем списке;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+2) Производим обмен этого значения со значением первой неотсортированной
+ позиции (обмен не нужен, если минимальный элемент уже находится на данной
+ позиции);
+\end_layout
+
+\begin_layout Standard
+
+\size large
+3) Теперь сортируем хвост списка, исключив из рассмотрения уже отсортированные
+ элементы.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Сложность алгоритма 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Сортировка вставками
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Алгоритм сортировки, в котором элементы входной последовательности просматривают
+ся по одному, и каждый новый поступивший элемент размещается в подходящее
+ место среди ранее упорядоченных элементов.
+ Вычислительная сложность - 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Основы программирования, основанного на событиях
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Событийно-ориентированное программирование
+\series default
+ — парадигма программирования, в которой выполнение программы определяется
+ событиями.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Событие
+\series default
+ в ООП — сообщение, которое возникает в различных точках исполняемого кода
+ при выполнении определенный условий.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+События предназначены для того, чтобы иметь возможность предусмотреть реакцию
+ программного обеспечения.
+ Для решения этой задачи создаются обработчики событий: как только программа
+ попадает в заданное состояние, происходит событие, посылается сообщение,
+ а обработчик перехватывает это сообщение.
+ Событие, по сути, сообщает об изменении состояния некоего объекта.
+ Наиболее наглядно события представлены в пользовательском интерфейсе, где
+ на каждое действие пользователя выдается какой-либо ответ.
+ В объектно-ориентированном анализе для описания динамического поведения
+ объектов принято использовать модель состояний.
+ Событие - это переход объекта из одного состояния в другое.
+ Взаимодействие объектов также осуществляется при помощи событий: изменение
+ состояния одного объекта приводит к изменению состояния другого объекта,
+ а событие оказывается средством связи между объектами.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Выделяются четыре аспекта события:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Метка — уникальный идентификатор события.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Значение — текстовое сообщение о сути произошедшего.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Предназначение — модель событий, которая принимает значение.
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Данные — данные, которые переносятся от одного объекта к другому.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Событийно-ориентированное программирование, как правило, применяется в следующих
+ случаях:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Построение пользовательских интерфейсов (в том числе графических);
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Создание серверных приложений;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Моделирование сложных систем;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Параллельные вычисления;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Автоматические системы управления, SCADA;
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Программирование игр, в которых осуществляется управление множеством объектов.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Введение в компьютерную графику: использование простых графических API
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Компьютерная графика
+\series default
+ — область деятельности, в которой компьютеры используются в качестве инструмент
+а для создания изображений.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Пока мы будем рассматривать двумерную графику.
+ Двумерная графика бывает трех типов:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Растровая
+\series default
+ — изображение задается множеством различных точек растра, которые называются
+ 
+\series bold
+пикселями
+\series default
+;
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Векторная
+\series default
+ — изображение задается в качестве математической функции, описывающей геометрич
+еский примитив.
+ Такими функциями могут быть многочлены, кривые Безье и так далее;
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+Фрактальная
+\series default
+ — изображение строится из самого себя посредством 
+\series bold
+фракталов
+\series default
+ — объектов, отдельные элементы которых наследуют свойства родительских
+ структур.
+ Сфера применения такого типа графики ограничена по понятным причинам.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Каждый из этих типов имеет свои плюсы и минусы:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Растровая графика:
+\end_layout
+
+\begin_layout Standard
+
+\size large
++ Простая;
+\end_layout
+
+\begin_layout Standard
+
+\size large
++ Таким образом можно изобразить любую фигуру любой сложности.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+- Занимает много места;
+\end_layout
+
+\begin_layout Standard
+
+\size large
+- При масштабировании становятся видны пиксели, что делает её непригодной
+ для шрифтов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Векторная графика:
+\end_layout
+
+\begin_layout Standard
+
+\size large
++ Малый размер занимаемой памяти;
+\end_layout
+
+\begin_layout Standard
+
+\size large
++ Отсутствие артефактов при отрисовке.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+- Обычные (не геометрически правильные) изображения очень трудно передать
+ с помощью примитивов.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Фрактальная графика:
+\end_layout
+
+\begin_layout Standard
+
+\size large
++ Построение сложных структур с помощью небольшого числа операций и при
+ минимуме занимаемой памяти
+\end_layout
+
+\begin_layout Standard
+
+\size large
+- Лишь некоторые структуры можно описать с помощью фракталов.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Передача цвета.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Передача цвета осуществляется с помощью 
+\series bold
+цветовых моделей
+\series default
+ — математических моделей описания цветов в виде кортежей чисел, называемых
+ цветовыми компонентами или цветовыми координатами.
+ Наиболее общеупотребительная цветовая модель — RGB, но используется также
+ модель CMYK.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+API
+\series default
+ — интерфейс прикладного программирования.
+ Интерфейс — это то, с помощью чего что-то взаимодействует с чем-то (идеальное
+ определение).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Существует множество графических библиотек, которые позволяют взаимодействовать
+ с графической подсистемой операционной системы на любом уровне.
+ Однако работать с низкоуровневым взаимодействием очень неудобно, на то
+ оно и низкоуровневое.
+ Поэтому были придуманы различные высокоуровневые графические API, один
+ из которых — Qt.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Qt — фреймворк, кроссплатформенный инструментарий для разработки ПО на языке
+ С++.
+ Есть также возможность разрабатывать и на других языках.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Огромным преимуществом Qt является то, что он абстагирован от операционной
+ системы и имеет свои реализации некоторых систем, что позволяет компилировать
+ написанный на Qt код под любую ОС.
+ Чаще всего править исходные коды не придется.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Как и любой фреймворк (ПО, облегчающее разработку и объединение разных компонент
+ов большого проекта), Qt имеет очень много 
+\begin_inset Quotes ard
+\end_inset
+
+плюшек
+\begin_inset Quotes ald
+\end_inset
+
+, и возможность рисования интерфейсов — лишь одна из них.
+ Но, так как тема билета все-таки графические API, мы не будем останавливаться
+ на тех сторонах Qt, которые к делу не относятся.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Qt предоставляет огромные возможности для создания GUI — графического интерфейса
+ пользователя.
+ К примеру, класс QStyle, который 
+\begin_inset Quotes ard
+\end_inset
+
+подстраивает
+\begin_inset Quotes ald
+\end_inset
+
+ интерфейс программы под интерфейс операционной системы, используя её таблицу
+ стилей.
+ Таким образом, программа, запущенная под Windows будет иметь оформление
+ строго с стиле Windows, а в Ubuntu — стиль Ubuntu.
+ При этом, если вы смените стандартную схему оформления на другую, окно
+ также сменит тему оформления (возможно, придется перезапустить программу).
+\end_layout
+
+\begin_layout Standard
+
+\size large
+QDialogButtonBox предоставляет стандартный интерфейс диалогового окна.
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Для взаимодействия с пользователем используется механизм сигналов и слотов.
+ Слот — это функция, которая может быть вызвана в процессе выполнения программы.
+ Сигнал — функция, вызывающая функции-слоты, которые ассоциированы с ним
+ посредством QObject::connect.
+ К примеру, в коде:
+\end_layout
+
+\begin_layout Verbatim
+#include <QtGui>
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+int main(int argc, char **argv)
+\end_layout
+
+\begin_layout Verbatim
+{
+\end_layout
+
+\begin_layout Verbatim
+    QApplication app(argc, argv);
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+    QTextEdit textEdit;
+\end_layout
+
+\begin_layout Verbatim
+    QPushButton quitButton("Quit");
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+    /* 10 */ QObject::connect(&quitButton, SIGNAL(clicked()),
+\end_layout
+
+\begin_layout Verbatim
+                                         qApp, SLOT(quit()));
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+    /* 12 */ QVBoxLayout layout;
+\end_layout
+
+\begin_layout Verbatim
+    /* 13 */ layout.addWidget(&textEdit);
+\end_layout
+
+\begin_layout Verbatim
+    /* 14 */ layout.addWidget(&quitButton);
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+    QWidget window;
+\end_layout
+
+\begin_layout Verbatim
+    /* 17 */ window.setLayout(&layout);
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+    window.show();
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+    return app.exec();
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Создается окно, выводящее некое сообщение и кнопка Quit, являющаяся частью
+ этого окна.
+ С помощью Qobject::connect связывается сигнал clicked(), который передает
+ нажатие кнопки и слот quit(), который завершает приложение.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size large
+Даже и не знаю, что еще написать.
+ Буду благодарен, если подскажете.
+\end_layout
+
+\end_body
+\end_document
