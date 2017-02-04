@@ -1,0 +1,4349 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{indentfirst}
+\end_preamble
+\use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+theorems-ams-bytype
+theorems-sec-bytype
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 2.5cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.7cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\RR}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ZZ}{\mathbb{Z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\NN}{\mathbb{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\QQ}{\mathbb{Q}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Части курса:
+\end_layout
+
+\begin_layout Enumerate
+Основная теория
+\end_layout
+
+\begin_layout Enumerate
+Практика по настройке сети
+\end_layout
+
+\begin_layout Enumerate
+Клиент-серверное приложение
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Литература:
+\series default
+ Таненбаум 
+\begin_inset Quotes fld
+\end_inset
+
+Компьютерные сети
+\begin_inset Quotes frd
+\end_inset
+
+; Олифер, Олифер 
+\begin_inset Quotes fld
+\end_inset
+
+Компьютерные сети
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Будет 2-3 тестирования, без них не будет допуска к экзамену
+\end_layout
+
+\begin_layout Section
+История развития компьютерных сетей
+\end_layout
+
+\begin_layout Standard
+Прародитель компьютерных сетей — телефонные сети (MAN).
+ Сети, с которыми привыкли взаимодействовать, называются LAN.
+ 
+\end_layout
+
+\begin_layout Standard
+DARPA — оборонная компания USA, создатель сети Internet.
+\end_layout
+
+\begin_layout Standard
+Типы компьютерных сетей:
+\end_layout
+
+\begin_layout Enumerate
+По территориальному признаку;
+\end_layout
+
+\begin_layout Enumerate
+По типу среды передачи данных;
+\end_layout
+
+\begin_layout Enumerate
+По архитектуре сети;
+\end_layout
+
+\begin_layout Standard
+Рассмотрим эти пункты подробнее:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Территориальный признак
+\series default
+: 
+\end_layout
+
+\begin_layout Enumerate
+Глобальные сети (страны, интернет);
+\end_layout
+
+\begin_layout Enumerate
+Локальные сети (несколько городов);
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Тип среды передачи данных:
+\end_layout
+
+\begin_layout Enumerate
+Проводные сети;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Телефон: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Витая пара (4 проводка);
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes fld
+\end_inset
+
+Лапша
+\begin_inset Quotes frd
+\end_inset
+
+ (2 проводка) и это не витая пара.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Витая пара:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+4-8 проводков
+\end_layout
+
+\begin_layout Enumerate
+Экранированная/неэкранированная/дважды экранированная витая пара;
+\end_layout
+
+\begin_layout Enumerate
+Экранированная витая пара представляет собой заключенную в проводящий материал
+ витую пару.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Дважды экранированная витая пара имеет дополнительный экран, который покрывает
+ все витые пары.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Оптоволокно:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Трубка из гнущегося стекла, покрытого отражающим материалом.
+ Свет отражается от стенок.
+\end_layout
+
+\begin_layout Enumerate
+Скорости передачи - гигабайты в секунду.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Коаксиал
+\end_layout
+
+\begin_layout Enumerate
+pass
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Беспроводные сети;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+WiFi (2,4 ГГц, 5 ГГц);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Максимальное расстояние, заявленное в спецификации — 300 метров.
+ В условиях зданий - 10-20 метров.
+\end_layout
+
+\begin_layout Enumerate
+Скорость данных (300 Мбит для 5 ГГц).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+LiFi;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Световые волны (световая передача данных).
+\end_layout
+
+\begin_layout Enumerate
+Скорости до 1 Гбит.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Спутниковая связь;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Примеры технологий: GPS, спутниковый телефон.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Инфракрасный порт;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Передача данных в прямой видимости.
+\end_layout
+
+\begin_layout Enumerate
+Скорость достаточно низкая (Килобиты).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Bluetooth;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Средняя скорость.
+\end_layout
+
+\begin_layout Enumerate
+Дальность до 30 метров.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Сотовая связь;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Дальность 
+\begin_inset Formula $\thickapprox20-30$
+\end_inset
+
+ км.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Радиосвязь;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Требуется приемник и передатчик.
+\end_layout
+
+\begin_layout Enumerate
+Влияют длина волны, частота.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Фотоэлемент;
+\end_layout
+
+\begin_layout Enumerate
+NFC;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Магнитное поле.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Архитектура сети: 
+\end_layout
+
+\begin_layout Enumerate
+Топология сети (способ организации узлов);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Полносвязные топологии (каждый-с-каждым).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Полносвязная топология
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Плюсы: нет посредников (высокая скорость), надежность.
+\end_layout
+
+\begin_layout Enumerate
+Минусы: себестоимость, сложность настройки.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Ячеистые (неполносвязные).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Топология 
+\begin_inset Quotes fld
+\end_inset
+
+Кольцо
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Плюсы: стоимость, простота;
+\end_layout
+
+\begin_layout Enumerate
+Минусы: средняя надежность, средняя сложность.
+\end_layout
+
+\begin_layout Enumerate
+Технологии (Token Ring и FDDI).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Топология 
+\begin_inset Quotes fld
+\end_inset
+
+Звезда
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Топология 
+\begin_inset Quotes fld
+\end_inset
+
+Дерево
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Топология 
+\begin_inset Quotes fld
+\end_inset
+
+Общая шина
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Технология Ethernet работает по этой топологии.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Смешанные топологии.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Протокол;
+\end_layout
+
+\begin_layout Problem*
+Узнать о скоростях передачи данных через все проводные соединения.
+\end_layout
+
+\begin_layout Section
+Адресация в компьютерных сетях
+\end_layout
+
+\begin_layout Standard
+Типы адресов:
+\end_layout
+
+\begin_layout Enumerate
+unicast (192.168.0.1);
+\end_layout
+
+\begin_layout Enumerate
+multicast (192.168.0.255);
+\end_layout
+
+\begin_layout Enumerate
+broadcast (255.255.255.255);
+\end_layout
+
+\begin_layout Standard
+Виды глобальных адресов:
+\end_layout
+
+\begin_layout Itemize
+IP-адрес;
+\end_layout
+
+\begin_layout Itemize
+MAC-адрес (6F.1A.48.21.40.FE) — адрес сетевой карты; первые несколько бит — код
+ производителя.
+\end_layout
+
+\begin_layout Standard
+Адресация:
+\end_layout
+
+\begin_layout Itemize
+Классовая.
+ Вид:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccc}
+A & 0 & \text{адрес сети 7 бит} & \text{адрес узла 24 бит}\\
+B & 10 & \text{адрес сети 14 бит} & \text{адрес узла 16 бит}\\
+C & 110 & \text{адрес сети 21 бит} & \text{адрес узла 8 бит}\\
+D & 1110 & \text{многоадресная } & \text{рассылка}\\
+E & 1111 & \text{зарезервировано}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Безклассовая
+\end_layout
+
+\begin_layout Standard
+Для примера возьмем адрес 192.168.131.15;
+\end_layout
+
+\begin_layout Standard
+Чтобы выделить 16 компьютеров нам требуется выделить 4 бита.
+ Введем для этого маску 11...1.11...1.11...1.11110000 (количество нулей равно количеству
+ выделенных байтов).
+ Применив поразрядную конъюнкцию к IP и маске получим адрес сети.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Виды IP-адресации:
+\end_layout
+
+\begin_layout Itemize
+IP v4 (4 байта адреса);
+\end_layout
+
+\begin_layout Itemize
+IP v6 (6 байт адреса)
+\end_layout
+
+\begin_layout Section
+Коммутация
+\end_layout
+
+\begin_layout Standard
+Коммутация:
+\end_layout
+
+\begin_layout Itemize
+Каналов
+\end_layout
+
+\begin_layout Itemize
+Пакетов
+\end_layout
+
+\begin_layout Standard
+Мультиплексирование/демультиплексирование (Mux/Demux).
+\end_layout
+
+\begin_layout Standard
+Мультиплексирование — 
+\begin_inset Quotes fld
+\end_inset
+
+уплотнение
+\begin_inset Quotes frd
+\end_inset
+
+ каналов в один.
+ Демультиплексирование - обратная операция.
+ Аналогично с пакетами.
+\end_layout
+
+\begin_layout Section
+Маршрутизация
+\end_layout
+
+\begin_layout Standard
+Маршрутизация:
+\end_layout
+
+\begin_layout Enumerate
+Статическая;
+\end_layout
+
+\begin_layout Enumerate
+Динамическая;
+\end_layout
+
+\begin_layout Standard
+Таблица маршрутизации применяется для статической маршрутизации и составляется
+ вручную.
+\end_layout
+
+\begin_layout Standard
+Динамическая маршрутизация автоматически определяет хороший путь для связи.
+\end_layout
+
+\begin_layout Standard
+Маршрутизатор — устройство, осуществляющее маршрутизации.
+\end_layout
+
+\begin_layout Section
+Сетевые устройства
+\end_layout
+
+\begin_layout Enumerate
+Сетевая карта/сетевой интерфейс.
+\end_layout
+
+\begin_layout Enumerate
+Коммутатор/swith/hub.
+\end_layout
+
+\begin_layout Enumerate
+Машрутизатор.
+\end_layout
+
+\begin_layout Enumerate
+Хаб/концентратор.
+\end_layout
+
+\begin_layout Enumerate
+Mux/Demux.
+\end_layout
+
+\begin_layout Enumerate
+Модем.
+\end_layout
+
+\begin_layout Enumerate
+Повторитель.
+\end_layout
+
+\begin_layout Enumerate
+Точка доступа.
+\end_layout
+
+\begin_layout Section
+Стандартизация сетей
+\end_layout
+
+\begin_layout Itemize
+ISO;
+\end_layout
+
+\begin_layout Itemize
+IEEE;
+\end_layout
+
+\begin_layout Itemize
+Модель OSI;
+\end_layout
+
+\begin_layout Itemize
+Эталонная модель OSI (7 уровней);
+\end_layout
+
+\begin_layout Itemize
+Стандартная модель OSI (4 уровня).
+\end_layout
+
+\begin_layout Standard
+Рассмотрим эталонную модель.
+ Уровни:
+\end_layout
+
+\begin_layout Enumerate
+Физический (Технологии ADSL, ISDN, ATM, RS-x, FDDI, );
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Определяет характеристики сигналов;
+\end_layout
+
+\begin_layout Enumerate
+Среду передачи данных;
+\end_layout
+
+\begin_layout Enumerate
+Физическую топологию среды;
+\end_layout
+
+\begin_layout Enumerate
+Спецификацию среды передачи данных;
+\end_layout
+
+\begin_layout Enumerate
+Интерфейсы оборудования;
+\end_layout
+
+\begin_layout Enumerate
+Напряжение, соответствующее нулю и единице;
+\end_layout
+
+\begin_layout Enumerate
+Время длительности бита;
+\end_layout
+
+\begin_layout Enumerate
+Как начинается и заканчивается передача данных;
+\end_layout
+
+\begin_layout Enumerate
+Количество проводов для соединения;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Канальный (Технологии Ethernet, протокол PtPP);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Взаимодействие со средой передачи данных (MAC);
+\end_layout
+
+\begin_layout Enumerate
+Надежная доставка (с использованием контрольных сумм);
+\end_layout
+
+\begin_layout Enumerate
+Управление потоком (управление буфером данных);
+\end_layout
+
+\begin_layout Enumerate
+Функции исправления ошибок (в режимах Дуплекс (передача в обе стороны одновремен
+но)/Полудуплекс (попеременно в обе стороны));
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Сетевой (Протокол IP);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Управление подсетью;
+\end_layout
+
+\begin_layout Enumerate
+Определяет маршруты;
+\end_layout
+
+\begin_layout Enumerate
+Соединяет разнородные сети (шлюз (чаще всего входит в состав маршрутизатора));
+\end_layout
+
+\begin_layout Enumerate
+Передача дейтаграмм;
+\end_layout
+
+\begin_layout Enumerate
+Адресация узлов в текущей подсети;
+\end_layout
+
+\begin_layout Enumerate
+best efford delivery — доставка с максимальной доступной скоростью;
+\end_layout
+
+\begin_layout Enumerate
+На этом уровне работают протоколы (IP (Internet Protocol), ARP (Adress Resolutio
+n Protocol), RARP (Reverse ARP), ICMP (), DHCP (Dynamic Host Control Protocol));
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Транспортный (TCP, UDP);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Надежность передачи данных;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Контроль ошибок:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Искажение данных
+\end_layout
+
+\begin_layout Enumerate
+Потеря данных
+\end_layout
+
+\begin_layout Enumerate
+Дублирование
+\end_layout
+
+\begin_layout Enumerate
+Изменение порядка следования
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Контроль потока данных;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Сегментирование потока данных и его обратная сборка;
+\end_layout
+
+\begin_layout Enumerate
+Обеспечивает совместный доступ к потоку данных;
+\end_layout
+
+\begin_layout Enumerate
+Протоколы: TCP (Transport Control Protocol), UDP (User Datagram Protocol);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Сеансовый (POP);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Организует сеансы связи;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Устанавливает;
+\end_layout
+
+\begin_layout Enumerate
+Поддерживает;
+\end_layout
+
+\begin_layout Enumerate
+Разрывает;
+\end_layout
+
+\begin_layout Enumerate
+Обеспечивает синхронизацию передачи данных;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Представительский (POP/SMTP, SNMP, Telnet, HTTP, FTP, DNS);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Сопоставление семантики и синтаксиса данных;
+\end_layout
+
+\begin_layout Enumerate
+Преобразование;
+\end_layout
+
+\begin_layout Enumerate
+Кодирование/декодирование данных;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Прикладной (WEB, Email).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Обеспечение взаимодействия между пользователем и сетью.
+\end_layout
+
+\begin_layout Enumerate
+Предоставляет службы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Электронная почка
+\end_layout
+
+\begin_layout Enumerate
+FTP
+\end_layout
+
+\begin_layout Enumerate
+Telnet
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Имеется связь (интерфейс) между соседними уровнями.
+ Каждый уровень имеет протокол.
+\end_layout
+
+\begin_layout Standard
+Обработка и передача сообщений.
+\end_layout
+
+\begin_layout Standard
+Имеется некоторое сообщение.
+ При переходе на следующий (нижний) уровень перед ним записывают заголовок,
+ который содержит IP-адреса отправителя и получателя, порты, информацию
+ о протоколах, интерфейсах, типе сообщения и тому подобно.
+ После сообщения добавляется концевик, который содержит служебную информацию
+ для проверки правильности доставки сообщения (контрольные суммы).
+ Для каждого уровня заголовки и концевики свои.
+ Таким образом, физический уровень передает уже гораздо больший пакет.
+ После передачи данных пакет проходит обратную 
+\begin_inset Quotes fld
+\end_inset
+
+распаковку
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Если целостность пакета нарушена, то то он будет отброшен.
+\end_layout
+
+\begin_layout Standard
+Порт — идентификатор ID процесса или приложения, для которого предназначается
+ этот пакет.
+\end_layout
+
+\begin_layout Standard
+Можно объединить сеансовый и транспортный уровень, прикладной и представительски
+й, канальный и физический.
+\end_layout
+
+\begin_layout Section
+Электронная почта
+\end_layout
+
+\begin_layout Standard
+Основные компоненты электронной почты:
+\end_layout
+
+\begin_layout Enumerate
+Почтовые клиенты:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Thunderbird;
+\end_layout
+
+\begin_layout Enumerate
+Outlook;
+\end_layout
+
+\begin_layout Enumerate
+The Bat;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Почтовые серверы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Функции:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Хранение
+\end_layout
+
+\begin_layout Enumerate
+Отправка
+\end_layout
+
+\begin_layout Enumerate
+Организация очередей
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Состав: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+MDA (агент проверки доставки сообщений)
+\end_layout
+
+\begin_layout Enumerate
+MTA (агент отправки сообщений)
+\end_layout
+
+\begin_layout Enumerate
+MUA (user-agent);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Примеры:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+SendMail;
+\end_layout
+
+\begin_layout Enumerate
+qmail;
+\end_layout
+
+\begin_layout Enumerate
+MS Exchange Server;
+\end_layout
+
+\begin_layout Enumerate
+Postfix;
+\end_layout
+
+\begin_layout Enumerate
+Procmail/MailDrop;
+\end_layout
+
+\begin_layout Enumerate
+Exim.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Протоколы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Отправка: SMTP;
+\end_layout
+
+\begin_layout Enumerate
+Перенаправление: POP3;
+\end_layout
+
+\begin_layout Enumerate
+Копирование: IMAP;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Протоколы получения почты;
+\end_layout
+
+\begin_layout Enumerate
+Протоколы отправки почты;
+\end_layout
+
+\begin_layout Section
+Протокол SMTP
+\end_layout
+
+\begin_layout Standard
+В качестве команд этого протокола используется ASCII-text.
+ Для передачи данных используется протокол TCP.
+ Стандартный порт протокола — 25.
+\end_layout
+
+\begin_layout Standard
+Схема посылки почты состоит из 3-х этапов:
+\end_layout
+
+\begin_layout Standard
+1) Приветствие;
+\end_layout
+
+\begin_layout Standard
+2) Пересылка почты;
+\end_layout
+
+\begin_layout Standard
+3) Закрытие сессии;
+\end_layout
+
+\begin_layout Standard
+В процессе выполняются следующие команды:
+\end_layout
+
+\begin_layout Standard
+MAIL FROM — устанавливает обратный адрес.
+\end_layout
+
+\begin_layout Standard
+RCPT TO — устанавливает получателя данного сообщения.
+\end_layout
+
+\begin_layout Standard
+DATA — для отправки сообщений.
+\end_layout
+
+\begin_layout Standard
+Протокол получения почты: POP3 (Post Office Protocol).
+ Работает на 110 порту.
+ Он скачивает все письма с сервера, удаляя их на нём.
+\end_layout
+
+\begin_layout Standard
+Аналог: IMAP.
+ 143 порт.
+ Аналог тонкого клиента, который скачивает с сервера лишь заголовки, и копии
+ писем.
+\end_layout
+
+\begin_layout Standard
+По протоколу HTTP тоже можно получать почту.
+ Сверхтонкий клиент, предоставляющий веб-морду к серверу.
+\end_layout
+
+\begin_layout Standard
+Разеберем подробно каждый протокол получения почты.
+\end_layout
+
+\begin_layout Subsection
+POP3
+\end_layout
+
+\begin_layout Standard
+Стадии:
+\end_layout
+
+\begin_layout Standard
+1) Авторизация на сервере;
+\end_layout
+
+\begin_layout Standard
+2) Транзакция (скачивание с сервера);
+\end_layout
+
+\begin_layout Standard
+3) Обновление (обмен информацией с сервером).
+\end_layout
+
+\begin_layout Standard
+У него больше команд, чем у SMTP:
+\end_layout
+
+\begin_layout Standard
+USER — идентифицирует пользователя с указанным именем;
+\end_layout
+
+\begin_layout Standard
+PASS — указывает пароль для пары клиент-сервер;
+\end_layout
+
+\begin_layout Standard
+QUIT — закрывает TCP соединение;
+\end_layout
+
+\begin_layout Standard
+STAT — возвращает число писем в на сервере;
+\end_layout
+
+\begin_layout Standard
+LIST — запрашивает список сообщений;
+\end_layout
+
+\begin_layout Standard
+RETR — извлекает сообщение с почтового ящика;
+\end_layout
+
+\begin_layout Standard
+DELE — помечает сообщение на удаление;
+\end_layout
+
+\begin_layout Standard
+NOOP (сам NOOB) — сервер возвращает положительный ответ, но не выполняет
+ действий.
+\end_layout
+
+\begin_layout Standard
+LAST — возвращает наибольший размер сообщения из всех, к которым обращались.
+\end_layout
+
+\begin_layout Standard
+RSET — отменяет DELE.
+\end_layout
+
+\begin_layout Standard
+Дополнительные (не входящие в базовую конфигурацию) команды:
+\end_layout
+
+\begin_layout Standard
+APOP — передача на сервер username and password;
+\end_layout
+
+\begin_layout Standard
+UIDL — перенумеровать все сообщения в рамках текущей сессии;
+\end_layout
+
+\begin_layout Subsection
+IMAP
+\end_layout
+
+\begin_layout Standard
+Исходное соединение и подтверждение соединения с сервером.
+ Состояния сервера:
+\end_layout
+
+\begin_layout Standard
+1) Без аутентификации.
+ Клиент должен предоставить логин и пароль.
+\end_layout
+
+\begin_layout Standard
+2) Аутентификация проведена.
+ Клиент выбирает почтовый ящик.
+ Выбор произведен.
+\end_layout
+
+\begin_layout Standard
+3) Отклонено.
+ Указали причину.
+ Закрыли сессию.
+\end_layout
+
+\begin_layout Standard
+4) Переход от 1 состояния к 2.
+\end_layout
+
+\begin_layout Standard
+5) Переход от аутентификации к выбору ящика.
+\end_layout
+
+\begin_layout Standard
+6) Если выбор не произведен вернуться к аутентификации.
+\end_layout
+
+\begin_layout Standard
+7) Закрытие сессии.
+\end_layout
+
+\begin_layout Section
+Протоколы TCP и UDP
+\end_layout
+
+\begin_layout Subsection
+UDP
+\end_layout
+
+\begin_layout Standard
+Чтобы передать сообщение по протоколу UDP, нужно совершить следующие действия.
+ Допустим, мы хотим передать сообщение.
+ Мы передаем сообщение, если клиент принял сообщение, то все закончилось.
+ Если нет - тоже закончилось.
+\end_layout
+
+\begin_layout Standard
+Плюсы UDP: 
+\end_layout
+
+\begin_layout Itemize
+Минимум действий;
+\end_layout
+
+\begin_layout Itemize
+Быстрая передача данных (минимум задержек);
+\end_layout
+
+\begin_layout Itemize
+Контроль целостности пакета
+\end_layout
+
+\begin_layout Standard
+Минусы:
+\end_layout
+
+\begin_layout Itemize
+Возможны потери
+\end_layout
+
+\begin_layout Standard
+Структура UDP пакета:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0-15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16-31
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Порт отправителя
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Порт получателя
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Длина пакета
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Контрольная сумма
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Данные, данные, данные
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+TCP
+\end_layout
+
+\begin_layout Standard
+Пример.
+ Отправитель запрашивает готовность получателя.
+ Затем они устанавливают соединение.
+ Затем происходит передача данных, причем если пакет не был принят, отправитель
+ отправит его еще раз (и так до 16 раз).
+ Затем сессия закрывается.
+\end_layout
+
+\begin_layout Standard
+Работа:
+\end_layout
+
+\begin_layout Enumerate
+Установка логического соединения (сеанс связи);
+\end_layout
+
+\begin_layout Enumerate
+Пересылка сообщений;
+\end_layout
+
+\begin_layout Enumerate
+Проверки доставки/целостности, повторы недоставленных пакетов;
+\end_layout
+
+\begin_layout Enumerate
+Развыв сеанса.
+\end_layout
+
+\begin_layout Standard
+Структура:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Порт отправителя
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Порт получателя
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Порядковый номер
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Номер подтверждения
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Длина заголовка
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+////////
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Флаги (6 бит)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Окно получателя
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Контрольная сумма
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Указатель срочных данных
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Параметры
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Много данных (1500 Eth, 2272 Wi-Fi, 4500 FDDI)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Флаги:
+\end_layout
+
+\begin_layout Itemize
+IRG — важность.
+\end_layout
+
+\begin_layout Itemize
+ACK — номер подтверждения.
+\end_layout
+
+\begin_layout Itemize
+PSH — сокращение от Push.
+ Протолкнуть данные, накопившиеся в буфере.
+\end_layout
+
+\begin_layout Itemize
+RST — умышленный обрыв соединения/сброс буфера.
+\end_layout
+
+\begin_layout Itemize
+CYN — синхронизация.
+\end_layout
+
+\begin_layout Itemize
+FIN — завершение соединения.
+\end_layout
+
+\begin_layout Standard
+Плюсы:
+\end_layout
+
+\begin_layout Itemize
+Надежность;
+\end_layout
+
+\begin_layout Itemize
+Порядок пакетов.
+\end_layout
+
+\begin_layout Standard
+Минусы:
+\end_layout
+
+\begin_layout Itemize
+Скорость.
+\end_layout
+
+\begin_layout Itemize
+Задержки.
+\end_layout
+
+\begin_layout Section
+Служба DNS.
+\end_layout
+
+\begin_layout Standard
+Все компьютеры в сети имеют IP-адреса.
+ Но запомнить IP трудно, поэтому были придуманы доменные имена типа vk.com.
+ Доменные имена обладают своими иерархиями.
+\begin_inset Formula 
+\[
+\underbrace{apmath}_{\text{адрес сайта}}.\underbrace{spbu}_{\text{домен второго уровня}}.\underbrace{ru}_{\text{старш. домен}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DNS — система, занимающаяся сопоставлением доменных имен и IP-адресов.
+ Бывает двух видов:
+\end_layout
+
+\begin_layout Itemize
+Централизованная — единственный сервер, на котором лежит таблица со всем
+ этим добром.
+ Из минусов — нагруженность сервера и ненадежность.
+\end_layout
+
+\begin_layout Itemize
+Распределенная — несколько серверов, которые хранят копии одной таблицы.
+\end_layout
+
+\begin_layout Section
+Аспекты сетевой безопасности.
+\end_layout
+
+\begin_layout Standard
+Аспекты:
+\end_layout
+
+\begin_layout Enumerate
+Конфиденциальность;
+\end_layout
+
+\begin_layout Enumerate
+Целостность данных;
+\end_layout
+
+\begin_layout Enumerate
+Аутентификация;
+\end_layout
+
+\begin_layout Enumerate
+Доступность.
+\end_layout
+
+\begin_layout Standard
+Сетевые угрозы:
+\end_layout
+
+\begin_layout Enumerate
+Сниффинг (
+\begin_inset Quotes fld
+\end_inset
+
+прослушка
+\begin_inset Quotes frd
+\end_inset
+
+ пакетов).
+\end_layout
+
+\begin_layout Enumerate
+Аутентификация:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Перехват пароля/ключа;
+\end_layout
+
+\begin_layout Enumerate
+Подбор пароля (broot force).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Недостаточная аутентификация.
+\end_layout
+
+\begin_layout Enumerate
+MitM — man-in-the-middle.
+\end_layout
+
+\begin_layout Enumerate
+Лавинные атаки.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Недостаточное сопротивление автоматизации (атака ботов — DoS).
+ Борьба — Captcha.
+\end_layout
+
+\begin_layout Enumerate
+Распределенная лавинная атака (DDoS).
+\end_layout
+
+\begin_layout Enumerate
+Флуд.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Вирусы, сетевые черви, трояны.
+\end_layout
+
+\begin_layout Enumerate
+Сетевая разведка.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Скан портов
+\end_layout
+
+\begin_layout Enumerate
+Заметание следов
+\end_layout
+
+\begin_layout Enumerate
+Инъекции SQL, PHP
+\end_layout
+
+\begin_layout Enumerate
+Переполнение буфера
+\end_layout
+
+\begin_layout Enumerate
+Атака на функции форматирования строк
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Выполнение команд операционной системы.
+\end_layout
+
+\begin_layout Standard
+Защита:
+\end_layout
+
+\begin_layout Enumerate
+Сигнатурный (качественный анализ трафика)
+\end_layout
+
+\begin_layout Enumerate
+Статистический
+\end_layout
+
+\begin_layout Enumerate
+Гибридный.
+\end_layout
+
+\begin_layout Standard
+Защита от вирусов:
+\end_layout
+
+\begin_layout Enumerate
+Антивирус.
+\end_layout
+
+\begin_layout Enumerate
+Компьютерная гигиена (мойте компьютер перед выходом в интернет, дети).
+\end_layout
+
+\begin_layout Enumerate
+Виртуальная машина (или любая другая песочница).
+\end_layout
+
+\begin_layout Enumerate
+Не подключаться к сети, залить все порты эпоксидкой и выковырять дисковод
+\end_layout
+
+\begin_layout Enumerate
+Не-windows.
+\end_layout
+
+\begin_layout Enumerate
+Admin/user.
+\end_layout
+
+\begin_layout Section
+SPAM
+\end_layout
+
+\begin_layout Standard
+Виды спама:
+\end_layout
+
+\begin_layout Enumerate
+Реклама
+\end_layout
+
+\begin_layout Enumerate
+Вирусы
+\end_layout
+
+\begin_layout Enumerate
+Фишинг
+\end_layout
+
+\begin_layout Enumerate
+Антиреклама (черный пиар)
+\end_layout
+
+\begin_layout Enumerate
+Ниггерские (на самом деле — нигерийские) письма
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+На жалость
+\end_layout
+
+\begin_layout Enumerate
+Богатые больные люди без наследников
+\end_layout
+
+\begin_layout Enumerate
+Лотереи
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Реклама незаконных товаров
+\end_layout
+
+\begin_layout Enumerate
+Реклама спамерских услуг
+\end_layout
+
+\begin_layout Enumerate
+Наука/образование
+\end_layout
+
+\begin_layout Standard
+Борьба со спамом
+\end_layout
+
+\begin_layout Enumerate
+Фильтры
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Статическая фильтрация
+\end_layout
+
+\begin_layout Enumerate
+Адаптивная
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Способы защиты сетей.
+ Брандмауэры
+\end_layout
+
+\begin_layout Standard
+Брандмауэр — защита, которая стоит между глобальной и локальной сетью.
+\end_layout
+
+\begin_layout Standard
+Бывают
+\end_layout
+
+\begin_layout Enumerate
+Аппаратными
+\end_layout
+
+\begin_layout Enumerate
+Программными
+\end_layout
+
+\begin_layout Standard
+Типы:
+\end_layout
+
+\begin_layout Enumerate
+Брандмауэр с фильтрацией пакетов.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Сетевой уровень.
+ Проверяет адрес отправителя и адрес получателя, информацию о приложении
+ или протоколе.
+ Вдобавок следит за портами отправителя и получателя.
+\end_layout
+
+\begin_layout Enumerate
+Плюсы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Недорогой или просто поставляется вместе с антивирусом
+\end_layout
+
+\begin_layout Enumerate
+Неплохая скорость.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Минусы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Слабая защита.
+\end_layout
+
+\begin_layout Enumerate
+Требуется труЪ настройка.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Шлюз сеансового уровня.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Работает на сеансовом уровне.
+ Следит за квинтированием сеанса связи (логикой пакетов).
+\end_layout
+
+\begin_layout Enumerate
+Канальные посредники: pipe proxy.
+\end_layout
+
+\begin_layout Enumerate
+Аппаратные посредники: proxy server.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Плюсы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Надежная защита.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Минусы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Скорость меньше.
+\end_layout
+
+\begin_layout Enumerate
+Стоит дороже.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Шлюз прикладного уровня.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Этот парниша работает на прикладном уровне.
+ Он может смотреть в пакет, а значит, его можно настроить на фильтрацию
+ определенных команд, в частности, фильтрацию в том числе и служебной или
+ полезной информации.
+ Существуют так называемые посредники прикладного уровня, которые работают
+ каждый с определенными службами (разные посредники для Telnet и FTP, к
+ примеру).
+ Также этот шлюз занимается проблемами аутентификации.
+\end_layout
+
+\begin_layout Enumerate
+Плюсы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Надежная защита.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Минусы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Большая стоимость
+\end_layout
+
+\begin_layout Enumerate
+Малая скорость работы
+\end_layout
+
+\begin_layout Enumerate
+Прозрачность.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Брандмауэр экспертного уровня.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+А этот чувак вообще крутой и объединяет функции предыдущих брандмауэров.
+ Работает напрямую с опреационной системой, отслеживает сеансы связи, предоставл
+яет посредников, фильтрует.
+\end_layout
+
+\begin_layout Enumerate
+Плюсы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Максимальная надежность.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Минусы:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Максимальная стоимость.
+\end_layout
+
+\begin_layout Enumerate
+Средняя скорость.
+\end_layout
+
+\begin_layout Enumerate
+Средняя прозрачность.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Д/З: Найти представителей для всех типов брандмауэров.
+\end_layout
+
+\begin_layout Standard
+Устройства, которые могут выполнять функции брандмауэра (аппаратные): 
+\end_layout
+
+\begin_layout Enumerate
+Отдельно выделенный компьютер (бастион).
+ Ему для работы требуется 2 сетевых интерфейса и в этом случае он называется
+ двудомный шлюз.
+\end_layout
+
+\begin_layout Enumerate
+Маршрутизаторы.
+\end_layout
+
+\begin_layout Enumerate
+Шлюз.
+\end_layout
+
+\begin_layout Section
+Технология локальных сетей
+\end_layout
+
+\begin_layout Standard
+А именно:
+\end_layout
+
+\begin_layout Itemize
+Ethernet/FE/GE
+\end_layout
+
+\begin_layout Itemize
+Token Ring
+\end_layout
+
+\begin_layout Itemize
+FDDI
+\end_layout
+
+\begin_layout Standard
+Их всех объединяет некоторые свойства: 
+\end_layout
+
+\begin_layout Itemize
+Расстояние между узлами 100-2000 метров без повторителя;
+\end_layout
+
+\begin_layout Itemize
+Единый формат адреса (6 байт)
+\end_layout
+
+\begin_layout Itemize
+Раздельная среда передачи данных
+\end_layout
+
+\begin_layout Itemize
+Высокая скорость протоколов
+\end_layout
+
+\begin_layout Itemize
+Простота логики протоколов.
+\end_layout
+
+\begin_layout Standard
+Деление по методу доступа к среде:
+\end_layout
+
+\begin_layout Enumerate
+Случайный доступ (технология Ethernet).
+ Сеть проверяет, можно ли положить кадр, после чего кладет.
+ Но может так произойти, что туда уже положил кадр другой поток.
+ Есть вероятность того, что возникнет коллизия и наш кадр наложится на что-то
+ уже существующее в сети.
+ Поэтому этот доступ также называется CSMA/CC.
+ Преимущества: простой алгоритм, дешевое оборудование, возможность широковещател
+ьной передачи данных.
+ Минусы: большие потери данных из-за коллизий (особенно ощутимо при загрузке
+ сети более 50%), ограниченная длина сети.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Битовая скорость — 10 Мбит/с
+\end_layout
+
+\begin_layout Enumerate
+Интервал отсрочки — 512 бит.
+\end_layout
+
+\begin_layout Enumerate
+Межкадровый интервал — 9.6 мкс
+\end_layout
+
+\begin_layout Enumerate
+Максимальное число повторов — 16.
+\end_layout
+
+\begin_layout Enumerate
+Максимальное возрастание диапазона паузы — 10
+\end_layout
+
+\begin_layout Enumerate
+Максимальная длина кадра без преамбулы — 1518 байт
+\end_layout
+
+\begin_layout Enumerate
+Минимальная длина кадра — 64 байта
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Детерминированный доступ (Token Ring, FDDI)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Кольцо с маркером
+\end_layout
+
+\begin_layout Enumerate
+Шина с маркером
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Протокол LLC
+\end_layout
+
+\begin_layout Standard
+Относится к уровню управления логическими каналами
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Заголовок Ethernet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Кадр LLC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Кадр Ethernet
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Три типа процедур LLC:
+\end_layout
+
+\begin_layout Standard
+1) LLC1 — без установления соединнения и без подтверждения.
+\end_layout
+
+\begin_layout Standard
+2) LLC2 — с установлением соединения и подтверждением.
+\end_layout
+
+\begin_layout Standard
+3) LLC3 — без установления соединения, но с подтверждением.
+\end_layout
+
+\begin_layout Standard
+Подробно рассмотрим LLC2.
+\end_layout
+
+\begin_layout Standard
+В нем существуют 3 вида кадров:
+\end_layout
+
+\begin_layout Standard
+1) Информационный кадр (полезные данные)
+\end_layout
+
+\begin_layout Standard
+2) Управляющий кадр (Команды/ответы)
+\end_layout
+
+\begin_layout Standard
+3) Ненумерованный кадр (установление соединения).
+\end_layout
+
+\begin_layout Standard
+Как выглядит кадр:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Флаг
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DSAP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SSAP
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Управляющее поле
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Данные
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Флаг
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+01111110
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+источник
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Структура поля управления:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="17">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Тип кадра
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Разряды поля управления
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Информационный
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N(S)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+P/F
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N(R)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Управляющий
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+S
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+not use
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+P/F
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N(R)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ненумерованный
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+P/F
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+not use
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ДЗ: посмотреть, что за поля скрываются под буковками.
+\end_layout
+
+\begin_layout Standard
+Формат кадра Ethernet
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="9">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pr
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FCS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+что
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+46-1500
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+размер в байтах
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+46-1497
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+отличия LLC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DSAP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SSAP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cnt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Технологии Token Ring и FDDI разберем сами.
+ Я что-то устал :)
+\end_layout
+
+\begin_layout Section
+Практические аспекты настройки сетей
+\end_layout
+
+\begin_layout Subsection
+Ситуация настройки локальной сети компьютер-компьютер
+\end_layout
+
+\begin_layout Enumerate
+Кабель:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Кросс (crossover)
+\end_layout
+
+\begin_layout Enumerate
+Прямой (патч-корд)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Кабель имеет разъем RJ-45 и 8 проводков по умолчанию.
+ Если порядок:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Тип Б
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Тип А
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+зеленый
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+оранжевый
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+бело-зеленый
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+бело-оранжевый
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+синий
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+синий
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+бело-синий
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+бело-синий
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+оранжевый
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+зеленый
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+бело-оранжевый
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+бело-зеленый
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+коричневый
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+коричневый
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+бело-коричневый
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+бело-коричневый
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(картинка соединения)
+\end_layout
+
+\begin_layout Standard
+Потребуется установить следующие настройки:
+\end_layout
+
+\begin_layout Standard
+1) IP-адрес: (192.168.0.1, 192.168.0.2)
+\end_layout
+
+\begin_layout Standard
+2) Маска: (255.255.255.252 — ровно на два компа), но лучше (255, 255, 255,
+ 0).
+ Маска должна быть одинаковой на обоих компьютерах
+\end_layout
+
+\begin_layout Standard
+3) Шлюз: так как сеть однородна, то мы на обоих компьютерах указываем IP1
+\end_layout
+
+\begin_layout Standard
+4) DNS: в данном случае не нужен.
+\end_layout
+
+\begin_layout Subsection
+Ситуация настройки сети из 4-х компьютеров
+\end_layout
+
+\begin_layout Standard
+Подключаем их к свитчу.
+ Настраиваем аналогично первому случаю.
+ Только маску выделяем уже на 6 компьютеров (так как не сможем выделить
+ на 4 — помним о зарезервированных адресах х.х.х.0 и х.х.х.255).
+\end_layout
+
+\begin_layout Subsection
+32 Компьютера на двадцатипортовых свитчах
+\end_layout
+
+\begin_layout Standard
+Требуется выделить 3 свитча и построить их в виде дерева.
+\end_layout
+
+\begin_layout Subsection
+Если у нас есть роутер, 4 компа и нам нужно выйти в Интернет
+\end_layout
+
+\begin_layout Standard
+IP, маску и шлюз он получит автоматически от провайдера.
+ Все, что вам нужно — поставить галочку напротив DHCP в настройках роутера
+ и поставить в настройках компьютера 
+\begin_inset Quotes fld
+\end_inset
+
+получать настройки сети автоматически
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Если есть 8 компов
+\end_layout
+
+\begin_layout Standard
+То нам понадобится еще и свитч, который мы подключим между компами и роутером.
+\end_layout
+
+\begin_layout Subsection
+Если есть устройство без DHCP
+\end_layout
+
+\begin_layout Standard
+Например, принтер.
+ Ему нужно назначить статический IP-адрес.
+ Вдобавок ему понадобится шлюз — IP маршрутизатора.
+\end_layout
+
+\begin_layout Subsection
+У нас есть 2 компа, один из которых через USB-модем смотрит в Интернет
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IP1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.0.0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IP2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.0.0.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+255.255.255.252
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+255.255.255.252
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.0.0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.0.0.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DNS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DNS провайдера
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DNS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DNS провайдера
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+На 1 компьютере в определенном месте настроек необходимо поставить галочку
+ 
+\begin_inset Quotes fld
+\end_inset
+
+расшарить доступ в интернет
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
