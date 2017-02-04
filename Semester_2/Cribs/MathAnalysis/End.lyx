@@ -1,0 +1,4123 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{hyperref}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-starred
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.7cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Формула Валлиса.
+ Связность в 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Вычисление 
+\begin_inset Formula $\int_{0}^{\nicefrac{\pi}{2}}\sin^{n}xdx$
+\end_inset
+
+.
+ Формула Валлиса
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $I_{0}=\frac{\pi}{2},\ \ I_{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $n\ge2$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\begin{multline*}
+I_{n}=-\int_{0}^{\frac{\pi}{2}}\sin^{n-1}xd(\cos x)=\sin^{n-1}x\cos x|_{0}^{\frac{\pi}{2}}+\int_{0}^{\frac{\pi}{2}}\cos x(n-1)\sin^{n-2}x\cos xdx=\\
+(n-1)\int_{0}^{\frac{\pi}{2}}\sin^{n-2}x\cos^{2}xdx=(n-1)\int_{0}^{\frac{\pi}{2}}\sin^{n-2}x(1-\sin^{2}x)dx=(n-1)(I_{n-2}-I_{n})
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+откуда: 
+\begin_inset Formula 
+\[
+I_{n}=\frac{n-1}{n}I_{n-2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Разберем по отдельности случай четности и нечетности.
+ 
+\begin_inset Formula $n=2k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\[
+I_{2k}=\frac{2k-1}{2k}I_{2(k-1)}=\frac{2k-1}{2k}\frac{2k-3}{2k-2}I_{2(k-2)}=...=\frac{(2k-1)(2k-3)...3\cdot1}{(2k)(2k-2)...4\cdot2}I_{0}=\frac{(2k-1)!!}{(2k)!!}\cdot\frac{\pi}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Для 
+\begin_inset Formula $n=2k+1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\[
+I_{2k+1}=\frac{2k}{2k+1}I_{2k-1}=...=\frac{2k(2k-2)...2}{(2k+1)(2k-1)...3}I_{1}=\frac{2k!!}{(2k+1)!!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Отсюда ответ: 
+\begin_inset Formula 
+\[
+I_{n}=\frac{(n-1)!!}{n!!}\varepsilon_{n},\ \ \ \varepsilon_{n}=\begin{cases}
+\frac{\pi}{2} & n-\text{четное}\\
+1 & n-\text{нечетное}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $I_{2k-1}<I_{2k}<I_{2k+1}$
+\end_inset
+
+, откуда 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\frac{(2k)!!}{(2k+1)!!}\leq\frac{(2k-1)!!}{(2k)!!}\cdot\frac{\pi}{2}\leq\frac{(2k-2)!!}{(2k-1)!!}\Leftrightarrow\\
+\frac{1}{2k+1}\left[\frac{(2k)!!}{(2k-1)!!}\right]^{2}\leq\frac{\pi}{2}\leq\frac{1}{2k}\underbrace{\left[\frac{(2k)!!}{(2k-1)!!}\right]^{2}}_{Ak}\\
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{2k}A_{k}^{2}-\frac{1}{2k+1}A_{k}^{2}=\frac{1}{2k(2k+1)}A_{k}^{2}\leq\frac{1}{2k}\cdot\frac{\pi}{2}\to_{k\to\infty}0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Следовательно, промежутки стягиваются, следовательно, 
+\end_layout
+
+\begin_layout Standard
+Отсюда 
+\begin_inset Formula $\nicefrac{\pi}{2}=\lim_{k\to\infty}\frac{1}{2k}\left[\frac{(2k)!!}{(2k-1)!!}\right]$
+\end_inset
+
+ — формула Валлиса.
+\end_layout
+
+\begin_layout Subsection
+Связность в 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\subset\mathbb{R}^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $X\cap G$
+\end_inset
+
+ — относительно открыт в 
+\begin_inset Formula $X$
+\end_inset
+
+, если 
+\begin_inset Formula $G$
+\end_inset
+
+ — открыто в 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $X\cap G$
+\end_inset
+
+ — относительно замкнут в 
+\begin_inset Formula $X$
+\end_inset
+
+, если 
+\begin_inset Formula $G$
+\end_inset
+
+ — замкнуто в 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $X$
+\end_inset
+
+ — несвязно, если 
+\begin_inset Formula $X=A\cup B$
+\end_inset
+
+, таких, что:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $A,B\neq\varnothing$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $A\cap B=\varnothing$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $A,B$
+\end_inset
+
+ относительно открыты.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Связное множество — не несвязное множество
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Если 
+\begin_inset Formula $A=X\cap G\ F=\mathbb{R}^{m}\backslash G$
+\end_inset
+
+, то 
+\begin_inset Formula $B=X\backslash A=X\cap F$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Rightarrow B$
+\end_inset
+
+ — дополнение 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $X\subset\mathbb{R}^{m}$
+\end_inset
+
+ — связно.
+ Докажем, что это промежуток: пусть 
+\begin_inset Formula $a=\inf X,\ b=\sup X$
+\end_inset
+
+.
+ (прокатит и для бесконечных 
+\begin_inset Formula $a,b$
+\end_inset
+
+).
+ Если 
+\begin_inset Formula $a<c<b\Rightarrow c\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+От противного, пусть 
+\begin_inset Formula $a<c_{0}<b$
+\end_inset
+
+, 
+\begin_inset Formula $c_{0}\notin X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A=X\cap(-\infty,c_{0}),\ B=X\cap(c_{0},+\infty)$
+\end_inset
+
+.
+ Так как 
+\begin_inset Formula $c_{0}\notin X$
+\end_inset
+
+, то 
+\begin_inset Formula $A\cup B=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Таким образом, всякое связное множество — промежуток.
+ Промежуток связен по теореме Больцано-Коши.
+\end_layout
+
+\begin_layout Theorem
+Если 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ непрерывно, 
+\begin_inset Formula $X$
+\end_inset
+
+ — связно, тогда 
+\begin_inset Formula $Y$
+\end_inset
+
+ тоже связно.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $Y=T(X)$
+\end_inset
+
+ несвязно.
+ Тогда 
+\begin_inset Formula $\exists f:X\to\{-1,1\}$
+\end_inset
+
+.
+ Рассмотрим 
+\begin_inset Formula $g=f\circ T$
+\end_inset
+
+.
+ Она непрерывна и принимает два значения.
+ Значит, 
+\begin_inset Formula $X$
+\end_inset
+
+ несвязно.
+ Противоречие.
+\end_layout
+
+\begin_layout Section
+Свойства интегралов на равенства.
+ Теорема о повторном пределе
+\end_layout
+
+\begin_layout Subsection
+Свойства интегралов, выражаемые равенствами
+\end_layout
+
+\begin_layout Lemma*
+1) 
+\begin_inset Formula $f,g$
+\end_inset
+
+ — непрерывна на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\int_{a}^{b}(f(x)+g(x))dx=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $F,G$
+\end_inset
+
+ — первообразные для 
+\begin_inset Formula $f,g$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $h=f+g$
+\end_inset
+
+, 
+\begin_inset Formula $H=F+G$
+\end_inset
+
+, значит, 
+\begin_inset Formula $H'(x)=h(x)$
+\end_inset
+
+.
+ Значит, 
+\begin_inset Formula $\int_{a}^{b}(f(x)+g(x))dx=H(b)-H(a)=(F(b)+G(b))-(F(a)+G(a))=F(b)-F(a)+G(b)-G(a)=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+2) 
+\begin_inset Formula $(f,[a,b])\in D$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\int_{a}^{b}\alpha f(x)dx=\alpha\int_{a}^{b}f(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $F$
+\end_inset
+
+ — первообразная для 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Тогда по Ньютону-Лейбницу, 
+\begin_inset Formula $\int_{a}^{b}\alpha f(x)dx=\alpha F(b)-\alpha F(a)=\alpha\int_{a}^{b}f(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+3) 
+\begin_inset Formula $\int_{a}^{b}(\alpha f(x)+\beta g(x))dx=\alpha\int_{a}^{b}f(x)dx+\beta\int_{a}^{b}g(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Очевидно следует из предыдущих пунктов.
+\end_layout
+
+\begin_layout Lemma*
+4) 
+\begin_inset Formula $\int_{a}^{b}\left(\sum_{k=1}^{n}\alpha_{k}f_{k}(x)\right)dx=\sum_{k=1}^{n}\alpha_{k}\int_{a}^{b}f_{k}(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Очевидно по индукции.
+\end_layout
+
+\begin_layout Lemma*
+5) 
+\begin_inset Formula $\int_{a}^{b}f(x)dx=-\int_{b}^{a}f(x)dx$
+\end_inset
+
+ из формулы Ньютона-Лейбница.
+ Пусть 
+\begin_inset Formula $a,b,c\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна на любом промежутке с концами 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+При 
+\begin_inset Formula $a<c<b$
+\end_inset
+
+ верно по определению.
+ Рассмотрим при 
+\begin_inset Formula $b<a<c$
+\end_inset
+
+: 
+\begin_inset Formula $\int_{b}^{c}f(x)dx=\int_{b}^{a}f(x)dx+\int_{a}^{c}f(x)dx\Leftrightarrow\int_{a}^{b}=\int_{a}^{c}+\int_{c}^{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Теорема о повторном пределе
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X\subset\mathbb{R},\ a\in\mathbb{R},\ a$
+\end_inset
+
+ — точка сгущения, 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ определены на 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\exists$
+\end_inset
+
+ конечные пределы 
+\begin_inset Formula $\lim_{x\to a}f_{n}(x)=L_{n}\ \forall n=1,2,...$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $f_{n}\rightrightarrows f$
+\end_inset
+
+ на 
+\begin_inset Formula $X$
+\end_inset
+
+, то:
+\end_layout
+
+\begin_layout Theorem
+1) 
+\begin_inset Formula $\exists$
+\end_inset
+
+ конечный 
+\begin_inset Formula $\lim_{n\to\infty}L_{n}=L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $f(x)\to_{x\to a}L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Что можно переписать как 
+\begin_inset Formula $\lim_{x\to a}f(x)=\lim_{n\to\infty}L_{n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\lim_{x\to a}(\lim_{n\to\infty}f_{n}(x))=\lim_{n\to\infty}(\lim_{x\to a}f_{n}(x))=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ — фундаментальна, тогда и только тогда, когда 
+\begin_inset Formula $\forall\varepsilon>0\ \exists N:\ \forall n>N,m>N:\ |x_{n}-x_{m}|<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Зафиксируем 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ Найдем 
+\begin_inset Formula $N$
+\end_inset
+
+, начиная с которого 
+\begin_inset Formula $|L_{n}-L_{m}|<$
+\end_inset
+
+
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f_{n}\rightrightarrows f$
+\end_inset
+
+ на 
+\begin_inset Formula $X$
+\end_inset
+
+, откуда 
+\begin_inset Formula $\exists N:\ \forall n>N\ |f_{n}(x)-f(x)|<\frac{\varepsilon}{2}\ \forall x\in X$
+\end_inset
+
+ и 
+\begin_inset Formula $\forall m>M\ |f_{m}(x)-f(x)|<\frac{\varepsilon}{2}\ \forall x\in X$
+\end_inset
+
+.
+ Отсюда, 
+\begin_inset Formula $|f_{n}(x)-f_{m}(x)|=|(f_{n}(x)-f(x))+(f(x)-f_{m}(x))|<|...|+|...|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula $|L_{n}-L_{m}|\leq\varepsilon$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+2) Заменим 
+\begin_inset Formula $f$
+\end_inset
+
+ на 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ с малой погрешностью и перейдем от 
+\begin_inset Formula $L$
+\end_inset
+
+ к 
+\begin_inset Formula $L_{n}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f(x)-L=f_{n}(x)-L_{n}+\text{малое}$
+\end_inset
+
+.
+ Теперь зафиксируем произвольное (но очень большое) 
+\begin_inset Formula $N$
+\end_inset
+
+, так, чтобы погрешность не превышала 
+\begin_inset Formula $\frac{\varepsilon}{3}$
+\end_inset
+
+.
+ Фиксируем 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\exists N_{1}:\ \forall n>N_{1}$
+\end_inset
+
+ верно 
+\begin_inset Formula $|f_{n}(x)-f(x)|<\frac{\varepsilon}{3}\ \forall x\in X$
+\end_inset
+
+; 
+\begin_inset Formula $\exists N_{2}:\ \forall n>N_{2}$
+\end_inset
+
+ верно 
+\begin_inset Formula $|L_{n}-L|<\frac{\varepsilon}{3}\ \forall x\in X$
+\end_inset
+
+.
+ Примем 
+\begin_inset Formula $N>N_{1}+N_{2}$
+\end_inset
+
+, тогда справедливы оба неравенства.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $|f(x)-L|=|(f(x)-f_{n}(x))+(f_{n}(x)-L_{n})+(L_{n}-L)|<|f(x)-f_{n}(x)|+|f_{n}(x)-L_{n}|+|L_{n}-L|<\frac{2\varepsilon}{3}+|f_{n}(x)-L_{n}|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\exists V(a)\ \forall x\in X\cap\dot{V}(a):\ |f_{n}(x)-L_{n}|<\frac{\varepsilon}{3}$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $|f(x)-L|<\frac{2\varepsilon}{3}+\frac{\varepsilon}{3}$
+\end_inset
+
+ при 
+\begin_inset Formula $x\in X\cap\dot{V}(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Определение интеграла, умножение рядов
+\end_layout
+
+\begin_layout Subsection
+Определение определенного интеграла, теорема о среднем
+\end_layout
+
+\begin_layout Definition*
+Пусть 
+\begin_inset Formula $f$
+\end_inset
+
+ определена на 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ — первообразная для 
+\begin_inset Formula $f$
+\end_inset
+
+ на 
+\begin_inset Formula $X$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall x\in X\ \exists F'(x)$
+\end_inset
+
+ и 
+\begin_inset Formula $F'(x)=f(x)$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition*
+Неопределенный интеграл — любая первообразная для функции на данном промежутке.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition*
+Пусть 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ — невырожденный промежуток, 
+\begin_inset Formula $f$
+\end_inset
+
+ определена и непрерывна на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, то есть 
+\begin_inset Formula $(f,[a,b])$
+\end_inset
+
+ является допустимой парой.
+ Пусть 
+\begin_inset Formula $D$
+\end_inset
+
+ — множество таких пар.
+ Определенный интеграл — функция, заданная на 
+\begin_inset Formula $D$
+\end_inset
+
+: 
+\begin_inset Formula $J:D\to\mathbb{R}$
+\end_inset
+
+, удовлетворяющая свойствам:
+\end_layout
+
+\begin_layout Definition*
+1) 
+\begin_inset Formula $(f,[a,b])$
+\end_inset
+
+ — допустимая пара, если 
+\begin_inset Formula $a<c<b$
+\end_inset
+
+, то 
+\begin_inset Formula $J(f,[a,b])=J(f,[a,c])+J(f,[c,b])$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+2) Если для 
+\begin_inset Formula $(f,[a,b])$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $A\leq f(x)\leq B$
+\end_inset
+
+, 
+\begin_inset Formula $\forall x\in[a,b]$
+\end_inset
+
+, то 
+\begin_inset Formula $A(b-a)\leq J(f,[a,b])\leq B(b-a)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Theorem*
+(о среднем).
+ Если пара 
+\begin_inset Formula $(f,[a,b])$
+\end_inset
+
+ — допустимая, то 
+\begin_inset Formula $\exists c\in[a,b]$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $J(f,[a,b])=f(c)(b-a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $M=\max f(x),\ m=\min f(x)$
+\end_inset
+
+ на 
+\begin_inset Formula $[a,b].$
+\end_inset
+
+ Тогда 
+\begin_inset Formula $m\leq f(x)\leq M\ \forall x\in[a,b].$
+\end_inset
+
+ Тогда 
+\begin_inset Formula $m(b-a)\leq J(f,[a,b])\leq M(b-a)$
+\end_inset
+
+, разделим на 
+\begin_inset Formula $b-a$
+\end_inset
+
+, получим 
+\begin_inset Formula $m\leq\frac{1}{b-a}J(f,[a,b])=C\leq M$
+\end_inset
+
+.
+ Тогда по теореме Больцано-Коши 
+\begin_inset Formula $\exists c\in[a,b]:\ f(c)=C=\frac{1}{b-a}J(f,[a,b])$
+\end_inset
+
+, остается лишь домножить на 
+\begin_inset Formula $(b-a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Умножение рядов
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(A)\sum_{k=0}^{\infty}a_{k}$
+\end_inset
+
+ и 
+\begin_inset Formula $(B)\sum_{k=1}^{\infty}b_{k}$
+\end_inset
+
+.
+ Произведение рядов 
+\begin_inset Formula $(A)$
+\end_inset
+
+ и 
+\begin_inset Formula $(B)$
+\end_inset
+
+ — 
+\begin_inset Formula $(C)\sum_{k=0}^{\infty}c_{k}$
+\end_inset
+
+, где 
+\begin_inset Formula $c_{k}=(a_{0}b_{k}+a_{1}b_{k-1}+...a_{k-1}b_{1}+a_{k}b_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Если 
+\begin_inset Formula $(A)\sum_{k=0}^{\infty}a_{k}$
+\end_inset
+
+ и 
+\begin_inset Formula $(B)\sum_{k=1}^{\infty}b_{k}$
+\end_inset
+
+ абсолютно сходятся, то ряд 
+\begin_inset Formula $(C)\sum_{k=0}^{\infty}c_{k}$
+\end_inset
+
+ абсолютно сходится и его сумма 
+\begin_inset Formula $C=A\cdot B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+C_{n}=\sum_{k=0}^{n}c_{k}=\sum_{k=0}^{n}\sum_{i+j=k}a_{i}b_{j}=\sum_{i+j\leq n}a_{i}b_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+— частичная сумма ряда 
+\begin_inset Formula $(C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Разобьем дальнейшее доказательство на 2 части:
+\end_layout
+
+\begin_layout Proof
+1) 
+\series bold
+Ряды 
+\begin_inset Formula $(A)$
+\end_inset
+
+ и 
+\begin_inset Formula $(B)$
+\end_inset
+
+ положительные.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+C_{n}=\sum_{i+j\leq n}a_{i}b_{j}\leq\sum_{i\leq n,\ j\leq n}a_{i}b_{j}=A_{n}B_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+где 
+\begin_inset Formula $A_{n}=a_{0}+...+a_{n},\ B_{n}=b_{0}+...+b_{n}$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula $C_{n}\leq A_{n}B_{n}\to AB$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(A)>0,\ (B)>0\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $(C)>0$
+\end_inset
+
+.
+ Значит, последовательность 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ ограничена (так как ограничены 
+\begin_inset Formula $(A)$
+\end_inset
+
+ и 
+\begin_inset Formula $(B)$
+\end_inset
+
+).
+ Ограничим произведение: 
+\begin_inset Formula $C_{n}\leq A_{n}B_{n}\leq C_{2n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+C_{2n}=\sum_{i+j\leq2n}a_{i}b_{j}\geq\sum_{i\leq n,\ j\leq n}a_{i}b_{j}=A_{n}B_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Ряд 
+\begin_inset Formula $C_{n}\to C$
+\end_inset
+
+ и 
+\begin_inset Formula $C_{2n}\to C$
+\end_inset
+
+, следовательно, по теореме о двух милиционерах, 
+\begin_inset Formula $A_{n}B_{n}\to C$
+\end_inset
+
+ и, одновременно, 
+\begin_inset Formula $A_{n}B_{n}\to AB$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $C=AB$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+2) 
+\series bold
+Общий случай.
+\end_layout
+
+\begin_layout Proof
+Будем рассматривать 
+\begin_inset Formula $(A*)\sum_{n}|a_{n}|,\ (B*)\sum_{n}|b_{n}|,\ (C*)\sum_{n}|c_{n}|,\ (D)\sum_{n=0}^{\infty}d_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|c_{n}|=|\sum_{i+j=n}a_{i}b_{j}|\leq\sum_{i+j=n}|a_{i}||b_{i}|=d_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+То есть 
+\begin_inset Formula $(D)=(A*)(B*)$
+\end_inset
+
+.
+ По доказанному, ряд 
+\begin_inset Formula $(D)$
+\end_inset
+
+ сходится.
+ По неравенству 
+\begin_inset Formula $(C*)$
+\end_inset
+
+ сходится, следовательно, 
+\begin_inset Formula $(C)$
+\end_inset
+
+ сходится абсолютно.
+\end_layout
+
+\begin_layout Proof
+Докажем, что 
+\begin_inset Formula $C_{2n}-A_{n}B_{n}\to0$
+\end_inset
+
+.
+ Если мы это докажем, то перейдем к пределу и там получим, что 
+\begin_inset Formula $C-AB=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Оценим:
+\begin_inset Formula 
+\[
+|C_{2n}-A_{n}B_{n}|=|\sum_{i+j\leq2n\ \max(i,j)>n}a_{i}b_{j}|\leq\sum_{i+j\leq2n\ \max(i,j)>n}|a_{i}||b_{j}|==\underbrace{\sum_{i+j\leq2n}|a_{i}||b_{j}|}_{D_{2n}}-\sum_{i,j\leq n}|a_{i}||b_{j}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Отсюда, 
+\begin_inset Formula $|C_{2n}-A_{n}B_{n}|\leq\underbrace{D_{2n}}_{\to D}-\underbrace{A_{n}^{*}B_{n}^{*}}_{\to A^{*}B^{*}}\to_{n\to\infty}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Теорема Кантора, площадь криволинейного треугольника через полярные координаты
+\end_layout
+
+\begin_layout Subsection
+Равномерная непрерывность.
+ Модуль непрерывности.
+ Теорема Кантора
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $T$
+\end_inset
+
+ равномерно непрерывно на 
+\begin_inset Formula $X$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall\varepsilon>0\ \exists\delta>0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x,x'\in X$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $||x-x'||<\delta\Rightarrow||T(x)-T(x')||<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Достаточным для равномерной непрерывности условием является условие Липшица:
+ 
+\begin_inset Formula $\exists C:\ ||T(x)-T(x')||\leq C||x-x'||\ \forall x,x'\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Модуль непрерывности 
+\begin_inset Formula $T:\omega_{T}^{(\delta)}=\sup_{\delta>0,\ x,x'\in X,\ ||x-x'||<\delta}||T(x)-T(x')||$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+1) Если 
+\begin_inset Formula $\delta<\delta$
+\end_inset
+
+, то 
+\begin_inset Formula $\omega_{T}(\delta)\leq\omega_{T}(\delta')$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $u,v\in X\Rightarrow||T(u)-T(v)||\leq\omega_{T}(||u-v||)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(Кантора)
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ — компактное подмножество в 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+, а 
+\begin_inset Formula $T:X\to\mathbb{R}^{l}$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $T$
+\end_inset
+
+ непрерывно на 
+\begin_inset Formula $X$
+\end_inset
+
+, то 
+\begin_inset Formula $T$
+\end_inset
+
+ равномерно непрерывно на 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Согласно замечанию, 
+\begin_inset Formula $\forall x,x'\in X:\ ||T(x)-T(x')||\leq\omega_{T}(||x-x'||)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Если 
+\begin_inset Formula $\omega_{T}(\delta)\to_{\delta\to+0}0$
+\end_inset
+
+, то 
+\begin_inset Formula $T$
+\end_inset
+
+ — равномерно непрерывно (2).
+ Проверим это: зададим произвольное 
+\begin_inset Formula $\varepsilon>0\ \omega_{T}(\delta)\to_{\delta\to0+}0\ \exists\delta_{0}>0$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\omega_{T}(\delta)<\varepsilon$
+\end_inset
+
+ при 
+\begin_inset Formula $\delta<\delta_{0}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\forall x,x'\in X,\ ||x-x'||<\delta_{0}$
+\end_inset
+
+ и 
+\begin_inset Formula $||T(x)-T(x')||\leq\omega_{T}(||x-x'||)<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+От противного, пусть (2) неверно: пусть 
+\begin_inset Formula $\omega_{T}(\delta)\not\to_{\delta\to0+}0$
+\end_inset
+
+.
+ Напомним, что 
+\begin_inset Formula $\omega_{T}$
+\end_inset
+
+ возрастает.
+ Тогда 
+\begin_inset Formula $\exists\lim_{\delta\to0+}\omega_{T}(\delta)>0$
+\end_inset
+
+ и 
+\begin_inset Formula $\exists\lim_{\delta\to0+}\omega_{T}(\delta)=\inf\omega_{T}(\delta)=C>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall\delta>0\ \omega_{T}(\delta)\geq C>0$
+\end_inset
+
+, 
+\begin_inset Formula $\forall n\ \omega_{T}(\frac{1}{n})\geq C>0$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\sup||T(x)-T(x')||\geq C>0$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\exists x_{n},x_{n}'\in X$
+\end_inset
+
+ такое, что одновременно 
+\begin_inset Formula $||x_{n}-x_{n}'||\leq\frac{1}{n}$
+\end_inset
+
+ и 
+\begin_inset Formula $||T(x_{n})-T(x_{n}')||\geq\frac{C}{2}$
+\end_inset
+
+.
+ Теперь, когда у нас есть последовательность, используем компактность:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\exists x_{n_{k}}\to x_{0}\in X$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $||x_{n_{k}}'-x_{0}||\leq||x_{n_{k}}'-x_{n_{k}}||+||x_{n_{k}}-x_{0}||\leq\frac{1}{n_{k}}+||x_{n_{k}}-x_{0}||\to_{n_{k}\to\infty}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Таким образом, 
+\begin_inset Formula $x_{n_{k}}'\to x_{0}$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $||T(x_{n_{k}})-T(x_{n_{k}}')||\geq\frac{C}{2}$
+\end_inset
+
+.
+ Перейдем к пределу: 
+\begin_inset Formula $||T(x_{0})-T(x_{0})||\geq\frac{C}{2}>0$
+\end_inset
+
+, противоречие.
+ Следовательно, (2) верно, из него вытекает равномерная непрерывность, теорема
+ доказана.
+\end_layout
+
+\begin_layout Subsection
+Площадь криволинейного треугольника через полярные координаты
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\rho$
+\end_inset
+
+ — непрерывна, определена на 
+\begin_inset Formula $[-\pi,\pi]$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta\in[-\pi,\pi]$
+\end_inset
+
+.
+ Криволинейный треугольник — 
+\begin_inset Formula $T_{\rho(\Delta)}=\{x,y|\varphi\in\Delta,\ 0\leq r\leq\rho(\varphi)\}$
+\end_inset
+
+, где 
+\begin_inset Formula $\varphi=\sqrt{x^{2}+y^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $S(T_{\rho(\Delta)})=\frac{1}{2}\int_{\rho}^{q}\rho^{2}(\varphi)d\varphi$
+\end_inset
+
+, где 
+\begin_inset Formula $[p,q]=\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\Phi(\Delta)=S(T_{\rho(\Delta)})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Delta',\Delta''\in\Delta$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta'+\Delta''=\Delta$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta'\cap\Delta''=$
+\end_inset
+
+прямая, то 
+\begin_inset Formula $\Phi(\Delta)=\Phi(\Delta')+\Phi(\Delta'')$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ — аддитивна.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $m_{\Delta}=\min\rho(\varphi)$
+\end_inset
+
+, 
+\begin_inset Formula $M_{\Delta}=\max\rho(\varphi)$
+\end_inset
+
+.
+ Ясно, что 
+\begin_inset Formula $m_{\Delta}\leq\rho(\varphi)\leq M_{\Delta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\frac{1}{2}m_{\Delta}^{2}\text{дл}(\Delta)\leq S(T_{\rho(\Delta)})\leq\frac{1}{2}M_{\Delta}^{2}\text{дл}(\Delta)$
+\end_inset
+
+, 
+\begin_inset Formula $M_{\Delta}-m_{\Delta}\to_{\text{дл}(\Delta)\to0}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $f(x)=\frac{1}{2}\rho^{2}(\varphi)$
+\end_inset
+
+, тогда 
+\begin_inset Formula $S(T_{\rho(\Delta)})=\int_{p}^{q}\frac{1}{2}\rho^{2}(\varphi)d\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Почленное интегрирование ряда и оценка длины кривой
+\end_layout
+
+\begin_layout Subsection
+Лемма об оценке длины простой гладкой дуги
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $L$
+\end_inset
+
+ — гладкая кривая в 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma:[a,b]\to L$
+\end_inset
+
+ — регулярная параметризация 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m_{x}(\Delta)=\min_{\Delta}|x'|,\ m_{y}(\Delta)=\min_{\Delta}|y'|$
+\end_inset
+
+, 
+\begin_inset Formula $M_{x}(\Delta)=\max_{\Delta}|x'|,\ M_{y}(\Delta)=\max_{\Delta}|y'|$
+\end_inset
+
+, где 
+\begin_inset Formula $\Delta=[a,b]$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula 
+\[
+\sqrt{m_{x}^{2}+m_{y}^{2}}(b-a)\leq S(L)\leq\sqrt{M_{x}^{2}+M_{y}^{2}}(b-a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\rho(\gamma(a),\gamma(b))=\sqrt{(x(a)-x(b))^{2}+(y(a))-y(b))^{2}}=*$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x(b)-x(a)=\int_{a}^{b}x'(t)dt=x'(\tilde{t})(b-a)$
+\end_inset
+
+ по теореме о среднем.
+\end_layout
+
+\begin_layout Proof
+Аналогично 
+\begin_inset Formula $\exists\hat{t}\in[a,b]:\ y(b)-y(a)=y'(\hat{t})(b-a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Тогда 
+\begin_inset Formula $*=\sqrt{(x'(\tilde{t}))^{2}+(y'(\hat{t}))^{2}}(b-a)=\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $CD$
+\end_inset
+
+ — отрезок длины 
+\begin_inset Formula $\sqrt{M_{x}^{2}+M_{y}^{2}}(b-a)$
+\end_inset
+
+, на концах которого 
+\begin_inset Formula $x=a,b$
+\end_inset
+
+.
+ 
+\begin_inset Formula $AB$
+\end_inset
+
+ — отрезок, соединяющий 
+\begin_inset Formula $\gamma(a)$
+\end_inset
+
+ и 
+\begin_inset Formula $\gamma(b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\Phi:L\to CD$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\rho(A,B)\leq\rho(C,D)=\sqrt{M_{x}^{2}+M_{y}^{2}}(b-a)$
+\end_inset
+
+ по доказанному ранее.
+ Аналогично справедливо для 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ на любом 
+\begin_inset Formula $[p,q]$
+\end_inset
+
+ следовательно, 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ — растяжение, тогда 
+\begin_inset Formula $S(L)\leq S(CD)\leq\sqrt{M_{x}^{2}+M_{y}^{2}}(b-a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Теорема о предельном переходе под знаком интеграла и почленном интегрировании
+ функциональных рядов
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ непрерывны на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $f_{n}\rightrightarrows f$
+\end_inset
+
+ на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, то 
+\begin_inset Formula $\int_{a}^{b}f_{n}(x)dx\to\int_{a}^{b}f(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ — непрерывна, следовательно, 
+\begin_inset Formula $f$
+\end_inset
+
+ — непрерывна.
+ Оценим разность интегралов: 
+\begin_inset Formula 
+\begin{multline*}
+\left|\int_{a}^{b}f_{n}(x)dx-\int_{a}^{b}f(x)dx\right|\leq\int_{a}^{b}\left|f_{n}(x)-f(x)\right|dx<\int_{a}^{b}\sup_{x\in[a,b]}\left|f_{n}(x)-f(x)\right|dx=\alpha_{n}(b-a)\to_{n\to\infty}0\Rightarrow\\
+\int_{a}^{b}f_{n}(x)dx\to\int_{a}^{b}f(x)dx
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $u_{n}$
+\end_inset
+
+ непрерывно и равномерно сходится на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\int_{a}^{b}f(x)dx=\sum_{n=1}^{\infty}u_{n}(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $I_{n}=\int_{a}^{b}S_{n}(x)dx=\sum_{k=1}^{n}\int_{a}^{b}u_{n}(x)dx$
+\end_inset
+
+.
+ 
+\begin_inset Formula $S_{n}\rightrightarrows S$
+\end_inset
+
+, по 1 теореме 
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\int_{a}^{b}u_{n}(x)dx\leftarrow\int_{a}^{b}S_{n}(x)dx\to_{n\to\infty}\int_{a}^{b}S(x)dx\Rightarrow\sum_{n=1}^{\infty}\int_{a}^{b}u_{n}(x)dx=\int_{a}^{b}S(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Исследование сходимости обобщенного гармонического ряда, теорема о непрерывном
+ образе компактного множества
+\end_layout
+
+\begin_layout Subsection
+Исследование сходимости обобщенного гармонического ряда
+\end_layout
+
+\begin_layout Theorem
+Обобщенный гармонический ряд сходится 
+\begin_inset Formula $\Leftrightarrow p>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $p>1$
+\end_inset
+
+.
+ Введем частичную сумму 
+\begin_inset Formula 
+\begin{multline*}
+S_{n}=1+\frac{1}{2^{p}}+...+\frac{1}{n^{p}}<1+\frac{1}{2^{p}}+...+\frac{1}{(2n-1)^{p}}+\frac{1}{(2n)^{p}}+\frac{1}{(2n+1)^{p}}\leq\\
+\leq1+\frac{2}{2^{p}}+\frac{2}{4^{p}}+...+\frac{2}{(2n)^{p}}=1+\frac{1}{2^{p}}(1+\frac{1}{2^{p}}+\frac{1}{3^{p}}+...+\frac{1}{n^{p}})
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+В скобках получилась 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+.
+ Перепишем полученное 
+\begin_inset Formula $S_{n}\leq1+\frac{2}{2^{p}}S_{n}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Theta=\frac{2}{2^{p}}<1$
+\end_inset
+
+, то есть 
+\begin_inset Formula $S_{n}\leq\frac{1}{1-\Theta}$
+\end_inset
+
+.
+ Частичные суммы ограничены, а значит, ряд сходится.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $0<p<1$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $S_{n}=\sum_{k=1}^{n}\frac{1}{k^{p}}\geq\frac{1}{n^{p}}\cdot n$
+\end_inset
+
+.
+ 
+\begin_inset Formula $S_{n}\geq n^{1-p}\to+\infty$
+\end_inset
+
+.
+ При этом 
+\begin_inset Formula $\frac{1}{n^{p}}>\frac{1}{n}$
+\end_inset
+
+, расходимость очевидна.
+\end_layout
+
+\begin_layout Subsection
+Теорема о непрерывном образе компактного множества.
+ Следствия (две теоремы Вейерштрасса)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $X\subset\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ — компактно, 
+\begin_inset Formula $T:X\to\mathbb{R}^{l}$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ — непрерывно, тогда 
+\begin_inset Formula $Y=T(X)\Rightarrow Y$
+\end_inset
+
+ компактно.
+\end_layout
+
+\begin_layout Proof
+Характеристика компактного множества: 
+\begin_inset Formula $\forall\{y_{n}\}\subset Y\ \exists y_{n_{k}}\to y_{0}\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Возьмем последовательность точек 
+\begin_inset Formula $y_{n}\in Y$
+\end_inset
+
+.
+ Т.к.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ — образ, то это значения: 
+\begin_inset Formula $\exists x_{n}\in X:\ y_{n}=T(x_{n})$
+\end_inset
+
+.
+ Множество 
+\begin_inset Formula $X$
+\end_inset
+
+ компатно, поэтому из последовательности 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ можно выделить подпоследовательность: 
+\begin_inset Formula $\exists x_{n_{k}}\to x_{0}\in X$
+\end_inset
+
+.
+ В силу непрерывности, 
+\begin_inset Formula $T(x_{n_{k}})\to T(x_{0})=y_{0}\in Y$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T(x_{n_{k}})=y_{n_{k}}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{n_{k}}\to y_{0}\in Y$
+\end_inset
+
+.
+ Характеристика проверена, 
+\begin_inset Formula $Y$
+\end_inset
+
+ — компактно.
+\end_layout
+
+\begin_layout Standard
+Следствие:
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $T:X\to\mathbb{R}^{l}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ непрерывно, 
+\begin_inset Formula $X$
+\end_inset
+
+ компактно, следовательно, 
+\begin_inset Formula $T(X)$
+\end_inset
+
+ ограничено и достигает наибольшего и наименьшего значений на 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ (обе теоремы Вейерштрасса (что ограничено — 1) и (что достигает — 2)).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $T(x)$
+\end_inset
+
+ — компактно, следовательно, ограничено и замкнуто.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $T(x)$
+\end_inset
+
+ — замкнуто, следовательно, 
+\begin_inset Formula $\exists m=\inf T(x)$
+\end_inset
+
+, 
+\begin_inset Formula $M=\sup T(x)$
+\end_inset
+
+.
+ Рассмотрим последовательность 
+\begin_inset Formula $\{y^{(n)}\}$
+\end_inset
+
+, такую, что 
+\begin_inset Formula $y^{(n)}=M-\frac{1}{n}=(M_{1}-\frac{1}{n},...,M_{l}-\frac{1}{n})$
+\end_inset
+
+, 
+\begin_inset Formula $y^{(n)}\to M\Rightarrow M\in T(x)$
+\end_inset
+
+, так как 
+\begin_inset Formula $T(x)$
+\end_inset
+
+ замкнуто.
+ Аналогично с 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Формула остаточного члена ряда Тейлора и переход к пределу под знаком производно
+й
+\end_layout
+
+\begin_layout Subsection
+Формула остаточного члена ряда Тейлора в интегральной форме
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f\in C^{(n+1)}(<a,b>),\ x,x_{0}\in<a,b>$
+\end_inset
+
+.
+ Формула Тейлора с остаточным членом в форме Пеано: 
+\begin_inset Formula $f(x)=T_{n}(f,x,x-x_{0})+r_{n}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+При выполнении равенства выше верно, что 
+\begin_inset Formula 
+\[
+r_{n}(x)=\frac{1}{n!}\int_{x_{0}}^{x}f^{(n+1)}(t)(x-t)^{n}dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+По индукции.
+\end_layout
+
+\begin_layout Proof
+База: 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ Проверим: 
+\begin_inset Formula 
+\[
+f(x)-f(x_{0})=\int_{x_{0}}^{x}f'(t)dt=-\int_{x_{0}}^{x}f'(t)d(x-t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f(x)=f(x_{0})-\left[f'(x)(x-t)|_{x_{0}}^{x}-\int_{x_{0}}^{x}f''(t)(x-t)dt\right]=\underbrace{f(x_{0})+f'(x_{0})(x-x_{0})}_{=T_{1}}+\int_{x_{0}}^{x}f''(t)(x-t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Сделаем индукционный переход для 
+\begin_inset Formula $n$
+\end_inset
+
+: 
+\begin_inset Formula $f(x)=T_{n-1}(x)+r_{n-1}(x)$
+\end_inset
+
+.
+ Согласно индукционному предположению, 
+\begin_inset Formula $r_{n-1}(x)=\frac{1}{(n-1)!}\int_{x_{0}}^{x}f^{(n)}(t)(x-t)^{n-1}dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+ИП:
+\begin_inset Formula 
+\begin{multline*}
+r_{n-1}(x)=\frac{1}{(n-1)!}\left[-\frac{(x-t)^{n}}{n}f^{(n)}(t)|_{x_{0}}^{x}+\frac{1}{n}\int_{x_{0}}^{x}f^{(n+1)}(t)(x-t)^{n}dt\right]=\\
+\frac{1}{n!}f^{n}(x_{0})(x-x_{0})^{n}+\frac{1}{n!}\int_{x_{0}}^{x}(t)(x-t)^{n}dt
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Подставив в формулу, получим
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f(x)=T_{n-1}(x)+\frac{1}{n!}f^{(n)}(x_{0})(x-x_{0})^{n}+\frac{1}{n!}\int_{x_{0}}^{x}f^{(n+1)}(t)(x-t)^{n}dt=T_{n}(x)+\frac{1}{n!}\int_{x_{0}}^{x}f^{(n+1)}(t)(x-t)^{n}dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Теорема о предельном переходе под знаком производной
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ непрерывно дифференцируемы на 
+\begin_inset Formula $<a,b>$
+\end_inset
+
+ и выполняются следующие условия:
+\end_layout
+
+\begin_layout Theorem
+1)
+\begin_inset Formula $f_{n}\to_{n\to\infty}f(x)\ \forall x\in<a,b>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $f'_{n}(x)\rightrightarrows\varphi(x)$
+\end_inset
+
+ на 
+\begin_inset Formula $<a,b>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Тогда 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывно дифференцируема на 
+\begin_inset Formula $<a,b>$
+\end_inset
+
+ и 
+\begin_inset Formula $f'(x)=\varphi(x)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $c\in<a,b>$
+\end_inset
+
+ и 
+\begin_inset Formula $x\in<a,b>$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\int_{c}^{x}\varphi(t)dt=\lim_{n\to\infty}\int_{c}^{x}f'_{n}(t)dt$
+\end_inset
+
+.
+ (по второй теореме из билета 39).
+ Тогда 
+\begin_inset Formula $\int_{c}^{x}f'_{n}(t)dt=f_{n}(x)-f_{n}(c)\to_{n\to\infty}f(x)-f(c)$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow f(x)-f(c)=\int_{c}^{x}\varphi(t)dt$
+\end_inset
+
+.
+ Правая часть дифференцируема, слева - функция минус константа, тоже дифференцир
+уема, продифферецировав, получим 
+\begin_inset Formula $f'(x)=\varphi(x)$
+\end_inset
+
+ и непрерывна по теореме Стокса-Зайделя.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $u_{n}$
+\end_inset
+
+ непрерывно дифференцируемы на 
+\begin_inset Formula $<a,b>$
+\end_inset
+
+, если 
+\end_layout
+
+\begin_layout Theorem
+1) 
+\begin_inset Formula $\sum_{n=1}^{\infty}u_{n}(x)$
+\end_inset
+
+ сходится 
+\begin_inset Formula $\forall x\in<a,b>$
+\end_inset
+
+ и
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $\sum_{n=1}^{\infty}u_{n}'(x)$
+\end_inset
+
+ равномерно сходится на 
+\begin_inset Formula $<a,b>$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi=\sum_{n=1}^{\infty}u'_{n}(x)$
+\end_inset
+
+ , 
+\end_layout
+
+\begin_layout Theorem
+то 
+\begin_inset Formula $S=\sum_{n=1}^{\infty}u_{n}(x)$
+\end_inset
+
+ непрерывно дифференцируема и 
+\begin_inset Formula $S'(x)=\varphi(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $S_{n}(x)=\sum_{k=1}^{n}u_{k}(x)\to_{n\to\infty}S,\ S_{n}'=\sum_{k=1}^{n}u_{k}'(x)\rightrightarrows\varphi\Rightarrow$
+\end_inset
+
+ по 1 теореме этого билета 
+\begin_inset Formula $S'(x)=\varphi(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Признак Коши и экспонента в ряд Тейлора
+\end_layout
+
+\begin_layout Subsection
+Интегральный признак Коши сходимости ряда
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f>0$
+\end_inset
+
+, непрерывна на 
+\begin_inset Formula $[1,+\infty),\ f$
+\end_inset
+
+ монотонно убывает.
+ Тогда 
+\begin_inset Formula $\sum_{n=1}^{\infty}f(n)$
+\end_inset
+
+ сходится одновременно с 
+\begin_inset Formula $\int_{1}^{\infty}f(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Рассмотрим 
+\begin_inset Formula $[k,k+1]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall x\in[k,k+1]$
+\end_inset
+
+ верно 
+\begin_inset Formula $a_{k+1}=f(k+1)\leq f(x)\leq f(k)=a_{k}$
+\end_inset
+
+.
+ По теореме о среднем 
+\begin_inset Formula $a_{k+1}\leq\int_{k}^{k+1}f(x)dx\leq a_{k}$
+\end_inset
+
+ (т.к.
+ длина 
+\begin_inset Formula $[k,k+1]$
+\end_inset
+
+ равна 1), 
+\begin_inset Formula $S_{n+1}-a_{1}=a_{2}+...+a_{n+1}\leq\int_{k}^{k+1}f(x)dx\leq a_{1}+...+a_{n}=S_{n}$
+\end_inset
+
+, откуда 
+\begin_inset Formula $S_{n}-a_{1}\leq\int_{1}^{n}f(x)dx\leq S_{n}$
+\end_inset
+
+, переходим к пределу, 
+\begin_inset Formula $S-a_{1}\leq\int_{1}^{\infty}f(x)dx\leq S$
+\end_inset
+
+.
+ 
+\begin_inset Formula $S-a_{1}\to L,\ S\to L$
+\end_inset
+
+, теорема о двух милиционерах.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $a_{m+1}+...+a_{n}\leq\int_{m}^{n}f(x)dx\leq a_{m}+...+a_{n}$
+\end_inset
+
+.
+ При 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+ 
+\begin_inset Formula $a_{m+1}+...+a_{n}=R_{m},\ a_{m}+...+a=R_{m-1}$
+\end_inset
+
+ и 
+\begin_inset Formula $R_{m}\leq\int_{m}^{\infty}f(x)dx\leq R_{m-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Экспонента с комплексным и чисто мнимым показателем
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\forall z,w\in\mathbb{C}$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $\exp(z+w)=\exp(z)\cdot\exp(w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\exp(z)\cdot\exp(w)=\sum_{j=0}^{\infty}\frac{z^{j}}{j!}\cdot\sum_{k=0}^{\infty}\frac{w^{k}}{k!}=\sum_{n=0}^{\infty}c_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Так как ряды сходятся абсолютно, можно применить определение произведения
+ рядов:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+c_{n}=\sum_{j+k=n}^{\infty}\frac{z^{j}}{j!}\frac{w^{k}}{k!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Преобразуем 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+c_{n}=\frac{1}{n!}\sum_{j+k=n}\frac{n!}{j!k!}z^{j}w^{k}=\frac{1}{n!}\sum_{k=0}^{n}\frac{n!}{(n-k)!k!}z^{n-k}w^{k}=\frac{1}{n!}\sum_{k=0}^{n}\binom{n}{k}z^{n-k}w^{k}=\frac{1}{n!}(z+w)^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Отсюда 
+\begin_inset Formula 
+\[
+\exp(z)\cdot\exp(w)=\sum_{n=0}^{\infty}c_{n}=\sum_{n=0}^{\infty}\frac{1}{n!}(z+w)^{n}=\exp(z+w)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Свойства
+\series default
+ (как функции 
+\begin_inset Formula $\exp(z)\equiv f(z)\equiv e^{z}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f(0)=1,\ f(z)\neq0\ \forall z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $f(z_{0})=0$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f(z)=f(z_{0}+(z-z_{0}))=f(z_{0})f(z-z_{0})=0\cdot f(z-z_{0})=0$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\forall z\ f(z)=0$
+\end_inset
+
+.
+ Противоречие.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\dot{\mathbb{C}}=\mathbb{C}\backslash\{0\}$
+\end_inset
+
+, то 
+\begin_inset Formula $(\mathbb{C},+)\longrightarrow^{\exp}(\dot{\mathbb{C}}^{*},\cdot)$
+\end_inset
+
+, где экспонента — гомоморфизм.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $\forall z\ \forall n\in\mathbb{N}$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $f(nz)=\left[f(z)\right]^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $f(\overline{z})$
+\end_inset
+
+.
+ Мы знаем, что 
+\begin_inset Formula $\overline{z\cdot w}=\overline{z}\cdot\overline{w}$
+\end_inset
+
+ и 
+\begin_inset Formula $\overline{z+w}=\overline{z}+\overline{w}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\exp(\overline{z})=\overline{\exp}(z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $z=it$
+\end_inset
+
+, где 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $e^{it}=\cos t+i\sin t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{multline*}
+e^{it}=\sum_{n=0}^{\infty}\frac{(it)^{n}}{n!}=(*)=\sum_{k=0}^{\infty}\frac{(it)^{2k}}{(2k)!}+\sum_{k=0}^{\infty}\frac{(it)^{2k+1}}{(2k+1)!}=\sum_{k=0}^{\infty}(-1)^{k}\frac{t^{2k}}{(2k)!}+\sum_{k=0}^{\infty}i\frac{(-1)^{k}t^{2k+1}}{(2k+1)!}=\\
+=\sum_{k=0}^{\infty}(-1)^{k}\frac{t^{2k}}{(2k)!}+i\sum_{k=0}^{\infty}\frac{(-1)^{k}t^{2k+1}}{(2k+1)!}=\left(1-\frac{t^{2}}{2}+\frac{t^{4}}{4!}-...\right)+i\left(t-\frac{t^{3}}{3!}+\frac{t^{5}}{5!}-...\right)=\cos t+i\sin t
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(*)Если мнимую единицу возводить в четную степень, получим 
+\begin_inset Formula $-1$
+\end_inset
+
+: 
+\begin_inset Formula $(i)^{2n}=(-1)^{n}$
+\end_inset
+
+, а 
+\begin_inset Formula $(i)^{2k+1}=i(i)^{2k}=i(-1)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $e^{it}=\cos t+i\sin t$
+\end_inset
+
+.
+ Заменим 
+\begin_inset Formula $t$
+\end_inset
+
+ на 
+\begin_inset Formula $nt$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\cos nt+i\sin nt=e^{int}=\exp(nit)=(e^{it})^{n}=(\cos t+i\sin t)^{n}$
+\end_inset
+
+ (Формула Муавра).
+\end_layout
+
+\begin_layout Section
+Площадь криволинейного треугольника и теорема о компактной сходимости
+\end_layout
+
+\begin_layout Subsection
+Вычисление площади криволинейного сектора с помощью параметризации его основания
+\end_layout
+
+\begin_layout Standard
+Короче, его нету нигде :(
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S(T)=|\frac{1}{2}\int_{\alpha}^{\beta}r^{2}(\varphi)d\varphi|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Теорема о компактной сходимости и непрерывности суммы степенного ряда
+\end_layout
+
+\begin_layout Definition
+Ряд 
+\begin_inset Formula $(A)$
+\end_inset
+
+ компактно сходится в круге сходимости, если 
+\begin_inset Formula $\forall r:\ 0<r<R$
+\end_inset
+
+ ряд 
+\begin_inset Formula $(A)$
+\end_inset
+
+ равномерно сходится в концентрическом круге 
+\begin_inset Formula $B(a,r)=\{z|\ |z-a|\leq r\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $(A)\sum a_{n}(z-a)^{n},\ R>0$
+\end_inset
+
+.
+ Тогда:
+\end_layout
+
+\begin_layout Theorem
+1) 
+\begin_inset Formula $(A)$
+\end_inset
+
+ компактно сходится в 
+\begin_inset Formula $B(a,R)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $f(z)=\sum_{n=0}^{\infty}a_{n}(z-a)^{n}$
+\end_inset
+
+ непрерывна в 
+\begin_inset Formula $B(a,R)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $\exists z_{0}$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $|z_{0}-a|=r<R$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\sum a_{n}(z_{0}-a)^{n}$
+\end_inset
+
+ абсолютно сходится.
+ 
+\begin_inset Formula $\forall z\in B(a,r)\ \sum|a_{n}||z-a|^{n}\leq\sum|a_{n}|r^{n}<+\infty$
+\end_inset
+
+ по признаку Вейерштрасса 
+\begin_inset Formula $A$
+\end_inset
+
+ равномерно сходится 
+\begin_inset Formula $B(a,r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $z_{0}\in B(a,R)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\delta>0:\ \bar{B}(z_{0},\delta)\subset B(a,R)$
+\end_inset
+
+, 
+\begin_inset Formula $\exists r:\ B(z_{0},\delta)\subset B(a,r)\subset B(a,R)$
+\end_inset
+
+.
+ Непрерывность — локальное свойство, отсюда 
+\begin_inset Formula $\forall n\ a_{n}|z-a|^{n}$
+\end_inset
+
+ — непрерывна в 
+\begin_inset Formula $B(a,r)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(A)$
+\end_inset
+
+ равномерно сходится в 
+\begin_inset Formula $B(a,r)$
+\end_inset
+
+, следовательно, по теореме Стокса-Зайделя 
+\begin_inset Formula $f(z)=\sum a_{n}|z-a|^{n}$
+\end_inset
+
+ непрерывна в 
+\begin_inset Formula $B(a,r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Формула Эйлера-Маклорена и 
+\begin_inset Formula $\arcsin$
+\end_inset
+
+ по Тейлору
+\end_layout
+
+\begin_layout Subsection
+Формула Эйлера-Маклорена
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{t}=f(1)+f(2)+...f(t)$
+\end_inset
+
+, где 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывная на 
+\begin_inset Formula $[1,+\infty)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $f\in C^{2}$
+\end_inset
+
+, то формула нам известна: это просто переосмысленная формула трапеции (на
+ промежутке от 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+): 
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx=\frac{f(x_{0})+f(x_{n})}{2}h+h\cdot\sum_{k=1}^{t-1}f(x_{k})+\rho_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\rho_{n}=-\frac{h^{2}}{2}\int_{a}^{b}f''(x)\left\{ \frac{x-a}{h}\right\} \left(1-\left\{ \frac{x-a}{h}\right\} \right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Теперь мы её переосмыслим: 
+\begin_inset Formula $a=m,\ b=n,\ h=1,\ x_{k}=k$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula $\left\{ \frac{x-a}{h}\right\} =\{x-m\}=\{x\}$
+\end_inset
+
+, т.к.
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ целое.
+ Отсюда наша формула примет вид:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{m}^{n}f(x)dx=\frac{f(m)+f(n)}{2}+\sum_{m<k<n}f(k)-\frac{1}{2}\int_{m}^{n}f''(x)\{x\}(1-\{x\})dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=\sum_{k=1}^{n}f(k)=\int_{1}^{n}f(x)dx+\frac{f(1)+f(n)}{2}+\frac{1}{2}\int_{1}^{n}f''(x)\{x\}(1-\{x\})dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие:
+\end_layout
+
+\begin_layout Standard
+Предположим, что 
+\begin_inset Formula $\int_{1}^{\infty}|f''(x)|dx<+\infty$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\int_{1}^{n}=\int_{1}^{\infty}-\int_{n}^{\infty}$
+\end_inset
+
+.
+ Откуда 
+\begin_inset Formula 
+\[
+S_{n}=\int_{1}^{n}f(x)dx+\frac{f(n)}{2}+\frac{1}{2}(f(1)+\int_{1}^{\infty}f''(x)\{x\}(1-\{x\})dx)-\frac{1}{2}\int_{n}^{\infty}f''(x)\{x\}(1-\{x\})dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для этого случая формула Эйлера-Маклорена приобретает следующий вид:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=\int_{1}^{n}f(x)dx+\frac{f(n)}{2}+C-\frac{1}{2}\int_{n}^{\infty}f''(x)\{x\}(1-\{x\})dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если обозначить 
+\begin_inset Formula $\frac{1}{2}\int_{n}^{\infty}f''(x)\{x\}(1-\{x\})dx=\sigma_{n}$
+\end_inset
+
+, то 
+\begin_inset Formula $|\sigma_{n}|\leq\frac{1}{8}\int_{n}^{\infty}|f''(x)|dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Асимптотика частичных сумм гармонического ряда:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S_{n}=1+\frac{1}{2}+...+\frac{1}{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Здесь 
+\begin_inset Formula $f(x)=\frac{1}{x}$
+\end_inset
+
+, 
+\begin_inset Formula $f''(x)=\frac{2}{x^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Воспользуемся формулой:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S_{n}=\int_{1}^{n}\frac{dx}{x}+\frac{1}{2n}+\gamma+\sigma_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+где 
+\begin_inset Formula $\sigma_{n}=-\frac{1}{2}\int_{n}^{\infty}\frac{2}{x^{3}}\{x\}(1-\{x\})dx\leq\frac{1}{8}\int_{n}^{\infty}f''(x)dx$
+\end_inset
+
+, таким образом, 
+\begin_inset Formula $|\sigma_{n}|\leq\frac{1}{8n^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Оценим:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{1}{2}<\frac{1}{2}\int_{n}^{\infty}\frac{2}{x^{3}}\{x\}(1-\{x\})dx<\frac{1}{2}+\frac{1}{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Таким образом, константа Эйлера 
+\begin_inset Formula $\gamma$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+0,5<\gamma<0,625
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+И имеет примерное значение 
+\begin_inset Formula $\gamma=0,5772...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Таким образом, 
+\begin_inset Formula $S_{n}=\ln n+\gamma+\frac{1}{2n}+o(\frac{1}{n^{2}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Разложение 
+\begin_inset Formula $\arcsin x$
+\end_inset
+
+ в ряд Тейлора
+\end_layout
+
+\begin_layout Standard
+нет
+\end_layout
+
+\begin_layout Section
+Интегрирование по частям и формула Адамара
+\end_layout
+
+\begin_layout Subsection
+Интегрирование по частям и замена переменной
+\end_layout
+
+\begin_layout Theorem*
+(интегрирование по частям)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $U,V\in C^{1}([a,b])$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\int_{a}^{b}U(x)V'(x)dx=UV|_{a}^{b}-\int_{a}^{b}U'(x)V(x)dx$
+\end_inset
+
+, что можно переписать как 
+\begin_inset Formula $\int_{a}^{b}U(x)dV=UV|_{a}^{b}-\int_{a}^{b}VdU$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(UV)'=U'V+V'U$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\int_{a}^{b}(UV)'(x)dx=\int_{a}^{b}U(x)V'(x)dx+\int_{a}^{b}U'(x)V(x)dx$
+\end_inset
+
+.
+ На основании формулы Ньютона-Лейбница, 
+\begin_inset Formula $UV|_{a}^{b}=\int_{a}^{b}U(x)V'(x)dx+\int_{a}^{b}U'(x)V(x)dx$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Theorem*
+(замена переменной)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, а 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ непрерывно дифференцируема на 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ с концами 
+\begin_inset Formula $p,q$
+\end_inset
+
+.
+ При этом выполняются условия: 
+\end_layout
+
+\begin_layout Theorem*
+1) 
+\begin_inset Formula $\varphi(p)=a,\ \varphi(q)=b$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Theorem*
+2) 
+\begin_inset Formula $\varphi'(t)\in[a,b]\ \forall t\in\Delta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem*
+Тогда 
+\begin_inset Formula $\int_{a}^{b}f(x)dx=\int_{p}^{q}f(\varphi(t))\varphi'(t)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ — первообразная для 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+ И пусть 
+\begin_inset Formula $H(t)=F(\varphi(t)),\ t\in\Delta$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $H'(t)=F'(\varphi(t))\varphi'(t)=f(\varphi(t))\varphi'(t)$
+\end_inset
+
+.
+ Тогда, по формуле Ньютона-Лейбница, 
+\begin_inset Formula $\int_{p}^{q}f(\varphi(t))\varphi'(t)dt=H|_{p}^{q}=F(\varphi(q))-F(\varphi(p))=F(b)-F(a)=\int_{a}^{b}f(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Формула Адамара
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $(A)\sum_{n=0}^{\infty}a_{n}(z-a)^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\exists R\in[0,+\infty]$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\forall z:\ |z-a|<R$
+\end_inset
+
+ 
+\begin_inset Formula $(A)$
+\end_inset
+
+ абсолютно сходится, а 
+\begin_inset Formula $\forall z:\ |z-a|>R\ (A)$
+\end_inset
+
+ — расходится.
+\end_layout
+
+\begin_layout Proof
+Введем
+\begin_inset Formula $K_{n}=\sqrt[n]{|a_{n}(z-a)^{n}|}=|z-a|\sqrt[n]{a_{n}}$
+\end_inset
+
+.
+ Считаем, что 
+\begin_inset Formula $z\neq a$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\overline{\lim}K_{n}=|z-a|\overline{\lim}\sqrt[n]{|a_{n}|}=|z-a|\alpha$
+\end_inset
+
+, где 
+\begin_inset Formula $\alpha=\overline{\lim}\sqrt[n]{|a_{n}|}$
+\end_inset
+
+.
+ По признаку Коши, 
+\begin_inset Formula $\alpha|z-a|<1\Rightarrow(A)$
+\end_inset
+
+ абсолютно сходится и 
+\begin_inset Formula $\alpha|z-a|>1\Rightarrow(A)$
+\end_inset
+
+ расходится.
+ Тогда
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $\alpha=+\infty$
+\end_inset
+
+, то 
+\begin_inset Formula $\not\exists z,$
+\end_inset
+
+ такого, что 
+\begin_inset Formula $\alpha|z-a|<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $\alpha=0\Rightarrow\alpha|z-a|=0|z-a|<1$
+\end_inset
+
+ — ряд 
+\begin_inset Formula $(A)$
+\end_inset
+
+ сходится всегда 
+\begin_inset Formula $\forall z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+3) 
+\begin_inset Formula $0<\alpha<+\infty\Rightarrow\begin{cases}
+|z-a|<\frac{1}{\alpha}\Rightarrow & \text{абсолютно сходится}\\
+|z-a|>\frac{1}{\alpha}\Rightarrow & \text{расходится}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Отсюда:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+R=\begin{cases}
+\alpha=0 & R=+\infty\\
+0<\alpha<+\infty & R=\frac{1}{\alpha}\\
+\alpha=+\infty & R=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+Формула Адамара — 
+\begin_inset Formula $\frac{1}{R}\overline{\lim}\sqrt[n]{|a_{n}|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Положительные ряды и разложение арктангенса и логарифма
+\end_layout
+
+\begin_layout Subsection
+Положительные ряды
+\end_layout
+
+\begin_layout Subsection
+Почленное интегрирование вещественного степенного ряда.
+ Разложение в ряд Тейлора функций 
+\begin_inset Formula $\ln(1+x)$
+\end_inset
+
+ и 
+\begin_inset Formula $\arctan x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A)\sum_{n=0}^{\infty}a_{n}(x-a)^{n};\ a_{i},a,x\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $R$
+\end_inset
+
+ — радиус сходимости, то по теореме 
+\begin_inset Formula $\forall x\in(a-R,a+R)$
+\end_inset
+
+ ряд 
+\begin_inset Formula $A$
+\end_inset
+
+ компактно сходится.
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $[p,q]\subset(a-R,a+R)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ компактно сходится на 
+\begin_inset Formula $[p,q]\Rightarrow\sum a_{n}\int_{p}^{q}(x-a)^{n}dx=\int_{p}^{q}(\sum a_{n}(x-a)^{n})dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(2) 
+\end_layout
+
+\begin_layout Theorem
+1) 
+\begin_inset Formula $\ln(1+x)=x-\frac{x^{2}}{2}+...+(-1)^{n-1}\frac{x^{n}}{n}+...$
+\end_inset
+
+ Ряд сходится при 
+\begin_inset Formula $x\in(-1,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $\arctan X=X-\frac{X^{3}}{3}+...+(-1)^{n}\frac{x^{2n+1}}{2n+1}+...$
+\end_inset
+
+ Ряд сходится при 
+\begin_inset Formula $x\in[-1,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) Посчитаем 
+\begin_inset Formula $R$
+\end_inset
+
+ для 
+\begin_inset Formula $\sum(-1)^{n-1}\frac{x^{n}}{n}$
+\end_inset
+
+: по формуле Адамара 
+\begin_inset Formula $R=\frac{1}{\overline{\lim}\sqrt[n]{|a_{n}|}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $a_{n}=\frac{(-1)^{n-1}}{n}\Rightarrow R=1$
+\end_inset
+
+, то есть на 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ ряд компактно сходится.
+ При 
+\begin_inset Formula $x=1$
+\end_inset
+
+ сходится по Лейбницу, при 
+\begin_inset Formula $x=-1$
+\end_inset
+
+ расходится как отрицательный гармонический, следовательно, ряд компактно
+ сходится 
+\begin_inset Formula $(-1,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Продифференцируем ряд, а потом обратно проинтегрируем:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\ln(1+x))'=\frac{1}{1+x}=1-x+x^{2}-x^{3}+...+\sum_{n=0}^{\infty}(-1)^{n}x^{n}$
+\end_inset
+
+.
+ Проинтегрируем по отрезку 
+\begin_inset Formula $[0,t]:\int_{0}^{t}\frac{dx}{1+x}=\sum_{n=0}^{\infty}(-1)^{n}\int_{0}^{t}x^{n}dx=t-\frac{t^{2}}{2}+...+(-1)^{n}\frac{t^{n+1}}{n+1}+...$
+\end_inset
+
+ —?
+\end_layout
+
+\begin_layout Proof
+Оценим остаток: 
+\begin_inset Formula $|r_{n}(x)|\leq\frac{x^{n+1}}{n+1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $r_{k}(x)\rightrightarrows0$
+\end_inset
+
+ на 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Проинтегрируем по отрезку 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\ln2=\int_{0}^{1}\frac{dx}{1+x}=\sum_{k=1}^{n}(-1)^{k}\int_{0}^{1}x^{k}dx+\int_{0}^{1}r_{n}(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Оценим: 
+\begin_inset Formula $|\int_{0}^{1}r_{n}(x)dx|\leq\int_{0}^{1}|r_{n}(x)|dx\leq\int_{0}^{1}x^{n+1}dx=\frac{1}{n+2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Таким образом, 
+\begin_inset Formula $\ln(1+x)=x-\frac{x^{2}}{2}+...+(-1)^{n-1}\frac{x^{n}}{n}+...$
+\end_inset
+
+ и в качестве суммы ряда мы получаем 
+\begin_inset Formula $1-\frac{1}{2}+...+(-1)^{n-1}\frac{1}{n}$
+\end_inset
+
+, то есть сумма отличается от логарифма двух на бесконечно малую.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $R$
+\end_inset
+
+ для 
+\begin_inset Formula $\sum_{n=1}^{\infty}(-1)^{n-1}\frac{x^{2n-1}}{2n-1}$
+\end_inset
+
+ равен 
+\begin_inset Formula $1$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $(\arctan x)'=\frac{1}{1+x^{2}}=1-x^{2}+x^{4}-...=\sum_{n=1}^{\infty}(-1)^{n}x^{2n}$
+\end_inset
+
+.
+ Интегрируя почленно, получим 
+\begin_inset Formula $\arctan x=\sum(-1)^{n}\int_{0}^{x}t^{2n}dt=\sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n+1}}{2n+1}=\sum_{n=1}^{\infty}(-1)^{n-1}\frac{x^{2n-1}}{2n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Для краев сходится, остаток стремится к нулю.
+\end_layout
+
+\begin_layout Section
+Несобственные интегралы и дифференцирование степенного ряда
+\end_layout
+
+\begin_layout Subsection
+Определение несобственного интеграла и т.д.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна на промежутке одного из типов: 
+\begin_inset Formula $[a,+\infty),\ [a,b),\ (-\infty,a],\ (a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\Phi(A)=\int_{a}^{A}f(x)dx$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\exists\lim_{A\to+\infty}\Phi(A)=\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+ называется несобственным интегралом.
+\end_layout
+
+\begin_layout Standard
+Свойства интеграла:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f,g$
+\end_inset
+
+ непрерывны на 
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+ и 
+\begin_inset Formula $\int_{a}^{+\infty}g(x)dx$
+\end_inset
+
+ сходятся (имеют конечные пределы), то сходится и 
+\begin_inset Formula $\int_{a}^{+\infty}(f(x)+g(x))dx=\int_{a}^{+\infty}f(x)dx+\int_{a}^{+\infty}g(x)dx$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\int_{a}^{A}(f(x)+g(x))dx=\int_{a}^{A}f(x)dx+\int_{a}^{A}g(x)dx$
+\end_inset
+
+ и перейти к пределу.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ — постоянная, то 
+\begin_inset Formula $\int_{a}^{+\infty}\alpha f(x)dx=\alpha\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Очевидно.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна на 
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+, 
+\begin_inset Formula $a<c<+\infty$
+\end_inset
+
+, и 
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+ и 
+\begin_inset Formula $\int_{c}^{+\infty}f(x)dx$
+\end_inset
+
+ сходятся одновременно, тогда 
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{+\infty}f(x)dx$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Возьмем 
+\begin_inset Formula $\Phi(A)=\int_{a}^{A}f(x)dx$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Phi(A)=\int_{a}^{A}f(x)dx=\int_{a}^{C}f(x)dx+\int_{C}^{A}f(x)dx=\int_{a}^{C}f(x)dx+\Phi_{1}(A)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+4) Если 
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+ — сходится, то 
+\begin_inset Formula $\int_{A}^{+\infty}f(x)dx\rightarrow_{A\to+\infty}0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\int_{A}^{+\infty}f(x)dx=\int_{a}^{\infty}f(x)dx-\Phi(A)\to_{A\to+\infty}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+5) 
+\begin_inset Formula $\int_{a}^{\infty}f(x)dx=\lim_{x\to\infty}F(x)-F(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+6) Интегрирование по частям: 
+\begin_inset Formula $\int_{a}^{\infty}udv\leftarrow\int_{a}^{A}udv=uv|_{a}^{A}-\int_{a}^{A}vdu=\lim_{A\to\infty}u(A)v(A)-u(a)v(a)-\int_{a}^{\infty}vdu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Дифференцирование степенного ряда (с леммой)
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f$
+\end_inset
+
+ определена на 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f'(z_{0})=\lim\frac{f(z)-f(z_{0})}{z-z_{0}}$
+\end_inset
+
+ — производная данной функции.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $u,v\in\mathbb{C},\ |u|,|v|\leq r$
+\end_inset
+
+, 
+\begin_inset Formula $n\in\mathbb{N}.$
+\end_inset
+
+ Тогда 
+\begin_inset Formula $|u^{n}-v^{n}|\leq nr^{n-1}|u-v|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{multline*}
+(u-v)(u^{n-1}+u^{n-2}v+...+ux^{n-2}+v^{n-1})=\\
+=u^{n}+u^{n-1}v+...+u^{2}v^{n-2}+uv^{n-1}-vu^{n-1}-...-uv^{n-1}-v^{n}=u^{n}-v^{n}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|u^{n}-v^{n}|=|u-v|\cdot|u^{n-1}+u^{n-2}v+...+ux^{n-2}+v^{n-1}|\leq|u-v|\sum_{k=0}^{n-1}|u^{n-1-k}|v^{k}|\leq|u-v|\sum_{k=0}^{n-1}r^{n-1-k}r^{k}=|u-v|\cdot n\cdot r^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $(A)\sum_{n=0}^{\infty}a_{n}(z-a)^{n},\ R>0,\ f(z)=\sum_{n=0}^{\infty}a_{n}(z-a)^{n}$
+\end_inset
+
+ определена в 
+\begin_inset Formula $B(a,R)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+Тогда: 
+\end_layout
+
+\begin_layout Theorem
+1) 
+\begin_inset Formula $(A')\sum_{n=1}^{\infty}na_{n}(z-a)^{n-1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(A')$
+\end_inset
+
+ имеет с 
+\begin_inset Formula $(A)$
+\end_inset
+
+ одинаковые радиусы сходимости,
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $f$
+\end_inset
+
+ — дифференцируема и 
+\begin_inset Formula $f'(z)=\sum_{n=1}^{\infty}na_{n}(z-a)^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) Рассмотрим 
+\begin_inset Formula $(A_{*})\sum|a_{n}(z-a)^{n}|$
+\end_inset
+
+ и 
+\begin_inset Formula $(A_{*}')\sum|na_{n}(z-a)^{n-1}|$
+\end_inset
+
+, при 
+\begin_inset Formula $z\neq a$
+\end_inset
+
+.
+ 
+\begin_inset Formula $|a_{n}(z-a)^{n}|\leq|z-a||na_{n}(z-a)^{n-1}|$
+\end_inset
+
+ при 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $R'$
+\end_inset
+
+ — радиус сходимости 
+\begin_inset Formula $(A')$
+\end_inset
+
+ и 
+\begin_inset Formula $|z-a|<R'\Rightarrow$
+\end_inset
+
+ сходится 
+\begin_inset Formula $(A'_{*})$
+\end_inset
+
+.
+ В силу неравенства выше, сходится ряд и 
+\begin_inset Formula $(A_{*})\Rightarrow$
+\end_inset
+
+ сходится 
+\begin_inset Formula $(A)$
+\end_inset
+
+, а необходимое для того условие: 
+\begin_inset Formula $|z-a|\leq R$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $R'\leq R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $R'\neq R\Rightarrow R'<R$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $R'<|z-a|<R$
+\end_inset
+
+ и 
+\begin_inset Formula $(A')$
+\end_inset
+
+ — расходится.
+ Возьмем 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $|z-a|<|z_{0}-a|<R$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(A)$
+\end_inset
+
+ — сходится в точке 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+.
+ Тогда, по лемме Абеля, 
+\begin_inset Formula $(A')$
+\end_inset
+
+ — сходится в 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ А этого не может быть, т.к.
+ 
+\begin_inset Formula $R'<|z-a|$
+\end_inset
+
+, то есть в точке 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ ряд 
+\begin_inset Formula $(A')$
+\end_inset
+
+ должен расходиться.
+ То есть 
+\begin_inset Formula $R'=R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $z,w\in B(a,R)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists r:\ |z-a|<r,\ |w-a|<r$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f(w)=\sum a_{n}(w-a)^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $f(z)=\sum a_{n}(z-a)^{n}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f(w)-f(z)=\sum a_{n}\left[(w-a)^{n}-(z-a)^{n}\right]$
+\end_inset
+
+, при 
+\begin_inset Formula $w\neq z$
+\end_inset
+
+.
+ По определению производной, 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left|\frac{f(w)-f(z)}{w-z}\right|=\left|\frac{\sum_{n=0}^{\infty}a_{n}((w-a)^{n}-(z-a)^{n})}{(w-a)-(z-a)}\right|\leq\frac{\sum a_{n}n\left|(w-a)-(z-a)\right|r^{n-1}}{\left|(w-a)-(z-a)\right|}=\sum a_{n}nr^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Откуда 
+\begin_inset Formula $\frac{f(w)-f(z)}{w-z}$
+\end_inset
+
+ сходится, перейдя к пределу почленно, перейдя к пределу: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{multline*}
+f'(z)=\lim_{w\to z}\frac{f(w)-f(z)}{w-z}=\sum a_{n}\lim_{w\to z}\frac{(w-a)^{n}-(z-a)^{n}}{w-z}=\\
+=\sum a_{n}n\lim_{w\to z}\frac{\left|(w-a)-(z-a)\right|\left((w-a)^{n-1}+(w-a)^{n-2}(z-a)...+(w-a)(z-a)^{n-2}+(z-a)^{n-1}\right)}{\left|(w-a)-(z-a)\right|}=\\
+=\sum a_{n}n\lim_{w\to z}\left|(w-a)^{n-1}+(w-a)^{n-2}(z-a)...+(w-a)(z-a)^{n-2}+(z-a)^{n-1}\right|=\sum_{n=1}^{\infty}a_{n}n(z-a)^{n-1}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+— сумма 
+\begin_inset Formula $A'$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

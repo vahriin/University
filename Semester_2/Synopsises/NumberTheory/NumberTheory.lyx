@@ -1,0 +1,8389 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{hyperref}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\crk}{\operatorname{crk}}
+\newcommand{\rrk}{\operatorname{rrk}}
+\newcommand{\charr}{\operatorname{char}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\sign}{\operatorname{sign}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 1cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Матрицы и все дела
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(v_{1},...,v_{n})$
+\end_inset
+
+
+\begin_inset Formula $\left(\begin{array}{c}
+\alpha_{1}\\
+...\\
+\alpha_{n}
+\end{array}\right)=\sum_{i=1}^{n}v_{i}\alpha_{i}$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $A\in M_{n,m}(F),$
+\end_inset
+
+ то определим 
+\begin_inset Formula $(v_{1},...,v_{n})A=(va_{*1},...va_{*m})$
+\end_inset
+
+, где 
+\begin_inset Formula $a_{*i}$
+\end_inset
+
+ — 
+\begin_inset Formula $i$
+\end_inset
+
+-ый столбец, соответственно 
+\begin_inset Formula $a_{i*}$
+\end_inset
+
+ — 
+\begin_inset Formula $i$
+\end_inset
+
+-ая строка.
+\end_layout
+
+\begin_layout Standard
+Набор 
+\begin_inset Formula $v=(v_{1},...,v_{n})$
+\end_inset
+
+ линейно независим 
+\begin_inset Formula $\Leftrightarrow(va=vb\Leftrightarrow a=b)$
+\end_inset
+
+, так как 
+\begin_inset Formula $v(a-b)=0\Leftrightarrow a-b=0\Leftrightarrow a=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Произведение матриц ассоциативно (конкретная): 
+\begin_inset Formula $(v\cdot A)\cdot b=v(Ab),$
+\end_inset
+
+ где 
+\begin_inset Formula $v=(v_{1},...,v_{n})\in V\times...\times V$
+\end_inset
+
+ (
+\begin_inset Formula $n$
+\end_inset
+
+ раз).
+\end_layout
+
+\begin_layout Standard
+Проверка этого факта очевидна, учитывая, что 
+\begin_inset Formula $\sum_{i=1}^{n}\sum_{j=1}^{m}=\sum_{j=1}^{m}\sum_{i=1}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Возьмем множество квадратных матриц 
+\begin_inset Formula $M_{n}(F)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M_{n}(F)$
+\end_inset
+
+ — кольцо с единицей.
+\end_layout
+
+\begin_layout Proof
+Все аксиомы кольца проверяются непосредственно.
+ Единственное, что нужно проверить — наличие нейтрального по умножению.
+ Им, т.е.
+ единицей кольца является единичная матрица 
+\begin_inset Formula $\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{n}(F)^{*}=GL_{n}(F)$
+\end_inset
+
+ — полная линейная группа степени 
+\begin_inset Formula $n$
+\end_inset
+
+ над 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Всё это было предисловием к следующему наблюдению: если мы умножим кортеж
+ векторов на обратимую матрицу то снова получим базис.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma*
+(1) 
+\begin_inset Formula $v=(v_{1},...,v_{n})\in\underbrace{V\times...\times V}_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $A\in GL_{n}(F).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Линейно независимые 
+\begin_inset Formula $v$
+\end_inset
+
+ и 
+\begin_inset Formula $vA$
+\end_inset
+
+ эквивалентны.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v$
+\end_inset
+
+ — система образующих 
+\begin_inset Formula $\Leftrightarrow vA$
+\end_inset
+
+ — система образующих.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v$
+\end_inset
+
+ — базис 
+\begin_inset Formula $\Leftrightarrow vA$
+\end_inset
+
+ — базис.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) Пусть 
+\begin_inset Formula $v$
+\end_inset
+
+ — линейно независим, тогда пусть 
+\begin_inset Formula $(vA)b=0\Leftrightarrow v(Ab)=0\Leftrightarrow Ab=0\Leftrightarrow A^{-1}Ab=0\Leftrightarrow b=0$
+\end_inset
+
+, то есть 
+\begin_inset Formula $vA$
+\end_inset
+
+ линейно независимо.
+\end_layout
+
+\begin_layout Proof
+2) Пусть 
+\begin_inset Formula $v$
+\end_inset
+
+ — система образующих, тогда 
+\begin_inset Formula $\forall x\in V\ \exists b\in F^{n}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $x=vb=(vA)(A^{-1}b)\in<vA>$
+\end_inset
+
+, то есть 
+\begin_inset Formula $vA$
+\end_inset
+
+ — система образующих.
+\end_layout
+
+\begin_layout Proof
+3) Очевидно следует из первых двух.
+\end_layout
+
+\begin_layout Proof
+Для доказательства обратных импликаций заметим, что 
+\begin_inset Formula $v=(vA)A^{-1}$
+\end_inset
+
+ и сведем задачу к предыдущей.
+\end_layout
+
+\begin_layout Proof
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Мы доказали этим, что наше отображение инъективно.
+ Теперь нужно доказать сюръекцию, то есть то, что любой базис можно представить
+ в виде базиса, умноженного на обратимую матрицу.
+\end_layout
+
+\begin_layout Lemma*
+(2) Если 
+\begin_inset Formula $v$
+\end_inset
+
+ и 
+\begin_inset Formula $w$
+\end_inset
+
+ — базисы конечномерного пространства 
+\begin_inset Formula $V$
+\end_inset
+
+, то существует обратимая матрица 
+\begin_inset Formula $C\in GL_{n}(F)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $w=vC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $w_{1}=v\cdot(w_{1})_{v}$
+\end_inset
+
+, где 
+\begin_inset Formula $(w_{1})_{v}$
+\end_inset
+
+ — столбец координат 
+\begin_inset Formula $w$
+\end_inset
+
+ в базисе 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Точно так же можно представить 
+\begin_inset Formula $w_{2},...,w_{n}$
+\end_inset
+
+, после чего сложить:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(w_{1},...,w_{n})=v((w_{1})_{v},...,(w_{n})_{v})=vC$
+\end_inset
+
+, где 
+\begin_inset Formula $C\in M_{n}(F)$
+\end_inset
+
+.
+ Теперь докажем, что она обратимая.
+ Аналогично, 
+\begin_inset Formula $\exists C'\in M_{n}(F):\ v=wC'$
+\end_inset
+
+.
+ Теперь сделаем так (
+\begin_inset Formula $E$
+\end_inset
+
+ — единичная матрица): 
+\begin_inset Formula $wE=w=vC=wC'C\Rightarrow E=C'C$
+\end_inset
+
+.
+ Аналогично 
+\begin_inset Formula $vE=v=wC'=vC'C\Rightarrow E=C'C$
+\end_inset
+
+, то есть 
+\begin_inset Formula $C'=C^{-1}$
+\end_inset
+
+ и 
+\begin_inset Formula $C\in GL_{n}(F)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Матрица 
+\begin_inset Formula $C\in GL_{n}(F)$
+\end_inset
+
+, такая что 
+\begin_inset Formula $w=vC$
+\end_inset
+
+ называется матрицей перехода от 
+\begin_inset Formula $v$
+\end_inset
+
+ к 
+\begin_inset Formula $w$
+\end_inset
+
+ и обозначается 
+\begin_inset Formula $C_{v\to w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Следствие из доказательства леммы 2: 
+\begin_inset Formula $C_{v\to w}=((w_{1})_{v},...,(w_{n})_{v})$
+\end_inset
+
+.
+ Необходимо помнить, что умножение матриц некоммутативно, и записывать нужно
+ именно так:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w=vC_{v\to w}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Кроме того, в алгебре есть строчки векторов и столбцы координат и только
+ так.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(следствие лемм 1 и 2).
+\end_layout
+
+\begin_layout Theorem*
+Пусть 
+\begin_inset Formula $v=(v_{1},...,v_{n})$
+\end_inset
+
+ — базис пространства 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Набор 
+\begin_inset Formula $w=(w_{1,}...,w_{n})$
+\end_inset
+
+ является базисом тогда и только тогда когда 
+\begin_inset Formula $\exists C\in GL_{n}(F)$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $w=vC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $L:V\to V$
+\end_inset
+
+, 
+\begin_inset Formula $L(x)=w\cdot x_{v}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $L_{v}=C_{v\to w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L:V\to V$
+\end_inset
+
+, и 
+\begin_inset Formula $v=(v_{1},...,v_{n})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $L_{v}=(L(v_{1})_{v},...,L(v_{n})_{v})=?=C_{v\to w}=((w_{1})_{v},...,(w_{n})_{v})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Положим 
+\begin_inset Formula $L(v_{i})=w_{i}\ \forall i=1,...,n$
+\end_inset
+
+, тогда 
+\begin_inset Formula $L(\sum_{i=1}^{n}v_{i}\alpha_{i})=\sum_{i=1}^{n}L(v_{i})\alpha_{i}=\sum_{i=1}^{n}w_{i}\alpha_{i}$
+\end_inset
+
+, то есть 
+\begin_inset Formula $L(x)=w\cdot x_{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+(замена базиса).
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $v=(v_{1},...,v_{n})$
+\end_inset
+
+ и 
+\begin_inset Formula $w=(w_{1},...,w_{n})$
+\end_inset
+
+ — базисы пространства 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $x\in V$
+\end_inset
+
+, 
+\begin_inset Formula $L:V\to V$
+\end_inset
+
+ — линейный оператор.
+ Тогда 
+\begin_inset Formula $C_{v\to w}x_{w}=x_{v}$
+\end_inset
+
+ и 
+\begin_inset Formula $L_{v}=C_{v\to w}L_{w}C_{w\to v}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=wx_{w}=vx_{v}$
+\end_inset
+
+.
+ Также 
+\begin_inset Formula $w=vC_{v\to w}$
+\end_inset
+
+, откуда 
+\begin_inset Formula $x=wx_{w}=vx_{v}=vC_{v\to w}\cdot x_{w}$
+\end_inset
+
+.
+ Так как 
+\begin_inset Formula $v$
+\end_inset
+
+ — линейно независимый набор, то 
+\begin_inset Formula $x_{v}=C_{v\to w}x_{w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L(x)_{v}=L_{v}x_{v}=L_{v}C_{v\to w}x_{w}$
+\end_inset
+
+, а также 
+\begin_inset Formula $L(x)_{v}=C_{v\to w}L(x)_{w}=C_{v\to w}=C_{v\to w}L_{w}x_{w}$
+\end_inset
+
+, зная, что 
+\begin_inset Formula $L(x)_{w}=L_{w}x_{w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Отсюда 
+\begin_inset Formula $(L_{v}C_{v\to w}-C_{v\to w}L_{w})x_{w}=0\ \forall x_{w}\in F^{n}\Rightarrow L_{v}C_{v\to w}=C_{w\to v}L_{w}\Rightarrow L_{v}=C_{v\to w}L_{w}C_{v\to w}^{-1}=C_{v\to w}L_{w}C_{w\to v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В доказательстве использовалась
+\end_layout
+
+\begin_layout Lemma*
+\begin_inset Formula $A,B\in M_{m,n}(F)$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $\forall x\in F^{n}Ax=Bx$
+\end_inset
+
+, то 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $x=\left(\begin{array}{c}
+0\\
+0\\
+1\\
+0\\
+0
+\end{array}\right)$
+\end_inset
+
+ (Единица на 
+\begin_inset Formula $i$
+\end_inset
+
+-том месте).
+ Тогда 
+\begin_inset Formula $A\left(\begin{array}{c}
+0\\
+0\\
+1\\
+0\\
+0
+\end{array}\right)=a_{*i}=B\left(\begin{array}{c}
+0\\
+0\\
+1\\
+0\\
+0
+\end{array}\right)=b_{*i}\ \forall i$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сегодня мы хотим доказать 2 утверждения про размерности.
+ Одно называется 
+\begin_inset Quotes fld
+\end_inset
+
+формула Грассмана
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(формула Грассмана): 
+\begin_inset Formula $U,V\leq W$
+\end_inset
+
+, то тогда 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\dim(U+V)+\dim(U\cap V)=\dim U+\dim V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Напомним, что 
+\begin_inset Formula $U+V=<U\cup V>=\{u+v|\ u\in U,\ v\in V\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $w_{1},...,w_{k}$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U\cap V$
+\end_inset
+
+.
+ Так как это линейно независимая система, то его можно дополнить до базиса
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ и до базиса 
+\begin_inset Formula $V$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(w_{1},...,w_{k},u_{1},...,u_{m})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(w_{1},...,w_{k},v_{1},...,v_{m})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\dim U\cap V=k$
+\end_inset
+
+, 
+\begin_inset Formula $\dim U=k+m$
+\end_inset
+
+, 
+\begin_inset Formula $\dim V=k+n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Следовательно, требуется доказать, что 
+\begin_inset Formula $\dim(U+V)=k+m+n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Для этого докажем, что 
+\begin_inset Formula $w\cup u\cup v$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U+V$
+\end_inset
+
+, где 
+\begin_inset Formula $u=(u_{1},...,u_{m})$
+\end_inset
+
+, 
+\begin_inset Formula $v=(v_{1},...,v_{m})$
+\end_inset
+
+, где объединение базисов — на самом деле их конкатенация.
+ Так как 
+\begin_inset Formula $x\in U,\ y\in V$
+\end_inset
+
+, то 
+\begin_inset Formula $x+y$
+\end_inset
+
+ — любой элемент 
+\begin_inset Formula $U+V$
+\end_inset
+
+.
+ Теперь 
+\begin_inset Formula $x+y=(wa+ub)+(wc+vd)=w(a+b)+ub+vd\in<w,u,v>$
+\end_inset
+
+, (где 
+\begin_inset Formula $a,c\in F^{k},\ b\in F^{m},\ d\in F^{n}$
+\end_inset
+
+ .
+ То есть это система образующих.
+\end_layout
+
+\begin_layout Proof
+Докажем линейную независимость.
+ Пусть для некоторых 
+\begin_inset Formula $f\in F^{k},\ g\in F^{m},\ h\in F^{n}$
+\end_inset
+
+ 
+\begin_inset Formula $wf+ug+vh=0\Leftrightarrow\underbrace{vh}_{\in V}=\underbrace{-wf-ug}_{\in U}\Rightarrow vh\in U\cap V\Rightarrow\exists l\in F^{k}$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $vh=wl\Leftrightarrow wl-vh=0$
+\end_inset
+
+, где 
+\begin_inset Formula $w\cup v$
+\end_inset
+
+ — базис пространства 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ То есть 
+\begin_inset Formula $h=0,\ l=0$
+\end_inset
+
+.
+ следовательно, 
+\begin_inset Formula $wf+ug=0\Rightarrow$
+\end_inset
+
+, так как 
+\begin_inset Formula $w\cup u$
+\end_inset
+
+ — базис, 
+\begin_inset Formula $\Rightarrow f=0,\ g=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise*
+бонус.
+ 
+\end_layout
+
+\begin_layout Exercise*
+1) 
+\begin_inset Formula $U,V\subseteq W$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $U\cup V$
+\end_inset
+
+ подпространство, то либо 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+, либо наоборот.
+\end_layout
+
+\begin_layout Exercise*
+2) Усложнение: 
+\begin_inset Formula $|F|>2$
+\end_inset
+
+, 
+\begin_inset Formula $U_{1},U_{2},U_{3}\leq W$
+\end_inset
+
+.
+ Доказать, что если 
+\begin_inset Formula $U_{1}\cup U_{2}\cup U_{3}$
+\end_inset
+
+ — подпространство, то 
+\begin_inset Formula $U_{1}\cup U_{2}\cup U_{3}=U_{i}$
+\end_inset
+
+ (для некоторого 
+\begin_inset Formula $i$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Exercise*
+3) Над 
+\begin_inset Formula $F_{2}$
+\end_inset
+
+ привести пример 
+\begin_inset Formula $U_{1}\cup U_{2}\cup U_{3}=W$
+\end_inset
+
+, где 
+\begin_inset Formula $U\lneqq W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Поговорим про ядро и образ.
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $L:U\to V$
+\end_inset
+
+ — линейное отображение.
+ 
+\begin_inset Formula $\ker L=\{x\in U|\ L(x)=0\}=L^{-1}(0)$
+\end_inset
+
+ — подпространство.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $L(z)=v\in V$
+\end_inset
+
+, то 
+\begin_inset Formula $L^{-1}(v)=z+\ker L$
+\end_inset
+
+ — смежный класс по ядру, прям как во втором билете.
+ 
+\end_layout
+
+\begin_layout Theorem*
+о гомоморфизме.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $U/\ker L\cong ImL$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(размерность ядра и образа): 
+\begin_inset Formula $L:U\to V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\dim\ker L+\dim ImL=\dim U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ax=0$
+\end_inset
+
+, тогда 
+\begin_inset Formula $x=\alpha_{1}\left(\begin{array}{c}
+.\\
+.\\
+.\\
+.\\
+.
+\end{array}\right)+\alpha_{2}\left(\begin{array}{c}
+.\\
+.\\
+.\\
+.\\
+.
+\end{array}\right)+...$
+\end_inset
+
+, число параметров — размерность ядра.
+ Приведя матрицу к единично-диагональному виду, получим, что квадратный
+ кусок матрицы с единицами равен размерности образа, а ширина всей матрицы
+ — размерности самого 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $w=(u_{1},...,u_{k})$
+\end_inset
+
+ — базис ядра, а 
+\begin_inset Formula $u=(u_{1},...,u_{k},u_{k+1},...,u_{n})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Нужно доказать, что 
+\begin_inset Formula $\dim ImL=n-k$
+\end_inset
+
+.
+ Докажем, что 
+\begin_inset Formula $L(u_{k+1}),...,L(u_{n})$
+\end_inset
+
+ — базис образа.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x\in ImL\Rightarrow\exists y\in U$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula 
+\[
+x=L(y)=L(\sum_{i=1}^{n}u_{i}\alpha_{i})=\sum_{i=1}^{n}L(u_{i})\alpha_{i}=\sum_{i=1}^{n}L(u_{i})\alpha_{i}\Rightarrow
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L(u_{k+1}),...,L(u_{n})$
+\end_inset
+
+ — система образующих.
+ 
+\end_layout
+
+\begin_layout Proof
+Докажем линейную независимость: 
+\begin_inset Formula 
+\[
+\sum_{i=k+1}^{n}L(u_{i})\beta_{i}=0\Leftrightarrow L(\sum_{i=k+1}^{n}u_{i}\beta_{i})=0\Leftrightarrow\sum_{i=k+1}^{n}u_{i}\beta\in\ker L\Leftrightarrow\exists\gamma_{i}\in F:\sum_{i=k+1}^{n}u_{i}\beta_{i}-\sum_{j=1}^{k}u_{j}\gamma_{j}=0\Rightarrow\beta_{i}=\gamma_{j}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Посмотрим на 
+\begin_inset Formula $U\bigoplus V=\{(u,v)|u\in U,\ v\in V\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(u_{1},v_{1})+(u_{2},v_{2})=(u_{1}+u_{2},v_{1}+v_{2})$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha(u,v)=(\alpha u,\alpha v)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $(u_{1},...,u_{k})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U$
+\end_inset
+
+, 
+\begin_inset Formula $(v_{1},...,v_{m})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+, то базисом 
+\begin_inset Formula $U\bigoplus V$
+\end_inset
+
+ будут вектора вида 
+\begin_inset Formula $(u_{i},0)$
+\end_inset
+
+ и 
+\begin_inset Formula $(0,v_{j})$
+\end_inset
+
+.
+ Это верно, так как 
+\begin_inset Formula $x\in U,\ \ x=\sum u_{i}\alpha_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $y\in V,\ \ \ y=\sum v_{j}\beta_{j}$
+\end_inset
+
+, 
+\begin_inset Formula $(x,y)=\sum(u_{i},0)\alpha_{i}+\sum(0,v_{j})\beta_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Phantom VPhantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U'=\{(u,0)|u\in U\}\leq U\bigoplus V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V'=\{(0,v)|v\in V\}\le U\bigoplus V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U'+V'=U\bigoplus V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U'\cap V'=\{(0,0)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\dim U\bigoplus V=\dim U'+\dim V'=\dim U+\dim V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Phantom VPhantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $W\ge U,V$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $U+V=W$
+\end_inset
+
+, 
+\begin_inset Formula $U\cap V=\{0\}$
+\end_inset
+
+.
+ (Никогда не говорить, что пересечение подпространств пусто.
+ Оно нулевое!)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+Тогда 
+\begin_inset Formula $W\cong U\bigoplus V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L:U\bigoplus V\sim\rightarrow W$
+\end_inset
+
+ — доказать.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L((u,v))=u+v$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Проверка оставляется читателю.
+ (четвертый способ доказательства теорем в АТЧ).
+\end_layout
+
+\begin_layout Exercise*
+бонус.
+ Доказать формулу Грассмана как следствие теоремы о размерности ядра и образа.
+ (Без вычислений.
+ Построить такой линейный оператор).
+\end_layout
+
+\begin_layout Exercise*
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Ранг набора векторов 
+\begin_inset Formula $(v_{1},...,v_{n})=\dim<v_{1},...,v_{n}>=$
+\end_inset
+
+ наибольшему количеству линейно независимых среди этих векторов.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $L:U\to V$
+\end_inset
+
+ — линейное отображение, то 
+\begin_inset Formula $\rk(rank)L=\dim ImL$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $f_{1},...,f_{n}$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U$
+\end_inset
+
+, то 
+\begin_inset Formula $L(f_{1}),...,L(f_{n})$
+\end_inset
+
+ — система образующих в 
+\begin_inset Formula $ImL$
+\end_inset
+
+, и тогда 
+\begin_inset Formula $\rk L=\rk(L(f_{1}),...,L(f_{n}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Столбцовый (строчный) ранг матрицы — ранг набора ее столбцов (строк).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L:U_{f}\to V_{g}$
+\end_inset
+
+, 
+\begin_inset Formula $L_{f,g}=(L(f_{1})_{g},...,L(f_{n})_{g})$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\rk L=\rk(L(f_{1}),...,L(f_{n}))=\rk(L(f_{1})_{g},...,L(f_{n})_{g})=\rk L_{f,g}$
+\end_inset
+
+ (здесь столбцовый ранг).
+\end_layout
+
+\begin_layout Standard
+Итак, столбцовый ранг матрицы оператора не зависит от выбора базиса.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие 
+\series default
+Пусть 
+\begin_inset Formula $A\in M_{m,n}(F)$
+\end_inset
+
+, 
+\begin_inset Formula $B\in GL_{m}(F)$
+\end_inset
+
+, 
+\begin_inset Formula $C\in GL_{n}(F)$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\rk(A)=\rk(BAC)$
+\end_inset
+
+ (и строчный и столбцовый).
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $L:F^{n}\to F^{m}$
+\end_inset
+
+, (
+\begin_inset Formula $e^{(n)},f$
+\end_inset
+
+ — базисы 
+\begin_inset Formula $F^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $e^{(m)},g$
+\end_inset
+
+ — базисы 
+\begin_inset Formula $F^{m}$
+\end_inset
+
+) такая, что 
+\begin_inset Formula $L(x)=Ax$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $L_{e^{(m)},e^{(n)}}=A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+L_{f,g}=BAC=C_{g\to e^{(m)}}L_{e^{(n)}e^{(m)}}C_{e^{(n)}\to f}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Отсюда 
+\begin_inset Formula $f=e^{(n)}C\Rightarrow C_{e^{(n)}\to f}=C$
+\end_inset
+
+.
+ 
+\begin_inset Formula $g=e^{(m)}B^{-1}\Rightarrow B=C_{g\to e^{(m)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\rk BAC=\rk A=\rk L_{e^{(n)}e^{(m)}}=\rk L_{f,g}=\rk L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Любая обратимая матрица может быть матрицей перехода от некоторого базиса
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ к базису 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+(Это было доказательство про столбцовый ранг).
+ 
+\end_layout
+
+\begin_layout Proof
+Если матрица 
+\begin_inset Formula $B$
+\end_inset
+
+ обратима, то и транспонированная матрица обратима: 
+\begin_inset Formula $(BB^{-1})^{T}=E^{T}\Leftrightarrow(B^{-1})^{T}\cdot B^{T}=E\Rightarrow(B^{T})^{-1}=(B^{-1})^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\crk A^{T}=\rrk A$
+\end_inset
+
+ (столбцовый ранг транспонированной матрицы равен строчному рангу обычной
+ матрицы).
+ При этом, 
+\begin_inset Formula $\rrk(C^{T}A^{T}B^{T})=\rrk(BAC)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(PDQ-разложение).
+ 
+\begin_inset Formula $\forall A\in M_{m,n}(F)\ \ \exists P\in GL_{m}(F),\ Q\in GL_{n}(F),\ D=\left(\begin{array}{cc}
+E & 0\\
+0 & 0
+\end{array}\right)\in M_{m,n}(F)$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $A=PDQ$
+\end_inset
+
+.
+ При этом размер этой матрицы 
+\begin_inset Formula $E$
+\end_inset
+
+ равен и столбцовому, и строчному рангам матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proof
+Из столбцов 
+\begin_inset Formula $a_{*1},...,a_{*n}$
+\end_inset
+
+ выберем базис их линейной оболочки (они образующие, поэтому мы можем это
+ сделать).
+ Вектора 
+\begin_inset Formula $a_{*i_{1}},...,a_{*i_{k}}$
+\end_inset
+
+ — базис.
+ С помощью умножения справа на матрицу-перестановку, что 
+\begin_inset Formula $a_{*1},...,a_{*k}$
+\end_inset
+
+ образуют базис в 
+\begin_inset Formula $<a_{*1},...,a_{*n}>$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Матрица-перестановка — единичная матрица с переставленными столбцами.
+ Умножить матрицу на матрицу-перестановку означает поменять столбцы умножаемой
+ матрицы местами.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $k<l\leq n$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula 
+\[
+a_{*l}=\sum_{i=1}^{k}a_{*i}\cdot\alpha_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Умножая справа на матрицу 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccccc}
+1 &  &  &  &  & -\alpha_{1}\\
+ & 1 &  &  &  & -\alpha_{2}\\
+ &  & 1 &  &  & ...\\
+ &  &  & 1 &  & -\alpha_{k}\\
+ &  &  &  & 1 & 0\\
+ &  &  &  &  & 1\\
+ &  &  &  &  & 0 & 1\\
+\text{с} & \text{т} & \text{о} & \text{л} & \text{б} & l & \text{е} & \text{ц}
+\end{array}\right)
+\]
+
+\end_inset
+
+ получаем 0 в 
+\begin_inset Formula $l$
+\end_inset
+
+-том столбце.
+ Таким образом, мы нашли (проблемы на свою задницу) матрицу 
+\begin_inset Formula $C\in GL_{n}(F):\ AC=(a_{*i_{1}},...,a_{*i_{k}},0,0,...,0)$
+\end_inset
+
+.
+ Теперь проделаем то же самое со строчками, умножая слева.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Поймем, сколько у нас здесь линейно независимых строк.
+ Аналогично началу доказательства, найдем 
+\begin_inset Formula $B\in GL_{m}(F):$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccccc}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\crk(BAC)=\crk A=k$
+\end_inset
+
+.
+ Фактически, линейная оболочка столбцов 
+\begin_inset Formula $BAC$
+\end_inset
+
+ является подпространством в 
+\begin_inset Formula $F^{h}$
+\end_inset
+
+ и имеет 
+\begin_inset Formula $\dim=k\Rightarrow k\leq h,$
+\end_inset
+
+ то есть 
+\begin_inset Formula $k=h$
+\end_inset
+
+, а линейная оболочка столбцов 
+\begin_inset Formula $X=F^{h}$
+\end_inset
+
+ (
+\begin_inset Formula $X$
+\end_inset
+
+ — это наша единичная матрица, которая там наверху).
+ Другими словами, столбцы матрицы 
+\begin_inset Formula $X$
+\end_inset
+
+ — базис 
+\begin_inset Formula $F^{h}$
+\end_inset
+
+.
+ Обозначим этот базис 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $C_{e\to x}=X\in GL_{h}(F)$
+\end_inset
+
+, где 
+\begin_inset Formula $e$
+\end_inset
+
+ — стандартный базис 
+\begin_inset Formula $F^{h}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Тогда 
+\begin_inset Formula 
+\[
+BAC\left(\begin{array}{cc}
+X^{-1} & 0\\
+0 & E
+\end{array}\right)=\left(\begin{array}{cc}
+X & 0\\
+0 & 0
+\end{array}\right)\left(\begin{array}{cc}
+X^{-1} & 0\\
+0 & E
+\end{array}\right)=\left(\begin{array}{cc}
+E & 0\\
+0 & 0
+\end{array}\right)=D
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P=B^{-1},\ Q=\left(C\left(\begin{array}{cc}
+X^{-1} & 0\\
+0 & E
+\end{array}\right)\right)^{-1}\Rightarrow A=PDQ
+\]
+
+\end_inset
+
+что и требовалось доказать.
+\end_layout
+
+\begin_layout Standard
+Чтобы понять доказательство, сделать:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+1 & 2 & 3 & 4\\
+5 & 6 & 7 & 8\\
+9 & 10 & 11 & 12
+\end{array}\right)=\left(\begin{array}{ccc}
+* & * & *\\
+* & * & *\\
+* & * & *
+\end{array}\right)\left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right)\left(\begin{array}{cccc}
+* & * & * & *\\
+* & * & * & *\\
+* & * & * & *\\
+* & * & * & *
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(разложение Гаусса).
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\forall A\in GL_{n}(F)$
+\end_inset
+
+ представляется в виде 
+\begin_inset Formula $A=PLU$
+\end_inset
+
+, где 
+\begin_inset Formula $P$
+\end_inset
+
+ — матрица-перестановка, 
+\begin_inset Formula $L=\left(\begin{array}{cc}
+* & 0\\
+\star & *
+\end{array}\right)$
+\end_inset
+
+ — нижнетреугольная матрица, 
+\begin_inset Formula $U=\left(\begin{array}{cc}
+* & \star\\
+0 & *
+\end{array}\right)$
+\end_inset
+
+ — верхнетреугольная матрица, где 
+\begin_inset Formula $A$
+\end_inset
+
+ — обратимая.
+\end_layout
+
+\begin_layout Proof
+Возьмем первые 
+\begin_inset Formula $k\ (1\leq k\leq n)$
+\end_inset
+
+ столбцов матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Они образуют подматрицу в 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Все столбцы матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+ линейно независимые, следовательно, некоторые из них тоже линейно независимые,
+ следовательно, ранг подматрицы равен 
+\begin_inset Formula $k$
+\end_inset
+
+, следовательно, в этой подматрице найдется 
+\begin_inset Formula $k$
+\end_inset
+
+ линейно независимых строк (линейная оболочка её строк имеет размерность
+ 
+\begin_inset Formula $k$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+Будем действовать таким образом: 
+\begin_inset Formula $L'P'A=U\Leftrightarrow A=\underbrace{P'^{-1}}_{=P}\underbrace{L'^{-1}}_{=L}U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Упражнение
+\series default
+: доказать, что обратная к нижнетреугольной является нижнетреугольной (по
+ индукции).
+\end_layout
+
+\begin_layout Proof
+По индукции подберем матрицу-перестановку 
+\begin_inset Formula $P^{(k)}$
+\end_inset
+
+, такую, что в матрице 
+\begin_inset Formula $P^{(k)}\cdot A$
+\end_inset
+
+ все диагональные подматрицы до 
+\begin_inset Formula $k$
+\end_inset
+
+-ой будут обратимы.
+ 
+\end_layout
+
+\begin_layout Proof
+База индукции: 
+\begin_inset Formula $k=1$
+\end_inset
+
+.
+ Обратимая матрица не имеет нулевого столбца, следовательно, 
+\begin_inset Formula $\exists m:\ a_{m1}\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $P^{(1)}$
+\end_inset
+
+ — матрица, соответствующая перестановке 
+\begin_inset Formula $(1\ m)$
+\end_inset
+
+.
+ Выглядит она так: 
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccc}
+ &  &  & m\\
+ & 0 & 0 & 1 & 0\\
+ & 0 & 1 & 0 & 0\\
+m & 1 & 0 & 0 & 0\\
+ & 0 & 0 & 0 & 1
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+База индукции доказана.
+ Предположим, что в матрице 
+\begin_inset Formula $P^{(k-1)}A$
+\end_inset
+
+ все диагональные подматрицы до 
+\begin_inset Formula $(k-1)$
+\end_inset
+
+-ой обратимы.
+ Строки 
+\begin_inset Formula $(k-1)$
+\end_inset
+
+-ой диагональной подматрицы линейно независимы, поэтому строки подматрицы
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccc}
+a_{11} & . & . & . & a_{1k}\\
+. & . & . & . & .\\
+. & . & . & . & .\\
+a_{(k-1)1} & . & . & . & a_{(k-1)k}
+\end{array}\right)
+\]
+
+\end_inset
+
+тоже линейно независимы.
+ Итак, строки 
+\begin_inset Formula $(a_{11},...,a_{1k}),(a_{21},...,a_{2k}),...,(a_{(k-1)1},...,a_{(k-1)k})$
+\end_inset
+
+ линейно независимы, а 
+\begin_inset Formula $(a_{11},...,a_{1k}),...,(a_{n1},...,a_{nk})$
+\end_inset
+
+ являются системой образующих в своей линейной оболочке, размерности 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Поэтому первый набор строк может быть дополнен до базиса линейной оболочки
+ (в которой система образующих — второй набор строк) одной строкой, то есть
+ 
+\begin_inset Formula $\exists l\geq k:\ (a_{l1},...,a_{lk})$
+\end_inset
+
+ линейно независимы с этими строчками (первым набором строк).
+ 
+\end_layout
+
+\begin_layout Proof
+Тогда 
+\begin_inset Formula $P^{(k)}=Q\cdot P^{(k-1)}$
+\end_inset
+
+, где 
+\begin_inset Formula $Q$
+\end_inset
+
+ — матрица-перестановка, соответствующая перестановке 
+\begin_inset Formula $(l\ k)$
+\end_inset
+
+.
+ Таким образом, строки 
+\begin_inset Formula $k$
+\end_inset
+
+-ой диагональной подматрицы в 
+\begin_inset Formula $P^{(k)}A$
+\end_inset
+
+ линейно независимы, то есть эта подматрица обратима.
+ Остальные матрицы мы не трогали, поэтому они тоже остались обратимыми.
+\end_layout
+
+\begin_layout Proof
+Теперь положим 
+\begin_inset Formula $P'=P^{(n)}$
+\end_inset
+
+, так что все диагональные подматрицы в 
+\begin_inset Formula $P'A$
+\end_inset
+
+ обратимы.
+ При помощи преобразования Гаусса с ведущими элементами на главной диагонали
+ будем получать нули ниже главной диагонали, что соответстует умножению
+ на нижнетреугольную матрицу.
+\end_layout
+
+\begin_layout Proof
+На главной диагонали никогда не возникнет нуля, поэтому мы продолжим процесс
+ и доведем его до ручки:
+\end_layout
+
+\begin_layout Proof
+Умножая на нижнетреугольную 
+\begin_inset Formula $L'$
+\end_inset
+
+ получим верхнетреугольную 
+\begin_inset Formula $U$
+\end_inset
+
+, такую, что 
+\begin_inset Formula $L'P'A=U\Leftrightarrow A=P'^{-1}L^{-1}U=PLU$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Матрицы, реализующие преобразование Гаусса: 
+\begin_inset Formula 
+\[
+T_{ij}(\lambda)=\left(\begin{array}{ccccccc}
+1 &  & 0 &  & j &  & 0\\
+ & 1\\
+ &  & 1 &  & \lambda &  & i\\
+ &  &  & 1\\
+ &  &  &  & 1 &  & 0\\
+ & 0 &  &  &  & 1\\
+ &  &  &  &  &  & 1
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\sim_{R_{i}+\lambda R_{j}}T_{ij}(\lambda)\cdot A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\sim_{C_{j}:=C_{j}+\lambda C_{i}}A\cdot T_{ij}(\lambda)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Матрица обратима, так как 
+\begin_inset Formula $T_{ij}(\lambda)^{-1}=T_{ij}(-\lambda)$
+\end_inset
+
+.
+ — элементарная трансвекция.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\varepsilon\neq0,D_{i}(\varepsilon)=\left(\begin{array}{ccccccc}
+1\\
+ & 1 &  &  &  & 0\\
+ &  & 1\\
+ &  &  & 1\\
+ &  &  &  & \varepsilon &  & i\\
+ & 0 &  &  &  & 1\\
+ &  &  &  & i
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\sim_{R_{j}:=\varepsilon\cdot R_{i}}D_{i}(\varepsilon)A$
+\end_inset
+
+, 
+\begin_inset Formula $A\sim_{C_{i}:=\varepsilon C_{i}}AD_{i}(\varepsilon)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Билинейные и квадратичные формы
+\end_layout
+
+\begin_layout Standard
+На самом деле мы хотим изучать аналог выражений 
+\begin_inset Formula 
+\[
+Q(\left(\begin{array}{c}
+x_{1}\\
+.\\
+.\\
+x_{n}
+\end{array}\right))=\sum_{i,j=0}^{n}a_{ij}x_{i}x_{j}=(x_{1},...,x_{n})\left(\begin{array}{cccc}
+a_{11} & . & . & a_{1n}\\
+. & . & . & .\\
+. & . & . & .\\
+a_{n1} & . & . & a_{nn}
+\end{array}\right)\left(\begin{array}{c}
+x_{1}\\
+.\\
+.\\
+x_{n}
+\end{array}\right)
+\]
+
+\end_inset
+
+для произвольного векторного пространства.
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $V$
+\end_inset
+
+ — векторное пространство над полем 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Характеристика поля 
+\begin_inset Formula $F$
+\end_inset
+
+ — наименьшее натуральное число, такое, что сумма такого числа единиц равна
+ нулю.
+ 
+\begin_inset Formula $\charr F=\ord_{(F,+)}1$
+\end_inset
+
+, но вместо 
+\begin_inset Formula $\infty$
+\end_inset
+
+ напишут 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+Билинейное отображение
+\series default
+ — отображение из декартова произведения: 
+\begin_inset Formula $B:U\times V\to W$
+\end_inset
+
+, которое удовлетворяет следующим условиям: 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B(u_{1}+u_{2},v)=B(u_{1},v)+B(u_{2},v)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B(u,v_{1}+v_{2})=B(u,v_{1})+B(u,v_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B(\alpha u,v)=B(u,\alpha v)=\alpha B(u,v)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $B:V\times V\to F$
+\end_inset
+
+ называется 
+\series bold
+билинейной формой
+\series default
+, если она линейна по каждому аргументу, то есть 
+\begin_inset Formula $\forall\alpha,\beta\in F,\ x,y,z\in V:\ \ B(\alpha x+\beta y,z)=\alpha B(x,z)+\beta B(y,z)$
+\end_inset
+
+ и 
+\begin_inset Formula $B(z,\alpha x+\beta y)=\alpha B(z,x)+\beta B(z,y)$
+\end_inset
+
+.
+ Вообще форма — отображение декартова произведения в поле.
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Definition*
+Форма 
+\begin_inset Formula $B:V\times V\to F$
+\end_inset
+
+ называется симметричной, если 
+\begin_inset Formula $B(x,y)=B(y,x)$
+\end_inset
+
+ и антисимметричной, если 
+\begin_inset Formula $B(x,y)=-B(y,x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma*
+1) Множество билинейных форм является векторным пространством (с поточечными
+ операциями).
+ Обозначим его через 
+\begin_inset Formula $BL(V)$
+\end_inset
+
+ (вообще обозначается 
+\begin_inset Formula $Hom(V\otimes V,F)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Lemma*
+2) Множество симметричных, так же, как и множество антисимметричных форм
+ являются подпространствами.
+ Обозначим 
+\begin_inset Formula $BL^{s}(V),\ BL^{a}(V)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+3) 
+\begin_inset Formula $\charr F\neq2$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $BL(V)=BL^{s}(V)\bigoplus BL^{a}(V)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+3) 
+\begin_inset Formula $B(x,y)=B(y,x)=-B(y,x)\ \ \forall B\in BL^{s}(V)\cap BL^{a}(V)$
+\end_inset
+
+, что равно 
+\begin_inset Formula $2B(y,x)=0\Leftrightarrow B(y,x)=0\ \forall x,y\Leftrightarrow B=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Обозначим 
+\begin_inset Formula $B^{s}(x,y)=\frac{1}{2}(B(x,y)+B(y,x))$
+\end_inset
+
+, 
+\begin_inset Formula $B^{s}\in BL^{s}(V)$
+\end_inset
+
+, а 
+\begin_inset Formula $B^{a}(x,y)=\frac{1}{2}(B(x,y)-B(y,x))$
+\end_inset
+
+, 
+\begin_inset Formula $B^{a}\in BL^{a}(V)$
+\end_inset
+
+.
+ Ну и совсем легко проверить, что 
+\begin_inset Formula $B=B^{s}+B^{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $B^{s}$
+\end_inset
+
+ — симметризация билинейной формы 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(поляризация квадратичной формы)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\charr F\neq2$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Q(x)=B(x,x)$
+\end_inset
+
+ для некоторой билинейной формы 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $B^{s}(x,y)=\frac{1}{2}(Q(x+y)-Q(x)-Q(y))$
+\end_inset
+
+ и 
+\begin_inset Formula $B^{s}(x,x)=Q(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Q(x+y)=B(x+y,x+y)=B(x,x)+B(x,y)+B(y,x)+B(y,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Q(x+y)-Q(x)-Q(y)=B(x+y,x+y)-B(x,x)-B(y,y)=B(x,y)+B(y,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $Q:V\to F$
+\end_inset
+
+ называется 
+\series bold
+квадратичной формой
+\series default
+, если 
+\begin_inset Formula $\exists B\in BL(V)$
+\end_inset
+
+ — билинейная форма, такая, что 
+\begin_inset Formula $Q(x)=B(x,x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+А вот 
+\begin_inset Formula $B:V\times V\to F$
+\end_inset
+
+, где 
+\begin_inset Formula $F$
+\end_inset
+
+ — поле, то такое отображение называется 
+\series bold
+билинейной формой
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V.\ \ u,v\in V$
+\end_inset
+
+, тогда 
+\series bold
+
+\begin_inset Formula $B(u,v)=u_{e}^{T}B_{e}v_{e}$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Квадратичной формой называется отображение 
+\begin_inset Formula $Q:V\to F$
+\end_inset
+
+, для которой 
+\begin_inset Formula $\exists B$
+\end_inset
+
+ — билинейная форма, такая, что 
+\begin_inset Formula $Q(x)=B(x,x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\forall B\in BL(V)$
+\end_inset
+
+ и базиса 
+\begin_inset Formula $f$
+\end_inset
+
+ пространства 
+\begin_inset Formula $V$
+\end_inset
+
+ существует матрица 
+\begin_inset Formula $B_{f}$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x,y\in V$
+\end_inset
+
+ верно 
+\begin_inset Formula $B(x,y)=x_{f}^{T}B_{f}y_{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+При этом 
+\begin_inset Formula $B_{g}=C_{f\to g}^{T}B_{f}C_{f\to g}$
+\end_inset
+
+, где 
+\begin_inset Formula $g$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $B_{f}=B_{f}^{T}\Leftrightarrow B$
+\end_inset
+
+ — симметричная.
+ Если 
+\begin_inset Formula $B_{f}=-B_{f}^{T}\Leftrightarrow B$
+\end_inset
+
+ — антисимметричная.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=\sum_{i}f_{i}\alpha_{i},\ y=\sum_{j}f_{j}\beta_{j}$
+\end_inset
+
+ и считаем 
+\begin_inset Formula $B(x,y)=B(\sum_{i}f_{i}\alpha_{i},\ \sum_{j}f_{j}\beta_{j})=\sum_{i}\sum_{j}B(f_{i},f_{j})\alpha_{i}\beta_{j}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(\alpha_{1},...,\alpha_{n})\left(\begin{array}{cccccc}
+B(f_{1},f_{1})\\
+ & B(f_{2,}f_{2})\\
+\\
+\\
+\\
+ &  &  &  &  & B(f_{n},f_{n})
+\end{array}\right)\left(\begin{array}{c}
+\beta_{1}\\
+.\\
+\text{.}\\
+.\\
+.\\
+\beta_{n}
+\end{array}\right)=x_{f}^{T}B_{f}y_{f}
+\]
+
+\end_inset
+
+ Откуда 
+\begin_inset Formula $x_{f}=C_{f\to g}x_{g},\ y_{f}=C_{f\to g}y_{g}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Теперь 
+\begin_inset Formula $B(x,y)=x_{g}^{T}C_{f\to g}^{T}\cdot B_{f}\cdot C_{f\to g}y_{g}=x_{g}^{T}B_{g}y_{g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x_{g},y_{g}\in F^{n}\Rightarrow B_{g}=C_{f\to g}^{T}\cdot B_{f}\cdot C_{f\to g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Докажем симметричность: 
+\begin_inset Formula $B(y,x)=\underbrace{y_{f}^{T}B_{f}x_{f}}_{\text{матрица}1x1}=(y_{f}^{T}B_{f}x_{f})^{T}=x_{f}^{T}B_{f}^{T}y_{f}=?=x_{f}^{T}B_{f}y_{f}=B(x,y)$
+\end_inset
+
+.
+ Равенство выполняется тогда и только тогда, когда 
+\begin_inset Formula $B_{f}^{T}=B_{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Матрица квадратичной формы — матрица ассоциированной с ней симметричной
+ билинейной формы.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q_{f}=B_{f}=\left(\begin{array}{ccccc}
+. & . & . & . & .\\
+. & . & . & . & .\\
+. & . & . & B(f_{i},f_{j}) & .\\
+. & . & . & . & .\\
+. & . & . & . & .
+\end{array}\right)=\left(\begin{array}{ccccc}
+. & . & . & . & .\\
+. & . & . & . & .\\
+. & . & . & 1/2(Q(f_{i},f_{j})-Q(f_{i})-Q(f_{j})) & .\\
+. & . & . & . & .\\
+. & . & . & . & .
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $V=F^{n}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $e$
+\end_inset
+
+ — стандартный базис 
+\begin_inset Formula $x=x_{e}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $Q(x)=B(x,x)=x^{T}Q_{e}x=(*)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Обозначим 
+\begin_inset Formula 
+\[
+Q_{e}=\left(\begin{array}{cccc}
+a_{11} & . & . & a_{1n}\\
+. & . & . & .\\
+. & . & . & .\\
+a_{n1} & . & . & a_{nn}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula 
+\[
+(*)=(x_{1},...,x_{n})\left(\begin{array}{c}
+\sum_{j=1}^{n}a_{1j}x_{j}\\
+.\\
+.\\
+\sum_{j=1}^{n}a_{nj}x_{j}
+\end{array}\right)=\sum_{i=1}^{n}\sum_{i=1}^{n}x_{i}a_{ij}x_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Так как матрицы квадратичных форм симметричны, то 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{ii}x_{i}^{2}+\sum_{i<j}(a_{ij}+a_{ji})x_{i}x_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Например, 
+\begin_inset Formula $Q\left(\begin{array}{c}
+x\\
+y
+\end{array}\right)=x^{2}+2y^{2}+6xy$
+\end_inset
+
+, тогда 
+\begin_inset Formula $Q_{e}=\left(\begin{array}{cc}
+1 & 3\\
+3 & 2
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\perp_{B}y\Leftrightarrow B(x,y)=0$
+\end_inset
+
+ по определению.
+ Тогда 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+, 
+\begin_inset Formula $S^{\perp_{B}}=\{v\in V|\ B(v,s)=0\ \forall s\in S\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B$
+\end_inset
+
+ — симметричная билинейная форма на 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $\dim V=n<\infty$
+\end_inset
+
+, 
+\begin_inset Formula $Q(x)=B(x,x)$
+\end_inset
+
+, 
+\begin_inset Formula $\charr F\neq2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V^{\perp_{B}}=V_{0}=\{x\in V|\ B(x,y)=0\ \forall y\in V\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Квадратичная или билинейная форма называется невырожденной, если 
+\begin_inset Formula $V_{0}=\{0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $V=V_{0}\bigoplus U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+Тогда 
+\begin_inset Formula $U$
+\end_inset
+
+ не вырождено относительно 
+\begin_inset Formula $B$
+\end_inset
+
+, то есть сужение 
+\begin_inset Formula $B$
+\end_inset
+
+ на 
+\begin_inset Formula $U\times U$
+\end_inset
+
+ невырождено.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $u\in U^{\perp_{B}}\cap U=?=\{0\}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\forall v\in V\ \exists x\in V_{0},y\in U:v=x+y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $B(u,v)=B(u,x)+B(u,y)=B(x,u)+B(y,u)=0+0=0$
+\end_inset
+
+.
+ Получили, что 
+\begin_inset Formula $B(u,v)=0\ \forall v\in V$
+\end_inset
+
+, то есть 
+\begin_inset Formula $u\in V_{0}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $u\in U\cap V_{0}=\{0\}$
+\end_inset
+
+, то есть 
+\begin_inset Formula $u=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $f_{1},...,f_{k}$
+\end_inset
+
+ — базис в 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+, а 
+\begin_inset Formula $f_{k+1},...,f_{n}$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U$
+\end_inset
+
+, то 
+\begin_inset Formula $f=(f_{1},...,f_{n})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccccc}
+0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & \text{м} & \text{а} & \text{т} & \text{р} & \text{и}\\
+0 & 0 & \text{ц} & \text{а} &  & \text{с} & \text{у}\\
+0 & 0 & \text{ж} & \text{е} & \text{н} & \text{и} & \text{я}\\
+0 & 0 & B & \text{н} & \text{а} & * & *\\
+0 & 0 & * & * & U & \times & U
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В дальнейшем считаем, что 
+\begin_inset Formula $B$
+\end_inset
+
+ — невырождена.
+ 
+\end_layout
+
+\begin_layout Exercise*
+(ББ) Доказать, что 
+\begin_inset Formula $B$
+\end_inset
+
+ невырождена 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $B_{f}$
+\end_inset
+
+ — обратима.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\forall$
+\end_inset
+
+ квадратичной формы (=симметричной билинейной формы) 
+\begin_inset Formula $U$
+\end_inset
+
+ на пространстве 
+\begin_inset Formula $V$
+\end_inset
+
+ существует базис 
+\begin_inset Formula $f$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $Q_{f}$
+\end_inset
+
+ — диагональная матрица.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $B$
+\end_inset
+
+ — ассоциированная с 
+\begin_inset Formula $Q$
+\end_inset
+
+ билинейная форма, невырожденная.
+ 
+\end_layout
+
+\begin_layout Proof
+1 шаг) В пространстве 
+\begin_inset Formula $V$
+\end_inset
+
+ существует вектор 
+\begin_inset Formula $x$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $Q(x)\neq0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Возьмем произвольный вектор 
+\begin_inset Formula $u\neq0$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $Q(u)=0$
+\end_inset
+
+, то возьмем 
+\begin_inset Formula $v\in V:\ B(u,v)\neq0$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $Q(v)\neq0$
+\end_inset
+
+, то все доказано, иначе положим 
+\begin_inset Formula $x=u+v$
+\end_inset
+
+ и докажем, что 
+\begin_inset Formula $Q(u+v)=B(u+v,u+v)=B(u,u)+B(u,v)+B(v,u)+B(v,v)=\underbrace{Q(u)}_{=0}+2\underbrace{B(u,v)}_{\neq0(def)}+\underbrace{Q(v)}_{=0}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+2 fucking шаг) Индукция по 
+\begin_inset Formula $n=\dim V$
+\end_inset
+
+.
+ При 
+\begin_inset Formula $n=1$
+\end_inset
+
+ утверждение верно: матрица 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ диагональна.
+ Выберем в качестве базисного вектора 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+, так, чтобы 
+\begin_inset Formula $Q(f_{1})=B(f_{1},f_{1})\neq0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $f_{1},g_{2},...,g_{n}$
+\end_inset
+
+ — базис нашего пространства 
+\begin_inset Formula $V$
+\end_inset
+
+ (линейно независимый набор из одного вектора можно дополнить до базиса
+ (как и любой другой независимый набор)).
+ 
+\end_layout
+
+\begin_layout Proof
+Процесс ортогонализации: положим 
+\begin_inset Formula $f_{i}=g_{i}-\frac{B(g_{i},f_{1})}{B(f_{1},f_{1})}f_{1}$
+\end_inset
+
+.
+ Тогда вычисление показывает, что 
+\begin_inset Formula $B(f_{i},f_{1})=0\ \forall i=2,...,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $W=<f_{2},...,f_{n}>$
+\end_inset
+
+.
+ Докажем, что оно невырождено относительно 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Возьмем 
+\begin_inset Formula $w\in W\cap W^{\perp_{B}}=?=\{0\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x\in V:\ x=\sum_{i=1}^{n}f_{i}\alpha_{i}=f_{i}\alpha_{i}+y(\in W)$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $B(w,x)=B(w,f_{1})\alpha_{1}+\underbrace{B(w,y)}_{=0}=\sum_{i=2}^{n}B(f_{i},f_{1})\beta_{i}\alpha_{i}+0=0\Rightarrow w\in V^{\perp_{B}}=\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+По индукционному предположению, 
+\begin_inset Formula $\exists$
+\end_inset
+
+ базис 
+\begin_inset Formula $h=(h_{2},...,h_{n})$
+\end_inset
+
+ в 
+\begin_inset Formula $W$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $(B|_{W})_{h}$
+\end_inset
+
+ будет диагональной.
+ То есть 
+\begin_inset Formula $B(h_{i},h_{j})=0\ \forall i\neq j\geq2$
+\end_inset
+
+.
+ Положим 
+\begin_inset Formula $h_{1}=f_{1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $B(h_{1},h_{i})=B(f_{1},\sum_{j=2}^{n}f_{j}\gamma_{j})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Мы доказали, что 
+\begin_inset Formula $B(h_{i},...,h_{j})=0\ \forall i\neq j$
+\end_inset
+
+ от 
+\begin_inset Formula $1$
+\end_inset
+
+ до 
+\begin_inset Formula $n$
+\end_inset
+
+, т.е.
+ матрица 
+\begin_inset Formula $B$
+\end_inset
+
+ в базисе 
+\begin_inset Formula $(h_{1},...,h_{n})$
+\end_inset
+
+ диагональна.
+\end_layout
+
+\begin_layout Section
+Определитель и его свойства
+\end_layout
+
+\begin_layout Definition*
+Имеем отображение 
+\begin_inset Formula $X\times X\to F$
+\end_inset
+
+ — поле.
+ Тогда антисимметричность: 
+\begin_inset Formula $f(x,y)=-f(y,x)\Rightarrow f(x,x)=-f(x,x)\Rightarrow f(x,x)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+Если 
+\begin_inset Formula $\charr F\neq2$
+\end_inset
+
+, то 
+\begin_inset Formula $f(x,y)=-f(y,x)\Rightarrow f(x,x)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ — векторное пространство над 
+\begin_inset Formula $F$
+\end_inset
+
+, а 
+\begin_inset Formula $f$
+\end_inset
+
+ линейна по каждому аргументу.
+ Пусть 
+\begin_inset Formula $f(x,x)=0\ \forall x\in X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $0=f(x+y,x+y)=f(x,x)+f(y,y)+f(x,y)+f(y,x)=f(x,y)+f(y,x)\Rightarrow f(x,y)=-f(y,x)\ \forall x,y\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Пусть 
+\begin_inset Formula $f:\underbrace{V\times...\times V}_{m}\to F$
+\end_inset
+
+ является полилинейной, то есть она линейна по каждому аргументу.
+ Тогда она называется антисимметричной, если она равна нулю как только два
+ её аргумента совпадают.
+\end_layout
+
+\begin_layout Lemma*
+Если 
+\begin_inset Formula $f$
+\end_inset
+
+ — полилинейна и антисимметрична, то 
+\begin_inset Formula $f(...,u,...,v,...)=-f(...,v,...,u,...)$
+\end_inset
+
+.
+ (на месте многоточий стоит одно и то же).
+\end_layout
+
+\begin_layout Lemma*
+\begin_inset Formula $\sigma\in S_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+\begin_inset Formula $f(v_{1},...,v_{m})=(-1)^{\varepsilon(\sigma)}f(v_{\sigma(1)},...,v_{\sigma(m)})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Четность перестановки:
+\end_layout
+
+\begin_layout Standard
+Инверсия в перестановке 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ — пара индексов 
+\begin_inset Formula $i,j$
+\end_inset
+
+, таких, что 
+\begin_inset Formula $i<j,\ \sigma(i)>\sigma(j)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Например, если мы запишем перестановку в форме:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+4 & 3 & 2 & 5 & 1 & 6
+\end{array}\right)\begin{array}{c}
+i\\
+\sigma(i)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(рисунок)
+\end_layout
+
+\begin_layout Standard
+Дужками обозначены инверсии: 
+\begin_inset Formula $(1\ 2),(1\ 3),(1\ 5),(2\ 3),(2\ 5),(3\ 5),(4\ 5)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Четность 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ = (число инверсий) 
+\begin_inset Formula $\mod2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+Любая перестановка раскладывается в произведение транспозиций 
+\begin_inset Formula $(i,\ i+1)$
+\end_inset
+
+.
+ Например, для той штуки (рисунок) 
+\begin_inset Formula $\sigma\cdot(4\ 5)=$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+4 & 3 & 2 & 1 & 5 & 6
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Индукция по числу инверсий:
+\end_layout
+
+\begin_layout Proof
+Если инверсий нет, то 
+\begin_inset Formula $\sigma(i)<\sigma(j)\ \forall i<j$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ — тождественная.
+ Более того, если 
+\begin_inset Formula $\sigma=e\Leftrightarrow\sigma(i)<\sigma(i+1)\ \forall i=1,...,m-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Если количество инверсий не равно нулю, то 
+\begin_inset Formula $\exists i:\ \sigma(i)>\sigma(i+1)$
+\end_inset
+
+.
+ Тогда количество инверсий в 
+\begin_inset Formula $\tau=\sigma\cdot(i\ i+1)$
+\end_inset
+
+ на 1 меньше, чем в 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ Действительно, 
+\begin_inset Formula $\tau(k)=\sigma(k)\ \forall k\neq i,\ i+1$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula $\tau(i)=\sigma(i+1),\ \tau(i+1)=\sigma(i)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+По индукционному предположению 
+\begin_inset Formula $\tau=(j_{1}\ j_{1}+1)\cdot...\cdot(j_{k}\ j_{k}+1)$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma=\tau\cdot(i\ i+1)$
+\end_inset
+
+ (если мы домножим на транспозицию слева, то у 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ она пропадет, а у 
+\begin_inset Formula $\tau$
+\end_inset
+
+ — появится) — произведение транспозиций нужного вида.
+\end_layout
+
+\begin_layout Lemma*
+При умножении на 
+\begin_inset Formula $(i\ i+1)$
+\end_inset
+
+ четность перестановки меняется.
+\end_layout
+
+\begin_layout Proof
+очевидно (не было инверсии — появилась инверсия и наоборот).
+\end_layout
+
+\begin_layout Theorem*
+Пусть 
+\begin_inset Formula $\varepsilon(\sigma)$
+\end_inset
+
+ — четность перестановки в 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\varepsilon:S_{n}\to\mathbb{Z}_{2}$
+\end_inset
+
+ — гомоморфизм групп.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sigma,\tau\in S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sigma=(i\ i+1)\cdot...\cdot(i_{k}\ i_{k}+1)$
+\end_inset
+
+, 
+\begin_inset Formula $\tau=(j\ j+1)\cdot...\cdot(j_{l}\ j_{l}+1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\varepsilon(\sigma)=k\mod2,\ \varepsilon(\tau)=l\mod2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\varepsilon(\sigma\tau)=(k+l)\mod2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Ядро этого гомоморфизма называется 
+\series bold
+знакопеременной группой:
+\series default
+ 
+\begin_inset Formula $\ker\varepsilon=A_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+При 
+\begin_inset Formula $n\geq\sigma$
+\end_inset
+
+ группа 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ простая.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon(\sigma\cdot(i\ j))=\varepsilon(\sigma)+_{2}\varepsilon(i\ j)=\varepsilon(\sigma)+1\mod2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $f:\underbrace{V\times...\times V}_{m}\to F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v=(v_{1},...,v_{n})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ — полилинейная.
+ Пусть 
+\begin_inset Formula $A$
+\end_inset
+
+ — матрица, в которой 
+\begin_inset Formula $m$
+\end_inset
+
+ столбцов и 
+\begin_inset Formula $n$
+\end_inset
+
+ строк: 
+\begin_inset Formula $A\in M_{n\times m}(F)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{(1)},...,x^{(m)}\in V$
+\end_inset
+
+, 
+\begin_inset Formula $x_{v}^{(i)}=a_{*i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x^{(1)},...,x^{(m)})=f(\sum_{j_{1}=1}^{n}v_{j_{1}}a_{j_{1}1},...,\sum_{j_{m}=1}^{n}v_{j_{m}}a_{j_{m}m})=\sum_{j_{1}=1}^{n}...\sum_{j_{m}=1}^{n}f(v_{j_{1}},...,v_{j_{m}})a_{j_{1}1}\cdot...\cdot a_{j_{m}m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Набор чисел (
+\begin_inset Formula $m$
+\end_inset
+
+-мерный массив) 
+\begin_inset Formula $f(v_{j_{1}},...,v_{j_{m}})$
+\end_inset
+
+, где 
+\begin_inset Formula $j_{1},...,j_{m}\in\{1,...,m\}$
+\end_inset
+
+ называется 
+\series bold
+тензором
+\series default
+.
+ — не совсем правильное определение.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $m=n$
+\end_inset
+
+, а 
+\begin_inset Formula $f$
+\end_inset
+
+ — антисимметрична.
+ Тогда все слагаемые, у которых 
+\begin_inset Formula $j_{r}=j_{s}$
+\end_inset
+
+ при 
+\begin_inset Formula $r\neq s$
+\end_inset
+
+ равны нулю.
+ Поэтому можно считать, что 
+\begin_inset Formula 
+\[
+\sigma=\left(\begin{array}{ccc}
+1 & ... & n\\
+j_{1} & ... & j_{n}
+\end{array}\right)\in S_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula 
+\begin{multline*}
+f(x^{(1)},...,x^{(m)})=\sum_{\sigma\in S_{n}}f(v_{\sigma(1)},...,v_{\sigma(n)})a_{\sigma(1)1}\cdot...\cdot a_{\sigma(n)n}=\\
+\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}f(v_{1},...,v_{n})a_{\sigma(1)1}\cdot...\cdot a_{\sigma(n)n}=\left(\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{i=1}^{n}a_{\sigma(i)i}\right)f(v_{1},...,v_{n})
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Обратно, 
+\begin_inset Formula $\forall c\in F$
+\end_inset
+
+ форма 
+\begin_inset Formula $f:V\times...\times V\to F$
+\end_inset
+
+ (
+\begin_inset Formula $\dim V=n$
+\end_inset
+
+), заданная формулой 
+\begin_inset Formula $f(x^{(1)},...,x^{(n)})=\left(\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{i=1}^{n}a_{\sigma(i)i}\right)\cdot c$
+\end_inset
+
+ является линейной антисимметричной формой.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Значение 
+\begin_inset Formula $n$
+\end_inset
+
+-линейной формы на 
+\begin_inset Formula $n$
+\end_inset
+
+-мерном пространстве полностью определяется её значением на наборе базисных
+ векторов.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f:V\times...\times V\to F$
+\end_inset
+
+ — полилинейная антисимметричная форма и размерность пространства 
+\begin_inset Formula $n$
+\end_inset
+
+, то есть базис 
+\begin_inset Formula $v=(v_{1},...,v_{n})$
+\end_inset
+
+, тогда 
+\begin_inset Formula 
+\[
+f(x_{1},...,x_{n})=f(v_{1},...,v_{n})\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{i=1}^{n}a_{\sigma(i)i}
+\]
+
+\end_inset
+
+где 
+\begin_inset Formula $a_{\sigma(i)i}$
+\end_inset
+
+ — координата вектора 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ в 
+\begin_inset Formula $v$
+\end_inset
+
+ с номером 
+\begin_inset Formula $\sigma(i)$
+\end_inset
+
+, или, что то же самое, 
+\begin_inset Formula $A=((x_{1})_{v},...,(x_{n})_{v})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Если 
+\begin_inset Formula $A\in M_{n}(R)$
+\end_inset
+
+, где 
+\begin_inset Formula $R$
+\end_inset
+
+ — коммутативное кольцо, то 
+\begin_inset Formula 
+\[
+\det A=\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{i=1}^{n}a_{\sigma(i)i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma*
+Любая полилинейная форма 
+\begin_inset Formula $f:F^{n}\times...\times F^{n}\to F$
+\end_inset
+
+, где 
+\begin_inset Formula $F^{n}\times...\times F^{n}\longleftrightarrow M_{n}(F)$
+\end_inset
+
+, 
+\begin_inset Formula $f(A)=f(E)\cdot\det A$
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Lemma*
+\begin_inset Formula $\det$
+\end_inset
+
+ — полилинейная антисимметричная форма столбцов матрицы.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $a_{*k}=b+c$
+\end_inset
+
+, где 
+\begin_inset Formula $b,c\in F^{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{multline*}
+\det A=\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{i\neq k}^{n}a_{\sigma(i)i}\cdot(b_{\sigma(k)}+c_{\sigma(k)})=\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{i\neq k}^{n}a_{\sigma(i)i}b_{\sigma(k)}+\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{i\neq k}^{n}a_{\sigma(i)i}c_{\sigma(k)}\\
+=\det(a_{*1}...a_{*k-1}ba_{*k+1}...a_{*n})+\det(a_{*1}...a_{*k-1}ca_{*k+1}...a_{*n})
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+С 
+\begin_inset Formula $a_{*k}=\alpha\beta$
+\end_inset
+
+ аналогично.
+\end_layout
+
+\begin_layout Proof
+Докажем антисимметричность:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ — множество четных перестановок 
+\begin_inset Formula $\leq S_{n}$
+\end_inset
+
+.
+ Зафиксируем 
+\begin_inset Formula $i\neq j\in\{1,...,n\}$
+\end_inset
+
+, циклическую перестановку 
+\begin_inset Formula $\tau=(i\ j)$
+\end_inset
+
+ и возьмем смежный класс 
+\begin_inset Formula $S_{n}=A_{n}\tau\sqcup A_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $a_{*i}=a_{*j}$
+\end_inset
+
+, тогда 
+\begin_inset Formula 
+\begin{multline*}
+\det A=\sum_{\sigma\in A_{n}}\prod_{k=1}^{n}a_{\sigma(k)k}+(-1)^{1}\sum_{\sigma\in A_{n}}\prod_{k=1}^{n}a_{\sigma\tau(k)k}=\sum_{\sigma\in A_{n}}(\prod_{k=1}^{n}a_{\sigma(k)k}-\prod_{k\neq i,j}^{n}a_{\sigma(k)k}\cdot\underbrace{a_{\sigma(j)i}}_{=a_{\sigma(j)j}}\cdot\underbrace{a_{\sigma(i)j}}_{=a_{\sigma(i)i}})=0
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $\dim V=n$
+\end_inset
+
+, 
+\begin_inset Formula $f:\underbrace{V\times...\times V}_{n}\to F$
+\end_inset
+
+ полилинейная, антисимметричная, 
+\begin_inset Formula $f\neq0$
+\end_inset
+
+, то 
+\begin_inset Formula $f$
+\end_inset
+
+ называется формой объема.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ — форма объема на 
+\begin_inset Formula $V$
+\end_inset
+
+, а 
+\begin_inset Formula $L$
+\end_inset
+
+ — линейный оператор, то 
+\begin_inset Formula $f_{L}(x_{1},...,x_{n})=f(L(x_{1}),...,L(x_{n}))$
+\end_inset
+
+ также является формой объема.
+\end_layout
+
+\begin_layout Standard
+Определим 
+\begin_inset Formula 
+\[
+\det L=\frac{f_{L}(v_{1},...,v_{n})}{f(v_{1},...,v_{n})}
+\]
+
+\end_inset
+
+ где 
+\begin_inset Formula $v=(v_{1},...,v_{n})$
+\end_inset
+
+ — базис.
+\end_layout
+
+\begin_layout Proof
+(корректности).
+ Так как 
+\begin_inset Formula $f\neq0$
+\end_inset
+
+, то существует набор векторов 
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+, таких, что 
+\begin_inset Formula $f(x_{1},...,x_{n})\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f(x_{1},...,x_{n})=f(v_{1},...,v_{n})\det A$
+\end_inset
+
+, где 
+\begin_inset Formula $A=((x_{1})_{v},...,(x_{n})_{v})$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $f(v_{1},...,v_{n})\neq0$
+\end_inset
+
+, то есть знаменатель не ноль.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f_{L}(x_{1},...,x_{n})=f_{L}(v_{1},...,v_{n})\det A$
+\end_inset
+
+, откуда 
+\begin_inset Formula 
+\[
+\frac{f_{L}(x_{1},...,x_{n})}{f(x_{1},...,x_{n})}=\frac{f_{L}(v_{1},...,v_{n})}{f(v_{1},...,v_{n})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+То есть определитель не зависит от выбора базиса.
+\end_layout
+
+\begin_layout Proof
+Покажем, что он равен определителю матрицы оператора:
+\end_layout
+
+\begin_layout Lemma*
+\begin_inset Formula $v=(v_{1},...,v_{n})$
+\end_inset
+
+ — базис, то 
+\begin_inset Formula $\det L=\det L_{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\det L=\frac{f_{L}(v_{1},...,v_{n})}{f(v_{1},...,v_{n})}=\frac{f(L(v_{1}),...,L(v_{n}))}{f(v_{1},...,v_{n})}=\frac{f(v_{1},...,v_{n})\det A}{f(v_{1},...,v_{n})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+где 
+\begin_inset Formula $A=(L(v_{1})_{v},...,L(v_{n})_{v})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\det L_{1}\circ L_{2}=\det L_{1}\cdot\det L_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\det(A_{1}\cdot A_{2})=\det A_{1}\cdot\det A_{2}$
+\end_inset
+
+, где 
+\begin_inset Formula $L_{1},L_{2}:V\to V$
+\end_inset
+
+ — линейные операторы, а 
+\begin_inset Formula $A_{1},A_{2}\in M_{n}(F)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\det L_{1}=\frac{f(L_{1}(v_{1}),...,L_{1}(v_{n}))}{f(v_{1},...,v_{n})};
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\det L_{2}=\frac{f_{L_{1}}(L_{2}(v_{1}),...,L_{2}(v_{n}))}{f_{L_{1}}(v_{1},...,v_{n})}=\frac{f(L_{1}\circ L_{2}(v_{1}),...,L_{1}\circ L_{2}(v_{n}))}{f(L_{1}(v_{1}),...,L_{1}(v_{n}))}=\frac{f_{L_{1}\circ L_{2}}(v_{1},...,v_{n})}{f(v_{1},...,v_{n})}\cdot\frac{f(v_{1},...,v_{n})}{f_{L_{1}}(v_{1},...,v_{n})}=\det L_{1}\circ L_{2}\cdot\frac{1}{\det L_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Второе утверждение непосредственно следует из первого (Принять 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ за матрицу линейного отображения 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Задание на дом: найти в доказательстве косяк, выкурить, рассказать Степанову
+ ощущения.
+\end_layout
+
+\begin_layout Lemma*
+\begin_inset Formula $f$
+\end_inset
+
+ — полилинейная антисимметричная форма.
+ Тогда 
+\begin_inset Formula $f(v_{1},...,v_{i},...,v_{j},...,v_{n})=f(v_{1},...,v_{i}+\lambda v_{j},...,v_{j},...,v_{n})$
+\end_inset
+
+, где 
+\begin_inset Formula $\lambda\in F$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f(v_{1},...,v_{i}+\lambda v_{j},...,v_{j},...,v_{n})=f(v_{1},...,v_{i},...,v_{j},...,v_{n})+\lambda f(v_{1},...,v_{j},...,v_{j},...,v_{n})=f(v_{1},...,v_{i},...,v_{j},...,v_{n})+0=f(v_{1},...,v_{i},...,v_{j},...,v_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие 
+\series default
+(из доказательства корректности определения определителя)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ — форма объема на 
+\begin_inset Formula $V$
+\end_inset
+
+, то 
+\begin_inset Formula $f(v_{1},...,v_{n})\neq0\Leftrightarrow(v_{1},...,v_{n})$
+\end_inset
+
+ — базис.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Leftarrow)$
+\end_inset
+
+: 
+\begin_inset Formula $(v_{1},...,v_{n})$
+\end_inset
+
+ — базис.
+ 
+\begin_inset Formula $f\neq0\Rightarrow\exists x_{1},...,x_{n}\in V:\ 0\neq f(x_{1},...,x_{n})=\underbrace{f(v_{1},...,v_{n})}_{\neq0}\det A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Обратно: Если 
+\begin_inset Formula $(v_{1},...,v_{n})$
+\end_inset
+
+ — не базис, то 
+\begin_inset Formula $\exists\alpha_{1},...,\alpha_{n}$
+\end_inset
+
+, не все из них равны 0, такие, что 
+\begin_inset Formula $\sum_{i=1}^{n}v_{i}\alpha_{i}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Пусть, для определенности, 
+\begin_inset Formula $\alpha_{1}\neq0$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+v_{1}+\sum_{i=2}^{n}v_{i}(+\frac{\alpha_{i}}{\alpha_{1}})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f(v_{1},...,v_{n})=f(v_{1}+\sum_{i=2}^{n}v_{i}\frac{\alpha_{i}}{\alpha_{1}},...,v_{2},...,v_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие
+\series default
+: 
+\begin_inset Formula $A\in M_{n}(F)$
+\end_inset
+
+, 
+\begin_inset Formula $A\in GL_{n}(F)\Leftrightarrow\det A\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\det A=\det A^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{multline*}
+\det A^{T}=\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{k=1}^{n}(A^{T})_{\sigma(k)k}=\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma)}\prod_{i=1}^{n}a_{\sigma^{-1}(i)i}=\sum_{\sigma\in S_{n}}(-1)^{\varepsilon(\sigma^{-1})}\prod_{i=1}^{n}a_{\sigma^{-1}(i)i}=\\
+=\sum_{\tau\in S_{n}}(-1)^{\varepsilon(\tau)}\prod_{i=1}^{n}a_{\tau(i)i}=\det A
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+где 
+\begin_inset Formula $i=\sigma(k)\Leftrightarrow k=\sigma^{-1}(i)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\varepsilon(\sigma^{-1})=-\varepsilon(\sigma)=\varepsilon(\sigma)\in\mathbb{Z}_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $A\in M_{n}(F),\ B\in M_{m}(F),\ C\in M_{n,m}(F)$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{cc}
+A & C\\
+0 & B
+\end{array}\right)=\det A\cdot\det B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f:M_{n}(F)\to F$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f(A)=\det\left(\begin{array}{cc}
+A & C\\
+0 & B
+\end{array}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $(B,C)$
+\end_inset
+
+ — фиксированы.
+ Эта штука является полилинейной формой.
+ Очевидно, что 
+\begin_inset Formula $f$
+\end_inset
+
+ — антисимметричная полилинейная форма столбцов матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f(A)=f(E)\det(A)=\det\left(\begin{array}{cc}
+E & C\\
+0 & B
+\end{array}\right)\det A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\det\left(\begin{array}{cc}
+E & 0\\
+C^{T} & B^{T}
+\end{array}\right)=(\text{аналогично})=\det B^{T}\cdot\det\left(\begin{array}{cc}
+E & 0\\
+C^{T} & E
+\end{array}\right)$
+\end_inset
+
+.
+ Ясно, что при помощи преобразования Гаусса 
+\begin_inset Formula $\left(\begin{array}{cc}
+E & 0\\
+C^{T} & E
+\end{array}\right)\sim\left(\begin{array}{cc}
+E & 0\\
+0 & E
+\end{array}\right)\Rightarrow\det\left(\begin{array}{cc}
+E & 0\\
+C^{T} & E
+\end{array}\right)=1$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula $\det\left(\begin{array}{cc}
+A & 0\\
+0 & B
+\end{array}\right)=\det A\cdot\det\left(\begin{array}{cc}
+E & C\\
+0 & B
+\end{array}\right)=\det A\cdot\det B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Из теоремы следует, что матрица вида 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{ccccc}
+\alpha & * & * & * & *\\
+0 & | & - & - & |\\
+0 & | & B &  & |\\
+0 & | &  &  & |\\
+0 & | & - & - & |
+\end{array}\right)=\alpha\cdot\det B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Имеем матрицу:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\det\left(\begin{array}{ccccccc}
+ &  &  & j\\
+/ & / & / & 0 & / & /\\
+/ & / & / & .. & / & /\\
+/ & / & / & \alpha & / & / & i\\
+/ & / & / & 0 & / & /\\
+/ & / & / & .. & / & /\\
+/ & / & / & 0 & / & /
+\end{array}\right)=(-1)^{j-1}\det\left(\begin{array}{ccccccc}
+\\
+0 & / & / & / & / & /\\
+.. & / & / & / & / & /\\
+\alpha & / & / & / & / & / & i\\
+0 & / & / & / & / & /\\
+.. & / & / & / & / & /\\
+0 & / & / & / & / & /
+\end{array}\right)=\\
+=(-1)^{i+j-2}\det\left(\begin{array}{ccccccc}
+\\
+\alpha & / & / & / & / & /\\
+0 & / & / & / & / & /\\
+0 & / & / & / & / & /\\
+0 & / & / & / & / & /\\
+0 & / & / & / & / & /\\
+0 & / & / & / & / & /
+\end{array}\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $C\in M_{n}(F)$
+\end_inset
+
+.
+ Минором 
+\begin_inset Formula $n-1$
+\end_inset
+
+-го порядка в позиции 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ называется 
+\begin_inset Formula $M_{ij}(C)=M_{ij}=$
+\end_inset
+
+ определитель матрицы, полученной из исходной вычеркиванием 
+\begin_inset Formula $i$
+\end_inset
+
+-той строки и 
+\begin_inset Formula $j$
+\end_inset
+
+-того столбца.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition*
+\begin_inset Formula $A_{ij}(C)=A_{ij}=(-1)^{i+j}\cdot M_{ij}$
+\end_inset
+
+ — алгебраическое дополнение позиции 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Следствие
+\series default
+: 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{ccccc}
+/ & / & 0 & / & /\\
+/ & / & .. & / & /\\
+/ & / & \alpha & / & /\\
+/ & / & .. & / & /\\
+/ & / & 0 & / & /
+\end{array}\right)=\alpha\cdot A_{ij}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+\det A=\sum_{i=1}^{n}a_{ij}A_{ij}=\sum_{i=1}^{n}a_{ji}A_{ji}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(для любого фиксированного 
+\begin_inset Formula $j$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+Заметим, что 
+\begin_inset Formula 
+\[
+a_{*j}=\left(\begin{array}{c}
+a_{1j}\\
+0\\
+..\\
+..\\
+0
+\end{array}\right)+\left(\begin{array}{c}
+0\\
+a_{2j}\\
+0\\
+..\\
+0
+\end{array}\right)+\left(\begin{array}{c}
+0\\
+0\\
+a_{3j}\\
+0\\
+0
+\end{array}\right)+...+\left(\begin{array}{c}
+0\\
+0\\
+..\\
+..\\
+a_{nj}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\det A=\sum_{i=1}^{n}\det\left(\begin{array}{ccccc}
+\text{с} & \text{т} & 0 & \text{о} & \text{л}\\
+\text{б} & \text{ц} & 0 & \text{ы} & \text{}\\
+\text{м} & \text{а} & a_{ij} & \text{т} & \text{р}\\
+\text{и} & \text{ц} & 0 & \text{ы}\\
+ &  & 0 &  & A
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Следствие: 
+\begin_inset Formula $j,k\in\{1,...,n\},\ A\in M_{n}(F)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{ij}A_{ik}=\begin{cases}
+\det A, & j=k\\
+0, & j\neq k
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Для 
+\begin_inset Formula $j=k$
+\end_inset
+
+ уже доказано.
+ Если 
+\begin_inset Formula $j\neq k$
+\end_inset
+
+, заменим 
+\begin_inset Formula $k$
+\end_inset
+
+-ый столбец на 
+\begin_inset Formula $j$
+\end_inset
+
+-ый, получим 
+\begin_inset Formula $B=(a_{*1},...,a_{*j},...,a_{*j},...,A_{*n})$
+\end_inset
+
+.
+ С одной стороны, определитель данной матрицы равен нулю.
+ С другой, разложим по 
+\begin_inset Formula $k$
+\end_inset
+
+-ому столбцу:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+0=\det B=\sum_{i=1}^{n}a_{ij}\underbrace{A_{ik}(B)}_{A_{ik}(A)}=\sum_{i=1}^{n}a_{ij}A_{ik}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Присоединенной к 
+\begin_inset Formula $A$
+\end_inset
+
+ называется матрица 
+\begin_inset Formula $A^{adj}$
+\end_inset
+
+: 
+\begin_inset Formula $(A^{adj})_{ij}=A_{ji}(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Например, 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+\alpha & \beta\\
+\gamma & \delta
+\end{array}\right)^{adj}=\left(\begin{array}{cc}
+\delta & -\gamma\\
+-\beta & \alpha
+\end{array}\right)^{T}=\left(\begin{array}{cc}
+\delta & -\beta\\
+-\gamma & \alpha
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+теперь 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+\alpha & \beta\\
+\gamma & \delta
+\end{array}\right)\left(\begin{array}{cc}
+\delta & -\beta\\
+-\gamma & \alpha
+\end{array}\right)=\left(\begin{array}{cc}
+\alpha\delta-\beta\gamma & 0\\
+0 & \alpha\delta-\beta\gamma
+\end{array}\right)=(\alpha\delta-\beta\gamma)E=\det A\cdot E
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $A\cdot A^{adj}=A^{adj}\cdot A=\det A\cdot E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Если 
+\begin_inset Formula $\det A\neq0$
+\end_inset
+
+, то 
+\begin_inset Formula $A^{-1}=\frac{1}{\det A}A^{adj}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+очевидно, ёпта!
+\end_layout
+
+\begin_layout Subsection
+Решение систем линейных уравнений при помощи определителя.
+\end_layout
+
+\begin_layout Theorem*
+(Формулы Крамера)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $A\in GL_{n}(F),\ b\in F^{n},\ $
+\end_inset
+
+ Пусть 
+\begin_inset Formula $\Delta=\det A.\ \Delta_{k}$
+\end_inset
+
+ — определитель матрицы, полученной из 
+\begin_inset Formula $A$
+\end_inset
+
+ заменой 
+\begin_inset Formula $k$
+\end_inset
+
+-ого столбца на столбец 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula 
+\[
+Ax=b\Leftrightarrow x=\left(\begin{array}{c}
+\nicefrac{\Delta_{1}}{\Delta}\\
+...\\
+\nicefrac{\Delta_{n}}{\Delta}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Delta_{k}=\sum_{i=1}^{n}b_{i}\cdot A_{ik}$
+\end_inset
+
+.
+ Матрица, определитель которой равен 
+\begin_inset Formula $\Delta_{k}$
+\end_inset
+
+ отличается от 
+\begin_inset Formula $A$
+\end_inset
+
+ только в 
+\begin_inset Formula $k$
+\end_inset
+
+-ом столбце, поэтому её алгебраическое дополнение 
+\begin_inset Formula $A_{ik}=A_{ik}(A)$
+\end_inset
+
+.
+ С другой стороны 
+\begin_inset Formula $Ax=b\Leftrightarrow x=A^{-1}b=\frac{1}{\det A}A^{adj}b$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x_{k}=\frac{1}{\Delta}(A_{1k},...,A_{nk})b=\frac{1}{\Delta}\sum_{i=1}^{n}b_{i}A_{ik}=\frac{\Delta_{k}}{\Delta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Минорный ранг матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+ размера 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ называется наибольший размер квадрата подматрицы в 
+\begin_inset Formula $A$
+\end_inset
+
+, определитель которой 
+\begin_inset Formula $\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+Минорный ранг 
+\begin_inset Formula $A$
+\end_inset
+
+ равен 
+\begin_inset Formula $\rk A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Если минорный ранг 
+\begin_inset Formula $=k\Rightarrow\exists$
+\end_inset
+
+ подматрица 
+\begin_inset Formula $k\times k$
+\end_inset
+
+, у которой строки линейно независимы, т.е.
+ 
+\begin_inset Formula $\det\neq0\Rightarrow$
+\end_inset
+
+ в матрице 
+\begin_inset Formula $\exists$
+\end_inset
+
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ штук линейно независимых строк, а следовательно, 
+\begin_inset Formula $\rk A\geq k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Обратно: Пусть ранг матрицы 
+\begin_inset Formula $A=k$
+\end_inset
+
+, то там есть 
+\begin_inset Formula $k$
+\end_inset
+
+ линейно независимых строк.
+ Возьмем (не квадратную!) подматрицу, состоящую из 
+\begin_inset Formula $k$
+\end_inset
+
+ линейно независимых строк.
+ Так как строчный ранг равен столбцовому, то матрица должна содержать и
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ линейно независимых столбцов.
+ Возьмем подматрицу на пересечении этих линейно независимых строк и столбцов.
+ Она квадратная, у нее все столбцы линейно независимы, следовательно, её
+ ранг
+\begin_inset Formula $\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Доказали, что минорный ранг 
+\begin_inset Formula $A\geq\rk A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Собственные числа и вектора
+\end_layout
+
+\begin_layout Standard
+Идея такова:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L:V\to V$
+\end_inset
+
+, 
+\begin_inset Formula $\dim V<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem*
+Выбрать базис 
+\begin_inset Formula $u=(u_{1},...,u_{n})$
+\end_inset
+
+ пространства 
+\begin_inset Formula $V$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $L_{u}$
+\end_inset
+
+ — диагональная.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $L_{u}=\left(\begin{array}{ccc}
+\lambda &  & 0\\
+ & ...\\
+0 &  & \lambda
+\end{array}\right)$
+\end_inset
+
+, то 
+\begin_inset Formula $L(u_{i})=\lambda_{i}u_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Ненулевой вектор 
+\begin_inset Formula $x\in V\backslash\{0\}$
+\end_inset
+
+ называется собственным вектором оператора 
+\begin_inset Formula $L$
+\end_inset
+
+, если 
+\begin_inset Formula $L(x)=\lambda x$
+\end_inset
+
+ для некоторого 
+\begin_inset Formula $\lambda\in F$
+\end_inset
+
+, при этом 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ называется собственным числом.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $L_{f}x_{f}=\lambda x_{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Собственный вектор матрицы, 
+\begin_inset Formula $A$
+\end_inset
+
+ если 
+\begin_inset Formula $Av=\lambda v$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\in F$
+\end_inset
+
+, 
+\begin_inset Formula $v\in F^{n}\backslash\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Av=\lambda v\Leftrightarrow(A-\lambda E)v=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists v\neq0$
+\end_inset
+
+, удовлетворяющее этому равенству 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ столбцы 
+\begin_inset Formula $(A-\lambda E)$
+\end_inset
+
+ линейно зависима 
+\begin_inset Formula $\Leftrightarrow\det(A-\lambda E)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Если 
+\begin_inset Formula $A\in M_{n}(F)$
+\end_inset
+
+, то характеристический многочлен 
+\begin_inset Formula $A$
+\end_inset
+
+ — 
+\begin_inset Formula $\chi_{A}(t)=\det(A-tE)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $L:V\to V,\ f$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $\chi_{L}(t)=\det(L_{f}-tE)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+Характеристический многочлен оператора не зависит от 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $g,f$
+\end_inset
+
+ — базисы 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $L_{g}=C^{-1}L_{f}C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\det(L_{g}-tE)=\det(C^{-1}L_{f}C-tE)=\det(C^{-1}(L_{f}-tE)C)=(\det C)^{-1}(\det(L_{f}-tE))(\det C)=\det(L_{f}-tE)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+Собственные числа матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+ (оператора 
+\begin_inset Formula $A$
+\end_inset
+
+) — корни характеристического многочлена 
+\begin_inset Formula $\chi_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $\ker(A-\lambda I)=V_{\lambda}$
+\end_inset
+
+ — собственное подпространство соответствующее 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, где 
+\begin_inset Formula $I$
+\end_inset
+
+ — тождественный оператор.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition*
+Кратность 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ в многочлене 
+\begin_inset Formula $\chi_{A}$
+\end_inset
+
+ называется алгебраической кратностью 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $\dim V_{\lambda}$
+\end_inset
+
+ — геометрическая кратность 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Заметим, что 
+\begin_inset Formula $\deg\chi_{A}=n$
+\end_inset
+
+, где 
+\begin_inset Formula $A$
+\end_inset
+
+ — матрица 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ или оператор в 
+\begin_inset Formula $n$
+\end_inset
+
+-мерном пространстве.
+\end_layout
+
+\begin_layout Theorem*
+(о линейной независимости собственных векторов)
+\end_layout
+
+\begin_layout Theorem*
+Собственные вектора, соответствующие различным собственным числам, линейно
+ независимы.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\lambda_{1},...,\lambda_{k}$
+\end_inset
+
+ — различные собственные числа.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x_{1},...,x_{k}$
+\end_inset
+
+ — соответсвующие собственные вектора, т.е.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Ax_{i}=\lambda_{i}x_{i}$
+\end_inset
+
+ или 
+\begin_inset Formula $\lambda_{i}\neq\lambda_{j}$
+\end_inset
+
+ при 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A(\sum_{i=1}^{k}x_{i}\alpha_{i})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=1}^{k}Ax_{i}\alpha_{i}=\sum_{i=1}^{k}x_{i}\lambda_{i}\alpha_{i}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Домножим первое уравнение на 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+ и из обоих уравнений получим 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{k}x_{i}\alpha_{i}(\lambda_{k}-\lambda_{i})=0\Leftrightarrow\sum_{i=1}^{k-1}x_{i}\alpha_{i}(\lambda_{k}-\lambda_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Введем индукцию по 
+\begin_inset Formula $k$
+\end_inset
+
+, предполагая, что вектора линейно независимы.
+ База: 
+\begin_inset Formula $k=1$
+\end_inset
+
+: 
+\begin_inset Formula $x_{1}\alpha_{1}=0$
+\end_inset
+
+ и так как 
+\begin_inset Formula $x_{1}\neq0$
+\end_inset
+
+ (собственный вектор не равен нулю), то 
+\begin_inset Formula $\alpha_{1}=0$
+\end_inset
+
+.
+ По индукционному предположению 
+\begin_inset Formula $\alpha_{i}\underbrace{(\lambda_{k}-\lambda_{i})}_{\neq0}=0\ \forall i=1,...k-1\Rightarrow\alpha_{i}=0\ \ \forall i=1,...,k-1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\alpha_{k}\cdot\underbrace{x_{k}}_{\neq0}=0\Rightarrow\alpha_{k}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+Оператор диагонализуем (то есть 
+\begin_inset Formula $\exists$
+\end_inset
+
+ базис, в котором его матрица диагональна) тогда и только тогда, когда существуе
+т базис из собственных векторов.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие: 
+\series default
+(достаточное условие диагонализуемости): Если 
+\begin_inset Formula $\chi_{A}$
+\end_inset
+
+ имеет 
+\begin_inset Formula $n$
+\end_inset
+
+ различных корней в 
+\begin_inset Formula $F$
+\end_inset
+
+, то оператор 
+\begin_inset Formula $A$
+\end_inset
+
+ диагонализуем.
+ 
+\end_layout
+
+\begin_layout Proof
+По теореме имеем 
+\begin_inset Formula $n$
+\end_inset
+
+ линейно независимых собственных векторов, они образуют базис в 
+\begin_inset Formula $n$
+\end_inset
+
+-мерном пространстве.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие
+\series default
+: 
+\begin_inset Formula $F$
+\end_inset
+
+ — алгебраически замкнуто и 
+\begin_inset Formula $\chi_{A}$
+\end_inset
+
+ не имеет кратных корней, то 
+\begin_inset Formula $A$
+\end_inset
+
+ — диагонализуем.
+\end_layout
+
+\begin_layout Definition*
+Матрица, в которой по диагонали стоит одно и то же число 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, над диагональю стоят единички, а остальные нули, называется жордановым
+ (ящиком) блоком.
+\end_layout
+
+\begin_layout Definition*
+Жордановой формой называется блочно-диагональная матрица, на диагонали которой
+ стоят жордановы блоки (не обязательно с одинаковыми 
+\begin_inset Formula $\lambda$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Theorem*
+(жорданова форма) 
+\begin_inset Formula $\dim V=n$
+\end_inset
+
+, 
+\begin_inset Formula $F$
+\end_inset
+
+ — алгебраически замкнуто, 
+\begin_inset Formula $\forall A:V\to V$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists$
+\end_inset
+
+ базис 
+\begin_inset Formula $u$
+\end_inset
+
+ пространства 
+\begin_inset Formula $V$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $A_{u}$
+\end_inset
+
+ имеет жорданову форму.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise*
+(на бонусные баллы)
+\end_layout
+
+\begin_layout Exercise*
+1) 
+\begin_inset Formula $p,q\in F[t],\ \gcd(p,q)=1$
+\end_inset
+
+, 
+\begin_inset Formula $L:V\to V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise*
+Доказать, что 
+\begin_inset Formula $\ker(p(L)\cdot q(L))=\ker(p(L))\bigoplus\ker(q(L))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $R$
+\end_inset
+
+ называется 
+\begin_inset Formula $F$
+\end_inset
+
+-алгеброй, если
+\end_layout
+
+\begin_layout Definition*
+1) 
+\begin_inset Formula $R$
+\end_inset
+
+ — кольцо с единицей.
+\end_layout
+
+\begin_layout Definition*
+2) 
+\begin_inset Formula $R$
+\end_inset
+
+ — векторное пространство над 
+\begin_inset Formula $F$
+\end_inset
+
+ с той же операцией сложения.
+\end_layout
+
+\begin_layout Definition*
+3) 
+\begin_inset Formula $\forall\alpha\in F,\ r,s\in R:\ \alpha(rs)=(\alpha r)s=r(\alpha s)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Примерами алгебр является, например, само поле 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+1) 
+\begin_inset Formula $F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+2) 
+\begin_inset Formula $F[x_{1},...,x_{n}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+3) 
+\begin_inset Formula $M_{n}(F)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+4) 
+\begin_inset Formula $End(V)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $V$
+\end_inset
+
+ — векторное пространство над 
+\begin_inset Formula $F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $F[t]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $L\in End(V)=\{\text{лин.отобр}\ \ V\to V\}$
+\end_inset
+
+ (эндоморфизм).
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $(L+M)(v)=L(v)+M(v)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $LM(v)=L(M(v))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $(\alpha L)(v)=\alpha\cdot L(v)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Очевидно выполнена аксиома 
+\begin_inset Formula $\alpha(LM)=(\alpha L)M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+(универсальное свойство кольца многочленов)
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $R$
+\end_inset
+
+ — 
+\begin_inset Formula $F$
+\end_inset
+
+-алгебра (
+\begin_inset Formula $F$
+\end_inset
+
+ — поле) (возможно, алгебра некоммутативна).
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $\forall r\in R\ \exists!\ \varepsilon_{r}:F[t]\to R$
+\end_inset
+
+ — гомоморфизм алгебр, для которого 
+\begin_inset Formula $\varepsilon_{r}(t)=r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Положим 
+\begin_inset Formula $\varepsilon_{r}(\alpha_{n}t^{n}+...+\alpha_{0})=\alpha_{n}r^{n}+...+\alpha_{1}r+\alpha\cdot1_{R}$
+\end_inset
+
+ (единица кольца).
+\end_layout
+
+\begin_layout Proof
+Другими словами, 
+\begin_inset Formula $\varepsilon_{p}=p(r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Легко проверить, что 
+\begin_inset Formula $\varepsilon_{r}$
+\end_inset
+
+ — гомоморфизм колец, 
+\begin_inset Formula $F$
+\end_inset
+
+-линейное отображение, и 
+\begin_inset Formula $\varepsilon_{r}(t)=r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Единственность: 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ — гомоморфизм алгебр, такой, что 
+\begin_inset Formula $\varphi(t)=r$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\varphi(1_{F})=1_{R},\ \varphi(\alpha)=\varphi(\alpha\cdot1_{F})=\alpha\cdot\varphi(1_{F})=\alpha\cdot(1_{R})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\varphi(t^{n})=\varphi(t\cdot t^{n-1})=r\cdot\varphi(t^{n-1})$
+\end_inset
+
+ по индукционному предположению 
+\begin_inset Formula $=r\cdot r^{n-1}=r^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\varphi(\sum_{k=0}^{n}\alpha_{k}t^{k})=\sum_{k=0}^{n}\alpha_{k}\varphi(t_{k})=\sum_{k=0}^{n}\alpha_{k}r^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+где 
+\begin_inset Formula $r^{0}=1_{R},\ t^{0}=1_{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Таким образом, 
+\begin_inset Formula $\varphi=\varepsilon_{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $R$
+\end_inset
+
+ — 
+\begin_inset Formula $F$
+\end_inset
+
+-алгебра, 
+\begin_inset Formula $r\in R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Минимальным многочленом элемента 
+\begin_inset Formula $r$
+\end_inset
+
+ называется 
+\begin_inset Formula $p:\ker\varepsilon_{r}=p\cdot F[t]$
+\end_inset
+
+.
+ То есть минимальный многочлен определен с точностью до умножения на константу
+ (элемент поля).
+\end_layout
+
+\begin_layout Exercise*
+(на бонусные баллы):
+\end_layout
+
+\begin_layout Exercise*
+2) Пусть 
+\begin_inset Formula $B:V\to V$
+\end_inset
+
+ линейный оператор, 
+\begin_inset Formula $B^{n}=0$
+\end_inset
+
+.
+ Доказать, что ненулевые элементы 
+\begin_inset Formula $v,\ B(v),\ B^{2}(v),...,B^{n-1}(v)$
+\end_inset
+
+ линейно независимые.
+ (
+\begin_inset Formula $v\in V$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для прикола возведем в степень такую матрицу:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccc}
+0 & 1 &  &  & 0\\
+ & 0 & 1\\
+ &  & 0 & 1\\
+ &  &  & 0 & 1\\
+0 &  &  &  & 0
+\end{array}\right)^{k}=\left(\begin{array}{ccccc}
+0 & 0 & 1 &  & 0\\
+ &  &  & 1\\
+ &  &  &  & 1\\
+ & 0 &  &  & 0\\
+ &  &  &  & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+При этом единицы сдвинулись вправо на 
+\begin_inset Formula $k$
+\end_inset
+
+ позиций.
+\end_layout
+
+\begin_layout Standard
+Докажем это:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $J=J_{n,0},\ Je_{i}=e_{i-1},\ i>1$
+\end_inset
+
+, где 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ — 
+\begin_inset Formula $i$
+\end_inset
+
+-тый столбец единичной матрицы.
+ Если итерировать данную операцию, получим 
+\begin_inset Formula 
+\[
+J^{k}e_{i}=\begin{cases}
+e_{i-k} & \text{при}\ i>k\\
+0 & \text{при}\ i\leq k
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если пространство конечномерное, то мы рано или поздно получим ноль.
+\end_layout
+
+\begin_layout Standard
+С помощью этой фигни докажем теорему
+\end_layout
+
+\begin_layout Theorem*
+(Кэли-Гамильтона)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\chi_{L}(L)=0$
+\end_inset
+
+, где 
+\begin_inset Formula $L:V\to V$
+\end_inset
+
+ — линейный оператор в конечномерном пространстве 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Предположим, что наше поле алгебраически замкнуто.
+ Для этого нужно знать утверждение, нужно знать, что любое поле содержится
+ в алгебраически замкнутом поле.
+ Как построить такое поле? Берем неприводимый многочлен, присоединяем его
+ корень к полю: 
+\begin_inset Formula $F[t]/(p)$
+\end_inset
+
+.
+ (это было отвлечение).
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Lemma*
+\begin_inset Formula $\forall$
+\end_inset
+
+ поля 
+\begin_inset Formula $F$
+\end_inset
+
+ существует алгебраически замкнутое поле 
+\begin_inset Formula $\overline{F}$
+\end_inset
+
+, содержащее 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Будет выведено из леммы Цорна и аксиомы выбора.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Так как 
+\begin_inset Formula $M_{n}(F)\subseteq M_{n}(\overline{F})$
+\end_inset
+
+, то можно считать, что 
+\begin_inset Formula $F=\overline{F}$
+\end_inset
+
+ — алгебраически замкнуто.
+\end_layout
+
+\begin_layout Proof
+Тогда 
+\begin_inset Formula $\exists$
+\end_inset
+
+ базис 
+\begin_inset Formula $u$
+\end_inset
+
+ пространства 
+\begin_inset Formula $V$
+\end_inset
+
+, такой, что существует жорданов блок 
+\begin_inset Formula 
+\[
+L_{u}=\left(\begin{array}{cccccccccc}
+J_{k_{1},\lambda_{1}}\\
+ & .\\
+ &  & .\\
+ &  &  & .\\
+ &  &  &  & .\\
+ &  &  &  &  & .\\
+ &  &  &  &  &  & .\\
+ &  &  &  &  &  &  & .\\
+ &  &  &  &  &  &  &  & .\\
+ &  &  &  &  &  &  &  &  & J_{k_{m},\lambda_{m}}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Так как 
+\begin_inset Formula $\varphi:End(V)\to M_{n}(F)$
+\end_inset
+
+, где 
+\begin_inset Formula $\varphi(L)=L_{u}$
+\end_inset
+
+ 
+\begin_inset Formula $(n=\dim V)$
+\end_inset
+
+ является изоморфизмом алгебр, то 
+\begin_inset Formula $p(L_{u})=p(L)_{u}$
+\end_inset
+
+.
+ Поэтому достаточно доказать, что 
+\begin_inset Formula $\chi_{L}(L_{u})=0$
+\end_inset
+
+, что можно перезаписать как 
+\begin_inset Formula $\chi_{L_{u}}(L_{u})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\chi_{L_{u}}(t)=\det\left(\begin{array}{cccccccccc}
+J_{k_{1},\lambda_{1}}-tE\\
+ & .\\
+ &  & .\\
+ &  &  & .\\
+ &  &  &  & .\\
+ &  &  &  &  & .\\
+ &  &  &  &  &  & .\\
+ &  &  &  &  &  &  & .\\
+ &  &  &  &  &  &  &  & .\\
+ &  &  &  &  &  &  &  &  & J_{k_{m},\lambda_{m}}-tE
+\end{array}\right)=\prod_{i=1}^{m}(J_{k_{i},\lambda_{i}}-tE)=\prod_{i=1}^{m}(\lambda_{i}-t)^{k_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Видимо, уже доказано, что 
+\begin_inset Formula 
+\[
+p\left(\begin{array}{ccccc}
+A_{1}\\
+ & .\\
+ &  & .\\
+ &  &  & .\\
+ &  &  &  & A_{m}
+\end{array}\right)=\left(\begin{array}{ccccc}
+p(A_{1})\\
+ & .\\
+ &  & .\\
+ &  &  & .\\
+ &  &  &  & p(A_{m})
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+где 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ — блоки.
+\end_layout
+
+\begin_layout Proof
+Осталось доказать, что 
+\begin_inset Formula $\chi_{L}(J_{k_{i},\lambda_{i}})=0$
+\end_inset
+
+.
+ Действительно, если мы возьмем 
+\begin_inset Formula $(\lambda_{i}E-J_{k_{i},\lambda_{i}})^{k}=\left(\begin{array}{ccccc}
+0 & 1\\
+ & 0 & .\\
+ &  & . & .\\
+ &  &  & 0 & 1\\
+ &  &  &  & 0
+\end{array}\right)^{k_{i}}(-1)^{k_{i}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Введем обозначение: символом 
+\begin_inset Formula $\varphi_{L}$
+\end_inset
+
+ обозначается минимальный многочлен оператора 
+\begin_inset Formula $L$
+\end_inset
+
+ (многочлен наименьшей степени, которая аннулирует оператор 
+\begin_inset Formula $L$
+\end_inset
+
+: 
+\begin_inset Formula $\varphi_{L}(L)=0$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие: 
+\series default
+
+\begin_inset Formula $\chi_{L}(t)\vdots\varphi_{L}(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ — собственное число оператора 
+\begin_inset Formula $L$
+\end_inset
+
+, то 
+\begin_inset Formula $\varphi_{L}(\lambda_{i})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Предположим, что 
+\begin_inset Formula $F$
+\end_inset
+
+ алгебраически замкнуто.
+ 
+\begin_inset Formula $\varphi_{L}(t)=(t-\alpha_{1})\cdot...\cdot(t-\alpha_{h})$
+\end_inset
+
+, где 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ различны.
+\end_layout
+
+\begin_layout Proof
+Посмотрим, как данный многочлен воздействует на жорданов блок:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{multline*}
+\varphi_{L}(J_{k,\lambda})=\left(\begin{array}{ccccc}
+\lambda-\alpha_{1} & 1\\
+ & . & .\\
+ &  & . & .\\
+ &  &  & . & 1\\
+ &  &  &  & \lambda-\alpha_{1}
+\end{array}\right)\cdot...\cdot\left(\begin{array}{ccccc}
+\lambda-\alpha_{h} & 1\\
+ & . & .\\
+ &  & . & .\\
+ &  &  & . & 1\\
+ &  &  &  & \lambda-\alpha_{h}
+\end{array}\right)=\\
+\left(\begin{array}{ccccc}
+\prod_{i=1}^{n}(\lambda-\alpha_{i}) & / & / & / & /\\
+ & . & / & / & /\\
+ &  & . & / & /\\
+ &  &  & . & /\\
+ &  &  &  & \prod_{i=1}^{n}(\lambda-\alpha_{i})
+\end{array}\right)\neq0
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+если 
+\begin_inset Formula $\lambda\neq\alpha_{i}\;\forall i$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula $\varphi_{L}(\lambda)...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие: 
+\series default
+Если 
+\begin_inset Formula $\chi_{L}(t)=\prod_{i=1}^{n}(\lambda_{i}-t)^{k_{i}}$
+\end_inset
+
+, то 
+\begin_inset Formula $\varphi_{L}=\prod_{i=1}^{n}(\lambda_{i}-t)^{l_{i}}$
+\end_inset
+
+, для некоторых 
+\begin_inset Formula $1<l_{i}<k_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{cccc}
+1 & 1 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Для неё: 
+\begin_inset Formula $\chi_{A}(t)=(1-t)^{4},\ \varphi_{A}(t)=(1-t)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Если 
+\begin_inset Formula $\chi_{L}(t)=\prod(\lambda_{i}-t)^{k_{i}}$
+\end_inset
+
+, то 
+\begin_inset Formula $\ker(L-\lambda_{i}I)^{k_{i}}$
+\end_inset
+
+ называется корневым подпространством и обозначается 
+\begin_inset Formula $R_{\lambda_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $(V_{\lambda_{i}}=\ker(L-\lambda_{i}I))$
+\end_inset
+
+ — собственное подпространство.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Мы коротко заканчиваем тему жордановых формул.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $J_{k,0}^{l}=\left(\begin{array}{ccccc}
+0 &  & l-\text{позиция}\\
+ & 0 &  & ...\\
+ &  & 0 &  & 1\\
+ &  &  & 0\\
+ &  &  &  & 0
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J_{k,\lambda}^{l}=(\lambda E+J_{k,0})^{l}=\sum_{i=0}^{l}C_{l}^{i}J_{k,0}^{i}\lambda^{l-i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{J_{k,0}}:=\sum_{i=0}^{k-1}\frac{1}{i!}J_{k,0}^{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{J_{k,\lambda}}=e^{\lambda E+J_{k,0}}=e^{\lambda E}\cdot e^{J_{k,0}}=e^{\lambda}\cdot E\cdot\sum_{i=0}^{k-1}\frac{1}{i!}J_{k,0}^{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если у нас есть 
+\begin_inset Formula $L:V\to V,\ V$
+\end_inset
+
+ — векторное пространство над замкнутым полем 
+\begin_inset Formula $F$
+\end_inset
+
+, то разложим характеристический многочлен в линейные множители: 
+\begin_inset Formula $\chi_{L}(t)=\prod_{i=1}^{m}(\lambda_{i}-t)^{k_{i}},\ \ \lambda_{i}\neq\lambda_{j}$
+\end_inset
+
+ при 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{\lambda_{i}}=\ker(L-\lambda_{i}I)^{k_{i}}=\ker(L-\lambda_{i}I)^{r}\ \forall r\geq k_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V_{\lambda_{i}}=\ker(L-\lambda_{i}I)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula 
+\[
+V=\bigoplus_{i=1}^{m}R_{\lambda_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $u_{1},...,u_{n}$
+\end_inset
+
+ — жорданов базис оператора 
+\begin_inset Formula $L$
+\end_inset
+
+, тогда 
+\begin_inset Formula $(L-\lambda_{1}I)u_{1}=0$
+\end_inset
+
+, если 
+\begin_inset Formula $k_{1}>1$
+\end_inset
+
+, то 
+\begin_inset Formula $(L-\lambda_{1}I)u_{2}=\varepsilon_{2}u_{1}$
+\end_inset
+
+,...,
+\begin_inset Formula $(L-\lambda_{1}I)u_{k_{1}}=\varepsilon_{k_{1}}u_{k_{1}-1}$
+\end_inset
+
+ или 
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+L_{u}=\left(\begin{array}{cccccccccccc}
+\lambda_{1} & \varepsilon\\
+ & \lambda_{1} & \varepsilon\\
+ &  & \lambda_{1}\\
+ &  &  & \lambda_{2}\\
+ &  &  &  & .\\
+ &  &  &  &  & .\\
+ &  &  &  &  &  & .\\
+ &  &  &  &  &  &  & .\\
+ &  &  &  &  &  &  &  & .\\
+ &  &  &  &  &  &  &  &  & .\\
+ &  &  &  &  &  &  &  &  &  & .\\
+ &  &  &  &  &  &  &  &  &  &  & .
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+И из всего этого следует, что 
+\begin_inset Formula $(L-\lambda_{1}I)^{k_{1}}u_{j}=0\ \forall j=1,...,k$
+\end_inset
+
+, Таким образом, 
+\begin_inset Formula $u_{1},...,u_{k_{1}}\in R_{\lambda_{1}}$
+\end_inset
+
+.
+ Аналогично 
+\begin_inset Formula $u_{k_{1}+1},...,u_{k_{1}+k_{2}}\in R_{\lambda_{2}}$
+\end_inset
+
+ и так далее.
+ Поэтому 
+\begin_inset Formula $V=R_{\lambda_{1}}+...+R_{\lambda_{m}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Многочлен 
+\begin_inset Formula $\underbrace{(t-\lambda_{i})^{k_{i}}}_{p(t)}$
+\end_inset
+
+ взаимно прост с 
+\begin_inset Formula $\underbrace{\prod_{j\neq i}(t-\lambda_{j})^{k_{j}}}_{q(t)}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists r,s:\ r(t)p(t)+q(t)s(t)=1$
+\end_inset
+
+, откуда 
+\begin_inset Formula $r(L)p(L)+q(L)s(L)=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $x\in R_{\lambda_{i}}\cap\sum_{j\neq i}R_{\lambda_{j}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p(L)(x)=(L-\lambda_{i}I)^{k_{i}}(x)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Затем 
+\begin_inset Formula $x=\sum_{j\neq i}x^{(j)},x^{(j)}\in R_{\lambda_{j}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(L-\lambda_{j}I)^{k_{j}}(x^{(j)})=0\Rightarrow q(L)(x^{(j)})=0\ \forall j\neq i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $q(L)(x)=0:\ r(L)p(L)(x)+s(L)q(L)(x)=I(x)=x\Rightarrow x=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Доказали, что 
+\begin_inset Formula $R_{\lambda_{i}}\cap\sum_{j\neq i}R_{\lambda_{j}}=\{0\}$
+\end_inset
+
+, следовательно, сумма 
+\begin_inset Formula $R_{\lambda_{n}}$
+\end_inset
+
+ прямая.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A:=(L-\lambda_{i}I)|_{R_{\lambda_{i}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A^{k_{i}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $k=k_{i}$
+\end_inset
+
+, то 
+\begin_inset Formula $A^{k}=0$
+\end_inset
+
+, так как 
+\begin_inset Formula $Ax=\lambda x$
+\end_inset
+
+, 
+\begin_inset Formula $A^{2}x=A(\lambda x)=\lambda A(x)=\lambda^{2}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+В это месте я задолбался.
+ To be continued...
+\end_layout
+
+\begin_layout Standard
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][]
+\end_layout
+
+\begin_layout Lemma*
+Если 
+\begin_inset Formula $A^{k}=0$
+\end_inset
+
+, то 
+\begin_inset Formula $x,Ax,...,A^{m}x$
+\end_inset
+
+, не равные нулю, линейно независимы.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $h$
+\end_inset
+
+ — наименьшее из 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $A^{h}x=0$
+\end_inset
+
+.
+ Возьмем сумму 
+\begin_inset Formula $\sum_{i=0}^{m}A^{i}x\alpha_{i}=0$
+\end_inset
+
+.
+ Применяем 
+\begin_inset Formula $A^{h-1}$
+\end_inset
+
+.
+ Получаем 
+\begin_inset Formula $\sum_{i=0}^{m}\underbrace{A^{i+h-1}}_{=0\ i\geq1}x\cdot\alpha_{i}=0\Rightarrow A^{h-1}\alpha_{0}=0\Rightarrow\alpha_{0}=0$
+\end_inset
+
+, дальше по индукции.
+\end_layout
+
+\begin_layout Subsection
+Пространства со скалярным произведением
+\end_layout
+
+\begin_layout Definition*
+Пусть 
+\begin_inset Formula $V$
+\end_inset
+
+ — векторное пространство, не обязательно конечномерное, над 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Симметричная билинейная форма 
+\begin_inset Formula $B:V\times V\to R$
+\end_inset
+
+ называется евклидовым скалярным произведением, если она положительно определена
+, т.е.
+ 
+\begin_inset Formula $B(x,x)>0\ \forall x\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Введем обозначения: вместо 
+\begin_inset Formula $B(x,y)$
+\end_inset
+
+ пишут 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ или 
+\begin_inset Formula $(x,y)_{B}$
+\end_inset
+
+ или 
+\begin_inset Formula $(x,y)_{1}$
+\end_inset
+
+ если их несколько.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+1) 
+\begin_inset Formula $(a,b)=|a|\cdot|b|\cdot\cos(\angle a,b)$
+\end_inset
+
+ в геометрии
+\end_layout
+
+\begin_layout Example*
+2) В 
+\begin_inset Formula $\mathbb{R}_{n}:\ (x,y)=x^{T}y=\sum_{i=1}^{n}x_{i}y_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+3) Там же 
+\begin_inset Formula $(x,y)_{\text{г}}=x^{T}\text{г}y$
+\end_inset
+
+, где 
+\begin_inset Formula $\text{г}\in M_{n}(\mathbb{R})$
+\end_inset
+
+ и все собственные числа 
+\begin_inset Formula $\text{г}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+4) Странное скалярное произведение: 
+\begin_inset Formula $V=C([a,b])$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(f,g)=\int_{a}^{b}f(x)g(x)\rho(x)dx$
+\end_inset
+
+, где 
+\begin_inset Formula $\rho(x)>0\ \forall x\in(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Если 
+\begin_inset Formula $f=(f_{1},...,f_{n})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $(x,y)=x_{f}^{T}\Gamma_{f}y_{f}$
+\end_inset
+
+ — матрица билинейной формы в базисе 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccc}
+(f_{1},f_{1})\\
+ & .\\
+ &  & .\\
+ &  &  & .\\
+ &  &  &  & (f_{n},f_{n})
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+— матрица Грама скалярного произведения в базисе 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ обозначатеся 
+\begin_inset Formula $\Gamma_{f}$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition*
+\begin_inset Formula $B:V\times V\to C$
+\end_inset
+
+.
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ называется полуторалинейной, если она линейна по II аргументу и 
+\begin_inset Formula $B(x+y,z)=B(x,z)+B(y,z),\ B(x\alpha,z)=\bar{\alpha}B(x,z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $B$
+\end_inset
+
+ называется эрмитово-симметричной (Степанов забыл, как эта хрень нормально
+ называется), если 
+\begin_inset Formula $B(x,y)=\overline{B(y,x)}$
+\end_inset
+
+.
+ Отсюда следует, что 
+\begin_inset Formula $B(x,x)=\overline{B(x,x)}\Rightarrow B(x,x)\in\mathbb{R}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition*
+Эрмитово симметричная форма 
+\begin_inset Formula $B$
+\end_inset
+
+ называется положительно определенной, если 
+\begin_inset Formula $B(x,x)>0\ \forall x\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Эрмитово скалярное произведение удовлетворяет всем условиям из предыдущего
+ определения и определяется как:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition*
+\begin_inset Formula $B$
+\end_inset
+
+ называется эрмитовым (унитарным) скалярным произведением, если она полуторалине
+йна, эрмитово симметрична и положительно определена!
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example*
+Над 
+\begin_inset Formula $\mathbb{C}^{n}:\ (x,y)=\overline{x^{T}}\cdot y$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $(-,-)$
+\end_inset
+
+ — эрмитово скалярное произведение на 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(x,y)=\left(\sum_{i=1}^{n}f_{i}\alpha_{i},\sum_{j=1}^{n}f_{j}\beta_{j}\right)=\sum_{i,j=1}^{n}\overline{\alpha_{i}}\left(f_{i},f_{j}\right)\beta_{j}=\overline{x}_{f}^{T}\left(\begin{array}{ccccc}
+\\
+\\
+ &  & (f_{i},f_{j})\\
+\\
+\\
+\end{array}\right)y_{f}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $(x,y)=\overline{x}_{f}^{T}\Gamma_{f}y_{f}$
+\end_inset
+
+ для эрмитора скалярного произведения (доказательство выше).
+\end_layout
+
+\begin_layout Standard
+Определим норму: 
+\begin_inset Formula $||x||=\sqrt{(x,x)}\in\mathbb{R}_{\geq0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(Неравенство Коши-Буняковского-Шварца)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $(-,-)$
+\end_inset
+
+ — эрмитово скалярное произведение.
+ Тогда 
+\begin_inset Formula $|(x,y)|^{2}\leq(x,x)\cdot(y,y)$
+\end_inset
+
+, или, что то же самое, 
+\begin_inset Formula $|(x,y)|\leq||x||\cdot||y||$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{multline*}
+0\leq(x-\lambda y,x-\lambda y)=(x,x)+|\lambda|^{2}\cdot(y,y)-(\lambda(x,y)-\overline{\lambda}\overline{(x,y)})=\\
+=(x,x)+\frac{|(y,x)|^{2}}{(y,y)^{2}}(y,y)-\left(\frac{|(y,x)|^{2}}{(y,y)}+\frac{|(y,x)|^{2}}{(y,y)}\right)=(x,x)-\frac{|(y-x)|^{2}}{(y,y)}\geq0
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(так как 
+\begin_inset Formula $\lambda\overline{\lambda}=|\lambda|^{2}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+Подставим 
+\begin_inset Formula $\lambda=\frac{(y,x)}{(y,y)}$
+\end_inset
+
+, получаем 
+\begin_inset Formula $(x,x)(y,y)\geq|(y,x)|^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+В вещественном случае получится, конечно же, 
+\begin_inset Formula $(y,y)\lambda^{2}-2\lambda(x,y)+(x,x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+(для евклидова пространства) 
+\begin_inset Formula $\angle(a,b)=\arccos\frac{(a,b)}{||a||\cdot||b||}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+(Неравенство треугольника)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $||x+y||\leq||x||+||y||$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $||x+y||\leq||x||+||y||\Leftrightarrow(x+y,x+y)\leq||x||^{2}+2||x||\cdot||y||+||y||^{2}$
+\end_inset
+
+, и, одновременно, 
+\begin_inset Formula $(x+y,x+y)=||x||^{2}+||y||^{2}+(x,y)+(y,x)\Leftrightarrow(x,y)+\overline{(x,y)}\leq2||x||^{2}\cdot||y||^{2}$
+\end_inset
+
+, так как 
+\begin_inset Formula $Re(x,y)\leq|(x,y)|\leq||x||\cdot||y||$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+\begin_inset Formula $v_{1},...,v_{k}\in V\backslash\{0\},\ (v_{i},v_{j})=0\ \forall i\neq j$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $v_{1},...,v_{k}$
+\end_inset
+
+ линейно независим.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=1}^{k}v_{i}\alpha_{i}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+0\neq(v_{j},v_{j})\alpha_{j}=\sum_{i=1}^{k}\underbrace{(v_{j},v_{i})}_{=0\ i\neq j}\alpha_{i}=0\Rightarrow\alpha_{j}=0\ \forall j
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(ортогонализация Грама-Шмидта)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $f_{1},..,f_{k}\in V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $g_{1}=f_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $g_{2}=f_{2}-\frac{(g_{1},f_{2})}{(g_{1},g_{1})}g_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+....
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $g_{k}=f_{k}-\sum_{i=1}^{k-1}\frac{(g_{i},f_{k})}{(g_{i},g_{i})}g_{i}$
+\end_inset
+
+, где 
+\begin_inset Formula $(g_{i}\neq0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+Тогда:
+\end_layout
+
+\begin_layout Theorem*
+1) 
+\begin_inset Formula $(g_{i},g_{j})=0\ \forall i\neq j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+2) 
+\begin_inset Formula $<f_{1},...,f_{m}>=<g_{1},...,g_{m}>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+3) Если 
+\begin_inset Formula $f_{1},...,f_{m}$
+\end_inset
+
+ линейно независимы, то 
+\begin_inset Formula $g_{1},...,g_{m}$
+\end_inset
+
+ тоже линейно независимы, в частности, ненулевые.
+ 
+\end_layout
+
+\begin_layout Theorem*
+4) Если 
+\begin_inset Formula $f_{m}\in<f_{1},...,f_{m-1}>,$
+\end_inset
+
+ то 
+\begin_inset Formula $g_{m}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+5) Если 
+\begin_inset Formula $f_{1},...,f_{k}$
+\end_inset
+
+ — система образующих для 
+\begin_inset Formula $V$
+\end_inset
+
+, то ненулевые из 
+\begin_inset Formula $g_{1},...,g_{k}$
+\end_inset
+
+ будут образовывать базис.
+\end_layout
+
+\begin_layout Theorem*
+6) Если 
+\begin_inset Formula $f_{1},...,f_{k}$
+\end_inset
+
+ — базис, то 
+\begin_inset Formula $g_{1},...,g_{k}$
+\end_inset
+
+ — ортогональный базис.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) Индукция по 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\begin_inset Formula $k=1$
+\end_inset
+
+, доказывать нечего.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(g_{k},g_{j})=(f_{k},g_{j})-\sum_{i=1}^{k-1}\frac{(f_{k},g_{i})}{(g_{i},g_{i})}(g_{i},g_{i})=(f_{k},g_{j})-\frac{(f_{k},g_{j})}{(g_{j},g_{j})}(g_{j},g_{j})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+2,3) Положим 
+\begin_inset Formula $\alpha_{ij}=\frac{(g_{i},f_{j})}{(g_{i},g_{i})}$
+\end_inset
+
+.
+ Тогда неравенства можно переписать в виде:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(f_{1},...,f_{k})=(g_{1},...g_{k})\left(\begin{array}{ccccc}
+1\\
+ & . &  & \alpha_{ij}\\
+ &  & .\\
+ & 0 &  & .\\
+0 &  &  &  & 1
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+то есть 
+\begin_inset Formula $f=g\cdot C$
+\end_inset
+
+, где 
+\begin_inset Formula $C\in GL_{k}(F)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Поэтому 
+\begin_inset Formula $<f>=<g>$
+\end_inset
+
+ и линейная независимость 
+\begin_inset Formula $f\Leftrightarrow$
+\end_inset
+
+ линейно независимость 
+\begin_inset Formula $g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+4) 
+\begin_inset Formula $g_{m}\in<f_{1},...,f_{m}>=_{\text{условие\ 4}}<f_{1},...,f_{m-1}>=<g_{1},...,g_{m-1}>$
+\end_inset
+
+ .
+ По (1) 
+\begin_inset Formula $g_{m}\perp g_{i}\ \forall i\leq m-1\Rightarrow g_{m}\perp<g_{1},...,g_{m-1}>\Rightarrow g_{m}\perp g_{m}\Rightarrow g_{m}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+5) По (2) 
+\begin_inset Formula $<g_{1},...,g_{k}>=<f_{1},...,f_{k}>=V$
+\end_inset
+
+, а по лемме ненулевые из 
+\begin_inset Formula $g_{1}$
+\end_inset
+
+ линейно независимы.
+\end_layout
+
+\begin_layout Proof
+6) Следует из (3), (5).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие
+\series default
+ (QR-разложение):
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $A\in M_{m,n}(\mathbb{C}),\ \rk A=n$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\exists R\in GL_{n}(\mathbb{C})$
+\end_inset
+
+ и 
+\begin_inset Formula $Q\in M_{m,n}(\mathbb{C})$
+\end_inset
+
+, такие, что:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $A=QR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $R$
+\end_inset
+
+ — верхнетреугольная.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $\overline{Q}^{T}Q=E$
+\end_inset
+
+.
+ (столбцы матрицы 
+\begin_inset Formula $Q$
+\end_inset
+
+ ортонормированы).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathbb{C}^{n}$
+\end_inset
+
+ со стандартным скалярным произведением (т.е.
+ 
+\begin_inset Formula $(x,y)=\overline{x}^{T}y$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $b_{1},...,b_{n}$
+\end_inset
+
+ (некие столбцы) получим из 
+\begin_inset Formula $a_{*1},...,a_{*n}$
+\end_inset
+
+ (столбцы матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+) с помощью ортогонализации Грама-Шмидта.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+a_{*i}=\frac{b_{*i}}{||b_{*i}||}\Rightarrow B=Q\left(\begin{array}{ccccc}
+*\\
+ & . &  & 0\\
+ &  & .\\
+ & 0 &  & .\\
+ &  &  &  & *
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+A=B\left(\begin{array}{ccccc}
+1 & / & / & / & /\\
+ & . & / & / & /\\
+ &  & . & / & /\\
+ & 0 &  & . & /\\
+ &  &  &  & 1
+\end{array}\right)=Q\underbrace{\left(\begin{array}{ccccc}
+* & / & / & / & /\\
+ & . & / & / & /\\
+ &  & . & / & /\\
+ & 0 &  & . & /\\
+ &  &  &  & *
+\end{array}\right)}_{R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{multline*}
+\overline{Q}^{T}Q=\left(\begin{array}{c}
+\overline{q}_{*1}^{T}\\
+.\\
+.\\
+.\\
+\overline{q}_{*n}^{T}
+\end{array}\right)\left(\begin{array}{ccccc}
+q_{*1} & . & . & . & q_{*n}\end{array}\right)=\\
+=\left(\begin{array}{ccccc}
+\\
+. & . & . & . & .\\
+. & . & \overline{q}_{*i}^{T}\cdot q_{*j} & . & .\\
+. & . & . & . & .\\
+\\
+\end{array}\right)=E
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Так как 
+\begin_inset Formula 
+\[
+\overline{q}_{*i}^{T}q_{*j}=(q_{*i},q_{*j})=\frac{(b_{*i},b_{*j})}{||b_{*i}||\cdot||b_{*j}||}=\begin{cases}
+0 & i\neq j\ (\text{по\ 1\ теореме})\\
+1 & i=j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Изометрия пространств со скалярным произведением — линейное отображение
+ 
+\begin_inset Formula $L:U\to V$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $(L(x),L(y))_{V}=(x,y)_{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+(о классификации евклидовых и эрмитовых пространств)
+\end_layout
+
+\begin_layout Theorem*
+Любое евклидово (эрмитово) пространство изометрично 
+\begin_inset Formula $\mathbb{R}^{n}\ (\mathbb{C}^{n})$
+\end_inset
+
+ со стандартным скалярным произведением.
+\end_layout
+
+\begin_layout Proof
+По ортогонализации Грама-Шмидта в пространстве 
+\begin_inset Formula $V$
+\end_inset
+
+ существует ортонормированный базис 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ В этом базисе 
+\begin_inset Formula $(x,y)=\overline{x_{f}^{T}}\cdot y_{f}$
+\end_inset
+
+.
+ Здесь изометрия 
+\begin_inset Formula $\varphi_{f}:V\to\mathbb{C}^{n}\ (\mathbb{R}^{n})$
+\end_inset
+
+: 
+\begin_inset Formula $\overline{x_{f}^{T}}\cdot y_{f}=\varphi_{f}(x),\varphi_{f}(y)$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\varphi_{f}(x)=x_{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V$
+\end_inset
+
+ — евклидово или эрмитово пространство.
+ Пространства конечномерные.
+ 
+\begin_inset Formula $U\leq V$
+\end_inset
+
+ и 
+\begin_inset Formula $U^{\perp}=\{\underbrace{v\in V\ |\ (v,u)=0\ \forall u\in U}_{v\perp U}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+\begin_inset Formula $(u_{1},...,u_{n})$
+\end_inset
+
+ — система образующих в 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ 
+\begin_inset Formula $v\perp U\Leftrightarrow v\perp u_{k}\forall k=1,...,m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $V=U\bigoplus U^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x\in U\cap U^{\perp}\Rightarrow x\perp x\Leftrightarrow(x,x)=0\Rightarrow x=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Возьмем базис 
+\begin_inset Formula $U$
+\end_inset
+
+: 
+\begin_inset Formula $f=(f_{1},...,f_{k})$
+\end_inset
+
+, дополним до базиса всего пространства 
+\begin_inset Formula $(f_{1},...,f_{n})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+ и ортогонализуем его, получив базис 
+\begin_inset Formula $(g_{1},...,g_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(g_{1},...,g_{k})$
+\end_inset
+
+ — базис 
+\begin_inset Formula $U$
+\end_inset
+
+, 
+\begin_inset Formula $(g_{1},...,g_{n})$
+\end_inset
+
+ — ортогональный базис 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Теперь любой вектор можно представить как 
+\begin_inset Formula $v=\underbrace{\sum_{i=1}^{k}g_{i}\alpha_{i}}_{\in U}+\underbrace{\sum_{i=k+1}^{n}g_{i}\alpha_{i}}_{\in U^{\perp}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $g_{i}\perp U$
+\end_inset
+
+ при 
+\begin_inset Formula $i>k$
+\end_inset
+
+, так как 
+\begin_inset Formula $g_{i}\perp g_{j}\forall j\leq k<i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Доказательство требует выбора базиса, то есть не распространяется на случай
+ бесконечномерных пространств.
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $\left(U^{\perp}\right)^{\perp}=U$
+\end_inset
+
+ (в Гильбертовом пространстве 
+\begin_inset Formula $(U^{\perp})^{\perp}=Cl(U)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $U\perp U^{\perp}\Rightarrow U\leq(U^{\perp})^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+С другой стороны, 
+\begin_inset Formula $U\bigoplus U^{\perp}=U^{\perp}\bigoplus(U^{\perp})^{\perp}=(U^{\perp})^{\perp}\bigoplus U^{\perp}=V\Rightarrow\dim U=\dim V-\dim U^{\perp}=\dim(U^{\perp})^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $U\leq V\ni v$
+\end_inset
+
+.
+ По теореме 
+\begin_inset Formula $\exists!u_{1},u_{2}$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $v=u_{1}+u_{2},\ u_{1}\in U,\ u_{2}\in U^{\perp}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $u_{1}=\pr_{U}v$
+\end_inset
+
+ — ортогональная проекция 
+\begin_inset Formula $v$
+\end_inset
+
+ на 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $\pr_{u}v:=\pr_{<u>}v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact*
+\begin_inset Formula $\pr_{u}v=\frac{(v,u)}{(u,u)}u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(v-\frac{(v,u)}{(u,u)}u,u\right)=(v,u)-\frac{(v,u)}{(u,u)}(u,u)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+То есть 
+\begin_inset Formula $v-\frac{(v,u)}{(u,u)}u\in<u>^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U\leq V,\ f=(f_{1},...,f_{k})$
+\end_inset
+
+ — ортогональный базис 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $\pr_{U}v=\sum_{i=1}^{k}\pr_{f_{i}}v$
+\end_inset
+
+, 
+\begin_inset Formula $\pr_{f_{i}}v=\sum_{i=1}^{k}\frac{(v,f_{i})}{(f_{i},f_{i})}f_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula 
+\[
+(\pr_{U}v)_{f}=\left(\begin{array}{c}
+\frac{(v,f_{1})}{(f_{1},f_{1})}\\
+.\\
+.\\
+.\\
+\frac{(v,f_{n})}{(f_{n},f_{n})}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=1}^{k}\frac{(v,f_{i})}{(f_{i},f_{i})}f_{i}\in U$
+\end_inset
+
+.
+ Осталось доказать, что 
+\begin_inset Formula $v-\sum_{i=1}^{k}\frac{(v,f_{i})}{(f_{i},f_{i})}f_{i}\perp U\Leftrightarrow v-\sum_{i=1}^{k}\frac{(v,f_{i})}{(f_{i},f_{i})}f_{i}\perp f_{j}\ \forall j$
+\end_inset
+
+.
+ Отсюда
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(v-\sum_{i=1}^{k}\frac{(v,f_{i})}{(f_{i},f_{i})}f_{i},f_{j}\right)=(v,f_{j})-\frac{(v,f_{j})}{(f_{j},f_{j})}(f_{j},f_{j})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+так как 
+\begin_inset Formula $f_{i}\perp f_{j}$
+\end_inset
+
+ при 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+(Равенство Парсеваля и неравенство Бесселя)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $(f_{1},...,f_{k})$
+\end_inset
+
+ — ортогональный набор векторов, то 
+\begin_inset Formula $||\pr_{<f>}v||^{2}=\sum_{i=1}^{k}\frac{|(v,f_{i})|}{(f_{i},f_{i})}\leq||v||^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+Если же 
+\begin_inset Formula $<f>=V$
+\end_inset
+
+, то 
+\begin_inset Formula $\pr_{<f>}v=v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\pr_{<f>}v=\sum_{i=1}^{k}f_{i}\alpha_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $||\pr_{<f>}v||^{2}=(\sum_{i=1}^{k}f_{i}\alpha_{i},\sum_{j=1}^{k}f_{i}\alpha_{j})=\sum_{i,j=1}^{k}\overline{\alpha_{i}}(f_{i},f_{j})\alpha_{j}=\sum_{i=1}^{k}\overline{\alpha_{i}}(f_{i},f_{i})\alpha_{i}=\sum_{i=1}^{k}|\alpha_{i}|^{2}(f_{i},f_{i})$
+\end_inset
+
+, подставим 
+\begin_inset Formula $\alpha_{i}=\frac{(v,v_{i})}{(f_{i},f_{i})}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $v=\pr_{U}v+(v-\pr_{U}v)$
+\end_inset
+
+, откуда 
+\begin_inset Formula $||v||^{2}=(u_{1}+u_{2},u_{1}+u_{2})=(u_{1},u_{1})+(u_{2},u_{2})=||u_{1}||^{2}+||u_{2}||^{2}\geq||u_{1}||^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $U\leq V$
+\end_inset
+
+, 
+\begin_inset Formula $b\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $||b-\pr_{U}b||\leq||b-u||\ \forall u\in U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $b-u=(b-p)+(p-u)$
+\end_inset
+
+, где 
+\begin_inset Formula $p=\pr_{U}b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $||b-u||^{2}=||b-p||^{2}+||p-u||^{2}\geq||b-p||^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(
+\begin_inset Formula $x=y+z,\ y\perp z\Rightarrow||x||^{2}=(y+z,y+z)=(y,y)+\underbrace{(y,z)}_{0}+\underbrace{(z,y)}_{0}+(z,z)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Problem*
+\begin_inset Formula $Ax=b$
+\end_inset
+
+.
+ Найти 
+\begin_inset Formula $x^{*}:\ ||Ax^{*}-b||<||Ax-b||\ \forall x$
+\end_inset
+
+ (минимизируем норму относительно стандартного скалярного произведения,
+ то есть сумму квадратов координат, откуда название метода: 
+\begin_inset Quotes fld
+\end_inset
+
+Метод наименьших квадратов
+\begin_inset Quotes frd
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Problem*
+\begin_inset Formula $\{Ax\ |\ x\in\mathbb{R}^{n}\}=<a_{*1},...,a_{*m}>=U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem*
+\begin_inset Formula $Ax^{*}=\pr_{U}b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem*
+Метод состоит в ортогонализации базиса 
+\begin_inset Formula $U$
+\end_inset
+
+, затем воспользоваться формулой и решить систему.
+\end_layout
+
+\begin_layout Problem*
+Упражнение на бб: 1) Доказать, что 
+\begin_inset Formula $A^{T}A\in GL_{n}(\mathbb{R})$
+\end_inset
+
+ (верно ли это 
+\begin_inset Formula $\forall$
+\end_inset
+
+ поля 
+\begin_inset Formula $F$
+\end_inset
+
+ вместо 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+?) 2) Доказать, что 
+\begin_inset Formula $x^{*}=(A^{T}A)^{-1}A^{T}b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Классификация вещественных квадратичных форм.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C^{T}Q_{f}C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $F$
+\end_inset
+
+ — крадратично замкнуто (
+\begin_inset Formula $\exists\sqrt{x}\ \forall x\in F$
+\end_inset
+
+), то 
+\begin_inset Formula 
+\[
+\underbrace{\left(\begin{array}{ccccc}
+\frac{1}{\sqrt{\lambda_{1}}}\\
+ & . &  & 0\\
+ &  & .\\
+ & 0 &  & .\\
+ &  &  &  & \frac{1}{\lambda_{n}}
+\end{array}\right)}_{C^{T}}\underbrace{\left(\begin{array}{ccccc}
+\lambda_{1}\\
+ & . &  & 0\\
+ &  & .\\
+ & 0 &  & .\\
+ &  &  &  & \lambda_{n}
+\end{array}\right)}_{Q}C=E
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $\sign(\lambda_{1},...,\lambda_{m})=(p,n)$
+\end_inset
+
+, где 
+\begin_inset Formula $p$
+\end_inset
+
+ — количество положительных 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $q$
+\end_inset
+
+ — количество отрицательных.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula 
+\[
+\sign\left(\begin{array}{ccccc}
+\lambda_{1}\\
+ & . &  & 0\\
+ &  & .\\
+ & 0 &  & .\\
+ &  &  &  & \lambda_{n}
+\end{array}\right)=\sign(\lambda_{1},...,\lambda_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(закон инерции квадратичных форм)
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $Q$
+\end_inset
+
+ — квадратичная форма на вещественном конечном пространстве 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $f,g$
+\end_inset
+
+ — базисы 
+\begin_inset Formula $V$
+\end_inset
+
+: 
+\begin_inset Formula $Q_{f},Q_{g}$
+\end_inset
+
+ — диагональны.
+ Тогда 
+\begin_inset Formula $\sign Q_{f}=\sign Q_{g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sign Q_{f}=(p_{f},n_{f})$
+\end_inset
+
+, 
+\begin_inset Formula $\sign Q_{g}=(p_{g},n_{g})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Предположим, что 
+\begin_inset Formula $p_{f}>p_{g}$
+\end_inset
+
+.
+ Считаем, что базисные вектора занумерованы так, что первые 
+\begin_inset Formula $p_{f}(p_{g})$
+\end_inset
+
+ диагональных элементов матриц положительны.
+ Рассмотрим подпространство 
+\begin_inset Formula $U=<f_{1},...,f_{p_{f}}>,\ W=<g_{p_{g}},...,g_{m}>$
+\end_inset
+
+, где 
+\begin_inset Formula $m=\dim V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall u\in U\backslash\{0\}\ Q(u)>0$
+\end_inset
+
+, так как 
+\begin_inset Formula $u=\sum_{i=1}^{p_{f}}f_{i}\alpha_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $Q_{u}=B(u,u)=B(\sum_{i=1}^{p_{f}}f_{i}\alpha_{i},\sum_{j=1}^{p_{f}}f_{j}\alpha_{j})=\sum_{i,j=1}^{p_{f}}\alpha_{i}\alpha_{j}\underbrace{B(f_{i},f_{j})}_{=0\ i\neq j}=\sum_{i=1}^{p_{f}}\alpha_{i}^{2}Q(f_{i})>0$
+\end_inset
+
+ при 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Аналогично на 
+\begin_inset Formula $W$
+\end_inset
+
+ наша форма будет отрицательна.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\dim(U\cap W)=-\dim(U+W)+\dim(U)+\dim W\geq p_{f}+n_{g}-m=p_{f}+(m-p_{g})-m=p_{f}-p_{g}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Противоречие.
+ Аналогично невозможно обратное предположение.
+ Следовательно, 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\exists x\in U\cap W\backslash\{0\}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $Q(x)>0$
+\end_inset
+
+ и 
+\begin_inset Formula $Q(x)<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—Еще одна лекция
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть существует эрмитово (конечное на 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ с унитарным скалярным произведением) пространство и 
+\begin_inset Formula $L:V\to V,\ L^{*}:V^{*}\to V^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ — нормальный, если 
+\begin_inset Formula $LL^{*}=L^{*}L$
+\end_inset
+
+ (в частности, сопряженные и унитарные нормальны).
+\end_layout
+
+\begin_layout Theorem*
+(доказательство ниже) Для любого нормального оператора существует ортонормирован
+ный базис, в котором матрица диагональна.
+ Очевидно, что верно и обратное.
+ 
+\end_layout
+
+\begin_layout Lemma*
+(1) Если 
+\begin_inset Formula $A,B:V\to V$
+\end_inset
+
+ перестановочны (то есть коммутируют, то есть 
+\begin_inset Formula $AB=BA$
+\end_inset
+
+), то любое собственное подпространство 
+\begin_inset Formula $A$
+\end_inset
+
+ инвариантно относительно 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Докажем, что 
+\begin_inset Formula $V_{\lambda}=\ker(A-\lambda I)\Rightarrow B(V_{\lambda})\leq V_{\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Возьмем 
+\begin_inset Formula $x\in V_{\lambda},\ A\cdot B_{x}=B(A(x))=B(\lambda x)=\lambda B(x)\Rightarrow B(x)\in V_{\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma*
+(2) Если 
+\begin_inset Formula $L(U)\subseteq U$
+\end_inset
+
+, то 
+\begin_inset Formula $L^{*}(U^{\perp})\subseteq U^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $v\in U^{\perp},\ u\in U.\ (L^{*}(v),u)=(\underbrace{v}_{\in U^{\perp}},\underbrace{L(u)}_{U})=0\Rightarrow L^{*}(v)\perp u\ \forall u\in U\Rightarrow L^{*}(v)\in U^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие
+\series default
+ из обоих лемм:
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $L$
+\end_inset
+
+ — нормальный с собственным подпространством 
+\begin_inset Formula $V_{\lambda}$
+\end_inset
+
+, то 
+\begin_inset Formula $V_{\lambda}^{\perp}$
+\end_inset
+
+ — 
+\begin_inset Formula $L$
+\end_inset
+
+-инвариантное пространство.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $LL^{*}=L^{*}L$
+\end_inset
+
+.
+ По лемме 1 
+\begin_inset Formula $V_{\lambda}$
+\end_inset
+
+ — 
+\begin_inset Formula $L^{*}$
+\end_inset
+
+-инвариантно, следовательно, по лемме 2, 
+\begin_inset Formula $V_{\lambda}^{\perp}$
+\end_inset
+
+ инвариантно относительно 
+\begin_inset Formula $L^{**}$
+\end_inset
+
+, то есть, инвариантно относительно 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Proof
+(теоремы выше): Индукция по размерности пространства 
+\begin_inset Formula $n=\dim V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L$
+\end_inset
+
+ диагональна 
+\begin_inset Formula $\Leftrightarrow u$
+\end_inset
+
+ — базис из собственных векторов.
+\end_layout
+
+\begin_layout Proof
+При 
+\begin_inset Formula $n=1$
+\end_inset
+
+ очевидно.
+\end_layout
+
+\begin_layout Proof
+Индукционный переход: 
+\begin_inset Formula $\deg\chi_{L}(t)=n>0\Rightarrow\exists\lambda:\chi_{L}(\lambda)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V_{\lambda}\neq0$
+\end_inset
+
+ — собственное подпространство 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+По следствию 
+\begin_inset Formula $V_{\lambda}^{\perp}$
+\end_inset
+
+ — 
+\begin_inset Formula $L$
+\end_inset
+
+-инвариантно.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+V=V_{\lambda}\bigoplus V_{\lambda}^{\perp}\Rightarrow\dim(V_{n}^{\perp})<n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Очевидно, что 
+\begin_inset Formula $L|_{V_{\lambda}^{\perp}}$
+\end_inset
+
+ тоже нормальный оператор, следовательно, по индукционному переходу существует
+ ортонормированный базис 
+\begin_inset Formula $f$
+\end_inset
+
+ пространства 
+\begin_inset Formula $V_{\lambda}^{\perp}$
+\end_inset
+
+ из собственных векторов 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ Выберем ортонормированный базис для пространства 
+\begin_inset Formula $V_{\lambda}$
+\end_inset
+
+ (он существует ввиду ортогонализации Грама-Шмидта) из собственных векторов
+ 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Таким образом, 
+\begin_inset Formula $g\cup f$
+\end_inset
+
+ — базис 
+\begin_inset Formula $V$
+\end_inset
+
+ из собственных векторов 
+\begin_inset Formula $L$
+\end_inset
+
+, очевидно, ортонормированный.
+\end_layout
+
+\end_body
+\end_document

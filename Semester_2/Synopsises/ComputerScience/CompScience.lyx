@@ -1,0 +1,951 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{indentfirst}
+\end_preamble
+\use_default_options true
+\begin_modules
+algorithm2e
+pdfform
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 1cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Quotes fld
+\end_inset
+
+Сюда не ходи, снег в башка попадёт - совсем мертвым будешь!
+\begin_inset Quotes frd
+\end_inset
+
+ ©Терехов
+\end_layout
+
+\begin_layout Section
+ООП.
+ Проектирование, инкапсуляция и скрытие информации; разделение интерфейса
+ и реализации; классы, наследники, наследование; полиморфизм; иерархии классов.
+\end_layout
+
+\begin_layout Standard
+Класс — тип, определенный пользователем.
+ Компоненты, использованные при определении класса — его члены.
+\end_layout
+
+\begin_layout Standard
+Подпрограмма — стек, 
+\begin_inset Formula $A\Rightarrow B\Rightarrow C$
+\end_inset
+
+ и обратно.
+ А сопрограмма — куча с произвольным взаимодействием.
+\end_layout
+
+\begin_layout Standard
+Объект —
+\end_layout
+
+\begin_layout Standard
+Симула67 — первый ОО язык.
+ Затем SmallTalk — первый нормальный ОО язык.
+\end_layout
+
+\begin_layout Standard
+Объектное программирование отличается от обычного тем, что имеются некие
+ объекты, которые 
+\begin_inset Quotes fld
+\end_inset
+
+носят с собой
+\begin_inset Quotes frd
+\end_inset
+
+ все свои данные.
+\end_layout
+
+\begin_layout Standard
+Инкапсуляция — сокрытие данных (хороший пример — стек.
+ Сам он реализован черт знает как, а 
+\begin_inset Quotes fld
+\end_inset
+
+торчат наружу
+\begin_inset Quotes frd
+\end_inset
+
+ только PUSH и POP).
+\end_layout
+
+\begin_layout LyX-Code
+class
+\end_layout
+
+\begin_layout LyX-Code
+{
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+int a;
+\end_layout
+
+\begin_layout LyX-Code
+int b;
+\end_layout
+
+\begin_layout LyX-Code
+---
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пример класса:
+\end_layout
+
+\begin_layout LyX-Code
+class X
+\end_layout
+
+\begin_layout LyX-Code
+{
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+public:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+интерфейс;
+\end_layout
+
+\begin_layout Standard
+private:
+\end_layout
+
+\begin_layout LyX-Code
+реализация;
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Конструктор класса:
+\end_layout
+
+\begin_layout LyX-Code
+struct Date
+\end_layout
+
+\begin_layout LyX-Code
+{
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+int y, m, d;
+\end_layout
+
+\begin_layout LyX-Code
+Date(int y, int m, int d);
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Большие функции лучше определять вне класса:
+\end_layout
+
+\begin_layout LyX-Code
+Date :: Date (int y, int m, int d)
+\end_layout
+
+\begin_layout LyX-Code
+{
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+};
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Здесь мы указываем, что функция Date является членом класса Date.
+\end_layout
+
+\begin_layout Standard
+Наследование:
+\end_layout
+
+\begin_layout LyX-Code
+struct B
+\end_layout
+
+\begin_layout LyX-Code
+{
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+int mb;
+\end_layout
+
+\begin_layout LyX-Code
+void fb()
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+{
+\end_layout
+
+\begin_layout LyX-Code
+---
+\end_layout
+
+\begin_layout LyX-Code
+};
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+class D : B
+\end_layout
+
+\begin_layout LyX-Code
+{
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+int mb;
+\end_layout
+
+\begin_layout LyX-Code
+void fb()
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+class DD:public B1, private B2
+\end_layout
+
+\begin_layout LyX-Code
+{
+\end_layout
+
+\begin_layout LyX-Code
+---
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Public — доступ открыт всем, кто видит определение данного класса.
+\end_layout
+
+\begin_layout Standard
+Private — доступ открыт самому классу и друзьям данного класса.
+\end_layout
+
+\begin_layout Standard
+Protected — доступ открыт классам, производным от данного.
+\end_layout
+
+\begin_layout Section
+Основные вычислительные алгоритмы: алгоритмы поиска и сортировки.
+\end_layout
+
+\begin_layout Section
+Основы программирования, основанного на событиях
+\end_layout
+
+\begin_layout Standard
+Система реального времени — система, которая должна обмениваться данными
+ за какой-либо промежуток времени.
+\end_layout
+
+\begin_layout Standard
+Следует различать сбой и отказ.
+ В среднем на 10000 сбоев случается 1 отказ.
+\end_layout
+
+\begin_layout Standard
+Гомогенная схема — элементы, равные по ответственности и надежности.
+ Они дешевы, но если один из элементов врет, то в схеме из двух элементов
+ нельзя определенно сказать, который.
+ А вот если схема из 3 элементов, (2оо3), то 
+\begin_inset Quotes fld
+\end_inset
+
+есть кого обматерить
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Одновременно два выйти из строя могут с ничтожно малой вероятностью.
+\end_layout
+
+\begin_layout Standard
+ОВК — отказоустойчивый военный комплекс.
+\end_layout
+
+\begin_layout Standard
+Нужно сказать, что такое Mission critical system, что они управляются особо
+ надежными системами.
+ Дублированные комплексы не годятся по причине низкой отказоустойчивости.
+\end_layout
+
+\begin_layout Standard
+SDL — графический язык (1984).
+\end_layout
+
+\begin_layout Standard
+Событие — приход сигнала.
+\end_layout
+
+\begin_layout Section
+Введение в компьютерную графику.
+\end_layout
+
+\begin_layout Standard
+Рассказывал Брыксин.
+\end_layout
+
+\begin_layout Section
+Обзор языков программирования: история языков программирования; краткий
+ обзор парадигм программирования.
+\end_layout
+
+\begin_layout Standard
+Сначала люди писали в машинных кодах.
+ Но быстро поняли, что это говно, легко ошибиться, и перешли к языкам ассемблера.
+ Минусы ассемблера в том, что мы можем сложить две ячейки памяти вне зависимости
+ от того, что там находится.
+ Таким образом, ассемблер является незащищенным языком.
+\end_layout
+
+\begin_layout Standard
+В 1956 году фирмой IBM представлен язык FORTRAN.
+ Этот язык уже похож на современные языки программирования: в нем были операции,
+ типы данных и так далее.
+ 
+\end_layout
+
+\begin_layout Standard
+Самая дорогая ошибка мира:
+\end_layout
+
+\begin_layout LyX-Code
+do 3 i=1.4
+\end_layout
+
+\begin_layout Standard
+Вместо точки должна была быть запятая.
+ Написал ошибочку.
+ А это была программа, управляющая полетом ракеты на Венеру.
+ Из-за ошибки 7 миллиардов долларов улетели в трубу.
+ Виновным признали язык Фортран и было решено придумать новый, более хороший
+ язык.
+ В устроенном конкурсе победил язык Ада, названный в честь Ады Лавлейс.
+\end_layout
+
+\begin_layout Standard
+В 1958 году в Европе 
+\begin_inset Quotes fld
+\end_inset
+
+в ответ Америке
+\begin_inset Quotes frd
+\end_inset
+
+ был придуман язык АЛГОЛ-60.
+ Его начали улучшать.
+ Улучшения происходили в 60, 64, 68 и 74 году.
+ Лучшими были признаны АЛГОЛ-60 и АЛГОЛ-68.
+\end_layout
+
+\begin_layout Standard
+Были различные логические языки, но выжил только один, ПРОЛОГ.
+ Синтаксис:
+\end_layout
+
+\begin_layout LyX-Code
+Логическое утверждение:
+\end_layout
+
+\begin_layout LyX-Code
+А здесь выводы.
+\end_layout
+
+\begin_layout Standard
+В общем, все логические языки сдохли, а ПРОЛОГ выжил, благодаря возможности
+ управления порядком применения логических правил.
+ Автор первой реализации ПРОЛОГа — поляк, а хорошая версия ПРОЛОГа была
+ сделана в Греции.
+\end_layout
+
+\begin_layout Standard
+Короче, как-то один мужик (Цедин?) доказал, что можно программировать без
+ присваивания.
+ Так как присваивание нарушает законы математической логики.
+\end_layout
+
+\begin_layout Standard
+Затем появились функциональные языки.
+ И, допустим, в них нужно заменять цикл рекурсией, т.к.
+ у них нет переменной-счетчика i.
+\end_layout
+
+\begin_layout Standard
+Монада (уточнить, что это).
+\end_layout
+
+\begin_layout Standard
+Процедурные языки —
+\end_layout
+
+\begin_layout Standard
+Темпоральные логики (уточнить, что это такое).
+\end_layout
+
+\begin_layout Standard
+ТРЭПЛО — теоретические разработки эвристического поиска логического обоснования.
+\end_layout
+
+\begin_layout Section
+Виртуальные машины.
+ Понятие виртуальной машины.
+ Иерархия ВМ.
+ Промежуточные языки.
+\end_layout
+
+\begin_layout Standard
+Система команд машины.
+ (те самые +, -, if, while и так далее).
+ Каждая команда реализуется в виде нескольких т.н.
+ микрокоманд (микропрограмм).
+ Микропрограммы опираются на устройства: АЛУ, память, система управления
+ прерываниями — т.н.
+ блоки ЭВМ.
+ Из блоков составляются логические схемы при помощи вентилей.
+ И самой мелкой составляющей является триггер.
+\end_layout
+
+\begin_layout Standard
+Сейчас все пишут на алгоритмических языках высокого уровня, которые работают
+ на ОС, которая, в свою очередь, работает над базами данных и так далее.
+ Каждый уровень такой системы называется виртуальной машиной.
+ 
+\end_layout
+
+\begin_layout Standard
+Т.о.
+ ЭВМ — многоуровневое устройство, каждый уровень которой называется виртуальной
+ машиной.
+\end_layout
+
+\begin_layout Standard
+Никлас Вирт — собственно, автор первой виртуальной машины, которую он ПРИДУМАЛ
+ (то есть она существует в его чертогах разума), которая имела всего 20
+ команд, называлась она VM (Pcode).
+ Он сделал транслятор Pascal под VM.
+ А потом переписал этот транслятор на Pascal.
+ 
+\end_layout
+
+\begin_layout Standard
+Преимущества виртуальной машины — переносимость (главная характеристика),
+ универсальность, легкость понимания.
+\end_layout
+
+\begin_layout Standard
+Был язык FORTH, в котором был сделан такой финт ушами: шитый код.
+\end_layout
+
+\begin_layout Standard
+Примеры для экзаменов: EC-63 (интерпретатор в дисплее) и перефирийное устройство
+ управления ФОБОС-К.
+\end_layout
+
+\begin_layout Standard
+Вы понимаете, что когда вы пишете программу, вы пишете программу для какой-либо
+ виртуальной машины? Нет? Вы в дерьме :) С++ — трансляторы, Asm — минуя
+ транслятор, но и здесь не обращение напрямую к железу.
+\end_layout
+
+\begin_layout Standard
+Виртуальная машина может читать программу побайтно и переводить её в язык
+ машинных кодов.
+ Такая виртуальная машина называется интерпретатор.
+\end_layout
+
+\begin_layout Standard
+Кен Олсон — придурок из компании DEC, который не обратил внимания на рынок
+ персональных компьютеров.
+\end_layout
+
+\begin_layout Section
+Введение в теорию трансляции: сравнение интерпретаторов и компиляторов.
+ Стадии трансляции.
+ Машинно-зависимая и машина-независимая части транслятора.
+\end_layout
+
+\begin_layout Standard
+Есть программа на АЯВУ (алгоритмический язык высокого уровня).
+ А мы хотим получить код для x86_64.
+ Происходят следующие этапы:
+\end_layout
+
+\begin_layout Enumerate
+Сначала работает лексер (сканер).
+ Он занимается свертками (т.е.
+ сворачивает лексеммы типа 3.14, abc в float-число 3.14 и переменную).
+\end_layout
+
+\begin_layout Enumerate
+Теперь работает парсер (синтаксический видо-независимый анализатор).
+ Он 
+\begin_inset Quotes fld
+\end_inset
+
+разбирает
+\begin_inset Quotes frd
+\end_inset
+
+ сложные команды наподобие a[3]+=abc+1 в дерево разбора.
+\end_layout
+
+\begin_layout Enumerate
+Видозависимый анализ.
+ Он должен понять, что если стоит 1+3.14, то слева целый операнд, а справа
+ вещественный, то есть результат будет вещественным.
+\end_layout
+
+\begin_layout Enumerate
+Оптимизация, которая делится на 2 части: машинно-независимая (создание рабочей
+ ячейки с данными, которые могут быть использованы как результат частовыполняющи
+хся одних и тех же команд) и машинно-зависимая (смотри пример внизу).
+\end_layout
+
+\begin_layout Enumerate
+Генерация кода — на выходе получается объектный код (.out-файлы).
+\end_layout
+
+\begin_layout Enumerate
+Затем работает линковщик, который связывает несколько файлов объектного
+ кода и собирает их в одну программу.
+\end_layout
+
+\begin_layout Enumerate
+И под конец шлифует все некий 
+\begin_inset Quotes fld
+\end_inset
+
+лодырь
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout LyX-Code
+for (int i = 0; i < n; i++)
+\end_layout
+
+\begin_layout LyX-Code
+{
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+a[i] = b[i]+c[i];
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Standard
+Пример машинно-зависимой оптимизации
+\end_layout
+
+\begin_layout Standard
+Индуцированная переменная — для каждого из трех массивов заводим переменную
+ (рабочую ячейку) и в конце цикла делать наращивание на шаг (допустим, 4
+ байта).
+\end_layout
+
+\begin_layout Standard
+То, что получается после каждого шага — это промежуточный код.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Транслятор — это либо компилятор, либо интерпретатор.
+ Этапы, записанные выше, — это этапы компиляции.
+ Выполнение компилированной программы — подача на вход загрузочного модуля
+ и данных, и получение результата.
+ А интерпретатор — это подача данных и каждой новой строчки кода, которая
+ переводится в машинный код отдельно.
+\end_layout
+
+\begin_layout Standard
+Главное назначение интерпретаторов — отладка.
+\end_layout
+
+\begin_layout Standard
+В 1965 году академик Глушков в институте кибернетики сделал машину МИР-1,
+ один из первых HLL.
+ Ему на вход подавался текст, а он его исполнял построчно.
+\end_layout
+
+\begin_layout Section
+Введение в СУБД.
+ История и причины возникновения систем баз данных, использование языков
+ запросов баз данных.
+\end_layout
+
+\begin_layout Standard
+СУБД — система управления базами данных.
+ 
+\end_layout
+
+\begin_layout Standard
+Сначала были сетевые базы данных.
+\end_layout
+
+\begin_layout Standard
+Затем иерархические (деревянные) базы данных.
+\end_layout
+
+\begin_layout Standard
+И наконец некто Кодд придумал реляционную алгебру и на её основе были разработан
+ы реляционные базы данных.
+\end_layout
+
+\begin_layout Standard
+Реляционная база данных — это таблица прямоугольная:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccccc}
+ & k1 & k2 & k3 & k4 & k5 & k6 & k7 & k8 & k9 & k10\\
+0\\
+1\\
+2\\
+3\\
+4 & \text{з} & \text{н} & \text{а} & \text{ч} & \text{е} & \text{н} & \text{и} & \text{я}\\
+5\\
+6\\
+7\\
+8\\
+9
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пишется все это на языке SQL (декларативный язык).
+\end_layout
+
+\begin_layout LyX-Code
+select a,b,c From T1, T2 // где a,b,c --- атрибуты и T1, T2 --- таблицы.
+\end_layout
+
+\begin_layout LyX-Code
+where () // условие выбора
+\end_layout
+
+\begin_layout Standard
+База называется нормализованной, если ключи не повторяются (по ключу однозначно
+ можно выбрать строки).
+\end_layout
+
+\begin_layout Standard
+Главная БД — Oracle.
+ Затем более-менее хорошая MS SQL.
+ Еще имеется открытая база данных MySQL.
+ 
+\end_layout
+
+\begin_layout Standard
+Еще несколько: Postgress, PostgreeSQL, DB2;
+\end_layout
+
+\begin_layout Section
+Эволюция программ: сопровождение, характеристики удобного для сопровождения
+ ПО, реинжиниринг, унаследованные системы, повторное использование ПО.
+\end_layout
+
+\begin_layout Standard
+Maintenance — сопровождение.
+ Если взять деньги, отпущенные на программный продукт, то 30% из них уйдут
+ на разработку, а 70% — на это самое сопровождение.
+\end_layout
+
+\begin_layout Standard
+Сопровождение — это:
+\end_layout
+
+\begin_layout Standard
+1) Дебаггинг и поддержка пользователей.
+\end_layout
+
+\begin_layout Standard
+2) Улучшение и оптимизация программы.
+\end_layout
+
+\begin_layout Standard
+3) Адаптирование под новые технологии.
+\end_layout
+
+\begin_layout Standard
+4) Улучшение UX — 
+\begin_inset Quotes fld
+\end_inset
+
+удобство использования программы
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+5) Всемерное улучшение документации.
+\end_layout
+
+\begin_layout Standard
+Теперь вместо Maintenance говорят Evolution (модификация терминов у них
+ такая).
+\end_layout
+
+\end_body
+\end_document

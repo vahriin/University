@@ -1,0 +1,4284 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{hyperref}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-starred
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.7cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Топологические пространства.
+ Примеры
+\end_layout
+
+\begin_layout Definition
+Топологическое пространство — пара 
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+, где 
+\begin_inset Formula $X$
+\end_inset
+
+ — множество, 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ — топологическая структура на нем.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Топологическая структура на множестве 
+\begin_inset Formula $X$
+\end_inset
+
+ — набор его подмножеств, такой, что:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $X,\varnothing\in\Omega$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\cup_{i=1}^{\infty}U_{i}\in\Omega\ (U_{i}\in\Omega)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\cap_{i=1}^{\infty}U_{i}\in\Omega$
+\end_inset
+
+;
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Множества из 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ называются открытыми.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Примеры:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ состоит из всех подмножеств множества 
+\begin_inset Formula $X$
+\end_inset
+
+, тогда 
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ называется дискретным пространством.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ состоит из 
+\begin_inset Formula $X$
+\end_inset
+
+ и 
+\begin_inset Formula $\varnothing$
+\end_inset
+
+, пространство называется антидискретным.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $\mathbb{R},\ \Omega=\{\cup_{i=k}^{n}(a_{i},b_{i})|a_{i},b_{i}\in\mathbb{R}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $\mathbb{R}^{n},\ \Omega$
+\end_inset
+
+ — множество открытых шаров (или кубов).
+\end_layout
+
+\begin_layout Standard
+5) Стрелка 
+\begin_inset Formula $X=[0,+\infty),\ \Omega=\{(a,+\infty)|a\geq0\}\cup\{x\}\cup\{\varnothing\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Определение топологического пространства через замкнутые множества
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство, подмножество 
+\begin_inset Formula $F\subset X$
+\end_inset
+
+ — замкнуто, если 
+\begin_inset Formula $X\backslash F\in\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+В дискретном и антидискретном пространстве не открытые множества замкнуты.
+ В стрелке замкнуты множества 
+\begin_inset Formula $[0,a]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ — замкнуто 
+\begin_inset Formula $\forall i$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\cap_{i=1}^{\infty}F_{i}$
+\end_inset
+
+ — замкнуто: 
+\begin_inset Formula $X\backslash(\cap_{i=1}^{\infty}F_{i})=\cup_{i=1}^{\infty}X\backslash F_{i}\in\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ — замкнуто 
+\begin_inset Formula $\forall i$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\cup_{i=1}^{\infty}F_{i}$
+\end_inset
+
+ — замкнуто: 
+\begin_inset Formula $X\backslash(\cup_{i=1}^{\infty}F_{i})=\cap_{i=1}^{\infty}X\backslash F_{i}\in\Omega$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $X$
+\end_inset
+
+ — множество.
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ — совокупность подмножеств 
+\begin_inset Formula $X$
+\end_inset
+
+, если:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $X_{i},\varnothing\in F$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\cap_{i=1}^{\infty}F_{i}\in F$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\cup_{i=1}^{\infty}F_{i}\in F$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+то есть 
+\begin_inset Formula $\Omega=\{X\backslash F_{i}|F_{i}\in F\}$
+\end_inset
+
+ — топологическая структура на 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Например, таким образом определена топология Зарисского: 
+\begin_inset Formula $X=\mathbb{R},\ F'\subset F\Leftrightarrow F'$
+\end_inset
+
+ конечно.
+\end_layout
+
+\begin_layout Section
+Метрические пространства.
+ Примеры
+\end_layout
+
+\begin_layout Definition
+Метрическое пространство — пара 
+\begin_inset Formula $(X,\rho)$
+\end_inset
+
+, где 
+\begin_inset Formula $X$
+\end_inset
+
+ — множество, 
+\begin_inset Formula $\rho$
+\end_inset
+
+ — заданная на 
+\begin_inset Formula $X$
+\end_inset
+
+ метрика.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Метрика, заданная на 
+\begin_inset Formula $X$
+\end_inset
+
+ — функция 
+\begin_inset Formula $\rho:X\times X\to\mathbb{R}$
+\end_inset
+
+, такая, что:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\rho(x,y)=0\Leftrightarrow x=y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\rho(x,y)\geq0\ \forall x,y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\rho(x,y)=\rho(y,x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+4) 
+\begin_inset Formula $\rho(x,y)\leq\rho(x,z)+\rho(y,z)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Примеры:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $X=\mathbb{R},\ \rho=|a-b|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $X=\mathbb{R},\ x,y\in\mathbb{R}^{n},\ x_{1}=(x_{1},...,x_{n}),\ y=(y_{1},...,y_{n}).\ \rho(x,y)=\sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula ${\displaystyle X\in\mathbb{R}^{n},\ \rho(x,y)=\max_{i=1,...,n}|x_{i}-y_{i}}|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $\rho(x,y)=\begin{cases}
+0 & x=y\\
+1 & x\neq y
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+5) 
+\begin_inset Formula $X=C([a,b])$
+\end_inset
+
+.
+ 
+\begin_inset Formula ${\displaystyle \rho(f,g)=\sup_{x\in[a,b]}|f(x)-g(x)|}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+6) 
+\begin_inset Formula $x=C([a,b])$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\rho(f,g)=\int_{a}^{b}|f(x)-g(x)|dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+Если 
+\begin_inset Formula $(X,\rho)$
+\end_inset
+
+ — метрическое пространство, 
+\begin_inset Formula $a\in X,\ r\in\mathbb{R}_{>0}$
+\end_inset
+
+, то:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $B_{r}(a)=\{x\in X|\rho(x,a)<r\}$
+\end_inset
+
+ — открытый шар.
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $D_{r}(a)=\{x\in X|\rho(x,a)\leq r\}$
+\end_inset
+
+ — закрытый шар.
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $S_{r}(a)=\{x\in X|\rho(x,a)=r\}$
+\end_inset
+
+ — сфера.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Метрическое пространство 
+\begin_inset Formula $A\subset X;\ (A,\rho|_{A\times A})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $D_{1}(0),\ S_{1}(0)$
+\end_inset
+
+ пространства 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ будут обозначаться 
+\begin_inset Formula $D^{n}$
+\end_inset
+
+ и 
+\begin_inset Formula $S^{n-1}$
+\end_inset
+
+ — 
+\begin_inset Formula $n$
+\end_inset
+
+-мерный шар и 
+\begin_inset Formula $n-1$
+\end_inset
+
+-мерная сфера.
+\end_layout
+
+\begin_layout Definition
+Одномерный шар: 
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $0$
+\end_inset
+
+-мерная сфера: 
+\begin_inset Formula $\{-1,1\}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Метрическая топология
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(X,\rho)$
+\end_inset
+
+ — метрическое пространство.
+\end_layout
+
+\begin_layout Definition
+Метрическая топология (топология, порожденная метрикой 
+\begin_inset Formula $\rho$
+\end_inset
+
+) — множество 
+\begin_inset Formula $\Omega_{\rho}$
+\end_inset
+
+, состоящее из 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+, таких, что 
+\begin_inset Formula $\forall u\in U\ \exists r>0$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $B_{r}(u)\subset U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Докажем, что 
+\begin_inset Formula $\Omega_{\rho}$
+\end_inset
+
+ является топологической структурой:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $X,\varnothing\in\Omega_{\rho}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+В 
+\begin_inset Formula $\varnothing$
+\end_inset
+
+ нет точек, следовательно, 
+\begin_inset Formula $\varnothing\in\Omega_{\rho}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\forall x\in X,\ \forall r>0$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $B_{r}(x)\subset X\Rightarrow X\in\Omega_{\rho}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $U_{i}\in\Omega_{\rho};\ U=\cup_{i=1}^{\infty}U_{i}\in\Omega_{\rho}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $u\in U\Rightarrow\exists i:\ u\in U_{i}\Rightarrow\exists B_{r}(u)\subset U_{i}\subset U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $U_{i}\in\Omega_{\rho};\ U=\cap_{i=1}^{N}U_{i}\in\Omega_{\rho}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $u\in U\Rightarrow\forall i\ u\in U_{i}\Rightarrow\forall i\ \exists r_{i}:\ B_{r_{i}}(u)\subset U_{i}$
+\end_inset
+
+; пусть 
+\begin_inset Formula $r=\min_{i=1,..,n}(r_{i}).\ B_{r}(u)\subset B_{r_{i}}(u)\Rightarrow B_{r}(u)\subset U$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+1) Открытый шар 
+\begin_inset Formula $\in\Omega_{\rho}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proposition
+2) Закрытый шар — замкнутое множество;
+\end_layout
+
+\begin_layout Proposition
+3) 
+\begin_inset Formula $\forall U\in\Omega_{\rho}\ U=\cup B_{r_{i}}(a_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $B_{r}(a)=\{x\in X|\rho(x,a)<r\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x'\in B_{r}(a)\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\rho(x',a)<r\Rightarrow\exists\delta$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\rho(x',a)<\delta<r$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $r'=\delta-\rho(x',a)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Докажем, что 
+\begin_inset Formula $B_{r'}(x')\subset B_{r}(a)$
+\end_inset
+
+: 
+\begin_inset Formula $\forall u\in B_{r'}(x')$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $\rho(u,x')<r'=\delta-\rho(x',a)\Rightarrow\rho(u,a)\leq\rho(u,x')+\rho(x',a)<\delta<r\Rightarrow u\in B_{r}(a)\Rightarrow\exists r'>0\ B_{r'}(x')\subset B_{r}(a)\ \forall x'\in B_{r}(a)\Rightarrow B_{r}(a)\in\Omega_{\rho}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $B_{r}(a).$
+\end_inset
+
+ Докажем, что 
+\begin_inset Formula $U=X\backslash D_{r}(a)=\{x\in X|\rho(x,a)>r\}$
+\end_inset
+
+ — открыто.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x\in U\ \rho(x,a)>r\Rightarrow\exists r':\ \rho(x,a)>r'>r$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $R=\rho(x,a)-r'$
+\end_inset
+
+.
+ Докажем, что 
+\begin_inset Formula $B_{R}(x)\subset U:$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x'\in B_{R}(x):\ \rho(x',x)<R=\rho(x,a)-r'\Rightarrow r<r'<\rho(x,a)-\rho(x'x)\Rightarrow\rho(x',a)>r\Rightarrow B_{R}(x)\subset U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $r<r'<\rho(x,a)-\rho(x;,x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\rho(x,a)<\rho(x',x)+\rho(x',a)\Rightarrow\rho(x',a)>\rho(x,a)-\rho(x',x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+3) 
+\begin_inset Formula $U\in\Omega_{\rho}\Rightarrow\forall u\in U\ \exists r>0:\ B_{r}(u)\subset U$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $U=\cup_{u\in U}B_{r_{u}}(u)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+База топологии.
+ Примеры
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство.
+ База топологии 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ — такое 
+\begin_inset Formula $\Omega'\subset\Omega$
+\end_inset
+
+, что 
+\begin_inset Formula $\forall U\in\Omega:\ U=\cup U_{i}$
+\end_inset
+
+, где 
+\begin_inset Formula $U_{i}\in\Omega'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Примеры:
+\end_layout
+
+\begin_layout Definition
+1) База дискретного пространства: 
+\begin_inset Formula $(X,\Omega)=\{x|x\in X\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+2) База антидискретного пространства: 
+\begin_inset Formula $\{X\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+3) База стрелки: 
+\begin_inset Formula $[0,+\infty)\cup\{(r,+\infty)|r\in\mathbb{Q}_{+}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+4) База метрического пространства: множество открытых шаров.
+\end_layout
+
+\begin_layout Section
+Признак базы
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ — база 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow\forall U\in\Omega,\ \forall x\in U\ \exists V\in\Sigma$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $x\in V\subset U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ — база.
+ 
+\begin_inset Formula $U\in\Omega\Rightarrow U=\cup U_{i}',\ U_{i}'\in\Sigma$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall x\in U\ \exists i:\ x\in U_{i}'=V$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V\in\Sigma,\ x\in V,\ V\subset U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Обратно: 
+\begin_inset Formula $\forall x\in U\ \exists V_{x}\in\Sigma:\ V_{x}\subset U\Rightarrow U=\cup_{x\in U}V_{x}\Rightarrow\forall U\in\Omega$
+\end_inset
+
+ верно 
+\begin_inset Formula $U=\cup_{i}U_{i}',\ U_{i}'\in\Sigma\Rightarrow\Sigma$
+\end_inset
+
+ — база.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ (подмножества 
+\begin_inset Formula $X$
+\end_inset
+
+) — база некоторой топологии 
+\begin_inset Formula $\Leftrightarrow X=\cup_{i}U_{i},\ U_{i}\in\Sigma$
+\end_inset
+
+ и 
+\begin_inset Formula $\forall U,V\in\Sigma$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $U\cap V=\cup U_{i},\ U_{i}\in\Sigma$
+\end_inset
+
+, где 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+ — некоторые множества из базы.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ — база, следовательно, 
+\begin_inset Formula $X=\cup_{i}U_{i}$
+\end_inset
+
+ (Так как 
+\begin_inset Formula $X$
+\end_inset
+
+ — открытое множество).
+ 
+\begin_inset Formula $U\cap V\in\Omega$
+\end_inset
+
+ (так как конечное пересечение открытых множеств открыто), следовательно,
+ 
+\begin_inset Formula $(U\cap V)=\cup_{i}U_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Обратно.
+ Пусть 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ — все возможные объединения множеств из 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X_{i},\varnothing\in\Omega$
+\end_inset
+
+.
+ Докажем, что 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ удовлетворяет аксиомам топологической структуры:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A_{i}\in\Omega;\ \forall i$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $A_{i}=\cup_{j}U_{j},\ U_{j}\in\Sigma$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\cup_{i}^{\infty}A_{i}=\cup_{i}^{\infty}(\cup_{j}U_{j})=\cup_{k}^{\infty}U_{k}\in\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\cap_{i=1}^{N}A_{i}=\cap_{i=1}^{N}(\cup_{j}U_{j})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A_{1}\cap A_{2}=(\cup_{j}U_{j})\cap(\cup_{k}U_{k})=\cup(U_{k}\cap(\cup U_{j}))=\cup_{k}(\cup_{j}(U_{k}\cap U_{j}))=\cup_{n}U_{n}\in\Omega$
+\end_inset
+
+.
+ Дальше по индукции.
+\end_layout
+
+\begin_layout Section
+Индуцированная топология
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство, 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+.
+ Положим 
+\begin_inset Formula $\Omega_{A}=\{A\cap V\ |\ V\in\Omega\}$
+\end_inset
+
+.
+ Совокупность множеств 
+\begin_inset Formula $\Omega_{A}$
+\end_inset
+
+ называется топологией, индуцированной топологией 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\Omega_{A}$
+\end_inset
+
+ является топологической структурой в 
+\begin_inset Formula $A$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $\varnothing,A\in\Omega_{A}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $\cup_{i}(A\cap U_{i})=A\cap(\cup_{i}U_{i})\in\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+3) 
+\begin_inset Formula $\cap_{1}^{N}(A\cap U_{i})=A\cap(\cap_{1}^{N}U_{i})\in\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Топологическое пространство 
+\begin_inset Formula $(A,\Omega_{A})$
+\end_inset
+
+ называется подпространством 
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ — база.
+ Тогда 
+\begin_inset Formula $\Sigma_{A}=\{A\cap U'|U'\in\Sigma\}$
+\end_inset
+
+ — база 
+\begin_inset Formula $\Omega_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $U_{A}\in\Omega\Rightarrow\exists U:\ A\cap U=U_{A},\ U\in\Omega$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U=\cup_{i}U_{i}',\ U_{i}'\in\Sigma.\ U_{A}=A\cap(\cup_{i}U_{i}')=\cup_{i}(A\cap U_{i}')\in\Sigma_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Относительно открытое/замкнутое множество — множество, открытое/замкнутое
+ в 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+comment: 
+\begin_inset Formula $X\supset A\supset B$
+\end_inset
+
+.
+ Есть топологии 
+\begin_inset Formula $\Omega_{X},\Omega_{A},\Omega_{B}^{A},\Omega_{B}^{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Внутренность
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Окрестностью точки 
+\begin_inset Formula $x$
+\end_inset
+
+ называется любое открытое множество, которое её содержит.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $A\subset X$
+\end_inset
+
+, обозначения: 
+\begin_inset Formula $Int(A),\ \mathring{A}$
+\end_inset
+
+ — внутренность 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $Cl(A),\ \overline{A}$
+\end_inset
+
+ — замыкание 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $Fr(A),\ \partial A$
+\end_inset
+
+ — граница 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Точка множества 
+\begin_inset Formula $A$
+\end_inset
+
+ называется его внутренней точкой, если она содержится в 
+\begin_inset Formula $A$
+\end_inset
+
+ вместе с некоторой своей окрестностью (
+\begin_inset Formula $x\in A,\ x\in U\subset A$
+\end_inset
+
+).
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $Int(A)$
+\end_inset
+
+ — множество внутренних точек множества 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Claim
+\begin_inset Formula $Int(A)$
+\end_inset
+
+ — всегда открытое множество.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x\in Int(A)\ \exists U_{x}\in\Omega:\ x\in U_{x}\subset A\Rightarrow$
+\end_inset
+
+ все точки из 
+\begin_inset Formula $U_{x}$
+\end_inset
+
+ — внутренние.
+ При этом 
+\begin_inset Formula $Int(A)=\cup_{x\in Int(A)}U_{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $Int(A)$
+\end_inset
+
+ — максимальное по включению открытое подмножество 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $A\supset V$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+ открыто.
+ 
+\begin_inset Formula $V$
+\end_inset
+
+ — окрестность для любой точки, следовательно, все точки в 
+\begin_inset Formula $V$
+\end_inset
+
+ внутренние, следовательно, 
+\begin_inset Formula $V\subset Int(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $Int(A)$
+\end_inset
+
+ — объединение всех открытых подмножеств 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $A\supset V$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\cup V$
+\end_inset
+
+ — открытое множество, содержащее все открытые множества 
+\begin_inset Formula $A$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\cup V=Int(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Замыкание и граница
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $Cl(A)=X\backslash Int(X\backslash A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $A\subset Cl(A)$
+\end_inset
+
+ — замкнуто.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Cl(A)$
+\end_inset
+
+ — дополнение 
+\begin_inset Formula $X\backslash A$
+\end_inset
+
+, а оно открыто: 
+\begin_inset Formula $Int(X\backslash A)\subset(X\backslash A)\Rightarrow Cl(A)\supset X\backslash(X\backslash A)=A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $Cl(A)$
+\end_inset
+
+ — наименьшее по включению замкнутое множество, содержащее 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $A\subset F$
+\end_inset
+
+, 
+\begin_inset Formula $F$
+\end_inset
+
+ — замкнуто.
+ Тогда рассмотрим дополнение
+\begin_inset Formula $(X\backslash F)\subset(X\backslash A)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\underbrace{Int(X\backslash F)}_{=X\backslash F}\subset Int(X\backslash A)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Cl(A)=X\backslash Int(X\backslash A)\subset X\backslash(X\backslash F)=F\Rightarrow Cl(A)=F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $A$
+\end_inset
+
+ замкнуто 
+\begin_inset Formula $\Leftrightarrow A=Cl(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Граница множества 
+\begin_inset Formula $A=X\backslash(Int(A)\cup Int(X\backslash A))=(X\backslash Int(X\backslash A))\backslash Int(A)=Cl(A)\backslash Int(A)=Cl(A)\cap(X\backslash Int(A))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Из определения ясно, что граница множества — замкнутое множество.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Если любая окрестность 
+\begin_inset Formula $x$
+\end_inset
+
+ содержится в 
+\begin_inset Formula $A$
+\end_inset
+
+, то 
+\begin_inset Formula $x$
+\end_inset
+
+ — внутренняя точка.
+ Если же у точки 
+\begin_inset Formula $x$
+\end_inset
+
+ нет такой окрестности, которая целиком содержится в 
+\begin_inset Formula $A$
+\end_inset
+
+ и любая окрестность имеет непустое пересечение с 
+\begin_inset Formula $A$
+\end_inset
+
+, то 
+\begin_inset Formula $x$
+\end_inset
+
+ — граничная точка.
+ Иначе 
+\begin_inset Formula $x$
+\end_inset
+
+ — внешняя точка.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Непрерывные отображения.
+ Примеры
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $(X,\Omega_{X}),\ (Y,\Omega_{Y})$
+\end_inset
+
+ — топологические пространства.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна в точке 
+\begin_inset Formula $x_{0}\in X\Leftrightarrow\forall$
+\end_inset
+
+ окрестности 
+\begin_inset Formula $f(x_{0})$
+\end_inset
+
+ (обозначим эту окрестность 
+\begin_inset Formula $V(x_{0})$
+\end_inset
+
+) 
+\begin_inset Formula $\exists U(x_{0})$
+\end_inset
+
+ — окрестность 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x\in U(x_{0})$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $f(x)\in V(f(x_{0}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна на 
+\begin_inset Formula $X$
+\end_inset
+
+, если она непрерывна в любом 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $f:X\to Y,\ f$
+\end_inset
+
+ непрерывна в 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+; 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+, 
+\begin_inset Formula $g$
+\end_inset
+
+ непрерывна в 
+\begin_inset Formula $f(x_{0})\in Y$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $h=g\circ f$
+\end_inset
+
+ непрерывна в 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall U(g(y_{0}))\ \exists V(y_{0}):\ \forall y\in V(y_{0})$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $g(y)\in U(g(y_{0}))$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V(y_{0})=V(f(x_{0}))\Rightarrow\exists W(x_{0}):\ \forall x\in W(x_{0})$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $f(x)\in V(f(x_{0}))\Rightarrow\forall x\in W(x_{0}),\ g\circ f(x)\in U(g\circ f(x))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Примеры:
+\end_layout
+
+\begin_layout Standard
+1) Непрерывные функции на 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) Постоянное отображение непрерывно.
+\end_layout
+
+\begin_layout Proposition
+Если 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ непрерывно, 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+, то непрерывно 
+\begin_inset Formula $f|_{A}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall a\in A,\ \forall V(f(a))\ \exists U(a):\ \forall x\in U(a)$
+\end_inset
+
+ верно 
+\begin_inset Formula $f(x)\in V(f(a))$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U'(a)=A\cap U(a)\neq\varnothing$
+\end_inset
+
+, так как 
+\begin_inset Formula $a\in A\cap U(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Признак и свойства непрерывных отображений
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $(X,\Omega_{X}),\ (Y,\Omega_{Y})$
+\end_inset
+
+ — топологические пространства.
+ 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ непрерывна 
+\begin_inset Formula $\Leftrightarrow\forall U\in\Omega_{Y}$
+\end_inset
+
+ верно 
+\begin_inset Formula $f^{-1}(U)\in\Omega_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $U\in\Omega_{Y}$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $f^{-1}(U)=\varnothing$
+\end_inset
+
+, то теорема верна.
+ Иначе: 
+\begin_inset Formula $\exists x\in X$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $f(x)=y\in U_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ — окрестность 
+\begin_inset Formula $y\Rightarrow\exists V(x):\ \forall x'\in V(x)$
+\end_inset
+
+ верно 
+\begin_inset Formula $f(x')\in U_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f^{-1}(U)\supset V(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f^{-1}(U)=\cup V(x_{i})$
+\end_inset
+
+, таких, что 
+\begin_inset Formula $f(x_{i})\in U\Rightarrow f^{-1}(U)$
+\end_inset
+
+ открыто.
+\end_layout
+
+\begin_layout Proof
+Обратно: 
+\begin_inset Formula $V(f(x_{0}))\in\Omega_{Y}\Rightarrow f^{-1}(V(f(x_{0})))\in\Omega_{X}$
+\end_inset
+
+; 
+\begin_inset Formula $x_{0}\in f^{-1}(V(f(x_{0})))\Rightarrow f^{-1}(V(f(x_{0})))=U(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(следствие): прообраз замкнутого множества замкнут.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) Докажем, что 
+\begin_inset Formula $\forall f:X\to Y$
+\end_inset
+
+ верно 
+\begin_inset Formula $f^{-1}(Y\backslash A)=X\backslash f^{-1}(A)$
+\end_inset
+
+, где 
+\begin_inset Formula $A\subset Y$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall x\in f^{-1}(Y\backslash A),\ f(x)\in Y\backslash A\Rightarrow f(x)\notin A\Rightarrow x\notin f^{-1}(A)\Rightarrow f^{-1}(Y\backslash A)\subset X\backslash f^{-1}(A)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall x\in X\backslash f^{-1}(A)$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $f(x)\notin A\Rightarrow f(x)\in Y\backslash A\Rightarrow X\backslash f^{-1}(A)\subset f^{-1}(Y\backslash A)\Rightarrow X\backslash f^{-1}(A)=f^{-1}(Y\backslash A)$
+\end_inset
+
+.
+ (т.к.
+ имеется двойное включение).
+\end_layout
+
+\begin_layout Proof
+2) Пусть 
+\begin_inset Formula $U\subset Y,\ U$
+\end_inset
+
+ — замкнуто, тогда 
+\begin_inset Formula $Y\backslash U$
+\end_inset
+
+ открыто.
+ Следовательно, открыто и 
+\begin_inset Formula $f^{-1}(Y\backslash U)=X\backslash f^{-1}(U)\Rightarrow f^{-1}(U)$
+\end_inset
+
+ — замкнуто.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $f:(X,\Omega_{1})\to(X,\Omega_{2})$
+\end_inset
+
+ (
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+) непрерывна 
+\begin_inset Formula $\Leftrightarrow\Omega_{2}\subset\Omega_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f$
+\end_inset
+
+ — непрерывна, следовательно, 
+\begin_inset Formula $\forall U\in\Omega_{2}$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $f^{-1}(U)\subset\Omega_{1}$
+\end_inset
+
+.
+ Так как 
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+, 
+\begin_inset Formula $f^{-1}(U)=U\Rightarrow\forall U\in\Omega_{2},U\in\Omega_{1}\Rightarrow\Omega_{2}\subset\Omega_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Обратно: аналогично 
+\begin_inset Formula $f^{-1}(U)=U\in\Omega_{1}\Rightarrow f^{-1}(U)$
+\end_inset
+
+ — открыто.
+\end_layout
+
+\begin_layout Section
+Гомеоморфизмы.
+ Примеры
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ — гомеоморфизм, если:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывно;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $f$
+\end_inset
+
+ биекция;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ непрерывно.
+\end_layout
+
+\begin_layout Standard
+Не все непрерывные биективные отображения являются гомеоморфизмами! Обязательным
+ условием является обратная непрерывность отображения.
+\end_layout
+
+\begin_layout Section
+Отношение гомеоморфности и топологические свойства
+\end_layout
+
+\begin_layout Definition
+Пространства, между которыми существует гомеоморфизм, называются гомеоморфными.
+\end_layout
+
+\begin_layout Definition
+Гомеоморфизм устанавливает взаимно однозначное соответствие между 
+\begin_inset Formula $\Omega_{X}$
+\end_inset
+
+ и 
+\begin_inset Formula $\Omega_{Y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Если 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ гомеоморфизм, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ — открыто 
+\begin_inset Formula $\Leftrightarrow f(U)$
+\end_inset
+
+ открыто.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Свойства гомеоморфизма:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $A$
+\end_inset
+
+ замкнуто в 
+\begin_inset Formula $X\Leftrightarrow f(A)$
+\end_inset
+
+ замкнуто в 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f^{-1}:Y\to X$
+\end_inset
+
+ — непрерывно, 
+\begin_inset Formula $A\in X$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $f(A)$
+\end_inset
+
+ замкнуто в 
+\begin_inset Formula $Y$
+\end_inset
+
+, то, по следствию выше, 
+\begin_inset Formula $A$
+\end_inset
+
+ замкнуто как образ 
+\begin_inset Formula $f(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $f(Cl(A))=Cl(f(A))$
+\end_inset
+
+.
+ (По свойству 1)
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $f(Int(A))=Int(f(A))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $f(Fr(A))=Fr(f(A))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5) 
+\begin_inset Formula $A$
+\end_inset
+
+ — окрестность 
+\begin_inset Formula $x\Leftrightarrow f(A)$
+\end_inset
+
+ — окрестность 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Топологические свойства — свойства, не меняющиеся при гомеоморфизме.
+\end_layout
+
+\begin_layout Section
+Связность
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство, 
+\begin_inset Formula $X$
+\end_inset
+
+ связно, если 
+\begin_inset Formula $\forall A\subset X$
+\end_inset
+
+, такого, что 
+\begin_inset Formula $Cl(A)=Int(A)=A$
+\end_inset
+
+ верно 
+\begin_inset Formula $A=X$
+\end_inset
+
+ или 
+\begin_inset Formula $A=\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $X$
+\end_inset
+
+ связно 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ его нельзя разбить на 2 открытых непустых непересекающихся подмножества.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $U_{1},U_{2}\in\Omega$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U_{1}\cup U_{2}=X,\ U_{1}\cap U_{2}=\varnothing$
+\end_inset
+
+.
+ По определению, 
+\begin_inset Formula $Int(U_{1})=U_{1}$
+\end_inset
+
+, тогда 
+\begin_inset Formula $U_{1}=X\backslash U_{2}$
+\end_inset
+
+ — замкнутое множество.
+ 
+\begin_inset Formula $Cl(U_{1})=Cl(X\backslash U_{2})=X\backslash U_{2}=U_{1}\Rightarrow Cl(U_{1})=Int(U_{1})=U_{1}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $U_{1}\neq X,\ U_{1}\neq\varnothing\Rightarrow X$
+\end_inset
+
+ несвязно.
+\end_layout
+
+\begin_layout Proof
+Обратно: 
+\begin_inset Formula $\exists U_{1}:\ Cl(U_{1})=Int(U_{1})=U_{1}\Rightarrow U_{1}$
+\end_inset
+
+ открыто.
+ 
+\begin_inset Formula $U_{2}=X\backslash U_{1}$
+\end_inset
+
+ — открыто как дополнение к замкнутому, 
+\begin_inset Formula $U_{1}\cup U_{2}=X$
+\end_inset
+
+; 
+\begin_inset Formula $U_{1}\cap U_{2}=U_{1}\cap(X\backslash U_{1})=\varnothing$
+\end_inset
+
+ — противоречие.
+\end_layout
+
+\begin_layout Standard
+Аналогично, 
+\begin_inset Formula $X$
+\end_inset
+
+ связно 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ его нельзя разбить на 2 замкнутых непустых непересекающихся подмножества.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $A\subset X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ связно, если оно связно в топологии, индуцированной 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ на 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывно, 
+\begin_inset Formula $X$
+\end_inset
+
+ — связно.
+ Тогда 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ тоже связно.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $f(X)$
+\end_inset
+
+ несвязно, тогда 
+\begin_inset Formula $\exists U\subset f(X):\ Int(U)=Cl(U)=U$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ открыто, следовательно, 
+\begin_inset Formula $f^{-1}(U)$
+\end_inset
+
+ открыто, аналогично за замкнутость.
+ Таким образом, 
+\begin_inset Formula $f^{-1}(U)=V=Int(V)=Cl(V),\ V\subset X\Rightarrow X$
+\end_inset
+
+ несвязно.
+\end_layout
+
+\begin_layout Section
+Связность отрезка
+\end_layout
+
+\begin_layout Theorem
+Пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ несвязно 
+\begin_inset Formula $\Leftrightarrow\exists f:X\to\{-1,1\},\ f$
+\end_inset
+
+ — непрерывная сюрьекция.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $U_{1},U_{2}\in X$
+\end_inset
+
+ — открыты, не пусты, при этом 
+\begin_inset Formula $U_{1}\cap U_{2}=\varnothing,\ U_{1}\cup U_{2}=X$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $f(U_{1})=-1,\ f(U_{2})=1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна, так как 
+\begin_inset Formula $-1,1$
+\end_inset
+
+ открыто в 
+\begin_inset Formula $\{-1,1\}$
+\end_inset
+
+ (дискретная топология).
+ Тогда, 
+\begin_inset Formula $f^{-1}(-1)=U_{1}$
+\end_inset
+
+ — открыто, аналогично 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Обратно: 
+\begin_inset Formula $\{-1,1\}$
+\end_inset
+
+ — несвязно, 
+\begin_inset Formula $f(X)=\{-1,1\}$
+\end_inset
+
+.
+ Если бы 
+\begin_inset Formula $X$
+\end_inset
+
+ являлось связным множеством, то 
+\begin_inset Formula $f(X)$
+\end_inset
+
+ также было бы связным.
+\end_layout
+
+\begin_layout Theorem
+Отрезок в стандартной топологии связен.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ несвязен, тогда 
+\begin_inset Formula $\exists f:[0,1]\to\{-1,1\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна на отрезке, тогда, по теореме Больцано-Коши о промежуточном
+ значении 
+\begin_inset Formula $\forall-1<c<1\ \exists C:\ f(c)=C$
+\end_inset
+
+, противоречие.
+\end_layout
+
+\begin_layout Section
+Разложение топологического пространства на компоненты связности
+\end_layout
+
+\begin_layout Definition
+Компонента связности 
+\begin_inset Formula $X$
+\end_inset
+
+ — всякое его связное подмножество, не содержащееся ни в каком другом строго
+ большем подмножестве 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+Объединение двух связных множеств, имеющих по крайней мере одну общую точку,
+ связно.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $A,B$
+\end_inset
+
+ — связные подмножества 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $A\cap B\neq\varnothing$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $C=A\cup B$
+\end_inset
+
+ несвязно.
+ Тогда 
+\begin_inset Formula $C$
+\end_inset
+
+ можно разбить на два непустых открытых подмножества, не имеющих общих точек,
+ то есть 
+\begin_inset Formula $C\subset U\cup V$
+\end_inset
+
+, где 
+\begin_inset Formula $U,V$
+\end_inset
+
+ — открыты (все правильно, мы взяли большие множества), при этом 
+\begin_inset Formula $U\cap C\neq\varnothing,\ V\cap C\neq\varnothing,\ U\cap V\cap C=\varnothing$
+\end_inset
+
+.
+ Тогда из связности 
+\begin_inset Formula $A,B$
+\end_inset
+
+ следует, что оба они содержатся в одном из множеств 
+\begin_inset Formula $U$
+\end_inset
+
+ или 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Но тогда второе множество пусто, противоречие.
+\end_layout
+
+\begin_layout Lemma
+Объединение семейства связных множеств, имеющих общую точку, само связно.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\{A_{\alpha}\}_{\alpha\in I}$
+\end_inset
+
+ — произвольное семейство связных множеств в топологическом пространстве
+ 
+\begin_inset Formula $X$
+\end_inset
+
+, точка 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ — общая для всех множеств.
+ Тогда, по предыдущей лемме, объединение связных множеств, содержащих общую
+ точку, связно.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $\forall x\in X\ \exists!A\in X$
+\end_inset
+
+, где 
+\begin_inset Formula $A$
+\end_inset
+
+ — компонента связности, такая, что 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+ (При этом 
+\begin_inset Formula $A=\cup B_{i}$
+\end_inset
+
+, таких, что 
+\begin_inset Formula $B_{i}$
+\end_inset
+
+ связны и 
+\begin_inset Formula $x\in B_{i}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+Заметим, что среди всех пересекающихся связных множеств, содержащих эту
+ точку, существует наибольшее, являющееся объединением их.
+ Оно связно в силу предыдущей леммы.
+\end_layout
+
+\begin_layout Standard
+Следствие: две компоненты связности не пересекаются или совпадают.
+\end_layout
+
+\begin_layout Lemma
+Замыкание связного множества связно.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $A$
+\end_inset
+
+ связно, а 
+\begin_inset Formula $Cl(A)$
+\end_inset
+
+ — нет.
+ Тогда 
+\begin_inset Formula $\exists U_{1},U_{2}\subset Cl(A)$
+\end_inset
+
+ — замкнутые, непустые, такие, что 
+\begin_inset Formula $U_{1}\cap U_{2}=\varnothing,\ U_{1}\cup U_{2}=Cl(A)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ — связно, следовательно, 
+\begin_inset Formula $A\cap U_{1,2}=A$
+\end_inset
+
+ или 
+\begin_inset Formula $\varnothing$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $A\subset U_{1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U_{1}=Cl(A)\backslash U_{2}\subset Cl(A)$
+\end_inset
+
+; Но 
+\begin_inset Formula $Cl(A)$
+\end_inset
+
+ — наименьшее по включению множество, содержащее 
+\begin_inset Formula $A\Rightarrow Cl(A)$
+\end_inset
+
+ связно.
+\end_layout
+
+\begin_layout Theorem
+Компоненты связности замкнуты.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\subset X,\ A$
+\end_inset
+
+ — компонента связности.
+ 
+\begin_inset Formula $A\subseteq Cl(A)$
+\end_inset
+
+ — связно, 
+\begin_inset Formula $A$
+\end_inset
+
+ не содержится на в каком строго большем связном множестве, следовательно,
+ 
+\begin_inset Formula $A=Cl(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Линейная связность
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство.
+ Непрерывное отображение 
+\begin_inset Formula $f:[0,1]\to X$
+\end_inset
+
+ называется путем; 
+\begin_inset Formula $f(0)$
+\end_inset
+
+ — начало пути и 
+\begin_inset Formula $f(1)$
+\end_inset
+
+ — конец пути.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Топологическое пространство линейно связно, если любые точки в нем можно
+ соединить путём.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Обратный к 
+\begin_inset Formula $s$
+\end_inset
+
+ путь: 
+\begin_inset Formula $s'=s(1-t)$
+\end_inset
+
+, где 
+\begin_inset Formula $t\in[0,1]$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Произведение путей 
+\begin_inset Formula $s_{1},s_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $s_{1}\circ s_{2}:I\to X$
+\end_inset
+
+, 
+\begin_inset Formula $s_{1}\circ s_{2}=\begin{cases}
+s_{1}(2t) & t\in[0,\nicefrac{1}{2}]\\
+s_{2}(2t-1) & t\in[\nicefrac{1}{2},1]
+\end{cases}$
+\end_inset
+
+, причем 
+\begin_inset Formula $s_{1}(1)=s_{2}(0)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Claim
+Любое евклидово пространство 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ линейно связно.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $A,B$
+\end_inset
+
+ — топологические пространства, 
+\begin_inset Formula $A\cap B\neq\varnothing$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $A$
+\end_inset
+
+ и 
+\begin_inset Formula $B$
+\end_inset
+
+ линейно связны, то 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+ — линейно связно.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $x,y\in A$
+\end_inset
+
+ или 
+\begin_inset Formula $x,y\in B$
+\end_inset
+
+ — доказательство очевидно.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $x\in A,\ y\in B$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists z\in A\cap B$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ — путь между 
+\begin_inset Formula $x,z$
+\end_inset
+
+; 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+ — между 
+\begin_inset Formula $z,y$
+\end_inset
+
+.
+ Тогда путь между 
+\begin_inset Formula $x,y=s_{1}\circ s_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Компонента линейной связности 
+\begin_inset Formula $X$
+\end_inset
+
+ — линейно связное подмножество 
+\begin_inset Formula $X$
+\end_inset
+
+, которое не содержится ни в каком другом строго большем линейно связном
+ подмножестве.
+\end_layout
+
+\begin_layout Theorem
+Каждая точка 
+\begin_inset Formula $m\in X$
+\end_inset
+
+ содержится в некоторой компоненте линейной связности (равной объединению
+ всех линейно связных подмножеств её содержащих)
+\end_layout
+
+\begin_layout Claim
+Две компоненты линейной связности не пересекаются или совпадают.
+\end_layout
+
+\begin_layout Claim
+Компоненты линейной связности не обязательно замкнуты.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ — линейно связное топологическое пространство.
+ 
+\begin_inset Formula $f:X\to Y,\ f$
+\end_inset
+
+ непрерывно 
+\begin_inset Formula $\Rightarrow f(X)$
+\end_inset
+
+ — линейно связно.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $y_{1},y_{2}\in f(X)\Rightarrow\exists x_{1},x_{2}\in X:\ f(x_{1})=y_{1},f(x_{2})=y_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists s:[0,1]\to X$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $s(0)=x_{1},\ s(1)=x_{2}$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $u=f\circ s:\ u:[0,1]\to f(X);\ u(0)=f(s(0))=y_{1},\ u(1)=f(s(1))=y_{2}$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ — линейно связно.
+\end_layout
+
+\begin_layout Section
+Связность и линейная связность
+\end_layout
+
+\begin_layout Theorem
+Если 
+\begin_inset Formula $X$
+\end_inset
+
+ линейно связно, то 
+\begin_inset Formula $X$
+\end_inset
+
+ — связно.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ не связно, тогда 
+\begin_inset Formula $\exists f:X\to\{-1,1\}$
+\end_inset
+
+ (
+\begin_inset Formula $U_{1},U_{2}:\ U_{1}\cap U_{2}=\varnothing,\ U_{1}\cup U_{2}=X,\ U_{1,}U_{2}$
+\end_inset
+
+ — открыты).
+ Пусть 
+\begin_inset Formula $u_{1},u_{2}\in U_{1},U_{2}$
+\end_inset
+
+ соответственно.
+ 
+\begin_inset Formula $s([0,1])$
+\end_inset
+
+ — путь между 
+\begin_inset Formula $u_{1},u_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f(u_{1})=-1,\ f(u_{2})=1$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f\circ s:[0,1]\to\{-1,1\}$
+\end_inset
+
+, 
+\begin_inset Formula $f\circ s$
+\end_inset
+
+ — композиция непрерывных отображений, следовательно, непрерывно, отрезок
+ связен 
+\begin_inset Formula $\Rightarrow f\circ s([0,1])$
+\end_inset
+
+ — связно, противоречие.
+\end_layout
+
+\begin_layout Standard
+Однако связное множество не всегда линейно связно.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство.
+ Если 
+\begin_inset Formula $\forall x\in X\ \exists V_{x}\subset X$
+\end_inset
+
+ — окрестность и 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+ линейно связно, то 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+ — линейно связно 
+\begin_inset Formula $\Leftrightarrow A$
+\end_inset
+
+ связно.
+\end_layout
+
+\begin_layout Proof
+следование вправо следует из теоремы выше.
+\end_layout
+
+\begin_layout Proof
+Обратно: 
+\begin_inset Formula $\forall x\in A\ \exists V_{x}\subset A$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+ — линейно связно.
+ 
+\begin_inset Formula $A=\cup_{x\in A}V_{x}$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $\cup_{x\in A}V_{x}$
+\end_inset
+
+ нельзя разбить на непересекающиеся множества, то 
+\begin_inset Formula $\cup_{x\in A}V_{x}$
+\end_inset
+
+ — линейно связно, так как два пересекающихся множества образуют линейно
+ связное множество.
+ Пусть 
+\begin_inset Formula $\cup_{x\in A}V_{x}=U_{1}\cup U_{2},\ U_{1}\cap U_{2}=\varnothing,\ U_{1}\cup U_{2}=A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U_{1}=\cup V_{x_{i}},\ U_{2}=\cup V_{x_{i}}\Rightarrow U_{1},U_{2}$
+\end_inset
+
+ открыты, 
+\begin_inset Formula $A$
+\end_inset
+
+ не связно, противоречие.
+\end_layout
+
+\begin_layout Section
+Аксиомы отделимости
+\end_layout
+
+\begin_layout Standard
+T0) (Аксиома Колмогорова): 
+\begin_inset Formula $\forall x,y\in X,\ x\neq y$
+\end_inset
+
+ хотя бы у одной из точек (допустим, 
+\begin_inset Formula $x$
+\end_inset
+
+), 
+\begin_inset Formula $\exists V_{x}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $y\notin V_{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+T1) 
+\begin_inset Formula $\forall x,y\in X,\ x\neq y,\ \exists V_{x},V_{y}$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $x\notin V_{y},y\notin V_{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+T2) (Аксиома Хаусдорфа): 
+\begin_inset Formula $\forall x,y\in X,\ x\neq y,\ \exists V_{x},V_{y}$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $V_{x}\cap V_{y}=\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+T3) 
+\begin_inset Formula $\forall x\in X,\ F\subset X,\ F$
+\end_inset
+
+ — замкнуто и 
+\begin_inset Formula $x\notin F$
+\end_inset
+
+ 
+\begin_inset Formula $\exists U,V$
+\end_inset
+
+ — открытые, такие, что 
+\begin_inset Formula $F\subset U,\ x\in V,\ U\cap V=\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+T4) 
+\begin_inset Formula $\forall F_{1},F_{2}\subset X,\ F_{1},F_{2}$
+\end_inset
+
+ — замкнуты, 
+\begin_inset Formula $F_{1}\cap F_{2}=\varnothing,\ \exists V_{1},V_{2}$
+\end_inset
+
+ — открытые, такие, что 
+\begin_inset Formula $F_{1}\subset V_{1},\ F_{2}\subset V_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V_{1}\cap V_{2}=\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Классификация пространств:
+\end_layout
+
+\begin_layout Itemize
+Если пространство удовлетворяет Т1 и Т3, то оно регулярно.
+ Регулярное пространство хаусдорфово.
+ 
+\end_layout
+
+\begin_layout Itemize
+Если пространство удовлетворяет Т1 и Т4, то оно нормально.
+ Нормальное пространство регулярно, следовательно, хаусдорфово.
+\end_layout
+
+\begin_layout Itemize
+Метрическое и дискретное пространства удовлетворяют всем аксиомам.
+ Антидискретное пространство, содержащее не менее двух точек не удовлетворяет
+ ни одной аксиоме.
+\end_layout
+
+\begin_layout Section
+Первая аксиома отделимости и хаусдорфовость
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ удовлетворяет T1) 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ все одноточечные множества в 
+\begin_inset Formula $X$
+\end_inset
+
+ замкнуты.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x\in X$
+\end_inset
+
+, рассмотрим 
+\begin_inset Formula $X\backslash x$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall y\in X\backslash x\ \exists U_{y}$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $x\notin U_{y}$
+\end_inset
+
+, то есть 
+\begin_inset Formula $U_{y}\subset X\backslash x$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\forall y\in X\backslash x,\ y$
+\end_inset
+
+ — внутренняя точка, следовательно, дополнение 
+\begin_inset Formula $\{x\}$
+\end_inset
+
+ открыто, следовательно, 
+\begin_inset Formula $\{x\}$
+\end_inset
+
+ замкнуто.
+\end_layout
+
+\begin_layout Proof
+Обратно: 
+\begin_inset Formula $x,y\in X,\ x\neq y$
+\end_inset
+
+.
+ Множество 
+\begin_inset Formula $X\backslash x$
+\end_inset
+
+ открыто, не содержит 
+\begin_inset Formula $x$
+\end_inset
+
+ и содержит 
+\begin_inset Formula $y\Rightarrow X\backslash x$
+\end_inset
+
+ — искомая окрестность 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Пространство хаусдорфово, если любые две не равные точки имеют две непересекающи
+еся окрестности.
+\end_layout
+
+\begin_layout Proposition
+Если пространство хаусдорфово, то оно удовлетворяет Т1).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x,y\in X\ \exists V_{x},V_{y}:\ V_{x}\cap V_{y}=\varnothing\Rightarrow x\notin V_{y},\ y\notin V_{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Любое подмножество хаусдорфова пространства тоже хаусдорфово.
+\end_layout
+
+\begin_layout Section
+Нормальность метрического пространства
+\end_layout
+
+\begin_layout Theorem
+В метрическом пространстве выполняются все аксиомы отделимости.
+\end_layout
+
+\begin_layout Proof
+1) Проверим хаусдорфовость: 
+\begin_inset Formula $x,y\in X,\ x\neq y\Rightarrow\rho(x,y)=r>0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $B_{\nicefrac{r}{2}}(x)=\{a\in X\ |\ \rho(a,x)<\nicefrac{r}{2}\},\ B_{\nicefrac{r}{2}}(y)=\{b\in X\ |\ \rho(b,y)<\nicefrac{r}{2}\}$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $a\in B_{\nicefrac{r}{2}}(x)$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\rho(x,y)\leq\rho(a,y)+\rho(x,a)\Rightarrow\rho(a,y)\geq\rho(x,y)-\rho(x,a)>r-\frac{r}{2}=\frac{r}{2}\Rightarrow a\notin B_{\nicefrac{r}{2}}(x)$
+\end_inset
+
+; аналогично для 
+\begin_inset Formula $b\in B_{\nicefrac{r}{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $\rho(b,x)>\frac{r}{2}\Rightarrow B_{\nicefrac{r}{2}}(x)\cap B_{\nicefrac{r}{2}}(y)=\varnothing$
+\end_inset
+
+.
+ Из Т2 следуют Т1 и Т0.
+\end_layout
+
+\begin_layout Proof
+2) Проверим Т4, так как из Т4 и Т2 следует Т3:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $F_{1},F_{2}$
+\end_inset
+
+ — замкнутые, следовательно, 
+\begin_inset Formula $X\backslash F_{1},X\backslash F_{2}$
+\end_inset
+
+ — открытые, 
+\begin_inset Formula $\Rightarrow\forall x\in X\backslash F_{1}\ \exists r_{x}>0:\ B_{r_{x}}(x)\subset X\backslash F_{1}$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $U_{1}=\cup_{x\in F_{1}}B_{\nicefrac{r_{x}}{2}}(x):\ U_{2}=\cup_{x\in F_{2}}B_{\nicefrac{r_{x}}{2}}(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F_{1}\subset U_{1},F_{2}\subset U_{2}$
+\end_inset
+
+.
+ Докажем, что 
+\begin_inset Formula $U_{1}\cap U_{2}=\varnothing$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $x\in U_{1}\cap U_{2}\Rightarrow\exists x\in F_{1},y\in F_{2}$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $z\in B_{\nicefrac{r_{x}}{2}}(x),\ z\in B_{\nicefrac{r_{y}}{2}}(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\rho(x,y)\leq\rho(x,z)+\rho(y,z)<\frac{r_{x}}{2}+\frac{r_{y}}{2}\leq\frac{r_{y}}{2}+\frac{r_{y}}{2}=r_{y}$
+\end_inset
+
+ (НУО будем считать, что 
+\begin_inset Formula $r_{x}\leq r_{y}$
+\end_inset
+
+), следовательно, 
+\begin_inset Formula $x\in B_{r_{y}}(y)$
+\end_inset
+
+.
+ Но по построению 
+\begin_inset Formula $B_{r_{y}}(y)\subset X\backslash F_{1};\ x\in F_{1}$
+\end_inset
+
+ — противоречие.
+\end_layout
+
+\begin_layout Section
+Вторая аксиома счетности
+\end_layout
+
+\begin_layout Definition
+Множества равномощны, если между ними существует биекция.
+ Множество, равномощное 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ называется счетным.
+\end_layout
+
+\begin_layout Standard
+Топологическое пространство удовлетворяет второй аксиоме счетности, если
+ у него есть счетная база.
+ Вторая аксиома счетности наследственна, то есть если 
+\begin_inset Formula $X$
+\end_inset
+
+ удовлетворяет второй аксиоме, то 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+ также удовлетворяет ей.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Примеры:
+\end_layout
+
+\begin_layout Standard
+1) Стрелка (счетная база: 
+\begin_inset Formula $\{(x,+\infty)|x\in\mathbb{Q}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ — счетно).
+\end_layout
+
+\begin_layout Standard
+2) Евклидовы пространства.
+\end_layout
+
+\begin_layout Standard
+3) Антидискретное пространство.
+\end_layout
+
+\begin_layout Standard
+4) Если 
+\begin_inset Formula $X$
+\end_inset
+
+ счетно, то дискретное пространство тоже счетно (база — множество точек).
+\end_layout
+
+\begin_layout Section
+Теорема Линделёфа
+\end_layout
+
+\begin_layout Definition
+Покрытие — множества, чье объединение содержит в себе все заданное множество.
+\end_layout
+
+\begin_layout Theorem
+Если пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ удовлетворяет второй аксиоме счетности, то 
+\begin_inset Formula $\forall\cup U_{i}$
+\end_inset
+
+ — покрытия 
+\begin_inset Formula $X$
+\end_inset
+
+ существует счетный набор 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+, тоже являющихся покрытием.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\exists$
+\end_inset
+
+ база 
+\begin_inset Formula $(V_{n})$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall i\ U_{i}=\cup_{k}V_{k}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $X=\cup_{k}V_{k}$
+\end_inset
+
+, где 
+\begin_inset Formula $V_{k}$
+\end_inset
+
+ — подмножества из базы, входящие во множества 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+ (Выделили счетное подпокрытие).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(V_{k})\subseteq(V_{n}):\ (V_{n})$
+\end_inset
+
+ — счетно, следовательно, 
+\begin_inset Formula $(V_{k})$
+\end_inset
+
+ счетно.
+\end_layout
+
+\begin_layout Section
+Сепарабельность
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $X$
+\end_inset
+
+ — топологическое пространство, 
+\begin_inset Formula $A,B\in X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ всюду плотно в 
+\begin_inset Formula $B$
+\end_inset
+
+, если 
+\begin_inset Formula $B\subset Cl(A)$
+\end_inset
+
+; 
+\begin_inset Formula $A$
+\end_inset
+
+ всюду плотно в 
+\begin_inset Formula $X$
+\end_inset
+
+, если 
+\begin_inset Formula $Cl(A)=X$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Если пространство содержит всюду плотное счетное множество, то оно называется
+ сепарабельным (
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ сепарабельно).
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Если пространство удовлетворяет второй аксиоме счетности, то оно сепарабельно.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ — база 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ счетно.
+ Рассмотрим 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+ (оно счетно, так как его мощность не превосходит мощности 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+), такое, что 
+\begin_inset Formula $\forall V_{n}\in\Sigma,\ A\cap V_{n}=\{a_{n}\}$
+\end_inset
+
+ (одноточечное множество).
+ Докажем, что 
+\begin_inset Formula $Cl(A)=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $X\backslash Cl(A)$
+\end_inset
+
+ — открытое множество, следовательно, 
+\begin_inset Formula $\exists V_{x}\subset X\backslash Cl(A)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+ — открыто 
+\begin_inset Formula $\Rightarrow\exists V_{n}'\in\Sigma$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $V_{x}=\cup_{n}V_{n}'$
+\end_inset
+
+, но 
+\begin_inset Formula $\forall n\ V_{n}\cap A\neq\varnothing$
+\end_inset
+
+; 
+\begin_inset Formula $A\subset Cl(A)\Rightarrow V_{n}'\cap Cl(A)\neq\varnothing$
+\end_inset
+
+, противоречие, так как 
+\begin_inset Formula $V_{x}\not\subset Cl(A)\Rightarrow X\backslash Cl(A)=\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Сепарабельные метрические пространства
+\end_layout
+
+\begin_layout Theorem
+Метрическое сепарабельное пространство удовлетворяет второй аксиоме счетности.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $A\subset X,\ A$
+\end_inset
+
+ — счетно, 
+\begin_inset Formula $A=\{x_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+.
+ База 
+\begin_inset Formula $X=\{B_{r}(x)|x\in A,r\in\mathbb{Q},r>0\}=\Sigma$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ — счетна: 
+\begin_inset Formula $\forall x$
+\end_inset
+
+ множество 
+\begin_inset Formula $B_{r}(x)$
+\end_inset
+
+ счетно, так как равномощно 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+ Значит, 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ состоит из счетного объединения счетных множеств, следовательно, оно счетно.
+ Проверим, что 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ — база 
+\begin_inset Formula $\Omega$
+\end_inset
+
+: пусть 
+\begin_inset Formula $U$
+\end_inset
+
+ — открыто, 
+\begin_inset Formula $x\in U_{i}\Rightarrow\exists B_{r}(x)\subset U$
+\end_inset
+
+, 
+\begin_inset Formula $\exists a_{i}\in A$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\rho(x,a_{i})<r_{i}<\nicefrac{r}{2}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $x\in B_{r_{i}}(a_{i})\subset B_{r}(x)\subset U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(следствие): Евклидовы пространства сепарабельны и удовлетворяют второй
+ аксиоме счетности.
+\end_layout
+
+\begin_layout Proof
+Множество 
+\begin_inset Formula $\mathbb{Q}^{n}\subset\mathbb{R}^{n},\ \mathbb{Q}^{n}=\{(x_{1},...,x_{n}|x_{i}\in\mathbb{Q})\}$
+\end_inset
+
+ всюду плотно в 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ сепарабельно.
+ 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ метрическое, следовательно, удовлетворяет второй аксиоме.
+ 
+\end_layout
+
+\begin_layout Section
+Компактность.
+ Примеры
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(X,\Omega)$
+\end_inset
+
+ — топологическое пространство, компактно 
+\begin_inset Formula $\Leftrightarrow\forall\{U_{\omega}\}_{\omega}^{\infty}\ U_{\omega}\in\Omega$
+\end_inset
+
+ и 
+\begin_inset Formula $X=\cup_{\omega}U_{\omega}$
+\end_inset
+
+ 
+\begin_inset Formula $\exists\omega_{i},\ i=1,...,N$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $X=\cup_{i=1}^{N}U_{\omega_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Примеры: 
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ не компактно (покрытие 
+\begin_inset Formula $(-n,n),\ n\in\mathbb{N}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+2) Стрелка компактна (
+\begin_inset Formula $\{0\}$
+\end_inset
+
+ не содержится ни в одном множестве вида 
+\begin_inset Formula $(a;+\infty)\Rightarrow$
+\end_inset
+
+ в любом покрытии должно быть множество 
+\begin_inset Formula $[0,+\infty)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) Отрезок компактен.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "для отрезка"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Допустим, существует 
+\begin_inset Formula $\Gamma_{0}$
+\end_inset
+
+ — набор открытых множеств, покрывающих 
+\begin_inset Formula $I=[0,1]$
+\end_inset
+
+, такой, что в нем не существует конечного подпокрытия.
+ Разделим 
+\begin_inset Formula $I$
+\end_inset
+
+ пополам.
+ Пусть 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+ — та часть 
+\begin_inset Formula $I$
+\end_inset
+
+, для которого также нет конечного подпокрытия, тогда 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ — последовательность вложенных промежутков, чья длина стремится к нулю.
+ 
+\begin_inset Formula $\exists x_{0}\in I_{n}\ \forall n$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $U_{0}\in\Gamma_{0},\ U_{0}$
+\end_inset
+
+ — окрестность точки 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ При достаточно больших 
+\begin_inset Formula $n\ I_{n}\subset U_{0}$
+\end_inset
+
+, по построению для 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ не существует конечного подпокрытия множествами из 
+\begin_inset Formula $\Gamma_{0}$
+\end_inset
+
+, противоречие.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ компактно, 
+\begin_inset Formula $f:X\to Y,\ f$
+\end_inset
+
+ непрерывно, следовательно, 
+\begin_inset Formula $f(X)$
+\end_inset
+
+ компактно.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\Gamma_{0}$
+\end_inset
+
+ — покрытие 
+\begin_inset Formula $f(x),\ \Gamma_{0}=\cup_{i}U_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X=f^{-1}(\cup U_{i})=\cup(f^{-1}(U_{i}))$
+\end_inset
+
+ (открыто) — покрытие 
+\begin_inset Formula $X\Rightarrow\exists i_{1},...,i_{N}$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $\cup_{i}f^{-1}(U_{i})=\cup_{k=1}^{N}f^{-1}(U_{i_{k}})\Rightarrow\cup_{i}U_{i}=\cup_{k=1}^{N}U_{i_{k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Свойства компактных пространств
+\end_layout
+
+\begin_layout Theorem
+Замкнутое подмножество компактного пространства компактно.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\subset X$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ замкнуто.
+ Пусть 
+\begin_inset Formula $A=\cup_{i}U_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X\backslash A$
+\end_inset
+
+ — открыто, тогда 
+\begin_inset Formula $\{X\backslash A\}\cup(\cup_{i}U_{i})$
+\end_inset
+
+ — покрытие 
+\begin_inset Formula $X\Rightarrow$
+\end_inset
+
+ можно выделить конечное подпокрытие 
+\begin_inset Formula $\{X\backslash A,\ (U_{i})_{i=1}^{n}\}$
+\end_inset
+
+, при этом 
+\begin_inset Formula $(U_{i})_{i=1}^{n}$
+\end_inset
+
+ — покрытие 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Компактное подмножество метрического пространства ограничено.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\subset X,\ A$
+\end_inset
+
+ компактно.
+ Пусть 
+\begin_inset Formula $x\in X,\ B_{n}(x),\ n\in\mathbb{N}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $B_{1}(x)\subset B_{2}(x)\subset...$
+\end_inset
+
+; 
+\begin_inset Formula $\cup_{n}B_{n}(x)$
+\end_inset
+
+ — покрытие 
+\begin_inset Formula $X\Rightarrow$
+\end_inset
+
+ покрытие 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ компактно, следовательно, 
+\begin_inset Formula $\exists k_{1},...,k_{N}:\ A=\cup_{i=1}^{N}B_{k_{i}}(X)\Rightarrow A$
+\end_inset
+
+ ограничено.
+\end_layout
+
+\begin_layout Section
+Компактные подмножества хаусдорфова пространства
+\end_layout
+
+\begin_layout Theorem
+Компактное подмножество хаусдорфова пространства замкнуто.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\subset X,\ X$
+\end_inset
+
+ — хаусдорфово, 
+\begin_inset Formula $A$
+\end_inset
+
+ — компактно.
+ Докажем, что 
+\begin_inset Formula $X\backslash A$
+\end_inset
+
+ — открыто.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $y\in X\backslash A\Rightarrow\forall x\in A\ y\neq x$
+\end_inset
+
+.
+ Рассмотрим покрытие 
+\begin_inset Formula $A$
+\end_inset
+
+ множествами 
+\begin_inset Formula $V_{x_{i}}$
+\end_inset
+
+ — окрестностями точек 
+\begin_inset Formula $x$
+\end_inset
+
+, такими, что 
+\begin_inset Formula $\exists U_{y}^{i}:\ U_{y}^{i}\cap V_{x_{i}}=\varnothing$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists$
+\end_inset
+
+ конечное подпокрытие 
+\begin_inset Formula $\cup_{i=1}^{n}V_{x_{i}}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\cap_{i=1}^{n}U_{y}^{i}$
+\end_inset
+
+ не пересекаются ни с одним множеством из покрытия, следовательно, не пересекают
+ся с 
+\begin_inset Formula $A\Rightarrow$
+\end_inset
+
+ лежат в 
+\begin_inset Formula $X\backslash A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\cap_{i=1}^{n}U_{y}^{i}$
+\end_inset
+
+ — открыто, следовательно, окрестность 
+\begin_inset Formula $y$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\cap_{i=1}^{n}U_{y}^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Вложение компактного пространства в хаусдорфово
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ — компактное пространство, 
+\begin_inset Formula $Y$
+\end_inset
+
+ — хаусдорфово.
+ 
+\begin_inset Formula $\forall f:X\to Y,\ f$
+\end_inset
+
+ — непрерывно, 
+\begin_inset Formula $f(X)$
+\end_inset
+
+ — замкнуто.
+\end_layout
+
+\begin_layout Proof
+Непрерывный образ компактного пространства компактен, следовательно, 
+\begin_inset Formula $f(X)$
+\end_inset
+
+ компактно.
+ Компактное подмножество хаусдорфова пространства замкнуто, следовательно,
+ 
+\begin_inset Formula $f(X)$
+\end_inset
+
+ замкнуто (теорема верна 
+\begin_inset Formula $\forall A\subset X,\ A$
+\end_inset
+
+ — замкнуто).
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(X,\Omega),\ (Y,\Omega')$
+\end_inset
+
+ — топологические пространства.
+ Отображение 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ называется 
+\series bold
+топологическим вложением
+\series default
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ в 
+\begin_inset Formula $Y$
+\end_inset
+
+, если 
+\begin_inset Formula $f':X\to f(X)\subset Y$
+\end_inset
+
+ — гомеоморфизм.
+\end_layout
+
+\begin_layout Theorem
+(следствие 1): 
+\begin_inset Formula $X$
+\end_inset
+
+ — компактное пространство, 
+\begin_inset Formula $Y$
+\end_inset
+
+ — хаусдорфово.
+ Если 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ — непрерывная биекция, то 
+\begin_inset Formula $f$
+\end_inset
+
+ — гомеоморфизм.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f$
+\end_inset
+
+ — биекция, следовательно, 
+\begin_inset Formula $\exists f^{-1}$
+\end_inset
+
+.
+ Докажем, что 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ непрерывно: 
+\begin_inset Formula $\forall A\subset X$
+\end_inset
+
+, такого, что 
+\begin_inset Formula $A$
+\end_inset
+
+ замкнут, 
+\begin_inset Formula $f(A)$
+\end_inset
+
+ — замкнуто по теореме о замкнутости компактного подмножества хаусдорфова
+ пространства, следовательно, 
+\begin_inset Formula $f$
+\end_inset
+
+ — гомеоморфизм.
+\end_layout
+
+\begin_layout Theorem
+(следствие 2): 
+\begin_inset Formula $X$
+\end_inset
+
+ компактно, 
+\begin_inset Formula $Y$
+\end_inset
+
+ хаусдорфово, 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывная инъекция 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ топологическое вложение.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f':X\to f(X)$
+\end_inset
+
+ инъективно и сюрьективно, то есть биективно, следовательно, по следствию
+ 1 
+\begin_inset Formula $f'$
+\end_inset
+
+ — гомеоморфизм.
+\end_layout
+
+\begin_layout Section
+Признак компактности в 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $A\subset\mathbb{R}^{n},\ A$
+\end_inset
+
+ компактно 
+\begin_inset Formula $\Leftrightarrow A$
+\end_inset
+
+ замкнуто и ограничено.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ хаусдорфово, 
+\begin_inset Formula $A$
+\end_inset
+
+ компактно, следовательно, 
+\begin_inset Formula $A$
+\end_inset
+
+ замкнуто.
+ 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ — метрическое, следовательно, 
+\begin_inset Formula $A$
+\end_inset
+
+ — ограничено.
+\end_layout
+
+\begin_layout Proof
+Обратно: Возьмем куб 
+\begin_inset Formula $I^{n}$
+\end_inset
+
+.
+ Куб компактен: 
+\begin_inset Formula $\Gamma_{0}$
+\end_inset
+
+ — покрытие куба открытыми множествами.
+ Разобьем куб на 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ кубов.
+ Сторона каждого куба будет 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ Дальнейшее доказательство аналогично доказательству 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "для отрезка"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $A$
+\end_inset
+
+ — ограничено, следовательно, существует куб, в котором 
+\begin_inset Formula $A$
+\end_inset
+
+ содержится.
+ Куб компактен, 
+\begin_inset Formula $A$
+\end_inset
+
+ — замкнутое подмножество компактного подпространства, следовательно, 
+\begin_inset Formula $A$
+\end_inset
+
+ компактно.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,7345 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{hyperref}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-starred
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.7cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Некоторые определения из теории множеств.
+ Прямое произведение, разбиение множеств.
+ Мощность объединения
+\end_layout
+
+\begin_layout Definition
+Мощность множества — число элементов, входящих в него.
+ Обозначается 
+\begin_inset Formula $|A|$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Прямое произведение — множество всех возможных упорядоченных пар 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+, где 
+\begin_inset Formula $i\in A,\ j\in B$
+\end_inset
+
+.
+ Обозначается как 
+\begin_inset Formula $A\times B$
+\end_inset
+
+.
+ Мощность этого множества равна произведению мощностей: 
+\begin_inset Formula $|A\times B|=|A|\cdot|B|$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Совокупность 
+\begin_inset Formula $A_{1},...,A_{n}$
+\end_inset
+
+ непустых попарно дизъюнктных подмножеств множества 
+\begin_inset Formula $M$
+\end_inset
+
+ называется его разбиением, если 
+\begin_inset Formula $M$
+\end_inset
+
+ равно их объединению.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Разбиение 
+\begin_inset Formula $\mathscr{A}=\{A_{1},...A_{n}\}$
+\end_inset
+
+ множества 
+\begin_inset Formula $M$
+\end_inset
+
+ называется измельчением разбиения 
+\begin_inset Formula $\mathscr{B}=\{B_{1},...,B_{k}\}$
+\end_inset
+
+, если каждое из множеств 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+полностью содержится в одном из множеств 
+\begin_inset Formula $B_{j}$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\forall i\in1:n\ \exists!j\in1:k$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $A_{i}\subset B_{j}$
+\end_inset
+
+.
+ Тогда будем говорить, что 
+\begin_inset Formula $\mathscr{B}$
+\end_inset
+
+ крупнее 
+\begin_inset Formula $\mathscr{A}$
+\end_inset
+
+ и записывать 
+\begin_inset Formula $\mathscr{A}\sqsubset\mathscr{B}$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $\mathscr{A}=\{A_{1},...,A_{k}\}$
+\end_inset
+
+ и 
+\begin_inset Formula $\mathscr{B}=\{B_{1},...,B_{l}\}$
+\end_inset
+
+ — разбиения множества 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Произведение разбиений 
+\begin_inset Formula $\mathscr{A}$
+\end_inset
+
+ и 
+\begin_inset Formula $\mathscr{B}$
+\end_inset
+
+ называется разбиение 
+\begin_inset Formula $\mathscr{C}=\{C_{1},...C_{m}\}$
+\end_inset
+
+, если оно является измельчением этих разбиений, причем самым крупным из
+ таких разбиений.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Theorem
+Произведение двух разбиений существует.
+\end_layout
+
+\begin_layout Proof
+Предъявим множество, являющееся произведением произвольных 
+\begin_inset Formula $\mathscr{A,B}$
+\end_inset
+
+.
+ Возьмем все множества 
+\begin_inset Formula $D_{ij}=A_{i}\cap B_{j},\ i\in1:k,\ j\in1:l$
+\end_inset
+
+.
+ Подмножества 
+\begin_inset Formula $D_{ij}$
+\end_inset
+
+ дизъюнктны и их объединение составляет множество 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Отбросив пустые множества получим разбиение 
+\begin_inset Formula $\mathscr{C}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Докажем, что оно самое крупное.
+ Пусть имеется разбиение 
+\begin_inset Formula $\mathscr{F}=\{F_{1},...,F_{t}\}$
+\end_inset
+
+, которое мельче, чем 
+\begin_inset Formula $\mathscr{A,B}$
+\end_inset
+
+.
+ Покажем,что оно мельче, чем 
+\begin_inset Formula $\mathscr{C}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall F_{k}\ \exists A_{i_{k}},\ B_{j_{k}}$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $F_{k}\subset A_{i_{k}},\ F_{k}\subset B_{j_{k}}\Rightarrow F_{k}\subset A_{i_{k}}\cap B_{j_{k}}\Rightarrow F_{k}\subset C_{k}$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\mathscr{F}$
+\end_inset
+
+ мельче 
+\begin_inset Formula $\mathscr{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Формула включений-исключений
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\left|\bigcup_{i=1}^{n}A_{i}\right|=\sum_{i}\left|A_{i}\right|-\sum_{i<j}\left|A_{i}\cap A_{j}\right|+\sum_{i<j<k}\left|A_{i}\cap A_{i}\cap A_{k}\right|-...+(-1)^{n-1}\left|A_{1}\cap...\cap A_{n}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Индукция по 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ При 
+\begin_inset Formula $n=1$
+\end_inset
+
+ очевидно.
+ Пусть верно для 
+\begin_inset Formula $n$
+\end_inset
+
+, рассмотрим для 
+\begin_inset Formula $n+1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{multline*}
+\left|\bigcup_{i=1}^{n+1}A_{i}\right|=\left|A_{1}\cup...\cup A_{n}\right|+\left|A_{n+1}\right|-\left|\bigcup_{i=1}^{n}(A_{i}\cap A_{n+1})\right|=\\
+=\sum_{i}^{n}\left|A_{i}\right|-\sum_{i<j}^{n}\left|A_{i}\cap A_{j}\right|+\sum_{i<j<k}^{n}\left|A_{i}\cap A_{i}\cap A_{k}\right|-...+(-1)^{n-1}\left|A_{1}\cap...\cap A_{n}\right|+\\
++\left|A_{n+1}\right|-\left|\bigcup_{i=1}^{n}(A_{i}\cap A_{n+1})\right|=\sum_{i}^{n+1}\left|A_{i}\right|-\sum_{i<j}^{n}\left|A_{i}\cap A_{j}\right|+\sum_{i<j<k}^{n}\left|A_{i}\cap A_{i}\cap A_{k}\right|-...+(-1)^{n-1}\left|A_{1}\cap...\cap A_{n}\right|+\\
++\sum_{i}^{n}\left|A_{i}\cap A_{n+1}\right|-\sum_{i<j}^{n}\left|A_{i}\cap A_{j}\cap A_{n+1}\right|+\sum_{i<j<k}^{n}\left|A_{i}\cap A_{i}\cap A_{k}\cap A_{n+1}\right|-...+(-1)^{n}\left|A_{1}\cap...\cap A_{n+1}\right|=\\
+\sum_{i}^{n+1}\left|A_{i}\right|-\sum_{i<j}\left|A_{i}\cap A_{j}\right|+\sum_{i<j<k}\left|A_{i}\cap A_{i}\cap A_{k}\right|-...+(-1)^{n}\left|A_{1}\cap...\cap A_{n+1}\right|
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Алгоритм перебора перестановок.
+ Нумерация перестановок
+\end_layout
+
+\begin_layout Definition
+Перестановкой из 
+\begin_inset Formula $k$
+\end_inset
+
+ элементов называется упорядоченный набор из 
+\begin_inset Formula $k$
+\end_inset
+
+ различных чисел диапазона 
+\begin_inset Formula $1:k$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Обозначим через 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+ прямое произведение множеств вида 
+\begin_inset Formula $M_{1}\times...\times M_{k}$
+\end_inset
+
+, где каждое 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ состоит из целых чисел от 
+\begin_inset Formula $1$
+\end_inset
+
+ до 
+\begin_inset Formula $i-1$
+\end_inset
+
+.
+ Теперь обозначим множество перестановок из 
+\begin_inset Formula $k$
+\end_inset
+
+ элементов как 
+\begin_inset Formula $P_{k}$
+\end_inset
+
+ и построим взаимно однозначное соответствие между 
+\begin_inset Formula $P_{k}$
+\end_inset
+
+ и 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+: возьмем перестановку 
+\begin_inset Formula $(r_{1},...,r_{k})$
+\end_inset
+
+ и найдем число значений, меньших 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ среди 
+\begin_inset Formula $r_{i+1},...,r_{k}$
+\end_inset
+
+.
+ Это число примем за 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+.
+ Таким образом:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="9">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если использовать это отображение при переборе, то перестановки будут перебирать
+ся в лексикографическом порядке, то есть перестановка 
+\begin_inset Formula $(r_{1},...,r_{k})$
+\end_inset
+
+ предшествует перестановке 
+\begin_inset Formula $(R_{1},...,R_{k})$
+\end_inset
+
+, если до какого-то индекса 
+\begin_inset Formula $d$
+\end_inset
+
+ элементы этих перестановок совпадают, а далее 
+\begin_inset Formula $r_{d}<R_{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Из того, что перестановки следуют в лексикографическом порядке, получаем
+ простой способ получения следующей перестановки из данной:
+\end_layout
+
+\begin_layout Standard
+1) В заданной перестановке 
+\begin_inset Formula $(r_{1},...,r_{k})$
+\end_inset
+
+ найти ее наибольший суффикс (участок 
+\begin_inset Quotes fld
+\end_inset
+
+хвоста
+\begin_inset Quotes frd
+\end_inset
+
+ перестановки), в котором элементы расположены по убыванию (максимальность
+ суффикса означает, что 
+\begin_inset Formula $r_{t-1}<r_{t}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+2) Выбрать в 
+\begin_inset Formula $(r_{t},...,r_{k})$
+\end_inset
+
+ элемент, следующий по величине за 
+\begin_inset Formula $r_{t-1}$
+\end_inset
+
+ и поставить его на место 
+\begin_inset Formula $t-1$
+\end_inset
+
+.
+ Оставшиеся элементы, включая 
+\begin_inset Formula $r_{t-1}$
+\end_inset
+
+ расположить за ним в порядке возрастания.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Однако таким образом перестановки меняются очень сильно.
+ Мы хотим разработать алгоритм, где следующая перестановка получалась из
+ предыдущей транспозицией двух соседних элементов.
+ Будем передвигать 
+\begin_inset Formula $k$
+\end_inset
+
+-ый элемент на соседнее место.
+ Для того, чтобы понять, передвигать его вправо или влево, используем механизм,
+ который на каждые 
+\begin_inset Formula $k-1$
+\end_inset
+
+ итерации будет давать команду на сдвиг 
+\begin_inset Formula $k$
+\end_inset
+
+-го элемента, а затем менять направление его движения на противоположный
+ и давать команду на сдвиг элемента с меньшим номером.
+\end_layout
+
+\begin_layout Standard
+Объясним алгоритм на русском языке, а не на этой помеси брэйнфака и уайтспейса.
+ Выбираем последний элемент перестановки и транспозициями 
+\begin_inset Quotes fld
+\end_inset
+
+гоним
+\begin_inset Quotes frd
+\end_inset
+
+ его на первое место.
+ Затем меняем местами последний и предпоследний элемент перестановки и 
+\begin_inset Quotes fld
+\end_inset
+
+гоним
+\begin_inset Quotes frd
+\end_inset
+
+ наш (теперь уже первый) элемент назад, до последнего места.
+ Меняем местами первый и второй элементы перестановки, повторяем, пока не
+ получим все перестановки.
+ Для маленькой перестановки 
+\begin_inset Formula $(1\ 2\ 3)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(1\ 2\ 3)\to(1\ 3\ 2)\to(3\ 1\ 2)\to(3\ 2\ 1)\to(2\ 3\ 1)\to(2\ 1\ 3)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Оба этих алгоритма являются алгоритмами перебора перестановок.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Теперь поговорим о нумерации перестановок.
+ Здесь нам понадобится то самое множество 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+.
+ Итак, алгоритм получения номера перестановки прост, как яйца пингвина:
+ берем перестановку, составляем для нее кортеж 
+\begin_inset Formula $(t_{1},...,t_{k})$
+\end_inset
+
+, затем получаем номер по формуле 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}t_{i}\cdot(n-i)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+на примере: 
+\begin_inset Formula $P_{3}=(2\ 3\ 1)$
+\end_inset
+
+, для него 
+\begin_inset Formula $T_{3}=(1\ 1\ 0)$
+\end_inset
+
+, по формуле: 
+\begin_inset Formula $N=1\cdot2+1\cdot1+0\cdot1=3$
+\end_inset
+
+, что верно, если перебирать данные перестановки в лексикографическом порядке.
+\end_layout
+
+\begin_layout Section
+Числа Фибоначчи.
+ Теорема о представлении
+\end_layout
+
+\begin_layout Definition
+Числа Фибоначчи — последовательность чисел, определяемая следующим условием:
+ 
+\begin_inset Formula $F_{0}=0;\ F_{1}=1;\ F_{n}=F_{n-1}+F_{n-2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Таким образом получаем 
+\begin_inset Formula $0,1,1,2,3,5,8,13,21,34,55,...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Числа Фибоначчи имеют много замечательных свойств, к примеру, приближают
+ отношение золотого сечения.
+ Положим 
+\begin_inset Formula $\varphi_{n}=\nicefrac{F_{n+1}}{F_{n}}$
+\end_inset
+
+, перейдем к пределу в отношении 
+\begin_inset Formula $\nicefrac{F_{n+1}}{F_{n}}=\nicefrac{F_{n}}{F_{n}}+\nicefrac{F_{n-1}}{F_{n}}$
+\end_inset
+
+ и получим 
+\begin_inset Formula $\varphi=1+\varphi^{-1}$
+\end_inset
+
+, откуда 
+\begin_inset Formula $\varphi=\frac{\sqrt{5}+1}{2}\thickapprox1.61834...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Любое натуральное число 
+\begin_inset Formula $s$
+\end_inset
+
+ однозначно представляется в виде суммы чисел Фибоначчи 
+\begin_inset Formula $s=F_{i_{0}}+...+F_{i_{r}}$
+\end_inset
+
+, где 
+\begin_inset Formula $i_{0}=0$
+\end_inset
+
+ и 
+\begin_inset Formula $\forall k\in1:r$
+\end_inset
+
+ верно 
+\begin_inset Formula $i_{k-1}+1<i_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Докажем, что представление существует.
+ Пусть 
+\begin_inset Formula $j(s)$
+\end_inset
+
+ — номер максимального числа Фибоначчи, не превосходящего 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Положим 
+\begin_inset Formula $s'=s-F_{j(s)}$
+\end_inset
+
+.
+ Из определения 
+\begin_inset Formula $j(s)$
+\end_inset
+
+ следует, что 
+\begin_inset Formula $s'<F_{j(s)-1}$
+\end_inset
+
+.
+ Теперь получим искомое представление 
+\begin_inset Formula $s$
+\end_inset
+
+ как сумму 
+\begin_inset Formula $F_{j(s)}+s'$
+\end_inset
+
+, где 
+\begin_inset Formula $s'$
+\end_inset
+
+ имеет свое представление.
+\end_layout
+
+\begin_layout Proof
+Докажем однозначность представления.
+ Пусть имеется еще одно представление 
+\begin_inset Formula $s=F_{j_{0}}+..+F_{j_{q}}$
+\end_inset
+
+.
+ НУО можно считать, что 
+\begin_inset Formula $j_{q}<j(s)$
+\end_inset
+
+, так как больше быть не может, а рассматривать равные не имеет смысла в
+ текущем контексте.
+ Если заменить 
+\begin_inset Formula $F_{j_{q}}$
+\end_inset
+
+ на 
+\begin_inset Formula $F_{j(s)-1}$
+\end_inset
+
+, сумма разве что увеличится.
+ Аналогично заменим предпоследнее слагаемое на 
+\begin_inset Formula $F_{j(s)-3}$
+\end_inset
+
+, но в любом случае сумма не сможет подняться до значения 
+\begin_inset Formula $F_{j(q)}$
+\end_inset
+
+, следовательно, другое представление невозможно.
+\end_layout
+
+\begin_layout Standard
+Запись числа в фибоначчиевой системе счисления осуществляется так: раскладываем
+ число в сумму чисел Фибоначчи, записываем все числа Фибоначчи до наибольшего
+ из суммы, затем наличие определенного числа Фибоначчи в сумме обозначается
+ 1, а отсутствие 0.
+ К примеру, 
+\begin_inset Formula $51=34+13+3+1$
+\end_inset
+
+, тогда 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="10">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+34
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Условные вероятности и формула Байеса
+\end_layout
+
+\begin_layout Definition
+Отношение благоприятных равновозможных исходов к числу всех исходов называется
+ вероятностью какого-либо события.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proposition
+Разбиение множества элементарных событий 
+\begin_inset Formula $S$
+\end_inset
+
+ на несовместимые события 
+\begin_inset Formula $S_{1},...,S_{n}$
+\end_inset
+
+ называется полной системой событий.
+ Каждое событие 
+\begin_inset Formula $A$
+\end_inset
+
+ может быть представлено в как объединение несовместимых событий.
+ Очевидно равенство:
+\begin_inset Formula 
+\[
+P(A)=\sum_{i\in1:n}P(A\cap S_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+которое называется формулой полной вероятности.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+События называются независимыми, если вероятность их совмещения равна произведен
+ию их вероятностей.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proposition*
+Пусть 
+\begin_inset Formula $A$
+\end_inset
+
+ — некоторое событие, имеющее положительную вероятность.
+ Определим для каждого события 
+\begin_inset Formula $B$
+\end_inset
+
+ условную вероятность 
+\begin_inset Formula $B$
+\end_inset
+
+ при условии 
+\begin_inset Formula $A$
+\end_inset
+
+ как 
+\begin_inset Formula 
+\[
+P(B|A)=\frac{P(B\cap A)}{P(A)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+такого что 
+\begin_inset Formula $P(B\cap A)=P(B|A)\cdot P(A)$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Условную вероятность независимых событий можно определить как 
+\begin_inset Formula $P(B|A)=P(B)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Proposition
+Используя условные вероятности можно видоизменить формулу полных вероятностей,
+ заменив в ней 
+\begin_inset Formula $P(B\cap A_{i})$
+\end_inset
+
+ на 
+\begin_inset Formula $P(B|A_{i})P(A_{i})$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+P(B)=\sum_{i}P(B|A_{i})P(A_{i})
+\]
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proposition
+Также формулу полных вероятностей можно изменить следующим образом: выразив
+ 
+\begin_inset Formula $P(B\cap A_{i})$
+\end_inset
+
+ с помощью условных вероятностей, получим 
+\begin_inset Formula $P(A_{i}|B)P(B)=P(B|A_{i})P(A_{i})$
+\end_inset
+
+.
+ Разделив обе части формулы на 
+\begin_inset Formula $P(B)$
+\end_inset
+
+ и расписав его как 
+\begin_inset Formula $P(B)=\sum P(B|A_{i})P(A_{i})$
+\end_inset
+
+, получим формулу Байеса:
+\begin_inset Formula 
+\[
+P(A_{i}|B)=\frac{P(B|A_{i})P(A_{i})}{\sum(P(B|A_{j})P(A_{j}))}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+формула Байеса используется для вычисления так называемых апостериорных
+ вероятностей, то есть позволяет по известному факту произошедшего события
+ сказать, с какой вероятностью оно было вызвано данной причиной.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Математическое ожидание и дисперсия случайной величины
+\end_layout
+
+\begin_layout Definition
+Пусть 
+\begin_inset Formula $\Omega=\{\omega\}$
+\end_inset
+
+ — множество элементарных событий, 
+\begin_inset Formula $p_{\omega}$
+\end_inset
+
+ — вероятность элементарного события 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Заданная на 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ функция 
+\begin_inset Formula $f:\Omega\to R^{1}$
+\end_inset
+
+ называется случайной величиной.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Для задания случайной величины важен набор вероятностей, с которыми случайная
+ величина принимает те или иные значения.
+ Этот набор вероятностей называется распределением случайной величины.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Случайные величины называются независимыми, если независимы события, которые
+ их вызывают: 
+\begin_inset Formula $P(\xi=a,\mu=b)=P(\xi=a)\times P(\mu=b)$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Величина 
+\begin_inset Formula 
+\[
+E\xi=\sum_{\omega}\xi(\omega)p_{\omega}=\sum_{a}a\times P(\xi=a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+называется математическим ожиданием случайной величины 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+ Ближайшая аналогия — центр тяжести для массы точек.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Definition
+Отсюда следуют свойства математического ожидания:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $Ec=c$
+\end_inset
+
+, где 
+\begin_inset Formula $c=const$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+2) Если 
+\begin_inset Formula $\mu=b\xi$
+\end_inset
+
+, где 
+\begin_inset Formula $b$
+\end_inset
+
+ — константа, то 
+\begin_inset Formula $E\mu=bE\xi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\xi:a_{i}p_{i},\ \mu:b_{i},q_{i}$
+\end_inset
+
+ — независимы, тогда:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $E(\xi\cdot\mu)=\sum_{i}\sum_{j}a_{i}b_{j}P(\xi=a_{i},\mu=b_{j})=\sum a_{i}P(\xi=a_{i})\sum b_{j}P(\mu=b_{j})=E(\xi)+E(\mu)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+4) 
+\begin_inset Formula $E(\xi,\mu)=\sum_{i}\sum_{j}(a_{i}+b_{j})P(\xi=a_{i},\mu=b_{j})=\sum_{i}\sum_{j}a_{i}P(\xi=a_{i},\mu=b_{j})+\sum\sum b_{j}P(\xi=a_{i},\mu=b)_{j}=$
+\end_inset
+
+ 
+\begin_inset Formula $\sum\sum a_{i}P(\xi=a_{i}|\mu=b_{j})P(\xi=a_{i})+\sum\sum b_{j}P(\mu=b_{j}|\xi=a_{i})P(\mu=b_{j})=\sum_{i}a_{i}P(\xi=a_{i})\cdot\sum_{i}P(\xi=a_{i}|\mu=b_{j})+\sum_{j}b_{j}P(\nu=b_{j})\cdot\sum P(\mu=b_{j}|\xi=a_{i})=$
+\end_inset
+
+ 
+\begin_inset Formula $E\xi+E\mu$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Математическое ожидание квадрата отклонения случайной величины от математическог
+о ожидания называется дисперсией случайной величины:
+\begin_inset Formula 
+\[
+D\xi=E(\xi-E\xi)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proposition
+\begin_inset Formula $D\xi=E(\xi^{2}-2\xi E\xi+(E\xi)^{2})=E\xi^{2}-2E(\xi E\xi)+E((E\xi)^{2})=E\xi^{2}-2(E\xi)^{2}+(E\xi)^{2}$
+\end_inset
+
+ (из того, что 
+\begin_inset Formula $E(E\xi)=E\xi$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Свойства дисперсии:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $Dc=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $D(c\xi)=E(c\xi)^{2}-(E(c\xi))^{2}=c^{2}E\xi^{2}-c^{2}(E\xi)^{2}=cD\xi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $\xi,\mu$
+\end_inset
+
+ — независимы.
+ Тогда 
+\begin_inset Formula $D(\xi+\mu)=E(\xi+\mu)^{2}-(E(\xi+\mu))^{2}=E(\xi^{2}+2\xi\mu+\mu^{2})-(E(\xi)+E(\mu)^{2}=E\xi^{2}+2E(\xi\mu)+E\mu^{2}-(E\xi)^{2}-2E(\xi\mu)-(E\mu)^{2}=D\xi+D\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Квадратный корень из дисперсии называется средним квадратичным отклонением
+ и используется для оценки масштаба возможного отклонения случайной величины.
+\end_layout
+
+\begin_layout Section
+Двоичный поиск и неравенство Крафта
+\end_layout
+
+\begin_layout Standard
+Зададим используемые обозначения:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m$
+\end_inset
+
+ — число элементов.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ — вероятность.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ — число битов и длина пути поиска.
+\end_layout
+
+\begin_layout Theorem*
+Для того, чтобы набор целых чисел 
+\begin_inset Formula $s_{i},\ i\in1:m$
+\end_inset
+
+ мог быть набором длин путей поиска (префиксных двоичных кодов) в схеме
+ с 
+\begin_inset Formula $m$
+\end_inset
+
+ исходами, необходимо и достаточно, чтобы 
+\begin_inset Formula 
+\[
+\sum_{i\in1:m}2^{-s_{i}}\leq1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Необходимость
+\series default
+:
+\end_layout
+
+\begin_layout Proof
+Рассмотрим поисковую схему, представляющую собой двоичное дерево 
+\begin_inset Formula $T$
+\end_inset
+
+ с 
+\begin_inset Formula $m$
+\end_inset
+
+ листьями.
+ Сопоставим каждой вершине 
+\begin_inset Formula $k$
+\end_inset
+
+ этого дерева, находящейся на расстоянии 
+\begin_inset Formula $t$
+\end_inset
+
+ от корня число 
+\begin_inset Formula $a_{k}=2^{-t}$
+\end_inset
+
+.
+ Для корня 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ имеем 
+\begin_inset Formula $a_{r_{0}}=1$
+\end_inset
+
+, поэтому достаточно доказать, что 
+\begin_inset Formula 
+\[
+a_{r_{0}}\geq\sum_{k\in F}a_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+где 
+\begin_inset Formula $F$
+\end_inset
+
+ — множество листьев.
+ Для каждого не-листа (то есть вершины, из которой хоть что-то выпадает)
+ 
+\begin_inset Formula $k\in M\backslash F$
+\end_inset
+
+ верно, что 
+\begin_inset Formula $a_{k}\geq\sum_{r\in next(k)}a_{r}$
+\end_inset
+
+, где 
+\begin_inset Formula $next(k)$
+\end_inset
+
+ — множество вершин, непосредственно выходящих из 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Это множество состоит из одной или двух вершин; если вершин 2 выполняется
+ равенство, иначе — неравенство.
+ Суммируя неравенства по 
+\begin_inset Formula $M\backslash F$
+\end_inset
+
+, получаем 
+\begin_inset Formula 
+\[
+\sum_{M\backslash F}a_{k}\geq\sum_{M\backslash\{r_{0}\}}a_{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Вычтем из обоих сумм промежуточные вершины, получим 
+\begin_inset Formula 
+\[
+a_{r_{0}}\geq\sum_{F}a_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Достаточность:
+\end_layout
+
+\begin_layout Proof
+Возьмем 
+\begin_inset Formula $m$
+\end_inset
+
+ чисел, удовлетворяющих условию теоремы, расположим их в порядке возрастания.
+ Определим 
+\begin_inset Formula $a_{k}=2^{-s_{k}}$
+\end_inset
+
+ и положим 
+\begin_inset Formula $b_{1}=0,\ b_{k+1}=b_{k}+a_{k}$
+\end_inset
+
+.
+ Рассмотрим последовательности из нулей и единиц 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+, являющиеся двоичными представлениями дробей 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+, в каждой дроби 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ возьмем первые 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+ знаков.
+ Покажем, что никакая из последовательностей 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ не является началом другой такой последовательности.
+\end_layout
+
+\begin_layout Proof
+Так как длины последовательностей 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ не убывают с ростом 
+\begin_inset Formula $k$
+\end_inset
+
+, достаточно доказать, что никакая 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ не является началом последовательности с большим номером.
+ Дроби 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ возрастают, то есть 
+\begin_inset Formula $b_{k}<b_{k+1}<...b_{m}\leq1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $t_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+010000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+000000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+010000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+010000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+01
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+001000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+001000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+001000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+110000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+110
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+000010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+111000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11100
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+000010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+111010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11101
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+000010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+111100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11110
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+000001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+111110
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+111110
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+000001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+111111
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+111111
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Обозначим через 
+\begin_inset Formula $b_{r}^{(k)}$
+\end_inset
+
+ число, получающееся из 
+\begin_inset Formula $b_{r}$
+\end_inset
+
+ отсечением первых 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+ цифр.
+ Для таких 
+\begin_inset Quotes fld
+\end_inset
+
+урезаний
+\begin_inset Quotes frd
+\end_inset
+
+ остается неравенство, теперь уже нестрогое 
+\begin_inset Formula $b_{k}<b_{k+1}^{(k)}<...<b_{m}^{(k)}$
+\end_inset
+
+.
+ Следовательно, начало 
+\begin_inset Formula $t_{r}^{(k)}$
+\end_inset
+
+ никакой дроби 
+\begin_inset Formula $b_{r}$
+\end_inset
+
+ не совпадает с 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ при 
+\begin_inset Formula $r>k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Неравенство Крафта используется при алфавитном кодировании методом Фанно.
+ Также имеются некие связи с алгоритмом Хаффмена.
+\end_layout
+
+\begin_layout Section
+Энтропия.
+ Леммы.
+ Теорема об энтропии
+\end_layout
+
+\begin_layout Definition
+Энтропией случайной схемы называется мера содержащейся в этой схеме неопределенн
+ости.
+ Она задается как вполне определенная функция от вероятностей исходов.
+ Если мы имеем вероятностную схему 
+\begin_inset Formula $\mathscr{P}$
+\end_inset
+
+ с 
+\begin_inset Formula $m$
+\end_inset
+
+ исходами и вероятности этих исходов равны 
+\begin_inset Formula $p_{1},...,p_{m}$
+\end_inset
+
+, то энтропия этой схемы определяется как 
+\begin_inset Formula 
+\[
+H(\{p_{1},...,p_{m}\})=\sum_{i=1}^{m}p_{i}\log_{2}\frac{1}{p_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(что, конечно же, математически неверно, поскольку мы еще не умеем определять
+ функции от переменного числа аргументов, однако следует её рассматривать
+ как функцию 
+\begin_inset Formula $H(\mathscr{P})$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Свойства
+\series default
+ энтропии:
+\end_layout
+
+\begin_layout Standard
+1) Непрерывна на 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) При перестановке вероятностей 
+\begin_inset Formula $\{p_{1},...,p_{m}\}$
+\end_inset
+
+ энтропия не меняется;
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $H(\{\frac{1}{2};\frac{1}{2}\})=1$
+\end_inset
+
+ (энтропия от двух равновероятных событий равна 1).
+\end_layout
+
+\begin_layout Standard
+4) При фиксированном 
+\begin_inset Formula $m$
+\end_inset
+
+ наибольшей неопределенностью обладает равновероятная схема (ну, это очевидно
+ же :-) ).
+ Обозначим 
+\begin_inset Formula $H(\{\frac{1}{m},...,\frac{1}{m}\})=h(m)$
+\end_inset
+
+, где 
+\begin_inset Formula $h(m)$
+\end_inset
+
+ — функция.
+\end_layout
+
+\begin_layout Standard
+5) 
+\begin_inset Formula $h(m)$
+\end_inset
+
+ возрастает с ростом 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Логично, что с ростом числа исходов неопределенность растет.
+\end_layout
+
+\begin_layout Standard
+6) Рассмотрим схему 
+\begin_inset Formula $\mathscr{P}_{m}$
+\end_inset
+
+ с 
+\begin_inset Formula $m$
+\end_inset
+
+ исходами и вероятностями 
+\begin_inset Formula $\{p_{1},...,p_{m}\}$
+\end_inset
+
+ и схему 
+\begin_inset Formula $\mathscr{R}_{k}$
+\end_inset
+
+ с 
+\begin_inset Formula $k$
+\end_inset
+
+ исходами и вероятностями 
+\begin_inset Formula $\{q_{1},...,q_{k}\}$
+\end_inset
+
+.
+ Образуем вероятностную схему с 
+\begin_inset Formula $m+k-1$
+\end_inset
+
+ исходами следующим образом: сначала выбирается исход из 
+\begin_inset Formula $\mathscr{P}_{m}$
+\end_inset
+
+ и если это 
+\begin_inset Formula $m$
+\end_inset
+
+-ый исход, то выбирается еще один исход из 
+\begin_inset Formula $\{q_{1},...,q_{k}\}$
+\end_inset
+
+, остальные 
+\begin_inset Formula $m-1$
+\end_inset
+
+ исходов считаются окончательными.
+ Тогда 
+\begin_inset Formula $H(\mathscr{PR})=H(\mathscr{P}_{m})+p_{m}H(\mathscr{R}_{k})$
+\end_inset
+
+.
+ (
+\begin_inset Formula $p_{m}$
+\end_inset
+
+ — это вероятность, если чо).
+\end_layout
+
+\begin_layout Theorem
+Единственная функция на множестве всех вероятностных схем, удовлетворяющая
+ условиям 1-6 — функция 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть функция 
+\begin_inset Formula $G$
+\end_inset
+
+ определена для всех вероятностных схем и удовлетворяет 1-6.
+ Положим
+\begin_inset Formula 
+\[
+G\left(\left\{ \frac{1}{m},..,\frac{1}{m}\right\} \right)=g(m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Прервем доказательство и докажем две леммы, которые нам потребуются в дальнейшем
+:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Lemma
+(1) 
+\begin_inset Formula $g(m)=\log_{2}m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Пусть имеются 2 схемы с равновероятностными исходами, 
+\begin_inset Formula $\mathscr{Q}_{k}$
+\end_inset
+
+ и 
+\begin_inset Formula $\mathscr{Q}_{l}$
+\end_inset
+
+.
+ Составим из нее комбинированную схему 
+\begin_inset Formula $\mathscr{Q}_{kl}$
+\end_inset
+
+ с 
+\begin_inset Formula $kl$
+\end_inset
+
+ равновероятными исходами: 
+\begin_inset Formula $(1,1),...,(1,l),(2,1),...,(2,l),...,(k,1),...,(k,l)$
+\end_inset
+
+.
+ Эта схема получается последовательным присоединением к схеме 
+\begin_inset Formula $\mathscr{Q}_{k}$
+\end_inset
+
+ схемы 
+\begin_inset Formula $\mathscr{Q}_{l}$
+\end_inset
+
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ раз в продолжение схемы 
+\begin_inset Formula $\mathscr{Q}_{k}$
+\end_inset
+
+.
+ Из свойства 6 получаем 
+\begin_inset Formula $g(kl)=g(k)+g(l)$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $g(m^{k})=k\cdot g(m)$
+\end_inset
+
+ и 
+\begin_inset Formula $g(2^{k})=k$
+\end_inset
+
+ в силу свойства 3.
+ Теперь обозначим через 
+\begin_inset Formula $s$
+\end_inset
+
+ целую часть 
+\begin_inset Formula $\log_{2}m^{k}$
+\end_inset
+
+, ввиду монотонности 
+\begin_inset Formula $g$
+\end_inset
+
+ имеем 
+\begin_inset Formula $g(2^{s})\leq g(m^{k})\leq g(2^{s+1})\Leftrightarrow s\leq kg(m)\leq s+1$
+\end_inset
+
+.
+ Отсюда:
+\begin_inset Formula 
+\[
+\frac{s}{k}\leq g(m)\leq\frac{s+1}{k}\Leftrightarrow0\leq g(m)-\frac{\left[k\log_{2}(m)\right]}{k}=g(m)-\log_{2}m+\frac{\left\{ k\log_{2}m\right\} }{k}\leq\frac{1}{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Устремив 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ получим утверждение леммы.
+ Используем участок
+\begin_inset Formula 
+\[
+0\leq g(m)-\log_{2}m+\underbrace{\frac{\left\{ k\log_{2}m\right\} }{k}}_{\to0}\leq\frac{1}{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(2) Если набор вероятностей 
+\begin_inset Formula $\{p_{1},...,p_{m}\}$
+\end_inset
+
+ состоит из рациональных чисел, то 
+\begin_inset Formula $G(\{p_{1},...,p_{m}\})=H(\{p_{1},...,p_{m}\})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть все 
+\begin_inset Formula $p_{i}=\nicefrac{r_{i}}{n}$
+\end_inset
+
+.
+ Комбинируя схему 
+\begin_inset Formula $\mathscr{P}_{m}$
+\end_inset
+
+ со схемами 
+\begin_inset Formula $\mathscr{Q}_{r_{i}}$
+\end_inset
+
+, получим схему 
+\begin_inset Formula $\mathscr{Q}_{n}$
+\end_inset
+
+ с 
+\begin_inset Formula $n$
+\end_inset
+
+ равновероятными исходами.
+ Из свойства 6 
+\begin_inset Formula $G(\mathscr{Q}_{n})=G(\mathscr{P}_{m})+\sum_{i\in1:m}p_{i}G(\mathscr{Q}_{r_{i}})$
+\end_inset
+
+, по лемме 1:
+\begin_inset Formula 
+\[
+G(\mathscr{P}_{m})=\log_{2}n-\sum_{i\in1:m}p_{i}\log_{2}r_{i}=\sum_{i\in1:m}p_{i}\log_{2}\frac{1}{p_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Продолжим доказательство теоремы.
+ Воспользуемся свойством непрерывности функции 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Для любого набора вероятностей 
+\begin_inset Formula $\{p_{1},...,p_{m}\}$
+\end_inset
+
+ рассмотрим сходящуюся к нему подпоследовательность рациональных наборов
+ 
+\begin_inset Formula $\{p_{1}^{(k)},...,p_{m}^{(k)}\}$
+\end_inset
+
+.
+ По лемме 2 для каждого из этих наборов 
+\begin_inset Formula $G=H$
+\end_inset
+
+, так как функции непрерывны, то это равенство выполняется и в предельной
+ точке.
+\end_layout
+
+\begin_layout Section
+Код Шеннона-Фанно.
+ Алгоритм Хаффмена
+\end_layout
+
+\begin_layout Definition
+Префиксный код — код, любая последовательность которого не может являться
+ началом другой последовательности.
+ Это требование вводится для того, чтобы однозначно декодировать любую последова
+тельность символов.
+\end_layout
+
+\begin_layout Standard
+Если предположить, что кодируемые символы появляются в тексте независимо,
+ то нужно стремиться уменьшать число битов на один символ, то есть математическо
+е ожидание длины кодовой комбинации случайно выбранного символа, которое
+ равно 
+\begin_inset Formula 
+\[
+\sigma=\sum_{i}p_{i}s_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ — вероятность, а 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ — длина кодовой последовательности 
+\begin_inset Formula $i$
+\end_inset
+
+-того символа.
+\end_layout
+
+\begin_layout Standard
+Таким образом, возникает 
+\end_layout
+
+\begin_layout Problem*
+
+\series bold
+о префиксном коде.
+ 
+\series default
+Минимизировать математическое ожидание 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ по всем наборам длин 
+\begin_inset Formula $\{s_{i}\}$
+\end_inset
+
+, удовлетворяющим неравенству Крафта.
+\end_layout
+
+\begin_layout Standard
+Шеннон и Фанно предложили строить код, близкий к оптимальному (т.е.
+ с минимальным 
+\begin_inset Formula $\sigma$
+\end_inset
+
+), следующим способом: разбить все символы на 2 группы с приблизительно
+ равными суммарными вероятностями, коды первой группы начинать с нуля, а
+ коды второй — с 1.
+ Внутри каждой группы делать то же самое, пока в каждой группе не станет
+ по 1 символу.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Элегантный алгоритм был предложен Хаффменом.
+ Он основывается на следующих свойствах оптимального набора:
+\end_layout
+
+\begin_layout Lemma
+(1) Пусть 
+\begin_inset Formula $\{p_{i}\}$
+\end_inset
+
+ — набор вероятностей символов и 
+\begin_inset Formula $\{s_{i}\}$
+\end_inset
+
+ — длины оптимальных кодовых комбинаций.
+ Если 
+\begin_inset Formula $p_{1}\geq...\geq p_{n}$
+\end_inset
+
+, то 
+\begin_inset Formula $s_{1}\leq...\leq s_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Вытекает из решения задачи о перестановки, минимизирующей скалярное произведение
+ двух векторов.
+ (Теорема: наименьшее значение суммы попарных произведений достигается при
+ сопоставлении возрастающей последовательности 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ и убывающей последовательности 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Lemma
+(2) В обозначениях леммы 1 две самые длинные кодовые комбинации имеют одинаковую
+ длину, то есть 
+\begin_inset Formula $s_{n-1}=s_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $s_{n}>s_{n-1}$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $n$
+\end_inset
+
+-я кодовая комбинация — самая длинная.
+ Так как никакая кодовая комбинация не является началом другой, то, сократив
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ю комбинацию до длины 
+\begin_inset Formula $n-1$
+\end_inset
+
+-ой, мы получим вновь уникальную комбинацию, более короткую, чем раньше,
+ что невозможно для оптимальной перестановки.
+\end_layout
+
+\begin_layout Lemma
+(3) Рассмотрим наравне с нашей задачей 
+\begin_inset Formula $P$
+\end_inset
+
+ сокращенную задачу 
+\begin_inset Formula $P'$
+\end_inset
+
+, которая получается объединением двух самых редких символов в один.
+ Это два последних символа с суммарной вероятностью 
+\begin_inset Formula $p'_{n-1}=p_{n-1}+p_{n}$
+\end_inset
+
+.
+ Минимальное значение целевой функции в задаче 
+\begin_inset Formula $P'$
+\end_inset
+
+ отличается от значения той же функции в задаче 
+\begin_inset Formula $P$
+\end_inset
+
+ на 
+\begin_inset Formula $p'_{n-1}$
+\end_inset
+
+, а оптимальный кодовый набор задачи 
+\begin_inset Formula $P$
+\end_inset
+
+ получается из решения для задачи 
+\begin_inset Formula $P'$
+\end_inset
+
+ удлинением на один бит кодовой последовательности для объединенного символа.
+\end_layout
+
+\begin_layout Lemma
+(то есть оптимальное решение первой задачи получается разделением последнего
+ элемента второй задачи)
+\end_layout
+
+\begin_layout Proof
+Действительно, каждому кодовому набору для задачи 
+\begin_inset Formula $P'$
+\end_inset
+
+ можно сопоставить кодовый набор для задачи 
+\begin_inset Formula $P$
+\end_inset
+
+ так, как указано в лемме.
+ Теперь в задаче 
+\begin_inset Formula $P$
+\end_inset
+
+ найдем минимум на множестве кодов, который обозначим за 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+, а в задаче 
+\begin_inset Formula $P'$
+\end_inset
+
+ аналогичным образом найдем 
+\begin_inset Formula $C_{n-1}$
+\end_inset
+
+.
+ В соответствии с леммой 2 в задаче 
+\begin_inset Formula $P$
+\end_inset
+
+ можно искать минимум на множестве 
+\begin_inset Formula $C_{n}'$
+\end_inset
+
+, в собственном подмножестве 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+, состоящем из наборов, в котором самые длинные кодовые последовательности
+ имеют одинаковую длину.
+ Имеется взаимно однозначное соответствие между 
+\begin_inset Formula $C_{n-1}$
+\end_inset
+
+ и 
+\begin_inset Formula $C_{n}'$
+\end_inset
+
+, и значения целевых функций на соответствующих элементах двух множеств
+ отличаются на постоянное слагаемое.
+ Следовательно, минимумы отличаются на постоянное слагаемое, так что минимуму
+ для задачи 
+\begin_inset Formula $P'$
+\end_inset
+
+ соответствует минимум на 
+\begin_inset Formula $C_{n}'$
+\end_inset
+
+, а он будет минимумом для 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Алгоритм Хаффмена прост.
+ Объединяем символы с наименьшими вероятностями в один со сложением вероятностей
+ для получившегося символа.
+ Произведем эти действия до получения 2-х 
+\begin_inset Quotes fld
+\end_inset
+
+склеенных
+\begin_inset Quotes frd
+\end_inset
+
+ символов.
+ Затем обозначим один из них за 0, а другой за 1 и выполним обратный ход.
+ Расщепим каждый символ на 2, одному присвоим значение 00, другому 01 (10
+ и 11 для второго символа).
+ Выполнять рекуррентно до тех пор, пока каждый символ не обзаведется собственным
+ кодом.
+ 
+\end_layout
+
+\begin_layout Section
+Метод Барроуза-Уилера
+\end_layout
+
+\begin_layout Standard
+Будем объяснять этот алгоритм на большом примере.
+ Возьмем для примера фразу 
+\end_layout
+
+\begin_layout Standard
+ГУСИ-ГУСИ-ГА-ГА-ГА$
+\end_layout
+
+\begin_layout Standard
+Построим для нее суффиксное дерево по следующему алгоритму:
+\end_layout
+
+\begin_layout Standard
+1) Выпишем в алфавитном порядке символы, составляющие фразу (в нашем случае
+ $,-,А,Г,И,С,У).
+\end_layout
+
+\begin_layout Standard
+2) Будем составлять дерево путем перечисления остатков всех букв по порядку:
+ (открыть файл с хренью)
+\end_layout
+
+\begin_layout Standard
+Теперь составим последовательность символов.
+ Берем символ, предшествующий каждому суффиксу (т.е.
+ берем символ, которым начинается ветвь суффикса (доводим до корешка, то
+ есть до первого символа в дереве суффиксовСС) и смотрим ему предшествующий
+ в фразе.
+ Для суффикса -ГА$ таким символом будет А).
+\end_layout
+
+\begin_layout Standard
+АААИИГГГ—-$ССУУГГ.
+\end_layout
+
+\begin_layout Standard
+Теперь составляем табличку: каждый новый символ идет вперед; в строку 
+\begin_inset Quotes fld
+\end_inset
+
+номер
+\begin_inset Quotes frd
+\end_inset
+
+ записывается порядковый номер текущего символа в текущей строке (нумерация
+ с единицы); добавление символа обнуляет счетчик.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="20" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Символ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Номер
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Текущая строка
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+И
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+И
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+У
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+УС$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+У
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+УС$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГУС$-ИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГУС$-ИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В качестве шифра выступает последовательность номеров, а в качестве ключа
+ — порядок появления символов в строке.
+ В нашем случае:
+\end_layout
+
+\begin_layout Standard
+0110101101110010151 — код, а порядок появления символов считывается по первому
+ столбцу — АИГ-$СУ.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Теперь расшифруем нашу последовательность.
+ Зная код, добавляем в начало последовательности букву, когда встречаем
+ в коде очередной ноль; буква, на чей номер указывает цифра кода, переставляется
+ в начало строки.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="20" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Номер
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Текущая строка
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+УС$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+УС$-ГИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГУС$-ИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ГУС$-ИА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+(Таблица 1)
+\end_layout
+
+\begin_layout Standard
+Теперь возьмем символы в алфавитном порядке и выпишем число символов в расшифров
+ываемой строке.
+ Они легко получаются подсчетом количества того или иного символа на первом
+ месте 
+\begin_inset Quotes fld
+\end_inset
+
+Текущей строки
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+И
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+У
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+(Таблица 2)
+\end_layout
+
+\begin_layout Standard
+Теперь составим еще одну таблицу, которая содержит в себе нашу полученную
+ числовую последовательность и суммы соответствующих элементов этой и составляем
+ой строки:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Буквы
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+И
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+У
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Готовая последовательность
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Составляемая последовательность
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+(Таблица 3)
+\end_layout
+
+\begin_layout Standard
+(складываются значения в столбиках и сумма записывается в нижнюю ячейку
+ следующего столбца).
+\end_layout
+
+\begin_layout Standard
+Теперь — еще одна таблица: в верхней строке просто нумерация; следующая
+ строка — последовательность букв (просто считываем первые буквы Таблицы
+ 1); третья строка — сопоставление 
+\begin_inset Quotes fld
+\end_inset
+
+составляемой последовательности
+\begin_inset Quotes frd
+\end_inset
+
+ и 
+\begin_inset Quotes fld
+\end_inset
+
+букв
+\begin_inset Quotes frd
+\end_inset
+
+ Таблицы (3), при использовании число инкрементируется.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="20">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Нумерация
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Буквенная посл.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+А
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+И
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+И
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+С
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+У
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+У
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Г
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Числовая посл.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+(Таблица 4)
+\end_layout
+
+\begin_layout Standard
+И наконец, составим пятую таблицу по немного странному правилу:
+\end_layout
+
+\begin_layout Standard
+Пишем в конец строки символ $.
+ Затем смотрим сопоставляемую ему цифру из числовой последовательности,
+ выбираем ту же цифру из нумерации и пишем соответствующую букву СЛЕВА от
+ знака $: А$.
+ И так далее.
+\end_layout
+
+\begin_layout Section
+Шифрование с открытым ключом
+\end_layout
+
+\begin_layout Definition
+Алгоритмы шифрования с открытым ключом или антисимметричное шифрование строится
+ на существовании пары ключей: публичного, для шифрования сообщения и приватного
+ для его дешифровки.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим алгоритм шифрования RSA, который является одним из самых популярных
+ алгоритмов шифрования.
+ Для создания шифра выбирается большое число 
+\begin_inset Formula $n$
+\end_inset
+
+ — произведение двух простых множителей, 
+\begin_inset Formula $p,q$
+\end_inset
+
+.
+ При кодировании используется некое целое число 
+\begin_inset Formula $e$
+\end_inset
+
+, а при декодировании нужно иметь другое число, 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Перейдем к деталям:
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $n=p\cdot q$
+\end_inset
+
+, где 
+\begin_inset Formula $p,q$
+\end_inset
+
+ — два простых числа.
+ Положим 
+\begin_inset Formula $\varphi=(p-1)(q-1)=p\cdot q-p-q+1$
+\end_inset
+
+.
+ Докажем две леммы:
+\end_layout
+
+\begin_layout Lemma
+Пусть 
+\begin_inset Formula $a$
+\end_inset
+
+ — число, взаимно простое с 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $a^{\varphi}=1\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(необязательное) Пусть 
+\begin_inset Formula $\Phi(n)$
+\end_inset
+
+ — множество всех чисел, не превосходящих 
+\begin_inset Formula $n$
+\end_inset
+
+ и взаимно простых с ним.
+ Заметим, что 
+\begin_inset Formula $\left|\Phi(n)\right|=\varphi$
+\end_inset
+
+ (очевидно, так как не взаимно просты с 
+\begin_inset Formula $n$
+\end_inset
+
+ числа вида 
+\begin_inset Formula $p\cdot1,p\cdot2,...,p\cdot q$
+\end_inset
+
+ и аналогично с 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Так как само произведение входит в такое множество дважды, прибавим единицу).
+ Умножение числа из этого множества на 
+\begin_inset Formula $a$
+\end_inset
+
+ по модулю 
+\begin_inset Formula $n$
+\end_inset
+
+ — биекция: если 
+\begin_inset Formula $b\cdot a=c\cdot a$
+\end_inset
+
+, то, поскольку 
+\begin_inset Formula $a$
+\end_inset
+
+ взаимно просто с 
+\begin_inset Formula $n$
+\end_inset
+
+, разность 
+\begin_inset Formula $c-b$
+\end_inset
+
+ должна делиться на 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula 
+\[
+\prod_{b\in\Phi(n)}b=\prod_{b\in\Phi(n)}(b\cdot a)=a^{\varphi}\prod_{b\in\Phi(n)}b\mod n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+откуда верно утверждение леммы.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим алгоритм шифрования:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Получатель:
+\end_layout
+
+\begin_layout Standard
+1) Выбирает 2 больших простых числа 
+\begin_inset Formula $p$
+\end_inset
+
+ и 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) Перемножает 
+\begin_inset Formula $p\cdot q=n$
+\end_inset
+
+, находит 
+\begin_inset Formula $\varphi(n)=(p-1)(q-1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) Выбирает число 
+\begin_inset Formula $e$
+\end_inset
+
+, взаимно простое с 
+\begin_inset Formula $\varphi(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+4) Определяет число 
+\begin_inset Formula $d$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $de=1\mod\varphi(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+5) Отправляет отправителю открытые ключи 
+\begin_inset Formula $n$
+\end_inset
+
+ и 
+\begin_inset Formula $e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Отправитель:
+\end_layout
+
+\begin_layout Standard
+1) Получает открытые ключи 
+\begin_inset Formula $n$
+\end_inset
+
+ и 
+\begin_inset Formula $e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) Делит сообщение на кусочки, меньшие 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) Каждый кусочек 
+\begin_inset Formula $x$
+\end_inset
+
+ возводит в степень 
+\begin_inset Formula $e$
+\end_inset
+
+: 
+\begin_inset Formula $x^{e}\mod n=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+4) Отправляет результат 
+\begin_inset Formula $c$
+\end_inset
+
+ получателю.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Дешифровка (получатель):
+\end_layout
+
+\begin_layout Standard
+Возводит полученное число в степень 
+\begin_inset Formula $d$
+\end_inset
+
+ по модулю 
+\begin_inset Formula $n$
+\end_inset
+
+: 
+\begin_inset Formula $c^{d}=x^{e^{d}}=x^{k\varphi(n)+1}\mod n\Leftrightarrow x^{k\varphi(n)}\cdot x\mod n=x$
+\end_inset
+
+, расифровка получена.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+На примере:
+\end_layout
+
+\begin_layout Standard
+Зашифруем и расшифруем сообщение 
+\begin_inset Quotes fld
+\end_inset
+
+ХУЙ
+\begin_inset Quotes frd
+\end_inset
+
+ по алгоритму RSA.
+ Для простоты возьмем небольшие числа - это сократит наши расчеты.
+ 
+\end_layout
+
+\begin_layout Standard
+1) Выберем 
+\begin_inset Formula $p=3,\ q=11$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $n=33$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(n)=20$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $e=7$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $de=1\mod20\Rightarrow d=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+5) 
+\begin_inset Formula $n,e=\{33,7\}$
+\end_inset
+
+ — отправлены отправителю.
+\end_layout
+
+\begin_layout Standard
+Шифрование сообщения:
+\end_layout
+
+\begin_layout Standard
+1) Пусть Х=1, У=2, Й=3.
+ Возводим в степень: 
+\begin_inset Formula $1^{7}\mod33=1,\ 2^{7}\mod33=29,\ 3^{7}\mod33=9$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+2) Пакет данных 
+\begin_inset Formula $\{1,29,9\}$
+\end_inset
+
+ отправляется получателю.
+\end_layout
+
+\begin_layout Standard
+Дешифровка:
+\end_layout
+
+\begin_layout Standard
+1) Получатель возводит всё в степень 
+\begin_inset Formula $d$
+\end_inset
+
+ по модулю 
+\begin_inset Formula $n$
+\end_inset
+
+: 
+\begin_inset Formula $1^{3}\mod33=1,\ 29^{3}\mod33=2,\ 9^{3}\mod33=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) Сообщение 
+\begin_inset Quotes fld
+\end_inset
+
+ХУЙ
+\begin_inset Quotes frd
+\end_inset
+
+ дешифровано.
+\end_layout
+
+\begin_layout Section
+Теорема о связном подграфе
+\end_layout
+
+\begin_layout Definition
+Граф — тройка 
+\begin_inset Formula $\left\langle M,N,T\right\rangle $
+\end_inset
+
+, где 
+\begin_inset Formula $M,N$
+\end_inset
+
+ — конечные подмножества, а 
+\begin_inset Formula $T$
+\end_inset
+
+ — отображение 
+\begin_inset Formula $T:N\to M\times M$
+\end_inset
+
+ (ориентированный граф), где:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $M$
+\end_inset
+
+ — множество вершин, 
+\begin_inset Formula $N$
+\end_inset
+
+ — множество ребер.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $G=(M,N)$
+\end_inset
+
+ — запись графа.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Путь длины 
+\begin_inset Formula $k$
+\end_inset
+
+ в ориентированном графе из вершины 
+\begin_inset Formula $v$
+\end_inset
+
+ в 
+\begin_inset Formula $u$
+\end_inset
+
+ — набор вершин 
+\begin_inset Formula $(v_{0},...,v_{k}),\ v_{0}=v,\ v_{k}=u$
+\end_inset
+
+ и 
+\begin_inset Formula $(v_{i-1},v_{i})\in N_{i\in[1,k]}$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Простой путь — путь, в котором все вершины различны.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Контур в ориентированном графе — простой путь, у которого совпадают начальные
+ и конечные вершины и который имеет хотя бы 1 ребро.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Цепь — аналог пути для неориентированного графа.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Цикл — простая замкнутая цепь.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Полный граф — граф, где все вершины соединены со всеми.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Граф связный, если любые две вершины соединены цепью.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Theorem
+\begin_inset Formula $\left\langle M,N,T\right\rangle $
+\end_inset
+
+ — связный.
+ 
+\begin_inset Formula $\exists\left\langle M,N',T\right\rangle $
+\end_inset
+
+, такой, что 
+\begin_inset Formula $|M|-1=|N'|=k$
+\end_inset
+
+ (связный).
+ При этом вершины можно пронумеровать от 
+\begin_inset Formula $0$
+\end_inset
+
+ до 
+\begin_inset Formula $k$
+\end_inset
+
+, а дуги из 
+\begin_inset Formula $N'$
+\end_inset
+
+ от 
+\begin_inset Formula $1$
+\end_inset
+
+ до 
+\begin_inset Formula $k$
+\end_inset
+
+, так, что 
+\begin_inset Formula $\forall u\in N'$
+\end_inset
+
+ верно 
+\begin_inset Formula $num(u)=max\{num(beg(u)),num(end(u))\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+По индукции.
+ Будем строить подграф 
+\begin_inset Formula $\left\langle M',N',T\right\rangle $
+\end_inset
+
+ в графе 
+\begin_inset Formula $\left\langle M,N,T\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+База: 
+\begin_inset Formula $i_{0}$
+\end_inset
+
+ (только вершина).
+ 
+\begin_inset Formula $k=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+ИП: Пусть верно для 
+\begin_inset Formula $\left\langle M',N',T\right\rangle $
+\end_inset
+
+, причем 
+\begin_inset Formula $M\backslash M'\neq\varnothing$
+\end_inset
+
+.
+ Выберем какую-либо вершину 
+\begin_inset Formula $\bar{i}\notin M'$
+\end_inset
+
+.
+ Так как граф 
+\begin_inset Formula $\left\langle M,N,T\right\rangle $
+\end_inset
+
+ связен, то существует цепь из 
+\begin_inset Formula $i_{0}\to\bar{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $i_{0}\in M',\bar{i}\notin M'\Rightarrow\exists i',i''$
+\end_inset
+
+, соединенные ребром, таким что 
+\begin_inset Formula $i'\in M',\ i''\notin M'$
+\end_inset
+
+.
+ Добавим 
+\begin_inset Formula $i''$
+\end_inset
+
+ в 
+\begin_inset Formula $M'$
+\end_inset
+
+, а дугу, их соединившую, в 
+\begin_inset Formula $N'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Количество дуг в 
+\begin_inset Formula $N\ k:=k+1$
+\end_inset
+
+.
+ Количество вершин в первоначальном графе уменьшается с каждой итерацией,
+ следовательно, процесс конечен.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие 1:
+\series default
+ Если 
+\begin_inset Formula $\left|N\right|<|M|-1$
+\end_inset
+
+, то граф несвязен.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Следствие 2:
+\series default
+ Если 
+\begin_inset Formula $|N|>|M|-1$
+\end_inset
+
+, то граф содержит циклы.
+\end_layout
+
+\begin_layout Definition
+Граф, удовлетворяющий теореме, называется деревом.
+\end_layout
+
+\begin_layout Section
+Деревья.
+ Теорема о 6 эквивалентных определениях дерева
+\end_layout
+
+\begin_layout Definition
+Максимальный граф — граф, в котором добавление дуги между любыми вершинами
+ спровоцирует появление цикла.
+\end_layout
+
+\begin_layout Theorem
+Следующие определения дерева эквивалентны:
+\end_layout
+
+\begin_layout Theorem
+1) Связный граф без цикла;
+\end_layout
+
+\begin_layout Theorem
+2) Связный граф, в котором число_дуг=число_вершин-1;
+\end_layout
+
+\begin_layout Theorem
+3) Граф без цикла, в котором число_дуг=число_вершин-1
+\end_layout
+
+\begin_layout Theorem
+4) Минимальный связный граф;
+\end_layout
+
+\begin_layout Theorem
+5) Максимальный граф без цикла;
+\end_layout
+
+\begin_layout Theorem
+6) Граф, в котором любые 2 вершины соединены единственной цепью;
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $1\Rightarrow5$
+\end_inset
+
+) Докажем, что если граф без циклов связен, то это максимальный граф без
+ циклов.
+ Действительно, при добавлении дуги к графу замыкается цепь
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $5\Rightarrow6$
+\end_inset
+
+) Если при добавлении дуги появляется цикл, значит, эта новая дуга замкнула
+ цепь, соединяющую её начало и конец.
+ Значит, любые 2 вершины соединены цепью.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $6\Rightarrow4$
+\end_inset
+
+) Связность графа очевидна.
+ Так как для любых двух вершин соединяющая их цепь единственна, для начала
+ и конца любой дуги этот путь — именно сама эта дуга.
+ Её удаление разрывает цепь между ними.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $4\Rightarrow2$
+\end_inset
+
+) Нужно доказать, что если граф минимально связный, то в нем число дуг 
+\begin_inset Formula $n$
+\end_inset
+
+ на 1 меньше, чем число вершин 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Воспользуемся следствием теоремы об остовном дереве.
+ Для связности требуется 
+\begin_inset Formula $n\geq m-1$
+\end_inset
+
+, но если 
+\begin_inset Formula $n>m-1$
+\end_inset
+
+, то в графе найдется дуга, удаление которой не скажется на остовном дереве,
+ то есть её удаление не нарушит связности, следовательно, эта дуга замыкает
+ цикл.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $2\Rightarrow3$
+\end_inset
+
+) Докажем, что при 
+\begin_inset Formula $n=m-1$
+\end_inset
+
+ связный граф не имеет циклов.
+ Пронумеруем все вершины и дуги.
+ Вершина с наибольшим номером инцидентна двум дугам, для каждой из которых
+ этот номер — максимум из номера начала и номера конца, следовательно, равен
+ номеру дуги.
+ Но две дуги не могут иметь один и тот же номер.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $3\Rightarrow1$
+\end_inset
+
+) Если в графе без циклов 
+\begin_inset Formula $n=m-1$
+\end_inset
+
+, то он связен.
+ Действительно, если он не связен, то в нем есть компонента связности, в
+ которой найдется цикл.
+\end_layout
+
+\begin_layout Section
+Задача о кратчайшем остовном дереве.
+ Алгоритм Прима
+\end_layout
+
+\begin_layout Definition
+Дерево, являющееся частичным графом связного графа — остовное.
+\end_layout
+
+\begin_layout Problem*
+(о кратчайшем дереве в графе):
+\end_layout
+
+\begin_layout Problem*
+Пусть каждой дуге 
+\begin_inset Formula $j$
+\end_inset
+
+ графа 
+\begin_inset Formula $\left\langle M,N,T\right\rangle $
+\end_inset
+
+ сопоставляется неотрицательное число 
+\begin_inset Formula $l[j]$
+\end_inset
+
+, которое называется длиной этой дуги.
+ Требуется построить такое остовное дерево, у которого сумма длин дуг минимальна.
+\end_layout
+
+\begin_layout Problem*
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Алгоритм Прима.
+\end_layout
+
+\begin_layout Standard
+Начальная точка алгоритма — любая вершина графа.
+ Алгоритм 
+\begin_inset Quotes fld
+\end_inset
+
+помечает
+\begin_inset Quotes frd
+\end_inset
+
+ вершины графа, которые добавлены к остовному дереву.
+ Назовем каймой набор дуг, у которых одна вершина помечена, а другая нет.
+ Алгоритм выбирает из каймы дугу с наименьшей длиной и помечает её второй
+ конец.
+ Кайма меняется, алгоритм повторяет действия до тех пор, пока есть непомеченные
+ вершины.
+\end_layout
+
+\begin_layout Theorem
+Алгоритм Прима строит наименьшее остовное дерево.
+\end_layout
+
+\begin_layout Proof
+Пусть граф 
+\begin_inset Formula $G$
+\end_inset
+
+ был связным, т.е.
+ ответ существует.
+ Обозначим через 
+\begin_inset Formula $T$
+\end_inset
+
+ остов, найденный алгоритмом Прима, а через 
+\begin_inset Formula $S$
+\end_inset
+
+ — минимальный остов.
+ Очевидно, что 
+\begin_inset Formula $T$
+\end_inset
+
+ действительно является остовом (т.е.
+ поддеревом графа 
+\begin_inset Formula $G$
+\end_inset
+
+).
+ Покажем, что веса 
+\begin_inset Formula $S$
+\end_inset
+
+ и 
+\begin_inset Formula $T$
+\end_inset
+
+ совпадают.
+\end_layout
+
+\begin_layout Proof
+Рассмотрим первый момент времени, когда в 
+\begin_inset Formula $T$
+\end_inset
+
+ происходило добавление ребра, не входящего в оптимальный остов 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Обозначим это ребро через 
+\begin_inset Formula $e$
+\end_inset
+
+, концы его — через 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+, а множество входящих на тот момент в остов вершин — через 
+\begin_inset Formula $V$
+\end_inset
+
+ (согласно алгоритму, 
+\begin_inset Formula $a\in V$
+\end_inset
+
+, 
+\begin_inset Formula $b\notin V$
+\end_inset
+
+, либо наоборот).
+ В оптимальном остове 
+\begin_inset Formula $S$
+\end_inset
+
+ вершины 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+ соединяются каким-то путём 
+\begin_inset Formula $p$
+\end_inset
+
+; найдём в этом пути любое ребро 
+\begin_inset Formula $g$
+\end_inset
+
+, один конец которого лежит в 
+\begin_inset Formula $V$
+\end_inset
+
+, а другой — нет.
+ Поскольку алгоритм Прима выбрал ребро 
+\begin_inset Formula $e$
+\end_inset
+
+ вместо ребра 
+\begin_inset Formula $g$
+\end_inset
+
+, то это значит, что вес ребра 
+\begin_inset Formula $g$
+\end_inset
+
+ больше либо равен весу ребра 
+\begin_inset Formula $e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Удалим теперь из 
+\begin_inset Formula $S$
+\end_inset
+
+ ребро 
+\begin_inset Formula $g$
+\end_inset
+
+, и добавим ребро 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ По только что сказанному, вес остова в результате не мог увеличиться (уменьшить
+ся он тоже не мог, поскольку 
+\begin_inset Formula $S$
+\end_inset
+
+ было оптимальным).
+ Кроме того, 
+\begin_inset Formula $S$
+\end_inset
+
+ не перестало быть остовом (в том, что связность не нарушилась, нетрудно
+ убедиться: мы замкнули путь 
+\begin_inset Formula $p$
+\end_inset
+
+ в цикл, и потом удалили из этого цикла одно ребро).
+\end_layout
+
+\begin_layout Proof
+Итак, мы показали, что можно выбрать оптимальный остов 
+\begin_inset Formula $S$
+\end_inset
+
+ таким образом, что он будет включать ребро 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ Повторяя эту процедуру необходимое число раз, мы получаем, что можно выбрать
+ оптимальный остов 
+\begin_inset Formula $S$
+\end_inset
+
+ так, чтобы он совпадал с 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Следовательно, вес построенного алгоритмом Прима 
+\begin_inset Formula $T$
+\end_inset
+
+ минимален, что и требовалось доказать.
+\end_layout
+
+\begin_layout Section
+Алгоритм Краскала
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Алгоритм Краскала:
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+1) Сортируем дуги графа по длине;
+\end_layout
+
+\begin_layout Standard
+2) Строим дерево — множество всех дуг.
+ На начальном шаге оно пусто.
+\end_layout
+
+\begin_layout Standard
+3) Рассматриваем наименьшую дугу.
+ Проверяем, принадлежат ли её концы одному и тому же множеству вершин.
+ Если это так, пропускаем дугу.
+ Иначе добавляем её и её концы в дерево (т.е.
+ концы идут в множество вершин, либо новое, если оба конца не принадлежат
+ никакому множеству, либо в одно из существующих, если один из концов принадлежи
+т какому-либо множеству вершин.
+ Если концы дуги принадлежат разным множествам, то необходимо объединить
+ их в одно).
+ Алгоритм завершает работу, если просмотрены все дуги.
+\end_layout
+
+\begin_layout Theorem
+Алгоритм Краскала строит наименьшее остовное дерево.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\left\langle M,N^{*}\right\rangle $
+\end_inset
+
+ — дерево, построенное алгоритмом Краскала, 
+\begin_inset Formula $\left\langle M,N_{opt}\right\rangle $
+\end_inset
+
+ — оптимальное дерево.
+ Первые 
+\begin_inset Formula $k$
+\end_inset
+
+ длин ребер совпадают у обоих деревьев: 
+\begin_inset Formula $q_{1},...,q_{k}$
+\end_inset
+
+ (если мы их упорядочим по возрастанию, конечно же).
+ Вставим элемент 
+\begin_inset Formula $*$
+\end_inset
+
+ из 
+\begin_inset Formula $N^{*}$
+\end_inset
+
+ в 
+\begin_inset Formula $N_{opt}$
+\end_inset
+
+ на то же место.
+ Появляется цикл.
+ Заметим, что с 
+\begin_inset Formula $q_{1},...,q_{k}\ *$
+\end_inset
+
+ циклов не образовывал, иначе в 
+\begin_inset Formula $N^{*}$
+\end_inset
+
+ были бы циклы, следовательно, 
+\begin_inset Formula $*$
+\end_inset
+
+ образовывает цикл с чем-то из правой части 
+\begin_inset Formula $N_{opt}:$
+\end_inset
+
+ пусть c 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+, где 
+\begin_inset Formula $i>k+1$
+\end_inset
+
+.
+ Удалим 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+, при этом 
+\begin_inset Formula $l[q_{i}]\geq l[q_{j}]$
+\end_inset
+
+, где 
+\begin_inset Formula $i\in1:k$
+\end_inset
+
+.
+ Следовательно, длина 
+\begin_inset Formula $N^{*}$
+\end_inset
+
+ не изменилась, длина 
+\begin_inset Formula $N_{opt}$
+\end_inset
+
+ либо не изменилась, либо уменьшилась; в первом случае сведем 
+\begin_inset Formula $N_{opt}$
+\end_inset
+
+ к 
+\begin_inset Formula $N^{*}$
+\end_inset
+
+, во втором 
+\begin_inset Formula $N_{opt}$
+\end_inset
+
+ не является максимальным.
+\end_layout
+
+\begin_layout Section
+Задача о кратчайшем пути.
+ Алгоритм Дейкстры
+\end_layout
+
+\begin_layout Problem*
+Задан граф 
+\begin_inset Formula $\left\langle M,N\right\rangle $
+\end_inset
+
+ и каждой его дуге сопоставлено положительное число 
+\begin_inset Formula $l[u]$
+\end_inset
+
+.
+ Для двух заданных вершин 
+\begin_inset Formula $i^{-}$
+\end_inset
+
+ и 
+\begin_inset Formula $i^{+}$
+\end_inset
+
+ требуется найти путь минимальной длины с началом 
+\begin_inset Formula $i^{-}$
+\end_inset
+
+ и концом 
+\begin_inset Formula $i^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Алгоритм Дейкстры:
+\end_layout
+
+\begin_layout Standard
+Зададим:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ — вершины, расстояние до которых уже вычислено.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ — вершины, расстояние до которых вычисляется.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ — вершины, расстояние до которых еще не вычислено.
+\end_layout
+
+\begin_layout Standard
+Начальное состояние: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{0}=\varnothing,\ M_{1}=\{i^{-}\},\ M_{2}=\{M\backslash i^{-}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Стандартный шаг алгоритма:
+\end_layout
+
+\begin_layout Standard
+Берем вершину из множества 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ (верхний элемент из очереди).
+ Пусть 
+\begin_inset Formula $v$
+\end_inset
+
+ — выбранная вершина.
+ Переводим эту вершину во множество 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+.
+ Затем просматриваем все ребра, выходящие из этой вершины.
+ Пусть 
+\begin_inset Formula $t$
+\end_inset
+
+ — второй конец этого ребра, а 
+\begin_inset Formula $l$
+\end_inset
+
+ — длина ребра.
+ 
+\begin_inset Formula $D_{r}$
+\end_inset
+
+ — длина пути до вершины 
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\star$
+\end_inset
+
+) Если 
+\begin_inset Formula $t\in M_{2}$
+\end_inset
+
+, то переносим 
+\begin_inset Formula $t$
+\end_inset
+
+ в 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+, в конец очереди, а 
+\begin_inset Formula $D_{t}=D_{v}+l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\star$
+\end_inset
+
+) Если 
+\begin_inset Formula $t\in M_{1}$
+\end_inset
+
+, то 
+\begin_inset Formula $D_{t}=\min(D_{t},D_{v}+l)$
+\end_inset
+
+.
+ Сама 
+\begin_inset Formula $t$
+\end_inset
+
+ никак не передвигается в очереди.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\star$
+\end_inset
+
+) Если 
+\begin_inset Formula $t\in M_{0}$
+\end_inset
+
+ и если 
+\begin_inset Formula $D_{t}$
+\end_inset
+
+ можно улучшить (
+\begin_inset Formula $D_{t}>D_{v}+l$
+\end_inset
+
+), то улучшаем 
+\begin_inset Formula $D_{t}$
+\end_inset
+
+, а вершину 
+\begin_inset Formula $t$
+\end_inset
+
+ возвращаем в 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ в начало очереди.
+\end_layout
+
+\begin_layout Theorem
+Алгоритм Дейкстры находит путь минимальной длины.
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $\forall v\in M_{0},\ f(v)=\delta(x_{0},v)$
+\end_inset
+
+ — длина кратчайшего пути от 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ до 
+\begin_inset Formula $v$
+\end_inset
+
+, и существует путь из 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ в 
+\begin_inset Formula $v$
+\end_inset
+
+ целиком лежащий в 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $v\in M\backslash M_{0},\ f(v)$
+\end_inset
+
+ — длина наименьшего пути от 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ до 
+\begin_inset Formula $v$
+\end_inset
+
+, такого, что все вершины пути принадлежат 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ кроме 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Обоснуем выполнение утверждения 1:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\exists y:f[y]=\min_{i\in M_{1}}f[i]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f[y]$
+\end_inset
+
+ — конечное значение.
+ От противного: 
+\begin_inset Formula $\exists$
+\end_inset
+
+ путь из 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ в 
+\begin_inset Formula $y$
+\end_inset
+
+, с длиной 
+\begin_inset Formula $l(p)$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $l(x_{0},y)>l(x_{0},z)$
+\end_inset
+
+, где 
+\begin_inset Formula $z\in p$
+\end_inset
+
+ и 
+\begin_inset Formula $l(x_{0},y)>l(x_{0},z)\geq f(z)\geq f(y)$
+\end_inset
+
+.
+ Противоречие.
+\end_layout
+
+\begin_layout Proof
+Обоснуем выполнение утверждения 2:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $M_{0}'=M_{0}\cup\{y\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f'(M)=\min\{f(V),f(y)+l(y,v)\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Задача о максимальном парасочетании в графе.
+ Алгоритм построения
+\end_layout
+
+\begin_layout Definition
+Ориентированный граф 
+\begin_inset Formula $\left\langle M,N\right\rangle $
+\end_inset
+
+ — двудольный, если множество его вершин разбито на два множества 
+\begin_inset Formula $M_{b},\ M_{e}$
+\end_inset
+
+ и все начала дуг принадлежат 
+\begin_inset Formula $M_{b}$
+\end_inset
+
+, а концы — 
+\begin_inset Formula $M_{e}$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Набор дуг 
+\begin_inset Formula $J\subset N$
+\end_inset
+
+ называется парасочетанием, если 
+\begin_inset Formula $\forall j_{1},j_{2}\in J,\ j_{1}\neq j_{2}$
+\end_inset
+
+, начала и концы этих дуг различны 
+\begin_inset Formula $beg(j_{1})\neq beg(j_{2})$
+\end_inset
+
+ и 
+\begin_inset Formula $end(j_{1})=end(j_{2})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Посмотрим, каким образом можно построить парасочетание, максимальное по
+ числу входящих в него дуг.
+ Вместе с парасочетанием будем строить некое специальное множество вершин.
+\end_layout
+
+\begin_layout Definition
+Множество вершин 
+\begin_inset Formula $M'$
+\end_inset
+
+ контролирует дугу 
+\begin_inset Formula $j$
+\end_inset
+
+, если если начало или конец этой дуги принадлежит 
+\begin_inset Formula $M'$
+\end_inset
+
+.
+ Нас интересует контрольное множество, в котором для любой дуги 
+\begin_inset Formula $j$
+\end_inset
+
+ найдется контролирующая её вершина.
+ Если размер парасочетания мы хотим максимизировать, то контрольное множество,
+ очевидно, должно быть минимальным.
+ Недостроенное контрольное множество будем называть тестовым.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset CommandInset label
+LatexCommand label
+name "Алгоритм"
+
+\end_inset
+
+Алгоритм построения максимального парасочетания.
+\end_layout
+
+\begin_layout Standard
+Обозначим через 
+\begin_inset Formula $beg(K)=\{beg(j)|j\in K\},\ end(K)=\{end(j)|j\in K\}$
+\end_inset
+
+, где 
+\begin_inset Formula $K$
+\end_inset
+
+ — любое множество дуг.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Состояние вычислительного процесса.
+ 
+\emph default
+На каждом шаге алгоритма имеется текущее парасочетание 
+\begin_inset Formula $N'$
+\end_inset
+
+, разбитое на два подмножества 
+\begin_inset Formula $N'=N'_{b}\cup N'_{e}$
+\end_inset
+
+ (по положению контролирующей точки — в начале или в конце дуги).
+ Объединение 
+\begin_inset Formula $M'$
+\end_inset
+
+ множеств 
+\begin_inset Formula $M'_{b}=beg(N_{b}')$
+\end_inset
+
+ и 
+\begin_inset Formula $M_{e}'=end(N_{e}')$
+\end_inset
+
+ составляет текущее тестовое множество.
+ Каждой дуге 
+\begin_inset Formula $j\in N'$
+\end_inset
+
+ сопоставим дугу 
+\begin_inset Formula $\delta(j)$
+\end_inset
+
+ — её дублер, который не входит в парасочетание и имеет тот же конец, что
+ и 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Припишем каждой дуге из 
+\begin_inset Formula $N'_{e}$
+\end_inset
+
+ положительный ранг 
+\begin_inset Formula $\rho(j)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Начальное состояние:
+\emph default
+ Первоначально множество 
+\begin_inset Formula $N'$
+\end_inset
+
+ пусто, соответственно, пусты и 
+\begin_inset Formula $N'_{b},N'_{e},M'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Стандартный шаг: 
+\emph default
+Если все дуги из 
+\begin_inset Formula $N$
+\end_inset
+
+ контролируются множеством 
+\begin_inset Formula $M'$
+\end_inset
+
+, работа алгоритма завершается.
+\end_layout
+
+\begin_layout Standard
+Пусть существует дуга 
+\begin_inset Formula $j_{0}$
+\end_inset
+
+, не контролируемая множеством 
+\begin_inset Formula $M'$
+\end_inset
+
+, так что 
+\begin_inset Formula $beg(j_{0})\notin beg(N_{b}'),\ end(j_{0})\notin end(N'_{e})$
+\end_inset
+
+ (то есть контролирующей точки для этой дуги нет).
+ Возможны четыре случая:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $beg(j_{0})\notin beg(N'),\ end(j_{0})\notin end(N')$
+\end_inset
+
+.
+ Мы нашли дугу с началом и концом, не встречающимися в текущем парасочетании.
+ Эту дугу можно добавить к парасочетанию: 
+\begin_inset Formula $N':=N'\cup\{j_{0}\},\ N'_{b}:=N',\ N'_{e}:=\varnothing,\ M':=beg(N')$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $beg(j_{0})\notin beg(N'),\ end(j_{0})\in end(N')$
+\end_inset
+
+.
+ Так как 
+\begin_inset Formula $end(j_{0})\notin end(N'_{e})$
+\end_inset
+
+, но 
+\begin_inset Formula $end(j_{0})\in end(N')$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists j_{1}\in N'_{b}$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $end(j_{0})=end(j_{1})$
+\end_inset
+
+.
+ Переведем дугу 
+\begin_inset Formula $j_{1}$
+\end_inset
+
+ из 
+\begin_inset Formula $N'_{b}$
+\end_inset
+
+ в 
+\begin_inset Formula $N'_{e}$
+\end_inset
+
+, назначив ей дублером 
+\begin_inset Formula $j_{0}$
+\end_inset
+
+ и приписав им ранг 1.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $beg(j_{0})\in beg(N'),\ end(j_{0})\in end(N')$
+\end_inset
+
+.
+ Существует такая дуга 
+\begin_inset Formula $j_{1}\in N'_{b}$
+\end_inset
+
+, что 
+\begin_inset Formula $end(j_{0})=end(j_{1})$
+\end_inset
+
+ и существует дуга 
+\begin_inset Formula $j_{2}\in N_{e}'$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $beg(j_{0})=beg(j_{2})$
+\end_inset
+
+.
+ Переведем дугу 
+\begin_inset Formula $j_{1}$
+\end_inset
+
+ из 
+\begin_inset Formula $N'_{b}$
+\end_inset
+
+ в 
+\begin_inset Formula $N'_{e}$
+\end_inset
+
+, назначив ей дублером 
+\begin_inset Formula $j_{0}$
+\end_inset
+
+ и приписав им ранг 
+\begin_inset Formula $\rho(j_{2})+1$
+\end_inset
+
+.
+ Отметим, что так наращиваются постепенно цепочки дуг и дублеров и каждая
+ кончается парой дуг первого ранга.
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $beg(j_{0})\in beg(N'),\ end(j_{0})\notin end(N')$
+\end_inset
+
+.
+ Существует дуга 
+\begin_inset Formula $j_{2}\in N'_{e}$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $beg(j_{0})=beg(j_{2})$
+\end_inset
+
+.
+ Присоединение 
+\begin_inset Formula $j_{0}$
+\end_inset
+
+ к цепочке, начинавшейся с 
+\begin_inset Formula $j_{2}$
+\end_inset
+
+ дает нам цепочку с нечетным числом дуг.
+ В нем дуг из парасочетания на одну меньше, чем дублеров, при этом начала
+ и концы дублеров — те же вершины, что и у дуг парасочетания, а начало дублера
+ первого ранга и конец дуги 
+\begin_inset Formula $j_{0}$
+\end_inset
+
+ в парасочетании не встречались.
+ Заменим дуги парасочетания их дублерами.
+ Размер множества 
+\begin_inset Formula $N'$
+\end_inset
+
+ вырастет на 1 и получится новое парасочетание.
+ Переведем все дуги парасочетания из 
+\begin_inset Formula $N_{e}'$
+\end_inset
+
+ в 
+\begin_inset Formula $N'_{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Теорема Кенига
+\end_layout
+
+\begin_layout Theorem
+Размерность максимального парасочетания в двудольном графе равна минимальному
+ размеру контрольного множества.
+\end_layout
+
+\begin_layout Proof
+Размер любого парасочетания не превосходит размера любого контрольного множества
+, так как каждая дуга парасочетания контролируется отдельной вершиной.
+\end_layout
+
+\begin_layout Proof
+Алгоритм нахождения максимального парасочетания заканчивается, когда все
+ дуги контролируются.
+ При этом количество контролирующих вершин равно количеству дуг, входящих
+ в максимальное парасочетание 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Следовательно, размер контрольного множества должен быть не меньше 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Алгоритм построения контролирующего множества
+\end_layout
+
+\begin_layout Standard
+А здесь мы смотрим вот этот алгоритм 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Алгоритм"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+хуй
+\end_layout
+
+\begin_layout Section
+хуй
+\end_layout
+
+\begin_layout Section
+хуй
+\end_layout
+
+\begin_layout Section
+хуй
+\end_layout
+
+\begin_layout Section
+Алгоритмы с гарантированной оценкой точности.
+ Алгоритм Эйлера
+\end_layout
+
+\begin_layout Definition
+Алгоритмы с гарантированной оценкой точности — алгоритм, для которого 
+\begin_inset Formula $\exists k:\ \frac{fA}{fopt}<k$
+\end_inset
+
+, где 
+\begin_inset Formula $fA$
+\end_inset
+
+ — результат алгоритма, 
+\begin_inset Formula $fopt$
+\end_inset
+
+ — оптимальный результат.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Эйлеров путь — путь, который проходит по каждому ребру, причем только один
+ раз.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Эйлеров цикл — замкнутый эйлеров путь.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Степень вершины — число ребер, которые исходят из данной вершины.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Definition
+
+\series bold
+Алгоритм Эйлера: 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $G$
+\end_inset
+
+ — граф.
+\end_layout
+
+\begin_layout Definition
+1) Строим минимальное остовное дерево 
+\begin_inset Formula $T$
+\end_inset
+
+ в 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+2) Удваиваем ребра в 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image/ушдук.jpg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+3) С помощью поиска в глубину ищем эйлеров цикл: 
+\begin_inset Formula $1\to5\to2\to5\to3\to4\to3\to6\to3\to2\to1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+4) Убираем из цикла повторяющиеся вершины: 
+\begin_inset Formula $1\to2\to5\to3\to4\to6\to1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Для алгоритма Эйлера 
+\begin_inset Formula $k=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $T$
+\end_inset
+
+ — суммарный вес ребер в дереве 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\begin_inset Formula $fopt\geq T.\ fA\leq2\cdot T$
+\end_inset
+
+ (т.к.
+ путь будет меньше, чем обходить все дерево 
+\begin_inset Formula $T$
+\end_inset
+
+).
+ Отсюда 
+\begin_inset Formula $\frac{f_{A}}{f_{opt}}\leq2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Алгоритм Кристофидеса
+\end_layout
+
+\begin_layout Standard
+1) Строим минимальное дерево.
+\end_layout
+
+\begin_layout Standard
+2) У вершин с нечетной степенью находим минимальное взвешенное парасочетание
+ (среди ребер, соединяющих только эти вершины, находим такие, которые были
+ бы паросочетанием и имели наименьшую длину).
+ Добавляем дуги из него в дерево.
+\end_layout
+
+\begin_layout Standard
+3) Дальше по алгоритму Эйлера.
+\end_layout
+
+\begin_layout Section
+хуй
+\end_layout
+
+\begin_layout Section
+хуй
+\end_layout
+
+\end_body
+\end_document
