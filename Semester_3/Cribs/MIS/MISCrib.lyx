@@ -2213,7 +2213,7 @@ df=\frac{\partial f}{\partial u}du+\frac{\partial f}{\partial v}dv=\left(\frac{\
 
 \begin_layout Section
 Производные по направлению.
- Градиент функции.Геометрический смысл (*)
+ Градиент функции.Геометрический смысл
 \end_layout
 
 \begin_layout Standard
@@ -2757,7 +2757,7 @@ d^{k}f=d(d^{k-1}f)=\left(\frac{\partial}{\partial x_{1}}dx_{1}+...+\frac{\partia
 \end_layout
 
 \begin_layout Section
-Формула Тейлора для функций нескольких переменных (*)
+Формула Тейлора для функций нескольких переменных
 \end_layout
 
 \begin_layout Standard
@@ -2970,7 +2970,7 @@ R_{k}=\left(\frac{\partial}{\partial x_{1}}\Delta x_{1}+...+\frac{\partial}{\par
 
 \begin_layout Section
 Экстремумы функции.
- Необходимые и достаточные условия (-)
+ Необходимые и достаточные условия
 \end_layout
 
 \begin_layout Standard
@@ -3679,7 +3679,7 @@ x^{(0)}-h\vec{\nabla}f(x^{(0)}) & \min
 \end_layout
 
 \begin_layout Section
-Теорема о неявной функции от одной или нескольких переменных (-)
+Теорема о неявной функции от одной или нескольких переменных
 \end_layout
 
 \begin_layout Definition
@@ -4430,7 +4430,7 @@ y_{m}=y_{m}(x_{1},...,x_{n})
 \end_layout
 
 \begin_layout Section
-Теорема о системе неявных функций (-)
+Теорема о системе неявных функций
 \end_layout
 
 \begin_layout Definition
@@ -4741,7 +4741,7 @@ y_{m-1}=y_{m-1}(x_{1},...,x_{n})
 \end_layout
 
 \begin_layout Section
-Дифференцирование неявных функций (*)
+Дифференцирование неявных функций
 \end_layout
 
 \begin_layout Remark
@@ -4996,7 +4996,7 @@ x_{n+m}=f_{m}(x_{1},...,x_{n})
 
 \begin_layout Section
 Условный экстремум.
- Метод множителей Лагранжа (-)
+ Метод множителей Лагранжа
 \end_layout
 
 \begin_layout Problem*
@@ -5415,7 +5415,7 @@ d\Phi(x^{(0)})=\left(\frac{\partial F}{\partial x_{1}}dx_{1}+...+\frac{\partial 
 
 \begin_layout Section
 Геометрические приложения производных.
- Касательные и нормали в трехмерном пространстве (-)
+ Касательные и нормали в трехмерном пространстве
 \end_layout
 
 \begin_layout Standard
@@ -7457,7 +7457,7 @@ y_{1}(x)\leq y\leq y_{2}(x)
 \end_layout
 
 \begin_layout Section
-Вычисление площадей с помощью двойных и криволинейных интегралов (-)
+Вычисление площадей с помощью двойных и криволинейных интегралов
 \end_layout
 
 \begin_layout Section
@@ -7970,7 +7970,7 @@ y_{1}(x)\leq y\leq y_{2}(x)
 \begin_layout Section
 Вычисление криволинейного интеграла второго рода в случае полного дифференциала
  под знаком интеграла.
- Дифференциальное уравнение в полных дифференциалах (-)
+ Дифференциальное уравнение в полных дифференциалах
 \end_layout
 
 \begin_layout Example
@@ -8106,7 +8106,7 @@ y_{1}(x)\leq y\leq y_{2}(x)
 \begin_layout Section
 Условия потенциальности для криволинейного интеграла по пространственному
  контуру.
- Случай неодносвязной области (-)
+ Случай неодносвязной области
 \end_layout
 
 \begin_layout Remark
@@ -8216,7 +8216,7 @@ y_{1}(x)\leq y\leq y_{2}(x)
 \end_layout
 
 \begin_layout Section
-Выражение площади в криволинейных интегралах (-)
+Выражение площади в криволинейных интегралах
 \end_layout
 
 \begin_layout Example
@@ -8450,7 +8450,7 @@ x'_{\eta} & y'_{\eta}
 \end_layout
 
 \begin_layout Section
-Замена переменных в двойном интеграле (*)
+Замена переменных в двойном интеграле
 \end_layout
 
 \begin_layout Theorem
@@ -8632,7 +8632,7 @@ y=y(\xi,\eta)
 \end_layout
 
 \begin_layout Section
-Площадь криволинейной поверхности (*)
+Площадь криволинейной поверхности 
 \end_layout
 
 \begin_layout Standard
@@ -8965,7 +8965,7 @@ S=\iint_{\Delta}\sqrt{A^{2}+B^{2}+C^{2}}dudv
 
 \begin_layout Section
 Поверхностный интеграл первого рода.
- Сведение к Риманову интегралу (*)
+ Сведение к Риманову интегралу
 \end_layout
 
 \begin_layout Standard
@@ -9224,7 +9224,7 @@ z=\chi(u,v)
 \end_deeper
 \begin_layout Section
 Поверхностный интеграл второго рода.
- Сведение к Риманову интегралу (*)
+ Сведение к Риманову интегралу
 \end_layout
 
 \begin_layout Standard
@@ -9587,7 +9587,7 @@ z=\chi(u,v)
 
 \end_deeper
 \begin_layout Section
-Формула Стокса (*)
+Формула Стокса
 \end_layout
 
 \begin_layout Standard
@@ -10527,7 +10527,7 @@ P & Q & R
 
 \begin_layout Section
 Потенциальные и соленоидальные поля.
- Уравнения Лапласа и Пуассона (*)
+ Уравнения Лапласа и Пуассона
 \end_layout
 
 \begin_layout Definition
@@ -11400,7 +11400,7 @@ J(y)=\int_{a}^{b}f(x,y)dx
 
 \begin_layout Section
 Производная интеграла, зависящего от параметра (Правило Лейбница).
- Частный и общий случай (-)
+ Частный и общий случай
 \end_layout
 
 \begin_layout Theorem
@@ -11577,7 +11577,7 @@ J'(y)=\frac{\partial\Phi}{\partial y}+\frac{\partial\Phi}{\partial u}a'(y)+\frac
  Равномерная сходимость.
  Критерий Коши.
  Признаки Вейерштрасса, Абеля, Дирихле равномерной сходимости несобственных
- интегралов, зависящих от параметра (*)
+ интегралов, зависящих от параметра
 \end_layout
 
 \begin_layout Definition
@@ -11847,8 +11847,7 @@ J(y)=\int_{a}^{+\infty}f(x,y)dx
 \end_deeper
 \begin_layout Section
 Теорема о предельном переходе для несобственного интеграла, зависящего от
- параметра.
- (*)
+ параметра
 \end_layout
 
 \begin_layout Theorem
@@ -11904,7 +11903,6 @@ y\in[c,d]\text{при }A\to\infty\\
 
 \begin_layout Section
 Теорема о непрерывности несобственного интеграла, зависящего от параметра
- (*)
 \end_layout
 
 \begin_layout Theorem
@@ -11968,7 +11966,7 @@ y\in[c,d]\text{при }A\to\infty\\
 \end_layout
 
 \begin_layout Section
-Интегрируемость несобственных интегралов, зависящих от параметра (*)
+Интегрируемость несобственных интегралов, зависящих от параметра
 \end_layout
 
 \begin_layout Theorem
@@ -12046,7 +12044,7 @@ y\in[c,d]\text{при }A\to\infty\\
 \end_layout
 
 \begin_layout Section
-Дифференцируемость несобственных интегров, зависящих от параметра (*)
+Дифференцируемость несобственных интегров, зависящих от параметра
 \end_layout
 
 \begin_layout Theorem
@@ -12202,7 +12200,7 @@ J'(y_{0})=\lim_{\Delta y\to0}\frac{J(y_{0}+\Delta y)-J(y_{0})}{\Delta y}=\lim_{\
 \end_layout
 
 \begin_layout Section
-Эйлеровы интегралы первого и второго рода (-)
+Эйлеровы интегралы первого и второго рода
 \end_layout
 
 \begin_layout Example
@@ -12512,7 +12510,7 @@ J'(y_{0})=\lim_{\Delta y\to0}\frac{J(y_{0}+\Delta y)-J(y_{0})}{\Delta y}=\lim_{\
 \begin_layout Section
 Интеграл Фурье.
  Сходимость интеграла Фурье.
- Теоремы Дини и Дирихле-Жордана (-)
+ Теоремы Дини и Дирихле-Жордана
 \end_layout
 
 \begin_layout Standard
@@ -13017,8 +13015,7 @@ S_{0}=\frac{f(x_{0}+0)+f(x_{0}-0)}{2}
 \end_deeper
 \begin_layout Section
 Комплексная форма интеграла Фурье.
- Преобразование Фурье.
- (-)
+ Преобразование Фурье
 \end_layout
 
 \begin_layout Standard
