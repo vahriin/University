@@ -9418,7 +9418,7 @@ z=\chi(u,v)
 
 .
  Тогда 
-\begin_inset Formula $\iint_{(S)}Q(x,y,z)dxdz=(R)\iint_{D_{y}}R(x,y(x,z),z)dxdz$
+\begin_inset Formula $\iint_{(S)}Q(x,y,z)dxdz=(R)\iint_{D_{y}}Q(x,y(x,z),z)dxdz$
 \end_inset
 
 
@@ -10338,7 +10338,7 @@ z_{1}(x,y)\leq z\leq z_{2}(x,y)
 
 .
  Также его можно переписать в виде 
-\begin_inset Formula $\iint_{(S)}(P\cos\lambda+Q\cos\mu+R\cos\nu)dS=\iint_{(S)}Pdydz+Qdxdz+Rdzdy$
+\begin_inset Formula $\iint_{(S)}(P\cos\lambda+Q\cos\mu+R\cos\nu)dS=\iint_{(S)}Pdydz+Qdxdz+Rdxdy$
 \end_inset
 
 .
@@ -10447,7 +10447,7 @@ dz
 P & Q & R
 \end{array}\right|=\\
 =\iint_{(S)}\left[\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\cos\lambda+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\cos\mu+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\cos\nu\right]dS=\\
-=\iint\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)dydz+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)dxdz+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy
+=\iint_{(S)}\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)dydz+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)dxdz+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy
 \end{multline*}
 
 \end_inset
@@ -10532,7 +10532,7 @@ P & Q & R
 
 \begin_layout Definition
 Векторное поле 
-\begin_inset Formula $F$
+\begin_inset Formula $\vec{F}$
 \end_inset
 
  называется потенциальным, если 
@@ -10761,7 +10761,7 @@ P & Q & R
 \end_layout
 
 \begin_layout Proof
-\begin_inset Formula $\vec{F}=\vec{\nabla}\Phi$
+\begin_inset Formula $\vec{F}_{1}=\vec{\nabla}\Phi$
 \end_inset
 
 , где 
@@ -11037,17 +11037,49 @@ P & Q & R
 \end_layout
 
 \begin_layout Proof
-Тогда 
-\begin_inset Formula $\forall y_{0}\in[c,d],\forall y\in[c,d],\forall x\in[a,b]$
-\end_inset
-
-.
- Положим 
+Положим 
 \begin_inset Formula $x_{1}=x_{2}=x,\ y_{1}=y,y_{2}=y_{0}$
 \end_inset
 
 .
- Тогда дописать.
+ Тогда 
+\begin_inset Formula $\forall y\in[c,d]:\ \left|y-y_{0}\right|<\delta$
+\end_inset
+
+ и 
+\begin_inset Formula $\forall x\in\left[a,b\right]$
+\end_inset
+
+ выполняется неравенство
+\begin_inset Formula 
+\[
+\left|f(x,y)-f(x,y_{0})\right|<\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Но это и означает, что равномерное на 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ стремление 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ и 
+\begin_inset Formula $f(x,y_{0})$
+\end_inset
+
+ при 
+\begin_inset Formula $y\to y_{0}$
+\end_inset
+
+.
+ Доказано.
 \end_layout
 
 \begin_layout Section
@@ -11450,8 +11482,8 @@ J'(y)=\lim_{\Delta y\to0}\frac{J(y+\Delta y)-J(y)}{\Delta y}=\\
 \lim_{\Delta y\to0}\frac{1}{\Delta y}\left(\int_{a}^{b}f(x,y+\Delta y)dx-\int_{a}^{b}f(x,y)dx\right)=\\
 =\lim_{\Delta y\to0}\frac{\int_{a}^{b}\left(f(x,y+\Delta y)dx-f(x,y)dx\right)}{\Delta y}=\lim_{\Delta y\to0}\int_{a}^{b}\frac{\left(f(x,y+\Delta y)dx-f(x,y)dx\right)}{\Delta y}=\\
 =(\frac{\left(f(x,y+\Delta y)dx-f(x,y)dx\right)}{\Delta y}\to_{\Delta y\to0}\frac{\partial f}{\partial y}\Rightarrow(\text{из леммы})\\
-\frac{\left(f(x,y+\Delta y)dx-f(x,y)dx\right)}{\Delta y}\rightrightarrows_{\Delta y\to0}^{x\in[a,b]}\frac{\partial f}{\partial y})=(\text{теорема о предельном переходе})\\
-=\int_{a}^{b}\lim_{\Delta y\to0}\int_{a}^{b}\frac{\left(f(x,y+\Delta y)dx-f(x,y)dx\right)}{\Delta y}=\int_{a}^{b}\frac{\partial f}{\partial y}dx
+\frac{\left(f(x,y+\Delta y)dx-f(x,y)dx\right)}{\Delta y}\rightrightarrows_{\Delta y\to0}^{x\in[a,b]}\frac{\partial f}{\partial y})=(\text{теорема о предельном переходе})=\\
+=\lim_{\Delta y\to0}\int_{a}^{b}\frac{\left(f(x,y+\Delta y)dx-f(x,y)dx\right)}{\Delta y}=\int_{a}^{b}\frac{\partial f}{\partial y}dx
 \end{multline*}
 
 \end_inset
@@ -11992,7 +12024,7 @@ y\in[c,d]\text{при }A\to\infty\\
 
 .
  Тогда 
-\begin_inset Formula $\int_{c}^{d}J(y)dy=\int_{c}^{d}dx\int_{a}^{\infty}f(x,y)dx=\int_{a}^{\infty}dx\int_{c}^{d}f(x,y)dy$
+\begin_inset Formula $\int_{c}^{d}J(y)dy=\int_{c}^{d}dy\int_{a}^{\infty}f(x,y)dx=\int_{a}^{\infty}dx\int_{c}^{d}f(x,y)dy$
 \end_inset
 
 .
@@ -12363,7 +12395,7 @@ J'(y_{0})=\lim_{\Delta y\to0}\frac{J(y_{0}+\Delta y)-J(y_{0})}{\Delta y}=\lim_{\
 \end_inset
 
 , 
-\begin_inset Formula $\Gamma''(a)=x^{a-1}\ln^{2}xe^{-x}dx$
+\begin_inset Formula $\Gamma''(a)=\int_{0}^{\infty}x^{a-1}\ln^{2}xe^{-x}dx$
 \end_inset
 
 .
@@ -12551,7 +12583,7 @@ a_{k}=\frac{1}{l}\int_{-l}^{l}f(t)\cos\frac{k\pi t}{l}dt
 \begin_layout Standard
 \begin_inset Formula 
 \[
-b_{k}=\frac{1}{l}\int_{-l}^{l}\sin\frac{k\pi t}{l}dt
+b_{k}=\frac{1}{l}\int_{-l}^{l}f(t)\sin\frac{k\pi t}{l}dt
 \]
 
 \end_inset
@@ -12564,7 +12596,7 @@ b_{k}=\frac{1}{l}\int_{-l}^{l}\sin\frac{k\pi t}{l}dt
 \begin_inset Formula 
 \begin{multline*}
 f(x)=\frac{1}{2l}\int_{-l}^{l}f(t)dt+\\
-+\sum_{k=1}^{\infty}\left(\frac{1}{l}\int_{-l}^{l}f(t)\cos\frac{k\pi t}{l}dt\cos\frac{k\pi t}{l}+\frac{1}{l}\int_{-l}^{l}f(t)\sin\frac{k\pi t}{l}dt\sin\frac{k\pi t}{l}+\right)=\\
++\sum_{k=1}^{\infty}\left(\frac{1}{l}\int_{-l}^{l}f(t)\cos\frac{k\pi t}{l}dt\cos\frac{k\pi x}{l}+\frac{1}{l}\int_{-l}^{l}f(t)\sin\frac{k\pi t}{l}dt\sin\frac{k\pi x}{l}\right)=\\
 =\frac{1}{2l}\int_{-l}^{l}f(t)dt+\frac{1}{\pi}\sum_{k=1}^{\infty}\frac{\pi}{l}\int_{-l}^{l}f(t)\cos\frac{k\pi(t-x)}{l}dt\ \ \ \ \ (*)
 \end{multline*}
 
@@ -13001,11 +13033,11 @@ S_{0}=\frac{f(x_{0}+0)+f(x_{0}-0)}{2}
 \begin_inset Formula $\exists h>0:\ f(x)$
 \end_inset
 
- имеют ограниченную вариацию на 
+ имеет ограниченную вариацию на 
 \begin_inset Formula $[x_{0}-h,x_{0}+h]\Rightarrow$
 \end_inset
 
- инетграл Фурье сходится к 
+ интеграл Фурье сходится к 
 \begin_inset Formula $S_{0}$
 \end_inset
 
