@@ -1,0 +1,808 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{indentfirst}
+\end_preamble
+\use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+theorems-ams-bytype
+theorems-sec-bytype
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 2.5cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.7cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\RR}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ZZ}{\mathbb{Z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\NN}{\mathbb{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\QQ}{\mathbb{Q}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Овсянников Александр Дмитриевич)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Петровский 
+\begin_inset Quotes fld
+\end_inset
+
+Лекции по ОДУ
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Матвеев 
+\begin_inset Quotes fld
+\end_inset
+
+Методы интегрирования ОДУ
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Филлипов 
+\begin_inset Quotes fld
+\end_inset
+
+Сборник задач по ОДУ
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+Гандмахер 
+\begin_inset Quotes fld
+\end_inset
+
+Теория матриц
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+Я/Еругин 
+\begin_inset Quotes fld
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+Демидович 
+\begin_inset Quotes fld
+\end_inset
+
+Лекции по теории устойчивости
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-7"
+
+\end_inset
+
+Романько 
+\begin_inset Quotes fld
+\end_inset
+
+Разностные уравнения
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Обыкновенные дифференциальные уравнения
+\end_layout
+
+\begin_layout Subsubsection
+Элементарные сведения
+\end_layout
+
+\begin_layout Definition
+Если мы говорим, что у нас есть соотношение 
+\begin_inset Formula $F(x,y,y',...,y^{(n)})=0$
+\end_inset
+
+, то это соотношение называется обыкновенным дифференциальным уравнением.
+ При этом обязательно вхождение дифференциала 
+\begin_inset Formula $n$
+\end_inset
+
+-ного порядка.
+\end_layout
+
+\begin_layout Example
+К примеру, 
+\begin_inset Formula $y'=0\Leftrightarrow y=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Или 
+\begin_inset Formula $y'=y\Leftrightarrow y=c\cdot e^{x}$
+\end_inset
+
+, но не 
+\begin_inset Formula $y=e^{x}+C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+
+\series bold
+ДЗ
+\series default
+: проверить, что это второй ответ неверен.
+\end_layout
+
+\begin_layout Definition
+Решением дифференциального уравнения будем называть функцию 
+\begin_inset Formula $y=\varphi(x)$
+\end_inset
+
+, такую, что она обращает нашу функцию в тождество: 
+\begin_inset Formula $F(x,\varphi(x),\varphi'(x),...,\varphi^{(n)}(x))\equiv0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Если решение выражается через элементарные функции и их суперпозиции, то
+ функция представима в виде квадратуры.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+ДЗ
+\series default
+: 
+\begin_inset Formula $\sqrt[3]{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem*
+Введем понятие задачи Коши.
+ Если вдобавок к нашему уравнению ставятся дополнительные условия вида 
+\begin_inset Formula $y(x_{0})=y_{0},\ y'(x_{0})=y_{0}^{1},...,y^{(n-1)}(x_{0})=y_{0}^{n-1}$
+\end_inset
+
+, то (дописать).
+\end_layout
+
+\begin_layout Standard
+Поговорим о том, где применяются ОДУ (обыкновенные дифференциальные уравнения,
+ в дальнейшем будет использоваться только эта аббривеатура).
+ Например, еще в школе мы работали с телом в поле тяготения земли.
+ Вообще ОДУ встречаются повсеместно: механика, физика, экономика, везде,
+ где исследуется эволюция систем, заданных определенными уравнениями с течением
+ времени.
+\end_layout
+
+\begin_layout Subsection
+ОДУ первого порядка
+\end_layout
+
+\begin_layout Definition
+Соотношение вида 
+\begin_inset Formula $F(x,y,y')=0$
+\end_inset
+
+, где 
+\begin_inset Formula $y'=\frac{dy}{dx}$
+\end_inset
+
+, называется ОДУ первого порядка.
+ При этом в него обязательно должна входить первая производная.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $y'=f(x,y)$
+\end_inset
+
+ — нормальная форма ОДУ первого порядка.
+ Договоримся, что правая часть должна быть определена в некоторой плоскости
+ 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Область должна быть открытая и связная.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Решением дифференциального уравнения будем называть функцию 
+\begin_inset Formula $y=\varphi(x)$
+\end_inset
+
+, такую, что она обращает нашу функцию в тождество: 
+\begin_inset Formula $F(x,\varphi(x),\varphi'(x),...,\varphi^{(n)}(x))\equiv0$
+\end_inset
+
+, где 
+\begin_inset Formula $x\in(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Геометрическая интерпретация
+\end_layout
+
+\begin_layout Standard
+Правая часть нашего уравнения 
+\begin_inset Formula $k=f(x,y)$
+\end_inset
+
+ определена в некоторой области 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Тогда в некоторой точке этой области мы можем вычислить значение 
+\begin_inset Formula $y'$
+\end_inset
+
+.
+ Геометрическая интерпретация производной — тангенс угла: 
+\begin_inset Formula $k=\tan\alpha$
+\end_inset
+
+.
+ То есть мы можем сказать, что в области 
+\begin_inset Formula $D$
+\end_inset
+
+ задано поле направлений, то есть в каждой точке угол наклона касательной
+ должен быть определенной величины.
+ Тогда в каждой точке касательной мы можем построить единичный вектор, соответст
+вующий углу наклона.
+\end_layout
+
+\begin_layout Definition
+Если построить линии, при которых 
+\begin_inset Formula $k=0,\ k=1,\ k=\frac{1}{2},\ k=\pm\infty$
+\end_inset
+
+ и так далее.
+ Такие линии мы будем называть изоклинами.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Договоримся, что в каждой точке области 
+\begin_inset Formula $D$
+\end_inset
+
+ мы проведем линию, касательную в каждой точке и соответствующую полю направлени
+й.
+ Эту линию будем называть интегральной линией.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+В дальнейшем под решением ОДУ будем понимать поиск интегральных линий.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Напомним, как задаются линии: 
+\begin_inset Formula $x=\lambda(t),y=\mu(t)$
+\end_inset
+
+, где 
+\begin_inset Formula $t\in(a,b)$
+\end_inset
+
+, такие, что 
+\begin_inset Formula $\lambda'^{2}(t)+\mu'^{2}(t)\neq0$
+\end_inset
+
+ (то есть хотя бы одна производная не равна нулю).
+ Оказывается, что в этой ситуации 
+\begin_inset Formula $x,y$
+\end_inset
+
+ равнозначны, то есть независимая переменная и исходная функция становятся
+ равноправны.
+\end_layout
+
+\begin_layout Standard
+При этом иногда ОДУ записывают в симметричной форме: 
+\begin_inset Formula $M(x,y)dx-N(x,y)dy=0$
+\end_inset
+
+.
+ Наш частный случай может быть переписан как 
+\begin_inset Formula $dy-f(x,y)dx=0$
+\end_inset
+
+.
+ Уравнение в симметричной форме может быть записано как 
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{M(x,y)}{N(x,y)}=f(x,y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dx}{dy}=\frac{N(x,y)}{M(x,y)}=\frac{1}{f(x,y)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Таким образом уравнение в симметричной форме задает поле направлений в области
+ 
+\begin_inset Formula $D$
+\end_inset
+
+, если обе функции не обращаются в ноль.
+ Если одна из функций обращается в ноль, то мы должны взять одно из двух
+ уравнений выше.
+ В случае, если обе функции обращаются в ноль в некоторой точке, то поле
+ направлений в ней считается неопределенным.
+\end_layout
+
+\begin_layout Standard
+Уравнение можно переписать еще и как 
+\begin_inset Formula 
+\[
+\frac{dx}{N(x,y)}=\frac{dy}{M(x,y)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Функция 
+\begin_inset Formula $y=\omega(x,C)$
+\end_inset
+
+, непрерывно дифференцируемая по 
+\begin_inset Formula $x$
+\end_inset
+
+ называется общим решением ОДУ, если при подстановке данной функции в ОДУ
+ мы получаем тождество.
+\end_layout
+
+\begin_layout Definition
+Равенство 
+\begin_inset Formula $y=\omega(x,C)$
+\end_inset
+
+ должно быть разрешимо относительно 
+\begin_inset Formula $C$
+\end_inset
+
+: 
+\begin_inset Formula $C=\psi(x,y)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x,y\in D$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Если через каждую точку области 
+\begin_inset Formula $D$
+\end_inset
+
+ проходит единственная интегральная кривая, то эти точки называются точками
+ решения задачи Коши.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ДЗ
+\series default
+: переписать на языке 
+\begin_inset Formula $\varepsilon-\delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Договоримся об обозначениях:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{0}=\omega(x_{0},C)$
+\end_inset
+
+,
+\begin_inset Formula $C_{0}=\psi(x_{0},y_{0})$
+\end_inset
+
+, 
+\begin_inset Formula $y=\omega(x,C(x_{0},y_{0}))=y(x,x_{0},y_{0})$
+\end_inset
+
+ — решение в форме Коши.
+\end_layout
+
+\begin_layout Standard
+Отсюда можно вывести:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=y(x,x_{0},y_{0})\Rightarrow y_{0}=y(x_{0},x_{0},y_{0})$
+\end_inset
+
+, откуда 
+\begin_inset Formula $y_{0}=y(x_{0},x,y)$
+\end_inset
+
+, то есть роль константы 
+\begin_inset Formula $C$
+\end_inset
+
+ играет начальное значение 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y'=f(x)$
+\end_inset
+
+ — неполное уравнение.
+ Ответ:
+\begin_inset Formula 
+\[
+y(x)=\int f(x)dx+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Найдем решение, отвечающее задаче Коши.
+ Если функция определена на интервале 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+, то область определения имеет вид: (рисунок)
+\end_layout
+
+\begin_layout Example
+Тогда любая точка из этой полосы будет являться точкой решения задачи Коши:
+ 
+\begin_inset Formula 
+\[
+y(x,x_{0},y_{0})=\int_{x_{0}}^{x}f(t)dt+y_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Дефолты: мы работаем в вещественной области и предполагаем, что искомая
+ функция вещественна.
+\end_layout
+
+\begin_layout Definition
+Частным решением называется решение ОДУ в каждой точке которого выполняется
+ условие существования и единственности решения задачи Коши.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Особое решение — решение ОДУ в каждой точке которого нарушается единственность
+ решения задачи Коши.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $y'=g(y)$
+\end_inset
+
+.
+ Еще одно неполное уравнение.
+ Переворачиваем:
+\begin_inset Formula 
+\[
+\frac{dx}{dy}=\frac{1}{g(y)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Общее решение примет вид: 
+\begin_inset Formula 
+\[
+x(y)=\int\frac{dy}{g(y)}+C
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example
+И в форме Коши:
+\begin_inset Formula 
+\[
+x=\int_{y_{0}}^{y}\frac{d\tau}{g(\tau)}+x_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Все замечательно, до того момента, когда 
+\begin_inset Formula $g(y)=0$
+\end_inset
+
+.
+ В этом случае 
+\begin_inset Formula $g(\eta)=0,\ y=\eta$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,513 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{indentfirst}
+\end_preamble
+\use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+theorems-ams-bytype
+theorems-sec-bytype
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 2.5cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.7cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\RR}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ZZ}{\mathbb{Z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\NN}{\mathbb{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\QQ}{\mathbb{Q}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Екатерина Викторовна, 234 или 236 аудитория) E-mail: ekaterina.shevkoplyas@gmail.
+com ДОСРОКА НЕ БУДЕТ.
+\end_layout
+
+\begin_layout Section
+Теория вероятности
+\end_layout
+
+\begin_layout Subsection
+Основные понятия.
+ Испытание (опыт, эксперимент), событие
+\end_layout
+
+\begin_layout Definition
+Теория вероятности — наука, изучающая закономерности случайных явлений.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Опыт, испытание, эксперимент — некоторая воспроизводиная совокупность условий,
+ в рамках которых может произойти то или иное явление, тот или иной факт.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1) Подбрасывание одной монеты; 
+\end_layout
+
+\begin_layout Example
+2) Двух; 
+\end_layout
+
+\begin_layout Example
+3) Выстрел по мишени; 
+\end_layout
+
+\begin_layout Example
+4) Подбрасывание игрального кубика-кости (да, берцовой);
+\end_layout
+
+\begin_layout Example
+5) Рождение ребенка и тому подобное.
+\end_layout
+
+\begin_layout Definition
+Событие — любой факт, который может произойти либо не произойти в результате
+ испытания.
+ Обычно обозначаются заглавными латинскими буквами: 
+\begin_inset Formula $A,B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1) Событие 
+\begin_inset Formula $A$
+\end_inset
+
+ — выпадение герба.
+ 
+\begin_inset Formula $\Omega=\{\text{Г},\text{Р}\}$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Example
+2) Выпали все решки;
+\end_layout
+
+\begin_layout Example
+3) Попали по мишени;
+\end_layout
+
+\begin_layout Example
+4.1) Выпало шесть точек;
+\end_layout
+
+\begin_layout Example
+4.2) Выпало четное число точек;
+\end_layout
+
+\begin_layout Example
+5) Родился мальчик.
+\end_layout
+
+\begin_layout Example
+Событие 4.2 является 
+\emph on
+составным
+\emph default
+.
+\end_layout
+
+\begin_layout Definition
+Элементарное событие (или исход) — событие, которое не может являться объединени
+ем более мелких событий.
+ Неопределяемое понятие.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $\omega_{i}$
+\end_inset
+
+ — обозначение элементарного исхода.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $\Omega=\{\omega_{i}\}$
+\end_inset
+
+ — пространство элементарных исходов.
+\end_layout
+
+\begin_layout Definition
+Случайное событие 
+\begin_inset Formula $A\subseteq\Omega$
+\end_inset
+
+.
+ Лежит между 
+\begin_inset Formula $\varnothing$
+\end_inset
+
+ и 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Событие, которое обязательно произойдет, называется достоверным.
+ Так как оно состоит из всех элементов пространства элементарных исходов,
+ оно обозначается 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Событие, которое никогда не произойдет в результате испытаний, называется
+ невозможным.
+ Оно обозначается 
+\begin_inset Formula $\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Вероятность события 
+\begin_inset Formula $A$
+\end_inset
+
+ — число, характеризующее степень возможности этого события.
+ Обозначается 
+\begin_inset Formula $p(A)$
+\end_inset
+
+.
+ Данное определение не является классическим.
+\end_layout
+
+\begin_layout Definition
+Вероятность невозможного события 
+\begin_inset Formula $p(\varnothing)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Вероятность достоверного события 
+\begin_inset Formula $p(\Omega)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Таким образом, 
+\begin_inset Formula $0\leq p(A)\leq1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Вероятность
+\end_layout
+
+\begin_layout Subsubsection
+Классическая формула вычисления вероятности
+\end_layout
+
+\begin_layout Standard
+Пусть относительно 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ выполнены условия:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $\left|\Omega\right|=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Quotes fld
+\end_inset
+
+Равные шансы
+\begin_inset Quotes frd
+\end_inset
+
+: все элементарные исходы равновозможны.
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula 
+\[
+p(A)=\frac{\left|A\right|}{\left|\Omega\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+ — мощность множества элементарных исходов, составляющих множество благоприятных
+ исходов.
+\end_layout
+
+\begin_layout Subsubsection
+Статистическое определение вероятности
+\end_layout
+
+\begin_layout Standard
+Если не выполнено второе условие, то формула приобретает вид: 
+\begin_inset Formula 
+\[
+p(A)=\frac{m_{A}}{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $m_{A}$
+\end_inset
+
+ — число появлений события 
+\begin_inset Formula $A$
+\end_inset
+
+, а 
+\begin_inset Formula $n$
+\end_inset
+
+ — число экспериментов.
+\end_layout
+
+\begin_layout Subsubsection
+Геометрическое определение вероятности
+\end_layout
+
+\begin_layout Standard
+Выполнено второе условие, но не выполнено первое (конечность множества).
+ В этом случае формула приобретет вид:
+\begin_inset Formula 
+\[
+p(A)=\frac{l}{L}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $l$
+\end_inset
+
+ — площадь (
+\begin_inset Formula $n$
+\end_inset
+
+-мерная) области, удовлетворяющей условию, 
+\begin_inset Formula $L$
+\end_inset
+
+ — площадь всей области.
+\end_layout
+
+\end_body
+\end_document
