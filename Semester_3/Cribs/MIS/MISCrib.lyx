@@ -1648,7 +1648,7 @@ x_{n}=x_{n}(t)
 
 .
  При 
-\begin_inset Formula $x\to0$
+\begin_inset Formula $\Delta x\to0$
 \end_inset
 
  
@@ -7433,7 +7433,7 @@ y_{1}(x)\leq y\leq y_{2}(x)
 \begin_inset Formula 
 \begin{multline*}
 \iint_{E}\frac{\partial P}{\partial y}dxdy=\int_{a}^{b}dx\int_{y_{1}(x)}^{y_{2}(x)}\frac{\partial P}{\partial y}dy=\int_{a}^{b}\left(P(x,y_{2}(x))-P(x,y_{1}(x))\right)dx=\\
-=-\int_{b}^{a}P(x,y_{2}(x))dx-\int_{a}^{b}P(x,y_{1}(x))dx=-\oint_{(l)}P(x,y)dx
+=\int_{b}^{a}P(x,y_{2}(x))dx-\int_{a}^{b}P(x,y_{1}(x))dx=-\oint_{(l)}P(x,y)dx
 \end{multline*}
 
 \end_inset
