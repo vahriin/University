@@ -509,5 +509,615 @@ p(A)=\frac{l}{L}
  — площадь всей области.
 \end_layout
 
+\begin_layout Subsection
+Операции над событиями
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Теория множеств
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Теория вероятности
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Omega$
+\end_inset
+
+ — универсальное множество 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+пространство элем.
+ исходов
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\subset\Omega$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+случайное событие
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varnothing$
+\end_inset
+
+ — пустое множество
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+невозможное событие
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overline{A}=\Omega\backslash A$
+\end_inset
+
+ — дополнение
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+противоположное событие
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\cap B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\cdot B$
+\end_inset
+
+ произведение событий
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\cup B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A+B$
+\end_inset
+
+ сумма событий
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Суммой событий 
+\begin_inset Formula $A+B$
+\end_inset
+
+ называется событие 
+\begin_inset Formula $D$
+\end_inset
+
+, которое состоит в выполнении хотя бы одного события 
+\begin_inset Formula $A$
+\end_inset
+
+ и 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $\{A_{1},...,A_{n}\}$
+\end_inset
+
+ — полная группа событий, если 
+\begin_inset Formula $A_{i}\cap A_{j}=\varnothing\ \forall i\neq j$
+\end_inset
+
+ и 
+\begin_inset Formula $\sum_{i=1}^{n}A_{i}=\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+События 
+\begin_inset Formula $A$
+\end_inset
+
+ и 
+\begin_inset Formula $B$
+\end_inset
+
+ называются несовместными, если появление одного из них исключает появление
+ другого.
+ Не путать с независимостью!
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Remark
+\begin_inset Formula $A\subset B$
+\end_inset
+
+ — появление события 
+\begin_inset Formula $A$
+\end_inset
+
+ влечет появление события 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Основные теоремы теории вероятностей
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $A,B$
+\end_inset
+
+ — несовместные события, то есть 
+\begin_inset Formula $(A\cdot B=\varnothing)$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $p(A+B)=p(A)+p(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $p(\overline{A})=1-p(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(о сложении) 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $p(A+B)=p(A)+p(B)-p(A\cdot B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $p(\nicefrac{A}{B})=p_{B}(A)$
+\end_inset
+
+ (читается 
+\begin_inset Quotes fld
+\end_inset
+
+пэ от А при условии В
+\begin_inset Quotes frd
+\end_inset
+
+) вводится как 
+\begin_inset Formula 
+\[
+\frac{p(A\cdot B)}{p(B)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+— условная вероятность события 
+\begin_inset Formula $A$
+\end_inset
+
+ при условии, что событие 
+\begin_inset Formula $B$
+\end_inset
+
+ произошло.
+\end_layout
+
+\begin_layout Theorem
+(умножения)
+\end_layout
+
+\begin_layout Theorem
+Вероятность того, что произошло событие 
+\begin_inset Formula $A$
+\end_inset
+
+ и событие 
+\begin_inset Formula $B$
+\end_inset
+
+ равна 
+\begin_inset Formula $p(A\cdot B)=p(A)\cdot p(B)=p(B)\cdot p(\nicefrac{A}{B})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $p(A\cdot B\cdot C)=p(A)\cdot p(\nicefrac{B}{A})\cdot p(\nicefrac{C}{A\cdot B})$
+\end_inset
+
+ и аналогично для большего числа событий.
+\end_layout
+
+\begin_layout Subsubsection
+Независимость событий
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $A$
+\end_inset
+
+ и 
+\begin_inset Formula $B$
+\end_inset
+
+ независимы, если 
+\begin_inset Formula $p(A\cdot B)=p(A)\cdot p(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $A_{1},...,A_{n}$
+\end_inset
+
+ независимы в совокупности, если 
+\begin_inset Formula $\forall A_{i_{1}},...,A_{i_{k}}$
+\end_inset
+
+ выполнено 
+\begin_inset Formula $p(A_{i_{1}},...,A_{i_{k}})=\prod_{l=1}^{k}p(A_{i_{l}})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $A_{1},...,A_{n}$
+\end_inset
+
+ попарно независимы, если 
+\begin_inset Formula $\forall A_{i},A_{j}$
+\end_inset
+
+ верно 
+\begin_inset Formula $p(A_{i}\cdot A_{j})=p(A_{i})\cdot p(A_{j})$
+\end_inset
+
+ 
+\begin_inset Formula $\forall i\neq j$
+\end_inset
+
+.
+ Очевидно, что из независимости в совокупности следует попарная независимость.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+(Контрпример.
+ Пирамида Бернштейна)
+\end_layout
+
+\begin_layout Example
+Кидаем тетраэдр, грани которого раскрашены в красный, зеленый и синий цвета,
+ а основание — во все три.
+ Мы ее бросаем и смотрим, какой цвет выпал.
+ Пусть 
+\begin_inset Formula $A$
+\end_inset
+
+ — выпадение красного, 
+\begin_inset Formula $B$
+\end_inset
+
+ — синего и 
+\begin_inset Formula $C$
+\end_inset
+
+ — зеленого цвета.
+ Тогда 
+\begin_inset Formula $p(A\cdot B)=\nicefrac{1}{4}=p(A)\cdot p(B)=\nicefrac{2}{4}\cdot\nicefrac{2}{4}$
+\end_inset
+
+.
+ Аналогично для других цветов.
+ То есть эти события попарно независимы.
+ Но 
+\begin_inset Formula $p(A\cdot B\cdot C)=\nicefrac{1}{4}=p(A)p(B)p(C)=\nicefrac{1}{2}\cdot\nicefrac{1}{2}\cdot\nicefrac{1}{2}\Rightarrow$
+\end_inset
+
+ нет независимости в совокупности.
+\end_layout
+
+\begin_layout Subsection
+Основные формулы комбинаторики
+\end_layout
+
+\begin_layout Subsubsection
+Перестановки
+\end_layout
+
+\begin_layout Definition
+Перестановки — комбинации из 
+\begin_inset Formula $n$
+\end_inset
+
+ элементов, отличающихся порядком их расположения.
+ 
+\end_layout
+
+\begin_layout Definition
+Множество всех перестановок множества из 
+\begin_inset Formula $n$
+\end_inset
+
+ элементов равно 
+\begin_inset Formula $n!$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{n}=n!$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Размещения — комбинации из 
+\begin_inset Formula $n$
+\end_inset
+
+ элементов по 
+\begin_inset Formula $m$
+\end_inset
+
+ элементов, отличающихся либо порядком, либо составом элементов.
+\end_layout
+
+\begin_layout Definition
+Число всевозможных размещений 
+\begin_inset Formula $A_{n}^{m}=n\cdot(n-1)\cdot...\cdot(n-m+1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Сочетания — комбинации из 
+\begin_inset Formula $n$
+\end_inset
+
+ элементов по 
+\begin_inset Formula $m$
+\end_inset
+
+ элементов, отличающихся только составом элементов.
+\end_layout
+
+\begin_layout Definition
+Число всевозможных сочетаний 
+\begin_inset Formula $C_{n}^{m}=\frac{n!}{m!(n-m)!}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+Запомним: 
+\begin_inset Formula $C_{n}^{n-m}=C_{n}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{n}^{0}=1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Правила комбинаторики
+\end_layout
+
+\begin_layout Definition
+Правило произведения: 
+\begin_inset Formula $(a_{1},...,a_{n})$
+\end_inset
+
+ и 
+\begin_inset Formula $(b_{1},...,b_{m})$
+\end_inset
+
+.
+ Тогда выбрать пару 
+\begin_inset Formula $(a_{i},b_{j})$
+\end_inset
+
+ можно 
+\begin_inset Formula $n\cdot m$
+\end_inset
+
+ способами.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Правило суммы: 
+\begin_inset Formula $(a_{1},...,a_{n})$
+\end_inset
+
+ и 
+\begin_inset Formula $(b_{1},...,b_{m})$
+\end_inset
+
+.
+ Тогда выбрать либо 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, либо 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+ можно 
+\begin_inset Formula $m+n$
+\end_inset
+
+ способами.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Выборки
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(a_{1},...,a_{n})$
+\end_inset
+
+ — некоторая генеральная совокупность однородных объектов.
+ Вынем из них 
+\begin_inset Formula $\left\langle a_{i_{1}},...,a_{i_{m}}\right\rangle $
+\end_inset
+
+ — выборка объема 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Выборка может быть с возвращением и без возвращения элементов в генеральную
+ совокупность, а так же упорядоченная или неупорядоченная.
+\end_layout
+
 \end_body
 \end_document
