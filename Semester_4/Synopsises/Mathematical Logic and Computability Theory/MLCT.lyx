@@ -344,8 +344,62 @@ key "key-5"
 \end_deeper
 \end_deeper
 \end_deeper
+\begin_layout Section
+pass
+\end_layout
+
 \begin_layout Subsection
-Предикаты
+Формальная теория
+\end_layout
+
+\begin_layout Standard
+Формальная теория задана, если задан алфавит, задано множество формул (выделение
+ неких слов из алфавита), 
+\end_layout
+
+\begin_layout Standard
+Логически общезначимая формула — формула, истинная в любой интерпретации
+ (интерпретация есть отображение из аргументов формулы в булево значение)
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $A\rightarrow(B\rightarrow A)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $(A\rightarrow(B\rightarrow C))\rightarrow((A\rightarrow B)\rightarrow(A\rightarrow C))$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $A\rightarrow(B\rightarrow(A\land B))$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $A\land B\rightarrow A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+5) 
+\begin_inset Formula $A\land B\rightarrow B$
+\end_inset
+
+;
 \end_layout
 
 \end_body

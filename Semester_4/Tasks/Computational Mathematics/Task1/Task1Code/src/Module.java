@@ -37,22 +37,18 @@ public class Module {
         double val = 1;
         long fac = 1;
         while (Math.abs(next) > accuracy) {
-            next = (k % 4 == 0 ? 1 : -1) * val / (fac);
+            next = (k % 2 == 0 ? 1 : -1) * val / (fac);
             val *= (value * value); // увеличиваем степень на 2
             summ += next;
-            k += 2;
-            if (fac == 1) { // колдуем с факториалом
-                fac = 2;
-            } else {
-                fac *= k * (k-1);
-            }
+            ++k;
+            fac *= 2 * k * (2 * k - 1);
         }
         return summ;
     }
 
     private static double setFunc(double x) {
-        return calcCos(2.8*x + calcSqrt(1 + x, 10E-6 / 1.5), 10E-6 / 3) *
-                calcArctan(1.5 * x + 0.2, 10E-6 / 0.6);
+        return calcCos(2.8*x + calcSqrt(1 + x, 10E-7 / 1.5), 10E-7 / 3 * 0.5) *
+                calcArctan(1.5 * x + 0.2, 10E-7 / 0.6);
     }
 
     public static void picTable(double begin, double end, double step) {
@@ -68,7 +64,7 @@ public class Module {
             double trueResult = trueFunc(b);
             System.out.print(trueResult);
             System.out.print("|");
-            System.out.print(Math.abs(trueResult - myResult) < 10E-6 ? "OK" : "FD");
+            System.out.print(Math.abs(trueResult - myResult) < 1E-6 ? "OK" : "FD");
             System.out.println("|");
         }
 
@@ -77,6 +73,6 @@ public class Module {
 
     public static void main(String[] args) {
         picTable(0.1, 0.2, 0.01);
-        //System.out.println(calcCos(0.2, 10E-6));
+        //System.out.println(calcCos(0.2, 1E-6));
     }
 }

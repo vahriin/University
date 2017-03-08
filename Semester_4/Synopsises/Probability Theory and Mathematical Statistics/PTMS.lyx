@@ -161,6 +161,22 @@ target "https://vk.com/vahriin"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\AA}{\mathbb{A}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\FF}{\mathbb{F}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -181,8 +197,12 @@ LatexCommand tableofcontents
 com ДОСРОКА НЕ БУДЕТ.
 \end_layout
 
+\begin_layout Part
+Случайные события
+\end_layout
+
 \begin_layout Section
-Теория вероятности
+Элементарная теория вероятности
 \end_layout
 
 \begin_layout Subsection
@@ -1117,6 +1137,809 @@ p(A)=\frac{l}{L}
 .
  Выборка может быть с возвращением и без возвращения элементов в генеральную
  совокупность, а так же упорядоченная или неупорядоченная.
+\end_layout
+
+\begin_layout Definition
+1) Упорядоченная выборка с возвращением: 
+\begin_inset Formula $\left\langle a_{i_{1}},...,a_{i_{n}}\right\rangle $
+\end_inset
+
+, тогда 
+\begin_inset Formula $\left|\Omega\right|=n^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+2) Упорядоченная выборка без возвращения: 
+\begin_inset Formula $\left[a_{i_{1}},...,a_{i_{n}}\right]$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\left|\Omega\right|=A_{n}^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+3) Неупорядоченная выборка без возвращения: 
+\begin_inset Formula $\left[a_{i_{1}},...,a_{i_{n}}\right]$
+\end_inset
+
+, при этом порядок не важен, важен состав 
+\begin_inset Formula $\left|\Omega\right|=C_{n}^{m}=\frac{n!}{m!(n-m)!}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+4) Неупорядоченная выборка с возвращением, 
+\begin_inset Formula $\left|\Omega\right|=C_{n+m-1}^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M$
+\end_inset
+
+ состояний частицы есть фактически 
+\begin_inset Formula $M$
+\end_inset
+
+ ящиков, в которые мы кладем 
+\begin_inset Formula $n$
+\end_inset
+
+ частиц.
+ Частицы могут быть различимыми, а могут быть неразличимыми.
+\end_layout
+
+\begin_layout Standard
+Запрет Паули говорит о том, что в коробке может находится одна или ноль
+ частиц.
+\end_layout
+
+\begin_layout Standard
+1) Частицы различимы, запрета Паули нет.
+ Тогда это состояние эквивалентно упорядоченной выборке с возвращением.
+\end_layout
+
+\begin_layout Standard
+2) Частицы неразличимы, есть запрет Паули.
+ Тогда это состояние состояние эквивалентно неупорядоченной выборке без
+ возвращения.
+\end_layout
+
+\begin_layout Standard
+3) Частицы неразличимы, нет запрета Паули.
+ Тогда это состояние эквивалентно неупорядоченной выборке с возвращением.
+\end_layout
+
+\begin_layout Standard
+4) Частицы различимы, запрет Паули существует.
+ Тогда это состояние эквивалентно упорядоченной выборке без возвращения.
+\end_layout
+
+\begin_layout Section
+Аксиоматика A.M.
+ Колмогорова
+\end_layout
+
+\begin_layout Subsection
+Аксиоматическое определение вероятности
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\AA\in2^{\Omega}$
+\end_inset
+
+, где 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ — пространство элементарных исходов, называется алгеброй, если:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\Omega\in\AA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\forall A,B\in\AA,\ \begin{cases}
+A\cup B\in\AA\\
+A\cap B\in\AA
+\end{cases}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\forall A\in\AA$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $\overline{A}\in\AA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\AA_{1}=\{\varnothing,\Omega\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Числовая функция 
+\begin_inset Formula $\mu(A)$
+\end_inset
+
+ называется конечной аддитивной мерой на 
+\begin_inset Formula $\AA$
+\end_inset
+
+, если:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\mu(A)\geq0\ \forall A\in\AA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\forall A,B\in\AA:\ A\cap B=\varnothing$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $\mu(A\cup B)=\mu(A)+\mu(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Если 
+\begin_inset Formula $\mu(A)=1$
+\end_inset
+
+, то ее говорят, что это конечная аддитивная вероятностная мера.
+ Она обозначается 
+\begin_inset Formula $p(A)=\mu(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Она обладает следующими свойствами:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $p(A)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $p(\Omega)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\forall A,B\in\AA:\ A\cap B=\varnothing$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $p(A\cup B)=p(A)+p(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Система подмножеств 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ называется сигма-алгеброй, если:
+\end_layout
+
+\begin_layout Definition
+1) Она является алгеброй
+\end_layout
+
+\begin_layout Definition
+2) Она замкнута относительно счетного объединения/пересечения событий.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Счетно-аддитивная вероятностная мера 
+\begin_inset Formula $p(A)$
+\end_inset
+
+ заданная 
+\begin_inset Formula $\forall A\in\mathbb{F}$
+\end_inset
+
+ называется вероятностью, то есть:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\forall A\in\Omega\ p(A)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $p(\Omega)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\forall A_{1},...,A_{n}\in\FF,\ A_{i}\cap A_{j}=\varnothing\forall i\neq j$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $p(\cup_{n=1}^{\infty}A_{n})=\sum_{n=1}^{\infty}p(A_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $(\Omega,\FF,p)$
+\end_inset
+
+ — вероятностное пространство.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $(\Omega,\FF)$
+\end_inset
+
+ — измерительное пространство.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Формула полной вероятности
+\end_layout
+
+\begin_layout Standard
+Пусть у нас есть событие 
+\begin_inset Formula $A$
+\end_inset
+
+ и оно может произойти одновременно с одним и только одним из событий 
+\begin_inset Formula $H_{1},...,H_{n}$
+\end_inset
+
+, таких, что:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $H_{i}\cdot H_{j}=\varnothing\ \forall i\neq j$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $H_{1}+...+H_{n}=\Omega$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+И нам нужно найти вероятность события 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+p(A)=p(A\cdot\Omega)=p(A\cdot(H_{1}+...+H_{n})=p(\sum_{i=1}^{n}A\cdot H_{i})=\\
+=\sum_{i=1}^{n}p(A\cdot H_{i})=\sum_{i=1}^{n}p(H_{i})\cdot p(A/H_{i})
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Формула Байеса
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(H_{i}/A)=\frac{p(H_{i}\cdot A)}{p(A)}=\frac{p(H_{i})\cdot p(A/H_{i})}{\sum_{i=1}^{n}p(H_{i})\cdot p(A/H_{i})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p(H_{i}/A)$
+\end_inset
+
+ — апостариорная вероятность.
+\end_layout
+
+\begin_layout Subsection
+Схема Бернулли
+\end_layout
+
+\begin_layout Definition
+Схема Бернулли — последовательность из 
+\begin_inset Formula $n$
+\end_inset
+
+ независимых испытаний, в каждом из которых вероятность появления события
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ одинакова и равна 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+Если событие 
+\begin_inset Formula $A$
+\end_inset
+
+ произошло, то говорят об успехе, иначе — о неудаче.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Сама формула Бернулли имеет вид 
+\begin_inset Formula 
+\[
+p_{n}(K)=C_{n}^{k}p^{k}q^{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+где 
+\begin_inset Formula $q=1-p$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Формула Пуассона
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $np=\lambda$
+\end_inset
+
+, тогда 
+\begin_inset Formula 
+\begin{multline*}
+\lim_{n\to\infty}p_{n}(k)=\lim_{n\to\infty}\frac{n(n-1)...(n-k)\lambda^{k}}{n\cdot n\cdot...\cdot n\cdot k!}\left(1-\frac{\lambda}{n}\right)^{n}\cdot\left(1-\frac{\lambda}{n}\right)^{-k}=\\
+=\frac{\lambda^{k}}{k!}\lim_{n\to\infty}1\cdot(1-\frac{1}{n})\cdot...\cdot(1-\frac{k-1}{n})\cdot(1-\frac{\lambda}{n})^{n}(1-\frac{\lambda}{n})^{-k}=\frac{\lambda^{k}}{k!}e^{-\lambda}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Отсюда выводится сама формула: 
+\begin_inset Formula 
+\[
+P_{n}(k)=\frac{\lambda^{k}}{k!}e^{-\lambda}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Простейший поток событий
+\end_layout
+
+\begin_layout Definition
+Потоком событий называется последовательность событий, которые наступают
+ в случайный момент времени.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Поток называется простейшим/пуассоновским, если выполнены свойства:
+\end_layout
+
+\begin_layout Definition
+1) Станционарность: вероятность появления 
+\begin_inset Formula $k$
+\end_inset
+
+ событий длины 
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\begin_inset Formula $P_{t}(k)$
+\end_inset
+
+ зависит только от 
+\begin_inset Formula $t$
+\end_inset
+
+ и 
+\begin_inset Formula $k$
+\end_inset
+
+ и не зависит начала.
+\end_layout
+
+\begin_layout Definition
+2) Отсутствие последействия: вероятность появления 
+\begin_inset Formula $k$
+\end_inset
+
+ событий длины 
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\begin_inset Formula $P_{t}(k)$
+\end_inset
+
+ не зависит от предыстории процесса.
+\end_layout
+
+\begin_layout Definition
+3) Ординарность: 
+\begin_inset Formula $\forall$
+\end_inset
+
+ сколь угодно малого 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ вероятность наступления двух событий стремится к нулю.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Если поток пуассоновского типа, то вероятность 
+\begin_inset Formula $P_{t}(k)$
+\end_inset
+
+ можно вычислить по формуле 
+\begin_inset Formula 
+\[
+P_{t}(k)=\frac{(\lambda t)^{k}}{k!}e^{-\lambda t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+где 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ — интенсивностть потока, то есть количество наступлений событий за единицу
+ времени.
+\end_layout
+
+\begin_layout Part
+Случайные величины
+\end_layout
+
+\begin_layout Section
+pass
+\end_layout
+
+\begin_layout Subsection
+Случайная величина
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\xi:\Omega\to\RR^{1}$
+\end_inset
+
+.
+ Функция называется измеримой, если прообраз баррельского множества изменим.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Неформальное определение: числовая функция, которая в результате испытания
+ примет одно и только одно значение, неизвестное заранее.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Случайные величины делятся на 3 типа:
+\end_layout
+
+\begin_layout Standard
+1) Дискретные
+\end_layout
+
+\begin_layout Standard
+2) Непрерывные
+\end_layout
+
+\begin_layout Standard
+3) Сингулярные
+\end_layout
+
+\begin_layout Definition
+Случайная величина является дискретной, если ее возможное значение конечно
+ или счетно.
+\end_layout
+
+\begin_layout Subsection
+Дискретные случайные величины
+\end_layout
+
+\begin_layout Definition
+Законом распределения ДСВ 
+\begin_inset Formula $x$
+\end_inset
+
+ называется перечень всех ее возможных значений 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ и соответсвующих им вероятностей 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Записи:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+События попарно несовместны, и сумма всех вероятностей равна единице.
+\end_layout
+
+\begin_layout Definition
+Либо в виде многоугольника распределения.
+\end_layout
+
+\begin_layout Subsection
+Основные распределения дискретных случайных величин
+\end_layout
+
+\begin_layout Standard
+1) Биномиальное.
+ Если 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ — число успехов в схеме Бернулли, то случайная величина будет принимать
+ целочисленные значения от 
+\begin_inset Formula $0$
+\end_inset
+
+ до 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p_{k}\{S_{n}=k\}=C_{n}^{k}p^{k}q^{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) Распределение Пуассона.
+ 
+\end_layout
+
+\begin_layout Standard
+3) Геометрическое распределение.
 \end_layout
 
 \end_body

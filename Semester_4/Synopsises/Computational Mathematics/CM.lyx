@@ -162,6 +162,14 @@ target "https://vk.com/vahriin"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\norm}[1]{\left\Vert #1\right\Vert }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -502,7 +510,7 @@ LatexCommand tableofcontents
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Примеры неустойчивых задач и методов
 \end_layout
 
@@ -689,6 +697,375 @@ I_{n-1}=\frac{1}{n}(1-I_{n})
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Решение систем линейных уравнений
+\end_layout
+
+\begin_layout Definition
+Норма: 
+\begin_inset Formula $\norm .$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\left|\left|x\right|\right|\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\left|x\right|\right|=0\Leftrightarrow x=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\left|\left|\lambda x\right|\right|=\left|\lambda\right|\cdot\left|\left|x\right|\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\left|\left|x+y\right|\right|\leq\left|\left|x\right|\right|+\left|\left|y\right|\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+Нормы векторов
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\norm x_{2}=\sqrt{x_{1}^{2}+...+x_{n}^{2}}$
+\end_inset
+
+ — долгая и неблагодарная норма;
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\norm x_{1}=\left|x_{1}\right|+...+\left|x_{n}\right|$
+\end_inset
+
+ — более простая норма;
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\norm x_{p}=\left(\left|X_{1}\right|^{p}+...+\left|x_{n}\right|^{p}\right)^{\nicefrac{1}{p}}$
+\end_inset
+
+ — строгая математическая норма;
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\norm x_{\infty}=\max_{i=\overline{1,n}}\left|x_{i}\right|$
+\end_inset
+
+ — наиболее частоиспользуемая норма.
+\end_layout
+
+\begin_layout Example
+Все эти нормы эквивалентны, то есть 
+\begin_inset Formula $\norm ._{\alpha},\norm ._{\beta}$
+\end_inset
+
+ эквивалентны, если 
+\begin_inset Formula $\exists c_{1},c_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $\forall x$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $c_{1}\norm x_{\beta}\leq\norm x_{\alpha}\leq c_{2}\norm x_{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Рассмотрим линейный оператор 
+\begin_inset Formula $A$
+\end_inset
+
+; здесь 
+\begin_inset Formula $\norm{Ax}\leq C$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\min_{x}C=\norm A$
+\end_inset
+
+ — норма матрицы, согласованная с нормой вектора, если 
+\begin_inset Formula $\norm{Ax}\leq\norm A\norm x$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Норма матрицы, подчиненная норме вектора: 
+\begin_inset Formula 
+\[
+\norm A=\sup_{x\neq0}\frac{\norm{Ax}}{\norm x}=\sup_{\norm x=1}\norm{Ax}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1) 
+\begin_inset Formula $\norm A_{1}=\max_{j=\overline{1,n}}\sum_{i=1}^{n}\left|a_{ij}\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+2) 
+\begin_inset Formula $\norm A_{2}=\sqrt{\max_{i=\overline{1,n}}\lambda(A^{T}A)}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+3) 
+\begin_inset Formula $\norm A_{\infty}=\max_{i=\overline{1,n}}\sum_{j=1}^{n}\left|a_{ij}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Норма Фробениуса: 
+\begin_inset Formula $\norm A_{F}=\sqrt{\sum_{ij}a_{ij}^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Число обусловленности
+\end_layout
+
+\begin_layout Standard
+Рассмотрим систему 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ и пусть 
+\begin_inset Formula $b+\Delta b$
+\end_inset
+
+.
+ Как 
+\begin_inset Formula $\Delta b$
+\end_inset
+
+ повлияет на 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(x+\Delta x)=b+\Delta b$
+\end_inset
+
+; 
+\begin_inset Formula $A\Delta x=\Delta b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\norm{A\Delta x}=\norm{\Delta b}$
+\end_inset
+
+, раскрыв скобки, 
+\begin_inset Formula $\norm A\norm{\Delta x}\geq\norm{\Delta b}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+Откуда 
+\begin_inset Formula $\norm{\Delta x}\leq\norm{A^{-1}}\cdot\norm{\Delta b}$
+\end_inset
+
+.
+ Но это абсолютная погрешность.
+ Что с относительной?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\norm{\Delta x}}{\norm x}\leq\frac{\norm{A^{-1}}\norm A\norm{\Delta b}}{\norm b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+и тогда 
+\begin_inset Formula $\nu(A)=\norm{A^{-1}}\norm A$
+\end_inset
+
+ — число обусловленности системы.
+\end_layout
+
+\begin_layout Standard
+И если 
+\begin_inset Formula $\nu(A)>>1$
+\end_inset
+
+, то система плохо обусловлена.
+\end_layout
+
+\begin_layout Standard
+Есть способы т.н.
+ предобусловлевания систем, однако мы их смотреть пока не будем.
+\end_layout
+
+\begin_layout Standard
+Пример плохо обусловленной системы: 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+1 & 10\\
+100 & 1001
+\end{array}\right)\left(\begin{array}{c}
+x\\
+y
+\end{array}\right)=\left(\begin{array}{c}
+11\\
+11.01
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Метод Гаусса
+\end_layout
+
+\begin_layout Standard
+Обычный метод Гаусса.
+\end_layout
+
+\begin_layout Subsubsection
+LU-разложение
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=LU$
+\end_inset
+
+, где 
+\begin_inset Formula $L$
+\end_inset
+
+ — нижнетреугольная матрица, а 
+\begin_inset Formula $U$
+\end_inset
+
+ — верхнетреугольная.
+ Потребуем, чтобы на главной диагонали 
+\begin_inset Formula $L$
+\end_inset
+
+ стояли единицы для однозначного разложения.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U$
+\end_inset
+
+ — матрица, получающаяся в ходе прямого разложения Гаусса.
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ получается, как матрица, в которой запомнены коэффициенты, на которые мы
+ домножали: 
+\begin_inset Formula $\frac{a_{21}}{a_{11}}$
+\end_inset
+
+, к примеру.
+ Но если наше разложение наткнется на нуль на диагонали, будет больно.
+\end_layout
+
+\begin_layout Standard
+Поэтому используют 
+\begin_inset Formula $A=P^{-1}LU$
+\end_inset
+
+, где 
+\begin_inset Formula $P$
+\end_inset
+
+ —матрица перестановка с аналогичными желаемым перестановками.
+\end_layout
+
+\begin_layout Standard
+Для решения уравнения будем использовать 
+\begin_inset Formula $PAx=Pb$
+\end_inset
+
+.
+ Затем 
+\begin_inset Formula $Ly=Pb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Как ее построить? Если мы переставляли строки в исходной матрице, то аналогично
+ должны переставить в матрице 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Затем воспользуемся тем, что 
+\begin_inset Formula $P$
+\end_inset
+
+ ортогональна: 
+\begin_inset Formula $P^{-1}=P^{T}$
+\end_inset
+
+.
 \end_layout
 
 \end_body

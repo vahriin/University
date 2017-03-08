@@ -161,6 +161,22 @@ target "https://vk.com/vahriin"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\norm}[1]{\left\Vert #1\right\Vert }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\AA}{\mathcal{A}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -955,6 +971,629 @@ pass
  — неполное.
  Дополним его иррациональными числами и получим полное пространство 
 \begin_inset Formula $\RR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ линейно, если для элементов этого пространства введены операции сложения
+ и умножения на константу.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Линейные пространства 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ изоморфны, если 
+\begin_inset Formula $X\sim Y$
+\end_inset
+
+ и 
+\begin_inset Formula $\forall x_{1},x_{2}\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\forall y_{1},y_{2}\in Y$
+\end_inset
+
+ и 
+\begin_inset Formula $x_{1}\sim y_{1},x_{2}\sim y_{2}\Rightarrow x_{1}+x_{2}\sim y_{1}+y_{2},\lambda x_{1}\sim\lambda y_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $X$
+\end_inset
+
+ — множество полиномов степени 
+\begin_inset Formula $\leq(n-1)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Y=\RR^{n}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $X\sim Y$
+\end_inset
+
+, 
+\begin_inset Formula $x(t)=a_{1}t^{n-1}+...+a_{n}\sim y=\left(\begin{array}{c}
+a_{1}\\
+\vdots\\
+a_{n}
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для линейных пространств можно ввести понятие линейной зависимости и независимос
+ти элементов, размерности, базиса, подпространства и так далее.
+\end_layout
+
+\begin_layout Definition
+Линейное пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ называется нормированным, если 
+\begin_inset Formula $\forall x\in X:\ \exists!r\in\RR$
+\end_inset
+
+, которое называется нормой (
+\begin_inset Formula $\left|\left|x\right|\right|$
+\end_inset
+
+) и удовлетворяет следующим аксиомам:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\left|\left|x\right|\right|\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\left|x\right|\right|=0\Leftrightarrow x=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\left|\left|\lambda x\right|\right|=\left|\lambda\right|\cdot\left|\left|x\right|\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\left|\left|x+y\right|\right|\leq\left|\left|x\right|\right|+\left|\left|y\right|\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+Если пространство нормированно, то его всегда можно метризовать.
+\end_layout
+
+\begin_layout Definition
+Стандартной считается метрика, согласованная с нормой: 
+\begin_inset Formula $\rho(x,y)=\left\Vert x-y\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Полное нормированное пространство называется Банаховым пространством.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+Все основные определения и свойства метрического пространства вытекали из
+ определения метрики.
+\end_layout
+
+\begin_layout Remark
+Можно пойти другим путем: не вводя метрику непосредственно определить с
+ помощью аксиом что считать открытым множеством, замкнутым и так далее.
+ В результате приходим к так называемым топологическим пространствам.
+\end_layout
+
+\begin_layout Subsection
+Неподвижные точки отображения
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — два метрических пространства.
+ Пусть 
+\begin_inset Formula $\rho_{1},\rho_{2}$
+\end_inset
+
+ — метрики в пространствах 
+\begin_inset Formula $X$
+\end_inset
+
+ и 
+\begin_inset Formula $Y$
+\end_inset
+
+ соответственно.
+ И пусть задано отображение 
+\begin_inset Formula $\mathcal{A}:X\to Y$
+\end_inset
+
+ (
+\begin_inset Formula $\forall x\in X\ \exists y=\AA x\in Y$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Definition
+Отображение 
+\begin_inset Formula $\AA$
+\end_inset
+
+ называется непрерывным в точке 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall\{x_{k}\}\in X:\ x_{k}\to_{k\to\infty}x_{0}\Rightarrow\AA x_{k}\to_{k\to\infty}\AA x_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Или, что то же самое: 
+\begin_inset Formula $\forall\varepsilon>0\ \exists\delta>0$
+\end_inset
+
+, такое, что если 
+\begin_inset Formula $\rho_{1}(x,x_{0})<\delta$
+\end_inset
+
+, то 
+\begin_inset Formula $\rho_{2}(\AA x,\AA x_{0})<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Предположим далее, что 
+\begin_inset Formula $X=Y$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+ и 
+\begin_inset Formula $\rho_{1}=\rho_{2}=\rho$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Точка 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ — неподвижная точка отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+, если 
+\begin_inset Formula $\AA x^{*}=x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Отображение 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+ называется сжимающим, если 
+\begin_inset Formula $\exists\alpha\in[0,1)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x,y\in X$
+\end_inset
+
+ верно 
+\begin_inset Formula $\rho(\AA x,\AA y)\leq\alpha\rho(x,y)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Lemma
+\begin_inset Formula $\AA$
+\end_inset
+
+ сжимающее 
+\begin_inset Formula $\Rightarrow\AA$
+\end_inset
+
+ непрерывное на 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x_{0}\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\{x_{k}\}\in X:\ x_{k}\to_{k\to\infty}x_{0}\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $0\leq\rho(\AA x_{k},\AA x_{0})\leq\alpha\rho(x_{k},x_{0})\to_{k\to\infty}0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(о неподвижной точке, она же Каччаполи-Банаха, она же принцип сжимающих
+ отображений)
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ — полное метрическое пространство, 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+.
+ Тогда у отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+ 
+\begin_inset Formula $\exists!$
+\end_inset
+
+ неподвижная точка.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x_{0}\in X$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x_{1}=\AA x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x_{2}=\AA x_{1}=\AA(\AA x_{0})=\AA^{2}x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X_{k}=\AA^{k}x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+Докажем, что эта последовательность является фундаментальной:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall n\geq m\geq1$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\rho(x_{n},x_{m})=\rho(\AA^{n}x_{0},\AA^{m}x_{0})\leq\alpha\rho(\AA^{n-1}x_{0},\AA^{m-1}x_{0})\leq...\leq\alpha^{m}\rho(\AA^{n-m}x_{0},x_{0})\leq\\
+\leq\alpha^{m}\left(\rho(\AA^{n-m}x_{0},\AA^{n-m-1}x_{0})+...+\rho(\AA^{n-m-1}x_{0},\AA^{n-m-2}x_{0})+...+\rho(\AA x_{0},x_{0})\right)\leq\\
+\leq\alpha^{m}\left(\alpha^{n-m-1}\rho(\AA x_{0},x_{0})+\alpha^{n-m-2}\rho(\AA x_{0},x_{0})+...+\rho(\AA x_{0},x_{0})\right)\leq\\
+\leq\alpha^{m}\rho(x_{0},x_{1})\left(1+\alpha+\alpha^{2}+...+\alpha^{n-m-1}+...\right)=\frac{\alpha^{m}\rho(x_{0},x_{1})}{1-\alpha}\to_{m\to\infty}0
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+следовательно, последовательность является фундаментальной.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X$
+\end_inset
+
+ полное, следовательно, 
+\begin_inset Formula $\exists x^{*}\in X:\ x_{k}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ Покажем, что 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ будет неподвижной точкой: 
+\begin_inset Formula 
+\[
+\AA x^{*}=\AA\lim_{k\to\infty}x_{k}=\left(A\ \text{сжим,непр}\right)=\lim_{k\to\infty}\AA x^{*}=\lim_{k\to\infty}x_{x+1}=x^{*}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Докажем, что точка единственная.
+ От противного:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{*},y^{*}$
+\end_inset
+
+ — неподвижные точки 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+ Тогда: 
+\begin_inset Formula 
+\[
+0\leq\rho(x^{*},y^{*})=\rho(\AA x^{*},\AA y^{*})\leq\underbrace{\alpha}_{<1}\rho(x^{*},y^{*})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+То есть 
+\begin_inset Formula $\rho(x^{*},y^{*})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+В доказательстве содержится алгоритм поиска неподвижной точки.
+ Выберем любую точку, применим к ней несколько раз отображение и предел
+ данной последовательности будет неподвижной точкой.
+\end_layout
+
+\begin_layout Subsubsection
+Приложение принципа сжимающих отображений к решению алгебраических уравнений
+\end_layout
+
+\begin_layout Problem*
+Пусть требуется решить уравнение 
+\begin_inset Formula $x=\varphi(x)$
+\end_inset
+
+, где 
+\begin_inset Formula $c$
+\end_inset
+
+ — корень, причем 
+\begin_inset Formula $c\in[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Возьмем конкретное пространство 
+\begin_inset Formula $X=\RR$
+\end_inset
+
+.
+ Метризуем: 
+\begin_inset Formula $\rho(x,y)=\left|x-y\right|$
+\end_inset
+
+.
+ Пространство полное.
+ Введем отображение 
+\begin_inset Formula $\AA x=\varphi(x)$
+\end_inset
+
+.
+ Тогда уравнение сведется к виду 
+\begin_inset Formula $\AA x=x$
+\end_inset
+
+, а 
+\begin_inset Formula $c$
+\end_inset
+
+ — неподвижная точка.
+ Нам осталось лишь доказать сжимаемость данного отображения.
+\end_layout
+
+\begin_layout Solution*
+Пусть 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ — удовлетворяет условию Липшица на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+: 
+\begin_inset Formula $\exists\alpha>0:\ \forall x,y\in[a,b]\Rightarrow\underbrace{\left|\varphi(x)-\varphi(y)\right|}_{\rho(\AA x,\AA y)}\leq\alpha\underbrace{\left|x-y\right|}_{\rho(x,y)}$
+\end_inset
+
+.
+ Таким образом, оно сжимающее.
+\end_layout
+
+\begin_layout Solution*
+И тогда мы можем найти 
+\begin_inset Formula $\{x_{k}\}\to_{k\to0}c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Приложение принципа сжимаемых отображений к решению системы алгебраических
+ уравнений
+\end_layout
+
+\begin_layout Problem*
+Требуется решить следующую систему уравнений: 
+\begin_inset Formula $x=Ax+b$
+\end_inset
+
+ (1).
+ 
+\begin_inset Formula $A,b$
+\end_inset
+
+ заданы, 
+\begin_inset Formula $x$
+\end_inset
+
+ — неизвестен.
+ 
+\begin_inset Formula $X=\RR^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Введем отображение 
+\begin_inset Formula $\AA x=Ax+b$
+\end_inset
+
+.
+ Тогда уравнение (1) сводится к поиску 
+\begin_inset Formula $c$
+\end_inset
+
+ — неподвижной точки отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+ 4
+\end_layout
+
+\begin_layout Solution*
+Если отображение сжимающее, то берем произвольный вектор, применяем к нему
+ отображение и так далее.
+ Тогда последовательность векторов будет сходится к нужному нам корню.
+\end_layout
+
+\begin_layout Standard
+Выпишем далее достаточные условия сжимаемости отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+ Сжимаемость, вообще говоря, зависит от введенной метрики.
+ Для того, чтобы можно было применить принцип, достаточно, чтобы сжимаемость
+ была хотя бы в одной метрике.
+\end_layout
+
+\begin_layout Standard
+Пусть метрика введена следующим образом: 
+\begin_inset Formula $x,y$
+\end_inset
+
+ — вектора и 
+\begin_inset Formula $\rho(x,y)=\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим расстояния между образами: 
+\begin_inset Formula 
+\[
+\rho^{2}(\AA x,\AA y)=\sum_{i=1}^{n}\left(\sum_{j=1}^{n}a_{ij}(x_{j}-y_{j})\right)^{2}\leq...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Применяем неравенство Коши-Буняковского-Шварца: 
+\begin_inset Formula 
+\[
+...\leq\left(\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}^{2}\right)\left(\sum_{i=1}^{n}(x_{i}-y_{i})^{2}\right)=\left(\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}^{2}\right)\rho^{2}(x,y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula $\AA$
+\end_inset
+
+ — сжимающее, если 
+\begin_inset Formula $\left(\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}^{2}\right)<1$
 \end_inset
 
 .
