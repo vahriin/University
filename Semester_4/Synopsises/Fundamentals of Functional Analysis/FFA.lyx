@@ -7,6 +7,7 @@
 \textclass extarticle
 \begin_preamble
 \usepackage{indentfirst}
+\newcommand{\const}{\operatorname{const}}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -1552,7 +1553,7 @@ a_{n}
 \end_layout
 
 \begin_layout Standard
-Пусть метрика введена следующим образом: 
+1) Пусть метрика введена следующим образом: 
 \begin_inset Formula $x,y$
 \end_inset
 
@@ -1597,6 +1598,778 @@ a_{n}
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+2) Или так: 
+\begin_inset Formula $\rho(x,y)=\max_{i=\overline{1,n}}\left|x_{i}-y_{i}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall x,y\in\RR^{n}$
+\end_inset
+
+ 
+\begin_inset Formula $\rho(\AA x,\AA y)=\max_{i=\overline{1,n}}\left|\sum_{j=1}^{n}a_{ij}(x_{j}-y_{j})\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Оценим сие сверху: 
+\begin_inset Formula 
+\[
+\rho(\AA x,\AA y)=\max_{i=\overline{1,n}}\left|\sum_{j=1}^{n}a_{ij}(x_{j}-y_{j})\right|\leq\left(\max_{i=\overline{1,n}}\sum_{j=1}^{n}\left|a_{ij}\right|\right)\cdot\underbrace{\left(\max_{j=\overline{1,n}}\left|x_{j}-y_{j}\right|\right)}_{=\rho(x,y)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для сжимаемости достаточно выполнения условия 
+\begin_inset Formula $\sum_{j=1}^{n}\left|a_{ij}\right|<1,\ i=\overline{1,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Применение принципа сжимаемых отображений к решению дифференциальных уравнений
+\end_layout
+
+\begin_layout Standard
+Пусть записан диффур в стандартном виде: 
+\begin_inset Formula $y'=f(x,y)$
+\end_inset
+
+.
+ Поставим задачу Коши: 
+\begin_inset Formula $y(x_{0})=y_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Данную задачу Коши можно переписать в следующей интегральной форме: 
+\begin_inset Formula 
+\[
+y=y_{0}+\int_{x_{0}}^{x}f(x,y(x))dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula $X=C^{1}$
+\end_inset
+
+ — множество непрерывно дифференцируемых функций.
+ Теперь нужно найти отображение 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\AA y(x)=y_{0}+\int_{x_{0}}^{x}f(x,y(x))dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Откуда отображение запишется в форме 
+\begin_inset Formula 
+\[
+y(x)=Ay(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $G$
+\end_inset
+
+ — некоторая область, содержащая точку 
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+.
+ Будем считать, что 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ — непрерывна в 
+\begin_inset Formula $G$
+\end_inset
+
+ и удовлетворяет условию Липшица, то есть 
+\begin_inset Formula $\forall y_{1},y_{2},\ \forall x:\ (x,y_{1}),(x,y_{2})\in G\Rightarrow\left|f(x,y_{1})-f(x,y_{2})\right|\leq L\left|y_{1}-y_{2}\right|$
+\end_inset
+
+.
+ Пусть без потери общности 
+\begin_inset Formula $G$
+\end_inset
+
+ замкнута, тогда 
+\begin_inset Formula $K=\max_{G}\left|f(x,y)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим область 
+\begin_inset Formula $D$
+\end_inset
+
+ следующего вида: 
+\begin_inset Formula $\begin{cases}
+\left|x-x_{0}\right|\leq d\\
+\left|y-y_{0}\right|\leq Kd
+\end{cases}$
+\end_inset
+
+, где 
+\begin_inset Formula $d=\const.$
+\end_inset
+
+ Положим, 
+\begin_inset Formula $D\subset G$
+\end_inset
+
+ и 
+\begin_inset Formula $Ld<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall y(x):\ \left|y(x)-y_{0}\right|\leq Kd$
+\end_inset
+
+ при 
+\begin_inset Formula $x\in\left[x_{0}-d,x_{0}+d\right]$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\left|\AA y(x)-y_{0}\right|=\left|\int_{x_{0}}^{x}f(x,y(x))dx\right|\leq Kd$
+\end_inset
+
+, то есть применение отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+ за пределы области 
+\begin_inset Formula $D$
+\end_inset
+
+ не выводит.
+\end_layout
+
+\begin_layout Standard
+Теперь нам нужна метрика и мозги.
+ В качестве метрики примем: 
+\begin_inset Formula $\rho(y_{1}(x),y_{2}(x))=\max_{\left[x_{0}-d,x_{0}+d\right]}\left|y_{1}(x)-y_{2}(x)\right|$
+\end_inset
+
+.
+ Проверим, что в этой метрике отображение будет сжимающим.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall y_{1}(x),y_{2}(x)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\rho(\AA y_{1}(x),\AA y_{2}(x))=\max_{\left[x_{0}-d,x_{0}+d\right]}\left|\int_{x_{0}}^{x}\left(f(x,y_{1}(x))-f(x,y_{2}(x))\right)dx\right|\leq\\
+\leq\max_{\left[x_{0}-d,x_{0}+d\right]}Ld\left|y_{1}(x)-y_{2}(x)\right|=\underbrace{Ld}_{<1}\rho(y_{1}(x),y_{2}(x))
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В результате получаем теорему Пикара.
+\end_layout
+
+\begin_layout Theorem
+(Пикара) Пусть 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ непрерывна в 
+\begin_inset Formula $G$
+\end_inset
+
+, удовлетворяет условию Липшица по 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Тогда решение задачи Коши будет существовать и будет единственным на 
+\begin_inset Formula $\left[x_{0}-d,x_{0}+d\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall y^{(0)}(x)=y_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Построим последовательность:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y^{(1)}=\AA y^{(0)}(x)=y_{0}+\int_{x_{0}}^{x}f(x,y^{(0)}(x))dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y^{(k)}(x)=\AA y^{(k-1)}(x)=y_{0}+\int_{x_{0}}^{x}f(\tau,y^{(k-1)}(x))dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y'=y\Rightarrow y=Ce^{x}$
+\end_inset
+
+.
+ Пусть требуется найти функцию, удовлетворяющую начальному условию 
+\begin_inset Formula $y(0)=1\Rightarrow C=1:\ y=e^{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Строим последовательность:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y^{(0)}(x)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y^{(1)}(x)=1+\int_{0}^{x}dx=x+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y^{(2)}(x)=1+\int_{0}^{x}(x+1)dx=1+x+\frac{x^{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y^{(k)}(x)=1+x+\frac{x^{2}}{2!}+...+\frac{x^{k}}{k!}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Применение принципа сжимаемых отображений к решению интегральных уравнений
+\end_layout
+
+\begin_layout Problem*
+Рассмотрим уравнение вида 
+\begin_inset Formula $f(x)=\lambda\int_{a}^{b}K(x,y)f(y)dy+\varphi(x)$
+\end_inset
+
+ — уравнение Фридгольма второго рода.
+ Здесь 
+\begin_inset Formula $\lambda=\const$
+\end_inset
+
+, 
+\begin_inset Formula $K(x,y),\varphi(x)$
+\end_inset
+
+ — заданы.
+ Требуется найти 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula $K(x,y)$
+\end_inset
+
+ непрерывна при 
+\begin_inset Formula $x,y\in[a,b]$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ непрерывна на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ и мы будем искать нашу функцию, которая должна быть непрерывной на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+В качестве пространства возьмем 
+\begin_inset Formula $X=C[a,b]$
+\end_inset
+
+.
+ Найдем отображение.
+ Пусть 
+\begin_inset Formula 
+\[
+\AA f(x)=\lambda\int_{a}^{b}K(x,y)f(y)dy+\varphi(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+откуда 
+\begin_inset Formula $f(x)=\AA f(x)$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $f^{*}(x)$
+\end_inset
+
+ — неподвижная точка 
+\begin_inset Formula $\AA$
+\end_inset
+
+, то 
+\begin_inset Formula $f^{*}(x)$
+\end_inset
+
+ — решение уравнения Фридгольма.
+ Нам нужна метрика.
+ Берем стандартную: 
+\begin_inset Formula $\forall f_{1}(x),f_{2}(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\rho(f_{1}(x),f_{2}(x))=\max_{[a,b]}\left|f_{1}(x)-f_{2}(x)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Пусть 
+\begin_inset Formula $M=\max_{x,y\in[a,b]}\left|K(x,y)\right|$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall f_{1}(x),f_{2}(x)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\rho(\AA f_{1}(x),\AA f_{2}(x))=\max_{[a,b]}\left|\lambda\int_{a}^{b}K(x,y)\left(f_{1}(y)-f_{2}(y)\right)dy\right|\leq\\
+\leq\left|\lambda\right|M(b-a)\cdot\underbrace{\max_{[a,b]}\left|f_{1}(y)-f_{2}(y)\right|}_{=\rho(f_{1}(x),f_{2}(x))}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+Откуда условие сжимаемости: 
+\begin_inset Formula $\left|\lambda\right|M(b-a)<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим обощения сжимаемых отображений:
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ — полное метрическое пространство и 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $\exists k\in\NN:\ \AA^{k}$
+\end_inset
+
+ — сжимающее.
+ Тогда у отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+ существует ровно одна неподвижная точка.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\mathcal{B}=\AA^{k}:X\to X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ — сжимающее, следовательно, по теореме Каччаполи-Банаха 
+\begin_inset Formula $\exists!$
+\end_inset
+
+ неподвижная точка 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ отображения 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ будет и неподвижной точкой отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\AA x^{*}=\AA(\mathcal{B}x^{*})=...=\AA(\mathcal{B}^{m}x^{*})=\mathcal{B}^{m}(Ax^{*})$
+\end_inset
+
+.
+ Из доказательства теоремы Каччаполи-Банаха 
+\begin_inset Formula $\mathcal{B}^{m}(\underbrace{Ax^{*}}_{=x_{0}})\to_{m\to\infty}x^{*}$
+\end_inset
+
+, откуда 
+\begin_inset Formula $\AA x^{*}=x^{*}\Rightarrow x^{*}$
+\end_inset
+
+ — неподвижная точка 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Рассмотрим уравнение Фридгольма, которое теперь уравнение Вольтерра: 
+\begin_inset Formula 
+\[
+f(x)=\lambda\int_{a}^{x}K(x,y)f(y)dy+\varphi(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Аналогично уравнению Фридгольма заданы 
+\begin_inset Formula $\lambda,K,\varphi$
+\end_inset
+
+ и функции непрерывны.
+ Аналогично 
+\begin_inset Formula $X=C[a,b]$
+\end_inset
+
+, 
+\begin_inset Formula $\forall f_{1}(x),f_{2}(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\rho(f_{1}(x),f_{2}(x))=\max_{[a,b]}\left|f_{1}(x)-f_{2}(x)\right|$
+\end_inset
+
+, 
+\begin_inset Formula $M=\max_{x,y\in[a,b]}\left|K(x,y)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Под образом функции будем понимать 
+\begin_inset Formula $\AA=\lambda\int_{a}^{x}K(x,y)f(y)dy+\varphi(x)\Rightarrow\AA f(x)=f(x)$
+\end_inset
+
+.
+ Аналогично с Фридгольмом, 
+\begin_inset Formula 
+\[
+\rho(\AA f_{1}(x),\AA f_{2}(x))\leq\left|\lambda\right|M(x-a)\cdot\underbrace{\max_{[a,b]}\left|f_{1}(y)-f_{2}(y)\right|}_{=\rho(f_{1}(x),f_{2}(x))}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Рассмотрим двукратные образы: 
+\begin_inset Formula 
+\[
+\rho(\AA^{2}f_{1}(x),\AA^{2}f_{2}(x))\leq\frac{\left|\lambda^{2}\right|M^{2}(x-a)^{2}}{2!}\rho(f_{1}(x),f_{2}(x))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+На 
+\begin_inset Formula $k$
+\end_inset
+
+-том шаге:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\rho(\AA^{k}f_{1}(x),\AA^{k}f_{2}(x))\leq\frac{\left|\lambda^{k}\right|M^{k}(x-a)^{k}}{k!}\rho(f_{1}(x),f_{2}(x))\leq\frac{\left|\lambda^{k}\right|M^{k}(b-a)^{k}}{k!}\rho(f_{1}(x),f_{2}(x))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Откуда 
+\begin_inset Formula $\exists k:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{полное дерьмо}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+дописать.
+\end_layout
+
+\begin_layout Subsubsection
+Теорема о неподвижной точки Шаудера
+\end_layout
+
+\begin_layout Definition
+Пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ компактно, если из любой последовательности элементов этого пространства
+ можно выделить сходящуюся подпоследовательность.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ — компактно, следовательно, полное.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\{x_{k}\}$
+\end_inset
+
+ — фундаментальная последовательность.
+ Если 
+\begin_inset Formula $X$
+\end_inset
+
+ — компактно, то 
+\begin_inset Formula $\exists$
+\end_inset
+
+ сходящаяся подпоследовательность, которая сходится: 
+\begin_inset Formula $\{x_{m_{k}}\}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Рассмотрим 
+\begin_inset Formula $\rho(x_{k},x^{*})$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+0\leq\rho(x_{k},x^{*})\leq\underbrace{\rho(x_{k},x_{m_{k}})}_{\to0}+\underbrace{\rho(x_{m_{k}},x^{*})}_{\to0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+первое из фундаментальности, второе из сходимости.
+\end_layout
+
+\begin_layout Theorem
+(критерий компактности)
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ компактно 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ замкнуто и ограничено.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Необходимость.
+ От противного.
+ Пусть оно не замкнуто.
+ Тогда 
+\begin_inset Formula $\exists$
+\end_inset
+
+ предельная точка 
+\begin_inset Formula $x^{*}\notin X$
+\end_inset
+
+.
+ По определению предельной точки 
+\begin_inset Formula $\exists x_{k}\in X:\ x_{k}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\rho(x_{k},x^{*})\to_{k\to\infty}0$
+\end_inset
+
+.
+ Тогда любая подпоследовательность 
+\begin_inset Formula $\{x_{m_{k}}\}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $X$
+\end_inset
+
+ не полное.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ не ограничено.
+ Тогда 
+\begin_inset Formula $\exists\overline{x}\in X,\ \exists\{x_{k}\}\in X:\ \rho(x_{k},\overline{x})\to_{k\to\infty}\infty$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\forall\{x_{m_{k}}\}\ \rho(x_{m_{k}},\overline{x})\to_{k\to\infty}\infty$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $\not\exists\hat{x}\in x^{*}:\ x_{m_{k}}\to x$
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -1068,5 +1068,397 @@ LU-разложение
 .
 \end_layout
 
+\begin_layout Subsubsection
+QR-разложение
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод вращений Гивенса:
+\end_layout
+
+\begin_layout Standard
+Строим 
+\begin_inset Formula $QR=A$
+\end_inset
+
+, где 
+\begin_inset Formula $R$
+\end_inset
+
+ — верхнетреугольная матрица, а 
+\begin_inset Formula $Q$
+\end_inset
+
+ — ортонормированная.
+\end_layout
+
+\begin_layout Standard
+Повернем 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ на какой-то угол, чтобы получилось 
+\begin_inset Formula $\left(\begin{array}{c}
+a_{11}^{(0)}\\
+0\\
+a_{31}^{(0)}\\
+\vdots\\
+a_{n1}^{(0)}
+\end{array}\right)$
+\end_inset
+
+.
+ Матрицы поворота выглядят так: 
+\begin_inset Formula $\left(\begin{array}{cc}
+\cos\alpha & -\sin\alpha\\
+\sin\alpha & \cos\alpha
+\end{array}\right)$
+\end_inset
+
+.
+ Матрица обратного поворота, аналогично, 
+\begin_inset Formula $\left(\begin{array}{cc}
+\cos\alpha & \sin\alpha\\
+-\sin\alpha & \cos\alpha
+\end{array}\right)$
+\end_inset
+
+.
+ Теперь, если мы домножим на матрицу 
+\begin_inset Formula $Q_{21}=\left(\begin{array}{cccc}
+\cos\alpha & -\sin\alpha & 0 & 0\\
+\sin\alpha & \cos\alpha & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)$
+\end_inset
+
+.
+ Тогда обнулится элемент 
+\begin_inset Formula $a_{21}$
+\end_inset
+
+.
+ Аналогично, далее используем матрицу 
+\begin_inset Formula $Q_{31}=\left(\begin{array}{cccc}
+\cos\alpha & 0 & -\sin\alpha & 0\\
+0 & 1 & 0 & 0\\
+\sin\alpha & 0 & \cos\alpha & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)$
+\end_inset
+
+ и так далее.
+ Таким образом, 
+\begin_inset Formula $Q_{n,n-1}Q_{n,n-2},...,Q_{21}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Это разложение нам понадобится для решения уравнения вида 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ решая уравнение 
+\begin_inset Formula $Rx=Qb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Как найти 
+\begin_inset Formula $\alpha$
+\end_inset
+
+? У нас есть 
+\begin_inset Formula $a_{11}$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{21}$
+\end_inset
+
+ и мы именно этот вектор хотим домножить на матрицу вращения.
+ Уравнение: 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+\cos\alpha & -\sin\alpha\\
+\sin\alpha & \cos\alpha
+\end{array}\right)\cdot\left(\begin{array}{c}
+a_{11}\\
+a_{21}
+\end{array}\right)=\left(\begin{array}{c}
+a_{11}^{(1)}\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Легко выводится, что 
+\begin_inset Formula $\begin{cases}
+\sin\alpha a_{11}+\cos\alpha a_{21}=0\\
+\sin^{2}\alpha+\cos^{2}\alpha=1
+\end{cases}$
+\end_inset
+
+, 
+\begin_inset Formula $\sin\alpha=-\frac{\cos\alpha a_{21}}{a_{11}}$
+\end_inset
+
+, 
+\begin_inset Formula $\cos^{2}\alpha+\cos^{2}\alpha(\frac{a_{21}}{a_{11}})=1$
+\end_inset
+
+, откуда 
+\begin_inset Formula $\cos^{2}\alpha=\frac{a_{11}}{a_{11}^{2}+a_{21}^{2}}$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $\cos\alpha=\frac{a_{11}}{\sqrt{a_{11}^{2}+a_{21}^{2}}},\ \sin\alpha=-\frac{a_{21}}{\sqrt{a_{11}^{2}+a_{21}^{2}}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Плюсы в сравнении с методом Гаусса: не нужно выбирать ведущий элемент и
+ не растет вычислительная погрешность.
+ Из минусов: работает в 4 раза медленнее.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод отражений Хаусхольдера:
+\end_layout
+
+\begin_layout Standard
+Рассмотрим вспомогательный вектор 
+\begin_inset Formula $\omega$
+\end_inset
+
+ — вектор единичной длины.
+ 
+\begin_inset Formula $\omega^{T}\omega=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula $U=E-2\omega\omega^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $U^{T}U=E-4\omega\omega^{T}+4\omega\underbrace{\omega^{T}\omega}_{1}\omega^{T}=E\Rightarrow U^{-1}=U^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U_{\omega}=\left(E\cdot2\omega\omega^{T}\right)\omega=\omega-2\omega=-\omega\Rightarrow\omega$
+\end_inset
+
+ — собственный вектор с собственным числом 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v\perp\omega$
+\end_inset
+
+, то есть 
+\begin_inset Formula $v^{T}\omega=0$
+\end_inset
+
+ или 
+\begin_inset Formula $\omega^{T}v=0$
+\end_inset
+
+, 
+\begin_inset Formula $U_{v}=\left(E-2\omega\omega^{T}\right)v=v-2\omega\omega^{T}v=v\Rightarrow v$
+\end_inset
+
+ — собственный вектор с собственным числом 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Таким образом, 
+\begin_inset Formula $y=v+\alpha\omega\Rightarrow Uy=v-\alpha\omega$
+\end_inset
+
+, то есть матрица 
+\begin_inset Formula $U$
+\end_inset
+
+ отражает вектор.
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $y,z$
+\end_inset
+
+ — ...
+ векторы.
+ Нам нужно найти 
+\begin_inset Formula $U$
+\end_inset
+
+, такую, что 
+\begin_inset Formula $Uy=\alpha z$
+\end_inset
+
+.
+ Смотрим: 
+\begin_inset Formula 
+\[
+\norm{Uy}=\norm y=\norm{\alpha z}\Rightarrow\alpha=\frac{\norm y}{\norm z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega=\frac{y-\alpha z}{\norm{y-\alpha z}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Теперь, используя 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ как 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ как 
+\begin_inset Formula $z$
+\end_inset
+
+, строим 
+\begin_inset Formula $U_{1}=E-2\omega\omega^{T}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $U_{1}A$
+\end_inset
+
+ будет иметь нулевой первый столбец (исключая элемент 
+\begin_inset Formula $a_{11}^{(1)}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula $Q=U_{n-1}\cdot...\cdot U_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Тогда решением 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ будет являться 
+\begin_inset Formula $Rx=Q^{T}b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Симметричная матрица — метод квадратного корня.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=S^{T}S$
+\end_inset
+
+, где 
+\begin_inset Formula $S$
+\end_inset
+
+ — верхнетреугольная.
+ Такое разложение возможно и единственно только для симметричной матрицы.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula $A$
+\end_inset
+
+ — положительно определенная матрица, следовательно, 
+\begin_inset Formula $s_{ij}\in\RR$
+\end_inset
+
+.
+ Просто расписав матрицы, получим 
+\begin_inset Formula $s_{11}^{2}=a_{11}$
+\end_inset
+
+, 
+\begin_inset Formula $s_{11}s_{12}=a_{12},...,s_{11}s_{1n}=a_{1n}$
+\end_inset
+
+.
+ Теперь посмотрим на вторую строку: 
+\begin_inset Formula $s_{22}^{2}+s_{12}^{2}=a_{22},\ s_{23}s_{22}+s_{12}s_{13}=a_{23}$
+\end_inset
+
+ и так далее.
+\end_layout
+
+\begin_layout Standard
+Метод квадратного корня требует в 2 раза меньше операций, чем в методе Гаусса
+ + 
+\begin_inset Formula $n\sqrt{}$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document

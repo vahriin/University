@@ -11,23 +11,23 @@ public class PLU {
     public PLU(double[][] matrix){
         PMatrix = Matrix.generateId();
         QMatrix = Matrix.generateId();
-        LUMatrix = matrix;
+        LUMatrix = matrix.clone();
 
-        decomposition(LUMatrix, PMatrix, QMatrix);
+        decomposition();
         PMatrix = Matrix.transponse(PMatrix);
         QMatrix = Matrix.transponse(QMatrix);
     }
 
-    public void decomposition(double[][] UMatrix, int[][]PMatrix, int[][]QMatrix) {
+    public void decomposition() {
         for (int i = 0; i < Constants.DIM; ++i) {
-            moveMainElementToCurrentRow(UMatrix, PMatrix, QMatrix, i);
+            moveMainElementToCurrentRow(LUMatrix, PMatrix, QMatrix, i);
             double m;
             for (int j = i + 1; j < Constants.DIM; ++j) {
-                m = UMatrix[j][i] / UMatrix[i][i];
+                m = LUMatrix[j][i] / LUMatrix[i][i];
                 for (int k = i; k < Constants.DIM; ++k) {
-                    UMatrix[j][k] -= m * UMatrix[i][k];
+                    LUMatrix[j][k] -= m * LUMatrix[i][k];
                 }
-                UMatrix[j][i] = m;
+                LUMatrix[j][i] = m;
             }
         }
     }

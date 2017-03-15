@@ -1942,5 +1942,179 @@ pass
 3) Геометрическое распределение.
 \end_layout
 
+\begin_layout Standard
+4) Гипергеометрическое распределение.
+\end_layout
+
+\begin_layout Subsection
+Числовые характеристики дискретных случайных величин
+\end_layout
+
+\begin_layout Definition
+Математическое ожидание случайной величины 
+\begin_inset Formula $X$
+\end_inset
+
+ есть среднее значение случайной величины 
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+M(X)=\sum_{i}x_{i}p_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Свойства:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $M(c)=c$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $M(c\cdot X)=c\cdot M(X)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $M(X+Y)=M(X)+M(Y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $M(XY)=M(X)\cdot M(Y)$
+\end_inset
+
+, если 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — независимы.
+\end_layout
+
+\begin_layout Example
+(Санкт-Петербургский парадокс — пример не существования матожидания)
+\end_layout
+
+\begin_layout Example
+Игрок играет против казино.
+ Подбрасывают монетку.
+ Если выпадает герб на 
+\begin_inset Formula $i$
+\end_inset
+
+ броске, то игрок получает 
+\begin_inset Formula $2^{i}$
+\end_inset
+
+ доллара.
+ Посчитаем матожидание выигрыша: 
+\begin_inset Formula $M(Y)=\frac{1}{2}\cdot2+\frac{1}{4}\cdot4+...$
+\end_inset
+
+ Этот ряд расходится, следовательно, матожидания выигрыша не существует.
+\end_layout
+
+\begin_layout Definition
+Дисперсия случайной величины 
+\begin_inset Formula $X$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+D(x)=M(X-M(X))^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+или, что тоже самое, 
+\begin_inset Formula 
+\[
+D(X)=M(X^{2})-(M(X))^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Моменты порядка 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Начальный момент порядка 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\begin_inset Formula $M_{k}=M(X^{k})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Центральный момент порядка 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\begin_inset Formula $\nu_{k}=M(X-M(X))^{k}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Числовые характеристики для основных распределений дискретной случайной
+ величины
+\end_layout
+
+\begin_layout Standard
+1) Биномиальное: 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ — число успехов: 
+\begin_inset Formula 
+\[
+p_{k}=p\{S_{n}=k\}=C_{n}^{k}p^{k}q^{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

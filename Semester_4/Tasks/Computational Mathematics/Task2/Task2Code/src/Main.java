@@ -9,7 +9,7 @@ public class Main {
                 {6, 8, 2}
         };
         double[] column = {2, 3, 4};
-        PLU pluDecomposition = new PLU(matrix.clone());
+        PLU pluDecomposition = new PLU(matrix);
         Matrix.println(pluDecomposition.LUMatrix);
         Matrix.println(pluDecomposition.PMatrix);
         Matrix.println(pluDecomposition.QMatrix);
