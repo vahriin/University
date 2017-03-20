@@ -1697,7 +1697,7 @@ P_{t}(k)=\frac{(\lambda t)^{k}}{k!}e^{-\lambda t}
 \end_layout
 
 \begin_layout Section
-pass
+Дискретные величины
 \end_layout
 
 \begin_layout Subsection
@@ -2075,7 +2075,7 @@ D(X)=M(X^{2})-(M(X))^{2}
 \end_inset
 
 : 
-\begin_inset Formula $M_{k}=M(X^{k})$
+\begin_inset Formula $\mu_{k}=M(X^{k})$
 \end_inset
 
 
@@ -2114,6 +2114,306 @@ p_{k}=p\{S_{n}=k\}=C_{n}^{k}p^{k}q^{n-k}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+pass
+\end_layout
+
+\begin_layout Subsection
+Функция распределения случайной величины
+\end_layout
+
+\begin_layout Definition
+Функция распределения задается как 
+\begin_inset Formula 
+\[
+F(x)=p\{X<x\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+либо 
+\begin_inset Formula 
+\[
+F(x)=p\{X\leq x\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Свойства функции распределения:
+\end_layout
+
+\begin_layout Standard
+1) Принимает значение от 0 до 1, как вероятность;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ является неубывающей функцией;
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $p\{x_{1}\leq X\leq x_{2}\}=F(x_{2})-F(x_{1})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $\lim_{x\to+\infty}F(x)=1$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{x\to0}F(x)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+5) Непрерывна слева.
+\end_layout
+
+\begin_layout Definition
+Случайная величина называется абсолютно непрерывной, если 
+\begin_inset Formula $\exists f(x)\geq0$
+\end_inset
+
+, такая, что 
+\begin_inset Formula 
+\[
+F(x)=\int_{-\infty}^{x}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+при этом 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ называется плотностью распределения.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(x)=\int_{-\infty}^{x}f(t)dt$
+\end_inset
+
+ — интегральный закон;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=F'(x)$
+\end_inset
+
+ — дифференциальный закон.
+\end_layout
+
+\begin_layout Standard
+Свойства:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f(x)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $p\{x_{1}\leq X\leq x_{2}\}=\int_{x_{1}}^{x_{2}}f(t)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) Условие нормировки: 
+\begin_inset Formula $\int_{-\infty}^{\infty}f(x)dx=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Числовые характеристики абсолютно непрерывных случайных величин
+\end_layout
+
+\begin_layout Standard
+Матожидание: 
+\begin_inset Formula $M(X)=\int_{-\infty}^{\infty}x\cdot f(x)dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+Дисперсия: 
+\begin_inset Formula $D(X)=\int_{-\infty}^{\infty}(x-M(X))^{2}f(x)dx=\int_{-\infty}^{\infty}x^{2}f(x)dx-(M(x))^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu_{k}=\int_{-\infty}^{\infty}x^{k}f(x)dx$
+\end_inset
+
+, 
+\begin_inset Formula $\nu_{k}=\int_{-\infty}^{\infty}(x-M(X))^{k}\cdot f(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Основные распределения непрерывных случайных величин
+\end_layout
+
+\begin_layout Subsubsection
+Равномерное
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\sim R(a,b)$
+\end_inset
+
+ — равномерное распределение на промежутке 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+0 & x<a\\
+\frac{1}{b-a} & x\in[a,b)\\
+0 & x\geq b
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=\begin{cases}
+0 & x<a\\
+\frac{x-a}{b-a} & x\in[a,b)\\
+1 & x\geq b
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M(X)=\int_{-\infty}^{\infty}xf(x)dx=\int_{a}^{b}x\frac{1}{b-a}dx=\frac{x^{2}}{2}\cdot\frac{1}{b-a}|_{a}^{b}=\frac{b^{2}-a^{2}}{2}\cdot\frac{1}{b-a}=\frac{a+b}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D(X)=...=\frac{(b-a)^{2}}{12}$
+\end_inset
+
+ (убедиться в этом).
+\end_layout
+
+\begin_layout Subsubsection
+Экспоненциальное
+\end_layout
+
+\begin_layout Definition
+Случайная величина имеет экспоненциальное распределение, если 
+\begin_inset Formula 
+\[
+f(t)=\begin{cases}
+0 & t<0\\
+\lambda e^{-\lambda t} & t\geq0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+F(t)=\begin{cases}
+0 & t<0\\
+\lambda e^{-\lambda t} & t\geq0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $M(T)=\int_{0}^{\infty}t\cdot\lambda e^{-\lambda t}dt=\frac{1}{\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Гауссово или нормальное
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-a)^{2}}{2\sigma^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Стандартное нормальное распределение при 
+\begin_inset Formula $a=0,$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_body

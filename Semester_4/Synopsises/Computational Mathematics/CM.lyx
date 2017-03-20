@@ -1460,5 +1460,546 @@ a_{11}^{(1)}\\
 .
 \end_layout
 
+\begin_layout Subsubsection
+Итерационные методы решения СЛАУ
+\end_layout
+
+\begin_layout Standard
+Это методы, в которых мы находим начальное приближение к решению и, итерируя,
+ уточняем его.
+\end_layout
+
+\begin_layout Standard
+Рассматриваемая нами система 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ путем неких изменений может быть приведена к форме 
+\begin_inset Formula $x=Bx+c$
+\end_inset
+
+.
+ И задача нахождения 
+\begin_inset Formula $x$
+\end_inset
+
+ становится задачей нахождения неподвижной точки.
+\end_layout
+
+\begin_layout Standard
+Допустим, мы преобразовали наше уравнение ко второму виду.
+ Теперь мы строим итератор: 
+\begin_inset Formula 
+\[
+x^{(k+1)}=Bx^{(k)}+c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Интуитивно понятно, что 
+\begin_inset Formula $\norm B>1$
+\end_inset
+
+ влечет 
+\begin_inset Formula $\norm{x_{k}}\to\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+Все собственные числа матрицы 
+\begin_inset Formula $B$
+\end_inset
+
+ по модулю меньше единицы тогда и только тогда, когда 
+\end_layout
+
+\begin_layout Lemma
+1) 
+\begin_inset Formula $B^{k}\to_{k\to\infty}0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Lemma
+2) 
+\begin_inset Formula $\exists(I-B)^{-1}=(I+B+B^{2}+...+B^{k}+...)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Lemma
+Если 
+\begin_inset Formula $\norm B\leq q<1$
+\end_inset
+
+, то 
+\begin_inset Formula $(I-B)^{-1}$
+\end_inset
+
+ существует, равна 
+\begin_inset Formula $\sum_{i=1}^{\infty}B^{i}$
+\end_inset
+
+ и 
+\begin_inset Formula $\norm{(I-B)^{-1}}\leq\frac{1}{1-q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\norm B\leq q<1\Rightarrow\norm{i+B+...+B^{k}+...}\leq\norm I+\norm B+...+\norm{B^{k}}+...\leq\norm I+\norm B+...+\norm B^{k}+...\leq1+q+...+q^{k}+...=\frac{1}{1-q}$
+\end_inset
+
+, следовательно, существует 
+\begin_inset Formula $V=\sum_{k=0}^{\infty}B^{i}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\norm V\leq\frac{1}{1-q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Тогда 
+\begin_inset Formula $(I-B)V=IV-BV=I+B+B^{2}+...+B^{k}+...-B-B^{2}-...-B^{k}-...=I$
+\end_inset
+
+, следовательно 
+\begin_inset Formula $\norm{(I-B)^{-1}}\leq\frac{1}{1-q}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Необходимым и достаточным условием сходимости метода простой итерации с
+ любым начальным приближением 
+\begin_inset Formula $x^{(0)}$
+\end_inset
+
+ к 
+\begin_inset Formula $x^{*}:x^{*}=Bx^{*}+c$
+\end_inset
+
+ является ограниченность собственных чисел матрицы 
+\begin_inset Formula $B$
+\end_inset
+
+ числом, меньшим единицы.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+Достаточность:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{(1)}=Bx^{(0)}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{(2)}=B(Bx^{(0)}+c)+c=B^{2}x^{(0)}+Bc+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+....
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{(k)}=B^{k}x^{(0)}+(B^{(k-1)}+...+I)c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Из условий 1) 
+\begin_inset Formula $B^{k}\to_{k\to\infty}0$
+\end_inset
+
+; 2) 
+\begin_inset Formula $\exists(I-B)^{-1}=\sum_{i=0}^{\infty}B^{i}$
+\end_inset
+
+ следует, что при 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $x^{(k)}\to(I-B)^{-1}c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Преобразуем 
+\begin_inset Formula $x=Bx+c\Leftrightarrow(I-B)x=c$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $(E-B)^{-1}c$
+\end_inset
+
+ является решением.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\exists x^{**}$
+\end_inset
+
+ — другое решение.
+ Тогда 
+\begin_inset Formula $x^{*}=Bx^{*}+c$
+\end_inset
+
+, 
+\begin_inset Formula $x^{**}=Bx^{**}+c$
+\end_inset
+
+ и 
+\begin_inset Formula $x^{*}-x^{**}=B(x^{*}-x^{**})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x^{*}-x^{**}=B(x^{*}-x^{**})$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+ является собственным числом 
+\begin_inset Formula $B$
+\end_inset
+
+ с собственным вектором 
+\begin_inset Formula $x^{*}-x^{**}$
+\end_inset
+
+, а это противоречие.
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+Необходимость:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{(k)}\to_{k\to\infty}x^{*}\Rightarrow I+B+...+B^{k}+...=V$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+ — конечная матрица и 
+\begin_inset Formula $V=(I-B)^{-1}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $x^{*}=\lim_{k\to\infty}B^{k}x^{(0)}+(I-B)^{-1}c$
+\end_inset
+
+, подставив в уравнение, получим 
+\begin_inset Formula $(I-B)x^{*}=c$
+\end_inset
+
+, откуда 
+\begin_inset Formula $(I-B)(I-B)^{1}c+(I-B)\lim_{k\to\infty}B^{k}x^{(0)}=c$
+\end_inset
+
+ следовательно, 
+\begin_inset Formula $\lim_{k\to\infty}B^{k}$
+\end_inset
+
+, следовательно, собственные числе матрицы равны ???
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $\norm B\leq q<1$
+\end_inset
+
+, тогда МПИ сходится 
+\begin_inset Formula $\forall x^{(0)}$
+\end_inset
+
+ к 
+\begin_inset Formula $x^{*}:x^{*}=Bx^{*}+c$
+\end_inset
+
+ и верны следующие оценки:
+\end_layout
+
+\begin_layout Theorem
+1) 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{q}{1-q}\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+ — апостериорная оценка;
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{q^{k}}{1-q}\norm{x^{(1)}-x^{(0)}}$
+\end_inset
+
+ — априорная оценка.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{(k-1)}-x^{(k)}=Bx^{(k)}+c-Bx^{(k-1)}+c=B(x^{(k)}-x^{(k-1)})\Rightarrow\norm{x^{(k+1)}-x^{(k)}}\leq q\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\norm{x^{(k+m)}-x^{(k)}}\leq\norm{x^{(k+m)}-x^{(k+m-1)}+...+x^{(k+1)}-x^{(k)}}\leq\norm{x^{(k+m)}-x^{(k+m-1)}}+...+\norm{x^{(k+1)}-x^{(k)}}\leq\left(q^{m-1}+q^{m-2}+...+q+1\right)\norm{x^{(k+1)}-x^{(k)}}=\frac{1-q^{m}}{1-q}\norm{x^{(k+1)}-x^{(k)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Тогда 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{1}{1-q}\norm{x^{(k+1)}-x^{(k)}}\leq\frac{q}{1-q}\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Применив много раз, получим 
+\begin_inset Formula $\norm{x^{(k+1)}-x^{(k)}}\leq q^{2}\norm{x^{(k-1)}-x^{(k-2)}}$
+\end_inset
+
+,...,
+\begin_inset Formula $\norm{x^{(k+1)}-x^{(k)}}\leq q^{k}\norm{x^{(1)}-x^{(0)}}$
+\end_inset
+
+.
+ Таким образом, при 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ последовательность сходится в себе, 
+\begin_inset Formula $\RR^{n}$
+\end_inset
+
+ полное, следовательно, существует 
+\begin_inset Formula $x^{*}=\lim_{k\to\infty}x^{(k)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(I-B)\left(B^{k}x^{(0)}+(I-B)^{-1}c\right)=c$
+\end_inset
+
+, 
+\begin_inset Formula $B^{k}x^{(0)}=0$
+\end_inset
+
+, так как 
+\begin_inset Formula $\norm B\leq q\Rightarrow\norm{B^{k}}\leq q^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+И в результате 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{q}{1-q}\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+Апостериорная оценка точнее, чем априорная.
+\end_layout
+
+\begin_deeper
+\begin_layout Remark
+Другая априорная оценка: 
+\begin_inset Formula $x^{*}=(I-B)^{-1}c=(I+B+...+B^{k}+...)c$
+\end_inset
+
+, соответственно, 
+\begin_inset Formula $x^{(k)}=B^{k}x^{(0)}+(I+...+B^{k})c$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $x^{*}-x^{(k)}=B^{k}x^{(0)}+(B^{k}+B^{k-1}+...)c$
+\end_inset
+
+.
+ Если взять норму: 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq q^{k}\norm{x^{(0)}}+q^{k}\norm{(I-B)^{-1}}c\leq q^{k}\left(\norm{x^{0}}+\frac{\norm c}{1-q}\right)$
+\end_inset
+
+.
+ Кажется, так.
+\end_layout
+
+\begin_deeper
+\begin_layout Remark
+Как выбрать 
+\begin_inset Formula $x^{(0)}$
+\end_inset
+
+? А фиг знает
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Метод Якоби:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ax=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Берем матрицу и делим каждую из ее строк на диагональный элемент в этой
+ строке.
+ Мы в каждой строке получим 
+\begin_inset Formula $x$
+\end_inset
+
+ с соответствующим номером с единичным коэффициентом.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}=-\frac{a_{12}}{a_{11}}x_{2}-...-\frac{a_{1m}}{a_{11}}x_{m}+\frac{b_{1}}{a_{11}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{2}=-\frac{a_{21}}{a_{22}}x_{2}-\frac{a_{23}}{a_{22}}x_{3}...-\frac{a_{2m}}{a_{22}}x_{m}+\frac{b_{2}}{a_{22}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+и так далее.
+ Теперь матрица 
+\begin_inset Formula $B$
+\end_inset
+
+ будет иметь нули на диагонали.
+ Соответственно, метод Якоби есть МПИ в такой системе.
+ 
+\end_layout
+
+\begin_layout Theorem
+Для матрицы с диагональным преобладанием метод Якоби сходится.
+\end_layout
+
+\begin_layout Definition
+Матрица с диагональным преобладанием — матрица, такая, что 
+\begin_inset Formula 
+\[
+\forall i=\overline{1,n}:\ \left|a_{ii}\right|>\sum_{j=1,j\neq i}^{n}\left|a_{ij}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\delta=\min_{i=\overline{1,n}}\left(\left|a_{ii}\right|-\sum_{0}\left|a_{ij}\right|\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+— величина диагонального преобладания.
+ Чем больше, тем быстрее матрица сойдется.
+\end_layout
+
+\begin_layout Theorem
+Метод Якоби сходится тогда и только тогда, когда все корни уравнения 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{cccc}
+\lambda a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & \lambda a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод Зейделя:
+\end_layout
+
+\begin_layout Standard
+Когда мы применяем метод простой итерации, мы строим 
+\begin_inset Formula $x_{1}^{(k+1)}=b_{11}x_{1}^{(k)}+b_{12}x^{(k)}+...+b_{1n}x_{n}^{(k)}+c_{1}$
+\end_inset
+
+.
+ Остальное аналогично с другими сторками.
+\end_layout
+
 \end_body
 \end_document

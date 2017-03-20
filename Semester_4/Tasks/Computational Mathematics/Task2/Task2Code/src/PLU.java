@@ -11,7 +11,7 @@ public class PLU {
     public PLU(double[][] matrix){
         PMatrix = Matrix.generateId();
         QMatrix = Matrix.generateId();
-        LUMatrix = matrix.clone();
+        LUMatrix = Matrix.clone(matrix);
 
         decomposition();
         PMatrix = Matrix.transponse(PMatrix);

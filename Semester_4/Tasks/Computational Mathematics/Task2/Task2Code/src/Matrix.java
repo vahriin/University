@@ -4,6 +4,14 @@ import java.util.Random;
  * Created by vahriin on 3/3/17.
  */
 public class Matrix {
+    public static double[][] clone(double[][] matrix) {
+        double [][] matrixClone = new double[matrix.length][];
+        for(int i = 0; i < matrix.length; i++) {
+            matrixClone[i] = matrix[i].clone();
+        }
+        return matrixClone;
+    }
+
     public static int[][] transponse(int[][] matrix) {
         int[][] result = new int[Constants.DIM][Constants.DIM];
         for (int i = 0; i < Constants.DIM; ++i) {
