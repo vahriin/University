@@ -4,6 +4,8 @@ import java.util.Random;
  * Created by vahriin on 3/3/17.
  */
 public class Matrix {
+    private static Random random = new Random();
+
     public static double[][] clone(double[][] matrix) {
         double [][] matrixClone = new double[matrix.length][];
         for(int i = 0; i < matrix.length; i++) {
@@ -94,7 +96,6 @@ public class Matrix {
 
     public static int[][] generateInt() {
         final int MAX = 200;
-        Random random = new Random();
         int matrix[][] = new int[Constants.DIM][Constants.DIM];
         for (int i = 0; i < Constants.DIM; i++){
             for (int j = 0; j < Constants.DIM; j++){
@@ -104,9 +105,8 @@ public class Matrix {
         return matrix;
     }
 
-    public static double[][] generateDouble(){
+    public static double[][] generateDouble() {
         final int MAX = 200;
-        Random random = new Random();
         double matrix[][] = new double[Constants.DIM][Constants.DIM];
         for (int i = 0; i < Constants.DIM; i++){
             for (int j = 0; j < Constants.DIM; j++){
@@ -116,13 +116,28 @@ public class Matrix {
         return matrix;
     }
 
-    public static void swapRows(double[][] matrix, int number1, int number2){
+    public static double[][] generateDiagPrevalence() {
+        final int MAX = 180;
+        double[][] matrix = new double[Constants.DIM][Constants.DIM];
+        for (int i = 0; i < Constants.DIM; ++i) {
+            int summOfLine = 0;
+            for (int j = 0; j < Constants.DIM; ++j) {
+                if (i != j) {
+                    summOfLine += matrix[i][j] = random.nextInt(MAX) - 89;
+                }
+            }
+            matrix[i][i] = summOfLine + random.nextInt(10);
+        }
+        return matrix;
+    }
+
+    public static void swapRows(double[][] matrix, int number1, int number2) {
         double[] swap = matrix[number1];
         matrix[number1] = matrix[number2];
         matrix[number2] = swap;
     }
 
-    public static void swapColumns(double[][] matrix, int number1, int number2){
+    public static void swapColumns(double[][] matrix, int number1, int number2) {
         double swap;
         for (int i = 0; i < Constants.DIM; i++){
             swap = matrix[i][number1];

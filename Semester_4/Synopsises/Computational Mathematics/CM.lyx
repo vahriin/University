@@ -699,6 +699,10 @@ I_{n-1}=\frac{1}{n}(1-I_{n})
 
 \end_layout
 
+\begin_layout Section
+Линейные уравнения
+\end_layout
+
 \begin_layout Subsection
 Решение систем линейных уравнений
 \end_layout
@@ -1883,7 +1887,7 @@ x^{(k+1)}=Bx^{(k)}+c
 \begin_inset Formula $x^{(0)}$
 \end_inset
 
-? А фиг знает
+? 
 \end_layout
 
 \end_deeper
@@ -1920,7 +1924,7 @@ x^{(k+1)}=Bx^{(k)}+c
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $x_{2}=-\frac{a_{21}}{a_{22}}x_{2}-\frac{a_{23}}{a_{22}}x_{3}...-\frac{a_{2m}}{a_{22}}x_{m}+\frac{b_{2}}{a_{22}}$
+\begin_inset Formula $x_{2}=-\frac{a_{21}}{a_{22}}x_{1}-\frac{a_{23}}{a_{22}}x_{3}...-\frac{a_{2m}}{a_{22}}x_{m}+\frac{b_{2}}{a_{22}}$
 \end_inset
 
 
@@ -1999,6 +2003,437 @@ a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
 
 .
  Остальное аналогично с другими сторками.
+\end_layout
+
+\begin_layout Section
+Нелинейные уравнения
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ — поиск корней нелинейной функции.
+\end_layout
+
+\begin_layout Subsection
+Метод половинного деления
+\end_layout
+
+\begin_layout Standard
+Рассматриваем отрезок 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, на котором есть корни, то есть 
+\begin_inset Formula $f(a)f(b)<0$
+\end_inset
+
+.
+ Вычисляем 
+\begin_inset Formula $c=\frac{a+b}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $f(c)$
+\end_inset
+
+ и сравниваем:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f(a)-f(c)<0\Rightarrow b:=c,\ f(b):=f(c)$
+\end_inset
+
+ и рекуррентно выполняем.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $f(a)-f(c)>0$
+\end_inset
+
+.
+ Все то же самое, но наоборот.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $f(a)f(c)=0$
+\end_inset
+
+ — вернуть 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Делаем, пока 
+\begin_inset Formula $\frac{b-a}{2}>\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Метод простой итерации
+\end_layout
+
+\begin_layout Standard
+Переформулируем 
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ в 
+\begin_inset Formula $x=S(x)$
+\end_inset
+
+ и выбрав 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ будем искать неподвижную точку: 
+\begin_inset Formula $x_{k+1}=S(x_{k})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Например, 
+\begin_inset Formula $S(x)=x-\tau(x)-f(x)$
+\end_inset
+
+, 
+\begin_inset Formula $\tau(x)\neq0$
+\end_inset
+
+ в окрестности 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $\tau(x)\equiv\tau\neq0$
+\end_inset
+
+ 
+\begin_inset Formula $S(x)=x-\tau f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Если 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ липшицова с 
+\begin_inset Formula $q\in(0,1)$
+\end_inset
+
+ на отрезке 
+\begin_inset Formula $V_{r}(a)$
+\end_inset
+
+ и 
+\begin_inset Formula $\left|S(a)-a\right|\leq(1-q)r$
+\end_inset
+
+, то уравнение 
+\begin_inset Formula $x=S(x)$
+\end_inset
+
+ имеет на 
+\begin_inset Formula $V_{r}(a)$
+\end_inset
+
+ единственное решение 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, МПИ сходится 
+\begin_inset Formula $\forall x_{0}\in V_{r}(x)$
+\end_inset
+
+ и 
+\begin_inset Formula $\left|x^{*}-x_{k}\right|\leq q^{k}\left|x^{*}-x_{0}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Если 
+\begin_inset Formula $S(x)$
+\end_inset
+
+ непрерывно дифференцируема на отрезке и 
+\begin_inset Formula $\left|S'(x)\right|\leq q<1$
+\end_inset
+
+ и выполнено условие 
+\begin_inset Formula $\left|S(a)-a\right|\leq(1-q)r$
+\end_inset
+
+, то решение существует и 
+\begin_inset Formula $\forall x_{0}$
+\end_inset
+
+ метод простой итерации сходится.
+\end_layout
+
+\begin_layout Subsection
+Метод Ньютона
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Разложим функцию 
+\begin_inset Formula $f(x^{*})$
+\end_inset
+
+ в ряд по 
+\begin_inset Formula $(x_{k}-x^{*})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+ — приближение к решению.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x^{*})=f(x_{k})+f'(x_{k})(x^{*}-x_{k})+f''(x_{k})\frac{(x^{*}-x_{k})^{2}}{2}+...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+отсюда 
+\begin_inset Formula 
+\[
+x^{*}\thickapprox x_{k}-\frac{f(x_{k})}{f'(x_{k})}=x_{k+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{k})}$
+\end_inset
+
+, то есть 
+\begin_inset Formula $S(x)=\frac{f(x)}{f'(x)}$
+\end_inset
+
+, если 
+\begin_inset Formula $\left|S'(x)\right|\leq q\leq1$
+\end_inset
+
+ в некоторой окрестности, то МПИ сходится.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S'(x)=-\frac{(f'(x))^{2}-f(x)f''(x)}{(f'(x))^{2}}+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+то есть 
+\begin_inset Formula $S'(x)=\frac{f(x)f'(x)}{(f'(x))^{2}}$
+\end_inset
+
+.
+ Таким образом, 
+\begin_inset Formula 
+\[
+\left|\frac{f(x)f''(x)}{(f'(x))^{2}}\right|<1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+то есть МПИ сходится в некоторой окрестности 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Оценим скорость сходимости:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x_{k})+f'(x_{k})(x^{*}-x_{k})=F(x_{k})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=f(x)+f'(x)(x^{*}-x);\ F(x^{*})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x_{k})=F(x^{*})+\int_{x^{*}}^{x_{k}}F'(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F'(x)=f'(x)+f''(x)(x^{*}-x)+f'(x)(-1)=f''(x)(x^{*}-x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x_{k})=\int_{x^{*}}^{x_{k}}f''(x)(x^{*}-x)dx=f''(\xi)\int_{x^{*}}^{x_{k}}(x^{*}-x)dx=f''(\xi)\frac{(x^{*}-x_{k})^{2}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{*}-x_{k+1}=x^{*}-x_{k}+\frac{f(x_{k})}{f'(x_{k})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f'(x)(x^{*}-x_{k+1})=F(x_{k})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|x^{*}-x_{k+1}\right|\leq\frac{M_{2}}{f'(x_{k})}\left|x^{*}-x_{k}\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+таким образом, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|x^{*}-x_{k+1}\right|\leq\frac{q^{2^{(k+1)}-1}}{1-q}\left|x^{*}-x_{0}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Если на отрезке 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ существует корень, 
+\begin_inset Formula $f'(x)\neq0$
+\end_inset
+
+ на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ и 
+\begin_inset Formula $f''(x)\neq0$
+\end_inset
+
+, то метод Ньютона сходится 
+\begin_inset Formula $\forall x_{0}$
+\end_inset
+
+, такого, что 
+\begin_inset Formula $f(x_{0})f''(x_{0})>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Метод Ньютона имеет так называемую квадратичную сходимость для простых корней.
+\end_layout
+
+\begin_layout Subsection
+Метод секущих
+\end_layout
+
+\begin_layout Standard
+Применяется в случае, если не работает метод Ньютона.
 \end_layout
 
 \end_body
