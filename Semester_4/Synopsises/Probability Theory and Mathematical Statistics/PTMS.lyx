@@ -2416,5 +2416,157 @@ f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-a)^{2}}{2\sigma^{2}}}
  
 \end_layout
 
+\begin_layout Subsection
+Что-то непонятное
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\Omega,F,P\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\xi(\omega)\geq\eta(\omega)$
+\end_inset
+
+, 
+\begin_inset Formula $M\xi\geq M\eta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Delta(\omega)=\xi(\omega)-\eta(\omega)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+Пусть 
+\begin_inset Formula $\xi\geq0\ \forall\varepsilon>0$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $p\left\{ \xi>\varepsilon\right\} \leq\frac{M\xi}{\varepsilon}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Неравенство Чебышева
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\left\{ \left|\xi-M\xi\right|\geq\varepsilon\right\} \leq\frac{D\xi}{\varepsilon^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p\left\{ \left|\xi-M\xi\right|\geq\varepsilon\right\} =p\left\{ \underbrace{(\xi-M\xi)^{2}}_{\eta}\geq\varepsilon^{2}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p\left\{ (\xi-M\xi)^{2}\geq\varepsilon^{2}\right\} \leq\frac{M\left[((\xi-M\xi)^{2}\right]}{\varepsilon^{2}}=\frac{D\xi}{\varepsilon^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Закон больших чисел в форме Чебышева
+\end_layout
+
+\begin_layout Standard
+Пусть есть последовательность попарно независимых случайных величин 
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+ и эти числа имеют равномерно ограниченную дисперсию: 
+\begin_inset Formula $\left(\exists C:\ \forall i\ Dx_{i}\leq C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}p\left(\left|\frac{x_{1}+...+x_{n}}{n}-\frac{M(x_{1})+...+M(x_{n})}{n}\right|\leq\varepsilon\right)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p\left\{ \left|\xi-M\xi\right|\geq\varepsilon\right\} \leq\frac{D\xi}{\varepsilon^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p\left\{ \left|\overline{x_{n}}-M\left[\overline{x_{n}}\right]\right|<\varepsilon\right\} \geq1-\frac{D\overline{x_{n}}}{\varepsilon^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Закон больших чисел в форме Бернулли
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n,S$
+\end_inset
+
+ —число успехов в первых 
+\begin_inset Formula $n$
+\end_inset
+
+ испытаниях.
+ 
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}p\left(\left|\frac{S_{n}}{n}-p\right|<\varepsilon\right)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
