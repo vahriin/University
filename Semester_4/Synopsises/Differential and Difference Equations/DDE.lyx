@@ -647,7 +647,11 @@ key "key-7"
 ДЗ
 \series default
 : переписать на языке 
-\begin_inset Formula $\varepsilon-\delta$
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+-
+\begin_inset Formula $\delta$
 \end_inset
 
 .
@@ -802,6 +806,404 @@ x=\int_{y_{0}}^{y}\frac{d\tau}{g(\tau)}+x_{0}
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Example
+//конец первой лекции
+\end_layout
+
+\begin_layout Example
+Мы договорились, что решение ОДУ 
+\begin_inset Formula $\frac{dx}{dy}=y'=f(x,y)$
+\end_inset
+
+ является функция 
+\begin_inset Formula $y(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Для единственности решения: 
+\begin_inset Formula $\exists\delta>0$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x\in(x_{0}-\delta,x_{0}+\delta)$
+\end_inset
+
+ выполнялось 
+\begin_inset Formula $y_{2}(x)\equiv y_{1}(x)$
+\end_inset
+
+.
+ При условии не единственности, 
+\begin_inset Formula $\forall\delta>0$
+\end_inset
+
+ 
+\begin_inset Formula $\exists\overline{x}\in(x_{0}-\delta,x_{0}+\delta)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $y_{2}(\overline{x})\not\equiv y_{1}(\overline{x})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(Пеано — о существовании решения задачи Коши)
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $(x,y)\in D$
+\end_inset
+
+, где 
+\begin_inset Formula $D$
+\end_inset
+
+ — область определения и непрерывности правой части.
+ Тогда ??? (дописать)
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+(Пикара)
+\end_layout
+
+\begin_layout Theorem
+Если мы вдобавок потребуем, чтобы существовала непрерывная 
+\begin_inset Formula $\frac{\partial f}{\partial y}$
+\end_inset
+
+.
+ Тогда мы гарантируем не только существование решения на некотором интервале,
+ но еще и в этой точке ??? (дописать)
+\end_layout
+
+\begin_layout Theorem
+Условие Липшица: 
+\begin_inset Formula $\left|f(x,y_{1})-f(x,y_{2})\right|\leq L\cdot\left|y_{1}-y_{2}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\forall(x,y)\in D$
+\end_inset
+
+ 
+\begin_inset Formula $f(x,y_{1})-f(x,y_{2})=\frac{\partial f(x,\hat{y})}{\partial y}(y_{1}-y_{2})$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{y}\in[y_{1},y_{2}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Потребуем условие: 
+\begin_inset Formula $\left|f(x,y)\right|<M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $R=\{(x,y):\ \left|x-y_{0}\right|\leq a,\left|y-y_{0}\right|\leq b$
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left|x-x_{0}\right|\leq h=\min\{a,\frac{b}{M}\}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Дальше уже хрень какая-то.
+\end_layout
+
+\begin_layout Standard
+Итерации Пикара:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{1}=y_{0}+\int_{x_{0}}^{x}f(\tau,y_{0})d\tau$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{2}=y_{0}+\int_{x_{0}}^{x}f(\tau,y_{1}(\tau))d\tau$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{k+1}(x)=y_{0}+\int_{x_{0}}^{x}f(\tau,y_{k}(t))d\tau$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|y_{1}(x)-y_{0}\right|\leq\left|\int_{x_{0}}^{x}f(\tau,y)d\tau\right|\leq h\cdot M\leq b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+Две эквивалентные задачи:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+y'=f(x,y)\\
+y(x_{0})=y
+\end{cases}$
+\end_inset
+
+ и 
+\begin_inset Formula $y(x)\equiv y_{0}+\int_{x_{0}}^{x}f(\tau,y(\tau))d\tau$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+откуда 
+\begin_inset Formula $y'(x)\equiv f(x,y(x))$
+\end_inset
+
+ и 
+\begin_inset Formula $y(x)-\underbrace{y(x_{0})}_{=y_{0}}\equiv\int_{x_{0}}^{x}f(\tau,y(\tau))d\tau$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Рассмотрим функциональную последовательность:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\{ y_{n}(x)\right\} \to_{n\to\infty}?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Перейдем к функциональным рядам.
+ С этой целью рассмотрим сумму: 
+\begin_inset Formula 
+\[
+y_{0}+(y_{1}-y_{0})+(y_{2}-y_{1})+...+(y_{k+1}-y_{k})+...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сумма этого ряда равна 
+\begin_inset Formula $S_{n+1}(x)=y_{n}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Покажем, что он сходится.
+ Для этого найдем мажоранту.
+\end_layout
+
+\begin_layout Standard
+Посмотрим 
+\begin_inset Formula 
+\[
+\left|y_{1}-y_{0}\right|\leq(1)\leq(x-x_{0})M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1) будем рассматривать 
+\begin_inset Formula $x\geq x_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula 
+\begin{multline*}
+\left|y_{2}-y_{1}\right|\leq\int_{x_{0}}^{x}|f(\tau,y_{1}(\tau))-f(\tau,y_{0})|d\tau\leq\int_{x_{0}}^{x}L\left|y_{1}-y_{0}\right|d\tau\leq\\
+\leq\int_{x_{0}}^{x}LM(\tau-x_{0})d\tau\leq LM\cdot\frac{(x-x_{0})^{2}}{2}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сделаем еще раз: 
+\begin_inset Formula 
+\[
+\left|y_{3}-y_{2}\right|\leq\int_{x_{0}}^{x}L\left|y_{2}-y_{1}\right|d\tau\leq\frac{L^{2}M(x-x_{0})^{3}}{3!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Откуда 
+\begin_inset Formula 
+\[
+\left|y_{k}-y_{k-1}\right|\leq M\frac{L^{k-1}(x-x_{0})^{k}}{k!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Докажем индукционный переход: 
+\begin_inset Formula 
+\[
+\left|y_{k+1}-y_{k}\right|\leq\int_{x_{0}}^{x}L\left|y_{k}-y_{k-1}\right|d\tau=M\frac{L^{k}(x-x_{0})^{k+1}}{(k+1)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Оценивая теперь хрен знает что получаем: 
+\begin_inset Formula 
+\[
+\left|y_{0}\right|+Mh+ML\frac{h^{2}}{2!}+...+ML^{k-1}\frac{h^{k}}{k!}+...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Это мажорирующий ряд, который является сходящимся, так как сводится к экспоненци
+альной функции.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ДЗ
+\series default
+: привести ряд к экспоненциальной форме.
+\end_layout
+
+\begin_layout Standard
+Назовем 
+\begin_inset Formula $y^{*}(x)\leftleftarrows_{n\to\infty}y_{n}(x)$
+\end_inset
+
+.
+ Итерации Пикара сходятся.
+ Посмотрим, являются ли они решением:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y^{*}(x)=\lim_{k\to\infty}y_{k+1}(x)\equiv y_{0}+\int_{x_{0}}^{x}f(\tau,y_{k}(\tau))d\tau=y_{0}+\int_{x_{0}}^{x}f(\tau,y^{*}(\tau))d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Проверим единственность: пусть 
+\begin_inset Formula $\exists z(x)$
+\end_inset
+
+ — другое решение.
+ Тогда 
+\begin_inset Formula $\left|x(z)-y_{0}\right|\leq M(x-x_{0})$
+\end_inset
+
+ так как 
+\begin_inset Formula $z(x)=y_{0}+\int_{x_{0}}^{x}f(\tau,z(\tau))d\tau$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Аналогично предыдущему, 
+\begin_inset Formula $\left|z(x)-y_{1}(x)\right|\leq ML\frac{(x-x_{0})^{2}}{2!}$
+\end_inset
+
+ и так далее до 
+\begin_inset Formula 
+\[
+\left|z(x)-y_{k}(x)\right|\leq ML^{k}\frac{(\overbrace{x-x_{0}}^{h})^{k+1}}{(k+1)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+откуда 
+\begin_inset Formula 
+\[
+0\leq\left|z(x)-y^{*}(x)\right|\leq0\Rightarrow z(x)\equiv y^{*}(x)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -7,6 +7,7 @@
 \textclass extarticle
 \begin_preamble
 \usepackage{indentfirst}
+\newcommand{\const}{\operatorname{const}}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -161,6 +162,22 @@ target "https://vk.com/vahriin"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\norm}[1]{\left\Vert #1\right\Vert }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\AA}{\mathcal{A}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -286,7 +303,7 @@ key "key-6"
 \end_layout
 
 \begin_layout Section
-pass
+Начала функционального анализа
 \end_layout
 
 \begin_layout Subsection
@@ -489,7 +506,6 @@ pass
  Следующие по мощности — счетные.
  Следующие — множества мощности континуума (мощность множества вещественных
  чисел на любом отрезке).
- Есть ли еще мощнее?
 \end_layout
 
 \begin_layout Theorem
@@ -958,6 +974,2992 @@ pass
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Definition
+Пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ линейно, если для элементов этого пространства введены операции сложения
+ и умножения на константу.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Линейные пространства 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ изоморфны, если 
+\begin_inset Formula $X\sim Y$
+\end_inset
+
+ и 
+\begin_inset Formula $\forall x_{1},x_{2}\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\forall y_{1},y_{2}\in Y$
+\end_inset
+
+ и 
+\begin_inset Formula $x_{1}\sim y_{1},x_{2}\sim y_{2}\Rightarrow x_{1}+x_{2}\sim y_{1}+y_{2},\lambda x_{1}\sim\lambda y_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $X$
+\end_inset
+
+ — множество полиномов степени 
+\begin_inset Formula $\leq(n-1)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Y=\RR^{n}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $X\sim Y$
+\end_inset
+
+, 
+\begin_inset Formula $x(t)=a_{1}t^{n-1}+...+a_{n}\sim y=\left(\begin{array}{c}
+a_{1}\\
+\vdots\\
+a_{n}
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для линейных пространств можно ввести понятие линейной зависимости и независимос
+ти элементов, размерности, базиса, подпространства и так далее.
+\end_layout
+
+\begin_layout Definition
+Линейное пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ называется нормированным, если 
+\begin_inset Formula $\forall x\in X:\ \exists!r\in\RR$
+\end_inset
+
+, которое называется нормой (
+\begin_inset Formula $\left|\left|x\right|\right|$
+\end_inset
+
+) и удовлетворяет следующим аксиомам:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\left|\left|x\right|\right|\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\left|x\right|\right|=0\Leftrightarrow x=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\left|\left|\lambda x\right|\right|=\left|\lambda\right|\cdot\left|\left|x\right|\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\left|\left|x+y\right|\right|\leq\left|\left|x\right|\right|+\left|\left|y\right|\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+Если пространство нормированно, то его всегда можно метризовать.
+\end_layout
+
+\begin_layout Definition
+Стандартной считается метрика, согласованная с нормой: 
+\begin_inset Formula $\rho(x,y)=\left\Vert x-y\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Полное нормированное пространство называется Банаховым пространством.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+Все основные определения и свойства метрического пространства вытекали из
+ определения метрики.
+\end_layout
+
+\begin_layout Remark
+Можно пойти другим путем: не вводя метрику непосредственно определить с
+ помощью аксиом что считать открытым множеством, замкнутым и так далее.
+ В результате приходим к так называемым топологическим пространствам.
+\end_layout
+
+\begin_layout Subsection
+Неподвижные точки отображения
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — два метрических пространства.
+ Пусть 
+\begin_inset Formula $\rho_{1},\rho_{2}$
+\end_inset
+
+ — метрики в пространствах 
+\begin_inset Formula $X$
+\end_inset
+
+ и 
+\begin_inset Formula $Y$
+\end_inset
+
+ соответственно.
+ И пусть задано отображение 
+\begin_inset Formula $\mathcal{A}:X\to Y$
+\end_inset
+
+ (
+\begin_inset Formula $\forall x\in X\ \exists y=\AA x\in Y$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Definition
+Отображение 
+\begin_inset Formula $\AA$
+\end_inset
+
+ называется непрерывным в точке 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall\{x_{k}\}\in X:\ x_{k}\to_{k\to\infty}x_{0}\Rightarrow\AA x_{k}\to_{k\to\infty}\AA x_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Или, что то же самое: 
+\begin_inset Formula $\forall\varepsilon>0\ \exists\delta>0$
+\end_inset
+
+, такое, что если 
+\begin_inset Formula $\rho_{1}(x,x_{0})<\delta$
+\end_inset
+
+, то 
+\begin_inset Formula $\rho_{2}(\AA x,\AA x_{0})<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Предположим далее, что 
+\begin_inset Formula $X=Y$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+ и 
+\begin_inset Formula $\rho_{1}=\rho_{2}=\rho$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Точка 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ — неподвижная точка отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+, если 
+\begin_inset Formula $\AA x^{*}=x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Отображение 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+ называется сжимающим, если 
+\begin_inset Formula $\exists\alpha\in[0,1)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x,y\in X$
+\end_inset
+
+ верно 
+\begin_inset Formula $\rho(\AA x,\AA y)\leq\alpha\rho(x,y)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Lemma
+\begin_inset Formula $\AA$
+\end_inset
+
+ сжимающее 
+\begin_inset Formula $\Rightarrow\AA$
+\end_inset
+
+ непрерывное на 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x_{0}\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\{x_{k}\}\in X:\ x_{k}\to_{k\to\infty}x_{0}\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $0\leq\rho(\AA x_{k},\AA x_{0})\leq\alpha\rho(x_{k},x_{0})\to_{k\to\infty}0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(о неподвижной точке, она же Каччаполи-Банаха, она же принцип сжимающих
+ отображений)
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ — полное метрическое пространство, 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+.
+ Тогда у отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+ 
+\begin_inset Formula $\exists!$
+\end_inset
+
+ неподвижная точка.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x_{0}\in X$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x_{1}=\AA x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x_{2}=\AA x_{1}=\AA(\AA x_{0})=\AA^{2}x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X_{k}=\AA^{k}x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+Докажем, что эта последовательность является фундаментальной:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall n\geq m\geq1$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\rho(x_{n},x_{m})=\rho(\AA^{n}x_{0},\AA^{m}x_{0})\leq\alpha\rho(\AA^{n-1}x_{0},\AA^{m-1}x_{0})\leq...\leq\alpha^{m}\rho(\AA^{n-m}x_{0},x_{0})\leq\\
+\leq\alpha^{m}\left(\rho(\AA^{n-m}x_{0},\AA^{n-m-1}x_{0})+...+\rho(\AA^{n-m-1}x_{0},\AA^{n-m-2}x_{0})+...+\rho(\AA x_{0},x_{0})\right)\leq\\
+\leq\alpha^{m}\left(\alpha^{n-m-1}\rho(\AA x_{0},x_{0})+\alpha^{n-m-2}\rho(\AA x_{0},x_{0})+...+\rho(\AA x_{0},x_{0})\right)\leq\\
+\leq\alpha^{m}\rho(x_{0},x_{1})\left(1+\alpha+\alpha^{2}+...+\alpha^{n-m-1}+...\right)=\frac{\alpha^{m}\rho(x_{0},x_{1})}{1-\alpha}\to_{m\to\infty}0
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+следовательно, последовательность является фундаментальной.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X$
+\end_inset
+
+ полное, следовательно, 
+\begin_inset Formula $\exists x^{*}\in X:\ x_{k}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ Покажем, что 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ будет неподвижной точкой: 
+\begin_inset Formula 
+\[
+\AA x^{*}=\AA\lim_{k\to\infty}x_{k}=\left(A\ \text{сжим,непр}\right)=\lim_{k\to\infty}\AA x^{*}=\lim_{k\to\infty}x_{x+1}=x^{*}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Докажем, что точка единственная.
+ От противного:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{*},y^{*}$
+\end_inset
+
+ — неподвижные точки 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+ Тогда: 
+\begin_inset Formula 
+\[
+0\leq\rho(x^{*},y^{*})=\rho(\AA x^{*},\AA y^{*})\leq\underbrace{\alpha}_{<1}\rho(x^{*},y^{*})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+То есть 
+\begin_inset Formula $\rho(x^{*},y^{*})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+В доказательстве содержится алгоритм поиска неподвижной точки.
+ Выберем любую точку, применим к ней несколько раз отображение и предел
+ данной последовательности будет неподвижной точкой.
+\end_layout
+
+\begin_layout Subsubsection
+Приложение принципа сжимающих отображений к решению алгебраических уравнений
+\end_layout
+
+\begin_layout Problem*
+Пусть требуется решить уравнение 
+\begin_inset Formula $x=\varphi(x)$
+\end_inset
+
+, где 
+\begin_inset Formula $c$
+\end_inset
+
+ — корень, причем 
+\begin_inset Formula $c\in[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Возьмем конкретное пространство 
+\begin_inset Formula $X=\RR$
+\end_inset
+
+.
+ Метризуем: 
+\begin_inset Formula $\rho(x,y)=\left|x-y\right|$
+\end_inset
+
+.
+ Пространство полное.
+ Введем отображение 
+\begin_inset Formula $\AA x=\varphi(x)$
+\end_inset
+
+.
+ Тогда уравнение сведется к виду 
+\begin_inset Formula $\AA x=x$
+\end_inset
+
+, а 
+\begin_inset Formula $c$
+\end_inset
+
+ — неподвижная точка.
+ Нам осталось лишь доказать сжимаемость данного отображения.
+\end_layout
+
+\begin_layout Solution*
+Пусть 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ — удовлетворяет условию Липшица на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+: 
+\begin_inset Formula $\exists\alpha>0:\ \forall x,y\in[a,b]\Rightarrow\underbrace{\left|\varphi(x)-\varphi(y)\right|}_{\rho(\AA x,\AA y)}\leq\alpha\underbrace{\left|x-y\right|}_{\rho(x,y)}$
+\end_inset
+
+.
+ Таким образом, оно сжимающее.
+\end_layout
+
+\begin_layout Solution*
+И тогда мы можем найти 
+\begin_inset Formula $\{x_{k}\}\to_{k\to0}c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Приложение принципа сжимаемых отображений к решению системы алгебраических
+ уравнений
+\end_layout
+
+\begin_layout Problem*
+Требуется решить следующую систему уравнений: 
+\begin_inset Formula $x=Ax+b$
+\end_inset
+
+ (1).
+ 
+\begin_inset Formula $A,b$
+\end_inset
+
+ заданы, 
+\begin_inset Formula $x$
+\end_inset
+
+ — неизвестен.
+ 
+\begin_inset Formula $X=\RR^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Введем отображение 
+\begin_inset Formula $\AA x=Ax+b$
+\end_inset
+
+.
+ Тогда уравнение (1) сводится к поиску 
+\begin_inset Formula $c$
+\end_inset
+
+ — неподвижной точки отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+ 4
+\end_layout
+
+\begin_layout Solution*
+Если отображение сжимающее, то берем произвольный вектор, применяем к нему
+ отображение и так далее.
+ Тогда последовательность векторов будет сходится к нужному нам корню.
+\end_layout
+
+\begin_layout Standard
+Выпишем далее достаточные условия сжимаемости отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+ Сжимаемость, вообще говоря, зависит от введенной метрики.
+ Для того, чтобы можно было применить принцип, достаточно, чтобы сжимаемость
+ была хотя бы в одной метрике.
+\end_layout
+
+\begin_layout Standard
+1) Пусть метрика введена следующим образом: 
+\begin_inset Formula $x,y$
+\end_inset
+
+ — вектора и 
+\begin_inset Formula $\rho(x,y)=\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим расстояния между образами: 
+\begin_inset Formula 
+\[
+\rho^{2}(\AA x,\AA y)=\sum_{i=1}^{n}\left(\sum_{j=1}^{n}a_{ij}(x_{j}-y_{j})\right)^{2}\leq...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Применяем неравенство Коши-Буняковского-Шварца: 
+\begin_inset Formula 
+\[
+...\leq\left(\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}^{2}\right)\left(\sum_{i=1}^{n}(x_{i}-y_{i})^{2}\right)=\left(\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}^{2}\right)\rho^{2}(x,y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula $\AA$
+\end_inset
+
+ — сжимающее, если 
+\begin_inset Formula $\left(\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}^{2}\right)<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) Или так: 
+\begin_inset Formula $\rho(x,y)=\max_{i=\overline{1,n}}\left|x_{i}-y_{i}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall x,y\in\RR^{n}$
+\end_inset
+
+ 
+\begin_inset Formula $\rho(\AA x,\AA y)=\max_{i=\overline{1,n}}\left|\sum_{j=1}^{n}a_{ij}(x_{j}-y_{j})\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Оценим сие сверху: 
+\begin_inset Formula 
+\[
+\rho(\AA x,\AA y)=\max_{i=\overline{1,n}}\left|\sum_{j=1}^{n}a_{ij}(x_{j}-y_{j})\right|\leq\left(\max_{i=\overline{1,n}}\sum_{j=1}^{n}\left|a_{ij}\right|\right)\cdot\underbrace{\left(\max_{j=\overline{1,n}}\left|x_{j}-y_{j}\right|\right)}_{=\rho(x,y)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для сжимаемости достаточно выполнения условия 
+\begin_inset Formula $\sum_{j=1}^{n}\left|a_{ij}\right|<1,\ i=\overline{1,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Применение принципа сжимаемых отображений к решению дифференциальных уравнений
+\end_layout
+
+\begin_layout Standard
+Пусть записан диффур в стандартном виде: 
+\begin_inset Formula $y'=f(x,y)$
+\end_inset
+
+.
+ Поставим задачу Коши: 
+\begin_inset Formula $y(x_{0})=y_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Данную задачу Коши можно переписать в следующей интегральной форме: 
+\begin_inset Formula 
+\[
+y=y_{0}+\int_{x_{0}}^{x}f(x,y(x))dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula $X=C^{1}$
+\end_inset
+
+ — множество непрерывно дифференцируемых функций.
+ Теперь нужно найти отображение 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\AA y(x)=y_{0}+\int_{x_{0}}^{x}f(x,y(x))dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Откуда отображение запишется в форме 
+\begin_inset Formula 
+\[
+y(x)=Ay(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $G$
+\end_inset
+
+ — некоторая область, содержащая точку 
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+.
+ Будем считать, что 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ — непрерывна в 
+\begin_inset Formula $G$
+\end_inset
+
+ и удовлетворяет условию Липшица, то есть 
+\begin_inset Formula $\forall y_{1},y_{2},\ \forall x:\ (x,y_{1}),(x,y_{2})\in G\Rightarrow\left|f(x,y_{1})-f(x,y_{2})\right|\leq L\left|y_{1}-y_{2}\right|$
+\end_inset
+
+.
+ Пусть без потери общности 
+\begin_inset Formula $G$
+\end_inset
+
+ замкнута, тогда 
+\begin_inset Formula $K=\max_{G}\left|f(x,y)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим область 
+\begin_inset Formula $D$
+\end_inset
+
+ следующего вида: 
+\begin_inset Formula $\begin{cases}
+\left|x-x_{0}\right|\leq d\\
+\left|y-y_{0}\right|\leq Kd
+\end{cases}$
+\end_inset
+
+, где 
+\begin_inset Formula $d=\const.$
+\end_inset
+
+ Положим, 
+\begin_inset Formula $D\subset G$
+\end_inset
+
+ и 
+\begin_inset Formula $Ld<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall y(x):\ \left|y(x)-y_{0}\right|\leq Kd$
+\end_inset
+
+ при 
+\begin_inset Formula $x\in\left[x_{0}-d,x_{0}+d\right]$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\left|\AA y(x)-y_{0}\right|=\left|\int_{x_{0}}^{x}f(x,y(x))dx\right|\leq Kd$
+\end_inset
+
+, то есть применение отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+ за пределы области 
+\begin_inset Formula $D$
+\end_inset
+
+ не выводит.
+\end_layout
+
+\begin_layout Standard
+Теперь нам нужна метрика и мозги.
+ В качестве метрики примем: 
+\begin_inset Formula $\rho(y_{1}(x),y_{2}(x))=\max_{\left[x_{0}-d,x_{0}+d\right]}\left|y_{1}(x)-y_{2}(x)\right|$
+\end_inset
+
+.
+ Проверим, что в этой метрике отображение будет сжимающим.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall y_{1}(x),y_{2}(x)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\rho(\AA y_{1}(x),\AA y_{2}(x))=\max_{\left[x_{0}-d,x_{0}+d\right]}\left|\int_{x_{0}}^{x}\left(f(x,y_{1}(x))-f(x,y_{2}(x))\right)dx\right|\leq\\
+\leq\max_{\left[x_{0}-d,x_{0}+d\right]}Ld\left|y_{1}(x)-y_{2}(x)\right|=\underbrace{Ld}_{<1}\rho(y_{1}(x),y_{2}(x))
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В результате получаем теорему Пикара.
+\end_layout
+
+\begin_layout Theorem
+(Пикара) Пусть 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ непрерывна в 
+\begin_inset Formula $G$
+\end_inset
+
+, удовлетворяет условию Липшица по 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Тогда решение задачи Коши будет существовать и будет единственным на 
+\begin_inset Formula $\left[x_{0}-d,x_{0}+d\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall y^{(0)}(x)=y_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Построим последовательность:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y^{(1)}=\AA y^{(0)}(x)=y_{0}+\int_{x_{0}}^{x}f(x,y^{(0)}(x))dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y^{(k)}(x)=\AA y^{(k-1)}(x)=y_{0}+\int_{x_{0}}^{x}f(\tau,y^{(k-1)}(x))dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y'=y\Rightarrow y=Ce^{x}$
+\end_inset
+
+.
+ Пусть требуется найти функцию, удовлетворяющую начальному условию 
+\begin_inset Formula $y(0)=1\Rightarrow C=1:\ y=e^{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Строим последовательность:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y^{(0)}(x)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y^{(1)}(x)=1+\int_{0}^{x}dx=x+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y^{(2)}(x)=1+\int_{0}^{x}(x+1)dx=1+x+\frac{x^{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y^{(k)}(x)=1+x+\frac{x^{2}}{2!}+...+\frac{x^{k}}{k!}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Применение принципа сжимаемых отображений к решению интегральных уравнений
+\end_layout
+
+\begin_layout Problem*
+Рассмотрим уравнение вида 
+\begin_inset Formula $f(x)=\lambda\int_{a}^{b}K(x,y)f(y)dy+\varphi(x)$
+\end_inset
+
+ — уравнение Фридгольма второго рода.
+ Здесь 
+\begin_inset Formula $\lambda=\const$
+\end_inset
+
+, 
+\begin_inset Formula $K(x,y),\varphi(x)$
+\end_inset
+
+ — заданы.
+ Требуется найти 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula $K(x,y)$
+\end_inset
+
+ непрерывна при 
+\begin_inset Formula $x,y\in[a,b]$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ непрерывна на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ и мы будем искать нашу функцию, которая должна быть непрерывной на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+В качестве пространства возьмем 
+\begin_inset Formula $X=C[a,b]$
+\end_inset
+
+.
+ Найдем отображение.
+ Пусть 
+\begin_inset Formula 
+\[
+\AA f(x)=\lambda\int_{a}^{b}K(x,y)f(y)dy+\varphi(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+откуда 
+\begin_inset Formula $f(x)=\AA f(x)$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $f^{*}(x)$
+\end_inset
+
+ — неподвижная точка 
+\begin_inset Formula $\AA$
+\end_inset
+
+, то 
+\begin_inset Formula $f^{*}(x)$
+\end_inset
+
+ — решение уравнения Фридгольма.
+ Нам нужна метрика.
+ Берем стандартную: 
+\begin_inset Formula $\forall f_{1}(x),f_{2}(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\rho(f_{1}(x),f_{2}(x))=\max_{[a,b]}\left|f_{1}(x)-f_{2}(x)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Пусть 
+\begin_inset Formula $M=\max_{x,y\in[a,b]}\left|K(x,y)\right|$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall f_{1}(x),f_{2}(x)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\rho(\AA f_{1}(x),\AA f_{2}(x))=\max_{[a,b]}\left|\lambda\int_{a}^{b}K(x,y)\left(f_{1}(y)-f_{2}(y)\right)dy\right|\leq\\
+\leq\left|\lambda\right|M(b-a)\cdot\underbrace{\max_{[a,b]}\left|f_{1}(y)-f_{2}(y)\right|}_{=\rho(f_{1}(x),f_{2}(x))}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+Откуда условие сжимаемости: 
+\begin_inset Formula $\left|\lambda\right|M(b-a)<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Обобщение признака сжимающих отображений
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ — полное метрическое пространство и 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $\exists k\in\NN:\ \AA^{k}$
+\end_inset
+
+ — сжимающее.
+ Тогда у отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+ существует ровно одна неподвижная точка.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\mathcal{B}=\AA^{k}:X\to X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ — сжимающее, следовательно, по теореме Каччаполи-Банаха 
+\begin_inset Formula $\exists!$
+\end_inset
+
+ неподвижная точка 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ отображения 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ будет и неподвижной точкой отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\AA x^{*}=\AA(\mathcal{B}x^{*})=...=\AA(\mathcal{B}^{m}x^{*})=\mathcal{B}^{m}(Ax^{*})$
+\end_inset
+
+.
+ Из доказательства теоремы Каччаполи-Банаха 
+\begin_inset Formula $\mathcal{B}^{m}(\underbrace{Ax^{*}}_{=x_{0}})\to_{m\to\infty}x^{*}$
+\end_inset
+
+, откуда 
+\begin_inset Formula $\AA x^{*}=x^{*}\Rightarrow x^{*}$
+\end_inset
+
+ — неподвижная точка 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Рассмотрим уравнение Фридгольма, которое теперь уравнение Вольтерра: 
+\begin_inset Formula 
+\[
+f(x)=\lambda\int_{a}^{x}K(x,y)f(y)dy+\varphi(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Аналогично уравнению Фридгольма заданы 
+\begin_inset Formula $\lambda,K,\varphi$
+\end_inset
+
+ и функции непрерывны.
+ Аналогично 
+\begin_inset Formula $X=C[a,b]$
+\end_inset
+
+, 
+\begin_inset Formula $\forall f_{1}(x),f_{2}(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\rho(f_{1}(x),f_{2}(x))=\max_{[a,b]}\left|f_{1}(x)-f_{2}(x)\right|$
+\end_inset
+
+, 
+\begin_inset Formula $M=\max_{x,y\in[a,b]}\left|K(x,y)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Под образом функции будем понимать 
+\begin_inset Formula $\AA=\lambda\int_{a}^{x}K(x,y)f(y)dy+\varphi(x)\Rightarrow\AA f(x)=f(x)$
+\end_inset
+
+.
+ Аналогично с Фридгольмом, 
+\begin_inset Formula 
+\[
+\rho(\AA f_{1}(x),\AA f_{2}(x))\leq\left|\lambda\right|M(x-a)\cdot\underbrace{\max_{[a,b]}\left|f_{1}(y)-f_{2}(y)\right|}_{=\rho(f_{1}(x),f_{2}(x))}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Рассмотрим двукратные образы: 
+\begin_inset Formula 
+\[
+\rho(\AA^{2}f_{1}(x),\AA^{2}f_{2}(x))\leq\frac{\left|\lambda^{2}\right|M^{2}(x-a)^{2}}{2!}\rho(f_{1}(x),f_{2}(x))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+На 
+\begin_inset Formula $k$
+\end_inset
+
+-том шаге:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\rho(\AA^{k}f_{1}(x),\AA^{k}f_{2}(x))\leq\frac{\left|\lambda^{k}\right|M^{k}(x-a)^{k}}{k!}\rho(f_{1}(x),f_{2}(x))\leq\frac{\left|\lambda^{k}\right|M^{k}(b-a)^{k}}{k!}\rho(f_{1}(x),f_{2}(x))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Откуда 
+\begin_inset Formula $\exists k:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\left|\lambda\right|^{k}M^{k}(b-a)^{k}}{k!}<1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+следовательно, 
+\begin_inset Formula $\AA$
+\end_inset
+
+ сжимающее.
+\end_layout
+
+\begin_layout Subsubsection
+Теорема о неподвижной точки Шаудера
+\end_layout
+
+\begin_layout Definition
+Пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ компактно, если из любой последовательности элементов этого пространства
+ можно выделить сходящуюся подпоследовательность.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ — компактно, следовательно, полное.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\{x_{k}\}$
+\end_inset
+
+ — фундаментальная последовательность.
+ Если 
+\begin_inset Formula $X$
+\end_inset
+
+ — компактно, то 
+\begin_inset Formula $\exists$
+\end_inset
+
+ сходящаяся подпоследовательность, которая сходится: 
+\begin_inset Formula $\{x_{m_{k}}\}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Рассмотрим 
+\begin_inset Formula $\rho(x_{k},x^{*})$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+0\leq\rho(x_{k},x^{*})\leq\underbrace{\rho(x_{k},x_{m_{k}})}_{\to0}+\underbrace{\rho(x_{m_{k}},x^{*})}_{\to0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+первое из фундаментальности, второе из сходимости.
+\end_layout
+
+\begin_layout Theorem
+(критерий компактности)
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ компактно 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ замкнуто и ограничено.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+Необходимость
+\emph default
+.
+ От противного.
+ Пусть оно не замкнуто.
+ Тогда 
+\begin_inset Formula $\exists$
+\end_inset
+
+ предельная точка 
+\begin_inset Formula $x^{*}\notin X$
+\end_inset
+
+.
+ По определению предельной точки 
+\begin_inset Formula $\exists x_{k}\in X:\ x_{k}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\rho(x_{k},x^{*})\to_{k\to\infty}0$
+\end_inset
+
+.
+ Тогда любая подпоследовательность 
+\begin_inset Formula $\{x_{m_{k}}\}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $X$
+\end_inset
+
+ не компактное.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ не ограничено.
+ Тогда 
+\begin_inset Formula $\exists\overline{x}\in X,\ \exists\{x_{k}\}\in X:\ \rho(x_{k},\overline{x})\to_{k\to\infty}\infty$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\forall\{x_{m_{k}}\}\ \rho(x_{m_{k}},\overline{x})\to_{k\to\infty}\infty$
+\end_inset
+
+.
+ Следовательно, 
+\begin_inset Formula $\not\exists\hat{x}\in x^{*}:\ x_{m_{k}}\to x$
+\end_inset
+
+, то есть 
+\begin_inset Formula $X$
+\end_inset
+
+ не компактное.
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+Достаточность
+\emph default
+.
+ Возьмем любую последовательность 
+\begin_inset Formula $\{x_{k}\}_{k=1}^{\infty}\in X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ ограничено, следовательно, 
+\begin_inset Formula $\{x_{k}\}_{k=1}^{\infty}$
+\end_inset
+
+ ограничена.
+ По теореме Больцано-Вейерштрасса 
+\begin_inset Formula $\exists$
+\end_inset
+
+ сходящаяся подпоследовательность 
+\begin_inset Formula $\{x_{h_{k}}\}\to_{k\to\infty}x^{*}$
+\end_inset
+
+, где 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ — предельная точка 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ замкнуто, следовательно, 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+, откуда 
+\begin_inset Formula $X$
+\end_inset
+
+ компактно.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $X$
+\end_inset
+
+ — выпуклое (линейное), если 
+\begin_inset Formula $\forall x_{1},x_{2}\in X,\ \forall\lambda=\const\in[0,1]\Rightarrow x=\lambda x_{1}+(-\lambda)x_{2}\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(Шаудера о неподвижной точке)
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ — выпуклое, компактное.
+ 
+\begin_inset Formula $\AA$
+\end_inset
+
+ — непрерывно: 
+\begin_inset Formula $X\to X$
+\end_inset
+
+.
+ Тогда существует хотя бы одна неподвижная точка отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X=\{x^{2}+y^{2}\leq1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Пусть 
+\begin_inset Formula $\AA$
+\end_inset
+
+ — поворот вокруг центра на угол 
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ — неподвижная точка.
+\end_layout
+
+\begin_layout Example
+Пусть 
+\begin_inset Formula $\AA$
+\end_inset
+
+ — поворот вокруг центра на угол 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+.
+ Тогда все точки на 
+\begin_inset Formula $OX$
+\end_inset
+
+ — неподвижные.
+\end_layout
+
+\begin_layout Subsection
+Евклидово пространство
+\end_layout
+
+\begin_layout Definition
+Линейное пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ евклидово, если введено скалярное произведение.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $X$
+\end_inset
+
+ — линейное пространство.
+\end_layout
+
+\begin_layout Definition
+Введено скалярное произведение, если 
+\begin_inset Formula $\forall x,y\in X\ \exists!\ (x,y)\in\RR$
+\end_inset
+
+, удовлетворяющее следующим условиям:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $(x,x)=0$
+\end_inset
+
+, 
+\begin_inset Formula $(x,x)=0\Leftrightarrow x\neq0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $(x,y)=(y,x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $(\lambda x,y)=\lambda(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+4) 
+\begin_inset Formula $(x+y,z)=(x,z)+(y,z)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Lemma
+(Неравенство Коши-Буняковского-Шварца)
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $X$
+\end_inset
+
+ — евклидово пространство.
+ Тогда 
+\begin_inset Formula $\forall x,y\in X\Rightarrow\left|(x,y)\right|\leq\sqrt{(x,x)}\cdot\sqrt{(y,y)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Рассмотрим произвольные 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ и 
+\begin_inset Formula $\lambda=\const$
+\end_inset
+
+.
+ Рассмотрим
+\begin_inset Formula 
+\[
+0\leq(\lambda x+y,\lambda x+y)=\lambda^{2}(x,x)+2\lambda(x,y)+(y,y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Это парабола, ветви которой направлены вверх.
+ Она не имеет корней (двух разных, как минимум).
+ Тогда 
+\begin_inset Formula $D=(x,y)^{2}-(x,x)(y,y)\leq0\Rightarrow(x,y)^{2}\leq(x,x)(y,y)$
+\end_inset
+
+ откуда 
+\begin_inset Formula $\left|(x,y)\right|\leq\sqrt{(x,x)}\cdot\sqrt{(y,y)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Любое евклидово пространство можно нормировать.
+ 
+\begin_inset Formula $\norm x=\sqrt{(x,x)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Докажем, что при таком введении нормы верны аксиомы:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $\norm x>0$
+\end_inset
+
+, 
+\begin_inset Formula $\norm x=0\Leftrightarrow x=\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\norm{\lambda x}=\sqrt{(\lambda x,\lambda x)}=\sqrt{\lambda^{2}(x,x)}=\left|\lambda\right|\norm x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $\norm{x+y}=\sqrt{(x+y,x+y)}=\sqrt{(x,x)+2(x,y)+(y,y)}\leq(\text{КБШ})\leq\sqrt{(x,x)+2\sqrt{(x,x)}\sqrt{(y,y)}+(y,y)}=\sqrt{\left(\sqrt{(x,x)}+\sqrt{(y,y)}\right)^{2}}=\sqrt{(x,x)}+\sqrt{(y,y)}=\norm x+\norm y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Неравенство КБШ: 
+\begin_inset Formula $|(x,y)|\leq\norm x\cdot\norm y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+В евклидовом пространстве можно ввести понятие угла между элементами.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\varphi\in[0,\pi]=(x\mathcircumflex y)$
+\end_inset
+
+ — угол между 
+\begin_inset Formula $x,y$
+\end_inset
+
+ если 
+\begin_inset Formula $\cos\varphi=\frac{(x,y)}{\norm x\cdot\norm y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ ортогональны, если 
+\begin_inset Formula $(x,y)=0$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\varphi=\nicefrac{\pi}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $\left\{ x_{k}\right\} $
+\end_inset
+
+ — ортогональная система, если 
+\begin_inset Formula $(x_{k},x_{m})=0$
+\end_inset
+
+ при 
+\begin_inset Formula $k\neq m$
+\end_inset
+
+, 
+\begin_inset Formula $x_{k}\neq\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Если при этом 
+\begin_inset Formula $\norm{x_{k}}=1\ \forall k$
+\end_inset
+
+, то 
+\begin_inset Formula $\{x_{k}\}$
+\end_inset
+
+ — ортонормированная система.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Remark
+Любую ортогональную систему всегда можно нормировать: 
+\begin_inset Formula $\left\{ \frac{x_{k}}{\norm{x_{k}}}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left\{ x_{k}\right\} $
+\end_inset
+
+ — ортогональная система в 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\{x_{k}\}$
+\end_inset
+
+ — линейно независимая в 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{k}\lambda_{k}x_{k}=\varnothing$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{k}=\const$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $0=\sum_{k}\lambda_{k}(x_{k},x_{j})=\left(\sum_{k}\lambda_{k}x_{k},x_{j}\right)=\left(\varnothing,x_{j}\right)=0$
+\end_inset
+
+ (по КБШ).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\lambda_{j}\underbrace{(x_{j},x_{j})}_{\neq0}=0\Rightarrow\lambda_{j}=0\forall j\Rightarrow$
+\end_inset
+
+ система линейно независима.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\{x_{k}\}$
+\end_inset
+
+ — полная система в 
+\begin_inset Formula $X$
+\end_inset
+
+, если наименьшее содержащее ее замкнутое пространство есть пространство
+ 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Полная система линейно независимых элементов называется базисом.
+\end_layout
+
+\begin_layout Definition
+Если система ортогональна или ортонормирована, то базис называется соответственн
+о ортогональным или ортонормированным.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Любая ортогональная система в сепарабельном пространстве не более чем счетна.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+Любую систему линейно независимых элементов можно ортонормировать.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+В любом сепарабельном евклидовом пространстве всегда существует счетный
+ ортонормированный базис.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ — сепарабельное евклидово пространство и 
+\begin_inset Formula $\{\varphi_{k}\}$
+\end_inset
+
+ — ортонормированный базис в 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall f\in X\Rightarrow f=\sum_{k=1}^{\infty}c_{k}\varphi_{k}$
+\end_inset
+
+, где 
+\begin_inset Formula $c=\const$
+\end_inset
+
+ — обобщенный ряд Фурье.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(f,\varphi_{j})=\left(\sum_{k=1}^{\infty}c_{k}\varphi_{k},\varphi_{j}\right)=\sum_{k=1}^{\infty}c_{k}(\varphi_{k},\varphi_{j})=\begin{cases}
+c_{k}\cdot1 & k=j\\
+0 & k\neq j
+\end{cases}$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $(f,\varphi_{k})=c_{j},\ j=1,2,...$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Найдем аппроксимацию наилучшим образом (далее 
+\begin_inset Formula $\sim$
+\end_inset
+
+ — аппроксимация).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{n}=\sum_{k=1}^{n}\alpha_{k}\varphi_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{k}=\const$
+\end_inset
+
+.
+ Найдем такие 
+\begin_inset Formula $\alpha_{k}$
+\end_inset
+
+, чтобы 
+\begin_inset Formula $S_{n}\sim f$
+\end_inset
+
+ наилучшим образом.
+ Для этого должно выполняться 
+\begin_inset Formula $\rho(S_{n},f)\to\min$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\rho^{2}(S_{n},f)=\norm{S_{n}-f}^{2}=\left(S_{n}-f,S_{n}-f\right)=\left(S_{n},S_{n}\right)-2\left(f,S_{n}\right)+\left(f,f\right)=\\
+=\left(\sum_{k=1}^{n}\alpha_{k}\varphi_{k},\sum_{k=1}^{n}\alpha_{k}\varphi_{k}\right)-2\left(f,\sum_{k=1}^{n}\alpha_{k}\varphi_{k}\right)+\left(f,f\right)=\sum_{k=1}^{n}\alpha_{k}^{2}-2\sum_{k=1}^{n}\alpha_{k}(f,\varphi_{k})+\norm f^{2}=\\
+=\norm f^{2}+\underbrace{\left(\sum_{k=1}^{n}\alpha_{k}^{2}-2\sum_{k=1}^{n}\alpha_{k}c_{k}+\sum_{k=1}^{n}c_{k}^{2}\right)}_{=\sum_{k=1}^{n}(\alpha_{k}-c_{k})^{2}}-\sum_{k=1}^{n}c_{k}^{2}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Отсюда 
+\begin_inset Formula 
+\[
+\norm f^{2}+\sum_{k=1}^{n}(\alpha_{k}-c_{k})^{2}-\sum_{k=1}^{n}c_{k}^{2}\to\min_{\alpha_{1},...,\alpha_{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+при 
+\begin_inset Formula $\alpha_{k}=c_{k},\ k=\overline{1,n}$
+\end_inset
+
+, следовательно, это наилучшая аппроксимация.
+\end_layout
+
+\begin_layout Standard
+Далее будем считать, что 
+\begin_inset Formula $\alpha_{k}=c_{k}$
+\end_inset
+
+, откуда 
+\begin_inset Formula $0\leq\norm{S_{n}-f}=\norm f^{2}-\sum_{k=1}^{n}c_{k}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sum_{k=1}^{n}c_{k}^{2}\leq\norm f^{2}\ \forall n$
+\end_inset
+
+ при 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\sum_{k=1}^{\infty}c_{k}^{2}\leq\norm f^{2}$
+\end_inset
+
+ — неравенство Бесселя.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $\{\varphi\}$
+\end_inset
+
+ — замкнутая в 
+\begin_inset Formula $X$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall f\in X\Rightarrow\sum_{k=1}^{\infty}c_{k}^{2}=\norm f^{2}$
+\end_inset
+
+ — неравенство Парсеваля.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\{\varphi\}$
+\end_inset
+
+ — замкнутая, следовательно, 
+\begin_inset Formula $f=\sum_{k=1}^{\infty}c_{k}\varphi_{k}$
+\end_inset
+
+ — сходится.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ — сепарабельное евклидово пространство.
+ Тогда полная система 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ замкнутая система.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+(Рисса-Фишера)
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X$
+\end_inset
+
+ — полное сепарабельное евклидово пространство.
+ 
+\begin_inset Formula $\left\{ \varphi_{i}\right\} $
+\end_inset
+
+ — ортогональная система в 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall c_{i}=\const$
+\end_inset
+
+: 
+\begin_inset Formula $\sum_{i}c_{i}^{2}<+\infty$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\exists f\in X:\begin{cases}
+c_{i}=(f_{i},\varphi_{i}) & \forall i\\
+\sum_{i}c_{i}^{2}=\norm f^{2}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+То есть для любой константы 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ можно построить элемент 
+\begin_inset Formula $f$
+\end_inset
+
+, для которого они будут являться координатами сходящегося ряда Тейлора.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — евклидовы.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ и 
+\begin_inset Formula $Y$
+\end_inset
+
+ изоморфны 
+\begin_inset Formula $\left(X\sim Y\right)$
+\end_inset
+
+, если 
+\begin_inset Formula 
+\[
+\begin{cases}
+x_{1}\in X\sim y_{1}\in Y\\
+x_{2}\in X\sim y_{2}\in Y
+\end{cases}\Rightarrow\begin{cases}
+x_{1}+x_{2}\sim y_{1}+y_{2}\\
+\lambda x_{1}\sim\lambda y_{1}\\
+(x_{1},x_{2})=(y_{1},y_{2})
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Полное, евклидово, бесконечномерное пространство называется Гильбертовым.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Любые 2 сепарабельных гильбертовых пространства изоморфны друг другу.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — сепарабельные гильбертовы пространства.
+\end_layout
+
+\begin_layout Proof
+Докажем, что 
+\begin_inset Formula $X\sim l_{2}\sim Y$
+\end_inset
+
+, тогда 
+\begin_inset Formula $X\sim Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Рассмотрим произвольное сепарабельное гильбертово пространство 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $\left\{ \varphi_{i}\right\} $
+\end_inset
+
+ — ортонормированный базис в 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall x\in X:\ \begin{cases}
+x=\sum c_{i}\varphi_{i}\\
+\norm x^{2}=\sum_{i=1}^{\infty}c_{i}^{2}
+\end{cases}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x\in X\leftrightarrow c=\left(\begin{array}{c}
+c_{1}\\
+c_{2}\\
+\vdots
+\end{array}\right)\in l_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Проверим 3 условия изоморфности (по определению):
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $x^{(1)}\sim c^{(1)},\ x^{(2)}\sim c^{(2)}$
+\end_inset
+
+, 
+\begin_inset Formula $x^{(1)},x^{(2)}\in X\sim c^{(1)},c^{(2)}\in l_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\begin{cases}
+x^{(1)}=\sum_{i=1}^{\infty}c_{i}^{(1)}\varphi_{i}\\
+x^{(2)}=\sum_{i=1}^{\infty}c_{i}^{(2)}\varphi_{i}
+\end{cases}\Rightarrow\begin{cases}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+//Тут еще 3 лекции
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+1) Любое открытое множество является измеримым;
+\end_layout
+
+\begin_layout Theorem
+2) Любое замкнутое множество измеримо;
+\end_layout
+
+\begin_layout Theorem
+3) 
+\begin_inset Formula $\forall$
+\end_inset
+
+ измеримого 
+\begin_inset Formula $E$
+\end_inset
+
+ и 
+\begin_inset Formula $\forall\varepsilon>0\ \exists G$
+\end_inset
+
+ — открытое, 
+\begin_inset Formula $F$
+\end_inset
+
+ — замкнутое, т.ч.: 
+\begin_inset Formula $F\subset E\subset G$
+\end_inset
+
+, 
+\begin_inset Formula $\mu(G\backslash E)<\varepsilon$
+\end_inset
+
+, 
+\begin_inset Formula $\mu(E\backslash F)<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+1) Множество называется множеством типа 
+\begin_inset Formula $G\delta$
+\end_inset
+
+, если оно представимо в виде пересечения открытых множеств.
+\end_layout
+
+\begin_layout Definition
+2) Множество называется множеством типа 
+\begin_inset Formula $F\sigma$
+\end_inset
+
+, если оно представимо в виде объединения замкнутых множеств.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A_{i}=\{x\in\RR^{2}:\ x_{1}^{2}+x_{2}^{2}<1+\frac{1}{i}\}$
+\end_inset
+
+ — открытое.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A=\cap_{i=1}^{\infty}A_{i}=\{x:\ x_{1}^{2}+x_{2}^{2}\leq1\}$
+\end_inset
+
+ — не открытое.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\forall E$
+\end_inset
+
+ — измеримого 
+\begin_inset Formula $\exists G$
+\end_inset
+
+ типа 
+\begin_inset Formula $G\delta$
+\end_inset
+
+, 
+\begin_inset Formula $\exists F$
+\end_inset
+
+ типа 
+\begin_inset Formula $F\sigma$
+\end_inset
+
+: 
+\begin_inset Formula $\mu(E)=\mu(F)=\mu(G)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\varepsilon=\frac{1}{m},m=1,2,...$
+\end_inset
+
+.
+ По предыдущей теореме 
+\begin_inset Formula $\exists G_{m}$
+\end_inset
+
+ — открытое, 
+\begin_inset Formula $F_{m}$
+\end_inset
+
+ — замкнутое, такие, что 
+\begin_inset Formula $F_{m}\subset E\subset G_{m}$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $G=\cap_{m=1}^{\infty}G_{m}$
+\end_inset
+
+ — типа 
+\begin_inset Formula $G\delta$
+\end_inset
+
+, 
+\begin_inset Formula $F=\cup_{m=1}^{\infty}F_{m}$
+\end_inset
+
+ — типа 
+\begin_inset Formula $F\sigma$
+\end_inset
+
+.
+ Возьмем 
+\begin_inset Formula $G\backslash E\subset G_{m}\backslash E\Rightarrow0\leq\mu(G\backslash E)\leq\mu(G_{m}\backslash E)<\frac{1}{m}\to_{m\to\infty}0$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $\mu(G\backslash E)=0$
+\end_inset
+
+, 
+\begin_inset Formula $E\subset G$
+\end_inset
+
+.
+ Для 
+\begin_inset Formula $F$
+\end_inset
+
+ аналогично.
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ определена на 
+\begin_inset Formula $E\subset\RR^{n}$
+\end_inset
+
+.
+ Под записью 
+\begin_inset Formula $E[\text{св-во}]$
+\end_inset
+
+ — часть 
+\begin_inset Formula $E$
+\end_inset
+
+ для которой верно свойство.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $E[f(x)>a]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $E[f(x)\geq a]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $E[f(x)<a]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $E[f(x)\leq a]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+где 
+\begin_inset Formula $a=\const$
+\end_inset
+
+ — множества Лебега.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Функция 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ называется измеримой на 
+\begin_inset Formula $E$
+\end_inset
+
+, если все ее множества Лебега измеримы 
+\begin_inset Formula $\forall a$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Свойства измеримости:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ измерима на множестве, то и множество измеримо.
+\end_layout
+
+\begin_layout Standard
+2) Из измеримости одного типа множества Лебега следует измеримость трех
+ оставшихся.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $E=\cup_{i}E_{i}$
+\end_inset
+
+ и функция 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ измерима на каждом 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+.
+ Тогда она измерима на 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+4) 
+\begin_inset Formula $\mu(E)=0\Rightarrow\forall f(x)$
+\end_inset
+
+ — измеримо на 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f(x)$
+\end_inset
+
+ — непрерывна на 
+\begin_inset Formula $E$
+\end_inset
+
+ и 
+\begin_inset Formula $E$
+\end_inset
+
+ измеримо.
+ Тогда 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ — измерима.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1) Частный случай, 
+\begin_inset Formula $E$
+\end_inset
+
+ замкнуто.
+ Покажем, что непрерывная функция измерима на этом множестве.
+ Покажем, что 
+\begin_inset Formula $E[f(x)\geq a]$
+\end_inset
+
+ замкнуто, как следствие, измеримо, а значит, и функция будет измерима.
+\end_layout
+
+\begin_layout Proof
+Выберем произвользую последовательность 
+\begin_inset Formula $\{x_{k}\}\in E[f(x)\geq a]$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $x_{k}\to_{k\to\infty}x^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{k}\in E$
+\end_inset
+
+ и 
+\begin_inset Formula $E$
+\end_inset
+
+ замкнуто, следовательно, 
+\begin_inset Formula $x^{*}\in E$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $x_{k}\in E[f(x)\geq a]\Rightarrow f(x_{k})\geq a$
+\end_inset
+
+ и 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна, следовательно, 
+\begin_inset Formula $f(x^{*})\geq a\Rightarrow x^{*}\in E[f(x)\geq a]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+2) Общий случай: 
+\begin_inset Formula $\forall$
+\end_inset
+
+ измеримого 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ Найдется 
+\begin_inset Formula $F$
+\end_inset
+
+ типа 
+\begin_inset Formula $F\sigma$
+\end_inset
+
+: 
+\begin_inset Formula $F\subset E$
+\end_inset
+
+ и 
+\begin_inset Formula $\mu(E\backslash F)=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\exists F_{i}$
+\end_inset
+
+ — замкнутые, 
+\begin_inset Formula $F=\cup_{i}F_{i}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $E=(\cup_{i}F_{i})\cup(E\backslash F)$
+\end_inset
+
+.
+ Теорема доказана по пункту 1 и свойствам 3, 4.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f(x),\ g(x)$
+\end_inset
+
+ — измеримы на 
+\begin_inset Formula $E$
+\end_inset
+
+, тогда измеримы их сумма, разность, произведение и отношение.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset Formula $\{f_{k}(x)\}$
+\end_inset
+
+ — измерима на 
+\begin_inset Formula $E$
+\end_inset
+
+, тогда супремум и инфимум этой последовательности также измеримы.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset Formula $\{f_{k}(x)\}$
+\end_inset
+
+ — измерима на 
+\begin_inset Formula $E$
+\end_inset
+
+ и 
+\begin_inset Formula $f_{k}(x)\to_{k\to\infty}^{E}f(x)$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ также измерима.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Remark
+Пусть 
+\begin_inset Formula $f_{k}(x)$
+\end_inset
+
+ непрерывна на 
+\begin_inset Formula $E$
+\end_inset
+
+ и 
+\begin_inset Formula $f_{k}(x)\to_{k\to\infty}^{E}f(x)$
+\end_inset
+
+.
+ Если сходимость не равномерная, то 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ может оказаться не непрерывной.
+ Такая функция называется функцией первого класса по Бэру.
+\end_layout
+
+\begin_layout Remark
+Аналогично, если 
+\begin_inset Formula $f_{k}(x)$
+\end_inset
+
+ — функции первого класса по Бэру, то 
+\begin_inset Formula $f_{k}(x)\to_{k\to\infty}^{E}f(x)$
+\end_inset
+
+ — функция второго класса по Бэру.
+\end_layout
+
+\begin_layout Standard
+Из сформулированной выше теоремы следует, что функция любого класса по Бэру
+ является измеримой.
+\end_layout
+
+\begin_layout Definition
+Будем говорить, что некоторое свойство выполняется почти всюду на 
+\begin_inset Formula $E$
+\end_inset
+
+, если та часть 
+\begin_inset Formula $E$
+\end_inset
+
+, на которой она не выполняется, имеет меру 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Будем говорить, что функция сходится почти всюду на 
+\begin_inset Formula $E$
+\end_inset
+
+, если та часть 
+\begin_inset Formula $E$
+\end_inset
+
+, на которой она не сходится, имеет меру 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $f_{k}(x)$
+\end_inset
+
+ по мере сходится к 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ на 
+\begin_inset Formula $E$
+\end_inset
+
+ если 
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+ 
+\begin_inset Formula $\mu E[\left|f_{k}(x)-f(x)\right|\geq\varepsilon]\to_{k\to\infty}0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Theorem
+(Лебега) 
+\end_layout
+
+\begin_layout Theorem
+Если последовательность сходится в обычном смысле почти везде на 
+\begin_inset Formula $E$
+\end_inset
+
+ и мера 
+\begin_inset Formula $E$
+\end_inset
+
+ конечна, то 
+\begin_inset Formula $\{f_{k}(x)\}$
+\end_inset
+
+ сходится к 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ и по мере.
+\end_layout
+
+\begin_layout Theorem
+Обратная теорема вообще говоря не верна.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+(Рисса)
+\end_layout
+
+\begin_layout Theorem
+Если 
+\begin_inset Formula $\{f_{k}(x)\}$
+\end_inset
+
+ сходится по мере к 
+\begin_inset Formula $f(x)$
+\end_inset
+
+, то 
+\begin_inset Formula $\exists$
+\end_inset
+
+ подпоследовательность 
+\begin_inset Formula $\{f_{k_{i}}(x)\}$
+\end_inset
+
+, которая сходится в обычном смысле.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+(Лузина)
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ измеримая и почти везде конечная на 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\forall\varepsilon>0\ \exists$
+\end_inset
+
+ непрерывная 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ на 
+\begin_inset Formula $E$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\mu E[f(x)\not=\varphi(x)]<\varepsilon$
+\end_inset
+
+ то есть любую измеримую почти везде конечную функцию можно сколь угодно
+ апроксимировать обычной функцией.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Введем общее определение интеграла Лебега:
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ почти всюду ограничена на 
+\begin_inset Formula $E$
+\end_inset
+
+, 
+\begin_inset Formula $E$
+\end_inset
+
+ измерима, 
+\begin_inset Formula $\mu(E)<+\infty$
+\end_inset
+
+.
+ Разобьем 
+\begin_inset Formula $E=\cup_{i=1}^{m}E_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $m_{i}=\inf_{E_{i}}f(x)$
+\end_inset
+
+, 
+\begin_inset Formula $M_{i}=\sup_{E_{i}}f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s=\sum_{i=1}^{n}m_{i}\mu(E_{i})$
+\end_inset
+
+ — нижняя и 
+\begin_inset Formula $S=\sum_{i=1}^{n}M_{i}\mu(E_{i})$
+\end_inset
+
+ — верхняя суммы Дарбу Лебега.
+ Нетрудно проверить, что выполнены стандартные 3 свойства для сумм Дарбу.
+ 
+\begin_inset Formula $L=\sup s$
+\end_inset
+
+, 
+\begin_inset Formula $M=\inf S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+Если 
+\begin_inset Formula $L=M$
+\end_inset
+
+, то это число называется интегралом Лебега по 
+\begin_inset Formula $E$
+\end_inset
+
+ от 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Пусть 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ Когда мы вводили интеграл Римана от 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ по 
+\begin_inset Formula $E$
+\end_inset
+
+, то предполагали, что 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ — отрезки.
+ Дописать.
+\end_layout
+
+\begin_layout Standard
+Если интеграл Римана существует, то он совпадает с интегралом Лебега.
 \end_layout
 
 \end_body
