@@ -2581,5 +2581,104 @@ p\left\{ \left|\overline{x_{n}}-M\left[\overline{x_{n}}\right]\right|<\varepsilo
 //написать еще одну лекцию
 \end_layout
 
+\begin_layout Subsubsection
+Неравенство Йенсена
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\xi$
+\end_inset
+
+ - случайная величина, 
+\begin_inset Formula $\text{g(x)}$
+\end_inset
+
+ - выпуклая функция (смотрите лекции по матану).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M\left[g\left(\xi\right)\right]\geq g\left(M\left[\xi\right]\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Т.к.
+ 
+\begin_inset Formula $\text{g\left(x\right)}$
+\end_inset
+
+ - выпуклая функция, 
+\begin_inset Formula $\forall y\in\RR$
+\end_inset
+
+ 
+\begin_inset Formula $\exists c\left(y\right):\;\forall x\in\RR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+g\left(x\right)\geq g\left(y\right)+c\left(y\right)\left(x-y\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $x=\xi,\:y=M\left[\xi\right]$
+\end_inset
+
+, тогда
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+g(\xi)\geq g(M[\xi])+c(M[\xi](\xi-M[\xi]))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Возьмём мат.ожидание от обеих частей:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+M[g(\xi)]\geq M[g(M[\xi])+c(M[\xi])(\xi-M[\xi])
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+M[g(\xi)]\geq g(M[\xi])
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
