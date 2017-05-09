@@ -1,6 +1,11 @@
 /**
  * Created by vahriin on 3/2/17.
  */
+
+/**
+ * This file included some MISTAKES. If you need the correct version, DO NOT USE this file.
+ * If you want to help to fix this mistakes, you can make a pull request
+ */
 public class PLU {
     public int trans;
     public int rang;
@@ -47,7 +52,6 @@ public class PLU {
                 column[i] -= LUMatrix[i][j] * column[j];
             }
         }
-
         column[Constants.DIM - 1] /= LUMatrix[Constants.DIM - 1][Constants.DIM - 1];
         for (int i = Constants.DIM - 2; i >= 0; --i) {
             for (int j = i + 1; j < Constants.DIM; ++j) {
@@ -97,7 +101,7 @@ public class PLU {
                 }
             }
         }
-        if (Math.abs(maximum) > 1E-10) {
+        if (Math.abs(maximum) > 1E-16) {
             ++rang; //rang of matrix
         }
         return ret;

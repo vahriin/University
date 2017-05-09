@@ -1,24 +1,25 @@
 /**
- * Created by vahriin on 3/25/17.
+ * Created by vahriin on 3/31/17.
  */
-public class Jacobi {
+public class Seidel {
     private final double accuracy = 1E-6;
     public int numberOfIterations = 0;
 
-    public Jacobi(double[][] newMatrix) {
-        matrix = newMatrix;
+    public Seidel(double[][] matrix_) {
+        matrix = matrix_;
     }
 
     public double[] solveOfEquation(double[] column) {
-        double[] previousVariableValues = new double[]{0,0,0};
+        double[] previousVariableValues = {0,0,0};
 
         while (true) {
             double[] currentVariableValues = new double[Constants.DIM];
-
             for (int i = 0; i < Constants.DIM; i++) {
                 currentVariableValues[i] = column[i];
                 for (int j = 0; j < Constants.DIM; j++) {
-                    if (i != j) {
+                    if (j < i) {
+                        currentVariableValues[i] -= matrix[i][j] * currentVariableValues[j];
+                    } else if (j > i) {
                         currentVariableValues[i] -= matrix[i][j] * previousVariableValues[j];
                     }
                 }

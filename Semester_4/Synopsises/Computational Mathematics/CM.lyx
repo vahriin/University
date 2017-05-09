@@ -2789,7 +2789,7 @@ x_{0}^{(2)} & x_{1}^{(2)} & x_{2}^{(2)}\\
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Интерполяционный полином Лагранжа
 \end_layout
 
@@ -3016,7 +3016,2093 @@ K=\frac{r_{n}(x^{*})}{\omega_{n}(x^{*})}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+Оценим сверху погрешность полинома Лагранжа: 
+\begin_inset Formula 
+\[
+\left|R_{n}(x)\right|\leq\frac{M_{n+1}}{(n+1)!}\left|\omega(x)\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $M_{n+1}\geq\left|f^{(n+1)}(x)\right|$
+\end_inset
+
+, 
+\begin_inset Formula $x\in[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для более гладкой 
+\begin_inset Formula $f$
+\end_inset
+
+: 
+\begin_inset Formula $M_{n+1}=\max_{x\in[a,b]}\left|f^{(n+1)}(x)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula $f(x)=M_{n+1}x^{n+1}+P_{n}(x)$
+\end_inset
+
+, тогда 
+\begin_inset Formula $f^{(n+1)}(x)=M_{n+1}$
+\end_inset
+
+ и 
+\begin_inset Formula $R_{n}=\frac{M_{n+1}}{(n+1)!}\omega(x)$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\left|R_{n}\right|=\frac{M_{n+1}}{(n+1)!}\left|\omega(x)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Выбор узлов интерполирования
+\end_layout
+
+\begin_layout Standard
+Задача: 
+\begin_inset Formula $\left|\omega(x)\right|\to\min$
+\end_inset
+
+ для 
+\begin_inset Formula $(x_{0},...,x_{n})$
+\end_inset
+
+.
+ Эта задача решается многочленами Чебышёва.
  
+\end_layout
+
+\begin_layout Standard
+Многочлены Чебышёва обозначаются как 
+\begin_inset Formula $T$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+T_{n}(x)=\cos(n\arccos x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{0}(x)=1,\ T_{1}(x)=x$
+\end_inset
+
+.
+ Далее существует рекуррентная формула: 
+\begin_inset Formula 
+\[
+T_{n+1}(x)=2xT_{n}(x)-T_{n-1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Свойство этих многочленов в том, что если строить из графики, то на отрезке
+ 
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+ находятся все корни, экстремумы и экстремумы принимают значения 
+\begin_inset Formula $-1$
+\end_inset
+
+ и 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Однако гораздо больше нам интересны многочлены 
+\begin_inset Formula $\overline{T}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\overline{T}_{n}(x)=\frac{1}{2^{n-1}}T_{n}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Корни 
+\begin_inset Formula $T_{n}(x)$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\cos\left(\frac{\pi}{2n}+\frac{\pi k}{n}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $k=\overline{1,n}$
+\end_inset
+
+.
+ Соответственно, перенос на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ корней 
+\begin_inset Formula $T_{n+1}(x)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+x_{i}=\frac{a+b}{2}+\frac{b-a}{2}\cos\left(\frac{\pi}{2(n+1)}-\frac{\pi(k+1)}{n+1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $k=\overline{0,n}$
+\end_inset
+
+.
+ Эти узлы дают наименьшуу максимальную погрешность интерполирования на отрезке
+ 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Свойства полиномов Чебышёва:
+\end_layout
+
+\begin_layout Standard
+1) Экстремумы на 
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+ в точке 
+\begin_inset Formula $\cos(\frac{\pi k}{n}),\ k=\overline{0,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula 
+\[
+\int_{-1}^{1}\frac{T_{i}(x)T_{j}(x)}{\sqrt{1-x^{2}}}dx=\begin{cases}
+\text{не ноль} & i=j\\
+0 & i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $f$
+\end_inset
+
+ задано таблицей то выбор 
+\begin_inset Formula $x_{0},...,x_{n}$
+\end_inset
+
+, так, чтобы 
+\begin_inset Formula $\left|\omega(x)\right|\to\min$
+\end_inset
+
+ — более сложная задача.
+\end_layout
+
+\begin_layout Example
+Пусть задана таблица:
+\end_layout
+
+\begin_layout Example
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Тогда полином Лагранжа будет иметь вид: 
+\begin_inset Formula 
+\[
+L_{2}(x)=2\frac{(x-2)(x-3)}{6}+5\frac{x(x-3)}{-2}+4\frac{x(x-2)}{3}=\frac{-5x^{2}+19x+12}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Если по этим точкам не очень хорошо получилось приближение функции, то мы
+ можем добавить одно значение и построить полином третьего порядка по четырем
+ точкам:
+\end_layout
+
+\begin_layout Example
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Построение 
+\begin_inset Formula $L_{3}$
+\end_inset
+
+ будет так же сложно (потребует сделать все то же самое).
+ Для таких случаев рассмотрим 
+\end_layout
+
+\begin_layout Subsection
+Интерполяционный полином Ньютона
+\end_layout
+
+\begin_layout Definition
+Рассмотрим следующие величины: 
+\begin_inset Formula $f(x_{0}),...,f(x_{n})$
+\end_inset
+
+.
+ Величина 
+\begin_inset Formula $f(x_{0},x_{1})=\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}$
+\end_inset
+
+ называется разделенной разностью первого порядка функции 
+\begin_inset Formula $f$
+\end_inset
+
+ по точкам 
+\begin_inset Formula $x_{1},x_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Разделенная разность 
+\begin_inset Formula $k$
+\end_inset
+
+-ого порядка определяется через разделенные разности 
+\begin_inset Formula $k-1$
+\end_inset
+
+-го порядка как: 
+\begin_inset Formula 
+\[
+f(x_{0},...,x_{k})=\frac{f(x_{1},...,x_{k})-f(x_{0},...,x_{k-1})}{x_{k}-x_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Свойства разделенной разности:
+\end_layout
+
+\begin_layout Standard
+1) Инвариантны относительно порядка узлов: 
+\begin_inset Formula $f(x_{0},...,x_{k})=f(\sigma(x_{0},...,x_{k}))$
+\end_inset
+
+, где 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ — перестановка.
+ Поэтому будем считать, что узлы расположены в порядке возрастания.
+\end_layout
+
+\begin_layout Standard
+2) Линейность: 
+\begin_inset Formula $(\alpha f+\beta g)(x_{0},...,x_{n})=\alpha f(x_{0},...,x_{n})+\beta g(x_{0},...,x_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Пусть по 
+\begin_inset Formula $x_{0},...,x_{n-1}$
+\end_inset
+
+ построен 
+\begin_inset Formula $L_{n-1}(x)$
+\end_inset
+
+ и по 
+\begin_inset Formula $x_{0},...,x_{n}$
+\end_inset
+
+ построен 
+\begin_inset Formula $L_{n}(x)$
+\end_inset
+
+.
+ Давайте поможем Даше найти между ними связь: 
+\begin_inset Formula $L_{n}-L_{n-1}$
+\end_inset
+
+ — полином 
+\begin_inset Formula $n$
+\end_inset
+
+-ой степени и 
+\begin_inset Formula $x_{0},...,x_{n-1}$
+\end_inset
+
+ — его корни, следовательно, 
+\begin_inset Formula $L_{n}(x)-L_{n-1}(x)=A\cdot\omega_{n-1}(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $L_{n}(x)=L_{n-1}(x)+A\omega_{n-1}(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $L_{n}(x_{n})=f(x_{n})$
+\end_inset
+
+, откуда 
+\begin_inset Formula $L_{n-1}(x_{n})+A\omega_{n-1}(x_{n})=f(x_{n})$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula 
+\[
+A=\frac{f(x_{n})-L_{n-1}(x)}{\omega_{n-1}(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L_{n}=L_{n-1}+A_{n-1}\omega_{n-1}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L_{n}=L_{n-2}+A_{n-2}\omega_{n-2}(x)+A_{n-1}\omega(x)=...=L_{0}(x)+A_{0}\omega_{0}(x)+A_{1}\omega_{1}(x)+...+A_{n-1}\omega_{n-1}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Так как 
+\begin_inset Formula $L_{0}=f(x_{0}),$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A_{0}=\frac{f(x_{1}-f(x_{0})}{x_{1}-x_{0}}=f(x_{0},x_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+A_{1}=\frac{f(x_{2})-\left[f(x_{0})+f(x_{0},x_{1})\cdot(x-x_{0})\right]}{(x_{2}-x_{0})(x_{2}-x_{1})}=\frac{f(x_{2})-f(x_{0})}{(x_{2}-x_{0})(x_{2}-x_{1})}-\frac{f(x_{0}x_{1})}{x_{2}-x_{1}}=\\
+=\frac{f(x_{0},x_{2})-f(x_{0},x_{1})}{(x_{2}-x_{1})}=f(x_{0},x_{1},x_{2})
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Откуда 
+\begin_inset Formula 
+\[
+L_{n}(x)=\sum_{k=1}^{n}f(x_{0},...,x_{k})\omega_{k-1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\omega_{k-1}(x)=(x-x_{0}),...,(x-x_{k-1})$
+\end_inset
+
+ и 
+\begin_inset Formula $\omega_{1}(x)\equiv1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+И теперь мы можем сделать вывод, что 
+\begin_inset Formula 
+\[
+L_{n}(x)=L_{n-1}(x)+f(x_{0},...,x_{n})\omega_{n-1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Рассмотрим для 
+\end_layout
+
+\begin_layout Example
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Построим таблицу для вычисления разделенных разностей:
+\end_layout
+
+\begin_layout Example
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x,x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x,x,x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x,x,x,x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{c}
+2\\
+1\\
+-1
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{1}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+L_{3}=L_{2}(x)+\left(-\frac{1}{6}\right)\left(x-0\right)\left(x-2\right)\left(x-3\right)=\frac{-5x^{2}}{6}+\frac{19x}{6}+2-\frac{x^{3}}{6}+\frac{5x}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+дописать.
+\end_layout
+
+\begin_layout Subsubsection
+Конечные разности и полином Ньютона по равноотстоящим узлам
+\end_layout
+
+\begin_layout Standard
+Разделенные разности по равноотстоящим узлам упрощены: 
+\begin_inset Formula $x_{0}=a,\ x_{i}=a+ih;\ h=\frac{b-a}{n}$
+\end_inset
+
+, 
+\begin_inset Formula $i=\overline{1,n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula $f(x_{0},x_{1})=\frac{f(x_{1})-f(x_{0})}{h}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+f(x_{0},x_{1},x_{2})=\frac{\frac{f(x_{2})-f(x_{1})}{h}-\frac{f(x_{1})-f(x_{0})}{h}}{2h}=\frac{f(x_{2})-2f(x_{1})+f(x_{0})}{2h^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Но постоянно считать это неудобно.
+ Рассмотрим конечные разности первого порядка: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Delta_{f}(x_{0},x_{1})=f(x_{1})-f(x_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula $E:\ Ef(x_{0})=f(x_{0}+h);\ E^{0}\equiv I$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $f(x_{i})=E^{i}f(x_{0}),\ i=\overline{0,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Конечная разность 
+\begin_inset Formula $k$
+\end_inset
+
+-го порядка: 
+\begin_inset Formula $\Delta_{f}(x_{0},...,x_{k})=\left(E-I\right)^{k}f(x_{0})=\left(E^{k}-E^{k-1}\cdot k+E^{k-2}\frac{k(k-1)}{2}+...+I\right)f(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Таким образом, 
+\begin_inset Formula $\Delta_{f}(x_{0},x_{1},x_{2})=f(x_{2})-2f(x_{1})+f(x_{0})$
+\end_inset
+
+, откуда 
+\begin_inset Formula $f(x_{0},...,x_{n})=\frac{\Delta_{f}(x_{0},...,x_{n})}{k!\cdot h^{k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+В чем преимущество такого вида записи? Если мы рассмотрим теперь полином
+ Ньютона: 
+\begin_inset Formula 
+\[
+L_{n}(x)=\sum_{k=0}^{n}f(x_{0},...,x_{k})\cdot\omega_{k-1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Рассматриваем 
+\begin_inset Formula $\omega_{k-1}(x)=(x-x_{0})(x-x_{0}-h)(x-x_{0}-2h)...(x-x_{0}-(k-1)h)$
+\end_inset
+
+.
+ Заменим 
+\begin_inset Formula $x=x_{0}+th$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\overline{\omega}_{k-1}(t)=t(t-1)(t-2)...(t-(k-1))h^{k}$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula 
+\[
+f(x_{0},...,x_{k})=\frac{\Delta_{f}(x_{0},...,x_{n})}{k!h^{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+И тогда 
+\begin_inset Formula 
+\[
+L_{n}(x)=\sum_{k=0}^{n}\frac{\Delta_{f}(a,a+h,...,a+kh)}{k!}\cdot t(t-1)...(t-(k-1))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{n}(x)=\sum_{i=0}^{n}\frac{\omega(x)}{(x-x_{i})\omega'(x_{i})}f(x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+дописать.
+\end_layout
+
+\begin_layout Subsection
+Кратное интерполирование
+\end_layout
+
+\begin_layout Standard
+Допустим, заданы не только значения 
+\begin_inset Formula $f$
+\end_inset
+
+ в точках 
+\begin_inset Formula $x_{0},...,x_{n}$
+\end_inset
+
+, но и их производные порядков 
+\begin_inset Formula $m_{i}-1$
+\end_inset
+
+ в 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ И мы хотим построить полином 
+\begin_inset Formula $H(x)$
+\end_inset
+
+, такой, что 
+\begin_inset Formula $H(x_{i})=f_{i},\ H'(x_{i})=f'_{i},...,H^{(m_{i}-1)}(x_{i})=f_{i}^{(m_{i}-1)},\ i=\overline{0,n}$
+\end_inset
+
+.
+ Такой интерполяционный полином носит название полинома Эрмита.
+\end_layout
+
+\begin_layout Standard
+Погрешность полинома Эрмита: 
+\begin_inset Formula 
+\[
+r_{m-1}(x)=\frac{f^{(m)}(x)}{m!}\Omega(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\Omega(x)=(x-x_{0})^{m_{0}}\cdot...\cdot(x-x_{n})^{m_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Численное дифференцирование
+\end_layout
+
+\begin_layout Standard
+Производная первого порядка 
+\begin_inset Formula $f'(x)$
+\end_inset
+
+ может быть приближена как 
+\begin_inset Formula 
+\[
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+следовательно, 
+\begin_inset Formula 
+\[
+f'(x)\thickapprox\frac{f(x+h)-f(x)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+при некотором малом 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Или, если у нас есть 2 точки, 
+\begin_inset Formula $(x_{0},f_{0})$
+\end_inset
+
+ и 
+\begin_inset Formula $(x_{1},f_{1})$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+f'(x_{0})\thickapprox\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+это так называемая правая производная.
+\end_layout
+
+\begin_layout Standard
+Аналогично определяется левая производная: 
+\begin_inset Formula 
+\[
+f'(x_{1})\thickapprox\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+По сути, это производная интерполяционного полинома Лагранжа по точкам 
+\begin_inset Formula $(x_{0},f_{0})$
+\end_inset
+
+ и 
+\begin_inset Formula $(x_{1},f_{1})$
+\end_inset
+
+.
+ Если у нас есть 
+\begin_inset Formula $(x_{0},f_{0})$
+\end_inset
+
+, 
+\begin_inset Formula $(x_{1},f_{1})$
+\end_inset
+
+ и 
+\begin_inset Formula $(x_{2},f_{2})$
+\end_inset
+
+ то можно взять левую и правую производную в 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Однако полином Лагранжа (первой степени) дает нам погрешность 
+\begin_inset Formula $r_{1}\leq\frac{M_{2}}{2!}(x-x_{0})(x-x_{1})\leq\frac{M_{2}}{2!}h^{2}$
+\end_inset
+
+, следовательно, погрешность по 2 точкам равна 
+\begin_inset Formula $O(h)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Тогда для увеличения точности численной производной следует увеличить точность
+ полинома Лагранжа (то есть число узлов).
+\end_layout
+
+\begin_layout Standard
+Построим 
+\begin_inset Formula $L_{2}(x)=f(x_{0})+(x-x_{0})f(x_{1},x_{0})+(x-x_{0})(x-x_{1})f(x_{2},x_{1},x_{0}).$
+\end_inset
+
+ Тогда 
+\begin_inset Formula $L_{2}'(x)=f(x_{1},x_{0})+(2x-x_{0}-x_{1})f(x_{2},x_{1},x_{0})$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f'(x)\thickapprox\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}+(2x-x_{1}-x_{0})\frac{\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}...}{(x_{2}-x_{0})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Например в 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+f'(x_{1})=\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}+\frac{f(x_{1})-f(x_{0})}{x_{2}-x_{0}}-\frac{(f(x_{2})-f(x_{1}))(x_{1}-x_{0})}{(x_{2}-x_{1})(x_{2}-x_{0})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть сетка равномерна, то есть 
+\begin_inset Formula $x_{i}=x_{0}+hi$
+\end_inset
+
+, тогда 
+\begin_inset Formula 
+\[
+f'(x_{0}+h)\thickapprox\frac{f(x_{0}+2h)-f(x_{0})}{2h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+это называется центральной производной.
+\end_layout
+
+\begin_layout Standard
+Погрешность центральной производной на 3 точках есть 
+\begin_inset Formula $O(h^{2})$
+\end_inset
+
+.
+ А производные будут вида: 
+\begin_inset Formula 
+\[
+f'(x_{0})\thickapprox\frac{-3f(x_{0})+4f(x_{0}+h)-f(x_{0}+2h)}{2h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f'(x_{0}+2h)\thickapprox\frac{f(x_{0})-4f(x_{0}+h)+3f(x_{0}+2h)}{2h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для (дописать)
+\begin_inset Formula 
+\[
+\frac{f(x_{0}+2h)-f(x_{0})}{2h}=\left[\frac{f(x_{0}+2h)-f(x_{0}+h)}{h}+\frac{f(x_{0}+h)-f(x_{0})}{h}\right]\cdot\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+то есть среднее между правой и левой дает центральную.
+\end_layout
+
+\begin_layout Standard
+То есть вторая производная по 3 точкам: 
+\begin_inset Formula 
+\[
+L_{2}''(x)=2f(x_{0},x_{1}x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+аналогично 
+\begin_inset Formula 
+\[
+f''(x)=2f(x_{0},x_{1}x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+с погрешностью 
+\begin_inset Formula $O(h)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для равномерной сетки 
+\begin_inset Formula 
+\[
+f''(x)=\frac{f(x_{0})-2f(x_{0}+h)+f(x_{0}+2h)}{h^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для нахождения производной порядка 
+\begin_inset Formula $n$
+\end_inset
+
+ нужно использовать 
+\begin_inset Formula $n+1$
+\end_inset
+
+ узел.
+ В этом случае точность 
+\begin_inset Formula $O(n)$
+\end_inset
+
+.
+ Для производной порядка 
+\begin_inset Formula $n$
+\end_inset
+
+ с точностью 
+\begin_inset Formula $O(h^{p})$
+\end_inset
+
+ требуется, соответственно, 
+\begin_inset Formula $n+p$
+\end_inset
+
+ узлов.
+\end_layout
+
+\begin_layout Subsection
+Интерполяционный сплайн
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r_{n}(x)=\frac{f^{(n)}(\xi)}{n!}\omega(x)\leq\frac{M_{n}}{n!}(b-a)^{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если нам недостает точности, разобьем отрезок.
+ На каждом из подотрезков построим свой интерполяционный полином.
+\end_layout
+
+\begin_layout Definition
+Сплайном или полиномиальным сплайном порядка 
+\begin_inset Formula $n$
+\end_inset
+
+ называется кусочно-полиномиальная функция.
+\end_layout
+
+\begin_layout Definition
+Разница между порядком и гладкостью сплайна называется дефектом сплайна
+\end_layout
+
+\begin_layout Example
+Интерполяционный сплайн 
+\begin_inset Formula $S_{1,0}$
+\end_inset
+
+: первого порядка с дефектом ноль, то есть 
+\begin_inset Formula $S(x_{i})=f(x_{i})$
+\end_inset
+
+ для 
+\begin_inset Formula $i=\overline{0,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S_{1,0}(x)=a_{i}+b_{i}(x-x_{i-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+при 
+\begin_inset Formula $x\in[x_{i-1},x_{i}],$
+\end_inset
+
+ 
+\begin_inset Formula $i=\overline{1,n}$
+\end_inset
+
+.
+ Где 
+\begin_inset Formula $a_{i}=f(x_{i-1})$
+\end_inset
+
+, 
+\begin_inset Formula $b=\frac{f(x_{i})-f(x_{i-1})}{x_{i}-x_{i-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Оценим погрешность: 
+\begin_inset Formula 
+\[
+R_{1,0}(x)=\frac{f''(\xi)}{2!}(x-x_{i-1})(x-x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+следовательно 
+\begin_inset Formula 
+\[
+\left|R_{1,0}(x)\right|\leq\frac{M_{2}}{2!}h^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $M_{2}=\max_{x\in[x_{0},x_{n}]}\left|f''(x)\right|$
+\end_inset
+
+, 
+\begin_inset Formula $h=\max_{i=\overline{1,n}}\left|x_{i}-x_{i-1}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Интерполяционный сплайн с дефектом 0 есть интерполяционный полином.
+\end_layout
+
+\begin_layout Standard
+Самым популярным сплайном является сплайн порядка 3 дефекта 1.
+ Обозначается 
+\begin_inset Formula $S_{3,2}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Условия на 
+\begin_inset Formula $S_{3,2}(x)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+1) интерполяционность: 
+\begin_inset Formula $S_{3,2}(x_{i})=f(x_{i}),\ i=\overline{0,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) гадкость второго порядка: 
+\begin_inset Formula $S'(x_{i}-0)=S'(x_{i}+0)$
+\end_inset
+
+ и 
+\begin_inset Formula $S''(x_{i}-0)=S''(x_{i}+0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Представим наш полином на отрезке 
+\begin_inset Formula $[x_{i-1},x_{i}]$
+\end_inset
+
+ в следующем виде: 
+\begin_inset Formula 
+\[
+S_{3,2}(x)=a_{i}(x-x_{i-1})^{3}+b_{i}(x-x_{i-1})^{2}+c_{i}(x-x_{i-1})+d_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(дописать)
+\end_layout
+
+\begin_layout Standard
+(еще одна лекция)
+\end_layout
+
+\begin_layout Standard
+Напомним, что мы вычисляем 
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)p(x)dx\thickapprox\sum_{i=1}^{n}A_{i}f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Квадратурные формулы наивысшей алгебраической степени точности
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula $P_{m}$
+\end_inset
+
+ — полином степени 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Его можно представить в виде полинома степени 
+\begin_inset Formula $m-1$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+P_{m}(x)=P_{n-1}(x)Q_{m-n}(x)+R_{n-1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Погрешность интегрирования 
+\begin_inset Formula $P_{m}$
+\end_inset
+
+ КФ с 
+\begin_inset Formula $n$
+\end_inset
+
+ узлами зависят от 
+\begin_inset Formula $P_{n-1}(x)\cdot Q_{m-n+1}(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\int_{a}^{b}P_{n-1}Q_{m-n+1}p(x)dx-\sum_{i=1}^{n}P_{n-1}(x_{i})Q_{m-n+1}(x_{i})A_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $P_{n-1}=\omega_{n-1}=(x-x_{1})\cdot...\cdot(x-x_{n})$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $P_{n-1}(x_{i})=0$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula 
+\[
+\int_{a}^{b}\omega_{n-1}(x)P(x)Q_{m+n-1}(x)dx=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+тогда ACT
+\begin_inset Formula $=m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f(x)$
+\end_inset
+
+ и 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ называются ортогональными на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, если 
+\begin_inset Formula $\int_{a}^{b}f(x)g(x)p=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Выберем узлы так, чтобы 
+\begin_inset Formula $m$
+\end_inset
+
+ было наибольшим.
+ Рассмотрим 
+\begin_inset Formula $\omega(x)=x^{n-1}+a_{n-2}x^{n-2}+...+a_{1}x+a_{0}$
+\end_inset
+
+.
+ Рассмотрим 
+\begin_inset Formula $x^{s}$
+\end_inset
+
+ при 
+\begin_inset Formula $s=\overline{0,m-n+1}$
+\end_inset
+
+.
+ Мы хотим, чтобы 
+\begin_inset Formula 
+\[
+\int_{a}^{b}x^{s}(x^{n-1}+...+a_{1}x+a_{0})p(x)dx=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Раскроем скобки 
+\begin_inset Formula $\mu_{k}=\int_{a}^{b}p(x)x^{k}dx$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\mu_{n-1+s}+a_{n-2}\mu_{n-2+s}+...+a_{1}\mu_{s+1}+a_{0}\mu_{s}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $s=\overline{0,m-n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(Выше много косяков в индексах)
+\end_layout
+
+\begin_layout Standard
+Существует единственное решение, если 
+\begin_inset Formula $m=2n-1$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+\mu_{0} & \mu_{1} &  & \mu_{n-1}\\
+\mu_{1} & \mu_{2} &  & \mu_{n}\\
+\\
+\mu_{n-1} & \mu_{n} &  & \mu_{2n-1}
+\end{array}\right)\left(\begin{array}{c}
+a_{0}\\
+a_{1}\\
+\\
+a_{n-1}
+\end{array}\right)=\left(\begin{array}{c}
+-\mu_{n}\\
+-\mu_{n+1}\\
+\\
+\mu_{2n-1}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Таким образом, 
+\begin_inset Formula $2n-1$
+\end_inset
+
+ — НАСТ для 
+\begin_inset Formula $n$
+\end_inset
+
+ узлов.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula $\omega^{2}(x)$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\int_{a}^{b}\underbrace{\omega^{2}(x)}_{\neq0}\underbrace{p(x)}_{>0}dx\neq\underbrace{\sum_{i=1}^{n}A_{i}\omega^{2}(x)}_{=0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+То есть степень точности выше ранее заявленной получить невозможно.
+\end_layout
+
+\begin_layout Standard
+КФ НАСТ Гаусса:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $\mu_{k}=\int_{a}^{b}p(x)x^{k}dx,\ k=\overline{0,2n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) Решим систему 
+\begin_inset Formula $\sum_{i=0}^{n-1}\mu_{i+s}a_{i}=-\mu_{n+s}\ s=\overline{0,n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) Находим корни (узлы) исходя из того, что у нас есть 
+\begin_inset Formula $x^{n}+a_{n-1}x^{n-1}+...+a_{1}x+a_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+4) ИКФ.
+\end_layout
+
+\begin_layout Standard
+(дописать)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{c}
+1\\
+2\\
+3\\
+4\\
+5
+\end{array}\left|\begin{array}{c}
+U_{1}\{5\}\\
+U_{2}\\
+U_{3}\\
+U_{4}\\
+U_{5}
+\end{array}\right.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body

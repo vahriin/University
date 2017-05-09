@@ -123,7 +123,7 @@ public class Matrix {
             int summOfLine = 0;
             for (int j = 0; j < Constants.DIM; ++j) {
                 if (i != j) {
-                    summOfLine += matrix[i][j] = random.nextInt(MAX) - 89;
+                    summOfLine += Math.abs(matrix[i][j] = random.nextInt(MAX) - 89);
                 }
             }
             matrix[i][i] = summOfLine + random.nextInt(10);
@@ -210,4 +210,20 @@ public class Matrix {
         }
         System.out.println();
     }
+
+    /*вычистить*/
+
+    public static int rangOfColumn(double[] column) {
+        int i;
+        for (i = 0; i < column.length; ++i) {
+            if (column[i] < 1E-6) {
+                break;
+            }
+        }
+        return i;
+    }
+
+    /*public static double[] returnAny(double[][] matrix, double[] column) {
+
+    }*/
 }
