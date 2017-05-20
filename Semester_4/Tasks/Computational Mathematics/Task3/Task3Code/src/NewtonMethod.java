@@ -117,27 +117,27 @@ public class NewtonMethod {
 
     public void setEquationSystem(double[] currentApprox) {
         equationSystem.setEntry(0, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(1, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(2, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(3, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(4, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(5, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(6, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(7, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(8, Allfunc.eq0(currentApprox));
-        equationSystem.setEntry(9, Allfunc.eq0(currentApprox));
+        equationSystem.setEntry(1, Allfunc.eq1(currentApprox));
+        equationSystem.setEntry(2, Allfunc.eq2(currentApprox));
+        equationSystem.setEntry(3, Allfunc.eq3(currentApprox));
+        equationSystem.setEntry(4, Allfunc.eq4(currentApprox));
+        equationSystem.setEntry(5, Allfunc.eq5(currentApprox));
+        equationSystem.setEntry(6, Allfunc.eq6(currentApprox));
+        equationSystem.setEntry(7, Allfunc.eq7(currentApprox));
+        equationSystem.setEntry(8, Allfunc.eq8(currentApprox));
+        equationSystem.setEntry(9, Allfunc.eq9(currentApprox));
     }
 
 
-    public RealVector simplyNewtonMultiply() {
+    /*public RealVector simplyNewtonMultiply() {
         return new LUDecomposition(jacobiMatrix).getSolver().getInverse().
                 operate(equationSystem).mapMultiply(-1);
-    }
+    }*/
 
-    public RealVector modifyNewtonMultiply() {
+    public RealVector solveOfEquation() {
         return new LUDecomposition(jacobiMatrix).getSolver().solve(equationSystem.mapMultiply(-1));
     }
 
-    private RealMatrix jacobiMatrix;
-    private RealVector equationSystem;
+    public RealMatrix jacobiMatrix;
+    public RealVector equationSystem;
 }
