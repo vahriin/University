@@ -1,0 +1,1106 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{indentfirst}
+\end_preamble
+\use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+theorems-ams-bytype
+theorems-sec-bytype
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 2.5cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.7cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\RR}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ZZ}{\mathbb{Z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\NN}{\mathbb{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\QQ}{\mathbb{Q}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\AA}{\mathcal{A}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Метрические пространства.
+ Определение, примеры
+\end_layout
+
+\begin_layout Definition
+Пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ называется метрическим, если 
+\begin_inset Formula $\forall x,y\in X\ \exists!\rho(x,y)\in\RR$
+\end_inset
+
+, такое, что:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\rho(x,y)\geq0$
+\end_inset
+
+, при этом 
+\begin_inset Formula $\rho(x,y)=0\Leftrightarrow x=y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\rho(x,y)=\rho(y,x)$
+\end_inset
+
+ (симметричность);
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\rho(x,y)\leq\rho(x,z)+\rho(y,z)$
+\end_inset
+
+ (неравенство треугольника);
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\forall x,y,z\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X=\RR$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\rho(x,y)=|x-y|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X=\RR^{n}$
+\end_inset
+
+, тогда: 
+\end_layout
+
+\begin_layout Example
+1) 
+\begin_inset Formula $\rho(x,y)=\sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}}$
+\end_inset
+
+ (сферическая метрика);
+\end_layout
+
+\begin_layout Example
+2) 
+\begin_inset Formula $\rho(x,y)=\max_{i=\overline{1,n}}\left|x_{i}-y_{i}\right|$
+\end_inset
+
+ (параллелепипедальная);
+\end_layout
+
+\begin_layout Example
+3) 
+\begin_inset Formula $\rho(x,y)=\sum_{i=1}^{n}\left|x_{i}-y_{i}\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+4) 
+\begin_inset Formula $\rho(x,y)=\left(\sum_{i=1}^{n}\left|x_{i}-y_{i}\right|^{p}\right)^{\nicefrac{1}{p}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+Пусть 
+\begin_inset Formula $X=C[a,b]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+1) 
+\begin_inset Formula $\rho(f(x),g(x))=\max_{[a,b]}|f(x)-g(x)|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2) 
+\begin_inset Formula $\rho(x,y)=\int_{a}^{b}|f(x)-g(x)|dx$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Сходимость в метрическом пространстве.
+ Фундаментальные последовательности.
+ Полнота метрического пространства
+\end_layout
+
+\begin_layout Definition
+Пусть 
+\begin_inset Formula $\{x^{(k)}\}_{k=1}^{\infty}$
+\end_inset
+
+ — последовательность элементов в 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ И пусть 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $x^{(k)}\to x^{*}$
+\end_inset
+
+, если 
+\begin_inset Formula $\rho(x^{(k)},x^{*})\to_{k\to\infty}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Последовательность 
+\begin_inset Formula $\{x^{(k)}\}_{k=1}^{\infty}$
+\end_inset
+
+ фундаментальна, если для нее выполнен критерий Коши: 
+\begin_inset Formula $\forall\varepsilon>0\ \exists N>0:\ \forall k,n\geq N$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $\rho(x^{(k)},x^{(n)})<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Если последовательность сходится, то она фундаментальна.
+\end_layout
+
+\begin_layout Proof
+Рассмотрим 
+\begin_inset Formula $0\leq\rho(x^{(k)},x^{(n)})\leq\rho(x^{(k)},x^{*})+\rho(x^{*},x^{(n)})\to_{k\to\infty}0$
+\end_inset
+
+.
+ Теорема о двух милиционерах.
+\end_layout
+
+\begin_layout Definition
+Пространство 
+\begin_inset Formula $X$
+\end_inset
+
+ — полное, если любая фундаментальная последовательность в нем сходится
+ к элементу этого пространства: 
+\begin_inset Formula $\forall$
+\end_inset
+
+ фундаментальной последовательности 
+\begin_inset Formula $\{x^{(k)}\}\in X\ \exists x^{*}\in X$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $x^{(k)}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X=\RR$
+\end_inset
+
+ — полное.
+ 
+\begin_inset Formula $X=\QQ$
+\end_inset
+
+ — не полное, так как 
+\begin_inset Formula $x^{(k)}=(1+\frac{1}{k})^{k}\in\QQ$
+\end_inset
+
+ сходится к 
+\begin_inset Formula $e$
+\end_inset
+
+, но 
+\begin_inset Formula $e\notin Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Полнота пространства зависит, вообще говоря, от введенной метрики.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X=C[a,b]$
+\end_inset
+
+, 
+\begin_inset Formula $\rho_{1}(f(x),g(x))=\max_{[a,b]}|f(x)-g(x)|$
+\end_inset
+
+ и 
+\begin_inset Formula $\rho_{2}(f(x),g(x))=\int_{a}^{b}|f(x)-g(x)|dx$
+\end_inset
+
+.
+ Если рассматривать 
+\begin_inset Formula $\rho_{1}(f_{k}(x),g(x))\to_{k\to\infty}0\Rightarrow f_{k}(x)\rightrightarrows_{k\to0}^{[a,b]}f(x)\Rightarrow f(x)\in X$
+\end_inset
+
+, но 
+\begin_inset Formula $\rho_{2}(f_{k}(x),g(x))\to_{k\to\infty}0\not\Rightarrow f(x)\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(Бэра) Полное пространство не может быть представлено в виде счетного объединени
+я нигде не плотных множеств.
+\end_layout
+
+\begin_layout Corollary
+Полное пространство не может быть счетным.
+\end_layout
+
+\begin_layout Corollary
+Если пространство не полное, то его можно пополнить.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $X^{*}$
+\end_inset
+
+ называется пополнением пространства 
+\begin_inset Formula $X$
+\end_inset
+
+, если:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $X\subset X^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $X$
+\end_inset
+
+ — всюду плотно в 
+\begin_inset Formula $X^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $X^{*}$
+\end_inset
+
+ — полное.
+\end_layout
+
+\begin_layout Definition
+Операция пополнения эквивалентна опрерации замыкания, но замыкают чем-то
+ известным, а пополняют чем-то новым.
+\end_layout
+
+\begin_layout Section
+Открытые и замкнутые множества.
+ Предельные и внутренние точки множества.
+ Замыкание множества
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+-окрестность точки 
+\begin_inset Formula $x$
+\end_inset
+
+: 
+\begin_inset Formula $V_{\varepsilon}(x)=\{y\in X:\rho(x,y)<\varepsilon\}$
+\end_inset
+
+ — шар с центром в точке 
+\begin_inset Formula $x$
+\end_inset
+
+ и радиусом 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ Также 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+-окрестность эквивалентна открытому шару 
+\begin_inset Formula $B_{\varepsilon}(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Закрытый шар 
+\begin_inset Formula $\overline{B}_{\varepsilon}(x_{0})$
+\end_inset
+
+: 
+\begin_inset Formula $x:\rho(x,x_{0})\leq\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $E\subset X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ — внутренняя точка, если 
+\begin_inset Formula $B_{\varepsilon}(x_{0})\in E$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Открытое множество — множество, состоящее только из внутренних точек.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $E\subset X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ — предельная точка для 
+\begin_inset Formula $E$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $B_{\varepsilon}(x_{0})\cap E\neq\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Замыкание множества — процесс присоединения к нему всех его предельных точек:
+ 
+\begin_inset Formula $\overline{E}=E\cup\{\text{предельные точки}\}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Section
+Принцип сжимающих отображений.
+ Неподвижная точка оператора
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — два метрических пространства.
+ Пусть 
+\begin_inset Formula $\rho_{1},\rho_{2}$
+\end_inset
+
+ — метрики в пространствах 
+\begin_inset Formula $X$
+\end_inset
+
+ и 
+\begin_inset Formula $Y$
+\end_inset
+
+ соответственно.
+ И пусть задано отображение 
+\begin_inset Formula $\mathcal{A}:X\to Y$
+\end_inset
+
+ (
+\begin_inset Formula $\forall x\in X\ \exists y=\AA x\in Y$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Definition
+Отображение 
+\begin_inset Formula $\AA$
+\end_inset
+
+ называется непрерывным в точке 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+, если 
+\begin_inset Formula $\forall\{x_{k}\}\in X:\ x_{k}\to_{k\to\infty}x_{0}\Rightarrow\AA x_{k}\to_{k\to\infty}\AA x_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Или, что то же самое: 
+\begin_inset Formula $\forall\varepsilon>0\ \exists\delta>0$
+\end_inset
+
+, такое, что если 
+\begin_inset Formula $\rho_{1}(x,x_{0})<\delta$
+\end_inset
+
+, то 
+\begin_inset Formula $\rho_{2}(\AA x,\AA x_{0})<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Предположим далее, что 
+\begin_inset Formula $X=Y$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+ и 
+\begin_inset Formula $\rho_{1}=\rho_{2}=\rho$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Точка 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ — неподвижная точка отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+, если 
+\begin_inset Formula $\AA x^{*}=x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Отображение 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+ называется сжимающим, если 
+\begin_inset Formula $\exists\alpha\in[0,1)$
+\end_inset
+
+, такая, что 
+\begin_inset Formula $\forall x,y\in X$
+\end_inset
+
+ верно 
+\begin_inset Formula $\rho(\AA x,\AA y)\leq\alpha\rho(x,y)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Lemma
+\begin_inset Formula $\AA$
+\end_inset
+
+ сжимающее 
+\begin_inset Formula $\Rightarrow\AA$
+\end_inset
+
+ непрерывное на 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x_{0}\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\{x_{k}\}\in X:\ x_{k}\to_{k\to\infty}x_{0}\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $0\leq\rho(\AA x_{k},\AA x_{0})\leq\alpha\rho(x_{k},x_{0})\to_{k\to\infty}0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(о неподвижной точке, она же Каччапалья-Банаха, она же принцип сжимающих
+ отображений)
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $X$
+\end_inset
+
+ — полное метрическое пространство, 
+\begin_inset Formula $\AA:X\to X$
+\end_inset
+
+.
+ Тогда у отображения 
+\begin_inset Formula $\AA$
+\end_inset
+
+ 
+\begin_inset Formula $\exists!$
+\end_inset
+
+ неподвижная точка.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall x_{0}\in X$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x_{1}=\AA x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x_{2}=\AA x_{1}=\AA(\AA x_{0})=\AA^{2}x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X_{k}=\AA^{k}x_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Proof
+Докажем, что эта последовательность является фундаментальной:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall n\geq m\geq1$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\rho(x_{n},x_{m})=\rho(\AA^{n}x_{0},\AA^{m}x_{0})\leq\alpha\rho(\AA^{n-1}x_{0},\AA^{m-1}x_{0})\leq...\leq\alpha^{m}\rho(\AA^{n-m}x_{0},x_{0})\leq\\
+\leq\alpha^{m}\left(\rho(\AA^{n-m}x_{0},\AA^{n-m-1}x_{0})+...+\rho(\AA^{n-m-1}x_{0},\AA^{n-m-2}x_{0})+...+\rho(\AA x_{0},x_{0})\right)\leq\\
+\leq\alpha^{m}\left(\alpha^{n-m-1}\rho(\AA x_{0},x_{0})+\alpha^{n-m-2}\rho(\AA x_{0},x_{0})+...+\rho(\AA x_{0},x_{0})\right)\leq\\
+\leq\alpha^{m}\rho(x_{0},x_{1})\left(1+\alpha+\alpha^{2}+...+\alpha^{n-m-1}+...\right)=\frac{\alpha^{m}\rho(x_{0},x_{1})}{1-\alpha}\to_{m\to\infty}0
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+следовательно, последовательность является фундаментальной.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X$
+\end_inset
+
+ полное, следовательно, 
+\begin_inset Formula $\exists x^{*}\in X:\ x_{k}\to_{k\to\infty}x^{*}$
+\end_inset
+
+.
+ Покажем, что 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ будет неподвижной точкой: 
+\begin_inset Formula 
+\[
+\AA x^{*}=\AA\lim_{k\to\infty}x_{k}=\left(A\ \text{сжим,непр}\right)=\lim_{k\to\infty}\AA x^{*}=\lim_{k\to\infty}x_{x+1}=x^{*}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Докажем, что точка единственная.
+ От противного:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{*},y^{*}$
+\end_inset
+
+ — неподвижные точки 
+\begin_inset Formula $\AA$
+\end_inset
+
+.
+ Тогда: 
+\begin_inset Formula 
+\[
+0\leq\rho(x^{*},y^{*})=\rho(\AA x^{*},\AA y^{*})\leq\underbrace{\alpha}_{<1}\rho(x^{*},y^{*})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+То есть 
+\begin_inset Formula $\rho(x^{*},y^{*})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+В доказательстве содержится алгоритм поиска неподвижной точки.
+ Выберем любую точку, применим к ней несколько раз отображение и предел
+ данной последовательности будет неподвижной точкой.
+\end_layout
+
+\begin_layout Section
+Линейные пространства.
+ Линейно независимая система.
+ Размерность
+\end_layout
+
+\begin_layout Section
+Нормированные пространства.
+ Банаховы пространства.
+ Определение, примеры.
+ Сходимость в нормированном пространстве
+\end_layout
+
+\begin_layout Definition
+Норма — функция 
+\begin_inset Formula $\norm{\cdot}:X\to\RR$
+\end_inset
+
+, удовлетворяющая свойствам:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\norm x\geq0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\norm x=0\Leftrightarrow x=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\norm{\alpha x}=\alpha\norm x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+4) 
+\begin_inset Formula $\norm{x+y}\leq\norm x+\norm y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+где 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Нормированное пространство — линейное пространство, на котором введена норма.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Банахово пространство — ...
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+Пусть пространство имеет вид: 
+\end_layout
+
+\begin_layout Example
+1) 
+\begin_inset Formula $C[a,b]$
+\end_inset
+
+: 
+\begin_inset Formula $f$
+\end_inset
+
+ непрерывна, 
+\begin_inset Formula $\norm f=\max_{x\in[a,b]}|f(x)|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+2) 
+\begin_inset Formula $C^{k}[a,b]$
+\end_inset
+
+: 
+\begin_inset Formula $\norm f:\ \max_{x\in[a,b]}|f(x)|+\sum_{n=1}^{k}\max|f^{(n)}(x)|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+3) 
+\begin_inset Formula $L_{1}[a,b]:$
+\end_inset
+
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ интегрируема по Лебегу на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, 
+\begin_inset Formula $\norm f=\int_{a}^{b}|f(x)|dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+4) 
+\begin_inset Formula $L_{p}[a,b]:$
+\end_inset
+
+ 
+\begin_inset Formula $\norm f_{p}=\left(\int_{a}^{b}|f(x)|^{p}dx\right)^{\nicefrac{1}{p}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+5) 
+\begin_inset Formula $l_{p}(\NN):=\{\text{последовательности }x=\{x_{n}\}:\ \sum_{n}|x_{n}|^{p}<+\infty\}$
+\end_inset
+
+: 
+\begin_inset Formula $\norm x_{p}=\left(\sum_{n}|x_{n}|^{p}\right)^{\nicefrac{1}{p}}<+\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Линейные, непрерывные операторы.
+ Норма оператора
+\end_layout
+
+\begin_layout Section
+Гильбертово пространство.
+ Ортонормированный базис.
+ Ряд Фурье
+\end_layout
+
+\begin_layout Section
+Подпространство Гильбертова пространства.
+ Задача наилучшего приближения в гильбертовом пространстве
+\end_layout
+
+\begin_layout Section
+Процесс ортогонализации Грамма-Шмидта
+\end_layout
+
+\end_body
+\end_document
