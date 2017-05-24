@@ -1302,8 +1302,37 @@ X_{k}=\AA^{k}x_{0}
 .
 \end_layout
 
-\begin_layout Standard
-(сюда сходимость)
+\begin_layout Definition
+Пусть 
+\begin_inset Formula $\{x^{(k)}\}_{k=1}^{\infty}$
+\end_inset
+
+ — последовательность элементов в 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ И пусть 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $x^{(k)}\to_{k\to\infty}x^{*}$
+\end_inset
+
+, если 
+\begin_inset Formula $\norm{x-x_{k}}\to_{k\to\infty}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
