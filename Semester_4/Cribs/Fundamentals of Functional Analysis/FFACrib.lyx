@@ -352,7 +352,7 @@ LatexCommand tableofcontents
 
 .
  Тогда 
-\begin_inset Formula $x^{(k)}\to x^{*}$
+\begin_inset Formula $x^{(k)}\to_{k\to\infty}x^{*}$
 \end_inset
 
 , если 
@@ -746,7 +746,7 @@ LatexCommand tableofcontents
 \begin_inset Formula $\AA:X\to X$
 \end_inset
 
- и 
+ — оператор, и 
 \begin_inset Formula $\rho_{1}=\rho_{2}=\rho$
 \end_inset
 
@@ -818,7 +818,7 @@ LatexCommand tableofcontents
 \begin_inset Formula $0\leq\rho(\AA x_{k},\AA x_{0})\leq\alpha\rho(x_{k},x_{0})\to_{k\to\infty}0$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Theorem
@@ -1110,7 +1110,7 @@ X_{k}=\AA^{k}x_{0}
 \begin_inset Formula $n$
 \end_inset
 
--мерном линейном пространстве называется любая система 
+-мерном линейном пространстве называется система 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1339,7 +1339,7 @@ X_{k}=\AA^{k}x_{0}
 \begin_inset Formula $X,Y$
 \end_inset
 
- — линейные пространства.
+ — нормированные пространства.
  
 \begin_inset Formula $A:X\to Y$
 \end_inset
@@ -1410,7 +1410,7 @@ X_{k}=\AA^{k}x_{0}
 \end_inset
 
 , такое, что 
-\begin_inset Formula $\norm{x_{1}-x_{2}}_{x}<\delta\Rightarrow\norm{Ax_{1}-Ax_{2}}_{y}$
+\begin_inset Formula $\norm{x_{1}-x_{2}}_{X}<\delta\Rightarrow\norm{Ax_{1}-Ax_{2}}_{Y}<\varepsilon$
 \end_inset
 
 .
@@ -1467,7 +1467,7 @@ X_{k}=\AA^{k}x_{0}
 \end_inset
 
  ограничен, наименьшее возможное 
-\begin_inset Formula $M$
+\begin_inset Formula $C$
 \end_inset
 
  называется его нормой.
@@ -1582,6 +1582,12 @@ X_{k}=\AA^{k}x_{0}
 
 \begin_deeper
 \begin_layout Definition
+Сепарабельное пространство — пространство, содержащее в себе счетное всюду
+ плотное множенство.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
 Элементы 
 \begin_inset Formula $x$
 \end_inset
@@ -1627,6 +1633,7 @@ X_{k}=\AA^{k}x_{0}
 ), то такой базис называется ортонормированным.
 \end_layout
 
+\end_deeper
 \end_deeper
 \end_deeper
 \end_deeper
@@ -1820,10 +1827,6 @@ b_{i}=a_{i}-\sum_{j=1}^{i-1}\frac{(a_{i},b_{j})}{(b_{j},b_{j})}b_{j}
  является перпендикуляром, восстановленным к линейной оболочке векторов
  
 \begin_inset Formula $a_{1},...,a_{i-1}$
-\end_inset
-
- до конца вектора 
-\begin_inset Formula $a_{i}$
 \end_inset
 
 .
