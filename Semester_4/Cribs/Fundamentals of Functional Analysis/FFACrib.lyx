@@ -251,7 +251,7 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Enumerate
 \begin_inset Formula $X=\RR$
 \end_inset
 
@@ -262,48 +262,44 @@ LatexCommand tableofcontents
 .
 \end_layout
 
-\begin_layout Example
+\begin_layout Enumerate
 \begin_inset Formula $X=\RR^{n}$
 \end_inset
 
 , тогда: 
 \end_layout
 
-\begin_layout Example
-1) 
+\begin_deeper
+\begin_layout Enumerate
 \begin_inset Formula $\rho(x,y)=\sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}}$
 \end_inset
 
  (сферическая метрика);
 \end_layout
 
-\begin_layout Example
-2) 
+\begin_layout Enumerate
 \begin_inset Formula $\rho(x,y)=\max_{i=\overline{1,n}}\left|x_{i}-y_{i}\right|$
 \end_inset
 
  (параллелепипедальная);
 \end_layout
 
-\begin_layout Example
-3) 
+\begin_layout Enumerate
 \begin_inset Formula $\rho(x,y)=\sum_{i=1}^{n}\left|x_{i}-y_{i}\right|$
 \end_inset
 
 ;
 \end_layout
 
-\begin_layout Example
-4) 
+\begin_layout Enumerate
 \begin_inset Formula $\rho(x,y)=\left(\sum_{i=1}^{n}\left|x_{i}-y_{i}\right|^{p}\right)^{\nicefrac{1}{p}}$
 \end_inset
 
 .
 \end_layout
 
-\begin_deeper
-\begin_layout Example
-Пусть 
+\end_deeper
+\begin_layout Enumerate
 \begin_inset Formula $X=C[a,b]$
 \end_inset
 
@@ -311,16 +307,15 @@ LatexCommand tableofcontents
  
 \end_layout
 
-\begin_layout Example
-1) 
+\begin_deeper
+\begin_layout Enumerate
 \begin_inset Formula $\rho(f(x),g(x))=\max_{[a,b]}|f(x)-g(x)|$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
-2) 
+\begin_layout Enumerate
 \begin_inset Formula $\rho(f(x),g(x))=\int_{a}^{b}|f(x)-g(x)|dx$
 \end_inset
 
@@ -1585,11 +1580,142 @@ X_{k}=\AA^{k}x_{0}
  произведение.
 \end_layout
 
+\begin_deeper
 \begin_layout Definition
-(еще что-то)
+Элементы 
+\begin_inset Formula $x$
+\end_inset
+
+ и 
+\begin_inset Formula $y$
+\end_inset
+
+ гильбертова пространства 
+\begin_inset Formula $H$
+\end_inset
+
+ называются ортогональными, если 
+\begin_inset Formula $(x,y)=0$
+\end_inset
+
+.
+ При этом пишут 
+\begin_inset Formula $x\perp y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Система векторов гильбертова пространства называется ортогональной, если
+ все векторы этой системы попарно ортогональны между собой.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Линейно независимая ортогональная система называется ортогональным базисом.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Если все вектора ортогонального базиса нормированы (то есть 
+\begin_inset Formula $a_{i}=\nicefrac{b_{i}}{\norm{b_{i}}}$
+\end_inset
+
+), то такой базис называется ортонормированным.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
+Рассмотрим систему 
+\begin_inset Formula $1,\cos x,\sin x,\cos2x,\sin2x,...$
+\end_inset
+
+.
+ На промежутке 
+\begin_inset Formula $[-\pi,\pi]$
+\end_inset
+
+ данная система является ортогональной.
+ 
+\begin_inset Formula $\forall f(x)\in L_{2}[-\pi,\pi]$
+\end_inset
+
+ существует разложение 
+\begin_inset Formula 
+\[
+f(x)=\frac{a_{0}}{2}+\sum_{k=1}^{\infty}\left(a_{k}\cos kx+b_{k}\sin kx\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+где 
+\begin_inset Formula $a_{k},b_{k}$
+\end_inset
+
+ — 
+\begin_inset Formula $const$
+\end_inset
+
+.
+ Подобное разложение называется рядом Фурье.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Рассмотрим систему 
+\begin_inset Formula $\{\varphi_{k}\}_{k=1}^{\infty}$
+\end_inset
+
+ — ортонормированный базис в 
+\begin_inset Formula $X$
+\end_inset
+
+ — сепарабельном евклидовом пространстве.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\forall f\in X$
+\end_inset
+
+ существует разложение 
+\begin_inset Formula 
+\[
+f=\sum_{k=1}^{\infty}c_{k}\varphi_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+где 
+\begin_inset Formula $c_{k}=(f,\varphi_{k})$
+\end_inset
+
+ — коэффициент Фурье.
+ Такое разложение называется обобщенным рядом Фурье.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -1620,13 +1746,6 @@ X_{k}=\AA^{k}x_{0}
 .
 \end_layout
 
-\begin_deeper
-\begin_layout Definition
-Система векторов евклидового пространства называется ортогональной, если
- все векторы этой системы попарно ортогональны между собой.
-\end_layout
-
-\end_deeper
 \begin_layout Standard
 
 \series bold
