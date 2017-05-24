@@ -840,7 +840,7 @@ LatexCommand tableofcontents
 \begin_inset Formula $\AA:X\to X$
 \end_inset
 
-.
+ — сжимающее.
  Тогда у отображения 
 \begin_inset Formula $\AA$
 \end_inset
@@ -860,28 +860,15 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Proof
-\begin_inset Formula $x_{1}=\AA x_{0}$
+\begin_inset Formula $\begin{array}{l}
+x_{1}=\AA x_{0}\\
+x_{2}=\AA x_{1}=\AA(\AA x_{0})=\AA^{2}x_{0}\\
+...\\
+X_{k}=\AA^{k}x_{0}
+\end{array}$
 \end_inset
 
-;
-\end_layout
 
-\begin_layout Proof
-\begin_inset Formula $x_{2}=\AA x_{1}=\AA(\AA x_{0})=\AA^{2}x_{0}$
-\end_inset
-
-;
-\end_layout
-
-\begin_layout Proof
-...
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $X_{k}=\AA^{k}x_{0}$
-\end_inset
-
-;
 \end_layout
 
 \begin_layout Proof
@@ -895,7 +882,7 @@ LatexCommand tableofcontents
  
 \begin_inset Formula 
 \begin{multline*}
-\rho(x_{n},x_{m})=\rho(\AA^{n}x_{0},\AA^{m}x_{0})\leq\alpha\rho(\AA^{n-1}x_{0},\AA^{m-1}x_{0})\leq...\leq\alpha^{m}\rho(\AA^{n-m}x_{0},x_{0})\leq\\
+\rho(x_{n},x_{m})=\rho(\AA^{n}x_{0},\AA^{m}x_{0})\leq\alpha\rho(\AA^{n-1}x_{0},\AA^{m-1}x_{0})\leq...\leq\alpha^{m}\rho(\AA^{n-m}x_{0},x_{0})\leq(*)\leq\\
 \leq\alpha^{m}\left(\rho(\AA^{n-m}x_{0},\AA^{n-m-1}x_{0})+...+\rho(\AA^{n-m-1}x_{0},\AA^{n-m-2}x_{0})+...+\rho(\AA x_{0},x_{0})\right)\leq\\
 \leq\alpha^{m}\left(\alpha^{n-m-1}\rho(\AA x_{0},x_{0})+\alpha^{n-m-2}\rho(\AA x_{0},x_{0})+...+\rho(\AA x_{0},x_{0})\right)\leq\\
 \leq\alpha^{m}\rho(x_{0},x_{1})\left(1+\alpha+\alpha^{2}+...+\alpha^{n-m-1}+...\right)=\frac{\alpha^{m}\rho(x_{0},x_{1})}{1-\alpha}\to_{m\to\infty}0
@@ -907,7 +894,14 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Proof
-следовательно, последовательность является фундаментальной.
+\begin_inset Formula $(*)$
+\end_inset
+
+ — по неравенству треугольника.
+\end_layout
+
+\begin_layout Proof
+Следовательно, последовательность является фундаментальной.
 \end_layout
 
 \begin_layout Proof
@@ -926,7 +920,7 @@ LatexCommand tableofcontents
  будет неподвижной точкой: 
 \begin_inset Formula 
 \[
-\AA x^{*}=\AA\lim_{k\to\infty}x_{k}=\left(A\ \text{сжим,непр}\right)=\lim_{k\to\infty}\AA x^{*}=\lim_{k\to\infty}x_{x+1}=x^{*}
+\AA x^{*}=\AA\lim_{k\to\infty}x_{k}=\left(A\ \text{сжим,непр}\right)=\lim_{k\to\infty}\AA x^{*}=\lim_{k\to\infty}x_{k+1}=x^{*}
 \]
 
 \end_inset
@@ -951,7 +945,7 @@ LatexCommand tableofcontents
  Тогда: 
 \begin_inset Formula 
 \[
-0\leq\rho(x^{*},y^{*})=\rho(\AA x^{*},\AA y^{*})\leq\underbrace{\alpha}_{<1}\rho(x^{*},y^{*})
+0<\rho(x^{*},y^{*})=\rho(\AA x^{*},\AA y^{*})\leq\underbrace{\alpha}_{<1}\rho(x^{*},y^{*})
 \]
 
 \end_inset
@@ -960,7 +954,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Proof
-То есть 
+противоречие, то есть 
 \begin_inset Formula $\rho(x^{*},y^{*})=0$
 \end_inset
 
