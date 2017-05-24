@@ -751,7 +751,7 @@ LatexCommand tableofcontents
 \begin_inset Formula $\AA:X\to X$
 \end_inset
 
- — оператор и 
+ и 
 \begin_inset Formula $\rho_{1}=\rho_{2}=\rho$
 \end_inset
 
@@ -967,10 +967,196 @@ X_{k}=\AA^{k}x_{0}
  данной последовательности будет неподвижной точкой.
 \end_layout
 
+\begin_layout Remark
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Линейные пространства.
  Линейно независимая система.
  Размерность
+\end_layout
+
+\begin_layout Definition
+Непустое множество 
+\begin_inset Formula $L$
+\end_inset
+
+ называют линейным пространством (или векторным пространством), если выполняются
+ следующие условия:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\forall x,y\in L\ \exists z=x+y\in L$
+\end_inset
+
+, причем выполнены: 
+\end_layout
+
+\begin_layout Definition
+1) Коммутативность: 
+\begin_inset Formula $x+y=y+x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) Ассоциативность: 
+\begin_inset Formula $(x+y)+z=x+(y+z)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) Существование нуля: 
+\begin_inset Formula $\exists0\in L$
+\end_inset
+
+, что 
+\begin_inset Formula $\forall x\in L:x+0=x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+4) Существование противоположного элемента: 
+\begin_inset Formula $\forall x\in L$
+\end_inset
+
+ 
+\begin_inset Formula $\exists-x\in L$
+\end_inset
+
+, такой что 
+\begin_inset Formula $x+(-x)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Для любого числа 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ и любого элемента 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ определён элемент 
+\begin_inset Formula $\alpha x\in L$
+\end_inset
+
+ (произведение элемента на число), причём 
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\alpha(\beta x)=(\alpha\beta)x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $1\cdot x=x$
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $(\alpha+\beta)x=\alpha x+\beta x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+4) 
+\begin_inset Formula $\alpha(x+y)=\alpha x+\alpha y$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Система элементов 
+\begin_inset Formula $\{x_{1},...,x_{n}\}$
+\end_inset
+
+ линейного пространства 
+\begin_inset Formula $L$
+\end_inset
+
+ называется линейно независимой, если равенство 
+\begin_inset Formula $\sum_{i=1}^{n}a_{i}x_{i}=0$
+\end_inset
+
+ возможно только при 
+\begin_inset Formula $a_{1}=a_{2}=...=a_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Базисом в 
+\begin_inset Formula $n$
+\end_inset
+
+-мерном линейном пространстве называется любая система 
+\begin_inset Formula $n$
+\end_inset
+
+ линейно независимых элементов.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Если в линейном пространстве 
+\begin_inset Formula $L$
+\end_inset
+
+ можно найти 
+\begin_inset Formula $n$
+\end_inset
+
+ линейно независимых элементов, а любые 
+\begin_inset Formula $n+1$
+\end_inset
+
+ элементов являются линейно-зависимыми, то пространство 
+\begin_inset Formula $L$
+\end_inset
+
+ имеет размерность 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Если же в линейном пространстве можно выбрать любое конечное число линейно
+ независимых элементов, то такое пространство называют бесконечномерным.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1035,7 +1221,7 @@ X_{k}=\AA^{k}x_{0}
 
 \begin_deeper
 \begin_layout Definition
-Банахово пространство — ...
+Банахово пространство — полное нормированное пространство.
 \end_layout
 
 \end_deeper
@@ -1116,9 +1302,99 @@ X_{k}=\AA^{k}x_{0}
 .
 \end_layout
 
+\begin_layout Standard
+(сюда сходимость)
+\end_layout
+
 \begin_layout Section
 Линейные, непрерывные операторы.
  Норма оператора
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $X,Y$
+\end_inset
+
+ — линейные пространства.
+ 
+\begin_inset Formula $A:X\to Y$
+\end_inset
+
+ — оператор, если 
+\begin_inset Formula $\forall x\in X\ \exists y=Ax\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Оператор 
+\begin_inset Formula $A$
+\end_inset
+
+ называется линейным, если он удовлетворяет свойству дистрибутивности: 
+\begin_inset Formula $\forall x_{1},x_{2}\in X,\ \forall\alpha_{1},\alpha_{2}=const$
+\end_inset
+
+ 
+\begin_inset Formula $A(\alpha_{1}x_{1}+\alpha_{2}x_{2})=\alpha_{1}Ax_{1}+\alpha_{2}Ax_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $X=C^{1}[a,b]$
+\end_inset
+
+, 
+\begin_inset Formula $Y=C[a,b]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A=\frac{d}{dt}:\ x(t)\in X\to x'(t)\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Линейный оператор 
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+, действующий из линейного пространства 
+\begin_inset Formula $X$
+\end_inset
+
+ в линейное пространство 
+\begin_inset Formula $Y$
+\end_inset
+
+, непрерывен тогда и только тогда, когда для любой последовательности 
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+ 
+\begin_inset Formula $\in X$
+\end_inset
+
+, 
+\begin_inset Formula $x_{n}\rightarrow_{n\to\infty}x_{0}$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $Ax_{n}\rightarrow_{n\to\infty}Ax_{0}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
