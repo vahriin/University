@@ -1013,7 +1013,7 @@ X_{k}=\AA^{k}x_{0}
 \end_layout
 
 \begin_layout Definition
-3) Существование нуля: 
+3) Существование нулевого элемента: 
 \begin_inset Formula $\exists0\in L$
 \end_inset
 
@@ -1322,7 +1322,7 @@ X_{k}=\AA^{k}x_{0}
 \end_inset
 
 , если 
-\begin_inset Formula $\norm{x-x_{k}}\to_{k\to\infty}0$
+\begin_inset Formula $\norm{x^{*}-x_{k}}\to_{k\to\infty}0$
 \end_inset
 
 .
@@ -1358,6 +1358,23 @@ X_{k}=\AA^{k}x_{0}
 
 \begin_deeper
 \begin_layout Definition
+Если 
+\begin_inset Formula $Y=\RR$
+\end_inset
+
+, то есть оператор 
+\begin_inset Formula $A:X\to\RR$
+\end_inset
+
+, то 
+\begin_inset Formula $A$
+\end_inset
+
+ называется функционалом.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
 Оператор 
 \begin_inset Formula $A$
 \end_inset
@@ -1371,8 +1388,10 @@ X_{k}=\AA^{k}x_{0}
 \end_inset
 
 .
+ Также линейным может быть и функционал.
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Example
 \begin_inset Formula $X=C^{1}[a,b]$
@@ -1391,39 +1410,87 @@ X_{k}=\AA^{k}x_{0}
 \end_layout
 
 \begin_layout Definition
-Линейный оператор 
-\begin_inset Formula $A:X\rightarrow Y$
+Линейный оператор непрерывен, если 
+\begin_inset Formula $\forall\varepsilon>0\ \exists\delta(\varepsilon)>0$
 \end_inset
 
-, действующий из линейного пространства 
-\begin_inset Formula $X$
-\end_inset
-
- в линейное пространство 
-\begin_inset Formula $Y$
-\end_inset
-
-, непрерывен тогда и только тогда, когда для любой последовательности 
-\begin_inset Formula $\{x_{n}\}$
-\end_inset
-
- 
-\begin_inset Formula $\in X$
-\end_inset
-
-, 
-\begin_inset Formula $x_{n}\rightarrow_{n\to\infty}x_{0}$
-\end_inset
-
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\begin_inset Formula $Ax_{n}\rightarrow_{n\to\infty}Ax_{0}$
+, такое, что 
+\begin_inset Formula $\norm{x_{1}-x_{2}}_{x}<\delta\Rightarrow\norm{Ax_{1}-Ax_{2}}_{y}$
 \end_inset
 
 .
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $A$
+\end_inset
+
+ — ограничен, если 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $\norm{Ax}_{y}\leq C\norm x_{x}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Claim
+\begin_inset Formula $A$
+\end_inset
+
+ непрерывен 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ ограничен.
+\end_layout
+
+\begin_layout Definition
+Пусть 
+\begin_inset Formula $P$
+\end_inset
+
+ и 
+\begin_inset Formula $Q$
+\end_inset
+
+ — два нормированных линейных пространства и 
+\begin_inset Formula $A:P\to Q$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $A$
+\end_inset
+
+ ограничен, наименьшее возможное 
+\begin_inset Formula $M$
+\end_inset
+
+ называется его нормой.
+\end_layout
+
+\begin_layout Definition
+Норма оператора определяется как 
+\begin_inset Formula $\norm A=\sup_{\norm x_{x}\leq1}\norm{Ax}_{y}=\sup\frac{\norm{Ax}_{y}}{\norm x_{x}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
