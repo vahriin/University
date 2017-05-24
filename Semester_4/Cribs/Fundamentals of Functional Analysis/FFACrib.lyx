@@ -328,6 +328,13 @@ LatexCommand tableofcontents
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Сходимость в метрическом пространстве.
  Фундаментальные последовательности.
@@ -466,9 +473,6 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Definition
-Всюду плотное множенство — подмножество пространства, точками которого можно
- сколь угодно хорошо приблизить любую точку объемлющего пространства.
- Формально говоря, 
 \begin_inset Formula $A$
 \end_inset
 
@@ -485,9 +489,22 @@ LatexCommand tableofcontents
 \end_inset
 
 .
+ То есть всюду плотное множенство — подмножество пространства, точками которого
+ можно сколь угодно хорошо приблизить любую точку объемлющего пространства.
 \end_layout
 
-\begin_deeper
+\begin_layout Example
+Множество рациональных чисел 
+\begin_inset Formula $\QQ$
+\end_inset
+
+ плотно в пространстве вещественных чисел 
+\begin_inset Formula $\RR$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Definition
 \begin_inset Formula $X^{*}$
 \end_inset
@@ -527,7 +544,13 @@ LatexCommand tableofcontents
  — полное.
 \end_layout
 
-\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Открытые и замкнутые множества.
  Предельные и внутренние точки множества.
@@ -539,22 +562,14 @@ LatexCommand tableofcontents
 \end_inset
 
 -окрестность точки 
-\begin_inset Formula $x$
+\begin_inset Formula $x_{0}$
 \end_inset
 
-: 
-\begin_inset Formula $V_{\varepsilon}(x)=\{y\in X:\rho(x,y)<\varepsilon\}$
+ — множенство 
+\begin_inset Formula $V_{\varepsilon}(x_{0})=\{x\in X:\rho(x_{0},x)<\varepsilon\}$
 \end_inset
 
- — шар с центром в точке 
-\begin_inset Formula $x$
-\end_inset
-
- и радиусом 
-\begin_inset Formula $\varepsilon$
-\end_inset
-
-.
+ .
  Также 
 \begin_inset Formula $\varepsilon$
 \end_inset
@@ -563,7 +578,15 @@ LatexCommand tableofcontents
 \begin_inset Formula $B_{\varepsilon}(x_{0})$
 \end_inset
 
-.
+, где 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ — центр, а 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ — радиус.
 \end_layout
 
 \begin_deeper
@@ -572,7 +595,7 @@ LatexCommand tableofcontents
 \begin_inset Formula $\overline{B}_{\varepsilon}(x_{0})$
 \end_inset
 
-: 
+ — это такие 
 \begin_inset Formula $x:\rho(x,x_{0})\leq\varepsilon$
 \end_inset
 
@@ -590,6 +613,10 @@ LatexCommand tableofcontents
 \end_inset
 
  — внутренняя точка, если 
+\begin_inset Formula $\exists\varepsilon>0$
+\end_inset
+
+, такое, что 
 \begin_inset Formula $B_{\varepsilon}(x_{0})\in E$
 \end_inset
 
@@ -641,6 +668,13 @@ LatexCommand tableofcontents
 \end_deeper
 \end_deeper
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Принцип сжимающих отображений.
  Неподвижная точка оператора
@@ -717,7 +751,7 @@ LatexCommand tableofcontents
 \begin_inset Formula $\AA:X\to X$
 \end_inset
 
- и 
+ — оператор и 
 \begin_inset Formula $\rho_{1}=\rho_{2}=\rho$
 \end_inset
 
