@@ -321,7 +321,7 @@ LatexCommand tableofcontents
 
 \begin_layout Example
 2) 
-\begin_inset Formula $\rho(x,y)=\int_{a}^{b}|f(x)-g(x)|dx$
+\begin_inset Formula $\rho(f(x),g(x))=\int_{a}^{b}|f(x)-g(x)|dx$
 \end_inset
 
 .
@@ -384,7 +384,7 @@ LatexCommand tableofcontents
 
 \begin_layout Proof
 Рассмотрим 
-\begin_inset Formula $0\leq\rho(x^{(k)},x^{(n)})\leq\rho(x^{(k)},x^{*})+\rho(x^{*},x^{(n)})\to_{k\to\infty}0$
+\begin_inset Formula $0\leq\rho(x^{(k)},x^{(n)})\leq\rho(x^{(k)},x^{*})+\rho(x^{*},x^{(n)})\to_{\{k,n\}\to\infty}0$
 \end_inset
 
 .
@@ -465,19 +465,29 @@ LatexCommand tableofcontents
 .
 \end_layout
 
-\begin_layout Theorem
-(Бэра) Полное пространство не может быть представлено в виде счетного объединени
-я нигде не плотных множеств.
+\begin_layout Definition
+Всюду плотное множенство — подмножество пространства, точками которого можно
+ сколь угодно хорошо приблизить любую точку объемлющего пространства.
+ Формально говоря, 
+\begin_inset Formula $A$
+\end_inset
+
+ плотно в 
+\begin_inset Formula $X$
+\end_inset
+
+, если всякая окрестность любой точки 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ содержит элемент из 
+\begin_inset Formula $A$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Corollary
-Полное пространство не может быть счетным.
-\end_layout
-
-\begin_layout Corollary
-Если пространство не полное, то его можно пополнить.
-\end_layout
-
+\begin_deeper
 \begin_layout Definition
 \begin_inset Formula $X^{*}$
 \end_inset
@@ -517,11 +527,7 @@ LatexCommand tableofcontents
  — полное.
 \end_layout
 
-\begin_layout Definition
-Операция пополнения эквивалентна опрерации замыкания, но замыкают чем-то
- известным, а пополняют чем-то новым.
-\end_layout
-
+\end_deeper
 \begin_layout Section
 Открытые и замкнутые множества.
  Предельные и внутренние точки множества.
@@ -1091,11 +1097,6 @@ LatexCommand tableofcontents
 Гильбертово пространство.
  Ортонормированный базис.
  Ряд Фурье
-\end_layout
-
-\begin_layout Section
-Подпространство Гильбертова пространства.
- Задача наилучшего приближения в гильбертовом пространстве
 \end_layout
 
 \begin_layout Section
