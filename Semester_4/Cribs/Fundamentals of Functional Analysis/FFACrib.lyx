@@ -1499,8 +1499,231 @@ X_{k}=\AA^{k}x_{0}
  Ряд Фурье
 \end_layout
 
+\begin_layout Definition
+Скалярное произведение — функция 
+\begin_inset Formula $H\times H\to\RR$
+\end_inset
+
+ (обозначается как 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+), удовлетворяющее условиям:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $(x,x)=0\Leftrightarrow x=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $(x,y)=(y,x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $(\lambda x,y)=\lambda(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+4) 
+\begin_inset Formula $(x+z,y)=(x,y)+(z,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+В пространстве:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\RR^{n}$
+\end_inset
+
+ — 
+\begin_inset Formula $(x,y)=\sum_{i=1}^{n}x_{i}y_{i}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $l_{2}(\NN)$
+\end_inset
+
+ — 
+\begin_inset Formula $(x,y)=\sum_{i=1}^{n}x_{i}y_{i}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $L_{2}[0,1]$
+\end_inset
+
+ — 
+\begin_inset Formula $(f,g)=\int_{0}^{1}f\cdot g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Гильбертово пространство — Банахово пространство, в котором введено скалярное
+ произведение.
+\end_layout
+
+\begin_layout Definition
+(еще что-то)
+\end_layout
+
+\begin_layout Definition
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Процесс ортогонализации Грамма-Шмидта
+\end_layout
+
+\begin_layout Definition
+Процессом ортогонализации системы векторов 
+\begin_inset Formula $a_{1},a_{2},...,a_{s}$
+\end_inset
+
+ называется переход от данной системы к системе 
+\begin_inset Formula $b_{1},b_{2},...,b_{s}$
+\end_inset
+
+, построенной следующим образом: 
+\begin_inset Formula $b_{1}=a_{1};b_{k}=a_{k}-\sum_{i=1}^{n-1}c_{i}b_{i}\ (k=2,3,...,s)$
+\end_inset
+
+, где 
+\begin_inset Formula $c_{i}=\frac{(a_{k},b_{i})}{(b_{i},b_{i})}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Система векторов евклидового пространства называется ортогональной, если
+ все векторы этой системы попарно ортогональны между собой.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Процесс ортогонализации Грама Шмидта:
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+Данный алгоритм позволяет из множества линейно независимых векторов 
+\begin_inset Formula $m_{1},...,m_{n}$
+\end_inset
+
+ построить множество ортогональных векторов 
+\begin_inset Formula $t_{1},...,t_{n}$
+\end_inset
+
+ или ортонормированных векторов 
+\begin_inset Formula $k_{1},...,k_{n}$
+\end_inset
+
+, однако при условии, что выполняется: каждый вектор 
+\begin_inset Formula $t_{j}$
+\end_inset
+
+ либо же 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ выражается линейной комбинацией векторов 
+\begin_inset Formula $m_{1},...,m_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Алгоритм:
+\end_layout
+
+\begin_layout Standard
+Полагают 
+\begin_inset Formula $b_{1}=a_{1}$
+\end_inset
+
+, и, если уже построены векторы 
+\begin_inset Formula $b_{1},b_{2},..,b_{i-1}$
+\end_inset
+
+, то
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b_{i}=a_{i}-\sum_{j=1}^{i-1}\frac{(a_{i},b_{j})}{(b_{j},b_{j})}b_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Геометрический смысл описанного процесса состоит в том, что на каждом шагу
+ вектор 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ является перпендикуляром, восстановленным к линейной оболочке векторов
+ 
+\begin_inset Formula $a_{1},...,a_{i-1}$
+\end_inset
+
+ до конца вектора 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Нормируя полученные векторы 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+: 
+\begin_inset Formula $c_{i}=\nicefrac{b_{i}}{\left|b_{i}\right|}$
+\end_inset
+
+ получают искомую ортонормированную систему 
+\begin_inset Formula $\{c_{i}\}$
+\end_inset
+
+.
 \end_layout
 
 \end_body
