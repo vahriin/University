@@ -1,0 +1,1835 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{indentfirst}
+\newcommand{\const}{\operatorname{const}}
+\end_preamble
+\use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+theorems-ams-bytype
+theorems-sec-bytype
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 2.5cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.7cm
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Дисклеймер.
+\end_layout
+
+\begin_layout Standard
+Автор не несет ответственности за любой ущерб, причиненный Вам при использовании
+ данного документа.
+ Автор напоминает, что данный документ может содержать ошибки и опечатки,
+ недостоверную и/или непроверенную информацию.
+ Если Вы желаете помочь в развитии проекта или сообщить об ошибке/опечатке/неточ
+ности:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub проекта"
+target "https://github.com/vahriin/University"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Автор в ВК"
+target "https://vk.com/vahriin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\RR}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ZZ}{\mathbb{Z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\NN}{\mathbb{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\QQ}{\mathbb{Q}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\norm}[1]{\left\Vert #1\right\Vert }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Погрешность вычисления.
+ Классификация погрешностей.
+ Погрешности арифметических действий.
+ Обратная задача теории погрешностей
+\end_layout
+
+\begin_layout Definition
+Погрешность — отклонение значения величины от её истинного (действительного)
+ значения.
+ Погрешность измерения является характеристикой точности измерения.
+\end_layout
+
+\begin_layout Standard
+Погрешности бывают трех типов:
+\end_layout
+
+\begin_layout Standard
+1) 
+\series bold
+Погрешность задачи
+\series default
+, связанная с приближенным характером исходной модели, ее математического
+ описания, погрешностью измерений.
+ При вычислениях подобная погрешность считается 
+\series bold
+неустранимой
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\series bold
+Погрешность метода
+\series default
+, связанная со способом решения поставленной математической задачи и появляющаяс
+я в результате подмены исходной математической модели другой моделью.
+ При создании численных методов закладывается возможность отслеживания подобных
+ погрешностей и доведение их до сколь угодно малого уровня.
+ Данная погрешность называется 
+\series bold
+устранимой
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+3) 
+\series bold
+Погрешность округления
+\series default
+, связанная с необходимостью выполнять арифметические действия над числами,
+ усеченными до количества разрядов, зависящего от применяемой вычислительной
+ техники.
+\end_layout
+
+\begin_layout Standard
+В сумме все три погрешности дают 
+\series bold
+полную погрешность
+\series default
+ результата решения задачи.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $A$
+\end_inset
+
+ — точное значение некоторой величины, 
+\begin_inset Formula $a$
+\end_inset
+
+ — ее приближенное значение.
+\end_layout
+
+\begin_layout Definition
+Величину 
+\begin_inset Formula $\left|A-a\right|=\Delta a$
+\end_inset
+
+ называют абсолютной погрешностью.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Относительной погрешностью величины 
+\begin_inset Formula $a$
+\end_inset
+
+ называют отношение 
+\begin_inset Formula 
+\[
+\delta a=\frac{\left|A-a\right|}{\left|a\right|}=\frac{\Delta a}{\left|a\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Точное значение 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ чаще всего неизвестны, однако часто известна верхняя граница 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ абсолютной величины погрешности: 
+\begin_inset Formula $\left|a-a^{*}\right|=\left|\varepsilon\right|\leq\Delta$
+\end_inset
+
+.
+ Ее называют границей погрешности 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ Точное значение 
+\begin_inset Formula $a$
+\end_inset
+
+ лежит в пределах 
+\begin_inset Formula $a^{*}-\Delta\leq a\leq a^{*}+\Delta$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Рассмотрим погрешности арифметических действий.
+ Пусть 
+\begin_inset Formula $x_{1}\pm\Delta x_{1}$
+\end_inset
+
+ и 
+\begin_inset Formula $x_{2}\pm\Delta x_{2}$
+\end_inset
+
+ — неточные числа.
+ Тогда:
+\end_layout
+
+\begin_layout Standard
+1) Сумма: 
+\end_layout
+
+\begin_layout Standard
+Абсолютная: 
+\begin_inset Formula $(x_{1}+x_{2})+\Delta(x_{1}+x_{2})=x_{1}+\Delta x_{1}+x_{2}+\Delta x_{2}\Rightarrow\Delta_{+}=x_{1}+x_{2}$
+\end_inset
+
+, откуда 
+\begin_inset Formula $|\Delta_{\pm}|\leq|\Delta x_{1}|\pm|\Delta x_{2}|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Относительная: 
+\begin_inset Formula $\frac{\Delta(x_{1}+x_{2})}{x_{1}+x_{2}}=\frac{\Delta x_{1}}{x_{1}+x_{2}}+\frac{\Delta x_{2}}{x_{1}+x_{2}}\leq\delta x_{1}+\delta x_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) Вычитание:
+\end_layout
+
+\begin_layout Standard
+Абсолютная аналогична сумме.
+\end_layout
+
+\begin_layout Standard
+Относительная: 
+\begin_inset Formula $\frac{\Delta(x_{1}-x_{2})}{\left|x_{1}-x_{2}\right|}=\frac{\Delta x_{1}+\Delta x_{2}}{\left|x_{1}-x_{2}\right|}$
+\end_inset
+
+, что указывает на возможность сильного возрастания погрешности при 
+\begin_inset Formula $x_{1}-x_{2}\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) Произведение:
+\end_layout
+
+\begin_layout Standard
+Абсолютная: 
+\begin_inset Formula $(x_{1}x_{2})+\Delta(x_{1}x_{2})=x_{1}x_{2}+x_{1}\Delta x_{2}+x_{2}\Delta x_{1}+\Delta x_{1}\Delta x_{2}\Rightarrow\Delta_{+}\thickapprox x_{1}\Delta x_{2}+x_{2}\Delta x_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Относительная: 
+\begin_inset Formula $\frac{\Delta(x_{1},x_{2})}{x_{1}x_{2}}\thickapprox\frac{\Delta x_{2}}{x_{2}}+\frac{\Delta x_{1}}{x_{1}}\Rightarrow|\delta|\leq|\delta x_{1}|+|\delta x_{2}|$
+\end_inset
+
+ (вытекает из вывода относительной).
+\end_layout
+
+\begin_layout Standard
+4) Частное: 
+\end_layout
+
+\begin_layout Standard
+//
+\end_layout
+
+\begin_layout Standard
+Абсолютная: ???
+\end_layout
+
+\begin_layout Standard
+Относительная: ???
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Обратную задачу
+\series default
+ теории погрешностей формулируют так: 
+\emph on
+каковы долны быть абсолютные погрешности аргументов функции, чтобы абсолютная
+ погрешность функции не превышала заданной величины?
+\end_layout
+
+\begin_layout Example
+1) Принцип равных влияний: считаем, что вклад всех слагаемых в погрешность
+ одинаков: 
+\begin_inset Formula 
+\[
+\left|\frac{\partial f}{\partial x_{1}}\right|\cdot\Delta x_{1}=\left|\frac{\partial f}{\partial x_{2}}\right|\cdot\Delta x_{2}=...=\const
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Откуда 
+\begin_inset Formula 
+\[
+\Delta x_{i}\leq\frac{\left|\Delta f\right|}{n\left|\frac{\partial f}{\partial x_{i}}\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2) Принцип равных погрешностей: требуем одинаковых 
+\begin_inset Formula $\Delta x_{i}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\Delta x_{1}=\Delta x_{2}=...=\const=\Delta x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Откуда 
+\begin_inset Formula 
+\[
+\left|\Delta x\right|\leq\frac{\left|\Delta f\right|}{\sum_{i=1}^{n}\left|\frac{\partial f}{\partial x_{i}}\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Нормы матриц и векторов.
+ Обусловленность матриц и систем линейных алгебраических уравнений.
+ Примеры плохо обусловленных систем
+\end_layout
+
+\begin_layout Definition
+Норма — функция 
+\begin_inset Formula $\norm{\cdot}:X\to\RR$
+\end_inset
+
+, удовлетворяющая свойствам:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $\left|\left|x\right|\right|\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\left|x\right|\right|=0\Leftrightarrow x=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $\left|\left|\lambda x\right|\right|=\left|\lambda\right|\cdot\left|\left|x\right|\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $\left|\left|x+y\right|\right|\leq\left|\left|x\right|\right|+\left|\left|y\right|\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+Нормы векторов
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\norm x_{2}=\sqrt{x_{1}^{2}+...+x_{n}^{2}}$
+\end_inset
+
+ — 
+\begin_inset Quotes fld
+\end_inset
+
+долгая
+\begin_inset Quotes frd
+\end_inset
+
+ норма;
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\norm x_{1}=\left|x_{1}\right|+...+\left|x_{n}\right|$
+\end_inset
+
+ — более простая норма;
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\norm x_{p}=\left(\left|X_{1}\right|^{p}+...+\left|x_{n}\right|^{p}\right)^{\nicefrac{1}{p}}$
+\end_inset
+
+ — строгая математическая норма;
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\norm x_{\infty}=\max_{i=\overline{1,n}}\left|x_{i}\right|$
+\end_inset
+
+ — наиболее частоиспользуемая норма.
+\end_layout
+
+\begin_layout Example
+Все эти нормы эквивалентны.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\norm ._{\alpha},\norm ._{\beta}$
+\end_inset
+
+ эквивалентны, если 
+\begin_inset Formula $\exists c_{1},c_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $\forall x$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $c_{1}\norm x_{\beta}\leq\norm x_{\alpha}\leq c_{2}\norm x_{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Рассмотрим линейный оператор 
+\begin_inset Formula $A$
+\end_inset
+
+; он ограничен, а значит, 
+\begin_inset Formula $\norm{Ax}\leq C$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\min_{x}C=\norm A$
+\end_inset
+
+ — норма матрицы, согласованная с нормой вектора, если 
+\begin_inset Formula $\norm{Ax}\leq\norm A\norm x$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Норма матрицы, подчиненная норме вектора: 
+\begin_inset Formula 
+\[
+\norm A=\sup_{x\neq0}\frac{\norm{Ax}}{\norm x}=\sup_{\norm x=1}\norm{Ax}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+Подчиненные нормы матриц:
+\end_layout
+
+\begin_layout Example
+1) 
+\begin_inset Formula $\norm A_{1}=\max_{j=\overline{1,n}}\sum_{i=1}^{n}\left|a_{ij}\right|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+2) 
+\begin_inset Formula $\norm A_{2}=\sqrt{\max_{i=\overline{1,n}}\lambda(A^{T}A)}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+3) 
+\begin_inset Formula $\norm A_{\infty}=\max_{i=\overline{1,n}}\sum_{j=1}^{n}\left|a_{ij}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+4) Норма Фробениуса: 
+\begin_inset Formula $\norm A_{F}=\sqrt{\sum_{ij}a_{ij}^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Пусть требуется решить СЛАУ 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+, где 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+, причем правая часть системы содержит погрешностей, то есть фактически
+ требуется решить СЛАУ 
+\begin_inset Formula $A(x+\delta x)=b+\delta b$
+\end_inset
+
+.
+ Отсюда 
+\begin_inset Formula $A(\delta x)=\delta b$
+\end_inset
+
+, и, считая матрицу 
+\begin_inset Formula $A$
+\end_inset
+
+ неособой, найдем 
+\begin_inset Formula $\delta x=A^{-1}\delta b$
+\end_inset
+
+.
+ Получим: 
+\begin_inset Formula 
+\[
+\norm{\delta x}=\norm{A^{-1}\delta b}\leq\norm{A^{-1}}\norm{\delta b}=\norm{A^{-1}}\cdot\norm A\cdot\underbrace{\frac{\norm b}{\norm A}}_{=\norm x}\cdot\frac{\norm{\delta b}}{\norm b}\leq\nu(A)\norm x\cdot\frac{\norm{\delta b}}{\norm b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+где 
+\begin_inset Formula $\nu(A)=\norm{A^{-1}}\cdot\norm A$
+\end_inset
+
+.
+ Разделив обе части на 
+\begin_inset Formula $\norm x\neq0$
+\end_inset
+
+ получим 
+\begin_inset Formula $\frac{\norm{\delta x}}{\norm x}\leq\nu(A)\cdot\frac{\norm{\delta b}}{\norm b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Величина 
+\begin_inset Formula $\nu(A)=\norm{A^{-1}}\cdot\norm A$
+\end_inset
+
+ называется числом обусловленности матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Если 
+\begin_inset Formula $\nu(A)>>1$
+\end_inset
+
+, СЛАУ называют плохо обусловленной.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Свойства числа обусловленности:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $\nu(I)=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\nu(A)\geq1:\ 1=\norm E=\norm{A\cdot A^{-1}}\leq\norm A\norm{A^{-1}}=\nu(A)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $\nu(\alpha A)=\nu(A),\ \alpha\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пример плохо обусловленной системы: 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+1 & 10\\
+100 & 1001
+\end{array}\right)\left(\begin{array}{c}
+x\\
+y
+\end{array}\right)=\left(\begin{array}{c}
+11\\
+11.01
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+//чем она плоха?
+\end_layout
+
+\begin_layout Section
+Метод Гаусса решения СЛАУ.
+ Проблемы практического применения.
+ Использование для вычисления определителя, нахождения обратной матрицы
+\end_layout
+
+\begin_layout Remark
+Здесь и далее изучается вопрос о численном решении систем вида 
+\begin_inset Formula 
+\[
+\begin{cases}
+a_{11}x_{1}+...+a_{1n}x_{n}=b_{1}\\
+...\\
+a_{n1}x_{1}+...+a_{nn}x_{n}=b_{n}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+или иначе, векторно-матричных уравнений 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Будем поэтапно приводить систему к треугольному виду, исключая последовательно
+ сначала 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ из уравнений 
+\begin_inset Formula $[2:n]$
+\end_inset
+
+, затем 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ из 
+\begin_inset Formula $[3:n]$
+\end_inset
+
+ и так далее.
+\end_layout
+
+\begin_layout Standard
+На первом этапе заменим второе, третье и далее уравнения на уравнения, получающи
+еся сложением этих уравнений с первым, умноженным соответственно на 
+\begin_inset Formula $-\frac{a_{21}}{a_{11}},...,-\frac{a_{n1}}{a_{11}}$
+\end_inset
+
+.
+ Результатом подобных преобразований будет система 
+\begin_inset Formula 
+\[
+\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}...+a_{1n}x_{n}=b_{1}\\
+a_{22}^{(1)}x_{2}+...+a_{1n}^{(1)}x_{n}=b_{2}^{(1)}\\
+...\\
+a_{n2}^{(1)}x_{2}+...+a_{nn}^{(1)}x_{n}=b_{n}^{(1)}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+коэффициенты которой имеют вид 
+\begin_inset Formula $a_{ij}^{(1)}=a_{ij}-\frac{a_{i1}}{a_{11}a_{1j}}$
+\end_inset
+
+.
+ При этом считаем, что 
+\begin_inset Formula $a_{11}\neq0$
+\end_inset
+
+, так как по условию матрица однозначно разрешима.
+ Данные операции называются 
+\series bold
+прямым ходом
+\series default
+ метода Гаусса.
+\end_layout
+
+\begin_layout Standard
+Продолжая этот процесс далее на 
+\begin_inset Formula $n-1$
+\end_inset
+
+-ом этапе прямого хода приведем систему к треугольному виду 
+\begin_inset Formula 
+\[
+\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+...+a_{1n}x_{n}=b_{1}\\
+a_{22}^{(1)}x_{2}+...+a_{2n}^{(1)}x_{n}=b_{2}^{(1)}\\
+...\\
+a_{nn}^{(n-1)}x_{n}=b_{n}^{(n-1)}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Нетрудно убедиться, что расчет коэффициентов производится по формулам: 
+\begin_inset Formula 
+\[
+a_{ij}^{(k)}=a_{ij}^{(k-1)}-\frac{a_{ik}^{(k-1)}}{a_{kk}^{(k-1)}}a_{kj}^{(k-1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b_{i}^{(k)}=b_{i}^{(k-1)}-\frac{a_{ik}^{(k-1)}}{a_{kk}^{(k-1)}}b_{k}^{(k-1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Треугольная структура матрицы позволяет последовательно вычислить значения
+ неизвестных при помощи 
+\series bold
+обратного хода 
+\series default
+метода Гаусса: 
+\begin_inset Formula 
+\[
+x_{k}=\frac{1}{a_{kk}^{(k-1)}}\left(b_{k}^{(k-1)}-\sum_{j=k+1}^{n}a_{kj}^{(k-1)}x_{j}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Так как реальные машинные вычисления производятся не с точными, а а усеченными
+ числами, то анализируя полученные формулы, можно сделать вывод о том, что
+ выполнение алгоритма может привести к неверным данным или вовсе прекратиться,
+ если знаменатели дробей на каком-то из этапов окажутся близкими или равными
+ нулю.
+ Чтобы избежать подобного рода ошибок выполняют перестановку строк таким
+ образом, чтобы чтобы деление производилось на наибольший по модулю элемент
+ столбце.
+ Числа, на которые производится деление, называют 
+\series bold
+ведущими
+\series default
+ или 
+\series bold
+главными элементами
+\series default
+.
+ Отсюда название модификации: 
+\emph on
+метод Гаусса с постолбцовым выбором ведущего элемента
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Устойчивость алгоритма к погрешностям исходных данных можно усилить, если
+ выполнять выбор главного элемента по всей матрице.
+ Такая модификация называется 
+\emph on
+методом главных элементов
+\emph default
+, но применяется редко ввиду сложности алгоритма.
+ Усложнение вызывает двумерный поиск и необходимость запоминать номера столбцов,
+ к которым была применена перестановка, для обратной замены.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Так как определитель треугольной матрицы равен произведению элементов, стоящих
+ на главной диагонали, то метод Гаусса может быть применен для поиска определите
+ля матрицы.
+ При этом, если алгоритм используется только для поиска определителя, из
+ него следует убрать все шаги, в которых производится преобразование элементов
+ векторов 
+\begin_inset Formula $x$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+LU-разложение.
+ Практическое применение, управление ростом погрешности — выбор ведущего
+ элемента
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $A$
+\end_inset
+
+ — данная матрица размерности 
+\begin_inset Formula $n\times n$
+\end_inset
+
+, а 
+\begin_inset Formula $L$
+\end_inset
+
+ и 
+\begin_inset Formula $U$
+\end_inset
+
+ — соответственно нижне- и верхнетреугольная матрицы размерности 
+\begin_inset Formula $n\times n$
+\end_inset
+
+.
+ Тогда справедлива
+\end_layout
+
+\begin_layout Theorem
+Если все главные миноры квадратной матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+ отличны от нуля, то 
+\begin_inset Formula $\exists L,U$
+\end_inset
+
+ — нижне- и верхнетреугольная матрицы, такие, что 
+\begin_inset Formula $A=LU$
+\end_inset
+
+.
+ Если элементы диагонали одной из матриц 
+\begin_inset Formula $L$
+\end_inset
+
+ или 
+\begin_inset Formula $U$
+\end_inset
+
+ фиксированы, то такое разложение единственно.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+1 & 0 & \cdots & 0\\
+l_{21} & 1 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+l_{n1} & l_{n2} & \cdots & 1
+\end{array}\right)\left(\begin{array}{cccc}
+u_{11} & u_{12} & \cdots & u_{1n}\\
+0 & u_{22} & \cdots & u_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & u_{nn}
+\end{array}\right)=\left(\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Выполнив перемножение матриц, получим систему формул для вычисления элементов
+ матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Специфика этой системы позволяет находить неизвестные 
+\begin_inset Formula $l,u$
+\end_inset
+
+ следующим образом:
+\begin_inset Formula 
+\[
+u_{ij}=a_{ij}-\sum_{k=1}^{i-1}l_{ik}u_{kj},\ (i\leq j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+l_{ij}=\frac{1}{u_{jj}}\left(a_{ij}-\sum_{k=1}^{j-1}l_{ik}u_{kj}\right)\ (i>j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Препятствием для осуществления описанного процесса LU-разложения матрицы
+ может оказаться равенство нулю диагональных элементов матрицы 
+\begin_inset Formula $U$
+\end_inset
+
+, так как на них выполняется деление в последней формуле.
+ Отсюда требование теоремы, накладываемое на главные миноры.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для решения линейной системы уравнений мы можем переписать ее в виде 
+\begin_inset Formula $LUx=b$
+\end_inset
+
+ и, введя вектор вспомогательных переменных 
+\begin_inset Formula $y$
+\end_inset
+
+, переписать в виде системы 
+\begin_inset Formula 
+\[
+\begin{cases}
+Ly=b\\
+Ux=y
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Таким образом, решение данной системы с квадратной матрицей коэффициентов
+ свелось к последовательному решению двух систем с треугольными матрицами
+ коэффициентов.
+\end_layout
+
+\begin_layout Standard
+Получим формулы вычисления вектора 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Очевидно, что все они могут быть последовательно найдены по формуле 
+\begin_inset Formula 
+\[
+y_{i}=b_{i}-\sum_{k=1}^{i-1}l_{ik}y_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Развернув теперь векторно-матричное уравнение 
+\begin_inset Formula $Ux=y$
+\end_inset
+
+ получим формулу для вычисления вектора 
+\begin_inset Formula $x$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+x_{i}=\frac{1}{u_{ii}}\left(y_{i}-\sum_{k=i+1}^{n}u_{ik}x_{k}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вычисление определителя LU-факторизованной матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+ опирается на свойства определителя произведения матриц и определителя треугольн
+ой матрицы и сводится к нахождению определителя матрицы 
+\begin_inset Formula $U$
+\end_inset
+
+ уже известным методом.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для обращения матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+ при помощи LU-факторизации можно 
+\begin_inset Formula $n$
+\end_inset
+
+ раз использовать решение уравнения 
+\begin_inset Formula $LUx=b_{i}$
+\end_inset
+
+, где 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ — столбцы матрицы 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+//управление ростом погрешностей и выбор текущего элемента
+\end_layout
+
+\begin_layout Standard
+Если усложнить LU-разложение, добавив матрицы перестановок 
+\begin_inset Formula $P$
+\end_inset
+
+ и 
+\begin_inset Formula $Q$
+\end_inset
+
+, такие, что осуществимо LU-разложение матрицы 
+\begin_inset Formula $PAQ$
+\end_inset
+
+ с выбором главного элемента по всей матрице, при этом 
+\begin_inset Formula $P$
+\end_inset
+
+ — матрица-перестановка строк, а 
+\begin_inset Formula $Q$
+\end_inset
+
+ — матрица-перестановка столбцов.
+ Решение 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ происходит следующим образом: сначала полагаем 
+\begin_inset Formula $x=Qz$
+\end_inset
+
+, тогда 
+\begin_inset Formula $AQz=b$
+\end_inset
+
+.
+ Умножив это равенство слева на матрицу 
+\begin_inset Formula $P$
+\end_inset
+
+, приходим к эквивалентной системе 
+\begin_inset Formula $PAQz=Pb$
+\end_inset
+
+, которая может быть представлено в виде 
+\begin_inset Formula $LUz=Pb$
+\end_inset
+
+.
+ Далее последовательно решаются треугольные системы 
+\begin_inset Formula $Ly=Pb$
+\end_inset
+
+, 
+\begin_inset Formula $Uz=y$
+\end_inset
+
+ относительно вспомогательных векторов 
+\begin_inset Formula $y$
+\end_inset
+
+ и 
+\begin_inset Formula $z$
+\end_inset
+
+ соответственно, после чего вычисляется искомый вектор 
+\begin_inset Formula $x=Qz$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+QR-разложение, его сравнение с LU-разложением
+\end_layout
+
+\begin_layout Standard
+Выполняется декомпозиция 
+\begin_inset Formula $A=QR$
+\end_inset
+
+, где 
+\begin_inset Formula $R$
+\end_inset
+
+ — верхнетреугольная матрица, а 
+\begin_inset Formula $Q$
+\end_inset
+
+ — ортонормированная.
+\end_layout
+
+\begin_layout Definition
+Матрица поворота — матрица вида 
+\begin_inset Formula $\left(\begin{array}{cc}
+\cos\alpha & -\sin\alpha\\
+\sin\alpha & \cos\alpha
+\end{array}\right)$
+\end_inset
+
+.
+ Матрица обратного поворота, аналогично, 
+\begin_inset Formula $\left(\begin{array}{cc}
+\cos\alpha & \sin\alpha\\
+-\sin\alpha & \cos\alpha
+\end{array}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод вращений Гивенса:
+\end_layout
+
+\begin_layout Standard
+Повернем 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ на какой-то угол, чтобы первый столбец матрицы принял вид 
+\begin_inset Formula $\left(\begin{array}{c}
+a_{11}^{(0)}\\
+0\\
+a_{31}^{(0)}\\
+\vdots\\
+a_{n1}^{(0)}
+\end{array}\right)$
+\end_inset
+
+.
+ Для этого умножим матрицу 
+\begin_inset Formula $A$
+\end_inset
+
+ на матрицу 
+\begin_inset Formula $Q_{21}=\left(\begin{array}{cccc}
+\cos\alpha & -\sin\alpha & 0 & 0\\
+\sin\alpha & \cos\alpha & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)$
+\end_inset
+
+.
+ Это обнулит элемент 
+\begin_inset Formula $a_{21}$
+\end_inset
+
+.
+ Аналогично, далее используем матрицу 
+\begin_inset Formula $Q_{31}=\left(\begin{array}{cccc}
+\cos\alpha & 0 & -\sin\alpha & 0\\
+0 & 1 & 0 & 0\\
+\sin\alpha & 0 & \cos\alpha & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)$
+\end_inset
+
+ для обнуления элемента 
+\begin_inset Formula $a_{31}$
+\end_inset
+
+.
+ Произведение всех таких матриц будет являться матрицей 
+\begin_inset Formula $Q=Q_{n,n-1}Q_{n,n-2},...,Q_{n-1,n-1},...,Q_{21}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для нахождения угла 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ используем следующее уравнение:
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+\cos\alpha & -\sin\alpha\\
+\sin\alpha & \cos\alpha
+\end{array}\right)\cdot\left(\begin{array}{c}
+a_{11}\\
+a_{21}
+\end{array}\right)=\left(\begin{array}{c}
+a_{11}^{(1)}\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Легко вывести, что 
+\begin_inset Formula $\begin{cases}
+\sin\alpha a_{11}+\cos\alpha a_{21}=0\\
+\sin^{2}\alpha+\cos^{2}\alpha=1
+\end{cases}$
+\end_inset
+
+, 
+\begin_inset Formula $\sin\alpha=-\frac{\cos\alpha a_{21}}{a_{11}}$
+\end_inset
+
+, 
+\begin_inset Formula $\cos^{2}\alpha+\cos^{2}\alpha(\frac{a_{21}}{a_{11}})=1$
+\end_inset
+
+, откуда 
+\begin_inset Formula $\cos^{2}\alpha=\frac{a_{11}}{a_{11}^{2}+a_{21}^{2}}$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $\cos\alpha=\frac{a_{11}}{\sqrt{a_{11}^{2}+a_{21}^{2}}},\ \sin\alpha=-\frac{a_{21}}{\sqrt{a_{11}^{2}+a_{21}^{2}}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Плюсы в сравнении с LU-разложением: не нужно выбирать ведущий элемент и
+ не растет вычислительная погрешность.
+ Из минусов: работает в 4 раза медленнее.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+//проверить Хаусхольдера на правильность
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод отражений Хаусхольдера:
+\end_layout
+
+\begin_layout Standard
+Рассмотрим вспомогательный вектор 
+\begin_inset Formula $\omega$
+\end_inset
+
+ — вектор единичной длины.
+ 
+\begin_inset Formula $\omega^{T}\omega=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula $U=E-2\omega\omega^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $U^{T}U=E-4\omega\omega^{T}+4\omega\underbrace{\omega^{T}\omega}_{1}\omega^{T}=E\Rightarrow U^{-1}=U^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U_{\omega}=\left(E\cdot2\omega\omega^{T}\right)\omega=\omega-2\omega=-\omega\Rightarrow\omega$
+\end_inset
+
+ — собственный вектор с собственным числом 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v\perp\omega$
+\end_inset
+
+, то есть 
+\begin_inset Formula $v^{T}\omega=0$
+\end_inset
+
+ или 
+\begin_inset Formula $\omega^{T}v=0$
+\end_inset
+
+, 
+\begin_inset Formula $U_{v}=\left(E-2\omega\omega^{T}\right)v=v-2\omega\omega^{T}v=v\Rightarrow v$
+\end_inset
+
+ — собственный вектор с собственным числом 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Таким образом, 
+\begin_inset Formula $y=v+\alpha\omega\Rightarrow Uy=v-\alpha\omega$
+\end_inset
+
+, то есть матрица 
+\begin_inset Formula $U$
+\end_inset
+
+ отражает вектор.
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $y,z$
+\end_inset
+
+ — ...
+ векторы.
+ Нам нужно найти 
+\begin_inset Formula $U$
+\end_inset
+
+, такую, что 
+\begin_inset Formula $Uy=\alpha z$
+\end_inset
+
+.
+ Смотрим: 
+\begin_inset Formula 
+\[
+\norm{Uy}=\norm y=\norm{\alpha z}\Rightarrow\alpha=\frac{\norm y}{\norm z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega=\frac{y-\alpha z}{\norm{y-\alpha z}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Теперь, используя 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ как 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ как 
+\begin_inset Formula $z$
+\end_inset
+
+, строим 
+\begin_inset Formula $U_{1}=E-2\omega\omega^{T}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $U_{1}A$
+\end_inset
+
+ будет иметь нулевой первый столбец (исключая элемент 
+\begin_inset Formula $a_{11}^{(1)}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Тогда 
+\begin_inset Formula $Q=U_{n-1}\cdot...\cdot U_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Тогда решением уравнения 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ будет являться решение уравнения 
+\begin_inset Formula $Rx=Q^{T}b$
+\end_inset
+
+, которое можно найти, применив формулу из LU-разложения (формула обратной
+ подстановки).
+\end_layout
+
+\begin_layout Section
+Итерационные методы решения СЛАУ.
+ Метод простой итерации.
+ Условия сходимости, оценка погрешности
+\end_layout
+
+\begin_layout Section
+Итерационные методы решения СЛАУ.
+ Метод Зейделя.
+ Условия сходимости, оценка погрешности
+\end_layout
+
+\begin_layout Section
+Решение скалярных нелинейных уравнений.
+ Метод половинного деления, метод хорд, метод секущих
+\end_layout
+
+\begin_layout Section
+Метод Ньютона решения нелинейных алгебраических уравнений и систем уравнений.
+ Сходимость метода Ньютона.
+ Модифицированный метод Ньютона
+\end_layout
+
+\begin_layout Section
+Алгебраическое интерполирование.
+ Интерполяционный полином Лагранжа
+\end_layout
+
+\begin_layout Section
+Кратное интерполирование.
+ Интерполяционный полином Эрмита
+\end_layout
+
+\begin_layout Section
+Интерполяция сплайнами.
+ Общие сведения.
+ Сплайн 
+\begin_inset Formula $S_{3,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Интерполяция сплайнами.
+ Общие сведения.
+ Локальные (Эрмитовы) сплайны
+\end_layout
+
+\begin_layout Section
+Задачи численного интегрирования.
+ Постановка задачи.
+ Квадратурные формулы средних прямоугольников, трапеций и Симпсона.
+ Оценка погрешности
+\end_layout
+
+\begin_layout Section
+Интерполяционные квадратурные формулы и квадратурные формулы Ньютона-Котса.
+ Алгоритм построения.
+ Оценка погрешности
+\end_layout
+
+\begin_layout Section
+Квадратурные формулы наивысшей алгебраической степени точности (типа Гаусса).
+ Алгоритм построения.
+ Оценка погрешности
+\end_layout
+
+\begin_layout Section
+Составные квадратурные формулы.
+ Сходимость квадратурного процесса по составным квадратурным формулам.
+ Составная квадратурная формула средних прямоугольников
+\end_layout
+
+\begin_layout Section
+Составные квадратурные формулы на основе формул с единичным весом (средних
+ прямоугольников, трапеций, Симпсона).
+ Оценка погрешности и алгебраическая степень точности
+\end_layout
+
+\begin_layout Section
+Практические способы оценки погрешности численного интегрирования составными
+ квадратурными формулами (правило Рунге).
+ Процесс Эйткена для оценки порядка аппроксимации
+\end_layout
+
+\begin_layout Section
+Методы типа Рунге-Кутты решения начальной задачи для ОДУ.
+ Порядок и число этапов.
+ Оценка методической погрешности на шаге
+\end_layout
+
+\begin_layout Section
+Практические способы оценки погрешности методов типа Рунге-Кутты.
+ Вложенные методы
+\end_layout
+
+\begin_layout Section
+Алгоритм решения ОДУ методом типа Рунге-Кутты с автоматическим выбором шага
+\end_layout
+
+\end_body
+\end_document
