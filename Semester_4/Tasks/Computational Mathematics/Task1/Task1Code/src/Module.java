@@ -48,7 +48,7 @@ public class Module {
 
     private static double setFunc(double x) {
         return calcCos(2.8*x + calcSqrt(1 + x, 10E-7 / 1.5), 10E-7 / 3 * 0.5) *
-                calcArctan(1.5 * x + 0.2, 10E-7 / 0.6);
+                calcArctan(1.5 * x + 0.2, 1E-7 / 0.6);
     }
 
     public static void picTable(double begin, double end, double step) {
