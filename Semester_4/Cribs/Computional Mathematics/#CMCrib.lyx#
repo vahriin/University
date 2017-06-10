@@ -1726,7 +1726,8 @@ a_{11}^{(1)}\\
 \begin_inset Formula $Rx=Q^{T}b$
 \end_inset
 
-, 
+, которое можно найти, применив формулу из LU-разложения (формула обратной
+ подстановки).
 \end_layout
 
 \begin_layout Section
@@ -1735,15 +1736,860 @@ a_{11}^{(1)}\\
  Условия сходимости, оценка погрешности
 \end_layout
 
+\begin_layout Standard
+Рассматриваемая нами система 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ путем неких изменений может быть приведена к форме 
+\begin_inset Formula $x=Bx+c$
+\end_inset
+
+.
+ Тогда задача нахождения 
+\begin_inset Formula $x$
+\end_inset
+
+ становится задачей нахождения неподвижной точки отображения.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{(k+1)}=Bx^{(k)}+c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Интуитивно понятно, что 
+\begin_inset Formula $\norm B>1$
+\end_inset
+
+ влечет 
+\begin_inset Formula $\norm{x_{k}}\to\infty$
+\end_inset
+
+ (так как в этом случае отображение не является сжимающим).
+\end_layout
+
+\begin_layout Lemma
+Все собственные числа матрицы 
+\begin_inset Formula $B$
+\end_inset
+
+ по модулю меньше единицы тогда и только тогда, когда 
+\end_layout
+
+\begin_layout Lemma
+1) 
+\begin_inset Formula $B^{k}\to_{k\to\infty}0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Lemma
+2) 
+\begin_inset Formula $\exists(I-B)^{-1}=(I+B+B^{2}+...+B^{k}+...)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Lemma
+Если 
+\begin_inset Formula $\norm B\leq q<1$
+\end_inset
+
+, то 
+\begin_inset Formula $(I-B)^{-1}$
+\end_inset
+
+ существует, равна 
+\begin_inset Formula $\sum_{i=1}^{\infty}B^{i}$
+\end_inset
+
+ и 
+\begin_inset Formula $\norm{(I-B)^{-1}}\leq\frac{1}{1-q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\norm B\leq q<1\Rightarrow\norm{i+B+...+B^{k}+...}\leq\norm I+\norm B+...+\norm{B^{k}}+...\leq\norm I+\norm B+...+\norm B^{k}+...\leq1+q+...+q^{k}+...=\frac{1}{1-q}$
+\end_inset
+
+, следовательно, существует 
+\begin_inset Formula $V=\sum_{k=0}^{\infty}B^{i}$
+\end_inset
+
+, такое, что 
+\begin_inset Formula $\norm V\leq\frac{1}{1-q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Тогда 
+\begin_inset Formula $(I-B)V=IV-BV=I+B+B^{2}+...+B^{k}+...-B-B^{2}-...-B^{k}-...=I$
+\end_inset
+
+, следовательно 
+\begin_inset Formula $\norm{(I-B)^{-1}}\leq\frac{1}{1-q}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Необходимым и достаточным условием сходимости метода простой итерации с
+ любым начальным приближением 
+\begin_inset Formula $x^{(0)}$
+\end_inset
+
+ к 
+\begin_inset Formula $x^{*}:x^{*}=Bx^{*}+c$
+\end_inset
+
+ является ограниченность собственных чисел матрицы 
+\begin_inset Formula $B$
+\end_inset
+
+ числом, меньшим единицы.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+Достаточность:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+x^{(1)}=Bx^{(0)}+c\\
+x^{(2)}=B(Bx^{(0)}+c)+c=B^{2}x^{(0)}+Bc+c\\
+...\\
+x^{(k)}=B^{k}x^{(0)}+(B^{(k-1)}+...+I)c
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Из условий: 1) 
+\begin_inset Formula $B^{k}\to_{k\to\infty}0$
+\end_inset
+
+; 2) 
+\begin_inset Formula $\exists(I-B)^{-1}=\sum_{i=0}^{\infty}B^{i}$
+\end_inset
+
+ следует, что при 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $x^{(k)}\to(I-B)^{-1}c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Преобразуем 
+\begin_inset Formula $x=Bx+c\Leftrightarrow(I-B)x=c$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $(I-B)^{-1}c$
+\end_inset
+
+ является решением.
+\end_layout
+
+\begin_layout Proof
+Пусть 
+\begin_inset Formula $\exists x^{**}$
+\end_inset
+
+ — другое решение.
+ Тогда 
+\begin_inset Formula $x^{*}=Bx^{*}+c$
+\end_inset
+
+, 
+\begin_inset Formula $x^{**}=Bx^{**}+c$
+\end_inset
+
+ и 
+\begin_inset Formula $x^{*}-x^{**}=B(x^{*}-x^{**})$
+\end_inset
+
+, следовательно, 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+ является собственным числом 
+\begin_inset Formula $B$
+\end_inset
+
+ с собственным вектором 
+\begin_inset Formula $x^{*}-x^{**}$
+\end_inset
+
+, а это противоречит теореме.
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+Необходимость:
+\end_layout
+
+\begin_layout Proof
+Так как 
+\begin_inset Formula $x^{(k+1)}=Bx^{(k)}+c=B^{k+1}x^{(0)}+(I+B+B^{2}+...+B^{k})c$
+\end_inset
+
+, то из существования 
+\begin_inset Formula $\lim_{k\to\infty}x^{(k+1)}$
+\end_inset
+
+ вытекает существование предела правой части, что влечет сходимость матриц
+ 
+\begin_inset Formula $B^{k+1}$
+\end_inset
+
+ к 
+\begin_inset Formula $I$
+\end_inset
+
+ и сходимость ряда 
+\begin_inset Formula $\sum_{k=0}^{\infty}B^{k}$
+\end_inset
+
+ к 
+\begin_inset Formula $(I-B)^{-1}$
+\end_inset
+
+, что по лемме 6.1 влечет ограниченность собственных чисел матрицы числом
+ меньше единицы.
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $\norm B\leq q<1$
+\end_inset
+
+, тогда МПИ (метод простой итерации) сходится 
+\begin_inset Formula $\forall x^{(0)}$
+\end_inset
+
+ к 
+\begin_inset Formula $x^{*}:x^{*}=Bx^{*}+c$
+\end_inset
+
+ и верны следующие оценки:
+\end_layout
+
+\begin_layout Theorem
+1) 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{q}{1-q}\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+ — апостериорная оценка;
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{q^{k}}{1-q}\norm{x^{(1)}-x^{(0)}}$
+\end_inset
+
+ — априорная оценка.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x^{(k-1)}-x^{(k)}=Bx^{(k)}+c-Bx^{(k-1)}+c=B(x^{(k)}-x^{(k-1)})\Rightarrow\norm{x^{(k+1)}-x^{(k)}}\leq q\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\norm{x^{(k+m)}-x^{(k)}}=\norm{x^{(k+m)}-x^{(k+m-1)}+...+x^{(k+1)}-x^{(k)}}\leq\norm{x^{(k+m)}-x^{(k+m-1)}}+...+\norm{x^{(k+1)}-x^{(k)}}\leq\left(q^{m-1}+q^{m-2}+...+q+1\right)\norm{x^{(k+1)}-x^{(k)}}=\frac{1-q^{m}}{1-q}\norm{x^{(k+1)}-x^{(k)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Тогда 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{1}{1-q}\norm{x^{(k+1)}-x^{(k)}}\leq\frac{q}{1-q}\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Применив много раз, получим 
+\begin_inset Formula $\norm{x^{(k+1)}-x^{(k)}}\leq q^{2}\norm{x^{(k-1)}-x^{(k-2)}}$
+\end_inset
+
+,...,
+\begin_inset Formula $\norm{x^{(k+1)}-x^{(k)}}\leq q^{k}\norm{x^{(1)}-x^{(0)}}$
+\end_inset
+
+.
+ Таким образом, при 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ последовательность сходится в себе, 
+\begin_inset Formula $\RR^{n}$
+\end_inset
+
+ полное, следовательно, существует 
+\begin_inset Formula $x^{*}=\lim_{k\to\infty}x^{(k)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(I-B)\left(B^{k}x^{(0)}+(I-B)^{-1}c\right)=c$
+\end_inset
+
+, 
+\begin_inset Formula $B^{k}x^{(0)}=0$
+\end_inset
+
+, так как 
+\begin_inset Formula $\norm B\leq q\Rightarrow\norm{B^{k}}\leq q^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+И в результате 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{q}{1-q}\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Как правило, априорная оценка грубее апостериорной.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод Якоби 
+\series default
+приведения СЛАУ 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ к виду 
+\begin_inset Formula $x=Bx+c$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+Представим матрицу 
+\begin_inset Formula $A$
+\end_inset
+
+ в виде 
+\begin_inset Formula $A=L+D+R$
+\end_inset
+
+, где 
+\begin_inset Formula $L,R$
+\end_inset
+
+ — соответственно строго (с нулевой диагональю) лево- и правотреугольные
+ матрицы, а 
+\begin_inset Formula $D$
+\end_inset
+
+ — диагональная.
+ Тогда мы можем переписать систему в виде 
+\begin_inset Formula $Lx+Dx+Rx=b\Leftrightarrow x=-D^{-1}(L+R)x+D^{-1}b$
+\end_inset
+
+ (должно выполняться условие на ненулевую диагональ матрицы 
+\begin_inset Formula $D$
+\end_inset
+
+).
+ Таким образом, следует положить 
+\begin_inset Formula $B=-D^{-1}(L+R)$
+\end_inset
+
+, 
+\begin_inset Formula $c=D^{-1}b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Чтобы записать метод Якоби, достаточно заметить, что обратной к матрице
+ 
+\begin_inset Formula $D$
+\end_inset
+
+ служит диагональная матрица с элементами 
+\begin_inset Formula $\nicefrac{1}{a_{ii}}$
+\end_inset
+
+.
+ Таким образом, для получения матрицы 
+\begin_inset Formula $B$
+\end_inset
+
+ нужно каждую строку матрицы разделить на диагональный элемент в этой строке.
+ Тогда в каждой строке получим 
+\begin_inset Formula $x$
+\end_inset
+
+ с соответствующим номером с единичным коэффициентом.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}=-\frac{a_{12}}{a_{11}}x_{2}-...-\frac{a_{1m}}{a_{11}}x_{m}+\frac{b_{1}}{a_{11}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{2}=-\frac{a_{21}}{a_{22}}x_{1}-\frac{a_{23}}{a_{22}}x_{3}...-\frac{a_{2m}}{a_{22}}x_{m}+\frac{b_{2}}{a_{22}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+и так далее.
+ Соответственно, метод Якоби есть МПИ в такой системе.
+ 
+\end_layout
+
+\begin_layout Definition
+Матрица с диагональным преобладанием — такая, что 
+\begin_inset Formula 
+\[
+\forall i=\overline{1,n}:\ \left|a_{ii}\right|>\sum_{j=1,j\neq i}^{n}\left|a_{ij}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Для матрицы с диагональным преобладанием метод Якоби сходится.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+Метод Якоби сходится тогда и только тогда, когда все корни уравнения 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{cccc}
+\lambda a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & \lambda a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
+\end{array}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+по модулю меньше единицы.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Итерационные методы решения СЛАУ.
  Метод Зейделя.
  Условия сходимости, оценка погрешности
 \end_layout
 
+\begin_layout Standard
+Грубо говоря, метод Зейделя состоит в применении для вычисления 
+\begin_inset Formula $i$
+\end_inset
+
+-ой компоненты на 
+\begin_inset Formula $(k+1)$
+\end_inset
+
+-ом шаге компонент, уже вычисленных на этом шаге ранее: 
+\begin_inset Formula 
+\[
+\begin{cases}
+x_{1}^{(k+1)}=b_{11}x_{1}^{(k)}+b_{12}x_{2}^{(k)}+...+b_{1n}x_{n}^{(k)}+c_{1}\\
+x_{2}^{(k+1)}=b_{21}x_{1}^{(k+1)}+b_{22}x_{2}^{(k)}+...+b_{2n}x_{n}^{(k)}+c_{2}\\
+...\\
+x_{n}^{(k+1)}=b_{n1}x_{1}^{(k+1)}+b_{n2}x_{2}^{(k+1)}+...+b_{nn}x_{n}^{(k)}+c_{n}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Чаще всего используется метод, являющийся модификацией метода Якоби, расчеты
+ в котором производятся по следующей формуле: 
+\begin_inset Formula 
+\[
+\begin{cases}
+x_{1}^{(k+1)}=-\left(a_{12}x_{2}^{(k)}+a_{13}x_{3}^{(k)}+...+a_{1n}x_{n}^{(k)}-b_{1}\right)/a_{11}\\
+x_{2}^{(k+1)}=-\left(a_{21}x_{1}^{(k+1)}+a_{23}x_{3}^{(k)}+...+a_{2n}x_{n}^{(k)}-b_{2}\right)/a_{22}\\
+...\\
+x_{n}^{(k+1)}=-\left(a_{n1}x_{1}^{(k+1)}+a_{n2}x_{2}^{(k+1)}+...+a_{nn}x_{n-1}^{(k+1)}-b_{n}\right)/a_{nn}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $x^{(0)}=\left(x_{1}^{(0)},...,x_{n}^{(0)}\right)^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Для сходимости метода Зейделя необходимо и достаточно, чтобы все корни уравнения
+ 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{cccc}
+\lambda a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & \lambda a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
+\end{array}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+были по модулю меньше единицы.
+\end_layout
+
+\begin_layout Proof
+Преобразуем ход метода Якоби к новым условиям: 
+\begin_inset Formula $Lx^{(k+1)}+Dx^{(k+1)}+Rx^{(k)}=b$
+\end_inset
+
+, откуда 
+\begin_inset Formula $x^{(k+1)}=-(L+D)^{-1}Rx^{(k)}+(L+D)^{-1}b$
+\end_inset
+
+, что есть ничто иное, как МПИ.
+\end_layout
+
+\begin_layout Proof
+Применяя теорему 6.1 к этому МПИ, составим характеристическое уравнение,
+ определяющее собственные числа матрицы 
+\begin_inset Formula $B=-\left(L+D\right)^{-1}R$
+\end_inset
+
+: 
+\begin_inset Formula $\det\left(-\left(L+D\right)^{-1}R-\lambda I\right)=0\Leftrightarrow\det\left(\left(L+D\right)\lambda+R\right)=0$
+\end_inset
+
+, которое, с учетом 
+\begin_inset Formula $A=L+D+R$
+\end_inset
+
+, совпадает с условием теоремы.
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $\norm{\left(L+D\right)^{-1}R}\leq t<1$
+\end_inset
+
+.
+ Тогда при любом начальном векторе 
+\begin_inset Formula $x^{(0)}$
+\end_inset
+
+ метод Зейделя сходится к решению 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ системы и справедливы оценки погрешности: 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{t}{1-t}\norm{x^{(k)}-x^{(k-1)}}\leq\frac{t^{k}}{1-t}\norm{x^{(1)}-x^{(0)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+Если в матрице 
+\begin_inset Formula $A$
+\end_inset
+
+ имеет место диагональное преобладание, то метод Зейделя сходится, причем
+ быстрее, чем метод Якоби.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Решение скалярных нелинейных уравнений.
  Метод половинного деления, метод хорд, метод секущих
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод половинного деления
+\end_layout
+
+\begin_layout Standard
+Пусть требуется найти корень уравнения 
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+, где 
+\begin_inset Formula $f$
+\end_inset
+
+ определена 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, на котором есть корни, то есть 
+\begin_inset Formula $f(a)f(b)<0$
+\end_inset
+
+.
+ Для этого вычислим пробную точку 
+\begin_inset Formula $c=\frac{a+b}{2}$
+\end_inset
+
+, вычислим 
+\begin_inset Formula $f(c)$
+\end_inset
+
+ и сравним:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $f(a)-f(c)<0\Rightarrow b:=c,\ f(b):=f(c)$
+\end_inset
+
+ и рекуррентно выполняем.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $f(a)-f(c)>0$
+\end_inset
+
+.
+ Все то же самое, но наоборот.
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $f(a)f(c)=0$
+\end_inset
+
+ — вернуть 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Делаем, пока 
+\begin_inset Formula $\frac{b-a}{2}>\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод хорд
+\end_layout
+
+\begin_layout Standard
+Будет более оптимально при вычислении 
+\begin_inset Formula $c$
+\end_inset
+
+ учитывать величины ординат 
+\begin_inset Formula $f(a),f(b)$
+\end_inset
+
+.
+ Запишем уравнение прямой, проходящей через эти точки: 
+\begin_inset Formula 
+\[
+\frac{y-f(a)}{f(b)-f(a)}=\frac{x-a}{b-a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Отсюда, полагая 
+\begin_inset Formula $y=0$
+\end_inset
+
+, 
+\begin_inset Formula $x=c$
+\end_inset
+
+ находим: 
+\begin_inset Formula 
+\[
+c=a-\frac{f(a)(b-a)}{f(b)-f(a)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Данный метод также выполняется итерационно до достижения определенной точности.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Метод секущих
+\end_layout
+
+\begin_layout Standard
+Введем величину 
+\begin_inset Formula $h_{k}=x_{k-1}-x_{k}$
+\end_inset
+
+, откуда 
+\begin_inset Formula $x_{k-1}=x_{k}+h_{k}$
+\end_inset
+
+.
+ Так как (общая формула)
+\begin_inset Formula 
+\[
+f'(x)\thickapprox\frac{f(x_{k}+h_{k})-f(x_{k})}{h_{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+и общий итерационный процесс метода Ньютона имеет вид 
+\begin_inset Formula 
+\[
+x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{k})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+то подставив первое во второе получим 
+\begin_inset Formula 
+\[
+x_{k+1}=x_{k}-\frac{f(x_{k})h_{k}}{f(x_{k}+h_{k})-f(x_{k})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+откуда 
+\begin_inset Formula 
+\[
+x_{k+1}=x_{k}-\frac{f(x_{k})(x_{k-1}-x_{k})}{f(x_{k-1})-f(x_{k})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+что является основным итерационным процессом метода секущих.
 \end_layout
 
 \begin_layout Section
@@ -1752,9 +2598,1163 @@ a_{11}^{(1)}\\
  Модифицированный метод Ньютона
 \end_layout
 
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+ — уже известный член последовательности приближений.
+ Для корня 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ можно записать формальное представление по формуле Тейлора: 
+\begin_inset Formula 
+\[
+f(x^{*})=f(x_{k})+f'(x_{k})(x^{*}-x_{k})+f''(\Theta)\frac{(x^{*}-x_{k})^{2}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\Theta\in[a,b]$
+\end_inset
+
+.
+ Считая, что значение 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+ близко к 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, можно рассчитывать, что величина 
+\begin_inset Formula $\left(x^{*}-x_{k}\right)^{2}$
+\end_inset
+
+ будет малой.
+ На этом основании отбросим ее и подменим квадратное уравнение линейным.
+ Тогда итерационный процесс метода Ньютона будет представим в виде 
+\begin_inset Formula 
+\[
+x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{k})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Обозначим 
+\begin_inset Formula $x_{k}-x_{k+1}=S(x)=\frac{f(x)}{f'(x)}$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $\left|S'(x)\right|\leq q\leq1$
+\end_inset
+
+ в некоторой окрестности, то МПИ сходится.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S'(x)=-\frac{(f'(x))^{2}-f(x)f''(x)}{(f'(x))^{2}}+1=-1+\frac{f(x)f''(x)}{(f'(x))^{2}}+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+то есть 
+\begin_inset Formula $S'(x)=\frac{f(x)f''(x)}{(f'(x))^{2}}$
+\end_inset
+
+.
+ Таким образом, условие сходимости имеет вид:
+\begin_inset Formula 
+\[
+\left|\frac{f(x)f''(x)}{(f'(x))^{2}}\right|<1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Если на отрезке 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ существует корень, 
+\begin_inset Formula $f'(x)\neq0$
+\end_inset
+
+ на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ и 
+\begin_inset Formula $f''(x)\neq0$
+\end_inset
+
+, то метод Ньютона сходится 
+\begin_inset Formula $\forall x_{0}$
+\end_inset
+
+, такого, что 
+\begin_inset Formula $f(x_{0})f''(x_{0})>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Оценим скорость сходимости:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x_{k})+f'(x_{k})(x^{*}-x_{k})=F(x_{k})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=f(x)+f'(x)(x^{*}-x);\ F(x^{*})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x_{k})=F(x^{*})+\int_{x^{*}}^{x_{k}}F'(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F'(x)=f'(x)+f''(x)(x^{*}-x)+f'(x)(-1)=f''(x)(x^{*}-x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x_{k})=\int_{x^{*}}^{x_{k}}f''(x)(x^{*}-x)dx=f''(\xi)\int_{x^{*}}^{x_{k}}(x^{*}-x)dx=f''(\xi)\frac{(x^{*}-x_{k})^{2}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{*}-x_{k+1}=x^{*}-x_{k}+\frac{f(x_{k})}{f'(x_{k})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f'(x)(x^{*}-x_{k+1})=F(x_{k})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|x^{*}-x_{k+1}\right|\leq\frac{M_{2}}{f'(x_{k})}\left|x^{*}-x_{k}\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+таким образом, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|x^{*}-x_{k+1}\right|\leq\frac{q^{2^{(k+1)}-1}}{1-q}\left|x^{*}-x_{0}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Цель изменения основной формулы метода Ньютона — уменьшение вычислительных
+ затрат.
+ Самый простой выход — использование на каждом шаге фиксированного множителя
+ 
+\begin_inset Formula $\frac{1}{f'(x_{0})}$
+\end_inset
+
+, то есть осуществлять счет по формуле 
+\begin_inset Formula 
+\[
+x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{0})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Такой метод называют 
+\series bold
+модифицированным методом Ньютона
+\series default
+.
+ Однако он имеет существенный недостаток — утрату высокой скорости сходимости.
+\end_layout
+
 \begin_layout Section
 Алгебраическое интерполирование.
  Интерполяционный полином Лагранжа
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ задана на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ и 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ — 
+\begin_inset Quotes fld
+\end_inset
+
+сложная
+\begin_inset Quotes frd
+\end_inset
+
+ или таблично задана в точках 
+\begin_inset Formula $\left\{ \overline{x_{1}},...,\overline{x_{n}}\right\} $
+\end_inset
+
+.
+ Задача интерполирования — быстро вычислять приближение к 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ или просто 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ в 
+\begin_inset Formula $x\notin\left\{ \overline{x_{1}},...,\overline{x_{n}}\right\} $
+\end_inset
+
+.
+ Для этого 
+\begin_inset Formula $f$
+\end_inset
+
+ заменяется на 
+\begin_inset Formula $a_{0}\varphi_{0}+...+a_{n}\varphi_{n}$
+\end_inset
+
+, где 
+\begin_inset Formula $\varphi_{0},...,\varphi_{n}$
+\end_inset
+
+ — 
+\begin_inset Quotes fld
+\end_inset
+
+простые
+\begin_inset Quotes frd
+\end_inset
+
+ функции, причем 
+\begin_inset Formula $a_{0}\varphi_{0}(x_{i})+...+a_{n}\varphi_{n}(x_{i})=f(x_{i})$
+\end_inset
+
+ для некоторых 
+\begin_inset Formula $\left\{ x_{0},...,x_{n}\right\} \subset[a,b]$
+\end_inset
+
+ или из 
+\begin_inset Formula $\left\{ \overline{x_{1}},...,\overline{x_{n}}\right\} $
+\end_inset
+
+.
+ Такой прием называется интерполяцией.
+\end_layout
+
+\begin_layout Standard
+Интерполяционный полином 
+\begin_inset Formula $a_{0}\varphi_{0}+...+a_{n}\varphi_{n}$
+\end_inset
+
+ может быть построен для заданной точности, только если функции 
+\begin_inset Formula $\varphi_{0},...,\varphi_{n}$
+\end_inset
+
+ обладают следующими свойствами:
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $\varphi_{0},...,\varphi_{n},...$
+\end_inset
+
+ — линейно независимы, то есть любой конечный набор из них линейно независим.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $\varphi_{0},...,\varphi_{n},...$
+\end_inset
+
+ — полная система функций в некотором рассматриваемом функциональном пространств
+е, то есть 
+\begin_inset Formula $\forall f\ \exists b_{0},...,b_{n},...$
+\end_inset
+
+: 
+\begin_inset Formula $f=\sum_{i=0}^{\infty}b_{i}\varphi_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Задача интерполяции: для функции 
+\begin_inset Formula $f(x)$
+\end_inset
+
+, заданной таблицей, найти многочлен 
+\begin_inset Formula $P_{n}(x)$
+\end_inset
+
+ такой, что выполняется совокупность условий 
+\begin_inset Formula $P_{n}(x_{i})=f(x_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Данная задача решается посредством решения СЛАУ 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+\varphi_{0}(x_{0}) & \varphi_{1}(x_{0}) & \cdots & \varphi_{n}(x_{0})\\
+\varphi_{0}(x_{1}) & \varphi_{1}(x_{1}) & \cdots & \varphi_{n}(x_{1})\\
+\vdots & \vdots & \ddots & \vdots\\
+\varphi_{0}(x_{n}) & \varphi_{0}(x_{n}) & \cdots & \varphi_{n}(x_{n})
+\end{array}\right)\left(\begin{array}{c}
+a_{0}\\
+a_{1}\\
+\vdots\\
+a_{n}
+\end{array}\right)=\left(\begin{array}{c}
+f(x_{0})\\
+f(x_{1})\\
+\vdots\\
+f(x_{n})
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Однако делать это напрямую неэффективно.
+ Поэтому будем строить
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Интерполяционный полином Лагранжа
+\end_layout
+
+\begin_layout Standard
+Будем обозначать такой полином степени 
+\begin_inset Formula $n$
+\end_inset
+
+ как 
+\begin_inset Formula $L_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Итак, должно выполняться 
+\begin_inset Formula $L_{n}(x_{i})=f(x_{i})$
+\end_inset
+
+.
+ Представим 
+\begin_inset Formula $L_{n}(x_{i})=l_{i}(x)f(x_{i})$
+\end_inset
+
+, где 
+\begin_inset Formula $l_{i}(x_{j})=\begin{cases}
+1 & i=j\\
+0 & i\neq j
+\end{cases}$
+\end_inset
+
+ — символ Кронекера.
+\end_layout
+
+\begin_layout Standard
+Для того, чтобы построить такой полином, нам нужно, чтобы у 
+\begin_inset Formula $l_{i}(x)$
+\end_inset
+
+ корнями являлись 
+\begin_inset Formula $x_{0},...,x_{i-1},x_{i+1},...x_{n}$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula 
+\[
+l_{i}(x)=\frac{(x-x_{0})...(x-x_{i-1})(x-x_{i+1})...(x-x_{n})}{(x_{i}-x_{0})...(x_{i}-x_{i-1})(x_{i}-x_{i+1})...(x_{i}-x_{n})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Запишем более кратко: 
+\begin_inset Formula 
+\[
+l_{i}(x)=\prod_{j=0,j\neq i}^{n}\frac{(x-x_{j})}{(x_{i}-x_{j})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+откуда 
+\begin_inset Formula 
+\[
+L_{n}(x)=\sum_{i=0}^{n}\left(\prod_{j=0,j\neq i}^{n}\frac{(x-x_{j})}{(x_{i}-x_{j})}\right)f(x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если ввести 
+\begin_inset Formula $\omega(x)$
+\end_inset
+
+ — угловой многочлен, который равен 
+\begin_inset Formula $\omega_{n}(x)=(x-x_{0})...(x-x_{i-1})(x-x_{i+1})...(x-x_{n})$
+\end_inset
+
+, то 
+\begin_inset Formula 
+\[
+l_{i}(x)=\frac{\omega_{n}(x)}{(x-x_{i})\omega_{n}'(x_{i})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+и тогда 
+\begin_inset Formula 
+\[
+L_{n}(x)=\sum_{i=0}^{n}\frac{f(x_{i})\omega_{n}(x)}{(x-x_{i})\omega'_{n}(x_{i})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Погрешность интерполяционного полинома Лагранжа
+\end_layout
+
+\begin_layout Standard
+Погрешность 
+\begin_inset Formula $r_{n}(x)=L_{n}(x)-f(x)$
+\end_inset
+
+.
+ Рассмотрим вспомогательную функцию 
+\begin_inset Formula $\Delta(x)=r_{n}(x)-K\omega_{n}(x)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Выясним, чему равна 
+\begin_inset Formula $r_{n}(x^{*}),$
+\end_inset
+
+ где 
+\begin_inset Formula $x^{*}\in[a,b]$
+\end_inset
+
+ и 
+\begin_inset Formula $x^{*}\neq x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Потребуем, чтобы 
+\begin_inset Formula $\Delta(x^{*})=0$
+\end_inset
+
+, то есть 
+\begin_inset Formula 
+\[
+K=\frac{r_{n}(x^{*})}{\omega_{n}(x^{*})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Delta(x)$
+\end_inset
+
+ имеет 
+\begin_inset Formula $n+2$
+\end_inset
+
+ корня на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, следовательно, по теореме Ролля 
+\begin_inset Formula $\Delta'(x)$
+\end_inset
+
+ имеет 
+\begin_inset Formula $n+1$
+\end_inset
+
+ корень между 
+\begin_inset Formula $\min(x_{0},x^{*})$
+\end_inset
+
+ и 
+\begin_inset Formula $\max(x_{n},x^{*})$
+\end_inset
+
+.
+ У 
+\begin_inset Formula $\Delta^{(n+1)}(x)$
+\end_inset
+
+ существует 1 корень и он в 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Пусть это некоторая точка 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+ То есть 
+\begin_inset Formula $\Delta^{(n+1)}(\xi)=r_{n}^{(n+1)}(\xi)-K\cdot(n+1)!=-f^{(n+1)}(\xi)-K(n+1)!=0$
+\end_inset
+
+, отсюда 
+\begin_inset Formula $r_{n}(x^{*})=-\frac{f^{(n+1)}(\xi)}{(n+1)!}\omega_{n}(x^{*})$
+\end_inset
+
+.
+ И теперь в силу произвольности, так как 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ — любое, то 
+\begin_inset Formula 
+\[
+\Gamma_{n}(x)=-\frac{f^{(n+1)}(\xi)}{(n+1)!}\omega_{n}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Оценим сверху погрешность полинома Лагранжа: 
+\begin_inset Formula 
+\[
+\left|R_{n}(x)\right|\leq\frac{M_{n+1}}{(n+1)!}\left|\omega(x)\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $M_{n+1}\geq\left|f^{(n+1)}(x)\right|$
+\end_inset
+
+, 
+\begin_inset Formula $x\in[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Для более гладкой 
+\begin_inset Formula $f$
+\end_inset
+
+: 
+\begin_inset Formula $M_{n+1}=\max_{x\in[a,b]}\left|f^{(n+1)}(x)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Formula $f(x)=M_{n+1}x^{n+1}+P_{n}(x)$
+\end_inset
+
+, тогда 
+\begin_inset Formula $f^{(n+1)}(x)=M_{n+1}$
+\end_inset
+
+ и 
+\begin_inset Formula $R_{n}=\frac{M_{n+1}}{(n+1)!}\omega(x)$
+\end_inset
+
+, то есть 
+\begin_inset Formula $\left|R_{n}\right|=\frac{M_{n+1}}{(n+1)!}\left|\omega(x)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Выбор узлов интерполирования
+\end_layout
+
+\begin_layout Standard
+Задача: 
+\begin_inset Formula $\left|\omega(x)\right|\to\min$
+\end_inset
+
+ для 
+\begin_inset Formula $(x_{0},...,x_{n})$
+\end_inset
+
+.
+ Эта задача решается многочленами Чебышёва.
+ 
+\end_layout
+
+\begin_layout Standard
+Многочлены Чебышёва обозначаются как 
+\begin_inset Formula $T$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+T_{n}(x)=\cos(n\arccos x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{0}(x)=1,\ T_{1}(x)=x$
+\end_inset
+
+.
+ Далее существует рекуррентная формула: 
+\begin_inset Formula 
+\[
+T_{n+1}(x)=2xT_{n}(x)-T_{n-1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Свойство этих многочленов в том, что если строить из графики, то на отрезке
+ 
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+ находятся все корни, экстремумы и экстремумы принимают значения 
+\begin_inset Formula $-1$
+\end_inset
+
+ и 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Однако гораздо больше нам интересны многочлены 
+\begin_inset Formula $\overline{T}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\overline{T}_{n}(x)=\frac{1}{2^{n-1}}T_{n}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Корни 
+\begin_inset Formula $T_{n}(x)$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\cos\left(\frac{\pi}{2n}+\frac{\pi k}{n}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $k=\overline{1,n}$
+\end_inset
+
+.
+ Соответственно, перенос на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ корней 
+\begin_inset Formula $T_{n+1}(x)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+x_{i}=\frac{a+b}{2}+\frac{b-a}{2}\cos\left(\frac{\pi}{2(n+1)}-\frac{\pi(k+1)}{n+1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $k=\overline{0,n}$
+\end_inset
+
+.
+ Эти узлы дают наименьшуу максимальную погрешность интерполирования на отрезке
+ 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Свойства полиномов Чебышёва:
+\end_layout
+
+\begin_layout Standard
+1) Экстремумы на 
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+ в точке 
+\begin_inset Formula $\cos(\frac{\pi k}{n}),\ k=\overline{0,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula 
+\[
+\int_{-1}^{1}\frac{T_{i}(x)T_{j}(x)}{\sqrt{1-x^{2}}}dx=\begin{cases}
+\text{не ноль} & i=j\\
+0 & i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $f$
+\end_inset
+
+ задано таблицей то выбор 
+\begin_inset Formula $x_{0},...,x_{n}$
+\end_inset
+
+, так, чтобы 
+\begin_inset Formula $\left|\omega(x)\right|\to\min$
+\end_inset
+
+ — более сложная задача.
+\end_layout
+
+\begin_layout Example
+Пусть задана таблица:
+\end_layout
+
+\begin_layout Example
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Тогда полином Лагранжа будет иметь вид: 
+\begin_inset Formula 
+\[
+L_{2}(x)=2\frac{(x-2)(x-3)}{6}+5\frac{x(x-3)}{-2}+4\frac{x(x-2)}{3}=\frac{-5x^{2}+19x+12}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Если по этим точкам не очень хорошо получилось приближение функции, то мы
+ можем добавить одно значение и построить полином третьего порядка по четырем
+ точкам:
+\end_layout
+
+\begin_layout Example
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Построение 
+\begin_inset Formula $L_{3}$
+\end_inset
+
+ будет так же сложно (потребует сделать все то же самое).
+ 
 \end_layout
 
 \begin_layout Section
