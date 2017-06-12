@@ -1982,12 +1982,16 @@ x^{(k+1)}=Bx^{(k)}+c
 a_{21} & \lambda a_{22} & \cdots & a_{2n}\\
 \vdots & \vdots & \ddots & \vdots\\
 a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
-\end{array}\right)
+\end{array}\right)=0
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Theorem
+по модулю меньше единицы.
 \end_layout
 
 \begin_layout Standard
@@ -4665,7 +4669,7 @@ f''(x)=\frac{f(x_{0})-2f(x_{0}+h)+f(x_{0}+2h)}{h^{2}}
 \begin_inset Formula $S_{1,0}$
 \end_inset
 
-: первого порядка с дефектом ноль, то есть 
+: первого порядка с дефектом один, то есть 
 \begin_inset Formula $S(x_{i})=f(x_{i})$
 \end_inset
 

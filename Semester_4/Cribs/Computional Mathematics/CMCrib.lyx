@@ -294,42 +294,6 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_deeper
-\begin_layout Definition
-Точное значение 
-\begin_inset Formula $a$
-\end_inset
-
- и 
-\begin_inset Formula $\varepsilon$
-\end_inset
-
- чаще всего неизвестны, однако часто известна верхняя граница 
-\begin_inset Formula $\Delta$
-\end_inset
-
- абсолютной величины погрешности: 
-\begin_inset Formula $\left|a-a^{*}\right|=\left|\varepsilon\right|\leq\Delta$
-\end_inset
-
-.
- Ее называют границей погрешности 
-\begin_inset Formula $\varepsilon$
-\end_inset
-
-.
- Точное значение 
-\begin_inset Formula $a$
-\end_inset
-
- лежит в пределах 
-\begin_inset Formula $a^{*}-\Delta\leq a\leq a^{*}+\Delta$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset VSpace bigskip
@@ -358,7 +322,7 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 Абсолютная: 
-\begin_inset Formula $(x_{1}+x_{2})+\Delta(x_{1}+x_{2})=x_{1}+\Delta x_{1}+x_{2}+\Delta x_{2}\Rightarrow\Delta_{+}=x_{1}+x_{2}$
+\begin_inset Formula $(x_{1}+x_{2})+\Delta(x_{1}+x_{2})=x_{1}+\Delta x_{1}+x_{2}+\Delta x_{2}\Rightarrow\Delta_{+}=\Delta x_{1}+\Delta x_{2}$
 \end_inset
 
 , откуда 
@@ -402,7 +366,7 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 Абсолютная: 
-\begin_inset Formula $(x_{1}x_{2})+\Delta(x_{1}x_{2})=x_{1}x_{2}+x_{1}\Delta x_{2}+x_{2}\Delta x_{1}+\Delta x_{1}\Delta x_{2}\Rightarrow\Delta_{+}\thickapprox x_{1}\Delta x_{2}+x_{2}\Delta x_{1}$
+\begin_inset Formula $(x_{1}+\Delta x_{1})(x_{2}+\Delta x_{2})=x_{1}x_{2}+x_{1}\Delta x_{2}+x_{2}\Delta x_{1}+\Delta x_{1}\Delta x_{2}\Rightarrow\Delta_{+}\thickapprox x_{1}\Delta x_{2}+x_{2}\Delta x_{1}$
 \end_inset
 
 .
@@ -446,7 +410,7 @@ LatexCommand tableofcontents
 \series default
  теории погрешностей формулируют так: 
 \emph on
-каковы долны быть абсолютные погрешности аргументов функции, чтобы абсолютная
+каковы должны быть абсолютные погрешности аргументов функции, чтобы абсолютная
  погрешность функции не превышала заданной величины?
 \end_layout
 
@@ -572,7 +536,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Example
-\begin_inset Formula $\norm x_{p}=\left(\left|X_{1}\right|^{p}+...+\left|x_{n}\right|^{p}\right)^{\nicefrac{1}{p}}$
+\begin_inset Formula $\norm x_{p}=\left(\left|x_{1}\right|^{p}+...+\left|x_{n}\right|^{p}\right)^{\nicefrac{1}{p}}$
 \end_inset
 
  — строгая математическая норма;
@@ -635,7 +599,7 @@ LatexCommand tableofcontents
 Норма матрицы, подчиненная норме вектора: 
 \begin_inset Formula 
 \[
-\norm A=\sup_{x\neq0}\frac{\norm{Ax}}{\norm x}=\sup_{\norm x=1}\norm{Ax}
+\norm A=\sup_{\norm x\neq0}\frac{\norm{Ax}}{\norm x}=\sup_{\norm x=1}\norm{Ax}
 \]
 
 \end_inset
@@ -697,14 +661,14 @@ LatexCommand tableofcontents
 \begin_inset Formula $b\neq0$
 \end_inset
 
-, причем правая часть системы содержит погрешностей, то есть фактически
- требуется решить СЛАУ 
-\begin_inset Formula $A(x+\delta x)=b+\delta b$
+, причем правая часть системы содержит погрешности, то есть фактически требуется
+ решить СЛАУ 
+\begin_inset Formula $A(x+\Delta x)=b+\Delta b$
 \end_inset
 
 .
  Отсюда 
-\begin_inset Formula $A(\delta x)=\delta b$
+\begin_inset Formula $A(\Delta x)=\Delta b$
 \end_inset
 
 , и, считая матрицу 
@@ -712,14 +676,14 @@ LatexCommand tableofcontents
 \end_inset
 
  неособой, найдем 
-\begin_inset Formula $\delta x=A^{-1}\delta b$
+\begin_inset Formula $\Delta x=A^{-1}\Delta b$
 \end_inset
 
 .
  Получим: 
 \begin_inset Formula 
 \[
-\norm{\delta x}=\norm{A^{-1}\delta b}\leq\norm{A^{-1}}\norm{\delta b}=\norm{A^{-1}}\cdot\norm A\cdot\underbrace{\frac{\norm b}{\norm A}}_{=\norm x}\cdot\frac{\norm{\delta b}}{\norm b}\leq\nu(A)\norm x\cdot\frac{\norm{\delta b}}{\norm b}
+\norm{\Delta x}=\norm{A^{-1}\Delta b}\leq\norm{A^{-1}}\norm{\Delta b}=\norm{A^{-1}}\cdot\norm A\cdot\underbrace{\frac{\norm b}{\norm A}}_{=\norm x}\cdot\frac{\norm{\Delta b}}{\norm b}\leq\nu(A)\norm x\cdot\frac{\norm{\Delta b}}{\norm b}
 \]
 
 \end_inset
@@ -738,7 +702,7 @@ LatexCommand tableofcontents
 \end_inset
 
  получим 
-\begin_inset Formula $\frac{\norm{\delta x}}{\norm x}\leq\nu(A)\cdot\frac{\norm{\delta b}}{\norm b}$
+\begin_inset Formula $\frac{\norm{\Delta x}}{\norm x}\leq\nu(A)\cdot\frac{\norm{\Delta b}}{\norm b}$
 \end_inset
 
 .
@@ -759,10 +723,10 @@ LatexCommand tableofcontents
 \begin_deeper
 \begin_layout Definition
 Если 
-\begin_inset Formula $\nu(A)>>1$
+\begin_inset Formula $\nu(A)$
 \end_inset
 
-, СЛАУ называют плохо обусловленной.
+ намного больше единицы, СЛАУ называют плохо обусловленной.
 \end_layout
 
 \end_deeper
@@ -820,10 +784,6 @@ y
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-//чем она плоха?
 \end_layout
 
 \begin_layout Section
@@ -1306,10 +1266,6 @@ x_{i}=\frac{1}{u_{ii}}\left(y_{i}-\sum_{k=i+1}^{n}u_{ik}x_{k}\right)
 \end_layout
 
 \begin_layout Standard
-//управление ростом погрешностей и выбор текущего элемента
-\end_layout
-
-\begin_layout Standard
 Если усложнить LU-разложение, добавив матрицы перестановок 
 \begin_inset Formula $P$
 \end_inset
@@ -1477,7 +1433,7 @@ a_{n1}^{(0)}
 
 .
  Произведение всех таких матриц будет являться матрицей 
-\begin_inset Formula $Q=Q_{n,n-1}Q_{n,n-2},...,Q_{n-1,n-1},...,Q_{21}$
+\begin_inset Formula $Q=Q_{n,n-1}Q_{n,n-2},...,Q_{n-1,n-1},Q_{n-1,n-2}...,Q_{21}$
 \end_inset
 
 .
@@ -1550,7 +1506,7 @@ a_{11}^{(1)}\\
 \end_layout
 
 \begin_layout Standard
-//проверить Хаусхольдера на правильность
+//попросить его рассказать про данный метод подробнее
 \end_layout
 
 \begin_layout Standard
@@ -1564,8 +1520,7 @@ a_{11}^{(1)}\\
 \begin_inset Formula $\omega$
 \end_inset
 
- — вектор единичной длины.
- 
+ — вектор единичной длины, такой, что 
 \begin_inset Formula $\omega^{T}\omega=1$
 \end_inset
 
@@ -1811,7 +1766,7 @@ x^{(k+1)}=Bx^{(k)}+c
 \end_inset
 
  существует, равна 
-\begin_inset Formula $\sum_{i=1}^{\infty}B^{i}$
+\begin_inset Formula $\sum_{i=0}^{\infty}B^{i}$
 \end_inset
 
  и 
@@ -1822,7 +1777,7 @@ x^{(k+1)}=Bx^{(k)}+c
 \end_layout
 
 \begin_layout Proof
-\begin_inset Formula $\norm B\leq q<1\Rightarrow\norm{i+B+...+B^{k}+...}\leq\norm I+\norm B+...+\norm{B^{k}}+...\leq\norm I+\norm B+...+\norm B^{k}+...\leq1+q+...+q^{k}+...=\frac{1}{1-q}$
+\begin_inset Formula $\norm B\leq q<1\Rightarrow\norm{I+B+...+B^{k}+...}\leq\norm I+\norm B+...+\norm{B^{k}}+...\leq\norm I+\norm B+...+\norm B^{k}+...\leq1+q+...+q^{k}+...=\frac{1}{1-q}$
 \end_inset
 
 , следовательно, существует 
@@ -1842,6 +1797,10 @@ x^{(k+1)}=Bx^{(k)}+c
 \end_inset
 
 , следовательно 
+\begin_inset Formula $V=(I-B)^{-1}$
+\end_inset
+
+ и 
 \begin_inset Formula $\norm{(I-B)^{-1}}\leq\frac{1}{1-q}$
 \end_inset
 
@@ -2243,10 +2202,18 @@ a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+//нужны ди доказательства?
+\end_layout
+
 \begin_layout Section
 Итерационные методы решения СЛАУ.
  Метод Зейделя.
  Условия сходимости, оценка погрешности
+\end_layout
+
+\begin_layout Standard
+//нужно ли говорить здесь начало предыдущего билета?
 \end_layout
 
 \begin_layout Standard
@@ -2380,6 +2347,10 @@ a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
 
  имеет место диагональное преобладание, то метод Зейделя сходится, причем
  быстрее, чем метод Якоби.
+\end_layout
+
+\begin_layout Theorem
+//Нужно ли доказательство?
 \end_layout
 
 \end_deeper
@@ -2639,7 +2610,31 @@ f(x^{*})=f(x_{k})+f'(x_{k})(x^{*}-x_{k})+f''(\Theta)\frac{(x^{*}-x_{k})^{2}}{2}
 
  будет малой.
  На этом основании отбросим ее и подменим квадратное уравнение линейным.
- Тогда итерационный процесс метода Ньютона будет представим в виде 
+ Естественно, что при этом будет найден не корень 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, а некоторая точка 
+\begin_inset Formula $x_{k+1}$
+\end_inset
+
+, близкая к корню.
+ Тогда итерационный процесс метода Ньютона определяется уравнением 
+\begin_inset Formula 
+\[
+f(x_{k})+f'(x_{k})(x_{k+1}-x_{k})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+откуда можно вывести явный вид:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{k})}
@@ -3094,8 +3089,16 @@ f(x_{n})
 \begin_inset Formula $x_{0},...,x_{i-1},x_{i+1},...x_{n}$
 \end_inset
 
-.
- Тогда 
+ (чтобы значение 
+\begin_inset Formula $l_{i}(x_{0,...,i-1,i+1,...,n})$
+\end_inset
+
+ были нулевыми.
+ Тогда (знаменатель нужен для того, чтобы 
+\begin_inset Formula $l_{i}(x_{i})=1$
+\end_inset
+
+)
 \begin_inset Formula 
 \[
 l_{i}(x)=\frac{(x-x_{0})...(x-x_{i-1})(x-x_{i+1})...(x-x_{n})}{(x_{i}-x_{0})...(x_{i}-x_{i-1})(x_{i}-x_{i+1})...(x_{i}-x_{n})}
@@ -3269,7 +3272,7 @@ K=\frac{r_{n}(x^{*})}{\omega_{n}(x^{*})}
 \end_inset
 
 , отсюда 
-\begin_inset Formula $r_{n}(x^{*})=-\frac{f^{(n+1)}(\xi)}{(n+1)!}\omega_{n}(x^{*})$
+\begin_inset Formula $r_{n}(x^{*})=-\frac{f^{(n+1)}(\xi)}{(n+1)!}\omega_{n+1}(x^{*})$
 \end_inset
 
 .
@@ -3280,7 +3283,7 @@ K=\frac{r_{n}(x^{*})}{\omega_{n}(x^{*})}
  — любое, то 
 \begin_inset Formula 
 \[
-\Gamma_{n}(x)=-\frac{f^{(n+1)}(\xi)}{(n+1)!}\omega_{n}(x)
+r_{n}(x)=-\frac{f^{(n+1)}(\xi)}{(n+1)!}\omega_{n+1}(x)
 \]
 
 \end_inset
@@ -3292,7 +3295,7 @@ K=\frac{r_{n}(x^{*})}{\omega_{n}(x^{*})}
 Оценим сверху погрешность полинома Лагранжа: 
 \begin_inset Formula 
 \[
-\left|R_{n}(x)\right|\leq\frac{M_{n+1}}{(n+1)!}\left|\omega(x)\right|
+\left|r_{n}(x)\right|\leq\frac{M_{n+1}}{(n+1)!}\left|\omega(x)\right|
 \]
 
 \end_inset
@@ -3344,202 +3347,298 @@ K=\frac{r_{n}(x^{*})}{\omega_{n}(x^{*})}
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Рассмотрим задачу выбора узлов интерполирования:
-\end_layout
-
-\begin_layout Problem*
-\begin_inset Formula $\left|\omega(x)\right|\to\min$
-\end_inset
-
- для 
-\begin_inset Formula $(x_{0},...,x_{n})$
-\end_inset
-
-.
- Эта задача решается многочленами Чебышёва.
- 
-\end_layout
-
-\begin_layout Standard
-Многочлены Чебышёва обозначаются как 
-\begin_inset Formula $T$
-\end_inset
-
-: 
-\begin_inset Formula 
-\[
-T_{n}(x)=\cos(n\arccos x)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $T_{0}(x)=1,\ T_{1}(x)=x$
-\end_inset
-
-.
- Далее существует рекуррентная формула: 
-\begin_inset Formula 
-\[
-T_{n+1}(x)=2xT_{n}(x)-T_{n-1}(x)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Свойство этих многочленов в том, что если строить из графики, то на отрезке
- 
-\begin_inset Formula $[-1,1]$
-\end_inset
-
- находятся все корни, экстремумы и экстремумы принимают значения 
-\begin_inset Formula $-1$
-\end_inset
-
- и 
-\begin_inset Formula $1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Однако гораздо больше нам интересны многочлены 
-\begin_inset Formula $\overline{T}$
-\end_inset
-
-: 
-\begin_inset Formula 
-\[
-\overline{T}_{n}(x)=\frac{1}{2^{n-1}}T_{n}(x)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Корни 
-\begin_inset Formula $T_{n}(x)$
-\end_inset
-
-: 
-\begin_inset Formula 
-\[
-\cos\left(\frac{\pi}{2n}+\frac{\pi k}{n}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-где 
-\begin_inset Formula $k=\overline{1,n}$
-\end_inset
-
-.
- Соответственно, перенос на 
-\begin_inset Formula $[a,b]$
-\end_inset
-
- корней 
-\begin_inset Formula $T_{n+1}(x)$
-\end_inset
-
-:
-\begin_inset Formula 
-\[
-x_{i}=\frac{a+b}{2}+\frac{b-a}{2}\cos\left(\frac{\pi}{2(n+1)}-\frac{\pi(k+1)}{n+1}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-где 
-\begin_inset Formula $k=\overline{0,n}$
-\end_inset
-
-.
- Эти узлы дают наименьшуу максимальную погрешность интерполирования на отрезке
- 
-\begin_inset Formula $[a,b]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Свойства полиномов Чебышёва:
-\end_layout
-
-\begin_layout Standard
-1) Экстремумы на 
-\begin_inset Formula $[-1,1]$
-\end_inset
-
- в точке 
-\begin_inset Formula $\cos(\frac{\pi k}{n}),\ k=\overline{0,n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-2) 
-\begin_inset Formula 
-\[
-\int_{-1}^{1}\frac{T_{i}(x)T_{j}(x)}{\sqrt{1-x^{2}}}dx=\begin{cases}
-\text{не ноль} & i=j\\
-0 & i\neq j
-\end{cases}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Если 
-\begin_inset Formula $f$
-\end_inset
-
- задано таблицей то выбор 
-\begin_inset Formula $x_{0},...,x_{n}$
-\end_inset
-
-, так, чтобы 
-\begin_inset Formula $\left|\omega(x)\right|\to\min$
-\end_inset
-
- — более сложная задача.
-\end_layout
-
 \begin_layout Section
 Кратное интерполирование.
  Интерполяционный полином Эрмита
+\end_layout
+
+\begin_layout Standard
+Пусть на промежутке 
+\begin_inset Formula $[a,b]\subseteq D(f)$
+\end_inset
+
+ расположены 
+\begin_inset Formula $m+1$
+\end_inset
+
+ несовпадающих узлов 
+\begin_inset Formula $x_{0},...,x_{m}$
+\end_inset
+
+ и известны значения функции в этих точках, а также некоторые ее производные,
+ максимальный порядок которых различен в разных узлах.
+ Такие узлы называются 
+\series bold
+кратными.
+ 
+\series default
+Конкретно, считаем, что в 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{c}
+x_{0}\\
+x_{1}\\
+\vdots\\
+x_{m}
+\end{array}$
+\end_inset
+
+ заданы значения 
+\begin_inset Formula $\begin{array}{c}
+y_{0},y_{0}',...,y_{0}^{(k_{0}-1)}\\
+y_{1},y_{1}',...,y_{1}^{(k_{1}-1)}\\
+\vdots\\
+y_{m},y_{m}',...,y_{m}^{(k_{m}-1)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+тогда кратность узлов 
+\begin_inset Formula $x_{0},...,x_{m}$
+\end_inset
+
+ соответственно равна 
+\begin_inset Formula $k_{0},...,k_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Предполагая, что суммарная кратность узлов есть 
+\begin_inset Formula $\sum_{i=0}^{m}k_{i}=n+1$
+\end_inset
+
+, ставим задачу построения многочлена 
+\begin_inset Formula $H_{n}(x)$
+\end_inset
+
+ степени 
+\begin_inset Formula $n$
+\end_inset
+
+, такого, что 
+\begin_inset Formula $H_{n}^{(j)}(x_{i})=f^{(j)}(x_{i})\ \forall i\in\overline{0,m},\ \forall j\in\overline{0,k_{i}-1}$
+\end_inset
+
+ (условия Эрмитовой интерполяции).
+ Такой многочлен будем называть 
+\series bold
+интерполяционным многочленом Эрмита
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Формально задача состоит в определении коэффициентов многочлена 
+\begin_inset Formula $H_{n}(x)=a_{0}x^{n}+a_{1}x^{n-1}+...+a_{n-1}x+a_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Многочлен Эрмита существует и единственен.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Единственность:
+\end_layout
+
+\begin_layout Proof
+Если 
+\begin_inset Formula $\exists H_{n}(x),\hat{H}_{n}(x)$
+\end_inset
+
+ — два многочлена степени 
+\begin_inset Formula $n$
+\end_inset
+
+, удовлетворяющие 
+\begin_inset Formula $n+1$
+\end_inset
+
+ условиям Эрмитовой интерполяции, то их разность 
+\begin_inset Formula $H_{n}(x)-\hat{H}_{n}(x)$
+\end_inset
+
+ — многочлен степени не выше 
+\begin_inset Formula $n$
+\end_inset
+
+ — имеет 
+\begin_inset Formula $n+1$
+\end_inset
+
+ корень с учетом кратностей, следовательно, 
+\begin_inset Formula $H_{n}(x)-\hat{H}_{n}(x)\equiv0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Существование:
+\end_layout
+
+\begin_layout Proof
+Возьмем 
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+.
+ Все ее производные равны нулю, то есть условия Эрмитовой интерполяции для
+ нее имеют вид 
+\begin_inset Formula $H_{n}^{(j)}(x_{i})=0$
+\end_inset
+
+ и таких условий 
+\begin_inset Formula $n+1$
+\end_inset
+
+.
+ Получается, многочлен степени 
+\begin_inset Formula $n$
+\end_inset
+
+ имеет 
+\begin_inset Formula $n+1$
+\end_inset
+
+ корень, то есть это нуль-многочлен, то есть все его коэффициенты 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ равны нулю.
+ С другой стороны, это однородная СЛАУ относительно коэффициентов 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+, что в силу единственности такого набора означает наличие только тривиального
+ решения, что означает неравенство нулю ее детерминанта, влекущее разрешимость
+ такой системы при любых правых частях, то есть существование наборов таких
+ наборов коэффициентов 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+, обеспечивающих выполнение условий эрмитовой интерполяции для любой заданной
+ функции.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Построим интерполяционный многочлен Эрмита:
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $L_{m}(x)$
+\end_inset
+
+ — интерполяционный многочлен Лагранжа, построенный по данным 
+\begin_inset Formula $m+1$
+\end_inset
+
+ значениям.
+ Обозначим 
+\begin_inset Formula $\Pi_{m+1}(x)=(x-x_{0})...(x-x_{m})$
+\end_inset
+
+.
+ Так как по условию 
+\begin_inset Formula $m\leq n$
+\end_inset
+
+, то по теореме о делении с остатком, многочлен Эрмита можно представить
+ в виде 
+\begin_inset Formula 
+\[
+H_{n}(x)=L_{m}(x)+H_{n-(m+1)}\cdot\Pi_{m+1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для построения многочлена 
+\begin_inset Formula $H_{n-(m+1)}(x)$
+\end_inset
+
+ привлечем информацию о производных, т.е.
+ равенства 
+\begin_inset Formula $H_{n}'(x_{i})=f'(x_{i})$
+\end_inset
+
+ в тех узлах, где производные заданы.
+ Продифференцировав равенство выше, получим 
+\begin_inset Formula 
+\[
+H_{n}(x)=L'_{m}(x)+H_{n-(m+1)}'(x)\cdot\Pi_{m+1}(x)+H_{n-(m+1)}(x)\cdot\Pi_{m+1}'(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Поскольку 
+\begin_inset Formula $\Pi_{m+1}(x)=0$
+\end_inset
+
+ в тех узлах 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, где по условию эрмитовой интерполяции справедливо 
+\begin_inset Formula $H'(x_{i})=f'(x_{i})$
+\end_inset
+
+, то можно записать 
+\begin_inset Formula 
+\[
+L'_{m}(x_{i})+H_{n-(m+1)}(x_{i})\cdot\Pi_{m+1}'(x)=f'(x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+откуда значение многочлена 
+\begin_inset Formula $H_{n-(m+1)}(x)$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+H_{n-(m+1)}=\frac{f'(x_{i})-L'_{m}(x_{i})}{\Pi_{m+1}(x_{i})}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3552,10 +3651,399 @@ x_{i}=\frac{a+b}{2}+\frac{b-a}{2}\cos\left(\frac{\pi}{2(n+1)}-\frac{\pi(k+1)}{n+
 
 \end_layout
 
+\begin_layout Standard
+В тех случаях, когда промежуток 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, на котором надо интерполировать функцию 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ функцией 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ велик и отсутствуют основания считать данную функцию 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ достаточно гладкой, применяют кусочно-полиномиальную аппроксимацию, предполагаю
+щую, что аппроксимирующая функция 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ составляется из многочленов одинаковой небольшой степени, определяемых
+ каждый на своей части отрезка 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Сплайном 
+\begin_inset Formula $S_{m}(x)$
+\end_inset
+
+ называется определенная на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ функция, принадлежащая классу 
+\begin_inset Formula $C^{l}[a,b]$
+\end_inset
+
+, такая, что на каждом промежутке 
+\begin_inset Formula $[x_{k-1},x_{k}]$
+\end_inset
+
+ — это многочлен 
+\begin_inset Formula $m$
+\end_inset
+
+-й степени.
+ Разность 
+\begin_inset Formula $d=m-l$
+\end_inset
+
+ называется дефектом сплайна.
+\end_layout
+
+\begin_layout Standard
+Если сплайн 
+\begin_inset Formula $S_{m}(x)$
+\end_inset
+
+ строится по некоторой функции 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ так, чтобы выполнялись условия 
+\begin_inset Formula $S_{m}(x_{i})=f(x_{i})$
+\end_inset
+
+, то такой сплайн называется интерполяционным сплайном для функции 
+\begin_inset Formula $f(x)$
+\end_inset
+
+; при этом узлы сплайна 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+ вообще говоря могут не совпадать с узлами интерполяции 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Кубическим сплайном дефекта 1 интерполирующим на отрезке 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ данную функцию 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ называется функция 
+\begin_inset Formula 
+\[
+g(x)=\left\{ g_{k}(x)=a_{k}+b_{k}(x-x_{k})+c_{k}(x-x_{k})^{2}+d_{k}(x-x_{k})^{3}\ \text{при}\ x\in[x_{k-1},x_{k}]\right\} _{k=1}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+удовлетворяющая совокупности условий:
+\end_layout
+
+\begin_layout Definition
+1) 
+\begin_inset Formula $g(x_{k})=f_{k}$
+\end_inset
+
+ (условие интерполирования в узлах сплайна);
+\end_layout
+
+\begin_layout Definition
+2) 
+\begin_inset Formula $g(x)\in C^{2}[a,b]$
+\end_inset
+
+ (двойная непрерывная дифференцируемость);
+\end_layout
+
+\begin_layout Definition
+3) 
+\begin_inset Formula $g''(a)=g''(b)=0$
+\end_inset
+
+ (краевые условия).
+\end_layout
+
+\begin_layout Standard
+Для построения по данной функции 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ интерполирующего ее сплайна 
+\begin_inset Formula $S_{3,2}$
+\end_inset
+
+ нужно найти 
+\begin_inset Formula $4n$
+\end_inset
+
+ его коэффициентов 
+\begin_inset Formula $a_{k},b_{k},c_{k},d_{k}\ (k=\overline{1,n})$
+\end_inset
+
+.
+ Для этого расшифруем фигурирующие в определении условия через функции 
+\begin_inset Formula $g_{k}(x)$
+\end_inset
+
+, составляющие 
+\begin_inset Formula $g(x)$
+\end_inset
+
+, имея в виду, что в любом внутреннем узле сплайна должны совпадать значения
+ двух соседних звеньев сплайна и двух их первых производных.
+\end_layout
+
+\begin_layout Standard
+Имеем:
+\end_layout
+
+\begin_layout Standard
+1) Из условий интерполяции:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{1}(x_{0})=f(x_{0}),\ g_{k}(x_{k})=f(x_{k})$
+\end_inset
+
+, при 
+\begin_inset Formula $k=\overline{1,n}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+2) Из условий гладкой стыковки звеньев сплайна:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{k-1}(x_{k-1})=g_{k}(x_{k-1}),\ g_{k-1}'(x_{k-1})=g_{k}'(x_{k-1}),\ g_{k-1}''(x_{k-1})=g_{k}''(x_{k-1})$
+\end_inset
+
+ при 
+\begin_inset Formula $k=\overline{2,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3) Из краевых условий:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{1}''(x_{0})=0,\ g_{n}''(x_{n})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Как видим, коэффициентов получилось 
+\begin_inset Formula $4n$
+\end_inset
+
+, то есть необходимое нам количество.
+ Поставляя сюда выражения функций
+\begin_inset Formula 
+\[
+g_{k}(x)=a_{k}+b_{k}(x-x_{k})+c_{k}(x-x_{k})^{2}+d_{k}(x-x_{k})^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{k}'(x)=b_{k}+2c_{k}(x-x_{k})+3d_{k}(x-x_{k})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{k}''(x)=2c_{k}+6d_{k}(x-x_{k})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+получаем детализированную систему связей.
+ 
+\end_layout
+
+\begin_layout Standard
+Теперь ставим задачу выявления эффективного способа нахождения коэффициентов
+ сплайна.
+ Для этого сведем систему связей к выражению всего через 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Обозначим 
+\begin_inset Formula $h_{i}=x_{i}-x_{i-1}$
+\end_inset
+
+.
+ В ходе магических операций, получим следующие формулы:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}=f(x_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $h_{i}c_{i-1}+2(h_{i}+h_{i+1})c_{i}+h_{i+1}c_{i+1}=6\left(\frac{f_{i+1}-f_{i}}{h_{i+1}}-\frac{f_{i}-f_{i-1}}{h_{i}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d_{i}=\frac{c_{i}-c_{i-1}}{h_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}=\frac{1}{2}h_{i}c_{i}-\frac{1}{6}h_{i}^{2}d_{i}+\frac{f_{i}-f_{i-1}}{h_{i}}=\frac{f_{i}-f_{i-1}}{h_{i}}+\frac{h_{i}(2c_{i}+c_{i-1})}{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+И, учитывая, что 
+\begin_inset Formula $c_{0}=c_{n}=0$
+\end_inset
+
+ находим эти значения при помощи метода прогонки, суть которого в том, чтобы
+ сдохнуть от безнадёги.
+\end_layout
+
 \begin_layout Section
 Интерполяция сплайнами.
  Общие сведения.
  Локальные (Эрмитовы) сплайны
+\end_layout
+
+\begin_layout Standard
+Предположим, что у аппроксимируемой функции известны не только значения
+ 
+\begin_inset Formula $f(x_{i})\ i\in\overline{0,n}$
+\end_inset
+
+, но и ее производные 
+\begin_inset Formula $f'(x_{i}),...,f^{(m)}(x)$
+\end_inset
+
+.
+ Как известно, по этой информации мы можем построить единственный интерполяционн
+ый многочлен Эрмита степени 
+\begin_inset Formula $(m+1)(n+1)-1$
+\end_inset
+
+.
+ Но даже при сравнительно небольших 
+\begin_inset Formula $m$
+\end_inset
+
+ и 
+\begin_inset Formula $n$
+\end_inset
+
+ эта степень может оказаться неоправданно высокой.
+ Здесь имеется в виду как сложность построения и использования полинома
+ Эрмита высокой степени, так и повышенные требования к гладкости функций,
+ для которых они служат приближениями.
+ 
+\end_layout
+
+\begin_layout Standard
+Напрашивается идея сделать гибрид интерполяционного сплайна и интерполяционного
+ многочлена.
+ Такой гибрид назовем эрмитовыми сплайнами.
+\end_layout
+
+\begin_layout Standard
+Очень легко вообразить, что по данным в точках 
+\begin_inset Formula $x_{0},x_{1}$
+\end_inset
+
+ можно построить эрмитов сплайн 
+\begin_inset Formula $H_{2m+1}^{1}(x)$
+\end_inset
+
+, по точкам 
+\begin_inset Formula $x_{1},x_{2}$
+\end_inset
+
+ — эрмитов сплайн 
+\begin_inset Formula $H_{2m+1}^{2}(x)$
+\end_inset
+
+.
+ Так как все эти сплайны строятся независимо, то многочлены 
+\begin_inset Formula 
+\[
+S_{2m+1}(x)=\left\{ H_{2m+1}(x),\ x\in[x_{i-1},x_{i}]\right\} _{i=1}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+называются также локальными сплайнами.
+\end_layout
+
+\begin_layout Standard
+Свойство локальности эрмитова сплайна дает определенные преимущества при
+ его построении, особенно в случае большого количества элементарных промежутков,
+ а также позволяет составлять эрмитов сплайн из звеньев разных степеней,
+ если на каких-то участках промежутка интерполяции функция 
+\begin_inset Formula $f$
+\end_inset
+
+ представлена производными одного порядка, а на другом — другого.
 \end_layout
 
 \begin_layout Section
