@@ -389,11 +389,19 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-Абсолютная: ???
+Абсолютная: 
+\begin_inset Formula $\frac{x_{1}+\Delta x_{1}}{x_{2}+\Delta x_{2}}=...$
+\end_inset
+
+ (чаще всего не используется)
 \end_layout
 
 \begin_layout Standard
-Относительная: ???
+Относительная: 
+\begin_inset Formula $\left|\delta_{\div}\right|\leq\left|\delta x_{1}\right|+\left|\delta x_{2}\right|$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -579,7 +587,7 @@ LatexCommand tableofcontents
 \end_inset
 
 ; он ограничен, а значит, 
-\begin_inset Formula $\norm{Ax}\leq C$
+\begin_inset Formula $\norm{Ax}\leq C\norm x$
 \end_inset
 
 .
@@ -947,7 +955,7 @@ x_{k}=\frac{1}{a_{kk}^{(k-1)}}\left(b_{k}^{(k-1)}-\sum_{j=k+1}^{n}a_{kj}^{(k-1)}
 \end_layout
 
 \begin_layout Standard
-Так как реальные машинные вычисления производятся не с точными, а а усеченными
+Так как реальные машинные вычисления производятся не с точными, а c усеченными
  числами, то анализируя полученные формулы, можно сделать вывод о том, что
  выполнение алгоритма может привести к неверным данным или вовсе прекратиться,
  если знаменатели дробей на каком-то из этапов окажутся близкими или равными
@@ -1385,7 +1393,7 @@ QR-разложение, его сравнение с LU-разложением
 
 \begin_layout Standard
 Повернем 
-\begin_inset Formula $A_{1}$
+\begin_inset Formula $A$
 \end_inset
 
  на какой-то угол, чтобы первый столбец матрицы принял вид 
@@ -1500,173 +1508,6 @@ a_{11}^{(1)}\\
 
 \begin_layout Standard
 \begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-//попросить его рассказать про данный метод подробнее
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Метод отражений Хаусхольдера:
-\end_layout
-
-\begin_layout Standard
-Рассмотрим вспомогательный вектор 
-\begin_inset Formula $\omega$
-\end_inset
-
- — вектор единичной длины, такой, что 
-\begin_inset Formula $\omega^{T}\omega=1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Рассмотрим 
-\begin_inset Formula $U=E-2\omega\omega^{T}$
-\end_inset
-
-, 
-\begin_inset Formula $U^{T}U=E-4\omega\omega^{T}+4\omega\underbrace{\omega^{T}\omega}_{1}\omega^{T}=E\Rightarrow U^{-1}=U^{T}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $U_{\omega}=\left(E\cdot2\omega\omega^{T}\right)\omega=\omega-2\omega=-\omega\Rightarrow\omega$
-\end_inset
-
- — собственный вектор с собственным числом 
-\begin_inset Formula $-1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $v\perp\omega$
-\end_inset
-
-, то есть 
-\begin_inset Formula $v^{T}\omega=0$
-\end_inset
-
- или 
-\begin_inset Formula $\omega^{T}v=0$
-\end_inset
-
-, 
-\begin_inset Formula $U_{v}=\left(E-2\omega\omega^{T}\right)v=v-2\omega\omega^{T}v=v\Rightarrow v$
-\end_inset
-
- — собственный вектор с собственным числом 
-\begin_inset Formula $1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Таким образом, 
-\begin_inset Formula $y=v+\alpha\omega\Rightarrow Uy=v-\alpha\omega$
-\end_inset
-
-, то есть матрица 
-\begin_inset Formula $U$
-\end_inset
-
- отражает вектор.
-\end_layout
-
-\begin_layout Standard
-Пусть 
-\begin_inset Formula $y,z$
-\end_inset
-
- — ...
- векторы.
- Нам нужно найти 
-\begin_inset Formula $U$
-\end_inset
-
-, такую, что 
-\begin_inset Formula $Uy=\alpha z$
-\end_inset
-
-.
- Смотрим: 
-\begin_inset Formula 
-\[
-\norm{Uy}=\norm y=\norm{\alpha z}\Rightarrow\alpha=\frac{\norm y}{\norm z}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\omega=\frac{y-\alpha z}{\norm{y-\alpha z}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Теперь, используя 
-\begin_inset Formula $A_{1}$
-\end_inset
-
- как 
-\begin_inset Formula $y$
-\end_inset
-
-, 
-\begin_inset Formula $e_{1}$
-\end_inset
-
- как 
-\begin_inset Formula $z$
-\end_inset
-
-, строим 
-\begin_inset Formula $U_{1}=E-2\omega\omega^{T}$
-\end_inset
-
-.
- Тогда 
-\begin_inset Formula $U_{1}A$
-\end_inset
-
- будет иметь нулевой первый столбец (исключая элемент 
-\begin_inset Formula $a_{11}^{(1)}$
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-Тогда 
-\begin_inset Formula $Q=U_{n-1}\cdot...\cdot U_{1}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace smallskip
 \end_inset
 
 
@@ -1826,10 +1667,7 @@ x^{(k+1)}=Bx^{(k)}+c
 \end_layout
 
 \begin_layout Proof
-\begin_inset Formula $ $
-\end_inset
-
-
+(не обязательно)
 \end_layout
 
 \begin_layout Proof
@@ -2202,10 +2040,6 @@ a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-//нужны ди доказательства?
-\end_layout
-
 \begin_layout Section
 Итерационные методы решения СЛАУ.
  Метод Зейделя.
@@ -2274,9 +2108,9 @@ x_{n}^{(k+1)}=-\left(a_{n1}x_{1}^{(k+1)}+a_{n2}x_{2}^{(k+1)}+...+a_{nn}x_{n-1}^{
 \[
 \det\left(\begin{array}{cccc}
 \lambda a_{11} & a_{12} & \cdots & a_{1n}\\
-a_{21} & \lambda a_{22} & \cdots & a_{2n}\\
+\lambda a_{21} & \lambda a_{22} & \cdots & a_{2n}\\
 \vdots & \vdots & \ddots & \vdots\\
-a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
+\lambda a_{n1} & \lambda a_{n2} & \cdots & \lambda a_{nn}
 \end{array}\right)=0
 \]
 
@@ -2354,6 +2188,10 @@ a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+//в чем недостатки метода Зейделя по сравнению с Якоби? — Он не параллелится
+\end_layout
+
 \begin_layout Section
 Решение скалярных нелинейных уравнений.
  Метод половинного деления, метод хорд, метод секущих
@@ -2396,7 +2234,7 @@ a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
 
 \begin_layout Standard
 1) 
-\begin_inset Formula $f(a)-f(c)<0\Rightarrow b:=c,\ f(b):=f(c)$
+\begin_inset Formula $f(a)f(c)<0\Rightarrow b:=c,\ f(b):=f(c)$
 \end_inset
 
  и рекуррентно выполняем.
@@ -2404,7 +2242,7 @@ a_{n1} & a_{n2} & \cdots & \lambda a_{nn}
 
 \begin_layout Standard
 2) 
-\begin_inset Formula $f(a)-f(c)>0$
+\begin_inset Formula $f(a)f(c)>0$
 \end_inset
 
 .
@@ -2653,13 +2491,25 @@ x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{k})}
 \end_layout
 
 \begin_layout Standard
+— ответ на вопрос ниже.
+\end_layout
+
+\begin_layout Standard
 Обозначим 
-\begin_inset Formula $x_{k}-x_{k+1}=S(x)=\frac{f(x)}{f'(x)}$
+\begin_inset Formula $x=S(x)$
+\end_inset
+
+, 
+\begin_inset Formula $x_{k+1}=S(x_{k})\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $S(x)=x-\frac{f(x)}{f'(x)}$
 \end_inset
 
 .
  Если 
-\begin_inset Formula $\left|S'(x)\right|\leq q\leq1$
+\begin_inset Formula $\left|S'(x)\right|\leq q<1$
 \end_inset
 
  в некоторой окрестности, то МПИ сходится.
@@ -3232,7 +3082,15 @@ K=\frac{r_{n}(x^{*})}{\omega_{n}(x^{*})}
 \begin_inset Formula $n+2$
 \end_inset
 
- корня на 
+ корня (мы добавляем к корням 
+\begin_inset Formula $\omega_{n}(x)$
+\end_inset
+
+ корень 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+) на 
 \begin_inset Formula $[a,b]$
 \end_inset
 
@@ -3337,11 +3195,11 @@ r_{n}(x)=-\frac{f^{(n+1)}(\xi)}{(n+1)!}\omega_{n+1}(x)
 \end_inset
 
  и 
-\begin_inset Formula $R_{n}=\frac{M_{n+1}}{(n+1)!}\omega(x)$
+\begin_inset Formula $r_{n}=\frac{M_{n+1}}{(n+1)!}\omega(x)$
 \end_inset
 
 , то есть 
-\begin_inset Formula $\left|R_{n}\right|=\frac{M_{n+1}}{(n+1)!}\left|\omega(x)\right|$
+\begin_inset Formula $\left|r_{n}\right|=\frac{M_{n+1}}{(n+1)!}\left|\omega(x)\right|$
 \end_inset
 
 .
@@ -3633,7 +3491,7 @@ L'_{m}(x_{i})+H_{n-(m+1)}(x_{i})\cdot\Pi_{m+1}'(x)=f'(x_{i})
 : 
 \begin_inset Formula 
 \[
-H_{n-(m+1)}=\frac{f'(x_{i})-L'_{m}(x_{i})}{\Pi_{m+1}(x_{i})}
+H_{n-(m+1)}(x_{i})=\frac{f'(x_{i})-L'_{m}(x_{i})}{\Pi_{m+1}(x_{i})}
 \]
 
 \end_inset
@@ -4046,57 +3904,304 @@ S_{2m+1}(x)=\left\{ H_{2m+1}(x),\ x\in[x_{i-1},x_{i}]\right\} _{i=1}^{n}
  представлена производными одного порядка, а на другом — другого.
 \end_layout
 
-\begin_layout Section
-Задачи численного интегрирования.
- Постановка задачи.
- Квадратурные формулы средних прямоугольников, трапеций и Симпсона.
- Оценка погрешности
+\begin_layout Standard
+Рассмотреть сплайн 
+\begin_inset Formula $H_{3,1}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
-Интерполяционные квадратурные формулы и квадратурные формулы Ньютона-Котса.
- Алгоритм построения.
- Оценка погрешности
+Краткий список определений
 \end_layout
 
-\begin_layout Section
-Квадратурные формулы наивысшей алгебраической степени точности (типа Гаусса).
- Алгоритм построения.
- Оценка погрешности
+\begin_layout Definition
+
+\series bold
+Обратную задачу
+\series default
+ теории погрешностей формулируют так: 
+\emph on
+каковы должны быть абсолютные погрешности аргументов функции, чтобы абсолютная
+ погрешность функции не превышала заданной величины?
 \end_layout
 
-\begin_layout Section
-Составные квадратурные формулы.
- Сходимость квадратурного процесса по составным квадратурным формулам.
- Составная квадратурная формула средних прямоугольников
+\begin_deeper
+\begin_layout Definition
+Норма — функция 
+\begin_inset Formula $\norm{\cdot}:X\to\RR$
+\end_inset
+
+, удовлетворяющая свойствам:
 \end_layout
 
-\begin_layout Section
-Составные квадратурные формулы на основе формул с единичным весом (средних
- прямоугольников, трапеций, Симпсона).
- Оценка погрешности и алгебраическая степень точности
+\begin_layout Definition
+1) 
+\begin_inset Formula $\left|\left|x\right|\right|\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\left|x\right|\right|=0\Leftrightarrow x=0$
+\end_inset
+
+;
 \end_layout
 
-\begin_layout Section
-Практические способы оценки погрешности численного интегрирования составными
- квадратурными формулами (правило Рунге).
- Процесс Эйткена для оценки порядка аппроксимации
+\begin_layout Definition
+2) 
+\begin_inset Formula $\left|\left|\lambda x\right|\right|=\left|\lambda\right|\cdot\left|\left|x\right|\right|$
+\end_inset
+
+;
 \end_layout
 
-\begin_layout Section
-Методы типа Рунге-Кутты решения начальной задачи для ОДУ.
- Порядок и число этапов.
- Оценка методической погрешности на шаге
+\begin_layout Definition
+3) 
+\begin_inset Formula $\left|\left|x+y\right|\right|\leq\left|\left|x\right|\right|+\left|\left|y\right|\right|$
+\end_inset
+
+;
 \end_layout
 
-\begin_layout Section
-Практические способы оценки погрешности методов типа Рунге-Кутты.
- Вложенные методы
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $\norm ._{\alpha},\norm ._{\beta}$
+\end_inset
+
+ эквивалентны, если 
+\begin_inset Formula $\exists c_{1},c_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $\forall x$
+\end_inset
+
+ выполняется 
+\begin_inset Formula $c_{1}\norm x_{\beta}\leq\norm x_{\alpha}\leq c_{2}\norm x_{\beta}$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Section
-Алгоритм решения ОДУ методом типа Рунге-Кутты с автоматическим выбором шага
+\begin_deeper
+\begin_layout Definition
+Рассмотрим линейный оператор 
+\begin_inset Formula $A$
+\end_inset
+
+; он ограничен, а значит, 
+\begin_inset Formula $\norm{Ax}\leq C$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula $\min_{x}C=\norm A$
+\end_inset
+
+ — норма матрицы, согласованная с нормой вектора, если 
+\begin_inset Formula $\norm{Ax}\leq\norm A\norm x$
+\end_inset
+
+.
 \end_layout
 
+\begin_deeper
+\begin_layout Definition
+Норма матрицы, подчиненная норме вектора: 
+\begin_inset Formula 
+\[
+\norm A=\sup_{\norm x\neq0}\frac{\norm{Ax}}{\norm x}=\sup_{\norm x=1}\norm{Ax}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Величина 
+\begin_inset Formula $\nu(A)=\norm{A^{-1}}\cdot\norm A$
+\end_inset
+
+ называется числом обусловленности матрицы 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Если 
+\begin_inset Formula $\nu(A)$
+\end_inset
+
+ намного больше единицы, СЛАУ называют плохо обусловленной.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Formula $a_{ij}^{(1)}=a_{ij}-\frac{a_{i1}}{a_{11}a_{1j}}$
+\end_inset
+
+ — прямой ход метода Гаусса
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Обратный ход метода Гаусса: 
+\begin_inset Formula 
+\[
+x_{k}=\frac{1}{a_{kk}^{(k-1)}}\left(b_{k}^{(k-1)}-\sum_{j=k+1}^{n}a_{kj}^{(k-1)}x_{j}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Числа, на которые производится деление, называют 
+\series bold
+ведущими
+\series default
+ или 
+\series bold
+главными элементами
+\series default
+.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Theorem
+Необходимым и достаточным условием сходимости метода простой итерации с
+ любым начальным приближением 
+\begin_inset Formula $x^{(0)}$
+\end_inset
+
+ к 
+\begin_inset Formula $x^{*}:x^{*}=Bx^{*}+c$
+\end_inset
+
+ является ограниченность собственных чисел матрицы 
+\begin_inset Formula $B$
+\end_inset
+
+ числом, меньшим единицы.
+\end_layout
+
+\begin_layout Definition
+МПИ — итерационный процесс вида 
+\begin_inset Formula $x^{(k+1)}=Bx^{(k)}+c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Пусть 
+\begin_inset Formula $\norm B\leq q<1$
+\end_inset
+
+, тогда МПИ (метод простой итерации) сходится 
+\begin_inset Formula $\forall x^{(0)}$
+\end_inset
+
+ к 
+\begin_inset Formula $x^{*}:x^{*}=Bx^{*}+c$
+\end_inset
+
+ и верны следующие оценки:
+\end_layout
+
+\begin_layout Theorem
+1) 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{q}{1-q}\norm{x^{(k)}-x^{(k-1)}}$
+\end_inset
+
+ — апостериорная оценка;
+\end_layout
+
+\begin_layout Theorem
+2) 
+\begin_inset Formula $\norm{x^{*}-x^{(k)}}\leq\frac{q^{k}}{1-q}\norm{x^{(1)}-x^{(0)}}$
+\end_inset
+
+ — априорная оценка.
+\end_layout
+
+\begin_layout Definition
+Матрица с диагональным преобладанием — такая, что 
+\begin_inset Formula 
+\[
+\forall i=\overline{1,n}:\ \left|a_{ii}\right|>\sum_{j=1,j\neq i}^{n}\left|a_{ij}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Задача интерполяции: для функции 
+\begin_inset Formula $f(x)$
+\end_inset
+
+, заданной таблицей, найти многочлен 
+\begin_inset Formula $P_{n}(x)$
+\end_inset
+
+ такой, что выполняется совокупность условий 
+\begin_inset Formula $P_{n}(x_{i})=f(x_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Сплайном 
+\begin_inset Formula $S_{m}(x)$
+\end_inset
+
+ называется определенная на 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ функция, принадлежащая классу 
+\begin_inset Formula $C^{l}[a,b]$
+\end_inset
+
+, такая, что на каждом промежутке 
+\begin_inset Formula $[x_{k-1},x_{k}]$
+\end_inset
+
+ — это многочлен 
+\begin_inset Formula $m$
+\end_inset
+
+-й степени.
+ Разность 
+\begin_inset Formula $d=m-l$
+\end_inset
+
+ называется дефектом сплайна.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_body
 \end_document
