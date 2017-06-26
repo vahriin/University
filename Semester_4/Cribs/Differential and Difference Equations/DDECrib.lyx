@@ -122,6 +122,36 @@ target "https://vk.com/vahriin"
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Внимание! Нумерация страниц относится к электронным версиям учебников! Указаны
+ абсолютные значения (то есть значения, предлагаемые ридером).
+ К примеру, 412 
+\begin_inset Quotes fld
+\end_inset
+
+книжная
+\begin_inset Quotes frd
+\end_inset
+
+ страница Матвеева является 413 
+\begin_inset Quotes fld
+\end_inset
+
+абсолютной
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Это сделано для удобства поиска в электронной версии учебника.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -2656,7 +2686,7 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 \begin_inset Formula $(x_{1},y_{1})$
 \end_inset
 
-, через котороую проведем прямую с угловым коэффициентом 
+, через которую проведем прямую с угловым коэффициентом 
 \begin_inset Formula $f(x_{1},y_{1})$
 \end_inset
 
@@ -2717,7 +2747,7 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 \end_inset
 
 ) и равностепенно непрерывных (
-\begin_inset Formula $\forall\varepsilon>0\ \exists n(\varepsilon)>0:\ \forall x',x''\in(a,b)\text{ выполняется }\left|x''-x'\right|<n\Rightarrow\left|f(x'')-f(x')\right|<\varepsilon$
+\begin_inset Formula $\forall\varepsilon>0\ \exists n(\varepsilon)>0:\ \forall x_{1},x_{2}\in(a,b)\text{ выполняется }\left|x_{1}-x_{2}\right|<n\Rightarrow\left|f(x_{1})-f(x_{2})\right|<\varepsilon$
 \end_inset
 
 ).
@@ -2796,11 +2826,11 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 
 \begin_layout Proof
 Так как 
-\begin_inset Formula $\left|f(x'')-f(x')\right|<\varepsilon_{1}$
+\begin_inset Formula $\left|f(x_{1})-f(x_{2})\right|<\varepsilon_{1}$
 \end_inset
 
  при 
-\begin_inset Formula $\left|x''-x'\right|<n_{1}$
+\begin_inset Formula $\left|x_{1}-x_{2}\right|<n_{1}$
 \end_inset
 
 , то такая функция проходит не более чем по двум соседним прямоугольникам
@@ -2813,8 +2843,8 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 \begin_inset Formula $I$
 \end_inset
 
- кончное число; следовательно, как минимум по одной такой паре проходит
- бесконечное число графиков функций рассматривемого семейства.
+ конечное число; следовательно, как минимум по одной такой паре проходит
+ бесконечное число графиков функций рассматриваемого семейства.
  Будем теперь рассматривать только эти функции семейства.
  В полосе 
 \begin_inset Formula $II$
@@ -2909,7 +2939,7 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 \end_inset
 
  графики этих функций лежат в полоске шириной 
-\begin_inset Formula $\frac{M}{2k+\alpha-1}$
+\begin_inset Formula $\frac{M}{2^{k+\alpha-1}}$
 \end_inset
 
 , что означает, что данная последовательность равномерно сходится.
@@ -2984,7 +3014,7 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 \end_inset
 
  и не выходит из области 
-\begin_inset Formula $R$
+\begin_inset Formula $G$
 \end_inset
 
 , пока 
@@ -3041,7 +3071,7 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 \begin_inset Formula $n$
 \end_inset
 
- равных частей, обозначим абсцисся точек деления через 
+ равных частей, обозначим абсциссы точек деления через 
 \begin_inset Formula $x_{0}<x_{1}<...<x_{n-1}<x_{n}=x_{0}+h$
 \end_inset
 
@@ -3180,18 +3210,50 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 
 .
  Докажем, что эта кривая будет искомым решением уравнения.
+ Для этого покажем, что 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ имеет производную в любой точке 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ интервала 
+\begin_inset Formula $[x_{0},x_{0}+h]$
+\end_inset
+
+ и что эта производная равна 
+\begin_inset Formula $f(x^{*},y^{*})$
+\end_inset
+
+, где 
+\begin_inset Formula $y^{*}=f(x^{*})$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Proof
-(дописать жесть)
+Матвеев, стр.
+ 361-363.
 \end_layout
 
 \begin_layout Section
 Метод последовательных приближений Пикара для уравнений первого порядка
 \end_layout
 
+\begin_layout Standard
+Петровский, стр.
+ 54-61.
+\end_layout
+
 \begin_layout Section
 Теорема Пикара для нормальной системы ОДУ
+\end_layout
+
+\begin_layout Standard
+Матвеев, стр.
+ 228-240.
 \end_layout
 
 \begin_layout Section
@@ -3199,16 +3261,33 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  Теорема Коши
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 328-340.
+\end_layout
+
 \begin_layout Section
 О степени гладкости решения ДУ
+\end_layout
+
+\begin_layout Standard
+???
 \end_layout
 
 \begin_layout Section
 Непрерывная зависимость решений от параметров
 \end_layout
 
+\begin_layout Standard
+???
+\end_layout
+
 \begin_layout Section
 Дифференцируемость по параметрам
+\end_layout
+
+\begin_layout Standard
+???
 \end_layout
 
 \begin_layout Section
@@ -3220,13 +3299,28 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  Общие свойства
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 368-373.
+\end_layout
+
 \begin_layout Section
 Однородные линейные уравнения.
  Формула Остроградского-Лиувилля
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 369, 378-380.
+\end_layout
+
 \begin_layout Section
 Фундаментальные системы решений
+\end_layout
+
+\begin_layout Standard
+Матвеев, стр.
+ 380-383.
 \end_layout
 
 \begin_layout Section
@@ -3238,6 +3332,11 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  Метод Лагранжа
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 390-395.
+\end_layout
+
 \begin_layout Section
 Линейные уравнения 
 \begin_inset Formula $n$
@@ -3247,9 +3346,19 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  Построение фундаментальной системы решений и общего решения
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 399-402.
+\end_layout
+
 \begin_layout Section
 Нахождение частного решения неоднородного уравнения методом неопределенных
  коэффициентов
+\end_layout
+
+\begin_layout Standard
+Матвеев, стр.
+ 409-413.
 \end_layout
 
 \begin_layout Section
@@ -3257,8 +3366,18 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  Свойства решений однородной системы
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 473-479.
+\end_layout
+
 \begin_layout Section
 Формула Остроградского-Лиувилля-Якоби
+\end_layout
+
+\begin_layout Standard
+Матвеев, стр.
+ 482-483.
 \end_layout
 
 \begin_layout Section
@@ -3267,8 +3386,17 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  Метод вариации произвольных постоянных
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 491-494.
+\end_layout
+
 \begin_layout Section
 Формула Коши для неоднородной линейной системы (в матрично-векторной форме)
+\end_layout
+
+\begin_layout Standard
+???
 \end_layout
 
 \begin_layout Section
@@ -3276,17 +3404,35 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  Метод Эйлера
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 495-499.
+\end_layout
+
 \begin_layout Section
 Матрицант
+\end_layout
+
+\begin_layout Standard
+???
 \end_layout
 
 \begin_layout Section
 Построение матрицанта в случае Лапно-Данилевского
 \end_layout
 
+\begin_layout Standard
+Матвеев, стр.
+ 523-524.
+\end_layout
+
 \begin_layout Section
 Построение матрицанта для линейных однородных систем с постоянным коэффициентами
  (построение фундаментальной матрицы с помощью интерполяционного полинома)
+\end_layout
+
+\begin_layout Standard
+???
 \end_layout
 
 \begin_layout Section
@@ -3295,9 +3441,18 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  системы)
 \end_layout
 
+\begin_layout Standard
+???
+\end_layout
+
 \begin_layout Section
 Линейные периодические системы.
  Теорема Флоке
+\end_layout
+
+\begin_layout Standard
+Федорюк, стр.
+ 217-219.
 \end_layout
 
 \begin_layout Section
@@ -3306,14 +3461,26 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
  ОДУ в симметрической форме
 \end_layout
 
+\begin_layout Standard
+???
+\end_layout
+
 \begin_layout Section
 Неоднородное линейное уравнение в частных производных первого порядка.
  Построение общего решения.
  Решение задачи Коши
 \end_layout
 
+\begin_layout Standard
+???
+\end_layout
+
 \begin_layout Section
 Разностные уравнения первого порядка
+\end_layout
+
+\begin_layout Standard
+???
 \end_layout
 
 \begin_layout Section
@@ -3324,12 +3491,24 @@ d\psi=\frac{\partial\psi}{\partial x}dx+\sum_{k=1}^{n}\frac{\partial\psi}{\parti
 
 \end_layout
 
+\begin_layout Standard
+???
+\end_layout
+
 \begin_layout Section
 Систмы линейных разностных уравнений
 \end_layout
 
+\begin_layout Standard
+???
+\end_layout
+
 \begin_layout Section
 Понятие о методах решения нелинейных разностных уравнений и систем
+\end_layout
+
+\begin_layout Standard
+???
 \end_layout
 
 \end_body
