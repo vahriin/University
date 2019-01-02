@@ -597,7 +597,7 @@ y_{n}
 , то 
 \begin_inset Formula 
 \[
-\rho(x,y)=\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{1}\right)^{2}}
+\rho(x,y)=\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}
 \]
 
 \end_inset
