@@ -610,6 +610,8 @@ y_{n}
 \end_layout
 
 \begin_layout Proof
+
+Очевидно, что
 \begin_inset Formula $\forall a_{i},b_{i},\ i=1,...,n.\ \forall t\ \sum_{i=1}^{n}(a_{i}t+b_{i})^{2}\geq0$
 \end_inset
 
@@ -680,7 +682,7 @@ y_{n}
  Отсюда 
 \begin_inset Formula 
 \[
-\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{1}\right)^{2}}\leq\sqrt{\sum_{i=1}^{n}\left(x_{i}-z_{i}\right)^{2}}+\sqrt{\sum_{i=1}^{n}\left(z_{i}-y_{i}\right)^{2}}
+\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}\leq\sqrt{\sum_{i=1}^{n}\left(x_{i}-z_{i}\right)^{2}}+\sqrt{\sum_{i=1}^{n}\left(z_{i}-y_{i}\right)^{2}}
 \]
 
 \end_inset
@@ -1421,7 +1423,7 @@ y
 \end_inset
 
 , где 
-\begin_inset Formula $k=\overline{1,n}$
+\begin_inset Formula $k=\overline{1,m}$
 \end_inset
 
 ; 
