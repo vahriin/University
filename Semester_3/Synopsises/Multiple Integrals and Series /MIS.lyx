@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -36,6 +36,8 @@ algorithm2e
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -66,6 +68,7 @@ algorithm2e
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -78,7 +81,10 @@ algorithm2e
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation 0.7cm
-\quotes_language french
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -109,6 +115,7 @@ algorithm2e
 LatexCommand href
 name "GitHub проекта"
 target "https://github.com/vahriin/University"
+literal "false"
 
 \end_inset
 
@@ -120,6 +127,7 @@ target "https://github.com/vahriin/University"
 LatexCommand href
 name "Автор в ВК"
 target "https://vk.com/vahriin"
+literal "false"
 
 \end_inset
 
@@ -610,6 +618,7 @@ y_{n}
 \end_layout
 
 \begin_layout Proof
+Очевидно, что 
 \begin_inset Formula $\forall a_{i},b_{i},\ i=1,...,n.\ \forall t\ \sum_{i=1}^{n}(a_{i}t+b_{i})^{2}\geq0$
 \end_inset
 
@@ -680,7 +689,7 @@ y_{n}
  Отсюда 
 \begin_inset Formula 
 \[
-\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{1}\right)^{2}}\leq\sqrt{\sum_{i=1}^{n}\left(x_{i}-z_{i}\right)^{2}}+\sqrt{\sum_{i=1}^{n}\left(z_{i}-y_{i}\right)^{2}}
+\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}\leq\sqrt{\sum_{i=1}^{n}\left(x_{i}-z_{i}\right)^{2}}+\sqrt{\sum_{i=1}^{n}\left(z_{i}-y_{i}\right)^{2}}
 \]
 
 \end_inset
@@ -1421,7 +1430,7 @@ y
 \end_inset
 
 , где 
-\begin_inset Formula $k=\overline{1,n}$
+\begin_inset Formula $k=\overline{1,m}$
 \end_inset
 
 ; 
@@ -4946,29 +4955,29 @@ x^{(0)}-h\vec{\nabla}f(x^{(0)}) & \min
  Если выбрать очень маленкий шаг, то идти до экстремума можно долго (экстремум
  далеко).
  А если выбрать очень большим - мы рискуем 
-\begin_inset Quotes fld
+\begin_inset Quotes cld
 \end_inset
 
 перепрыгнуть
-\begin_inset Quotes frd
+\begin_inset Quotes crd
 \end_inset
 
  через экстремум.
  Поддерживается динамическое изменение шага: обычно сначала делают большие
  шаги, а по мере приближения к экстремуму (начались 
-\begin_inset Quotes fld
+\begin_inset Quotes cld
 \end_inset
 
 метания
-\begin_inset Quotes frd
+\begin_inset Quotes crd
 \end_inset
 
  и 
-\begin_inset Quotes fld
+\begin_inset Quotes cld
 \end_inset
 
 перепрыжки
-\begin_inset Quotes frd
+\begin_inset Quotes crd
 \end_inset
 
 ) шаг постепенно уменьшают.
@@ -10467,11 +10476,11 @@ W_{i}\thickapprox\left|F_{i}(\xi_{i},\eta_{i})\right|\cdot\left|\vec{\Delta s_{i
 
 .
  То есть мы 
-\begin_inset Quotes fld
+\begin_inset Quotes cld
 \end_inset
 
 порезали
-\begin_inset Quotes frd
+\begin_inset Quotes crd
 \end_inset
 
  и область прибытия.
@@ -11794,11 +11803,11 @@ S(E)=\oint_{(l)}xdy=\int_{0}^{+\infty}\frac{3at}{1+t^{3}}\left(\frac{3at^{2}}{1+
 \end_inset
 
 , то мы 
-\begin_inset Quotes fld
+\begin_inset Quotes cld
 \end_inset
 
 отрезаем
-\begin_inset Quotes frd
+\begin_inset Quotes crd
 \end_inset
 
  остальное и тогда 
@@ -13337,11 +13346,11 @@ z=R\sin u
 \end_inset
 
 ) по которой 
-\begin_inset Quotes fld
+\begin_inset Quotes cld
 \end_inset
 
 размазан
-\begin_inset Quotes frd
+\begin_inset Quotes crd
 \end_inset
 
  заряд.
