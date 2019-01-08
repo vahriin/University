@@ -5195,7 +5195,7 @@ x^{(0)}-h\vec{\nabla}f(x^{(0)}) & \min
 \end_inset
 
 .
- Если 
+ Зададим 
 \begin_inset Formula $\Phi(x)=F(x,y(x))\equiv0$
 \end_inset
 
