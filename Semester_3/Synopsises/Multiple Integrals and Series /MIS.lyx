@@ -3407,7 +3407,7 @@ W=\frac{\varphi(x_{0}+h)-\varphi(x_{0})}{h}=\varphi'(c_{1})=\frac{f'_{x}(c_{1},y
 
 \begin_layout Proof
 Теперь вновь по теореме Лагранжа 
-\begin_inset Formula $\exists c_{2}\in(y_{0},y_{0}+h)$
+\begin_inset Formula $\exists c_{2}\in(y_{0},y_{0}+k)$
 \end_inset
 
 :
@@ -3416,7 +3416,7 @@ W=\frac{\varphi(x_{0}+h)-\varphi(x_{0})}{h}=\varphi'(c_{1})=\frac{f'_{x}(c_{1},y
 \begin_layout Proof
 \begin_inset Formula 
 \[
-W=\frac{\varphi(x_{0}+h)-\varphi(x_{0})}{h}=\varphi'(c_{1})=\frac{f'_{x}(c_{1},y_{0}+k)-f'_{x}(c_{1},y_{0})}{k}=f''_{xy}(c_{1},c_{2})
+\frac{f'_{x}(c_{1},y_{0}+k)-f'_{x}(c_{1},y_{0})}{k}=f''_{xy}(c_{1},c_{2})
 \]
 
 \end_inset
