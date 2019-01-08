@@ -6749,17 +6749,34 @@ x_{2}y_{1}
 .
 \end_layout
 
+\begin_layout Problem*
+Пусть G – область удовлетворяющая условиям 
+\begin_inset Formula $\varphi_{1}\ldots\,\varphi_{m}$
+\end_inset
+
+ т.е.
+ все условия 
+\begin_inset Formula $\varphi_{1}\ldots\,\varphi_{m}$
+\end_inset
+
+ выполняются для любой точки 
+\begin_inset Formula $X=(x_{1}...\,x_{n+m}),\:X\in G$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Definition
 Точка 
 \begin_inset Formula $x^{(0)}$
 \end_inset
 
  называется точкой условного минимума в задаче, если 
-\begin_inset Formula $\exists\delta>0:\ \forall x=\left(\begin{array}{c}
+\begin_inset Formula $\forall x=\left(\begin{array}{c}
 x_{1}\\
 ...\\
 x_{n+m}
-\end{array}\right)\in\left(U_{\delta}(x^{(0)})\cap E\right)\Rightarrow F(x)\geq F(x^{(0)})$
+\end{array}\right)\in\left(G\cap E\right)\Rightarrow F(x)\geq F(x^{(0)})$
 \end_inset
 
 .
