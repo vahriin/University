@@ -9603,7 +9603,7 @@ S(x)=\int_{y_{1}}^{y_{2}}f(x,y)dy
 \begin{multline*}
 \iint_{E}f(x,y)dxdy=\iint_{E}\left[\left(f(x,y)+m\right)-m\right]dxdy=\iint_{E}\left(f(x,y)+m\right)dxdy-\underbrace{\iint_{E}mdxdy}_{=m\overline{S}(E)}=\\
 =\int_{a}^{b}dx\int_{y_{1}(x)}^{y_{2}(x)}\left(f(x,y)+m\right)dy-m\overline{S}(E)=\int_{a}^{b}\left(\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy+\int_{y_{1}(x)}^{y_{2}(x)}mdy\right)dx-m\overline{S}(E)=\\
-=\int_{a}^{b}dx\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dxdy+\underbrace{\int_{a}^{b}m(y_{2}(x)-y_{1}(x))dx}_{=m\overline{S}(e)}=\int_{a}^{b}dx\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy
+=\int_{a}^{b}dx\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dxdy+\underbrace{\int_{a}^{b}m(y_{2}(x)-y_{1}(x))dx}_{=m\overline{S}(e)}-mS(E)=\int_{a}^{b}dx\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy
 \end{multline*}
 
 \end_inset
