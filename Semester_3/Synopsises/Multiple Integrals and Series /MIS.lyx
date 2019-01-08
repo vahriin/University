@@ -10213,7 +10213,7 @@ z=z(t)
 \end_layout
 
 \begin_layout Remark
-\begin_inset Formula $\int_{(l)}f(x,yz)dS=(R)\int_{\alpha}^{\beta}f(x(t),y(t),z(t))\sqrt{x(t)'+y'(t)^{2}+z'(t)^{2}}dt$
+\begin_inset Formula $\int_{(l)}f(x,y,z)dS=(R)\int_{\alpha}^{\beta}f(x(t),y(t),z(t))\sqrt{x'(t)^{2}+y'(t)^{2}+z'(t)^{2}}dt$
 \end_inset
 
  
