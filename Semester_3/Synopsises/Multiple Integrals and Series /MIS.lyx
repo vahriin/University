@@ -18196,31 +18196,6 @@ J(A)=\frac{1}{\pi}\int_{-\infty}^{+\infty}f(t)dt\int_{0}^{A}\cos\lambda(t-x_{0})
 \end_layout
 
 \begin_layout Lemma
-\begin_inset Formula $\int_{0}^{+\infty}\frac{\sin Az}{z}dz=\frac{\pi}{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula 
-\[
-\int_{0}^{+\infty}\frac{\sin Az}{z}dz=\int_{0}^{+\infty}\frac{\sin Az}{Az}d(Az)=\int_{0}^{+\infty}\frac{\sin z}{z}dz=\frac{\pi}{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Lemma
 (аналог леммы Римана)
 \end_layout
 
@@ -18273,32 +18248,47 @@ S_{0}=\frac{f(x_{0}+0)+f(x_{0}-0)}{2}
 (среднее арифметическое предела справа и предела слева)
 \end_layout
 
-\begin_layout Lemma
-\begin_inset Formula 
-\begin{multline*}
-|J(A)-S_{0}|=\\
-=\left|\frac{1}{\pi}\int_{0}^{\infty}\left(f(x_{0}-z)+f(x_{0}+z)\right)\frac{\sin Az}{z}-S_{0}\underbrace{\frac{2}{\pi}\int_{0}^{\infty}\frac{\sin Az}{z}dz}_{=1}\right|=\\
-=\frac{1}{\pi}\left|\int_{0}^{+\infty}\underbrace{\left(f(x_{0}-z)+f(x_{0}+z)-2S_{0}\right)}_{\varphi(z)}\frac{\sin Az}{z}dz\right|\leq\\
-\leq\frac{1}{\pi}\left(\left|\int_{0}^{n}\right|+\underbrace{\left|\int_{n}^{\infty}\right|}_{\to0}\right)
-\end{multline*}
-
+\begin_layout Standard
+\begin_inset Formula $\varphi(t)=f(x_{0}+t)+f(x_{0}-t)-2S_{0}$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Lemma
-Получили теорему Дини.
-\end_layout
-
-\begin_layout Lemma
-Переформулируем ее для интеграла Римана:
 \end_layout
 
 \begin_layout Theorem
+(Дини)
+\end_layout
+
+\begin_layout Theorem
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
 \begin_inset Formula $f(x)$
 \end_inset
 
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
  — определена и абсолютно интегрируема на 
 \begin_inset Formula $(-\infty,+\infty)$
 \end_inset
@@ -18323,7 +18313,7 @@ S_{0}=\frac{f(x_{0}+0)+f(x_{0}-0)}{2}
 
  или терпит разрыв первого рода.
  Тогда 
-\begin_inset Formula $\exists h>0:\ \frac{\varphi(z)}{z}$
+\begin_inset Formula $\exists h>0:\ \frac{\varphi(t)}{t}$
 \end_inset
 
  — абсолютно интегрируема на 
@@ -18381,7 +18371,11 @@ S_{0}=\frac{f(x_{0}+0)+f(x_{0}-0)}{2}
 \begin_inset Formula $[x_{0}-h,x_{0}+h]\Rightarrow$
 \end_inset
 
- интеграл Фурье сходится к 
+ интеграл Фурье в точке 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ сходится к 
 \begin_inset Formula $S_{0}$
 \end_inset
 
@@ -18389,6 +18383,10 @@ S_{0}=\frac{f(x_{0}+0)+f(x_{0}-0)}{2}
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Комплексная форма интеграла Фурье
+\end_layout
+
 \begin_layout Standard
 Интеграл Фурье можно записать в комплексной форме.
 \end_layout
@@ -18443,7 +18441,7 @@ S_{0}=\frac{f(x_{0}+0)+f(x_{0}-0)}{2}
 Обозначим 
 \begin_inset Formula 
 \[
-g(\lambda)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}g(t)e^{-i\lambda t}dt
+g(\lambda)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}f(t)e^{-i\lambda t}dt
 \]
 
 \end_inset
@@ -18500,7 +18498,7 @@ f(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}g(\lambda)e^{i\lambda x}d\lamb
 \end_layout
 
 \begin_layout Standard
-На этом мы закончили, всем удачи на экзамене, спасите, меня обижает Лобаскин.
+На этом мы закончили, всем удачи на экзамене.
 \end_layout
 
 \end_body
