@@ -9648,7 +9648,19 @@ x_{1}(y)\leq x\leq x_{2}(y)
 \begin_inset Formula $\iint_{E}f(1-x-y)dxdy$
 \end_inset
 
- на множестве.
+ на множестве ограниченном прямыми 
+\begin_inset Formula $x=0$
+\end_inset
+
+, 
+\begin_inset Formula $y=0$
+\end_inset
+
+ и 
+\begin_inset Formula $y=1-x$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Example
