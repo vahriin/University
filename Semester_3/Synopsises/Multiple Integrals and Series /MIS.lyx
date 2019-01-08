@@ -8895,7 +8895,11 @@ z=R\sin u
 \begin_inset Formula $E_{1,}E_{2}$
 \end_inset
 
-удовлетворяют условиям двойного интеграла, то 
+удовлетворяют условиям двойного интеграла и 
+\begin_inset Formula $S(E_{1}\cap E_{2})=0$
+\end_inset
+
+, то 
 \begin_inset Formula $\iint_{E}f(x,y)dxdy=\iint_{E_{1}}f(x,y)dxdy+\iint_{E_{2}}f(x,y)dxdy$
 \end_inset
 
